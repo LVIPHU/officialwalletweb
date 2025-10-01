@@ -1,7 +1,7 @@
 import {PropsWithChildren} from "react";
 import {initLingui, PageLangParam} from "@/i18n/initLingui";
-import {LocaleProvider} from "@/providers/locale.provider";
-import {ThemeProvider} from "@/providers/theme.provider";
+import LocaleProvider from "@/providers/locale.provider";
+import ThemeProvider from "@/providers/theme.provider";
 import {allMessages} from "@/i18n/i18n";
 
 export default async function ProviderRegistry({ children, params }: Readonly<PropsWithChildren<PageLangParam>>) {

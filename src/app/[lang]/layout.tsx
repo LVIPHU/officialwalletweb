@@ -2,12 +2,12 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "../globals.css";
-import { ThemeProvider } from "@/providers/theme-provider";
+import ProviderRegistry from "@/providers";
 import {cn} from "@/lib/utils";
 import Header from "@/components/organisms/header";
 import Footer from "@/components/organisms/footer";
 import {PropsWithChildren} from "react";
-import {initLingui, PageLangParam} from "@/i18n/initLingui";
+import {PageLangParam} from "@/i18n/initLingui";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -45,16 +45,11 @@ export default async function RootLayout({
           'dark:bg-dark dark:text-gray-100',
         )}
       >
-        <ThemeProvider
-          attribute="class"
-          defaultTheme="dark"
-          enableSystem
-          disableTransitionOnChange
-        >
+        <ProviderRegistry params={params}>
           <Header />
-          <main className="mb-auto grow">{children}</main>
+            <main className="mb-auto grow">{children}</main>
           <Footer/>
-        </ThemeProvider>
+        </ProviderRegistry>
       </body>
     </html>
   );
