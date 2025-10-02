@@ -1,5 +1,5 @@
 ﻿import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card'
-import { cn } from '@/lib/utils'
+import { cn } from '@/lib/styles'
 import type { Feature } from '@/types/landing.types'
 
 interface FeatureCardProps {
@@ -10,7 +10,7 @@ interface FeatureCardProps {
 export function FeatureCard({ feature, className }: FeatureCardProps) {
   return (
     <Card className={cn(
-      'tb-card hover:border-primary transition-colors',
+      'hover:border-primary transition-colors',
       className
     )}>
       <CardHeader>

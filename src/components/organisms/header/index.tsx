@@ -1,66 +1,83 @@
+'use client';
 import {Button} from "@/components/ui/button";
 import { NavigationMenu, NavigationMenuItem, NavigationMenuLink, NavigationMenuList } from "@/components/ui/navigation-menu"
+import {SidebarTrigger} from "@/components/ui/sidebar";
+import {Container} from "@/components/atoms/container";
+import {cn} from "@/lib/styles";
+import {SITE_METADATA} from "@/constants/site-metadata.constants";
+import {Logo} from "@/components/atoms/logo";
+import {useState} from "react";
+import {useScroll} from "@/hooks/use-scroll";
 
 export default function Header() {
+    const [hasScrolled, setHasScrolled] = useState<boolean>(false)
+
+    useScroll(({ scroll }) => {
+        return setHasScrolled(scroll > 10);
+    })
+
     return (
-    <nav className="flex items-center justify-between px-6 py-4 bg-gray-900/90 backdrop-blur-sm fixed w-full top-0 z-50 border-b border-gray-800">
-        {/* Logo */}
-        <div className="flex items-center space-x-2">
-            <div className="w-8 h-8 bg-green-500 rounded-lg flex items-center justify-center font-bold text-black text-sm">
-                T3
-            </div>
-            <span className="text-green-500 font-bold text-xl">Wallet</span>
-        </div>
+    <Container
+        as={'header'}
+        className={cn(
+            'shadow-xs saturate-100 md:rounded-2xl',
+            'py-2 transition-all duration-300 ease-in-out lg:py-4',
+            hasScrolled ? 'bg-white/0 backdrop-blur-xl dark:bg-white/10' : 'bg-transparent backdrop-blur-none',
+            SITE_METADATA.stickyNav ? 'sticky top-2 z-10 lg:top-3' : 'mt-2 lg:mt-3',
+        )}
+    >
+        <div className="flex items-center justify-between gap-3">
+            {/* Logo */}
+            <Logo/>
 
-        {/* Navigation Links */}
-        <div className="flex items-center space-x-8">
-            <NavigationMenu>
-                <NavigationMenuList>
-                    <NavigationMenuItem>
-                        <NavigationMenuLink href="#wallet" className="px-4 py-2 hover:text-green-400 transition-colors text-white">
-                            Wallet
-                        </NavigationMenuLink>
-                    </NavigationMenuItem>
-                    <NavigationMenuItem>
-                        <NavigationMenuLink href="#features" className="px-4 py-2 hover:text-green-400 transition-colors text-white">
-                            Features
-                        </NavigationMenuLink>
-                    </NavigationMenuItem>
-                    <NavigationMenuItem>
-                        <NavigationMenuLink href="#build" className="px-4 py-2 hover:text-green-400 transition-colors text-white">
-                            Build
-                        </NavigationMenuLink>
-                    </NavigationMenuItem>
-                    <NavigationMenuItem>
-                        <NavigationMenuLink href="#support" className="px-4 py-2 hover:text-green-400 transition-colors text-white">
-                            Support
-                        </NavigationMenuLink>
-                    </NavigationMenuItem>
-                    <NavigationMenuItem>
-                        <NavigationMenuLink href="#about" className="px-4 py-2 hover:text-green-400 transition-colors text-white">
-                            About
-                        </NavigationMenuLink>
-                    </NavigationMenuItem>
-                </NavigationMenuList>
-            </NavigationMenu>
-
-            {/* Share Icon */}
-            <div className="w-6 h-6 text-white hover:text-green-400 transition-colors cursor-pointer">
-                <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8.684 13.342C8.886 12.938 9 12.482 9 12c0-.482-.114-.938-.316-1.342m0 2.684a3 3 0 110-2.684m0 2.684l6.632 3.316m-6.632-6l6.632-3.316m0 0a3 3 0 105.367-2.684 3 3 0 00-5.367 2.684zm0 9.316a3 3 0 105.367 2.684 3 3 0 00-5.367-2.684z" />
-                </svg>
+            {/* Navigation Links */}
+            <div className="hidden md:flex">
+                <NavigationMenu>
+                    <NavigationMenuList>
+                        <NavigationMenuItem>
+                            <NavigationMenuLink href="#wallet">
+                                Wallet
+                            </NavigationMenuLink>
+                        </NavigationMenuItem>
+                        <NavigationMenuItem>
+                            <NavigationMenuLink href="#features">
+                                Features
+                            </NavigationMenuLink>
+                        </NavigationMenuItem>
+                        <NavigationMenuItem>
+                            <NavigationMenuLink href="#build">
+                                Build
+                            </NavigationMenuLink>
+                        </NavigationMenuItem>
+                        <NavigationMenuItem>
+                            <NavigationMenuLink href="#support">
+                                Support
+                            </NavigationMenuLink>
+                        </NavigationMenuItem>
+                        <NavigationMenuItem>
+                            <NavigationMenuLink href="#about">
+                                About
+                            </NavigationMenuLink>
+                        </NavigationMenuItem>
+                    </NavigationMenuList>
+                </NavigationMenu>
             </div>
 
-            {/* Language Button */}
-            <Button className="bg-green-600 hover:bg-green-700 text-white px-4 py-2 rounded-lg">
-                Language
-            </Button>
+            <div className="hidden md:flex items-center gap-3">
+                {/* Language Button */}
+                <Button className="bg-green-600 hover:bg-green-700 text-white px-4 py-2">
+                    Language
+                </Button>
 
-            {/* Download Button */}
-            <Button className="bg-green-500 hover:bg-green-600 text-white px-4 py-2 rounded-lg">
-                Download
-            </Button>
+                {/* Download Button */}
+                <Button className="bg-green-500 hover:bg-green-600 text-white px-4 py-2">
+                    Download
+                </Button>
+            </div>
+
+            {/* Sidebar Trigger for Mobile */}
+            <SidebarTrigger  className={'md:hidden'}/>
         </div>
-    </nav>
+    </Container>
     )
 }

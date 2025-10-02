@@ -1,4 +1,5 @@
-﻿import { cn } from '@/lib/utils'
+﻿import { cn } from '@/lib/styles'
+import LogoSVG from '@public/assets/logo.svg'
 
 interface LogoProps {
   readonly className?: string
@@ -7,31 +8,26 @@ interface LogoProps {
 }
 
 export function Logo({ className, showText = true, size = 'md' }: LogoProps) {
-  const sizeClasses = {
-    sm: 'w-6 h-6 text-sm',
-    md: 'w-8 h-8 text-lg',
-    lg: 'w-12 h-12 text-2xl'
+  const sizeClasses: Record<NonNullable<LogoProps['size']>, string> = {
+    sm: 'w-6 h-6',
+    md: 'w-8 h-8',
+    lg: 'w-12 h-12'
   }
 
-  const textSizeClasses = {
-    sm: 'text-lg',
-    md: 'text-xl',
-    lg: 'text-2xl'
+  const textSizeClasses: Record<NonNullable<LogoProps['size']>, string> = {
+    sm: 'text-sm',
+    md: 'text-base',
+    lg: 'text-lg'
   }
 
   return (
-    <div className={cn('flex items-center space-x-2', className)}>
-      <div className={cn(
-        'bg-green-500 rounded-lg flex items-center justify-center font-bold text-black',
-        sizeClasses[size]
-      )}>
-        TB
-      </div>
-      {showText && (
-        <span className={cn('font-bold', textSizeClasses[size])}>
-          TB Wallet
+      <div className={cn('flex items-center space-x-2', className)}>
+        <LogoSVG className={cn(sizeClasses[size])} />
+        {!showText && (
+            <span className={cn('font-semibold text-gray-900', textSizeClasses[size])}>
+          Company
         </span>
-      )}
-    </div>
+        )}
+      </div>
   )
 }

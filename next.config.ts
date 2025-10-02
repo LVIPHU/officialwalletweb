@@ -8,7 +8,11 @@ const nextConfig: NextConfig = {
                 '*.po': {
                     loaders: ['@lingui/loader'],
                     as: '*.js'
-                }
+                },
+                '*.svg': {
+                    loaders: ['@svgr/webpack'],
+                    as: '*.js',
+                },
             }
         }
     },

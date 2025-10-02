@@ -1,23 +1,15 @@
-﻿import linguiConfig from '../../../lingui.config'
+﻿import "@/styles/globals.css";
+import linguiConfig from '../../../lingui.config'
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
-import "../globals.css";
 import ProviderRegistry from "@/providers";
-import {cn} from "@/lib/utils";
+import {cn} from "@/lib/styles";
 import Header from "@/components/organisms/header";
 import Footer from "@/components/organisms/footer";
 import {PropsWithChildren} from "react";
 import {PageLangParam} from "@/i18n/initLingui";
-
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
+import {FONT_CLASH_DISPLAY, FONT_POPPINS} from "@/styles/fonts";
+import MobileSidebar from "@/components/organisms/mobile-sidebar";
+import DefaultLayout from "@/layouts/default";
 
 export async function generateStaticParams() {
   return linguiConfig.locales.map((lang) => ({ lang }))
@@ -35,20 +27,29 @@ export default async function RootLayout({
   const lang = (await params).lang
 
   return (
-    <html lang={lang} className={cn('w-full overflow-x-hidden scroll-smooth antialiased lowercase', geistSans.variable, geistMono.variable)} suppressHydrationWarning>
+    <html
+      lang={lang}
+      className={cn(
+        'w-full overflow-x-hidden scroll-smooth antialiased lowercase',
+        FONT_POPPINS.variable,
+        FONT_CLASH_DISPLAY.variable
+      )}
+      suppressHydrationWarning
+    >
       <body
         className={cn(
           'antialiased',
           'relative min-h-screen pl-[calc(100vw-100%)]',
-          'flex flex-col',
-          'bg-white text-neutral-900',
-          'dark:bg-dark dark:text-gray-100',
+          'flex flex-col'
         )}
       >
         <ProviderRegistry params={params}>
-          <Header />
-            <main className="mb-auto grow">{children}</main>
-          <Footer/>
+          <DefaultLayout>
+            <Header />
+            <MobileSidebar/>
+            <main>{children}</main>
+            <Footer/>
+          </DefaultLayout>
         </ProviderRegistry>
       </body>
     </html>

@@ -2,20 +2,18 @@ import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { Separator } from "@/components/ui/separator"
-import { Logo } from "@/components/atoms/logo"
-import { ThemeToggle } from "@/components/atoms/theme-toggle"
 import { FeatureCard } from "@/components/molecules/feature-card"
 import { FEATURES, TESTIMONIALS, CRYPTOCURRENCIES } from "@/constants/landing.constants"
 
 export default function HomeTemplate() {
     return (
-        <div className="min-h-screen bg-gray-900 text-white">
+        <div className="min-h-screen">
             {/* Hero Section */}
             <section className="pt-24 pb-16 px-6 min-h-screen flex items-center">
                 <div className="max-w-7xl mx-auto grid lg:grid-cols-2 gap-12 items-center">
                     {/* Left Content */}
                     <div>
-                        <h1 className="text-5xl lg:text-7xl font-bold mb-6 leading-tight">
+                        <h1 className="text-5xl lg:text-7xl font-bold mb-6 leading-tight font-class-display">
                             True crypto ownership.<br />
                             <span className="text-white">Powerful Web3</span><br />
                             experiences
