@@ -1,15 +1,14 @@
 import { useStore } from '@/lib/store'
-import { useEffect } from 'react'
+import {DependencyList, useEffect} from 'react'
 import {ScrollCallback} from "lenis";
 
-export function useScroll(callback: ScrollCallback, deps = []) {
+export function useScroll(callback: ScrollCallback, deps: DependencyList = []) {
     const lenis = useStore(({ lenis }) => lenis)
 
     useEffect(() => {
         if (!lenis) return
         lenis.on('scroll', callback)
-        // @ts-ignore
-        lenis.emit()
+        ;(lenis as any).emit?.()
 
         return () => {
             lenis.off('scroll', callback)

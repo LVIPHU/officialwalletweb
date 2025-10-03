@@ -52,6 +52,7 @@
   --popover: oklch(1 0 0);
   --popover-foreground: oklch(0.141 0.005 285.823);
   --primary: oklch(0.723 0.219 149.579);
+  --primary-transparent: oklch(0.723 0.219 149.579 / 0);
   --primary-foreground: oklch(0.982 0.018 155.826);
   --secondary: oklch(0.967 0.001 286.375);
   --secondary-foreground: oklch(0.21 0.006 285.885);
@@ -120,5 +121,27 @@
   body {
     @apply bg-background text-foreground;
     transition: background-color 0.3s ease, color 0.3s ease;
+  }
+}
+
+@layer component {
+  .canvas {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    right: 0;
+
+    &::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 50%;
+      height: 100vw;
+      width: 200vw;
+      background: radial-gradient(var(--primary), var(--primary-transparent) 70%);
+      transform: translateX(-50%) translateY(50vh);
+      opacity: 0.5;
+    }
   }
 }

@@ -13,6 +13,18 @@ const nextConfig: NextConfig = {
                     loaders: ['@svgr/webpack'],
                     as: '*.js',
                 },
+                '*.glsl': {
+                    loaders: ['raw-loader', 'glslify-loader'],
+                    as: '*.js',
+                },
+                '*.vert': {
+                    loaders: ['raw-loader', 'glslify-loader'],
+                    as: '*.js',
+                },
+                '*.frag': {
+                    loaders: ['raw-loader', 'glslify-loader'],
+                    as: '*.js',
+                },
             }
         }
     },

@@ -48,8 +48,9 @@ export const config = {
          * - audio - .wav
          * - video - .mp4
          * - data - .xml, .json
+         * - 3D models - .gltf, .glb, .fbx, .obj, .usdz
          * Feel free to modify this pattern to include more paths.
          */
-        '/((?!_next/static|_next/image|favicon.ico|manifest.json|sitemap.xml|feed.xml|.*\\.(?:svg|png|jpg|jpeg|gif|webp|wav|mp4|xml|json)$).*)',
+        '/((?!_next/static|_next/image|favicon.ico|manifest.json|sitemap.xml|feed.xml|.*\\.(?:svg|png|jpg|jpeg|gif|webp|wav|mp4|xml|json|gltf|glb|fbx)$).*)',
     ],
 }

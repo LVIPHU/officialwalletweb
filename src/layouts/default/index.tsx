@@ -5,7 +5,7 @@ import dynamic from "next/dynamic";
 import {usePathname} from 'next/navigation'
 import { useStore } from "@/lib/store";
 import Lenis from "lenis";
-import useRafLoop from "@/hooks/use-raf-loop/useRafLoop";
+import { useRafLoop } from "@/hooks/use-raf-loop";
 
 const Cursor = dynamic(
     () => import('@/components/atoms/cursor').then((mod) => mod.Cursor),

@@ -2,7 +2,7 @@ import { useCallback, useEffect, useMemo, useRef } from 'react';
 
 export type RafLoopReturns = [() => void, () => void, () => boolean];
 
-export default function useRafLoop(
+export function useRafLoop(
     callback: FrameRequestCallback,
     initiallyActive = true
 ): RafLoopReturns {

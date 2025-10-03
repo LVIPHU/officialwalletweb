@@ -1,7 +1,8 @@
+'use client'
 import { Float, useGLTF } from '@react-three/drei'
 import { Canvas, useFrame, useThree } from '@react-three/fiber'
-import { useFrame as useRaf } from '@darkroom.engineering/hamo'
-import { useScroll } from 'hooks/use-scroll'
+import { useRafLoop } from '@/hooks/use-raf-loop'
+import { useScroll } from '@/hooks/use-scroll'
 import { button, useControls } from 'leva'
 import { mapRange } from '@/lib/maths'
 import { useStore } from '@/lib/store'
@@ -14,6 +15,9 @@ import {
     MeshPhysicalMaterial,
     Vector2,
     Vector3,
+    ShaderMaterial,
+    Points,
+    Mesh
 } from 'three'
 import fragmentShader from './particles/fragment.glsl'
 import vertexShader from './particles/vertex.glsl'
@@ -21,11 +25,12 @@ import vertexShader from './particles/vertex.glsl'
 function Raf({ render = true }) {
     const { advance } = useThree()
 
-    useRaf((time) => {
+    useRafLoop((time) => {
         if (render) {
             advance(time / 1000)
         }
-    })
+    }, true)
+    return <></>
 }
 
 function Particles({
@@ -80,8 +85,8 @@ function Particles({
         [count]
     )
 
-    const material = useRef()
-    const points = useRef()
+    const material = useRef<ShaderMaterial>(null!)
+    const points = useRef<Points>(null!)
 
     const uniforms = useMemo(
         () => ({
@@ -89,9 +94,7 @@ function Particles({
                 value: 0,
             },
             uColor: {
-                // value: new Color('rgb(255, 152, 162)'),
-                value: new Color('rgb(255, 207, 206)'),
-                // value: new Color('rgb(255, 236, 234)'),
+                value: new Color('rgb(170, 243, 195)'),
             },
             uScroll: {
                 value: 0,
@@ -353,7 +356,7 @@ export function Arm() {
     useEffect(() => {
         if (arm1) {
             arm1.traverse((node) => {
-                if (node.material) node.material = material
+                if ((node as Mesh).material) (node as Mesh).material = material
             })
         }
     }, [arm1, material])
@@ -361,16 +364,16 @@ export function Arm() {
     useEffect(() => {
         if (arm2) {
             arm2.traverse((node) => {
-                if (node.material) node.material = material
+                if ((node as Mesh).material) (node as Mesh).material = material
             })
         }
     }, [arm2, material])
 
-    const parent = useRef()
+    const parent = useRef<any>(null)
 
     const { viewport } = useThree()
 
-    const _thresholds = useStore(({ thresholds }) => thresholds)
+    const _thresholds: Record<string, number> = useStore((state) => state.thresholds)
     const thresholds = useMemo(() => {
         return Object.values(_thresholds).sort((a, b) => a - b)
     }, [_thresholds])
@@ -455,9 +458,7 @@ export function Arm() {
         const _rotation = new Euler().fromArray(
             new Array(3)
                 .fill(0)
-                .map((_, i) =>
-                    mapRange(0, 1, progress, from.rotation[i], to.rotation[i])
-                )
+                .map((_, i) => mapRange(0, 1, progress, from.rotation[i], to.rotation[i])) as [number, number, number]
         )
 
         parent.current.scale.setScalar(viewport.height * _scale)

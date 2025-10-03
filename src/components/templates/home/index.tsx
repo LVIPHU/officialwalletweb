@@ -1,13 +1,23 @@
+'use client'
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { Separator } from "@/components/ui/separator"
 import { FeatureCard } from "@/components/molecules/feature-card"
 import { FEATURES, TESTIMONIALS, CRYPTOCURRENCIES } from "@/constants/landing.constants"
+import dynamic from "next/dynamic";
+
+const WebGL = dynamic(
+    () => import('@/components/atoms/webgl').then(({ WebGL }) => WebGL),
+    { ssr: false }
+)
 
 export default function HomeTemplate() {
     return (
         <div className="min-h-screen">
+            <div className={'canvas'}>
+                <WebGL />
+            </div>
             {/* Hero Section */}
             <section className="pt-24 pb-16 px-6 min-h-screen flex items-center">
                 <div className="max-w-7xl mx-auto grid lg:grid-cols-2 gap-12 items-center">
