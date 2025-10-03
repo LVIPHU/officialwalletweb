@@ -1,5 +1,5 @@
-import clsx from 'clsx'
 import type { ReactNode } from 'react'
+import {cn} from "@/lib/styles";
 
 interface ContainerProps {
     readonly className?: string
@@ -10,7 +10,7 @@ interface ContainerProps {
 export function Container({ children, as: Component = 'section', className}: ContainerProps) {
     return (
         <Component
-            className={clsx(
+            className={cn(
                 'container mx-auto w-full px-4 sm:px-6 xl:px-12',
                 className,
             )}

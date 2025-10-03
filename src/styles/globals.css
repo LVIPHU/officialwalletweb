@@ -133,8 +133,8 @@
     right: 0;
 
     &::after {
+      @apply pointer-events-none absolute hidden dark:block;
       content: '';
-      position: absolute;
       top: 0;
       left: 50%;
       height: 100vw;

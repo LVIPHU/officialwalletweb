@@ -1,5 +1,5 @@
 'use client'
-import { Float, useGLTF } from '@react-three/drei'
+import {Float, TransformControls, useGLTF} from '@react-three/drei'
 import { Canvas, useFrame, useThree } from '@react-three/fiber'
 import { useRafLoop } from '@/hooks/use-raf-loop'
 import { useScroll } from '@/hooks/use-scroll'
@@ -21,6 +21,7 @@ import {
 } from 'three'
 import fragmentShader from './particles/fragment.glsl'
 import vertexShader from './particles/vertex.glsl'
+import {useTheme} from "next-themes";
 
 function Raf({ render = true }) {
     const { advance } = useThree()
@@ -140,9 +141,13 @@ function Particles({
 
 const steps = [
     {
-        position: [-0.1, -1.75, 0],
-        scale: 0.045,
-        rotation: [0, Math.PI * 0.5, 0],
+        position: [0.15, 0.01, 0],
+        scale: 0.8,
+        rotation: [
+            MathUtils.degToRad(-20),
+            MathUtils.degToRad(136),
+            MathUtils.degToRad(6),
+        ],
         type: 1,
     },
     {
@@ -248,7 +253,7 @@ const material = new MeshPhysicalMaterial({
 })
 
 export function Arm() {
-    const { scene: arm1 } = useGLTF('/models/arm.glb')
+    const { scene: arm1 } = useGLTF('/models/iphone_13.glb')
     const { scene: arm2 } = useGLTF('/models/arm2.glb')
     const [type, setType] = useState(1)
 
@@ -322,7 +327,7 @@ export function Arm() {
         scale: {
             min: 0,
             value: 0.05,
-            max: 0.06,
+            max: 1,
             step: 0.001,
         },
         position: { value: [0, 0, 0] },
@@ -436,6 +441,8 @@ export function Arm() {
         const end = thresholds[current + 1]
         const progress = mapRange(start, end, scroll, 0, 1)
 
+        console.log(current)
+
         const from = steps[current]
         const to = steps[current + 1]
 
@@ -496,13 +503,13 @@ export function Arm() {
             <Float floatIntensity={custom ? 0 : 1} rotationIntensity={custom ? 0 : 1}>
                 <group
                     ref={parent}
-                    // position={[viewport.width * 0.155, viewport.height * -0.6, 0]}
-                    // scale={viewport.height * 0.023}
-                    // rotation={[
-                    //   MathUtils.degToRad(125),
-                    //   MathUtils.degToRad(-57),
-                    //   MathUtils.degToRad(140),
-                    // ]}
+                    position={[viewport.width * 0.15, viewport.height * 0.01, 0]}
+                    scale={viewport.height * 0.6}
+                    rotation={[
+                      MathUtils.degToRad(-20),
+                      MathUtils.degToRad(136),
+                      MathUtils.degToRad(6),
+                    ]}
                 >
                     {/* <TransformControls mode="rotate"> */}
                     {type === 1 && <primitive object={arm1} scale={[1, 1, 1]} />}
@@ -519,19 +526,22 @@ export function Arm() {
 }
 
 function Content() {
+    const { theme } = useTheme()
     const { viewport } = useThree()
 
     return (
         <>
             {/* <OrbitControls makeDefault /> */}
-            <Particles
-                width={viewport.width}
-                height={viewport.height}
-                depth={500}
-                count={100}
-                scale={500}
-                size={150}
-            />
+            {theme === 'dark' && (
+                <Particles
+                    width={viewport.width}
+                    height={viewport.height}
+                    depth={500}
+                    count={100}
+                    scale={500}
+                    size={150}
+                />
+            )}
 
             <Arm />
         </>
