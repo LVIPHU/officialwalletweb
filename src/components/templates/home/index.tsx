@@ -18,6 +18,7 @@ import {isBrowser} from "@/lib/misc";
 import {useStore} from "@/lib/store";
 import { clamp, mapRange } from '@/lib/maths'
 import Lenis from "lenis";
+import {Container} from "@/components/atoms/container";
 
 const WebGL = dynamic(
     () => import('@/components/atoms/webgl').then(({ WebGL }) => WebGL),
@@ -75,7 +76,7 @@ export default function HomeTemplate() {
         if (!lenis) return
 
         function onClassNameChange(lenis: Lenis) {
-            console.log(lenis.className)
+            console.log('[Home template] Lenis className: ', lenis.className)
         }
 
         lenis.on('className change' as any, onClassNameChange)
@@ -114,11 +115,7 @@ export default function HomeTemplate() {
         }
     })
 
-    const [whyRectRef, whyRect] = useRect()
-    const [cardsRectRef, cardsRect] = useRect()
-    const [whiteRectRef, whiteRect] = useRect()
-    const [featuresRectRef, featuresRect] = useRect()
-    const [inuseRectRef, inuseRect] = useRect()
+    const [aboutRectRef, aboutRect] = useRect()
 
     const addThreshold = useStore(({ addThreshold }) => addThreshold)
 
@@ -127,55 +124,19 @@ export default function HomeTemplate() {
     }, [])
 
     useEffect(() => {
-        const rect = ensureRect(whyRect)
+        const rect = ensureRect(aboutRect)
 
         const height = rect.height || 0
         const top = rect.top
             ? rect.top - windowHeight / 2
             : 0
 
-        addThreshold({ id: 'why-start', value: top })
+        addThreshold({ id: 'about-start', value: top })
         addThreshold({
-            id: 'why-end',
+            id: 'about-end',
             value: top + height,
         })
-    }, [whyRect])
-
-    useEffect(() => {
-        const rect = ensureRect(cardsRect)
-
-        const height = rect.height || 0
-        const top = rect.top
-            ? rect.top - windowHeight / 2
-            : 0
-
-        addThreshold({ id: 'cards-start', value: top })
-        addThreshold({ id: 'cards-end', value: top + height })
-        addThreshold({
-            id: 'red-end',
-            value: top + height + windowHeight,
-        })
-    }, [cardsRect])
-
-    useEffect(() => {
-        const rect = ensureRect(whiteRect)
-        const top = rect.top
-            ? rect.top - windowHeight
-            : 0
-        addThreshold({ id: 'light-start', value: top })
-    }, [whiteRect])
-
-    useEffect(() => {
-        const rect = ensureRect(featuresRect)
-        const top = rect.top || 0
-        addThreshold({ id: 'features', value: top })
-    }, [featuresRect])
-
-    useEffect(() => {
-        const rect = ensureRect(inuseRect)
-        const top = rect.top || 0
-        addThreshold({ id: 'in-use', value: top })
-    }, [inuseRect])
+    }, [aboutRect])
 
     useEffect(() => {
         const top = lenis?.limit || 0
@@ -183,11 +144,11 @@ export default function HomeTemplate() {
     }, [lenis?.limit])
 
     useScroll((e) => {
-        console.log(window.scrollY, e.scroll, e.isScrolling, e.velocity, e.isLocked)
+        console.log('[Home template] use scroll', window.scrollY, e.scroll, e.isScrolling, e.velocity, e.isLocked)
     })
 
     useFrame(() => {
-        console.log('frame', window.scrollY, lenis?.scroll, lenis?.isScrolling)
+        console.log('[Home template] use frame', window.scrollY, lenis?.scroll, lenis?.isScrolling)
     }, 1)
 
     const inUseRef = useRef<HTMLElement | null>(null)
@@ -259,8 +220,8 @@ export default function HomeTemplate() {
             </section>
 
             {/* About Section */}
-            <section id="about" className="py-16 px-6">
-                <div className="max-w-7xl mx-auto">
+            <Container id="about" data-lenis-scroll-snap-align="start">
+                <div ref={aboutRectRef}>
                     <div className="text-center mb-16">
                         <h2 className="text-4xl font-bold mb-6 text-white">About</h2>
                         <p className="text-xl text-gray-300 max-w-3xl mx-auto">
@@ -302,7 +263,7 @@ export default function HomeTemplate() {
                         </div>
                     </div>
                 </div>
-            </section>
+            </Container>
 
             {/* Features Section */}
             <section id="features" className="py-16 px-6">

@@ -141,8 +141,8 @@ function Particles({
 
 const steps = [
     {
-        position: [0.15, 0.01, 0],
-        scale: 0.8,
+        position: [0.2, 0.01, 0],
+        scale: 0.6,
         rotation: [
             MathUtils.degToRad(-20),
             MathUtils.degToRad(136),
@@ -151,8 +151,8 @@ const steps = [
         type: 1,
     },
     {
-        position: [0.15, -0.4, 0],
-        scale: 0.02,
+        position: [0.2, 0.01, 0],
+        scale: 0.6,
         rotation: [
             MathUtils.degToRad(-45),
             MathUtils.degToRad(-135),
@@ -161,8 +161,8 @@ const steps = [
         type: 1,
     },
     {
-        position: [0.15, -0.4, 0],
-        scale: 0.02,
+        position: [0.2, 0.01, 0],
+        scale: 0.6,
         rotation: [
             MathUtils.degToRad(45),
             MathUtils.degToRad(-315),
@@ -171,8 +171,8 @@ const steps = [
         type: 1,
     },
     {
-        position: [-0.2, -0.35, 0],
-        scale: 0.02,
+        position: [0.2, 0.01, 0],
+        scale: 0.6,
         rotation: [
             MathUtils.degToRad(-90),
             MathUtils.degToRad(-405),
@@ -181,8 +181,8 @@ const steps = [
         type: 1,
     },
     {
-        position: [-1.2, -0.6, 0],
-        scale: 0.05,
+        position: [0.2, 0.01, 0],
+        scale: 0.6,
         rotation: [
             MathUtils.degToRad(-90),
             MathUtils.degToRad(-405),
@@ -191,8 +191,8 @@ const steps = [
         type: 1,
     },
     {
-        position: [-1.6, -0.6, 0],
-        scale: 0.05,
+        position: [0.2, 0.01, 0],
+        scale: 0.6,
         rotation: [
             MathUtils.degToRad(-90),
             MathUtils.degToRad(-405),
@@ -201,44 +201,44 @@ const steps = [
         type: 1,
     },
     {
-        position: [0.16, -1.38, 0],
-        scale: 0.05,
+        position: [0.2, 0.01, 0],
+        scale: 0.6,
         rotation: [
             MathUtils.degToRad(0),
             MathUtils.degToRad(200),
             MathUtils.degToRad(-16),
         ],
-        type: 2,
+        type: 1,
     },
     {
-        position: [0, -0.68, 0],
-        scale: 0.04,
+        position: [0.2, 0.01, 0],
+        scale: 0.6,
         rotation: [
             MathUtils.degToRad(0),
             MathUtils.degToRad(-14),
             MathUtils.degToRad(-16),
         ],
-        type: 2,
+        type: 1,
     },
     {
-        position: [-0.22, -0.61, 0],
-        scale: 0.03,
+        position: [0.2, 0.01, 0],
+        scale: 0.6,
         rotation: [
             MathUtils.degToRad(0),
             MathUtils.degToRad(-(157 + 360)),
             MathUtils.degToRad(-16),
         ],
-        type: 2,
+        type: 1,
     },
     {
-        position: [0.2, -0.46, 0],
-        scale: 0.03,
+        position: [0.2, 0.01, 0],
+        scale: 0.6,
         rotation: [
             MathUtils.degToRad(0),
             MathUtils.degToRad(-(340 + 360)),
             MathUtils.degToRad(-16),
         ],
-        type: 2,
+        type: 1,
     },
 ]
 
@@ -435,13 +435,15 @@ export function Arm() {
             return
         }
 
+        console.log('[Webgl component] thresholds: ', thresholds)
+
         const current = thresholds.findIndex((v) => scroll < v) - 1
 
         const start = thresholds[current]
         const end = thresholds[current + 1]
         const progress = mapRange(start, end, scroll, 0, 1)
 
-        console.log(current)
+        console.log('[Webgl component] from step: ', current)
 
         const from = steps[current]
         const to = steps[current + 1]
@@ -503,13 +505,13 @@ export function Arm() {
             <Float floatIntensity={custom ? 0 : 1} rotationIntensity={custom ? 0 : 1}>
                 <group
                     ref={parent}
-                    position={[viewport.width * 0.2, viewport.height * 0.01, 0]}
-                    scale={viewport.height * 0.6}
-                    rotation={[
-                      MathUtils.degToRad(-20),
-                      MathUtils.degToRad(136),
-                      MathUtils.degToRad(6),
-                    ]}
+                    // position={[viewport.width * 0.2, viewport.height * 0.01, 0]}
+                    // scale={viewport.height * 0.6}
+                    // rotation={[
+                    //   MathUtils.degToRad(-20),
+                    //   MathUtils.degToRad(136),
+                    //   MathUtils.degToRad(6),
+                    // ]}
                 >
                     {/* <TransformControls mode="rotate"> */}
                     {type === 1 && <primitive object={arm1} scale={[1, 1, 1]} />}
