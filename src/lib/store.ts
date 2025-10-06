@@ -2,12 +2,6 @@ import { create } from 'zustand'
 import Lenis from "lenis";
 
 interface StoreState {
-    headerData?: unknown
-    setHeaderData: (headerData: unknown) => void
-
-    footerData?: unknown
-    setFooterData: (footerData: unknown) => void
-
     navIsOpen: boolean
     setNavIsOpen: (toggle: boolean) => void
 
@@ -22,18 +16,14 @@ interface StoreState {
 
     thresholds: Record<string, number>
     addThreshold: (params: { id: string; value: number }) => void
+    removeThreshold: (id: string) => void
+    clearThresholds: () => void
 
     introOut: boolean
     setIntroOut: (introOut: boolean) => void
 }
 
 export const useStore = create<StoreState>((set, get) => ({
-    headerData: undefined,
-    setHeaderData: (headerData) => set({ headerData }),
-
-    footerData: undefined,
-    setFooterData: (footerData) => set({ footerData }),
-
     navIsOpen: false,
     setNavIsOpen: (toggle) => set({ navIsOpen: toggle, overflow: !toggle }),
 
@@ -52,6 +42,13 @@ export const useStore = create<StoreState>((set, get) => ({
         thresholds[id] = value
         set({ thresholds })
     },
+    removeThreshold: (id) =>
+        set((state) => {
+            const thresholds = { ...state.thresholds }
+            delete thresholds[id]
+            return { thresholds }
+        }),
+    clearThresholds: () => set({ thresholds: {} }),
 
     introOut: false,
     setIntroOut: (introOut) => set({ introOut }),

@@ -1,10 +1,4 @@
-﻿export const NAVIGATION_ITEMS = [
-  { id: 'about', label: 'About', href: '#about' },
-  { id: 'features', label: 'Features', href: '#features' },
-  { id: 'download', label: 'Download', href: '#download' }
-] as const
-
-export const FEATURES = [
+﻿export const FEATURES = [
   {
     id: 'secure-storage',
     title: 'Secure Storage',

@@ -1,19 +1,207 @@
 'use client'
+import {useEffect, useRef, useState} from "react";
+import dynamic from "next/dynamic";
+import { button, useControls } from 'leva'
+import {useRect, ensureRect} from "@/hooks/use-rect";
+import {useIntersection} from "@/hooks/use-intersection";
+import {useWindowSize} from "@/hooks/use-window-size";
+import {useScroll} from "@/hooks/use-scroll";
+import {useFrame} from "@/hooks/use-frame";
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { Separator } from "@/components/ui/separator"
 import { FeatureCard } from "@/components/molecules/feature-card"
 import { FEATURES, TESTIMONIALS, CRYPTOCURRENCIES } from "@/constants/landing.constants"
-import dynamic from "next/dynamic";
 import LightRays from "@/components/atoms/light-rays";
+import {isBrowser} from "@/lib/misc";
+import {useStore} from "@/lib/store";
+import { clamp, mapRange } from '@/lib/maths'
+import Lenis from "lenis";
 
 const WebGL = dynamic(
     () => import('@/components/atoms/webgl').then(({ WebGL }) => WebGL),
     { ssr: false }
 )
 
+if (isBrowser) {
+    window.history.scrollRestoration = 'manual'
+    window.scrollTo(0, 0)
+}
+
 export default function HomeTemplate() {
+    const zoomRef = useRef<HTMLElement | null>(null)
+    const [hasScrolled, setHasScrolled] = useState(false)
+    const [zoomWrapperRectRef, zoomWrapperRect] = useRect()
+    const { height: windowHeight } = useWindowSize()
+    const introOut = useStore(({ introOut }) => introOut)
+
+    const [theme, setTheme] = useState('dark')
+    const lenis = useStore(({ lenis }) => lenis)
+
+    useControls(
+        'lenis',
+        () => ({
+            stop: button(() => {
+                lenis?.stop()
+            }),
+            start: button(() => {
+                lenis?.start()
+            }),
+        }),
+        [lenis]
+    )
+
+    useControls(
+        'scrollTo',
+        () => ({
+            immediate: button(() => {
+                lenis?.scrollTo(30000, { immediate: true })
+            }),
+            smoothDuration: button(() => {
+                lenis?.scrollTo(30000, { lock: true, duration: 10 })
+            }),
+            smooth: button(() => {
+                lenis?.scrollTo(30000)
+            }),
+            forceScrollTo: button(() => {
+                lenis?.scrollTo(30000, { force: true })
+            }),
+        }),
+        [lenis]
+    )
+
+    useEffect(() => {
+        if (!lenis) return
+
+        function onClassNameChange(lenis: Lenis) {
+            console.log(lenis.className)
+        }
+
+        lenis.on('className change' as any, onClassNameChange)
+
+        return () => {
+            lenis.off('className change' as any, onClassNameChange)
+        }
+    }, [lenis])
+
+    useScroll(({ scroll }) => {
+        setHasScrolled(scroll > 10)
+        const rect = ensureRect(zoomWrapperRect)
+        if (!rect.top) return
+
+        const height = rect?.height || 0
+
+        const start = rect.top + windowHeight * 0.5
+        const end = rect.top + height - windowHeight
+
+        const progress = clamp(0, mapRange(start, end, scroll, 0, 1), 1)
+        const center = 0.6
+        const progress1 = clamp(0, mapRange(0, center, progress, 0, 1), 1)
+        const progress2 = clamp(0, mapRange(center - 0.055, 1, progress, 0, 1), 1)
+        setTheme(progress2 === 1 ? 'light' : 'dark')
+
+        const el = zoomRef.current
+        if (!el) return
+
+        el.style.setProperty('--progress1', `${progress1}`)
+        el.style.setProperty('--progress2', `${progress2}`)
+
+        if (progress === 1) {
+            el.style.setProperty('background-color', 'currentColor')
+        } else {
+            el.style.removeProperty('background-color')
+        }
+    })
+
+    const [whyRectRef, whyRect] = useRect()
+    const [cardsRectRef, cardsRect] = useRect()
+    const [whiteRectRef, whiteRect] = useRect()
+    const [featuresRectRef, featuresRect] = useRect()
+    const [inuseRectRef, inuseRect] = useRect()
+
+    const addThreshold = useStore(({ addThreshold }) => addThreshold)
+
+    useEffect(() => {
+        addThreshold({ id: 'top', value: 0 })
+    }, [])
+
+    useEffect(() => {
+        const rect = ensureRect(whyRect)
+
+        const height = rect.height || 0
+        const top = rect.top
+            ? rect.top - windowHeight / 2
+            : 0
+
+        addThreshold({ id: 'why-start', value: top })
+        addThreshold({
+            id: 'why-end',
+            value: top + height,
+        })
+    }, [whyRect])
+
+    useEffect(() => {
+        const rect = ensureRect(cardsRect)
+
+        const height = rect.height || 0
+        const top = rect.top
+            ? rect.top - windowHeight / 2
+            : 0
+
+        addThreshold({ id: 'cards-start', value: top })
+        addThreshold({ id: 'cards-end', value: top + height })
+        addThreshold({
+            id: 'red-end',
+            value: top + height + windowHeight,
+        })
+    }, [cardsRect])
+
+    useEffect(() => {
+        const rect = ensureRect(whiteRect)
+        const top = rect.top
+            ? rect.top - windowHeight
+            : 0
+        addThreshold({ id: 'light-start', value: top })
+    }, [whiteRect])
+
+    useEffect(() => {
+        const rect = ensureRect(featuresRect)
+        const top = rect.top || 0
+        addThreshold({ id: 'features', value: top })
+    }, [featuresRect])
+
+    useEffect(() => {
+        const rect = ensureRect(inuseRect)
+        const top = rect.top || 0
+        addThreshold({ id: 'in-use', value: top })
+    }, [inuseRect])
+
+    useEffect(() => {
+        const top = lenis?.limit || 0
+        addThreshold({ id: 'end', value: top })
+    }, [lenis?.limit])
+
+    useScroll((e) => {
+        console.log(window.scrollY, e.scroll, e.isScrolling, e.velocity, e.isLocked)
+    })
+
+    useFrame(() => {
+        console.log('frame', window.scrollY, lenis?.scroll, lenis?.isScrolling)
+    }, 1)
+
+    const inUseRef = useRef<HTMLElement | null>(null)
+
+    const [visible, setIsVisible] = useState(false)
+    const intersection = useIntersection(inUseRef, {
+        threshold: 0.2,
+    })
+    useEffect(() => {
+        if (intersection?.isIntersecting) {
+            setIsVisible(true)
+        }
+    }, [intersection])
+
     return (
         <div className="min-h-screen">
             <div className={'canvas'}>
@@ -21,13 +209,13 @@ export default function HomeTemplate() {
             </div>
             {/* Hero Section */}
             <section className="relative pt-24 pb-16 px-6 h-screen flex items-center">
-                <div className={'absolute inset-0'}>
+                <div className={'absolute inset-0 translate-x-1/5'}>
                     <LightRays
                         raysOrigin="bottom-center"
                         raysColor="#00ffff"
                         raysSpeed={0}
                         lightSpread={0.1}
-                        rayLength={1}
+                        rayLength={0.6}
                         followMouse={true}
                         mouseInfluence={0.1}
                         noiseAmount={0.1}

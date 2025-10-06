@@ -5,12 +5,13 @@ import dynamic from "next/dynamic";
 import {usePathname} from 'next/navigation'
 import { useStore } from "@/lib/store";
 import Lenis from "lenis";
-import { useRafLoop } from "@/hooks/use-raf-loop";
+import {useFrame} from "@/hooks/use-frame";
+import {isBrowser} from "@/lib/misc";
 
-const Cursor = dynamic(
-    () => import('@/components/atoms/cursor').then((mod) => mod.Cursor),
-    { ssr: false }
-)
+// const Cursor = dynamic(
+//     () => import('@/components/atoms/cursor').then((mod) => mod.Cursor),
+//     { ssr: false }
+// )
 
 const PageTransition = dynamic(
     () => import('@/components/atoms/page-transition').then((mod) => mod.PageTransition),
@@ -54,7 +55,7 @@ export default function DefaultLayout({ children }: Readonly<PropsWithChildren>)
     }, [lenis, hash])
 
     useEffect(() => {
-        if (typeof window !== 'undefined' && window.location.hash) {
+        if (isBrowser && window.location.hash) {
             const hash = window.location.hash.replace('#', '')
             setHash(`#${hash}`)
         }
@@ -87,13 +88,13 @@ export default function DefaultLayout({ children }: Readonly<PropsWithChildren>)
         }
     }, [pathname])
 
-    useRafLoop((time) => {
+    useFrame((time) => {
         lenis?.raf(time)
-    }, true)
+    }, 0)
 
     return (
         <div className='flex flex-col mb-auto grow'>
-            <Cursor/>
+            {/*<Cursor/>*/}
             <Intro/>
             <PageTransition/>
             { children }

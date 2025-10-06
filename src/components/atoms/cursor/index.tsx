@@ -3,6 +3,7 @@ import gsap from 'gsap'
 import {useCallback, useEffect, useRef, useState} from 'react'
 import s from './cursor.module.css'
 import {cn} from "@/lib/styles";
+import { on, off } from "@/lib/misc"
 
 const Cursor = () => {
     const cursor = useRef<HTMLDivElement | null>(null)
@@ -24,11 +25,8 @@ const Cursor = () => {
     )
 
     useEffect(() => {
-        window.addEventListener('mousemove', onMouseMove, false)
-
-        return () => {
-            window.removeEventListener('mousemove', onMouseMove, false)
-        }
+        on(window, 'mousemove', onMouseMove, false)
+        return () => off(window, 'mousemove', onMouseMove, false)
     }, [onMouseMove])
 
     useEffect(() => {
@@ -62,14 +60,14 @@ const Cursor = () => {
         }
 
         elements.forEach((el) => {
-            el.addEventListener("mouseenter", onMouseEnter, false)
-            el.addEventListener("mouseleave", onMouseLeave, false)
+            on(el, 'mouseenter', onMouseEnter, false)
+            on(el, 'mouseleave', onMouseLeave, false)
         })
 
         return () => {
             elements.forEach((el) => {
-                el.removeEventListener("mouseenter", onMouseEnter, false)
-                el.removeEventListener("mouseleave", onMouseLeave, false)
+                off(el, 'mouseenter', onMouseEnter, false)
+                off(el, 'mouseleave', onMouseLeave, false)
             })
         }
     }, [])

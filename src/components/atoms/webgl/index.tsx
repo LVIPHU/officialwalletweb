@@ -1,7 +1,7 @@
 'use client'
-import {Float, TransformControls, useGLTF} from '@react-three/drei'
+import {Float,  useGLTF} from '@react-three/drei'
 import { Canvas, useFrame, useThree } from '@react-three/fiber'
-import { useRafLoop } from '@/hooks/use-raf-loop'
+import { useFrame as useRaf } from '@/hooks/use-frame'
 import { useScroll } from '@/hooks/use-scroll'
 import { button, useControls } from 'leva'
 import { mapRange } from '@/lib/maths'
@@ -26,11 +26,11 @@ import {useTheme} from "next-themes";
 function Raf({ render = true }) {
     const { advance } = useThree()
 
-    useRafLoop((time) => {
+    useRaf((time) => {
         if (render) {
             advance(time / 1000)
         }
-    }, true)
+    })
     return <></>
 }
 
@@ -503,7 +503,7 @@ export function Arm() {
             <Float floatIntensity={custom ? 0 : 1} rotationIntensity={custom ? 0 : 1}>
                 <group
                     ref={parent}
-                    position={[viewport.width * 0.15, viewport.height * 0.01, 0]}
+                    position={[viewport.width * 0.2, viewport.height * 0.01, 0]}
                     scale={viewport.height * 0.6}
                     rotation={[
                       MathUtils.degToRad(-20),

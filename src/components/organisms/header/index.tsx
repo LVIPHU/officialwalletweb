@@ -8,6 +8,7 @@ import {Logo} from "@/components/atoms/logo";
 import {useState} from "react";
 import {useScroll} from "@/hooks/use-scroll";
 import {ThemeSwitch} from "@/components/molecules/theme-switch";
+import {Container} from "@/components/atoms/container";
 
 export default function Header() {
     const [hasScrolled, setHasScrolled] = useState(false)
@@ -18,14 +19,14 @@ export default function Header() {
     })
 
     return (
-        <header
+        <Container
+            as="header"
             className={cn(
-                'mx-auto w-full px-4 sm:px-6 xl:px-12',
                 'transition-all duration-300 ease-in-out',
-                'shadow-xs saturate-100 py-2',
+                'saturate-100 py-2 rounded-full',
                 hasScrolled
-                    ? 'max-w-6xl rounded-2xl bg-white/80 backdrop-blur-xl dark:bg-white/10 shadow-md'
-                    : 'container rounded-3xl bg-transparent backdrop-blur-none shadow-none',
+                    ? 'bg-white/80 backdrop-blur-xl dark:bg-white/10 shadow-md'
+                    : 'bg-transparent backdrop-blur-none shadow-none',
                 SITE_METADATA.stickyNav ? 'sticky top-2 z-10 lg:top-3' : 'mt-2 lg:mt-3',
             )}
         >
@@ -73,6 +74,6 @@ export default function Header() {
                 {/* Sidebar Trigger for Mobile */}
                 <SidebarTrigger className={'md:hidden'} />
             </div>
-        </header>
+        </Container>
     )
 }
