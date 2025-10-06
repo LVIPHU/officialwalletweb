@@ -1,26 +1,33 @@
 'use client'
+
+import { useState } from 'react'
+import { usePathname } from 'next/navigation'
 import { Button } from '@/components/ui/button'
 import {
   NavigationMenu,
+  NavigationMenuContent,
   NavigationMenuItem,
-  NavigationMenuLink,
   NavigationMenuList,
+  NavigationMenuTrigger,
+  NavigationMenuLink,
 } from '@/components/ui/navigation-menu'
 import { SidebarTrigger } from '@/components/ui/sidebar'
 import { cn } from '@/lib/styles'
 import { SITE_METADATA } from '@/constants/site-metadata.constants'
 import { Logo } from '@/components/atoms/logo'
-import { useState } from 'react'
 import { useScroll } from '@/hooks/use-scroll'
-import { ThemeSwitch } from '@/components/molecules/theme-switch'
+import { ThemeSwitcher } from '@/components/molecules/theme-switcher'
 import { Container } from '@/components/atoms/container'
+import { NavigationLink } from '@/components/atoms/navigation-link'
+import { NAVIGATION_ITEMS } from '@/constants/navigation.constants'
+import { LocaleSwitcher } from '@/components/molecules/locale-switcher'
 
 export default function Header() {
   const [hasScrolled, setHasScrolled] = useState(false)
 
   useScroll(({ scroll }) => {
-    if (scroll === 0) return setHasScrolled(false)
-    return setHasScrolled(scroll > 10)
+    const newState = scroll > 10
+    setHasScrolled((prev) => (prev !== newState ? newState : prev))
   })
 
   return (
@@ -32,7 +39,7 @@ export default function Header() {
         hasScrolled
           ? 'bg-white/80 shadow-md backdrop-blur-xl dark:bg-white/10'
           : 'bg-transparent shadow-none backdrop-blur-none',
-        SITE_METADATA.stickyNav ? 'sticky top-2 z-10 lg:top-3' : 'mt-2 lg:mt-3'
+        SITE_METADATA.stickyNav ? 'sticky top-2 z-50 lg:top-3' : 'mt-2 lg:mt-3'
       )}
     >
       <div className='flex items-center justify-between gap-3'>
@@ -43,38 +50,78 @@ export default function Header() {
         <div className='hidden md:flex'>
           <NavigationMenu>
             <NavigationMenuList>
-              <NavigationMenuItem>
-                <NavigationMenuLink href='#wallet'>Wallet</NavigationMenuLink>
-              </NavigationMenuItem>
-              <NavigationMenuItem>
-                <NavigationMenuLink href='#features'>Features</NavigationMenuLink>
-              </NavigationMenuItem>
-              <NavigationMenuItem>
-                <NavigationMenuLink href='#build'>Build</NavigationMenuLink>
-              </NavigationMenuItem>
-              <NavigationMenuItem>
-                <NavigationMenuLink href='#support'>Support</NavigationMenuLink>
-              </NavigationMenuItem>
-              <NavigationMenuItem>
-                <NavigationMenuLink href='#about'>About</NavigationMenuLink>
-              </NavigationMenuItem>
+              {NAVIGATION_ITEMS.map((item) => (
+                <NavigationItem key={item.id} item={item} />
+              ))}
             </NavigationMenuList>
           </NavigationMenu>
         </div>
 
-        <div className='hidden items-center gap-3 md:flex'>
-          <ThemeSwitch />
-
-          {/* Language Button */}
-          <Button className='bg-green-600 px-4 py-2 text-white hover:bg-green-700'>Language</Button>
-
-          {/* Download Button */}
-          <Button className='bg-green-500 px-4 py-2 text-white hover:bg-green-600'>Download</Button>
+        {/* Right section */}
+        <div className='hidden items-center gap-2 md:flex'>
+          <ThemeSwitcher />
+          <LocaleSwitcher />
+          <Button>Download</Button>
         </div>
 
-        {/* Sidebar Trigger for Mobile */}
-        <SidebarTrigger className={'md:hidden'} />
+        {/* Sidebar for mobile */}
+        <SidebarTrigger className='md:hidden' />
       </div>
     </Container>
+  )
+}
+
+function NavigationItem({ item }: { item: any }) {
+  return (
+    <NavigationMenuItem key={item.id}>
+      <NavigationMenuTrigger className='data-[state=open]:text-primary bg-transparent'>{item.id}</NavigationMenuTrigger>
+      <NavigationMenuContent>
+        <div className='flex gap-8 md:w-2xl lg:w-3xl xl:w-4xl 2xl:w-5xl'>
+          <div className='row-span-3'>
+            <a
+              className='from-muted/50 to-muted flex h-full w-full flex-col justify-end rounded-md bg-linear-to-b p-6 no-underline outline-hidden select-none focus:shadow-md'
+              href='/'
+            >
+              <div className='mt-4 mb-2 text-lg font-medium'>shadcn/ui</div>
+              <p className='text-muted-foreground text-sm leading-tight'>
+                Beautifully designed components built with Tailwind CSS.
+              </p>
+            </a>
+          </div>
+
+          <ul className='default-transition grid grid-cols-1 gap-x-6 gap-y-6 lg:grid-cols-2 xl:grid-cols-3 2xl:gap-x-10'>
+            {item.children?.map((child: any) => (
+              <ListItem key={child.id} href={child.href} title={child.id}>
+                Re-usable components built using Radix UI and Tailwind CSS.
+              </ListItem>
+            ))}
+          </ul>
+        </div>
+      </NavigationMenuContent>
+    </NavigationMenuItem>
+  )
+}
+
+function ListItem({ title, children, href, ...props }: React.ComponentPropsWithoutRef<'li'> & { href: string }) {
+  const pathname = usePathname()
+  const isActive = pathname === href
+
+  return (
+    <li {...props}>
+      <NavigationMenuLink asChild>
+        <NavigationLink
+          href={href}
+          className={cn(
+            'block rounded-md p-3 transition-colors',
+            isActive
+              ? 'bg-primary/10 text-primary font-semibold'
+              : 'text-foreground/80 hover:text-foreground hover:bg-muted/40'
+          )}
+        >
+          <div className='text-sm leading-none font-medium'>{title}</div>
+          <p className='text-muted-foreground line-clamp-2 text-sm leading-snug'>{children}</p>
+        </NavigationLink>
+      </NavigationMenuLink>
+    </li>
   )
 }

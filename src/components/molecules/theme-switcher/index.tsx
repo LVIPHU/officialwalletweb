@@ -11,7 +11,7 @@ interface ThemeSwitchProps {
   className?: string
 }
 
-export const ThemeSwitch = ({ size = 20, className }: ThemeSwitchProps) => {
+export const ThemeSwitcher = ({ size = 20, className }: ThemeSwitchProps) => {
   const { theme, setTheme } = useTheme()
   const wrapperRef = useRef<HTMLDivElement>(null)
 
