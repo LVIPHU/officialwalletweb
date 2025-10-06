@@ -8,21 +8,21 @@ import { useEffect, useRef } from 'react'
 import Tempus, { TempusCallback } from '@/lib/tempus'
 
 export function useFrame(callback: TempusCallback, priority = 0): void {
-    const cbRef = useRef<TempusCallback>(callback)
-    cbRef.current = callback
+  const cbRef = useRef<TempusCallback>(callback)
+  cbRef.current = callback
 
-    useEffect(() => {
-        if (!Tempus) return
+  useEffect(() => {
+    if (!Tempus) return
 
-        const wrapped = (time: number, delta: number): void => {
-            cbRef.current?.(time, delta)
-        }
+    const wrapped = (time: number, delta: number): void => {
+      cbRef.current?.(time, delta)
+    }
 
-        const unsubscribe = Tempus.add(wrapped, priority)
+    const unsubscribe = Tempus.add(wrapped, priority)
 
-        return () => {
-            Tempus?.remove(wrapped)
-            unsubscribe?.()
-        }
-    }, [priority])
+    return () => {
+      Tempus?.remove(wrapped)
+      unsubscribe?.()
+    }
+  }, [priority])
 }

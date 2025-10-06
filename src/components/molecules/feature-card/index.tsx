@@ -9,18 +9,13 @@ interface FeatureCardProps {
 
 export function FeatureCard({ feature, className }: FeatureCardProps) {
   return (
-    <Card className={cn(
-      'hover:border-primary transition-colors',
-      className
-    )}>
+    <Card className={cn('hover:border-primary transition-colors', className)}>
       <CardHeader>
-        <div className="text-4xl mb-2">{feature.icon}</div>
-        <CardTitle className="text-xl">{feature.title}</CardTitle>
+        <div className='mb-2 text-4xl'>{feature.icon}</div>
+        <CardTitle className='text-xl'>{feature.title}</CardTitle>
       </CardHeader>
       <CardContent>
-        <CardDescription className="text-muted-foreground">
-          {feature.description}
-        </CardDescription>
+        <CardDescription className='text-muted-foreground'>{feature.description}</CardDescription>
       </CardContent>
     </Card>
   )

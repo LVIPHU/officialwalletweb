@@ -1,65 +1,65 @@
 .wrapper {
-    height: 100vh;
-    width: 100%;
-    background-color: var(--primary);
-    position: fixed;
-    top: 0;
-    left: 0;
-    z-index: 1000;
-    overflow: hidden;
+  height: 100vh;
+  width: 100%;
+  background-color: var(--primary);
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  overflow: hidden;
 }
 
 @media (max-width: 768px) {
-    .wrapper {
-        display: none;
-    }
+  .wrapper {
+    display: none;
+  }
 }
 
 .wrapper.out {
-    transition: transform 1500ms var(--ease-out-expo);
-    transform: translate3d(0, -100%, 0);
-    transition-delay: 1500ms;
+  transition: transform 1500ms var(--ease-out-expo);
+  transform: translate3d(0, -100%, 0);
+  transition-delay: 1500ms;
 }
 
 .wrapper .start {
-    transform: translate3d(0, calc(var(--index) * 5% + 100%), 0);
+  transform: translate3d(0, calc(var(--index) * 5% + 100%), 0);
 }
 
 .wrapper .relative {
-    padding: 40px 32.5px;
-    transition: transform 1500ms var(--ease-out-expo);
-    transform: translate3d(0, 850px, 0);
-    transition-delay: 1500ms;
+  padding: 40px 32.5px;
+  transition: transform 1500ms var(--ease-out-expo);
+  transform: translate3d(0, 850px, 0);
+  transition-delay: 1500ms;
 
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .wrapper .show {
-    transition: transform 1500ms var(--ease-out-expo);
-    transition-delay: calc(var(--index) * 75ms);
-    transform: translate3d(0, 0, 0);
+  transition: transform 1500ms var(--ease-out-expo);
+  transition-delay: calc(var(--index) * 75ms);
+  transform: translate3d(0, 0, 0);
 }
 
 .translate {
-    /* desktop */
+  /* desktop */
 }
 
 @media (min-width: 769px) {
-    .translate {
-        transform: translate3d(0, -100%, 0);
-        transition: transform 1500ms var(--ease-out-expo);
-    }
+  .translate {
+    transform: translate3d(0, -100%, 0);
+    transition: transform 1500ms var(--ease-out-expo);
+  }
 }
 
 .mobile {
-    /* mobile */
+  /* mobile */
 }
 
 @media (max-width: 768px) {
-    .mobile {
-        transform: translate3d(0, -105%, 0);
-    }
+  .mobile {
+    transform: translate3d(0, -105%, 0);
+  }
 }

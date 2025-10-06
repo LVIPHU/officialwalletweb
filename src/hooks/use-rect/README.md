@@ -48,14 +48,14 @@ The `useRect` hook returns an array containing the following elements:
 
 1. `setRef`: A function that should be passed as the `ref` prop to the target DOM element.
 2. `rect`: An object representing the current dimensions and position of the element. if `lazy` is `true`, `rect` is a function that returns the current dimensions and position of the element. The object has the following properties:
-    - `element`: The DOM element being measured.
-    - `resize`: A function to trigger manual resizing when needed.
-    - `width`: The width of the element.
-    - `height`: The height of the element.
-    - `top`, `y`: The distance from the top of the document to the top of the element.
-    - `left`, `x`: The distance from the left of the document to the left of the element.
-    - `right`: The distance from the left of the document to the right of the element.
-    - `bottom`: The distance from the top of the document to the bottom of the element.
+   - `element`: The DOM element being measured.
+   - `resize`: A function to trigger manual resizing when needed.
+   - `width`: The width of the element.
+   - `height`: The height of the element.
+   - `top`, `y`: The distance from the top of the document to the top of the element.
+   - `left`, `x`: The distance from the left of the document to the left of the element.
+   - `right`: The distance from the left of the document to the right of the element.
+   - `bottom`: The distance from the top of the document to the bottom of the element.
 3. `setWrapperRef`: A function to set a reference to the wrapper element. Default wrapper element is `document.body`. Any time the wrapper element is resized, the dimensions and position of the target element are recalculated.
 
 ## Additional Functionality

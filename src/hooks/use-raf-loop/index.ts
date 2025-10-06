@@ -1,55 +1,52 @@
-import { useCallback, useEffect, useMemo, useRef } from 'react';
+import { useCallback, useEffect, useMemo, useRef } from 'react'
 
-export type RafLoopReturns = [() => void, () => void, () => boolean];
+export type RafLoopReturns = [() => void, () => void, () => boolean]
 
-export function useRafLoop(
-    callback: FrameRequestCallback,
-    initiallyActive = true
-): RafLoopReturns {
-    const raf = useRef<number | null>(null);
-    const rafActivity = useRef<boolean>(false);
-    const rafCallback = useRef(callback);
-    rafCallback.current = callback;
+export function useRafLoop(callback: FrameRequestCallback, initiallyActive = true): RafLoopReturns {
+  const raf = useRef<number | null>(null)
+  const rafActivity = useRef<boolean>(false)
+  const rafCallback = useRef(callback)
+  rafCallback.current = callback
 
-    const step = useCallback((time: number) => {
-        if (rafActivity.current) {
-            rafCallback.current(time);
-            raf.current = requestAnimationFrame(step);
-        }
-    }, []);
+  const step = useCallback((time: number) => {
+    if (rafActivity.current) {
+      rafCallback.current(time)
+      raf.current = requestAnimationFrame(step)
+    }
+  }, [])
 
-    const result = useMemo(
-        () =>
-            [
-                () => {
-                    // stop
-                    if (rafActivity.current) {
-                        rafActivity.current = false;
-                        // eslint-disable-next-line @typescript-eslint/no-unused-expressions
-                        raf.current && cancelAnimationFrame(raf.current);
-                    }
-                },
-                () => {
-                    // start
-                    if (!rafActivity.current) {
-                        rafActivity.current = true;
-                        raf.current = requestAnimationFrame(step);
-                    }
-                },
-                (): boolean => rafActivity.current, // isActive
-            ] as RafLoopReturns,
-        // eslint-disable-next-line react-hooks/exhaustive-deps
-        []
-    );
+  const result = useMemo(
+    () =>
+      [
+        () => {
+          // stop
+          if (rafActivity.current) {
+            rafActivity.current = false
+            // eslint-disable-next-line @typescript-eslint/no-unused-expressions
+            raf.current && cancelAnimationFrame(raf.current)
+          }
+        },
+        () => {
+          // start
+          if (!rafActivity.current) {
+            rafActivity.current = true
+            raf.current = requestAnimationFrame(step)
+          }
+        },
+        (): boolean => rafActivity.current, // isActive
+      ] as RafLoopReturns,
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+    []
+  )
 
-    useEffect(() => {
-        if (initiallyActive) {
-            result[1]();
-        }
+  useEffect(() => {
+    if (initiallyActive) {
+      result[1]()
+    }
 
-        return result[0];
-        // eslint-disable-next-line react-hooks/exhaustive-deps
-    }, []);
+    return result[0]
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [])
 
-    return result;
+  return result
 }
