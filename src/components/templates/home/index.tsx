@@ -19,8 +19,12 @@ import { useStore } from '@/lib/store'
 import { clamp, mapRange } from '@/lib/maths'
 import Lenis from 'lenis'
 import { Container } from '@/components/atoms/container'
+import {Laptop, Smartphone} from "lucide-react";
+import AnimatedContent from "@/components/atoms/animated-content";
 
 const WebGL = dynamic(() => import('@/components/atoms/webgl').then(({ WebGL }) => WebGL), { ssr: false })
+
+const HorizontalSlides = dynamic(() => import('@/components/atoms/horizontal-slides').then((mod) => mod.HorizontalSlides), { ssr: false })
 
 if (isBrowser) {
   window.history.scrollRestoration = 'manual'
@@ -86,12 +90,12 @@ export default function HomeTemplate() {
   useScroll(({ scroll }) => {
     setHasScrolled(scroll > 10)
     const rect = ensureRect(zoomWrapperRect)
-    if (!rect.top) return
 
-    const height = rect?.height || 0
+    const top = rect.top || 0
+    const height = rect.height || 0
 
-    const start = rect.top + windowHeight * 0.5
-    const end = rect.top + height - windowHeight
+    const start = top + windowHeight * 0.5
+    const end = top + height - windowHeight
 
     const progress = clamp(0, mapRange(start, end, scroll, 0, 1), 1)
     const center = 0.6
@@ -119,6 +123,7 @@ export default function HomeTemplate() {
 
   useEffect(() => {
     addThreshold({ id: 'top', value: 0 })
+    addThreshold({ id: 'intro', value: windowHeight / 4 })
   }, [])
 
   useEffect(() => {
@@ -129,8 +134,12 @@ export default function HomeTemplate() {
 
     addThreshold({ id: 'about-start', value: top })
     addThreshold({
+      id: 'about-center',
+      value: top + height + windowHeight / 2,
+    })
+    addThreshold({
       id: 'about-end',
-      value: top + height,
+      value: top + height + windowHeight,
     })
   }, [aboutRect])
 
@@ -146,7 +155,7 @@ export default function HomeTemplate() {
       value: top + height,
     })
     addThreshold({
-      id: 'red-end',
+      id: 'outro',
       value: top + height + windowHeight,
     })
   }, [featuresRect])
@@ -181,8 +190,9 @@ export default function HomeTemplate() {
       <div className={'canvas'}>
         <WebGL />
       </div>
+
       {/* Hero Section */}
-      <section className='relative flex h-screen items-center px-6 pt-24 pb-16'>
+      <Container className='relative flex min-h-screen items-center py-5 md:py-10'>
         <div className={'absolute inset-0 translate-x-1/5'}>
           <LightRays
             raysOrigin='bottom-center'
@@ -198,112 +208,78 @@ export default function HomeTemplate() {
           />
         </div>
 
-        <div className='mx-auto grid max-w-7xl items-center gap-12 lg:grid-cols-2'>
+        <div className='grid items-center gap-12 lg:grid-cols-2'>
           {/* Left Content */}
           <div>
-            <h1 className='font-class-display mb-6 text-5xl leading-tight font-bold lg:text-7xl'>
+            <h1 className='font-class-display mb-6 text-4xl leading-tight font-bold lg:text-6xl uppercase'>
               True crypto ownership.
               <br />
-              <span>Powerful Web3</span>
-              <br />
-              experiences
+              <span className='text-primary'>
+                Powerful Web3 experiences
+              </span>
             </h1>
-            <p className='mb-8 text-xl leading-relaxed text-gray-300'>
+            <p className='mb-6 text-xl leading-relaxed'>
               Unlock the power of your cryptocurrency assets and explore the world of Web3 with Trust Wallet.
             </p>
             <div className='flex flex-col gap-4 sm:flex-row'>
-              <Button className='flex items-center space-x-3 rounded-lg border-2 border-purple-400 bg-transparent px-8 py-4 text-lg text-blue-900 hover:bg-purple-50'>
-                <svg className='h-6 w-6' fill='none' stroke='currentColor' viewBox='0 0 24 24'>
-                  <path
-                    strokeLinecap='round'
-                    strokeLinejoin='round'
-                    strokeWidth={2}
-                    d='M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z'
-                  />
-                </svg>
+              <Button size={'lg'} className='rounded-full'>
+                <Smartphone />
                 <span>Download Mobile App</span>
               </Button>
-              <Button className='flex items-center space-x-3 rounded-lg border-2 border-purple-400 bg-transparent px-8 py-4 text-lg text-blue-900 hover:bg-purple-50'>
-                <svg className='h-6 w-6' fill='none' stroke='currentColor' viewBox='0 0 24 24'>
-                  <path
-                    strokeLinecap='round'
-                    strokeLinejoin='round'
-                    strokeWidth={2}
-                    d='M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z'
-                  />
-                </svg>
+              <Button size={'lg'} className='rounded-full'>
+                <Laptop />
                 <span>Download Extension</span>
               </Button>
             </div>
           </div>
         </div>
-      </section>
+      </Container>
 
       {/* About Section */}
-      <Container id='about' data-lenis-scroll-snap-align='start'>
-        <div ref={aboutRectRef}>
-          <div className='mb-16 text-center'>
-            <h2 className='mb-6 text-4xl font-bold'>About</h2>
-            <p className='mx-auto max-w-3xl text-xl'>
-              TB Wallet is revolutionizing cryptocurrency management. Our platform combines cutting-edge security with
-              an intuitive user experience.
-            </p>
-          </div>
-          <div className='grid items-center gap-12 lg:grid-cols-2'>
-            <Card className='mx-auto h-96 w-80 border-gray-600 bg-gray-700'>
-              <CardContent className='p-6'>
-                <div className='mb-4 h-8 w-full rounded-lg bg-green-500'></div>
-                <div className='space-y-3'>
-                  <div className='h-4 w-3/4 rounded bg-gray-600'></div>
-                  <div className='h-4 w-1/2 rounded bg-gray-600'></div>
-                  <div className='h-4 w-2/3 rounded bg-gray-600'></div>
-                </div>
-              </CardContent>
-            </Card>
-            <div>
-              <h3 className='mb-6 text-3xl font-bold text-white'>Built for the Future</h3>
-              <p className='mb-6 text-lg text-gray-300'>
-                Our advanced technology ensures your assets are always secure while providing lightning-fast
-                transactions and seamless user experience across all devices.
+      <Container id='about' className='min-h-screen py-5 md:py-10' data-lenis-scroll-snap-align='start'>
+        <div className='flex flex-col'>
+          <AnimatedContent threshold={0.6}>
+            <div className='mb-12 text-center'>
+              <h2 className='mb-6 text-4xl font-bold uppercase'>About</h2>
+              <div className='text-xl flex flex-col gap-6'>
+                <p>
+                  As a leading self-custody multi-chain platform, we support millions of assets across 100+ blockchains. We provide secure, user-friendly access to the decentralized web while maintaining complete control over your digital assets.
+                </p>
+                <p>
+                  Our platform combines cutting-edge security with intuitive design to make Web3 accessible to everyone.
+                </p>
+              </div>
+            </div>
+          </AnimatedContent>
+          <div ref={aboutRectRef} className='grow'></div>
+        </div>
+      </Container>
+
+      {/* Features Section */}
+      <Container id='features' className='min-h-screen py-5 md:py-10' data-lenis-scroll-snap-align='start'>
+        <div ref={featuresRectRef}>
+          <AnimatedContent threshold={0.6}>
+            <div className='mb-16 text-center'>
+              <h2 className='mb-6 text-4xl font-bold uppercase'>Features</h2>
+              <p className='mx-auto max-w-3xl text-xl'>
+                Discover the powerful features that make TB Wallet the perfect choice for managing your digital assets.
               </p>
-              <ul className='space-y-4'>
-                <li className='flex items-center space-x-3'>
-                  <Badge className='bg-green-500 text-white'></Badge>
-                  <span className='text-white'>Bank-level security</span>
-                </li>
-                <li className='flex items-center space-x-3'>
-                  <Badge className='bg-green-500 text-white'></Badge>
-                  <span className='text-white'>Multi-platform support</span>
-                </li>
-                <li className='flex items-center space-x-3'>
-                  <Badge className='bg-green-500 text-white'></Badge>
-                  <span className='text-white'>24/7 customer support</span>
-                </li>
-              </ul>
+            </div>
+          </AnimatedContent>
+          <div className='grid items-center gap-12 lg:grid-cols-2'>
+            <div className='col-span-4 col-start-2'>
+              <HorizontalSlides>
+                {FEATURES.map((feature) => (
+                    <FeatureCard key={feature.id} feature={feature} />
+                ))}
+              </HorizontalSlides>
             </div>
           </div>
         </div>
       </Container>
 
-      {/* Features Section */}
-      <Container id='features'>
-        <div ref={featuresRectRef}>
-          <div className='mb-16 text-center'>
-            <h2 className='mb-6 text-4xl font-bold'>Features</h2>
-            <p className='mx-auto max-w-3xl text-xl'>
-              Discover the powerful features that make TB Wallet the perfect choice for managing your digital assets.
-            </p>
-          </div>
-          <div className='grid gap-8 md:grid-cols-2 lg:grid-cols-3'>
-            {FEATURES.map((feature) => (
-              <FeatureCard key={feature.id} feature={feature} />
-            ))}
-          </div>
-        </div>
-      </Container>
-
       {/* One Platform, Millions of Assets */}
-      <section className='bg-gray-900 px-6 py-16'>
+      <Container id='native' className='min-h-screen py-5 md:py-10' data-lenis-scroll-snap-align='start'>
         <div className='mx-auto max-w-7xl text-center'>
           <h2 className='mb-6 text-4xl font-bold text-white'>One Platform, Millions of Assets</h2>
           <p className='mb-12 text-xl text-gray-300'>
@@ -321,10 +297,10 @@ export default function HomeTemplate() {
             ))}
           </div>
         </div>
-      </section>
+      </Container>
 
       {/* Community Testimonials */}
-      <section className='px-6 py-16'>
+      <Container id='community' className='min-h-screen py-5 md:py-10' data-lenis-scroll-snap-align='start'>
         <div className='mx-auto max-w-7xl'>
           <div className='mb-16 text-center'>
             <h2 className='mb-6 text-4xl font-bold text-white'>Community talk about us</h2>
@@ -351,10 +327,10 @@ export default function HomeTemplate() {
             ))}
           </div>
         </div>
-      </section>
+      </Container>
 
       {/* Download Section */}
-      <section id='download' className='bg-gray-900 px-6 py-16'>
+      <Container id='download' className='min-h-screen py-5 md:py-10' data-lenis-scroll-snap-align='start'>
         <div className='mx-auto max-w-7xl text-center'>
           <h2 className='mb-6 text-4xl font-bold text-white'>Download now</h2>
           <p className='mb-12 text-xl text-gray-300'>
@@ -385,7 +361,7 @@ export default function HomeTemplate() {
             </Button>
           </div>
         </div>
-      </section>
+      </Container>
       <Separator className='bg-gray-700' />
     </div>
   )

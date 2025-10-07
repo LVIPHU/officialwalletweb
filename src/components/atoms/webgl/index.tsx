@@ -113,33 +113,45 @@ function Particles({ width = 250, height = 250, depth = 250, count = 1000, scale
 
 const steps = [
   {
-    position: [0.2, 0.01, 0],
+    position: [0.2, 0, 0],
     scale: 0.6,
     rotation: [MathUtils.degToRad(-20), MathUtils.degToRad(136), MathUtils.degToRad(6)],
     type: 1,
   },
   {
-    position: [0.2, 0.01, 0],
-    scale: 0.6,
-    rotation: [MathUtils.degToRad(-45), MathUtils.degToRad(-135), MathUtils.degToRad(-45)],
+    position: [0.2, -0.1, 0],
+    scale: 0.3,
+    rotation: [MathUtils.degToRad(-10), MathUtils.degToRad(-22), MathUtils.degToRad(3)],
     type: 1,
   },
   {
-    position: [0.2, 0.01, 0],
+    position: [0, -0.18, 0],
     scale: 0.6,
-    rotation: [MathUtils.degToRad(45), MathUtils.degToRad(-315), MathUtils.degToRad(-45)],
+    rotation: [MathUtils.degToRad(0), MathUtils.degToRad(-180), MathUtils.degToRad(0)],
     type: 1,
   },
   {
-    position: [0.2, 0.01, 0],
+    position: [0, -0.18, 0],
     scale: 0.6,
-    rotation: [MathUtils.degToRad(-90), MathUtils.degToRad(-405), MathUtils.degToRad(-45)],
+    rotation: [MathUtils.degToRad(0), MathUtils.degToRad(-180), MathUtils.degToRad(0)],
     type: 1,
   },
   {
-    position: [0.2, 0.01, 0],
+    position: [-0.1, -0.17, 0],
+    scale: 0.3,
+    rotation: [MathUtils.degToRad(0), MathUtils.degToRad(0), MathUtils.degToRad(0)],
+    type: 1,
+  },
+  {
+    position: [-0.2, -0.16, 0],
     scale: 0.6,
-    rotation: [MathUtils.degToRad(-90), MathUtils.degToRad(-405), MathUtils.degToRad(-45)],
+    rotation: [MathUtils.degToRad(0), MathUtils.degToRad(180), MathUtils.degToRad(0)],
+    type: 1,
+  },
+  {
+    position: [-0.2, -0.16, 0],
+    scale: 0.6,
+    rotation: [MathUtils.degToRad(0), MathUtils.degToRad(180), MathUtils.degToRad(0)],
     type: 1,
   },
   {
@@ -152,24 +164,6 @@ const steps = [
     position: [0.2, 0.01, 0],
     scale: 0.6,
     rotation: [MathUtils.degToRad(0), MathUtils.degToRad(200), MathUtils.degToRad(-16)],
-    type: 1,
-  },
-  {
-    position: [0.2, 0.01, 0],
-    scale: 0.6,
-    rotation: [MathUtils.degToRad(0), MathUtils.degToRad(-14), MathUtils.degToRad(-16)],
-    type: 1,
-  },
-  {
-    position: [0.2, 0.01, 0],
-    scale: 0.6,
-    rotation: [MathUtils.degToRad(0), MathUtils.degToRad(-(157 + 360)), MathUtils.degToRad(-16)],
-    type: 1,
-  },
-  {
-    position: [0.2, 0.01, 0],
-    scale: 0.6,
-    rotation: [MathUtils.degToRad(0), MathUtils.degToRad(-(340 + 360)), MathUtils.degToRad(-16)],
     type: 1,
   },
 ]
@@ -351,7 +345,7 @@ export function Arm() {
       return
     }
 
-    console.log('[Webgl component] thresholds: ', thresholds)
+    console.log('[Webgl component] thresholds: ', _thresholds)
 
     const current = thresholds.findIndex((v) => scroll < v) - 1
 
