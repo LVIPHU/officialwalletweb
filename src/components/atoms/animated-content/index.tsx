@@ -22,21 +22,21 @@ interface AnimatedContentProps {
 }
 
 const AnimatedContent: React.FC<AnimatedContentProps> = ({
-                                                           children,
-                                                           distance = 100,
-                                                           direction = 'vertical',
-                                                           reverse = false,
-                                                           duration = 0.8,
-                                                           ease = 'power3.out',
-                                                           initialOpacity = 0,
-                                                           animateOpacity = true,
-                                                           scale = 1,
-                                                           threshold = 0.1,
-                                                           delay = 0,
-                                                           mode = 'scrub',
-                                                           offsetVH = 0,
-                                                           onComplete,
-                                                         }) => {
+  children,
+  distance = 100,
+  direction = 'vertical',
+  reverse = false,
+  duration = 0.8,
+  ease = 'power3.out',
+  initialOpacity = 0,
+  animateOpacity = true,
+  scale = 1,
+  threshold = 0.1,
+  delay = 0,
+  mode = 'scrub',
+  offsetVH = 0,
+  onComplete,
+}) => {
   const ref = useRef<HTMLDivElement>(null)
 
   useEffect(() => {

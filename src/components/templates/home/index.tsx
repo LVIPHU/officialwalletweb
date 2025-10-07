@@ -19,12 +19,15 @@ import { useStore } from '@/lib/store'
 import { clamp, mapRange } from '@/lib/maths'
 import Lenis from 'lenis'
 import { Container } from '@/components/atoms/container'
-import {Laptop, Smartphone} from "lucide-react";
-import AnimatedContent from "@/components/atoms/animated-content";
+import { Laptop, Smartphone } from 'lucide-react'
+import AnimatedContent from '@/components/atoms/animated-content'
 
 const WebGL = dynamic(() => import('@/components/atoms/webgl').then(({ WebGL }) => WebGL), { ssr: false })
 
-const HorizontalSlides = dynamic(() => import('@/components/atoms/horizontal-slides').then((mod) => mod.HorizontalSlides), { ssr: false })
+const HorizontalSlides = dynamic(
+  () => import('@/components/atoms/horizontal-slides').then((mod) => mod.HorizontalSlides),
+  { ssr: false }
+)
 
 if (isBrowser) {
   window.history.scrollRestoration = 'manual'
@@ -211,12 +214,10 @@ export default function HomeTemplate() {
         <div className='grid items-center gap-12 lg:grid-cols-2'>
           {/* Left Content */}
           <div>
-            <h1 className='font-class-display mb-6 text-4xl leading-tight font-bold lg:text-6xl uppercase'>
+            <h1 className='font-class-display mb-6 text-4xl leading-tight font-bold uppercase lg:text-6xl'>
               True crypto ownership.
               <br />
-              <span className='text-primary'>
-                Powerful Web3 experiences
-              </span>
+              <span className='text-primary'>Powerful Web3 experiences</span>
             </h1>
             <p className='mb-6 text-xl leading-relaxed'>
               Unlock the power of your cryptocurrency assets and explore the world of Web3 with Trust Wallet.
@@ -241,9 +242,11 @@ export default function HomeTemplate() {
           <AnimatedContent threshold={0.6}>
             <div className='mb-12 text-center'>
               <h2 className='mb-6 text-4xl font-bold uppercase'>About</h2>
-              <div className='text-xl flex flex-col gap-6'>
+              <div className='flex flex-col gap-6 text-xl'>
                 <p>
-                  As a leading self-custody multi-chain platform, we support millions of assets across 100+ blockchains. We provide secure, user-friendly access to the decentralized web while maintaining complete control over your digital assets.
+                  As a leading self-custody multi-chain platform, we support millions of assets across 100+ blockchains.
+                  We provide secure, user-friendly access to the decentralized web while maintaining complete control
+                  over your digital assets.
                 </p>
                 <p>
                   Our platform combines cutting-edge security with intuitive design to make Web3 accessible to everyone.
@@ -270,7 +273,7 @@ export default function HomeTemplate() {
             <div className='col-span-4 col-start-2'>
               <HorizontalSlides>
                 {FEATURES.map((feature) => (
-                    <FeatureCard key={feature.id} feature={feature} />
+                  <FeatureCard key={feature.id} feature={feature} />
                 ))}
               </HorizontalSlides>
             </div>
