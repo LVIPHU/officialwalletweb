@@ -78,15 +78,14 @@ function NavigationItem({ item }: { item: any }) {
       <NavigationMenuContent>
         <div className='flex gap-8 md:w-2xl lg:w-3xl xl:w-4xl 2xl:w-5xl'>
           <div className='row-span-3'>
-            <a
+            <div
               className='from-muted/50 to-muted flex h-full w-full flex-col justify-end rounded-md bg-linear-to-b p-6 no-underline outline-hidden select-none focus:shadow-md'
-              href='/'
             >
               <div className='mt-4 mb-2 text-lg font-medium'>shadcn/ui</div>
               <p className='text-muted-foreground text-sm leading-tight'>
                 Beautifully designed components built with Tailwind CSS.
               </p>
-            </a>
+            </div>
           </div>
 
           <ul className='default-transition grid grid-cols-1 gap-x-6 gap-y-6 lg:grid-cols-2 xl:grid-cols-3 2xl:gap-x-10'>

@@ -113,6 +113,7 @@ export default function HomeTemplate() {
   })
 
   const [aboutRectRef, aboutRect] = useRect()
+  const [featuresRectRef, featuresRect] = useRect()
 
   const addThreshold = useStore(({ addThreshold }) => addThreshold)
 
@@ -132,6 +133,23 @@ export default function HomeTemplate() {
       value: top + height,
     })
   }, [aboutRect])
+
+  useEffect(() => {
+    const rect = ensureRect(featuresRect)
+
+    const height = rect.height || 0
+    const top = rect.top ? rect.top - windowHeight / 2 : 0
+
+    addThreshold({ id: 'features-start', value: top })
+    addThreshold({
+      id: 'features-end',
+      value: top + height,
+    })
+    addThreshold({
+      id: 'red-end',
+      value: top + height + windowHeight,
+    })
+  }, [featuresRect])
 
   useEffect(() => {
     const top = lenis?.limit || 0
@@ -225,8 +243,8 @@ export default function HomeTemplate() {
       <Container id='about' data-lenis-scroll-snap-align='start'>
         <div ref={aboutRectRef}>
           <div className='mb-16 text-center'>
-            <h2 className='mb-6 text-4xl font-bold text-white'>About</h2>
-            <p className='mx-auto max-w-3xl text-xl text-gray-300'>
+            <h2 className='mb-6 text-4xl font-bold'>About</h2>
+            <p className='mx-auto max-w-3xl text-xl'>
               TB Wallet is revolutionizing cryptocurrency management. Our platform combines cutting-edge security with
               an intuitive user experience.
             </p>
@@ -268,11 +286,11 @@ export default function HomeTemplate() {
       </Container>
 
       {/* Features Section */}
-      <section id='features' className='px-6 py-16'>
-        <div className='mx-auto max-w-7xl'>
+      <Container id='features'>
+        <div ref={featuresRectRef}>
           <div className='mb-16 text-center'>
-            <h2 className='mb-6 text-4xl font-bold text-white'>Features</h2>
-            <p className='mx-auto max-w-3xl text-xl text-gray-300'>
+            <h2 className='mb-6 text-4xl font-bold'>Features</h2>
+            <p className='mx-auto max-w-3xl text-xl'>
               Discover the powerful features that make TB Wallet the perfect choice for managing your digital assets.
             </p>
           </div>
@@ -282,7 +300,7 @@ export default function HomeTemplate() {
             ))}
           </div>
         </div>
-      </section>
+      </Container>
 
       {/* One Platform, Millions of Assets */}
       <section className='bg-gray-900 px-6 py-16'>
@@ -327,7 +345,7 @@ export default function HomeTemplate() {
                       <p className='text-gray-300'>{testimonial.role}</p>
                     </div>
                   </div>
-                  <p className='text-gray-300'>"{testimonial.content}"</p>
+                  <p className='text-gray-300'>{testimonial.content}</p>
                 </CardContent>
               </Card>
             ))}
