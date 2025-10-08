@@ -39,7 +39,7 @@ export default async function RootLayout({ children, params }: Readonly<PropsWit
           <DefaultLayout>
             <Header />
             <MobileSidebar />
-            <main>{children}</main>
+            <main className='grow'>{children}</main>
             <Footer />
           </DefaultLayout>
         </ProviderRegistry>

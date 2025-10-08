@@ -128,11 +128,7 @@
 
 @layer component {
   .canvas {
-    position: fixed;
-    top: 0;
-    left: 0;
-    height: 100vh;
-    right: 0;
+    @apply fixed top-0 right-0 left-0 h-screen;
 
     &::after {
       @apply pointer-events-none absolute hidden dark:block;

@@ -121,49 +121,49 @@ const steps = [
   {
     position: [0.2, -0.1, 0],
     scale: 0.3,
-    rotation: [MathUtils.degToRad(-10), MathUtils.degToRad(-22), MathUtils.degToRad(3)],
+    rotation: [MathUtils.degToRad(-10), MathUtils.degToRad(338), MathUtils.degToRad(3)],
     type: 1,
   },
   {
     position: [0, -0.18, 0],
     scale: 0.6,
-    rotation: [MathUtils.degToRad(0), MathUtils.degToRad(-180), MathUtils.degToRad(0)],
+    rotation: [MathUtils.degToRad(0), MathUtils.degToRad(540), MathUtils.degToRad(0)],
     type: 1,
   },
   {
     position: [0, -0.18, 0],
     scale: 0.6,
-    rotation: [MathUtils.degToRad(0), MathUtils.degToRad(-180), MathUtils.degToRad(0)],
+    rotation: [MathUtils.degToRad(0), MathUtils.degToRad(540), MathUtils.degToRad(0)],
     type: 1,
   },
   {
     position: [-0.1, -0.17, 0],
     scale: 0.3,
-    rotation: [MathUtils.degToRad(0), MathUtils.degToRad(0), MathUtils.degToRad(0)],
+    rotation: [MathUtils.degToRad(0), MathUtils.degToRad(720), MathUtils.degToRad(0)],
     type: 1,
   },
   {
     position: [-0.2, -0.16, 0],
     scale: 0.6,
-    rotation: [MathUtils.degToRad(0), MathUtils.degToRad(180), MathUtils.degToRad(0)],
+    rotation: [MathUtils.degToRad(0), MathUtils.degToRad(900), MathUtils.degToRad(0)],
     type: 1,
   },
   {
     position: [-0.2, -0.16, 0],
     scale: 0.6,
-    rotation: [MathUtils.degToRad(0), MathUtils.degToRad(180), MathUtils.degToRad(0)],
+    rotation: [MathUtils.degToRad(0), MathUtils.degToRad(900), MathUtils.degToRad(0)],
     type: 1,
   },
   {
     position: [0.2, 0.01, 0],
     scale: 0.6,
-    rotation: [MathUtils.degToRad(-90), MathUtils.degToRad(-405), MathUtils.degToRad(-45)],
+    rotation: [MathUtils.degToRad(-90), MathUtils.degToRad(180), MathUtils.degToRad(-45)],
     type: 1,
   },
   {
     position: [0.2, 0.01, 0],
     scale: 0.6,
-    rotation: [MathUtils.degToRad(0), MathUtils.degToRad(200), MathUtils.degToRad(-16)],
+    rotation: [MathUtils.degToRad(0), MathUtils.degToRad(180), MathUtils.degToRad(-16)],
     type: 1,
   },
 ]
@@ -412,7 +412,8 @@ export function Arm() {
         </mesh> */}
         <directionalLight args={[new Color(lightsColor), light2Intensity]} />
       </group>
-      <Float floatIntensity={custom ? 0 : 1} rotationIntensity={custom ? 0 : 1}>
+      {/*<Float floatIntensity={custom ? 0 : 1} rotationIntensity={custom ? 0 : 1}>*/}
+      <Float floatIntensity={custom ? 0 : 1} rotationIntensity={0}>
         <group
           ref={parent}
           // position={[viewport.width * 0.2, viewport.height * 0.01, 0]}

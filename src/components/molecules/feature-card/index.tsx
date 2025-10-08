@@ -1,6 +1,5 @@
-﻿import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card'
+﻿import type { Feature } from '@/types/landing.types'
 import { cn } from '@/lib/styles'
-import type { Feature } from '@/types/landing.types'
 
 interface FeatureCardProps {
   readonly feature: Feature
@@ -9,14 +8,14 @@ interface FeatureCardProps {
 
 export function FeatureCard({ feature, className }: FeatureCardProps) {
   return (
-    <Card className={cn('hover:border-primary transition-colors', className)}>
-      <CardHeader>
-        <div className='mb-2 text-4xl'>{feature.icon}</div>
-        <CardTitle className='text-xl'>{feature.title}</CardTitle>
-      </CardHeader>
-      <CardContent>
-        <CardDescription className='text-muted-foreground'>{feature.description}</CardDescription>
-      </CardContent>
-    </Card>
+    <div className={cn('grid h-screen w-full grid-cols-1 md:w-screen md:grid-cols-2', className)}>
+      <div className='col-span-1 flex items-center justify-center md:col-start-2'>
+        <div className='flex flex-col gap-4'>
+          <h2 className='text-xl'>{feature.title}</h2>
+          <div className='mb-2 text-4xl'>{feature.icon}</div>
+          <p className='text-muted-foreground'>{feature.description}</p>
+        </div>
+      </div>
+    </div>
   )
 }

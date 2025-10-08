@@ -17,9 +17,9 @@ const languages = {
 } as const
 
 export function LocaleSwitcher() {
-  const router = useRouter()
   const { i18n } = useLingui()
   const pathname = usePathname()
+  const router = useRouter()
 
   const defaultLocale: LOCALES = 'en'
   const [locale, setLocale] = useState<LOCALES>((pathname?.split('/')[1] as LOCALES) || defaultLocale)

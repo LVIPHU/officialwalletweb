@@ -22,6 +22,8 @@ import { Container } from '@/components/atoms/container'
 import { Laptop, Smartphone } from 'lucide-react'
 import AnimatedContent from '@/components/atoms/animated-content'
 
+const Parallax = dynamic(() => import('@/components/atoms/parallax').then((mod) => mod.Parallax), { ssr: false })
+
 const WebGL = dynamic(() => import('@/components/atoms/webgl').then(({ WebGL }) => WebGL), { ssr: false })
 
 const HorizontalSlides = dynamic(
@@ -262,15 +264,17 @@ export default function HomeTemplate() {
       <Container id='features' className='min-h-screen py-5 md:py-10' data-lenis-scroll-snap-align='start'>
         <div ref={featuresRectRef}>
           <AnimatedContent threshold={0.6}>
-            <div className='mb-16 text-center'>
-              <h2 className='mb-6 text-4xl font-bold uppercase'>Features</h2>
-              <p className='mx-auto max-w-3xl text-xl'>
-                Discover the powerful features that make TB Wallet the perfect choice for managing your digital assets.
-              </p>
-            </div>
+            <Parallax speed={0.5}>
+              <div className='text-center'>
+                <h2 className='mb-6 text-4xl font-bold uppercase'>Features</h2>
+                <p className='mx-auto max-w-3xl text-xl'>
+                  Discover the powerful features that make TB Wallet the perfect choice for managing your digital assets.
+                </p>
+              </div>
+            </Parallax>
           </AnimatedContent>
-          <div className='grid items-center gap-12 lg:grid-cols-2'>
-            <div className='col-span-4 col-start-2'>
+          <div className='flex'>
+            <div className='grow'>
               <HorizontalSlides>
                 {FEATURES.map((feature) => (
                   <FeatureCard key={feature.id} feature={feature} />
