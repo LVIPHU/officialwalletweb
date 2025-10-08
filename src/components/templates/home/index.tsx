@@ -22,12 +22,12 @@ import { Container } from '@/components/atoms/container'
 import { Laptop, Smartphone } from 'lucide-react'
 import AnimatedContent from '@/components/atoms/animated-content'
 
-const Parallax = dynamic(() => import('@/components/atoms/parallax').then((mod) => mod.Parallax), { ssr: false })
+const Parallax = dynamic(() => import('@/components/atoms/parallax').then((Parallax) => Parallax), { ssr: false })
 
 const WebGL = dynamic(() => import('@/components/atoms/webgl').then(({ WebGL }) => WebGL), { ssr: false })
 
 const HorizontalSlides = dynamic(
-  () => import('@/components/atoms/horizontal-slides').then((mod) => mod.HorizontalSlides),
+  () => import('@/components/atoms/horizontal-slides').then((HorizontalSlides) => HorizontalSlides),
   { ssr: false }
 )
 
@@ -268,7 +268,8 @@ export default function HomeTemplate() {
               <div className='text-center'>
                 <h2 className='mb-6 text-4xl font-bold uppercase'>Features</h2>
                 <p className='mx-auto max-w-3xl text-xl'>
-                  Discover the powerful features that make TB Wallet the perfect choice for managing your digital assets.
+                  Discover the powerful features that make TB Wallet the perfect choice for managing your digital
+                  assets.
                 </p>
               </div>
             </Parallax>

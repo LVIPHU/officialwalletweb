@@ -14,7 +14,7 @@ interface HorizontalSlidesProps {
   children: ReactNode
 }
 
-export const HorizontalSlides = ({ children }: HorizontalSlidesProps) => {
+export default function HorizontalSlides({ children }: HorizontalSlidesProps) {
   const triggerRef = useRef<HTMLDivElement | null>(null)
   const targetRef = useRef<HTMLDivElement | null>(null)
   const { width: windowWidth } = useWindowSize()

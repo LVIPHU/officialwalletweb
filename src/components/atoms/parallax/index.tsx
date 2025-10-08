@@ -14,7 +14,7 @@ interface ParallaxProps {
   position?: 'top' | 'bottom'
 }
 
-export function Parallax({ className, children, speed = 1, id = 'parallax', position }: ParallaxProps) {
+export default function Parallax({ className, children, speed = 1, id = 'parallax', position }: ParallaxProps) {
   const trigger = useRef<HTMLDivElement | null>(null)
   const target = useRef<HTMLDivElement | null>(null)
 
