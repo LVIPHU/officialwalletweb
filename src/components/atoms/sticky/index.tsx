@@ -55,6 +55,7 @@ export function Sticky({
           return `+=${targetRect.bottom - triggerRect.bottom + parseFloat(end.toString())}`
         },
         invalidateOnRefresh: true,
+        markers: false
       },
     })
 

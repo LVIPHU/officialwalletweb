@@ -44,6 +44,7 @@ export default function HorizontalSlides({ children }: HorizontalSlidesProps) {
         x: -totalScroll,
         ease: 'none',
         scrollTrigger: {
+          id: 'horizontal-scroll',
           trigger: triggerRef.current,
           start: 'top top',
           end: `+=${totalScroll}`,
@@ -51,6 +52,8 @@ export default function HorizontalSlides({ children }: HorizontalSlidesProps) {
           pin: true,
         },
       })
+
+      ;(window as any).horizontalScrollTrack = scrollTrack
 
       cards.forEach((card) => {
         gsap.to(card, {
