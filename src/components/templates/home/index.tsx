@@ -13,14 +13,14 @@ import { Badge } from '@/components/ui/badge'
 import { Separator } from '@/components/ui/separator'
 import { HorizontalCard } from '@/components/atoms/horizontal-slides/horizontal-card'
 import { FEATURES, TESTIMONIALS, CRYPTOCURRENCIES } from '@/constants/landing.constants'
-import LightRays from '@/components/atoms/light-rays'
 import { isBrowser } from '@/lib/misc'
 import { useStore } from '@/lib/store'
 import { clamp, mapRange } from '@/lib/maths'
-import Lenis from 'lenis'
 import { Container } from '@/components/atoms/container'
 import { Laptop, Smartphone } from 'lucide-react'
 import AnimatedContent from '@/components/atoms/animated-content'
+import Lenis from 'lenis'
+import { AuroraText } from '@/components/atoms/aurora-text'
 
 const Parallax = dynamic(() => import('@/components/atoms/parallax').then((Parallax) => Parallax), { ssr: false })
 
@@ -209,45 +209,29 @@ export default function HomeTemplate() {
   }, [intersection])
 
   return (
-    <div className='min-h-screen'>
+    <div className='relative min-h-screen'>
       <div className={'canvas'}>
         <WebGL />
       </div>
 
       {/* Hero Section */}
-      <Container className='relative flex min-h-screen items-center py-5 md:py-10'>
-        <div className={'absolute inset-0 translate-x-1/5'}>
-          <LightRays
-            raysOrigin='bottom-center'
-            raysColor='#00ffff'
-            raysSpeed={0}
-            lightSpread={0.1}
-            rayLength={0.6}
-            followMouse={true}
-            mouseInfluence={0.1}
-            noiseAmount={0.1}
-            distortion={0.05}
-            className='custom-rays'
-          />
-        </div>
-
-        <div className='grid items-center gap-12 lg:grid-cols-2'>
-          {/* Left Content */}
-          <div>
-            <h1 className='font-class-display mb-6 text-4xl leading-tight font-bold uppercase lg:text-6xl'>
-              True crypto ownership.
+      <Container className='flex min-h-screen items-center pb-5 md:pb-10'>
+        <div className='grid items-center gap-10 md:grid-cols-2'>
+          <div className={'flex flex-col gap-7 md:gap-13'}>
+            <h1 className='text-3xl leading-9 font-extrabold tracking-tight sm:text-4xl sm:leading-10 md:text-6xl md:leading-26'>
+              <AuroraText>True crypto ownership.</AuroraText>
               <br />
-              <span className='text-primary'>Powerful Web3 experiences</span>
+              <AuroraText>Powerful Web3 experiences</AuroraText>
             </h1>
-            <p className='mb-6 text-xl leading-relaxed'>
+            <p className='text-xl leading-relaxed'>
               Unlock the power of your cryptocurrency assets and explore the world of Web3 with Trust Wallet.
             </p>
-            <div className='flex flex-col gap-4 sm:flex-row'>
-              <Button size={'lg'} className='rounded-full'>
+            <div className='flex flex-col gap-12 md:flex-row'>
+              <Button className='relative h-20 rounded-xl'>
                 <Smartphone />
                 <span>Download Mobile App</span>
               </Button>
-              <Button size={'lg'} className='rounded-full'>
+              <Button className='relative h-20 rounded-xl'>
                 <Laptop />
                 <span>Download Extension</span>
               </Button>
@@ -307,8 +291,8 @@ export default function HomeTemplate() {
       {/* One Platform, Millions of Assets */}
       <Container id='platform' className='min-h-screen py-5 md:py-10' data-lenis-scroll-snap-align='start'>
         <div ref={platformRectRef}>
-          <h2 className='mb-6 text-4xl font-bold text-white'>One Platform, Millions of Assets</h2>
-          <p className='mb-12 text-xl text-gray-300'>
+          <h2 className='mb-6 text-4xl font-bold'>One Platform, Millions of Assets</h2>
+          <p className='text-xl0 mb-12'>
             Access thousands of cryptocurrencies and digital assets from a single, secure platform.
           </p>
           <div className='flex flex-wrap items-center justify-center gap-8'>
@@ -329,8 +313,8 @@ export default function HomeTemplate() {
       <Container id='community' className='min-h-screen py-5 md:py-10' data-lenis-scroll-snap-align='start'>
         <div className='mx-auto max-w-7xl'>
           <div className='mb-16 text-center'>
-            <h2 className='mb-6 text-4xl font-bold text-white'>Community talk about us</h2>
-            <p className='mx-auto max-w-3xl text-xl text-gray-300'>
+            <h2 className='mb-6 text-4xl font-bold'>Community talk about us</h2>
+            <p className='mx-auto max-w-3xl text-xl'>
               Join thousands of satisfied users who trust TB Wallet for their cryptocurrency needs.
             </p>
           </div>
@@ -358,8 +342,8 @@ export default function HomeTemplate() {
       {/* Download Section */}
       <Container id='download' className='min-h-screen py-5 md:py-10' data-lenis-scroll-snap-align='start'>
         <div className='mx-auto max-w-7xl text-center'>
-          <h2 className='mb-6 text-4xl font-bold text-white'>Download now</h2>
-          <p className='mb-12 text-xl text-gray-300'>
+          <h2 className='mb-6 text-4xl font-bold'>Download now</h2>
+          <p className='mb-12 text-xl'>
             Get started with TB Wallet today and experience the future of cryptocurrency management.
           </p>
           <div className='flex flex-col items-center justify-center gap-6 sm:flex-row'>

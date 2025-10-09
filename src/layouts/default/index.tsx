@@ -4,9 +4,9 @@ import { PropsWithChildren, useEffect, useState } from 'react'
 import dynamic from 'next/dynamic'
 import { usePathname } from 'next/navigation'
 import { useStore } from '@/lib/store'
-import Lenis from 'lenis'
 import { useFrame } from '@/hooks/use-frame'
 import { isBrowser } from '@/lib/misc'
+import Lenis from 'lenis'
 
 // const Cursor = dynamic(
 //     () => import('@/components/atoms/cursor').then((mod) => mod.Cursor),

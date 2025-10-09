@@ -6,9 +6,9 @@ const FONT_POPPINS = Poppins({
   display: 'swap',
   style: ['normal', 'italic'],
   weight: ['400', '500', '600', '700', '800'],
-  variable: '--font-poppins',
+  variable: '--font-sans',
 })
 
-const FONT_CLASH_DISPLAY = localFont({ src: './ClashDisplay-Variable.woff2', variable: '--font-class-display' })
+const FONT_CLASH_DISPLAY = localFont({ src: './ClashDisplay-Variable.woff2', variable: '--font-mono' })
 
 export { FONT_POPPINS, FONT_CLASH_DISPLAY }

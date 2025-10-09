@@ -22,7 +22,7 @@ import {
 import fragmentShader from './particles/fragment.glsl'
 import vertexShader from './particles/vertex.glsl'
 import { useTheme } from 'next-themes'
-import { Model as ModelIphone13 } from "@/components/atoms/webgl/model/iphone-13";
+import { Model as ModelIphone13 } from '@/components/atoms/webgl/model/iphone-13'
 
 function Raf({ render = true }) {
   const { advance } = useThree()
@@ -103,10 +103,10 @@ function Particles({ width = 250, height = 250, depth = 250, count = 1000, scale
       </bufferGeometry>
       <shaderMaterial
         ref={material}
+        transparent={true}
+        uniforms={uniforms}
         vertexShader={vertexShader}
         fragmentShader={fragmentShader}
-        transparent
-        uniforms={uniforms}
       />
     </points>
   )
@@ -457,13 +457,13 @@ export function Arm() {
 }
 
 function Content() {
-  const { theme } = useTheme()
+  const { resolvedTheme } = useTheme()
   const { viewport } = useThree()
 
   return (
     <>
       {/* <OrbitControls makeDefault /> */}
-      {theme === 'dark' && (
+      {resolvedTheme === 'dark' && (
         <Particles width={viewport.width} height={viewport.height} depth={500} count={100} scale={500} size={150} />
       )}
 

@@ -28,7 +28,7 @@ export default async function RootLayout({ children, params }: Readonly<PropsWit
     <html
       lang={lang}
       className={cn(
-        'w-full overflow-x-hidden scroll-smooth lowercase antialiased',
+        'w-full overflow-x-hidden scroll-smooth antialiased',
         FONT_POPPINS.variable,
         FONT_CLASH_DISPLAY.variable
       )}
@@ -37,6 +37,7 @@ export default async function RootLayout({ children, params }: Readonly<PropsWit
       <body className={cn('antialiased', 'relative min-h-screen pl-[calc(100vw-100%)]', 'flex flex-col')}>
         <ProviderRegistry params={params}>
           <DefaultLayout>
+            <div className={'bg-hero'} />
             <Header />
             <MobileSidebar />
             <main className='grow'>{children}</main>
