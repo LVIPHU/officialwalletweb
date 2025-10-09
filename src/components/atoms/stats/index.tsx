@@ -1,3 +1,4 @@
+'use client'
 import { useEffect, useMemo } from 'react'
 import _Stats from 'stats.js'
 import { useFrame } from '@/hooks/use-frame'

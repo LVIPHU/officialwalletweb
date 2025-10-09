@@ -1,3 +1,4 @@
+'use client'
 import { useMemo, useState } from 'react'
 import { useIsMobile } from '@/hooks/use-mobile'
 import { cn } from '@/lib/styles'

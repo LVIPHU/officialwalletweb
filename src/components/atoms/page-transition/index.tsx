@@ -1,3 +1,4 @@
+'use client'
 import gsap from 'gsap'
 import { useStore } from '@/lib/store'
 import { usePathname, useRouter } from 'next/navigation'
