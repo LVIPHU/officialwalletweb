@@ -2,14 +2,12 @@
 import { useEffect, useRef, ReactNode } from 'react'
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/dist/ScrollTrigger'
-import { ScrollSmoother } from 'gsap/dist/ScrollSmoother'
 import { useWindowSize } from '@/hooks/use-window-size'
 import { useIsMobile } from '@/hooks/use-mobile'
 import { cn } from '@/lib/styles'
-import { on, off } from '@/lib/misc'
 import { useControls } from 'leva'
 
-gsap.registerPlugin(ScrollTrigger, ScrollSmoother)
+gsap.registerPlugin(ScrollTrigger)
 
 interface HorizontalSlidesProps {
   children: ReactNode
@@ -97,43 +95,17 @@ export default function HorizontalSlides({ children }: HorizontalSlidesProps) {
     return () => ctx.revert()
   }, [windowWidth, isMobile, markersHorizontalScroll, markersCardFadeIn, markersCardFadeOut])
 
-  useEffect(() => {
-    if (isMobile) return
-
-    const onLoad = () => {
-      if (!ScrollSmoother.get()) {
-        ScrollSmoother.create({
-          content: '#horizontal-slide-content',
-          wrapper: '#horizontal-slide-wrapper',
-          smooth: 1.2,
-          effects: true,
-          smoothTouch: 0.1,
-        })
-      }
-    }
-
-    on(window, 'load', onLoad, false)
-    return () => {
-      off(window, 'load', onLoad, false)
-      ScrollSmoother.get()?.kill()
-    }
-  }, [isMobile])
-
   return (
-    <div id='horizontal-slide-wrapper'>
-      <div id='horizontal-slide-content' className='overflow-hidden'>
-        <div ref={triggerRef} className='relative overflow-hidden'>
-          <div
-            ref={targetRef}
-            className={cn(
-              'flex w-full items-center justify-start gap-8 py-8',
-              'md:h-screen md:flex-row md:flex-nowrap md:px-16',
-              'h-auto flex-col px-6'
-            )}
-          >
-            {children}
-          </div>
-        </div>
+    <div ref={triggerRef} className='relative overflow-hidden'>
+      <div
+        ref={targetRef}
+        className={cn(
+          'flex w-full items-center justify-start gap-8 py-8',
+          'md:h-screen md:flex-row md:flex-nowrap md:px-16',
+          'h-auto flex-col px-6'
+        )}
+      >
+        {children}
       </div>
     </div>
   )
