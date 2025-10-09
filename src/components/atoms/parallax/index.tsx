@@ -3,6 +3,7 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import { useEffect, useRef } from 'react'
 import { mapRange } from '@/lib/maths'
 import { useWindowSize } from '@/hooks/use-window-size'
+import { useControls } from 'leva'
 
 gsap.registerPlugin(ScrollTrigger)
 
@@ -19,6 +20,9 @@ export default function Parallax({ className, children, speed = 1, id = 'paralla
   const target = useRef<HTMLDivElement | null>(null)
 
   const { width: windowWidth } = useWindowSize()
+  const [{ parallax: markersParallax }] = useControls('markers', () => ({
+    parallax: false,
+  }))
 
   useEffect(() => {
     if (!trigger.current || !target.current) return
@@ -34,7 +38,7 @@ export default function Parallax({ className, children, speed = 1, id = 'paralla
         scrub: true,
         start: 'top bottom',
         end: 'bottom top',
-        markers: false,
+        markers: markersParallax,
         onUpdate: (e) => {
           if (position === 'top') {
             setY(e.progress * y)
@@ -51,7 +55,7 @@ export default function Parallax({ className, children, speed = 1, id = 'paralla
       timeline.kill()
       ScrollTrigger.getById(id)?.kill()
     }
-  }, [id, speed, position, windowWidth])
+  }, [id, speed, position, windowWidth, markersParallax])
 
   return (
     <div ref={trigger}>

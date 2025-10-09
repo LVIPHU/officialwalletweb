@@ -1,12 +1,13 @@
 'use client'
+import { useEffect, useRef, ReactNode } from 'react'
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/dist/ScrollTrigger'
 import { ScrollSmoother } from 'gsap/dist/ScrollSmoother'
-import { useEffect, useRef, ReactNode } from 'react'
-import { on, off } from '@/lib/misc'
 import { useWindowSize } from '@/hooks/use-window-size'
 import { useIsMobile } from '@/hooks/use-mobile'
 import { cn } from '@/lib/styles'
+import { on, off } from '@/lib/misc'
+import { useControls } from 'leva'
 
 gsap.registerPlugin(ScrollTrigger, ScrollSmoother)
 
@@ -19,6 +20,12 @@ export default function HorizontalSlides({ children }: HorizontalSlidesProps) {
   const targetRef = useRef<HTMLDivElement | null>(null)
   const { width: windowWidth } = useWindowSize()
   const isMobile = useIsMobile()
+
+  const [{ horizontalScroll: markersHorizontalScroll, cardFadeIn: markersCardFadeIn, cardFadeOut: markersCardFadeOut }] = useControls('markers', () => ({
+    horizontalScroll: false,
+    cardFadeIn: false,
+    cardFadeOut: false,
+  }))
 
   useEffect(() => {
     if (!targetRef.current || !triggerRef.current) return
@@ -51,7 +58,7 @@ export default function HorizontalSlides({ children }: HorizontalSlidesProps) {
           end: `+=${totalScroll}`,
           scrub: 1,
           pin: true,
-          markers: true,
+          markers: markersHorizontalScroll,
         },
       })
 
@@ -65,18 +72,20 @@ export default function HorizontalSlides({ children }: HorizontalSlidesProps) {
             end: 'center 90%',
             scrub: true,
             containerAnimation: scrollTrack,
-            markers: true,
+            markers: markersCardFadeIn,
           },
         })
 
         cards.forEach((card) => {
           const tl = gsap.timeline({
             scrollTrigger: {
+              id: 'card-fade-out',
               trigger: card,
-              containerAnimation: scrollTrack,
               start: 'center 50%',
               end: 'center+=30% 50%',
               scrub: true,
+              containerAnimation: scrollTrack,
+              markers: markersCardFadeOut,
             },
           })
           tl.to(card.querySelector('[data-title]'), { y: 60, opacity: 0, duration: 0.6 })
@@ -87,7 +96,7 @@ export default function HorizontalSlides({ children }: HorizontalSlidesProps) {
     }, targetRef)
 
     return () => ctx.revert()
-  }, [windowWidth, isMobile])
+  }, [windowWidth, isMobile, markersHorizontalScroll, markersCardFadeIn, markersCardFadeOut])
 
   useEffect(() => {
     if (isMobile) return
