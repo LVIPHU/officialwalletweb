@@ -37,12 +37,9 @@ export default function HorizontalSlides({ children }: HorizontalSlidesProps) {
       const cards = Array.from(cardsContainer.children) as HTMLElement[]
 
       // reset styles
-      gsap.set(cardsContainer, { clearProps: 'all' })
-      gsap.set(cards, { clearProps: 'all' })
       gsap.set(cards[0], { opacity: 1 })
 
       if (isMobile) {
-        console.log('kill')
         ScrollTrigger.getAll().forEach((t) => t.kill())
         ScrollSmoother.get()?.kill()
         return
