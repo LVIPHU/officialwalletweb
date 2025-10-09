@@ -22,6 +22,7 @@ import {
 import fragmentShader from './particles/fragment.glsl'
 import vertexShader from './particles/vertex.glsl'
 import { useTheme } from 'next-themes'
+import { Model as ModelIphone13 } from "@/components/atoms/webgl/model/iphone-13";
 
 function Raf({ render = true }) {
   const { advance } = useThree()
@@ -120,7 +121,7 @@ const steps = [
   },
   {
     position: [0.2, -0.1, 0],
-    scale: 0.3,
+    scale: 0.6,
     rotation: [MathUtils.degToRad(-10), MathUtils.degToRad(338), MathUtils.degToRad(3)],
     type: 1,
   },
@@ -137,33 +138,51 @@ const steps = [
     type: 1,
   },
   {
-    position: [-0.1, -0.17, 0],
-    scale: 0.3,
+    position: [-0.1, -0.16, 0],
+    scale: 0.6,
     rotation: [MathUtils.degToRad(0), MathUtils.degToRad(720), MathUtils.degToRad(0)],
     type: 1,
   },
   {
-    position: [-0.2, -0.16, 0],
+    position: [-0.2, -0.14, 0],
     scale: 0.6,
     rotation: [MathUtils.degToRad(0), MathUtils.degToRad(900), MathUtils.degToRad(0)],
     type: 1,
   },
   {
-    position: [-0.2, -0.16, 0],
+    position: [-0.2, -0.14, 0],
     scale: 0.6,
     rotation: [MathUtils.degToRad(0), MathUtils.degToRad(900), MathUtils.degToRad(0)],
     type: 1,
   },
   {
-    position: [0.2, 0.01, 0],
+    position: [-0.2, -0.5, 0],
     scale: 0.6,
-    rotation: [MathUtils.degToRad(-90), MathUtils.degToRad(180), MathUtils.degToRad(-45)],
+    rotation: [MathUtils.degToRad(0), MathUtils.degToRad(900), MathUtils.degToRad(0)],
     type: 1,
   },
   {
-    position: [0.2, 0.01, 0],
+    position: [-0.2, -1, 0],
     scale: 0.6,
-    rotation: [MathUtils.degToRad(0), MathUtils.degToRad(180), MathUtils.degToRad(-16)],
+    rotation: [MathUtils.degToRad(0), MathUtils.degToRad(900), MathUtils.degToRad(0)],
+    type: 1,
+  },
+  {
+    position: [-0.2, -1, 0],
+    scale: 0.6,
+    rotation: [MathUtils.degToRad(0), MathUtils.degToRad(900), MathUtils.degToRad(0)],
+    type: 1,
+  },
+  {
+    position: [-0.2, -1, 0],
+    scale: 0.6,
+    rotation: [MathUtils.degToRad(0), MathUtils.degToRad(900), MathUtils.degToRad(0)],
+    type: 1,
+  },
+  {
+    position: [-0.2, -1, 0],
+    scale: 0.6,
+    rotation: [MathUtils.degToRad(0), MathUtils.degToRad(900), MathUtils.degToRad(0)],
     type: 1,
   },
 ]
@@ -179,8 +198,7 @@ const material = new MeshPhysicalMaterial({
 })
 
 export function Arm() {
-  const { scene: arm1 } = useGLTF('/models/iphone_13.glb')
-  const { scene: arm2 } = useGLTF('/models/arm2.glb')
+  const { scene: model2 } = useGLTF('/models/arm2.glb')
   const [type, setType] = useState(1)
 
   const [{ color, roughness, metalness, wireframe }, setMaterial] = useControls(
@@ -274,21 +292,21 @@ export function Arm() {
     material.wireframe = wireframe
   }, [color, roughness, metalness, wireframe, material])
 
-  useEffect(() => {
-    if (arm1) {
-      arm1.traverse((node) => {
-        if ((node as Mesh).material) (node as Mesh).material = material
-      })
-    }
-  }, [arm1, material])
+  // useEffect(() => {
+  //   if (model1) {
+  //     model1.traverse((node) => {
+  //       if ((node as Mesh).material) (node as Mesh).material = material
+  //     })
+  //   }
+  // }, [model1, material])
 
   useEffect(() => {
-    if (arm2) {
-      arm2.traverse((node) => {
+    if (model2) {
+      model2.traverse((node) => {
         if ((node as Mesh).material) (node as Mesh).material = material
       })
     }
-  }, [arm2, material])
+  }, [model2, material])
 
   const parent = useRef<any>(null)
 
@@ -425,8 +443,8 @@ export function Arm() {
           // ]}
         >
           {/* <TransformControls mode="rotate"> */}
-          {type === 1 && <primitive object={arm1} scale={[1, 1, 1]} />}
-          {type === 2 && <primitive object={arm2} scale={[1, 1, 1]} />}
+          {type === 1 && <ModelIphone13 scale={[1, 1, 1]} />}
+          {type === 2 && <primitive object={model2} scale={[1, 1, 1]} />}
           {/* </TransformControls> */}
         </group>
       </Float>

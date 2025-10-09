@@ -21,7 +21,9 @@ export default function HorizontalSlides({ children }: HorizontalSlidesProps) {
   const { width: windowWidth } = useWindowSize()
   const isMobile = useIsMobile()
 
-  const [{ horizontalScroll: markersHorizontalScroll, cardFadeIn: markersCardFadeIn, cardFadeOut: markersCardFadeOut }] = useControls('markers', () => ({
+  const [
+    { horizontalScroll: markersHorizontalScroll, cardFadeIn: markersCardFadeIn, cardFadeOut: markersCardFadeOut },
+  ] = useControls('markers', () => ({
     horizontalScroll: false,
     cardFadeIn: false,
     cardFadeOut: false,
