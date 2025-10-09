@@ -62,7 +62,7 @@ const AnimatedContent: React.FC<AnimatedContentProps> = ({
       start: startPosition,
       end: endPosition,
       id: `animated-${Date.now()}`,
-      markers: false
+      markers: false,
     }
 
     if (mode === 'scrub') {

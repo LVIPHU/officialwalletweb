@@ -11,7 +11,7 @@ import { Button } from '@/components/ui/button'
 import { Card, CardContent } from '@/components/ui/card'
 import { Badge } from '@/components/ui/badge'
 import { Separator } from '@/components/ui/separator'
-import { FeatureCard } from '@/components/molecules/feature-card'
+import { HorizontalCard } from '@/components/atoms/horizontal-slides/horizontal-card'
 import { FEATURES, TESTIMONIALS, CRYPTOCURRENCIES } from '@/constants/landing.constants'
 import LightRays from '@/components/atoms/light-rays'
 import { isBrowser } from '@/lib/misc'
@@ -171,11 +171,11 @@ export default function HomeTemplate() {
   }, [lenis?.limit])
 
   useScroll((e) => {
-    console.log('[Home template] use scroll', window.scrollY, e.scroll, e.isScrolling, e.velocity, e.isLocked)
+    // console.log('[Home template] use scroll', window.scrollY, e.scroll, e.isScrolling, e.velocity, e.isLocked)
   })
 
   useFrame(() => {
-    console.log('[Home template] use frame', window.scrollY, lenis?.scroll, lenis?.isScrolling)
+    // console.log('[Home template] use frame', window.scrollY, lenis?.scroll, lenis?.isScrolling)
   }, 1)
 
   const inUseRef = useRef<HTMLElement | null>(null)
@@ -278,7 +278,7 @@ export default function HomeTemplate() {
             <div className='grow'>
               <HorizontalSlides>
                 {FEATURES.map((feature) => (
-                  <FeatureCard key={feature.id} feature={feature} />
+                  <HorizontalCard key={feature.id} feature={feature} />
                 ))}
               </HorizontalSlides>
             </div>

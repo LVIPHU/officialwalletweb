@@ -30,6 +30,7 @@ export default function HorizontalSlides({ children }: HorizontalSlidesProps) {
       // reset styles
       gsap.set(cardsContainer, { clearProps: 'all' })
       gsap.set(cards, { clearProps: 'all' })
+      gsap.set(cards[0], { opacity: 1 })
 
       if (isMobile) {
         console.log('kill')
@@ -38,7 +39,7 @@ export default function HorizontalSlides({ children }: HorizontalSlidesProps) {
         return
       }
 
-      const totalScroll = cardsContainer.scrollWidth - windowWidth + 50
+      const totalScroll = cardsContainer.scrollWidth - windowWidth / 2 + 50
 
       const scrollTrack = gsap.to(cardsContainer, {
         x: -totalScroll,
@@ -50,21 +51,37 @@ export default function HorizontalSlides({ children }: HorizontalSlidesProps) {
           end: `+=${totalScroll}`,
           scrub: 1,
           pin: true,
+          markers: true,
         },
       })
-
-      ;(window as any).horizontalScrollTrack = scrollTrack
 
       cards.forEach((card) => {
         gsap.to(card, {
           opacity: 1,
           scrollTrigger: {
+            id: 'card-fade-in',
             trigger: card,
             start: 'left 95%',
             end: 'center 90%',
             scrub: true,
             containerAnimation: scrollTrack,
+            markers: true,
           },
+        })
+
+        cards.forEach((card) => {
+          const tl = gsap.timeline({
+            scrollTrigger: {
+              trigger: card,
+              containerAnimation: scrollTrack,
+              start: 'center 50%',
+              end: 'center+=30% 50%',
+              scrub: true,
+            },
+          })
+          tl.to(card.querySelector('[data-title]'), { y: 60, opacity: 0, duration: 0.6 })
+            .to(card.querySelector('[data-icon]'), { scale: 0.8, opacity: 0, duration: 0.6 }, '<0.1')
+            .to(card.querySelector('[data-desc]'), { y: 30, opacity: 0, duration: 0.6 }, '<0.1')
         })
       })
     }, targetRef)
