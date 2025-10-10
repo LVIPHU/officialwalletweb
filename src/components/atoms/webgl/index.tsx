@@ -156,31 +156,13 @@ const steps = [
     type: 1,
   },
   {
-    position: [-0.2, -0.5, 0],
+    position: [-0.2, 1, 0],
     scale: 0.6,
     rotation: [MathUtils.degToRad(0), MathUtils.degToRad(900), MathUtils.degToRad(0)],
     type: 1,
   },
   {
-    position: [-0.2, -1, 0],
-    scale: 0.6,
-    rotation: [MathUtils.degToRad(0), MathUtils.degToRad(900), MathUtils.degToRad(0)],
-    type: 1,
-  },
-  {
-    position: [-0.2, -1, 0],
-    scale: 0.6,
-    rotation: [MathUtils.degToRad(0), MathUtils.degToRad(900), MathUtils.degToRad(0)],
-    type: 1,
-  },
-  {
-    position: [-0.2, -1, 0],
-    scale: 0.6,
-    rotation: [MathUtils.degToRad(0), MathUtils.degToRad(900), MathUtils.degToRad(0)],
-    type: 1,
-  },
-  {
-    position: [-0.2, -1, 0],
+    position: [-0.2, 1, 0],
     scale: 0.6,
     rotation: [MathUtils.degToRad(0), MathUtils.degToRad(900), MathUtils.degToRad(0)],
     type: 1,
@@ -363,6 +345,7 @@ export function Arm() {
       return
     }
 
+    console.log('[Webgl component] length: ', thresholds.length, steps.length)
     console.log('[Webgl component] thresholds: ', _thresholds)
 
     const current = thresholds.findIndex((v) => scroll < v) - 1
@@ -371,7 +354,7 @@ export function Arm() {
     const end = thresholds[current + 1]
     const progress = mapRange(start, end, scroll, 0, 1)
 
-    console.log('[Webgl component] from step: ', current)
+    console.log('[Webgl component] from step: ', current, start)
 
     const from = steps[current]
     const to = steps[current + 1]

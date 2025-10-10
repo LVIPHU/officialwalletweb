@@ -123,7 +123,7 @@ export default function HomeTemplate() {
 
   const [aboutRectRef, aboutRect] = useRect()
   const [featuresRectRef, featuresRect] = useRect()
-  const [platformRectRef, platformRect] = useRect()
+  // const [platformRectRef, platformRect] = useRect()
 
   const addThreshold = useStore(({ addThreshold }) => addThreshold)
 
@@ -158,7 +158,7 @@ export default function HomeTemplate() {
     addThreshold({ id: 'features-start', value: top })
     addThreshold({
       id: 'features-center',
-      value: top + height,
+      value: top + height * 0.9,
     })
     addThreshold({
       id: 'features-end',
@@ -166,22 +166,22 @@ export default function HomeTemplate() {
     })
   }, [featuresRect])
 
-  useEffect(() => {
-    const rect = ensureRect(platformRect)
-
-    const height = rect.height || 0
-    const top = rect.top ? rect.top - windowHeight / 2 : 0
-
-    addThreshold({ id: 'platform-start', value: top })
-    addThreshold({
-      id: 'platform-end',
-      value: top + height,
-    })
-    addThreshold({
-      id: 'outro',
-      value: top + height + windowHeight,
-    })
-  }, [platformRect])
+  // useEffect(() => {
+  //   const rect = ensureRect(platformRect)
+  //
+  //   const height = rect.height || 0
+  //   const top = rect.top ? rect.top - windowHeight / 2 : 0
+  //
+  //   addThreshold({ id: 'platform-start', value: top + windowHeight / 2 })
+  //   addThreshold({
+  //     id: 'platform-end',
+  //     value: top + height + windowHeight / 2,
+  //   })
+  //   addThreshold({
+  //     id: 'outro',
+  //     value: top + height + windowHeight,
+  //   })
+  // }, [platformRect])
 
   useEffect(() => {
     const top = lenis?.limit || 0
@@ -290,7 +290,7 @@ export default function HomeTemplate() {
 
       {/* One Platform, Millions of Assets */}
       <Container id='platform' className='min-h-screen py-5 md:py-10' data-lenis-scroll-snap-align='start'>
-        <div ref={platformRectRef}>
+        <div>
           <h2 className='mb-6 text-4xl font-bold'>One Platform, Millions of Assets</h2>
           <p className='text-xl0 mb-12'>
             Access thousands of cryptocurrencies and digital assets from a single, secure platform.
