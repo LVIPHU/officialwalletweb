@@ -246,8 +246,27 @@ export default function HomeTemplate() {
             </div>
           </AnimatedContent>
           <div ref={aboutRectRef} className='relative mt-6 min-h-[500px] min-w-screen grow sm:mt-12 md:mt-24'>
-            <div className='background-glow' />
+            <AnimatedContent distance={0} threshold={0.36} className={'absolute inset-0 z-[-1]'}>
+              <div className='background-glow' />
+            </AnimatedContent>
           </div>
+        </div>
+      </Container>
+
+      {/* Build Section */}
+      <Container id='features' className='min-h-screen py-5 md:py-10 xl:py-16' data-lenis-scroll-snap-align='start'>
+        <div className='grid items-center gap-10 md:grid-cols-2'>
+          <div className='h-full w-full'></div>
+          <AnimatedContent distance={50} threshold={0.7}>
+            <div className='flex max-w-md flex-col gap-y-6'>
+              <h2 className='text-4xl font-semibold'>Build for everyone</h2>
+              <p>
+                Our platform is designed with accessibility and usability at its core. Whether you're a crypto beginner
+                or an experienced DeFi user, TB Wallet provides the tools and features you need to navigate the Web3
+                ecosystem safely and efficiently.
+              </p>
+            </div>
+          </AnimatedContent>
         </div>
       </Container>
 
