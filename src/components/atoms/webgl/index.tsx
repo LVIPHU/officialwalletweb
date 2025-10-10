@@ -446,9 +446,10 @@ function Content() {
   return (
     <>
       {/* <OrbitControls makeDefault /> */}
-      {resolvedTheme === 'dark' && (
-        <Particles width={viewport.width} height={viewport.height} depth={500} count={100} scale={500} size={150} />
-      )}
+
+      {/*{resolvedTheme === 'dark' && (*/}
+      {/*  <Particles width={viewport.width} height={viewport.height} depth={500} count={100} scale={500} size={150} />*/}
+      {/*)}*/}
 
       <Arm />
     </>

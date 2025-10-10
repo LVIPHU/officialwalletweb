@@ -37,7 +37,7 @@ export default async function RootLayout({ children, params }: Readonly<PropsWit
       <body className={cn('antialiased', 'relative min-h-screen pl-[calc(100vw-100%)]', 'flex flex-col')}>
         <ProviderRegistry params={params}>
           <DefaultLayout>
-            <div className={'bg-hero'} />
+            <div className={'background-hero'} />
             <Header />
             <MobileSidebar />
             <main className='grow'>{children}</main>

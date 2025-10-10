@@ -17,7 +17,6 @@ import { isBrowser } from '@/lib/misc'
 import { useStore } from '@/lib/store'
 import { clamp, mapRange } from '@/lib/maths'
 import { Container } from '@/components/atoms/container'
-import { Laptop, Smartphone } from 'lucide-react'
 import AnimatedContent from '@/components/atoms/animated-content'
 import Lenis from 'lenis'
 import { AuroraText } from '@/components/atoms/aurora-text'
@@ -215,55 +214,45 @@ export default function HomeTemplate() {
       </div>
 
       {/* Hero Section */}
-      <Container className='flex min-h-screen items-center pb-5 md:pb-10'>
+      <Container className='flex min-h-screen items-center pb-5 md:pb-10 xl:pb-16'>
         <div className='grid items-center gap-10 md:grid-cols-2'>
           <div className={'flex flex-col gap-7 md:gap-13'}>
-            <h1 className='text-3xl leading-9 font-extrabold tracking-tight sm:text-4xl sm:leading-10 md:text-6xl md:leading-26'>
+            <h1 className='font-clash-display text-3xl leading-16 font-extrabold tracking-tight sm:text-4xl md:text-6xl md:leading-20'>
               <AuroraText>True crypto ownership.</AuroraText>
               <br />
               <AuroraText>Powerful Web3 experiences</AuroraText>
             </h1>
-            <p className='text-xl leading-relaxed'>
+            <p className='max-w-md'>
               Unlock the power of your cryptocurrency assets and explore the world of Web3 with Trust Wallet.
             </p>
-            <div className='flex flex-col gap-12 md:flex-row'>
-              <Button className='relative h-20 rounded-xl'>
-                <Smartphone />
-                <span>Download Mobile App</span>
-              </Button>
-              <Button className='relative h-20 rounded-xl'>
-                <Laptop />
-                <span>Download Extension</span>
-              </Button>
-            </div>
+            <Button variant={'explore'} size={'2xl'} className={'w-fit'}>
+              <span>Explore now</span>
+            </Button>
           </div>
         </div>
       </Container>
 
       {/* About Section */}
-      <Container id='about' className='min-h-screen py-5 md:py-10' data-lenis-scroll-snap-align='start'>
-        <div className='flex flex-col'>
-          <AnimatedContent threshold={0.6}>
-            <div className='mb-12 text-center'>
-              <h2 className='mb-6 text-4xl font-bold uppercase'>About</h2>
-              <div className='flex flex-col gap-6 text-xl'>
-                <p>
-                  As a leading self-custody multi-chain platform, we support millions of assets across 100+ blockchains.
-                  We provide secure, user-friendly access to the decentralized web while maintaining complete control
-                  over your digital assets.
-                </p>
-                <p>
-                  Our platform combines cutting-edge security with intuitive design to make Web3 accessible to everyone.
-                </p>
-              </div>
+      <Container id='about' className='min-h-screen py-5 md:py-10 xl:py-16' data-lenis-scroll-snap-align='start'>
+        <div className='flex h-full flex-col items-center gap-6'>
+          <AnimatedContent distance={50} threshold={0.7}>
+            <div className='flex max-w-2xl flex-col gap-y-6 text-center'>
+              <h2 className='text-4xl font-semibold'>About</h2>
+              <p>
+                As a leading self-custody multi-chain platform, we support millions of assets across 100+ blockchains.
+                We provide secure, user-friendly access to the decentralized web while maintaining complete control over
+                your digital assets.
+              </p>
             </div>
           </AnimatedContent>
-          <div ref={aboutRectRef} className='grow'></div>
+          <div ref={aboutRectRef} className='relative mt-6 min-h-[500px] min-w-screen grow sm:mt-12 md:mt-24'>
+            <div className='background-glow' />
+          </div>
         </div>
       </Container>
 
       {/* Features Section */}
-      <Container id='features' className='min-h-screen py-5 md:py-10' data-lenis-scroll-snap-align='start'>
+      <Container id='features' className='min-h-screen py-5 md:py-10 xl:py-16' data-lenis-scroll-snap-align='start'>
         <div ref={featuresRectRef}>
           <AnimatedContent threshold={0.6}>
             <Parallax speed={0.5}>
@@ -289,7 +278,7 @@ export default function HomeTemplate() {
       </Container>
 
       {/* One Platform, Millions of Assets */}
-      <Container id='platform' className='min-h-screen py-5 md:py-10' data-lenis-scroll-snap-align='start'>
+      <Container id='platform' className='min-h-screen py-5 md:py-10 xl:py-16' data-lenis-scroll-snap-align='start'>
         <div>
           <h2 className='mb-6 text-4xl font-bold'>One Platform, Millions of Assets</h2>
           <p className='text-xl0 mb-12'>
@@ -310,7 +299,7 @@ export default function HomeTemplate() {
       </Container>
 
       {/* Community Testimonials */}
-      <Container id='community' className='min-h-screen py-5 md:py-10' data-lenis-scroll-snap-align='start'>
+      <Container id='community' className='min-h-screen py-5 md:py-10 xl:py-16' data-lenis-scroll-snap-align='start'>
         <div className='mx-auto max-w-7xl'>
           <div className='mb-16 text-center'>
             <h2 className='mb-6 text-4xl font-bold'>Community talk about us</h2>
@@ -340,7 +329,7 @@ export default function HomeTemplate() {
       </Container>
 
       {/* Download Section */}
-      <Container id='download' className='min-h-screen py-5 md:py-10' data-lenis-scroll-snap-align='start'>
+      <Container id='download' className='min-h-screen py-5 md:py-10 xl:py-16' data-lenis-scroll-snap-align='start'>
         <div className='mx-auto max-w-7xl text-center'>
           <h2 className='mb-6 text-4xl font-bold'>Download now</h2>
           <p className='mb-12 text-xl'>

@@ -9,6 +9,6 @@ const FONT_POPPINS = Poppins({
   variable: '--font-sans',
 })
 
-const FONT_CLASH_DISPLAY = localFont({ src: './ClashDisplay-Variable.woff2', variable: '--font-mono' })
+const FONT_CLASH_DISPLAY = localFont({ src: './ClashDisplay-Variable.woff2', variable: '--font-clash-display' })
 
 export { FONT_POPPINS, FONT_CLASH_DISPLAY }

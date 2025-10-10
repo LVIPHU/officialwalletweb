@@ -7,7 +7,7 @@
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --font-sans: var(--font-sans);
-  --font-mono: var(--font-mono);
+  --font-clash-display: var(--font-clash-display);
   --color-sidebar-ring: var(--sidebar-ring);
   --color-sidebar-border: var(--sidebar-border);
   --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
@@ -133,16 +133,26 @@
   }
 
   /* Background */
-  .bg-hero {
+  .background-hero {
     @apply pointer-events-none absolute;
     content: '';
     top: 0;
     left: 50%;
-    height: 100vw;
-    width: 200vw;
+    width: 100vw;
+    aspect-ratio: 5760 / 2599;
     background: url('/assets/background/hero.webp') center center / cover no-repeat;
     transform: translateX(-50%);
-    opacity: 0.7;
+  }
+
+  .background-glow {
+    @apply pointer-events-none absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100vw; /* hoặc 100% nếu muốn fit section */
+    aspect-ratio: 720 / 446; /* tự động tính chiều cao */
+    background: url('/assets/background/glow.webp') center center / contain no-repeat;
+    z-index: -1;
   }
 
   /* Aurora */
@@ -165,6 +175,53 @@
   @media (prefers-reduced-motion: reduce) {
     .animate-aurora {
       animation: none;
+    }
+  }
+
+  .button-explore {
+    @apply relative overflow-hidden border border-solid border-transparent;
+    background: linear-gradient(180deg, #000b00 0%, #003300 232.94%);
+    border-image-source: linear-gradient(
+      108.84deg,
+      rgba(255, 255, 255, 0) 23.01%,
+      rgba(255, 255, 255, 0.5) 36.19%,
+      rgba(255, 255, 255, 0) 76.2%
+    );
+    box-shadow:
+      0 20px 40px -30px rgba(0, 0, 0, 0.8) inset,
+      0 -40px 60px -30px rgba(0, 255, 100, 0.4) inset,
+      0 -20px 30px -8px rgba(120, 255, 180, 0.5) inset,
+      0 -9px 20px -3px rgba(255, 255, 255, 0.6) inset,
+      0 0 12px -2px rgba(255, 255, 255, 0.8) inset;
+  }
+
+  .button-explore::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -75%;
+    width: 50%;
+    height: 100%;
+    background: linear-gradient(
+      120deg,
+      rgba(255, 255, 255, 0) 0%,
+      rgba(255, 255, 255, 0.6) 50%,
+      rgba(255, 255, 255, 0) 100%
+    );
+    transform: skewX(-25deg);
+    opacity: 0.6;
+  }
+
+  .button-explore:hover::before {
+    animation: glare-move 0.4s ease-in-out;
+  }
+
+  @keyframes glare-move {
+    0% {
+      left: -75%;
+    }
+    100% {
+      left: 125%;
     }
   }
 }
