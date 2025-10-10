@@ -30,22 +30,24 @@ export default function HorizontalSlides({ children }: HorizontalSlidesProps) {
   useEffect(() => {
     if (!targetRef.current || !triggerRef.current) return
 
+    ScrollTrigger.getAll().forEach((t) => t.kill())
+
     const ctx = gsap.context(() => {
-      const cardsContainer = targetRef.current!
-      const cards = Array.from(cardsContainer.children) as HTMLElement[]
+      const container = targetRef.current!
+      const cards = Array.from(container.children) as HTMLElement[]
 
       // reset styles
       gsap.set(cards[0], { opacity: 1 })
 
       if (isMobile) {
-        ScrollTrigger.getAll().forEach((t) => t.kill())
-        ScrollSmoother.get()?.kill()
+        gsap.set(container, { clearProps: 'all' })
+        gsap.set(cards, { clearProps: 'all' })
         return
       }
 
-      const totalScroll = cardsContainer.scrollWidth - windowWidth / 2 + 50
+      const totalScroll = container.scrollWidth - windowWidth / 2 + 50
 
-      const scrollTrack = gsap.to(cardsContainer, {
+      const scrollTrack = gsap.to(container, {
         x: -totalScroll,
         ease: 'none',
         scrollTrigger: {
@@ -59,11 +61,11 @@ export default function HorizontalSlides({ children }: HorizontalSlidesProps) {
         },
       })
 
-      cards.forEach((card) => {
+      cards.forEach((card, idx) => {
         gsap.to(card, {
           opacity: 1,
           scrollTrigger: {
-            id: 'card-fade-in',
+            id: `card-fade-in-${idx}`,
             trigger: card,
             start: 'left 95%',
             end: 'center 90%',
@@ -73,22 +75,27 @@ export default function HorizontalSlides({ children }: HorizontalSlidesProps) {
           },
         })
 
-        cards.forEach((card) => {
-          const tl = gsap.timeline({
-            scrollTrigger: {
-              id: 'card-fade-out',
-              trigger: card,
-              start: 'center 50%',
-              end: 'center+=30% 50%',
-              scrub: true,
-              containerAnimation: scrollTrack,
-              markers: markersCardFadeOut,
-            },
-          })
-          tl.to(card.querySelector('[data-title]'), { y: 60, opacity: 0, duration: 0.6 })
-            .to(card.querySelector('[data-icon]'), { scale: 0.8, opacity: 0, duration: 0.6 }, '<0.1')
-            .to(card.querySelector('[data-desc]'), { y: 30, opacity: 0, duration: 0.6 }, '<0.1')
+        const title = card.querySelector('[data-title]')
+        const icon = card.querySelector('[data-icon]')
+        const desc = card.querySelector('[data-desc]')
+
+        if (!title || !icon || !desc) return
+
+        const tl = gsap.timeline({
+          scrollTrigger: {
+            id: `card-fade-out-${idx}`,
+            trigger: card,
+            start: 'center+=10% 50%',
+            end: 'center+=30% 50%',
+            scrub: true,
+            containerAnimation: scrollTrack,
+            markers: markersCardFadeOut,
+          },
         })
+
+        tl.to(card.querySelector('[data-title]'), { y: 60, opacity: 0, duration: 0.6 })
+          .to(card.querySelector('[data-icon]'), { scale: 0.8, opacity: 0, duration: 0.6 }, '<0.1')
+          .to(card.querySelector('[data-desc]'), { y: 30, opacity: 0, duration: 0.6 }, '<0.1')
       })
     }, targetRef)
 
