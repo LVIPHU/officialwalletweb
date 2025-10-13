@@ -21,6 +21,7 @@ import AnimatedContent from '@/components/atoms/animated-content'
 import Lenis from 'lenis'
 import { AuroraText } from '@/components/atoms/aurora-text'
 import { ChainCard } from '@/components/molecules/chain-card'
+import {CommunityCarousel} from "@/components/molecules/community-carousel";
 
 const Parallax = dynamic(() => import('@/components/atoms/parallax').then((Parallax) => Parallax), { ssr: false })
 
@@ -238,7 +239,7 @@ export default function HomeTemplate() {
         <div className='flex h-full flex-col items-center gap-6'>
           <AnimatedContent distance={50} threshold={0.7}>
             <div className='flex max-w-2xl flex-col gap-y-6 text-center'>
-              <h2 className='text-4xl font-semibold'>About</h2>
+              <h2 className='text-4xl'>About</h2>
               <p>
                 As a leading self-custody multi-chain platform, we support millions of assets across 100+ blockchains.
                 We provide secure, user-friendly access to the decentralized web while maintaining complete control over
@@ -260,7 +261,7 @@ export default function HomeTemplate() {
           <div ref={platformRectRef} className='h-full w-full'></div>
           <AnimatedContent distance={10} threshold={0.4}>
             <div className='flex h-full max-w-md flex-col gap-y-6'>
-              <h2 className='text-4xl font-semibold'>Build for everyone</h2>
+              <h2 className='text-4xl'>Build for everyone</h2>
               <p>
                 Our platform is designed with accessibility and usability at its core. Whether you&apos;re a crypto beginner
                 or an experienced DeFi user, TB Wallet provides the tools and features you need to navigate the Web3
@@ -288,7 +289,7 @@ export default function HomeTemplate() {
       <Container id='platform' className='min-h-screen py-5 md:py-10 xl:py-16' data-lenis-scroll-snap-align='start'>
         <div className='flex flex-col items-center justify-center gap-12'>
           <div className='flex max-w-3xl flex-col items-center gap-y-6'>
-            <h2 className='text-4xl font-semibold'>One Platform, Millions of Assets</h2>
+            <h2 className='text-4xl'>One Platform, Millions of Assets</h2>
             <p>
               As a leading self- custody multi- chain platform, we support millions of assets across 100+ blockchains.
               From Bitcoin, Ethereum, and Solana, to Cosmos, Optimism, and much more .
@@ -304,32 +305,10 @@ export default function HomeTemplate() {
       </Container>
 
       {/* Community Testimonials */}
-      <Container id='community' className='min-h-screen py-5 md:py-10 xl:py-16' data-lenis-scroll-snap-align='start'>
-        <div className='mx-auto max-w-7xl'>
-          <div className='mb-16 text-center'>
-            <h2 className='mb-6 text-4xl font-bold'>Community talk about us</h2>
-            <p className='mx-auto max-w-3xl text-xl'>
-              Join thousands of satisfied users who trust TB Wallet for their cryptocurrency needs.
-            </p>
-          </div>
-          <div className='grid gap-8 md:grid-cols-3'>
-            {TESTIMONIALS.map((testimonial) => (
-              <Card key={testimonial.id} className='border-gray-600 bg-gray-700'>
-                <CardContent className='p-6'>
-                  <div className='mb-4 flex items-center space-x-4'>
-                    <Badge className='flex h-12 w-12 items-center justify-center rounded-full bg-green-500'>
-                      <span className='text-lg font-bold text-white'>{testimonial.initials}</span>
-                    </Badge>
-                    <div>
-                      <h4 className='text-lg font-bold text-white'>{testimonial.name}</h4>
-                      <p className='text-gray-300'>{testimonial.role}</p>
-                    </div>
-                  </div>
-                  <p className='text-gray-300'>{testimonial.content}</p>
-                </CardContent>
-              </Card>
-            ))}
-          </div>
+      <Container id='community' className='h-screen py-5 md:py-10 xl:py-16' data-lenis-scroll-snap-align='start'>
+        <div className='flex flex-col items-center justify-center gap-12 w-full h-full'>
+          <h2 className='text-4xl'>Community talk about us</h2>
+          <CommunityCarousel/>
         </div>
       </Container>
 
