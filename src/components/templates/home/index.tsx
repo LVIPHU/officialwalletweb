@@ -37,13 +37,15 @@ if (isBrowser) {
 
 export default function HomeTemplate() {
   const zoomRef = useRef<HTMLElement | null>(null)
+  const [theme, setTheme] = useState('dark')
   const [hasScrolled, setHasScrolled] = useState(false)
+
   const [zoomWrapperRectRef, zoomWrapperRect] = useRect()
   const { height: windowHeight } = useWindowSize()
-  const introOut = useStore(({ introOut }) => introOut)
 
-  const [theme, setTheme] = useState('dark')
   const lenis = useStore(({ lenis }) => lenis)
+  const introOut = useStore(({ introOut }) => introOut)
+  const setScreenIphone = useStore((state) => state.setScreenIphone)
 
   useControls(
     'lenis',
@@ -188,11 +190,16 @@ export default function HomeTemplate() {
   }, [lenis?.limit])
 
   useScroll((e) => {
-    // console.log('[Home template] use scroll', window.scrollY, e.scroll, e.isScrolling, e.velocity, e.isLocked)
+    console.log('[Home template] use scroll', window.scrollY, e.scroll, e.isScrolling, e.velocity, e.isLocked)
   })
 
   useFrame(() => {
-    // console.log('[Home template] use frame', window.scrollY, lenis?.scroll, lenis?.isScrolling)
+    if (window.scrollY > 300) {
+      setScreenIphone('1')
+    } else {
+      setScreenIphone('2')
+    }
+    console.log('[Home template] use frame', window.scrollY, lenis?.scroll, lenis?.isScrolling)
   }, 1)
 
   const inUseRef = useRef<HTMLElement | null>(null)

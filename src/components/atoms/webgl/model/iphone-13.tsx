@@ -8,19 +8,21 @@ Source: https://sketchfab.com/3d-models/apple-iphone-13-pro-max-4328dea00e47497d
 Title: Apple iPhone 13 Pro Max
 */
 
-import React, { useMemo } from 'react'
+import React, { useMemo, useState } from 'react'
 import * as THREE from 'three'
 import { GLTF } from 'three-stdlib'
 import { useGLTF, useTexture } from '@react-three/drei'
 import { ObjectMap } from '@react-three/fiber'
+import { useStore } from '@/lib/store'
 
 type ModelProps = React.ComponentProps<'group'>
 
 export function Model(props: ModelProps) {
   const { nodes, materials } = useGLTF('/models/iphone_13.glb') as GLTF & ObjectMap
+  const screenIphone = useStore(({ screenIphone }) => screenIphone)
 
-  // Load ảnh màn hình
-  const screenTexture = useTexture('/screen/1.jpg') as THREE.Texture
+  // Tải texture theo chỉ số màn hình
+  const screenTexture = useTexture(`/screen/${screenIphone}.png`) as THREE.Texture
   screenTexture.flipY = true
 
   // Gán material mới cho màn hình
