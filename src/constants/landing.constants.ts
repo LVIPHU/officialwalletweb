@@ -1,4 +1,4 @@
-﻿import { Chain, Feature } from '@/types/landing.types'
+﻿import { Chain, Feature, Testimonial } from '@/types/landing.types'
 import BTC from '@public/assets/chain/BTC.svg'
 import ETH from '@public/assets/chain/ETH.svg'
 import SOL from '@public/assets/chain/SOL.svg'
@@ -50,29 +50,129 @@ export const CHAINS: Chain[] = [
   { id: 'ETH', name: 'Ethereum', logo: ETH },
 ] as const
 
-export const TESTIMONIALS = [
+export const TESTIMONIALS: Testimonial[] = [
   {
-    id: 'sarah-johnson',
+    id: '1',
     name: 'Sarah Johnson',
     role: 'Crypto Investor',
     content:
-      'TB Wallet has completely transformed how I manage my crypto portfolio. The interface is intuitive and the security is top-notch.',
-    initials: 'SJ',
+      "TB Wallet has completely transformed how I manage my crypto portfolio. The interface is intuitive and the security is top-notch.'",
+    avatar: 'https://api.dicebear.com/7.x/fun-emoji/svg?seed=Sarah',
   },
   {
-    id: 'mike-chen',
+    id: '2',
     name: 'Mike Chen',
     role: 'DeFi Enthusiast',
     content:
       'The staking features and DeFi integration make TB Wallet my go-to platform. I have earned more rewards than ever before.',
-    initials: 'MC',
+    avatar: 'https://api.dicebear.com/7.x/fun-emoji/svg?seed=Mike',
   },
   {
-    id: 'emily-rodriguez',
+    id: '3',
     name: 'Emily Rodriguez',
     role: 'Beginner Trader',
     content:
       'As someone new to crypto, TB Wallet made it so easy to get started. The tutorials and support team are amazing.',
-    initials: 'ER',
+    avatar: 'https://api.dicebear.com/7.x/fun-emoji/svg?seed=Emily',
+  },
+  {
+    id: '4',
+    name: 'Jay Jay',
+    role: 'Free trader',
+    content: 'As a leading self- custody multi- chain platform, we support millions of assets across 100+ blockchains.',
+    avatar: 'https://api.dicebear.com/7.x/fun-emoji/svg?seed=Jay',
+  },
+  {
+    id: '1',
+    name: 'Sarah Johnson',
+    role: 'Crypto Investor',
+    content:
+      "TB Wallet has completely transformed how I manage my crypto portfolio. The interface is intuitive and the security is top-notch.'",
+    avatar: 'https://api.dicebear.com/7.x/fun-emoji/svg?seed=Sarah',
+  },
+  {
+    id: '2',
+    name: 'Mike Chen',
+    role: 'DeFi Enthusiast',
+    content:
+      'The staking features and DeFi integration make TB Wallet my go-to platform. I have earned more rewards than ever before.',
+    avatar: 'https://api.dicebear.com/7.x/fun-emoji/svg?seed=Mike',
+  },
+  {
+    id: '3',
+    name: 'Emily Rodriguez',
+    role: 'Beginner Trader',
+    content:
+      'As someone new to crypto, TB Wallet made it so easy to get started. The tutorials and support team are amazing.',
+    avatar: 'https://api.dicebear.com/7.x/fun-emoji/svg?seed=Emily',
+  },
+  {
+    id: '4',
+    name: 'Jay Jay',
+    role: 'Free trader',
+    content: 'As a leading self- custody multi- chain platform, we support millions of assets across 100+ blockchains.',
+    avatar: 'https://api.dicebear.com/7.x/fun-emoji/svg?seed=Jay',
+  },
+  {
+    id: '1',
+    name: 'Sarah Johnson',
+    role: 'Crypto Investor',
+    content:
+      "TB Wallet has completely transformed how I manage my crypto portfolio. The interface is intuitive and the security is top-notch.'",
+    avatar: 'https://api.dicebear.com/7.x/fun-emoji/svg?seed=Sarah',
+  },
+  {
+    id: '2',
+    name: 'Mike Chen',
+    role: 'DeFi Enthusiast',
+    content:
+      'The staking features and DeFi integration make TB Wallet my go-to platform. I have earned more rewards than ever before.',
+    avatar: 'https://api.dicebear.com/7.x/fun-emoji/svg?seed=Mike',
+  },
+  {
+    id: '3',
+    name: 'Emily Rodriguez',
+    role: 'Beginner Trader',
+    content:
+      'As someone new to crypto, TB Wallet made it so easy to get started. The tutorials and support team are amazing.',
+    avatar: 'https://api.dicebear.com/7.x/fun-emoji/svg?seed=Emily',
+  },
+  {
+    id: '4',
+    name: 'Jay Jay',
+    role: 'Free trader',
+    content: 'As a leading self- custody multi- chain platform, we support millions of assets across 100+ blockchains.',
+    avatar: 'https://api.dicebear.com/7.x/fun-emoji/svg?seed=Jay',
+  },
+  {
+    id: '1',
+    name: 'Sarah Johnson',
+    role: 'Crypto Investor',
+    content:
+      "TB Wallet has completely transformed how I manage my crypto portfolio. The interface is intuitive and the security is top-notch.'",
+    avatar: 'https://api.dicebear.com/7.x/fun-emoji/svg?seed=Sarah',
+  },
+  {
+    id: '2',
+    name: 'Mike Chen',
+    role: 'DeFi Enthusiast',
+    content:
+      'The staking features and DeFi integration make TB Wallet my go-to platform. I have earned more rewards than ever before.',
+    avatar: 'https://api.dicebear.com/7.x/fun-emoji/svg?seed=Mike',
+  },
+  {
+    id: '3',
+    name: 'Emily Rodriguez',
+    role: 'Beginner Trader',
+    content:
+      'As someone new to crypto, TB Wallet made it so easy to get started. The tutorials and support team are amazing.',
+    avatar: 'https://api.dicebear.com/7.x/fun-emoji/svg?seed=Emily',
+  },
+  {
+    id: '4',
+    name: 'Jay Jay',
+    role: 'Free trader',
+    content: 'As a leading self- custody multi- chain platform, we support millions of assets across 100+ blockchains.',
+    avatar: 'https://api.dicebear.com/7.x/fun-emoji/svg?seed=Jay',
   },
 ] as const

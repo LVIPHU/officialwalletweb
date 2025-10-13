@@ -144,6 +144,17 @@
     transform: translateX(-50%);
   }
 
+  .background-footer {
+    @apply pointer-events-none absolute;
+    content: '';
+    bottom: 0;
+    left: 50%;
+    width: 100vw;
+    aspect-ratio: 5760 / 2720;
+    background: url('/assets/background/footer.webp') center center / cover no-repeat;
+    transform: translateX(-50%);
+  }
+
   .background-glow {
     @apply pointer-events-none absolute;
     top: 50%;

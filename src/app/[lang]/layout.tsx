@@ -42,6 +42,7 @@ export default async function RootLayout({ children, params }: Readonly<PropsWit
             <MobileSidebar />
             <main className='grow'>{children}</main>
             <Footer />
+            <div className={'background-footer'} />
           </DefaultLayout>
         </ProviderRegistry>
       </body>

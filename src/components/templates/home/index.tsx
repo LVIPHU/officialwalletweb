@@ -8,11 +8,9 @@ import { useWindowSize } from '@/hooks/use-window-size'
 import { useScroll } from '@/hooks/use-scroll'
 import { useFrame } from '@/hooks/use-frame'
 import { Button } from '@/components/ui/button'
-import { Card, CardContent } from '@/components/ui/card'
-import { Badge } from '@/components/ui/badge'
 import { Separator } from '@/components/ui/separator'
 import { HorizontalCard } from '@/components/atoms/horizontal-slides/horizontal-card'
-import { FEATURES, TESTIMONIALS, CHAINS } from '@/constants/landing.constants'
+import { FEATURES, CHAINS } from '@/constants/landing.constants'
 import { isBrowser } from '@/lib/misc'
 import { useStore } from '@/lib/store'
 import { clamp, mapRange } from '@/lib/maths'
@@ -21,7 +19,7 @@ import AnimatedContent from '@/components/atoms/animated-content'
 import Lenis from 'lenis'
 import { AuroraText } from '@/components/atoms/aurora-text'
 import { ChainCard } from '@/components/molecules/chain-card'
-import {CommunityCarousel} from "@/components/molecules/community-carousel";
+import { TestimonialCarousel } from '@/components/molecules/testimonial-carousel'
 
 const Parallax = dynamic(() => import('@/components/atoms/parallax').then((Parallax) => Parallax), { ssr: false })
 
@@ -263,9 +261,9 @@ export default function HomeTemplate() {
             <div className='flex h-full max-w-md flex-col gap-y-6'>
               <h2 className='text-4xl'>Build for everyone</h2>
               <p>
-                Our platform is designed with accessibility and usability at its core. Whether you&apos;re a crypto beginner
-                or an experienced DeFi user, TB Wallet provides the tools and features you need to navigate the Web3
-                ecosystem safely and efficiently.
+                Our platform is designed with accessibility and usability at its core. Whether you&apos;re a crypto
+                beginner or an experienced DeFi user, TB Wallet provides the tools and features you need to navigate the
+                Web3 ecosystem safely and efficiently.
               </p>
             </div>
           </AnimatedContent>
@@ -295,8 +293,7 @@ export default function HomeTemplate() {
               From Bitcoin, Ethereum, and Solana, to Cosmos, Optimism, and much more .
             </p>
           </div>
-
-          <div className='grid w-full grid-cols-4 gap-12'>
+          <div className='grid w-full grid-cols-1 md:grid-cols-2 md:gap-12 lg:grid-cols-4'>
             {CHAINS.map((crypto) => (
               <ChainCard key={crypto.id} chain={crypto} />
             ))}
@@ -306,9 +303,10 @@ export default function HomeTemplate() {
 
       {/* Community Testimonials */}
       <Container id='community' className='h-screen py-5 md:py-10 xl:py-16' data-lenis-scroll-snap-align='start'>
-        <div className='flex flex-col items-center justify-center gap-12 w-full h-full'>
+        <div className='relative flex h-full w-full flex-col items-center justify-center gap-12'>
           <h2 className='text-4xl'>Community talk about us</h2>
-          <CommunityCarousel/>
+          <div className='background-glow' />
+          <TestimonialCarousel />
         </div>
       </Container>
 
@@ -345,7 +343,6 @@ export default function HomeTemplate() {
           </div>
         </div>
       </Container>
-      <Separator className='bg-gray-700' />
     </div>
   )
 }

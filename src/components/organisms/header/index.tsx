@@ -50,8 +50,8 @@ export default function Header() {
         <div className='hidden md:flex'>
           <NavigationMenu>
             <NavigationMenuList>
-              {NAVIGATION_ITEMS.map((item) => (
-                <NavigationItem key={item.id} item={item} />
+              {Object.keys(NAVIGATION_ITEMS).map((title) => (
+                <NavigationItem key={title} title={title} />
               ))}
             </NavigationMenuList>
           </NavigationMenu>
@@ -71,10 +71,10 @@ export default function Header() {
   )
 }
 
-function NavigationItem({ item }: { item: any }) {
+function NavigationItem({ title }: { title: string }) {
   return (
-    <NavigationMenuItem key={item.id}>
-      <NavigationMenuTrigger className='data-[state=open]:text-primary bg-transparent'>{item.id}</NavigationMenuTrigger>
+    <NavigationMenuItem key={title}>
+      <NavigationMenuTrigger className='data-[state=open]:text-primary bg-transparent'>{title}</NavigationMenuTrigger>
       <NavigationMenuContent>
         <div className='flex gap-8 md:w-2xl lg:w-3xl xl:w-4xl 2xl:w-5xl'>
           <div className='row-span-3'>
@@ -87,8 +87,8 @@ function NavigationItem({ item }: { item: any }) {
           </div>
 
           <ul className='default-transition grid grid-cols-1 gap-x-6 gap-y-6 lg:grid-cols-2 xl:grid-cols-3 2xl:gap-x-10'>
-            {item.children?.map((child: any) => (
-              <ListItem key={child.id} href={child.href} title={child.id}>
+            {NAVIGATION_ITEMS[title as keyof typeof NAVIGATION_ITEMS]?.map((item: any) => (
+              <ListItem key={item.id} href={item.href} title={item.id}>
                 Re-usable components built using Radix UI and Tailwind CSS.
               </ListItem>
             ))}
