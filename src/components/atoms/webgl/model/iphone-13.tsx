@@ -8,7 +8,7 @@ Source: https://sketchfab.com/3d-models/apple-iphone-13-pro-max-4328dea00e47497d
 Title: Apple iPhone 13 Pro Max
 */
 
-import React, { useMemo, useState } from 'react'
+import React, { useEffect, useMemo, useState } from 'react'
 import * as THREE from 'three'
 import { GLTF } from 'three-stdlib'
 import { useGLTF, useTexture } from '@react-three/drei'
@@ -16,25 +16,38 @@ import { ObjectMap } from '@react-three/fiber'
 import { useStore } from '@/lib/store'
 
 type ModelProps = React.ComponentProps<'group'>
+type ScreenKey = '1' | '2'
+
+THREE.Cache.enabled = true
 
 export function Model(props: ModelProps) {
   const { nodes, materials } = useGLTF('/models/iphone_13.glb') as GLTF & ObjectMap
-  const screenIphone = useStore(({ screenIphone }) => screenIphone)
+  const screenIphone = useStore((state) => state.screenIphone) as ScreenKey
 
-  // Tải texture theo chỉ số màn hình
-  const screenTexture = useTexture(`/screen/${screenIphone}.png`) as THREE.Texture
-  screenTexture.flipY = true
+  const textures = useTexture({
+    '1': '/screen/1.png',
+    '2': '/screen/2.png',
+  }) as Record<ScreenKey, THREE.Texture>
 
-  // Gán material mới cho màn hình
-  const screenMaterial = useMemo(
+  useEffect(() => {
+    Object.values(textures).forEach((t) => (t.flipY = true))
+  }, [textures])
+
+  const [screenMaterial] = useState(
     () =>
       new THREE.MeshBasicMaterial({
-        map: screenTexture,
         toneMapped: false,
         side: THREE.DoubleSide,
-      }),
-    [screenTexture]
+      })
   )
+
+  useEffect(() => {
+    const tex = textures[screenIphone]
+    if (tex) {
+      screenMaterial.map = tex
+      screenMaterial.needsUpdate = true
+    }
+  }, [screenIphone, textures, screenMaterial])
 
   return (
     <group {...props} dispose={null}>
