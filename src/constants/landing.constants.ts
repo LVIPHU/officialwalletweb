@@ -1,4 +1,10 @@
-﻿export const FEATURES = [
+﻿import { Chain, Feature } from '@/types/landing.types'
+import BTC from '@public/assets/chain/BTC.svg'
+import ETH from '@public/assets/chain/ETH.svg'
+import SOL from '@public/assets/chain/SOL.svg'
+import TBC from '@public/assets/chain/TBC.svg'
+
+export const FEATURES: Feature[] = [
   {
     id: 'secure-storage',
     title: 'Secure Storage',
@@ -37,6 +43,13 @@
   },
 ] as const
 
+export const CHAINS: Chain[] = [
+  { id: 'TBC', name: 'TBChat', logo: TBC },
+  { id: 'SOL', name: 'Solana', logo: SOL },
+  { id: 'BTC', name: 'Bitcoin', logo: BTC },
+  { id: 'ETH', name: 'Ethereum', logo: ETH },
+] as const
+
 export const TESTIMONIALS = [
   {
     id: 'sarah-johnson',
@@ -62,17 +75,4 @@ export const TESTIMONIALS = [
       'As someone new to crypto, TB Wallet made it so easy to get started. The tutorials and support team are amazing.',
     initials: 'ER',
   },
-] as const
-
-export const CRYPTOCURRENCIES = [
-  { symbol: '', name: 'Bitcoin' },
-  { symbol: 'Ξ', name: 'Ethereum' },
-  { symbol: 'BNB', name: 'Binance Coin' },
-  { symbol: 'ADA', name: 'Cardano' },
-  { symbol: 'SOL', name: 'Solana' },
-  { symbol: 'MATIC', name: 'Polygon' },
-  { symbol: 'DOT', name: 'Polkadot' },
-  { symbol: 'AVAX', name: 'Avalanche' },
-  { symbol: 'LINK', name: 'Chainlink' },
-  { symbol: 'UNI', name: 'Uniswap' },
 ] as const

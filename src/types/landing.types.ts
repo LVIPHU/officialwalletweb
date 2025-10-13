@@ -9,6 +9,13 @@ export interface Feature {
   readonly icon: string
 }
 
+export interface Chain {
+  readonly id: 'TBC' | 'BTC' | 'ETH' | 'SOL'
+  readonly name: string
+  readonly logo?: React.FC<React.SVGProps<SVGSVGElement>>
+  readonly url?: string
+}
+
 export interface Testimonial {
   readonly id: string
   readonly name: string
@@ -21,11 +28,6 @@ export interface NavigationItem {
   readonly id: string
   readonly label: string
   readonly href: string
-}
-
-export interface Cryptocurrency {
-  readonly symbol: string
-  readonly name: string
 }
 
 export interface SectionProps {

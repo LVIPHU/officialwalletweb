@@ -224,4 +224,158 @@
       left: 125%;
     }
   }
+
+  .card-chain-green {
+    @apply relative overflow-hidden border border-solid border-transparent;
+    background: linear-gradient(180deg, #000b00 0%, #003300 232.94%);
+    border-image-source: linear-gradient(
+      108.84deg,
+      rgba(255, 255, 255, 0) 23.01%,
+      rgba(255, 255, 255, 0.5) 36.19%,
+      rgba(255, 255, 255, 0) 76.2%
+    );
+    box-shadow:
+      0 -80px 60px -30px rgba(13, 204, 97, 0.2) inset,
+      0 -60px 40px -30px rgba(0, 255, 100, 0.4) inset,
+      0 -40px 20px -8px rgba(120, 255, 180, 0.5) inset,
+      0 -10px 10px -4px rgba(255, 255, 255, 0.6) inset,
+      0 0 10px -2px rgba(255, 255, 255, 0.8) inset,
+      0 -20px 15px -8px rgba(255, 255, 255, 1) inset;
+
+    &::before {
+      @apply pointer-events-none absolute -top-18 -left-18 size-40 rounded-full;
+      content: '';
+      background: radial-gradient(
+        circle at center center,
+        rgba(255, 255, 255, 0.9) 10%,
+        /* sáng mạnh ở trung tâm đáy */ rgba(255, 255, 255, 0.8) 20%,
+        rgba(180, 255, 210, 0.6) 30%,
+        /* xanh ngọc nhạt */ rgba(60, 255, 150, 0.3) 40%,
+        /* xanh ngọc trung bình */ rgba(0, 180, 90, 0.15) 60%,
+        /* xanh đậm hơn */ rgba(0, 60, 0, 0.05) 80%,
+        /* chuyển tối dần */ rgba(0, 0, 0, 0) 100% /* tan hoàn toàn */
+      );
+      filter: blur(10px);
+      opacity: 0.9;
+      mix-blend-mode: screen;
+    }
+  }
+
+  .card-chain-blue-purple {
+    @apply relative overflow-hidden border border-solid border-transparent;
+    background: linear-gradient(180deg, #000b00 0%, #3a008b 232.94%);
+    border-image-source: linear-gradient(
+      156.04deg,
+      #ffffff -3.59%,
+      rgba(255, 255, 255, 0) 32.81%,
+      rgba(255, 255, 255, 0.4) 58.76%,
+      rgba(255, 255, 255, 0) 83.29%,
+      rgba(255, 255, 255, 0.4) 107.73%
+    );
+    box-shadow:
+      0 -80px 60px -30px rgba(0, 120, 255, 0.2) inset,
+      0 -60px 40px -30px rgba(0, 177, 241, 0.35) inset,
+      0 -40px 20px -8px rgba(90, 220, 255, 0.5) inset,
+      0 -10px 10px -4px rgba(180, 240, 255, 0.6) inset,
+      0 0 10px -2px rgba(143, 255, 255, 0.8) inset,
+      0 -20px 15px -8px rgba(143, 255, 255, 1) inset;
+
+    &::before {
+      @apply pointer-events-none absolute -top-18 -left-18 size-40 rounded-full;
+      content: '';
+      background: radial-gradient(
+        circle at center center,
+        rgba(255, 255, 255, 0.9) 10%,
+        /* trung tâm trắng sáng */ rgba(255, 255, 255, 0.8) 20%,
+        /* lớp sáng thứ hai */ rgba(180, 240, 255, 0.8) 30%,
+        /* xanh dương nhạt */ rgba(120, 210, 255, 0.6) 40%,
+        /* xanh cyan trung gian */ rgba(0, 177, 241, 0.4) 60%,
+        /* xanh chủ đạo */ rgba(0, 100, 200, 0.2) 80%,
+        /* xanh đậm mờ */ rgba(0, 0, 0, 0) 100% /* tan vào nền */
+      );
+      filter: blur(15px);
+      opacity: 0.9;
+      mix-blend-mode: screen;
+    }
+  }
+
+  .card-chain-orange {
+    @apply relative overflow-hidden border border-solid border-transparent;
+    background: linear-gradient(180deg, #000b00 0%, #351d00 232.94%);
+    border-image-source: linear-gradient(
+      156.04deg,
+      #ffffff -3.59%,
+      rgba(255, 255, 255, 0) 32.81%,
+      rgba(255, 255, 255, 0.4) 58.76%,
+      rgba(255, 255, 255, 0) 83.29%,
+      rgba(255, 255, 255, 0.4) 107.73%
+    );
+
+    box-shadow:
+      0 -80px 60px -30px rgba(255, 81, 0, 0.25) inset,
+      /* cam đỏ sâu */ 0 -60px 40px -30px rgba(255, 120, 0, 0.45) inset,
+      /* cam sáng */ 0 -40px 25px -10px rgba(255, 160, 0, 0.55) inset,
+      /* vàng-cam trung gian */ 0 -20px 15px -8px rgba(255, 200, 100, 0.6) inset,
+      /* sáng vùng gần đáy */ 0 -10px 10px -4px rgba(255, 240, 180, 0.7) inset,
+      /* highlight vàng nhạt */ 0 0 8px -2px rgba(255, 255, 255, 0.8) inset,
+      /* sáng lõi */ 0 -20px 15px -8px rgba(255, 255, 255, 1) inset; /* viền trắng phản sáng */
+
+    &::before {
+      @apply pointer-events-none absolute -top-18 -left-18 size-40 rounded-full;
+      content: '';
+      background: radial-gradient(
+        circle at center center,
+        rgba(255, 255, 255, 0.9) 10%,
+        /* trung tâm sáng trắng */ rgba(255, 235, 200, 0.8) 20%,
+        /* lớp sáng vàng nhạt */ rgba(255, 200, 120, 0.6) 35%,
+        /* vàng-cam mềm */ rgba(255, 150, 50, 0.4) 50%,
+        /* cam trung gian */ rgba(255, 100, 0, 0.25) 65%,
+        /* cam đậm */ rgba(120, 40, 0, 0.1) 80%,
+        /* nâu-cam mờ */ rgba(0, 0, 0, 0) 100% /* tan dần */
+      );
+      filter: blur(15px);
+      opacity: 0.9;
+      mix-blend-mode: screen;
+    }
+  }
+
+  .card-chain-olive {
+    @apply relative overflow-hidden border border-solid border-transparent;
+    background: linear-gradient(180deg, #000b00 0%, #3f5749 232.94%);
+    border-image-source: linear-gradient(
+      156.04deg,
+      #ffffff -3.59%,
+      rgba(255, 255, 255, 0) 32.81%,
+      rgba(255, 255, 255, 0.4) 58.76%,
+      rgba(255, 255, 255, 0) 83.29%,
+      rgba(255, 255, 255, 0.4) 107.73%
+    );
+
+    box-shadow:
+      0 -80px 60px -30px rgba(80, 106, 90, 0.25) inset,
+      /* nền xanh olive đậm */ 0 -60px 40px -30px rgba(117, 146, 129, 0.4) inset,
+      /* sáng nhạt xanh xám */ 0 -40px 25px -10px rgba(160, 190, 170, 0.45) inset,
+      /* bạc ánh xanh nhẹ */ 0 -20px 15px -8px rgba(200, 230, 210, 0.5) inset,
+      /* gần vùng sáng đáy */ 0 -12px 8px -2px rgba(255, 255, 255, 0.4) inset,
+      /* sáng phản chiếu */ 0 0 10px -3px rgba(255, 255, 255, 0.3) inset,
+      /* sáng mờ tổng thể */ 0 -20px 15px -8px rgba(255, 255, 255, 0.6) inset; /* điểm nhấn sáng nhẹ */
+
+    &::before {
+      @apply pointer-events-none absolute -top-18 -left-18 size-40 rounded-full;
+      content: '';
+      background: radial-gradient(
+        circle at center center,
+        rgba(255, 255, 255, 0.9) 10%,
+        /* sáng trung tâm trắng */ rgba(230, 245, 235, 0.8) 20%,
+        /* trắng ngả xanh bạc */ rgba(190, 220, 200, 0.6) 35%,
+        /* xanh bạc nhạt */ rgba(140, 170, 150, 0.4) 50%,
+        /* olive bạc trung gian */ rgba(90, 120, 100, 0.25) 65%,
+        /* xanh đậm olive */ rgba(40, 60, 50, 0.1) 80%,
+        /* vùng tối nền */ rgba(0, 0, 0, 0) 100% /* tan dần vào nền */
+      );
+      filter: blur(15px);
+      opacity: 0.9;
+      mix-blend-mode: screen;
+    }
+  }
 }

@@ -12,7 +12,7 @@ import { Card, CardContent } from '@/components/ui/card'
 import { Badge } from '@/components/ui/badge'
 import { Separator } from '@/components/ui/separator'
 import { HorizontalCard } from '@/components/atoms/horizontal-slides/horizontal-card'
-import { FEATURES, TESTIMONIALS, CRYPTOCURRENCIES } from '@/constants/landing.constants'
+import { FEATURES, TESTIMONIALS, CHAINS } from '@/constants/landing.constants'
 import { isBrowser } from '@/lib/misc'
 import { useStore } from '@/lib/store'
 import { clamp, mapRange } from '@/lib/maths'
@@ -20,6 +20,7 @@ import { Container } from '@/components/atoms/container'
 import AnimatedContent from '@/components/atoms/animated-content'
 import Lenis from 'lenis'
 import { AuroraText } from '@/components/atoms/aurora-text'
+import { ChainCard } from '@/components/molecules/chain-card'
 
 const Parallax = dynamic(() => import('@/components/atoms/parallax').then((Parallax) => Parallax), { ssr: false })
 
@@ -121,8 +122,8 @@ export default function HomeTemplate() {
   })
 
   const [aboutRectRef, aboutRect] = useRect()
+  const [platformRectRef, platformRect] = useRect()
   const [featuresRectRef, featuresRect] = useRect()
-  // const [platformRectRef, platformRect] = useRect()
 
   const addThreshold = useStore(({ addThreshold }) => addThreshold)
 
@@ -140,13 +141,30 @@ export default function HomeTemplate() {
     addThreshold({ id: 'about-start', value: top })
     addThreshold({
       id: 'about-center',
-      value: top + height + windowHeight / 2,
+      value: top + height,
     })
     addThreshold({
       id: 'about-end',
-      value: top + height + windowHeight,
+      value: top + height + windowHeight / 2,
     })
   }, [aboutRect])
+
+  useEffect(() => {
+    const rect = ensureRect(platformRect)
+
+    const height = rect.height || 0
+    const top = rect.top ? rect.top - windowHeight / 2 : 0
+
+    addThreshold({ id: 'platform-start', value: top })
+    addThreshold({
+      id: 'platform-center',
+      value: top + height,
+    })
+    addThreshold({
+      id: 'platform-end',
+      value: top + height + windowHeight / 2,
+    })
+  }, [platformRect])
 
   useEffect(() => {
     const rect = ensureRect(featuresRect)
@@ -164,23 +182,6 @@ export default function HomeTemplate() {
       value: top + height + windowHeight / 2,
     })
   }, [featuresRect])
-
-  // useEffect(() => {
-  //   const rect = ensureRect(platformRect)
-  //
-  //   const height = rect.height || 0
-  //   const top = rect.top ? rect.top - windowHeight / 2 : 0
-  //
-  //   addThreshold({ id: 'platform-start', value: top + windowHeight / 2 })
-  //   addThreshold({
-  //     id: 'platform-end',
-  //     value: top + height + windowHeight / 2,
-  //   })
-  //   addThreshold({
-  //     id: 'outro',
-  //     value: top + height + windowHeight,
-  //   })
-  // }, [platformRect])
 
   useEffect(() => {
     const top = lenis?.limit || 0
@@ -233,7 +234,7 @@ export default function HomeTemplate() {
       </Container>
 
       {/* About Section */}
-      <Container id='about' className='min-h-screen py-5 md:py-10 xl:py-16' data-lenis-scroll-snap-align='start'>
+      <Container id='about' className='h-screen py-5 md:py-10 xl:py-16' data-lenis-scroll-snap-align='start'>
         <div className='flex h-full flex-col items-center gap-6'>
           <AnimatedContent distance={50} threshold={0.7}>
             <div className='flex max-w-2xl flex-col gap-y-6 text-center'>
@@ -254,11 +255,11 @@ export default function HomeTemplate() {
       </Container>
 
       {/* Build Section */}
-      <Container id='features' className='min-h-screen py-5 md:py-10 xl:py-16' data-lenis-scroll-snap-align='start'>
-        <div className='grid items-center gap-10 md:grid-cols-2'>
-          <div className='h-full w-full'></div>
-          <AnimatedContent distance={50} threshold={0.7}>
-            <div className='flex max-w-md flex-col gap-y-6'>
+      <Container id='features' className='h-screen py-5 md:py-10 xl:py-16' data-lenis-scroll-snap-align='start'>
+        <div className='grid h-full items-center justify-center gap-10 md:grid-cols-2'>
+          <div ref={platformRectRef} className='h-full w-full'></div>
+          <AnimatedContent distance={10} threshold={0.4}>
+            <div className='flex h-full max-w-md flex-col gap-y-6'>
               <h2 className='text-4xl font-semibold'>Build for everyone</h2>
               <p>
                 Our platform is designed with accessibility and usability at its core. Whether you're a crypto beginner
@@ -272,46 +273,31 @@ export default function HomeTemplate() {
 
       {/* Features Section */}
       <Container id='features' className='min-h-screen py-5 md:py-10 xl:py-16' data-lenis-scroll-snap-align='start'>
-        <div ref={featuresRectRef}>
-          <AnimatedContent threshold={0.6}>
-            <Parallax speed={0.5}>
-              <div className='text-center'>
-                <h2 className='mb-6 text-4xl font-bold uppercase'>Features</h2>
-                <p className='mx-auto max-w-3xl text-xl'>
-                  Discover the powerful features that make TB Wallet the perfect choice for managing your digital
-                  assets.
-                </p>
-              </div>
-            </Parallax>
-          </AnimatedContent>
-          <div className='flex'>
-            <div className='grow'>
-              <HorizontalSlides>
-                {FEATURES.map((feature) => (
-                  <HorizontalCard key={feature.id} feature={feature} />
-                ))}
-              </HorizontalSlides>
-            </div>
+        <div ref={featuresRectRef} className='flex'>
+          <div className='grow'>
+            <HorizontalSlides>
+              {FEATURES.map((feature) => (
+                <HorizontalCard key={feature.id} feature={feature} />
+              ))}
+            </HorizontalSlides>
           </div>
         </div>
       </Container>
 
       {/* One Platform, Millions of Assets */}
       <Container id='platform' className='min-h-screen py-5 md:py-10 xl:py-16' data-lenis-scroll-snap-align='start'>
-        <div>
-          <h2 className='mb-6 text-4xl font-bold'>One Platform, Millions of Assets</h2>
-          <p className='text-xl0 mb-12'>
-            Access thousands of cryptocurrencies and digital assets from a single, secure platform.
-          </p>
-          <div className='flex flex-wrap items-center justify-center gap-8'>
-            {CRYPTOCURRENCIES.map((crypto) => (
-              <Badge
-                key={crypto.symbol}
-                variant='outline'
-                className='flex h-16 w-16 items-center justify-center rounded-full border-gray-600 text-2xl font-bold text-white transition-colors hover:border-green-500'
-              >
-                {crypto.symbol}
-              </Badge>
+        <div className='flex flex-col items-center justify-center gap-12'>
+          <div className='flex max-w-3xl flex-col items-center gap-y-6'>
+            <h2 className='text-4xl font-semibold'>One Platform, Millions of Assets</h2>
+            <p>
+              As a leading self- custody multi- chain platform, we support millions of assets across 100+ blockchains.
+              From Bitcoin, Ethereum, and Solana, to Cosmos, Optimism, and much more .
+            </p>
+          </div>
+
+          <div className='grid w-full grid-cols-4 gap-12'>
+            {CHAINS.map((crypto) => (
+              <ChainCard key={crypto.id} chain={crypto} />
             ))}
           </div>
         </div>

@@ -144,13 +144,31 @@ const steps = [
     type: 1,
   },
   {
-    position: [-0.2, -0.14, 0],
+    position: [-0.2, -0.01, 0],
     scale: 0.6,
     rotation: [MathUtils.degToRad(0), MathUtils.degToRad(900), MathUtils.degToRad(0)],
     type: 1,
   },
   {
-    position: [-0.2, -0.14, 0],
+    position: [-0.2, -0.01, 0],
+    scale: 0.6,
+    rotation: [MathUtils.degToRad(0), MathUtils.degToRad(900), MathUtils.degToRad(0)],
+    type: 1,
+  },
+  {
+    position: [-0.2, -0.01, 0],
+    scale: 0.6,
+    rotation: [MathUtils.degToRad(0), MathUtils.degToRad(900), MathUtils.degToRad(0)],
+    type: 1,
+  },
+  {
+    position: [-0.2, -0.04, 0],
+    scale: 0.6,
+    rotation: [MathUtils.degToRad(0), MathUtils.degToRad(900), MathUtils.degToRad(0)],
+    type: 1,
+  },
+  {
+    position: [-0.2, -0.04, 0],
     scale: 0.6,
     rotation: [MathUtils.degToRad(0), MathUtils.degToRad(900), MathUtils.degToRad(0)],
     type: 1,

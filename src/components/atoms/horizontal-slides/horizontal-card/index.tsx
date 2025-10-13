@@ -10,10 +10,13 @@ interface HorizontalCardProps {
 export function HorizontalCard({ feature, className }: HorizontalCardProps) {
   return (
     <div
-      className={cn('grid h-screen w-full grid-cols-1 md:w-3xl md:grid-cols-12 lg:w-4xl xl:w-5xl 2xl:w-6xl', className)}
+      className={cn(
+        'grid h-screen w-full grid-cols-1 first:ml-28 md:w-3xl md:grid-cols-12 lg:w-4xl xl:w-5xl 2xl:w-6xl',
+        className
+      )}
     >
       <div className='col-span-7 flex items-center justify-center md:col-start-6'>
-        <div className='flex flex-col items-center gap-4 text-center'>
+        <div className='flex flex-col justify-center gap-4'>
           <h2 data-title className='text-xl font-semibold'>
             {feature.title}
           </h2>
