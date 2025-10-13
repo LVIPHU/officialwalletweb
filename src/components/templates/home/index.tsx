@@ -262,7 +262,7 @@ export default function HomeTemplate() {
             <div className='flex h-full max-w-md flex-col gap-y-6'>
               <h2 className='text-4xl font-semibold'>Build for everyone</h2>
               <p>
-                Our platform is designed with accessibility and usability at its core. Whether you're a crypto beginner
+                Our platform is designed with accessibility and usability at its core. Whether you&apos;re a crypto beginner
                 or an experienced DeFi user, TB Wallet provides the tools and features you need to navigate the Web3
                 ecosystem safely and efficiently.
               </p>
