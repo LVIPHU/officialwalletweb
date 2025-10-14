@@ -20,6 +20,8 @@ import { AuroraText } from '@/components/atoms/aurora-text'
 import { ChainCard } from '@/components/molecules/chain-card'
 import { TestimonialCarousel } from '@/components/molecules/testimonial-carousel'
 import { DownloadCard } from '@/components/molecules/download-card'
+import Image from 'next/image'
+import PlatformTabs from '@/components/molecules/platform-tabs'
 
 const Parallax = dynamic(() => import('@/components/atoms/parallax').then((Parallax) => Parallax), { ssr: false })
 
@@ -299,8 +301,8 @@ export default function HomeTemplate() {
       </Container>
 
       {/* One Platform, Millions of Assets */}
-      <Container id='platform' className='min-h-screen py-5 md:py-10 xl:py-16' data-lenis-scroll-snap-align='start'>
-        <div className='flex flex-col items-center justify-center gap-12'>
+      <Container id='assets' className='min-h-screen py-5 md:py-10 xl:py-16' data-lenis-scroll-snap-align='start'>
+        <div className='flex flex-col items-center justify-center gap-6 md:gap-12'>
           <div className='flex max-w-3xl flex-col items-center gap-y-6'>
             <h2 className='text-4xl'>One Platform, Millions of Assets</h2>
             <p>
@@ -312,6 +314,19 @@ export default function HomeTemplate() {
             {CHAINS.map((crypto) => (
               <ChainCard key={crypto.id} chain={crypto} />
             ))}
+          </div>
+        </div>
+      </Container>
+
+      {/* One wallet. Cross platform */}
+      <Container id='platform' className='h-screen py-5 md:py-10 xl:py-16' data-lenis-scroll-snap-align='start'>
+        <div className='flex h-full flex-col items-center justify-center gap-12'>
+          <h2 className='text-4xl'>One wallet. Cross platform</h2>
+          <div className='relative h-full grow'>
+            <PlatformTabs />
+            <AnimatedContent distance={0} threshold={0.36} className={'absolute inset-0 z-[-1]'}>
+              <div className='background-glow' />
+            </AnimatedContent>
           </div>
         </div>
       </Container>

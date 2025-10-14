@@ -19,6 +19,11 @@ export interface Chain {
   readonly url?: string
 }
 
+export interface Platform {
+  readonly id: string
+  readonly content: string
+}
+
 export interface Testimonial {
   readonly id: string
   readonly name: string

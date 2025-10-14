@@ -1,4 +1,4 @@
-﻿import { Chain, Download, Feature, Testimonial } from '@/types/landing.types'
+﻿import { Chain, Download, Feature, Platform, Testimonial } from '@/types/landing.types'
 import BTC from '@public/assets/chain/BTC.svg'
 import ETH from '@public/assets/chain/ETH.svg'
 import SOL from '@public/assets/chain/SOL.svg'
@@ -54,6 +54,12 @@ export const CHAINS: Chain[] = [
   { id: 'BTC', name: 'Bitcoin', logo: BTC },
   { id: 'ETH', name: 'Ethereum', logo: ETH },
 ] as const
+
+export const PLATFORMS: Platform[] = [
+  { id: 'mobile', content: '/assets/background/mobile-app.webp' },
+  { id: 'extensions', content: '' },
+  { id: 'desktop', content: '' },
+]
 
 export const TESTIMONIALS: Testimonial[] = [
   {
