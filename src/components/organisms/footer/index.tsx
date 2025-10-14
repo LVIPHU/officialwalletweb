@@ -4,7 +4,7 @@ import { Logo } from '@/components/atoms/logo'
 import { NavigationLink } from '@/components/atoms/navigation-link'
 import { Container } from '@/components/atoms/container'
 import GlassCard from '@/components/molecules/glass-card'
-import {NAVIGATION_ITEMS, NavigationItem, SOCIAL_LINKS} from '@/constants/navigation.constants'
+import { NAVIGATION_ITEMS, NavigationItem, SOCIAL_LINKS } from '@/constants/navigation.constants'
 
 const Footer = () => {
   return (
@@ -36,7 +36,7 @@ const Footer = () => {
             . All rights reserved.
           </span>
 
-          <div className='mt-4 flex space-x-4 lg:mt-0 items-center'>
+          <div className='mt-4 flex items-center space-x-4 lg:mt-0'>
             <p className='font-semibold text-gray-500'>Stay connect:</p>
             {SOCIAL_LINKS.map((social) => (
               <NavigationLink
@@ -45,7 +45,7 @@ const Footer = () => {
                 aria-label={social.id}
                 className='flex h-9 w-9 items-center justify-center rounded-xl bg-gray-700 transition-colors duration-300 hover:bg-[#0DCC61]'
               >
-                <social.icon className='size-5 text-white' fill='currentColor'/>
+                <social.icon className='size-5 text-white' fill='currentColor' />
               </NavigationLink>
             ))}
           </div>
