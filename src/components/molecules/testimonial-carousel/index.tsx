@@ -70,8 +70,8 @@ export function TestimonialCarousel() {
           </CarouselItem>
         ))}
       </CarouselContent>
-      <CarouselPrevious />
-      <CarouselNext />
+      <CarouselPrevious variant={'ghost'} className={'[&_svg:not([class*=\'size-\'])]:size-10'}/>
+      <CarouselNext variant={'ghost'} className={'[&_svg:not([class*=\'size-\'])]:size-10'}/>
     </Carousel>
   )
 }

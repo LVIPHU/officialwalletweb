@@ -8,9 +8,8 @@ import { useWindowSize } from '@/hooks/use-window-size'
 import { useScroll } from '@/hooks/use-scroll'
 import { useFrame } from '@/hooks/use-frame'
 import { Button } from '@/components/ui/button'
-import { Separator } from '@/components/ui/separator'
 import { HorizontalCard } from '@/components/atoms/horizontal-slides/horizontal-card'
-import { FEATURES, CHAINS } from '@/constants/landing.constants'
+import {FEATURES, CHAINS, DOWNLOADS} from '@/constants/landing.constants'
 import { isBrowser } from '@/lib/misc'
 import { useStore } from '@/lib/store'
 import { clamp, mapRange } from '@/lib/maths'
@@ -20,7 +19,7 @@ import Lenis from 'lenis'
 import { AuroraText } from '@/components/atoms/aurora-text'
 import { ChainCard } from '@/components/molecules/chain-card'
 import { TestimonialCarousel } from '@/components/molecules/testimonial-carousel'
-import Image from 'next/image'
+import {DownloadCard} from "@/components/molecules/download-card";
 
 const Parallax = dynamic(() => import('@/components/atoms/parallax').then((Parallax) => Parallax), { ssr: false })
 
@@ -320,34 +319,13 @@ export default function HomeTemplate() {
 
       {/* Download Section */}
       <Container id='download' className='min-h-screen py-5 md:py-10 xl:py-16' data-lenis-scroll-snap-align='start'>
-        <div className='mx-auto max-w-7xl text-center'>
-          <h2 className='mb-6 text-4xl font-bold'>Download now</h2>
-          <p className='mb-12 text-xl'>
-            Get started with TB Wallet today and experience the future of cryptocurrency management.
-          </p>
-          <div className='flex flex-col items-center justify-center gap-6 sm:flex-row'>
-            <Button
-              variant='outline'
-              size='lg'
-              className='border-gray-600 bg-gray-800 px-8 py-4 text-lg text-white hover:border-green-500 hover:text-green-400'
-            >
-              <span className='mr-3 text-2xl'>📱</span>
-              <div className='text-left'>
-                <div className='text-sm text-gray-400'>Download on the</div>
-                <div className='text-lg font-bold'>App Store</div>
-              </div>
-            </Button>
-            <Button
-              variant='outline'
-              size='lg'
-              className='border-gray-600 bg-gray-800 px-8 py-4 text-lg text-white hover:border-green-500 hover:text-green-400'
-            >
-              <span className='mr-3 text-2xl'>🤖</span>
-              <div className='text-left'>
-                <div className='text-sm text-gray-400'>Get it on</div>
-                <div className='text-lg font-bold'>Google Play</div>
-              </div>
-            </Button>
+        <div className='relative flex flex-col items-center justify-center gap-12'>
+          <h2 className='text-4xl'>Download now</h2>
+
+          <div className='grid grid-cols-1 gap-6 md:grid-cols-2 md:gap-12'>
+            {DOWNLOADS.map((data) => (
+              <DownloadCard key={data.id} data={data} />
+            ))}
           </div>
         </div>
       </Container>

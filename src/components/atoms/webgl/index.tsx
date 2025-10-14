@@ -17,7 +17,6 @@ import {
   Vector3,
   ShaderMaterial,
   Points,
-  Mesh,
 } from 'three'
 import fragmentShader from './particles/fragment.glsl'
 import vertexShader from './particles/vertex.glsl'

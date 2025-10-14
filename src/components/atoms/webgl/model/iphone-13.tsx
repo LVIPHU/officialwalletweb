@@ -55,7 +55,7 @@ export function Model(props: ModelProps) {
 
   return (
     <group {...props} dispose={null}>
-      <Environment preset='city' />
+      <Environment preset='night' />
       <group scale={0.01}>
         <group scale={100}>
           <mesh

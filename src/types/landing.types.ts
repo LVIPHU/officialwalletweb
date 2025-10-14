@@ -23,3 +23,9 @@ export interface Testimonial {
   readonly content: string
   readonly avatar: string
 }
+
+export interface Download {
+  readonly id: string
+  readonly url: string
+  readonly image: string
+}

@@ -1,4 +1,4 @@
-﻿import { Chain, Feature, Testimonial } from '@/types/landing.types'
+﻿import {Chain, Download, Feature, Testimonial} from '@/types/landing.types'
 import BTC from '@public/assets/chain/BTC.svg'
 import ETH from '@public/assets/chain/ETH.svg'
 import SOL from '@public/assets/chain/SOL.svg'
@@ -83,7 +83,7 @@ export const TESTIMONIALS: Testimonial[] = [
     avatar: 'https://api.dicebear.com/7.x/fun-emoji/svg?seed=Jay',
   },
   {
-    id: '1',
+    id: '5',
     name: 'Sarah Johnson',
     role: 'Crypto Investor',
     content:
@@ -91,7 +91,7 @@ export const TESTIMONIALS: Testimonial[] = [
     avatar: 'https://api.dicebear.com/7.x/fun-emoji/svg?seed=Sarah',
   },
   {
-    id: '2',
+    id: '6',
     name: 'Mike Chen',
     role: 'DeFi Enthusiast',
     content:
@@ -99,7 +99,7 @@ export const TESTIMONIALS: Testimonial[] = [
     avatar: 'https://api.dicebear.com/7.x/fun-emoji/svg?seed=Mike',
   },
   {
-    id: '3',
+    id: '7',
     name: 'Emily Rodriguez',
     role: 'Beginner Trader',
     content:
@@ -107,14 +107,14 @@ export const TESTIMONIALS: Testimonial[] = [
     avatar: 'https://api.dicebear.com/7.x/fun-emoji/svg?seed=Emily',
   },
   {
-    id: '4',
+    id: '8',
     name: 'Jay Jay',
     role: 'Free trader',
     content: 'As a leading self- custody multi- chain platform, we support millions of assets across 100+ blockchains.',
     avatar: 'https://api.dicebear.com/7.x/fun-emoji/svg?seed=Jay',
   },
   {
-    id: '1',
+    id: '9',
     name: 'Sarah Johnson',
     role: 'Crypto Investor',
     content:
@@ -122,7 +122,7 @@ export const TESTIMONIALS: Testimonial[] = [
     avatar: 'https://api.dicebear.com/7.x/fun-emoji/svg?seed=Sarah',
   },
   {
-    id: '2',
+    id: '10',
     name: 'Mike Chen',
     role: 'DeFi Enthusiast',
     content:
@@ -130,7 +130,7 @@ export const TESTIMONIALS: Testimonial[] = [
     avatar: 'https://api.dicebear.com/7.x/fun-emoji/svg?seed=Mike',
   },
   {
-    id: '3',
+    id: '11',
     name: 'Emily Rodriguez',
     role: 'Beginner Trader',
     content:
@@ -138,14 +138,14 @@ export const TESTIMONIALS: Testimonial[] = [
     avatar: 'https://api.dicebear.com/7.x/fun-emoji/svg?seed=Emily',
   },
   {
-    id: '4',
+    id: '12',
     name: 'Jay Jay',
     role: 'Free trader',
     content: 'As a leading self- custody multi- chain platform, we support millions of assets across 100+ blockchains.',
     avatar: 'https://api.dicebear.com/7.x/fun-emoji/svg?seed=Jay',
   },
   {
-    id: '1',
+    id: '13',
     name: 'Sarah Johnson',
     role: 'Crypto Investor',
     content:
@@ -153,7 +153,7 @@ export const TESTIMONIALS: Testimonial[] = [
     avatar: 'https://api.dicebear.com/7.x/fun-emoji/svg?seed=Sarah',
   },
   {
-    id: '2',
+    id: '14',
     name: 'Mike Chen',
     role: 'DeFi Enthusiast',
     content:
@@ -161,7 +161,7 @@ export const TESTIMONIALS: Testimonial[] = [
     avatar: 'https://api.dicebear.com/7.x/fun-emoji/svg?seed=Mike',
   },
   {
-    id: '3',
+    id: '15',
     name: 'Emily Rodriguez',
     role: 'Beginner Trader',
     content:
@@ -169,10 +169,33 @@ export const TESTIMONIALS: Testimonial[] = [
     avatar: 'https://api.dicebear.com/7.x/fun-emoji/svg?seed=Emily',
   },
   {
-    id: '4',
+    id: '16',
     name: 'Jay Jay',
     role: 'Free trader',
     content: 'As a leading self- custody multi- chain platform, we support millions of assets across 100+ blockchains.',
     avatar: 'https://api.dicebear.com/7.x/fun-emoji/svg?seed=Jay',
   },
 ] as const
+
+export const DOWNLOADS: Download[] = [
+  {
+    id: 'app-store',
+    url: '#',
+    image: '/assets/download/app-store.webp',
+  },
+  {
+    id: 'windows',
+    url: '#',
+    image: '/assets/download/windows.webp',
+  },
+  {
+    id: 'google-play',
+    url: '#',
+    image: '/assets/download/google-play.webp',
+  },
+  {
+    id: 'android',
+    url: '#',
+    image: '/assets/download/android.webp',
+  }
+]
