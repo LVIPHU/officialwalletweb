@@ -331,7 +331,6 @@ export default function HomeTemplate() {
               size='lg'
               className='border-gray-600 bg-gray-800 px-8 py-4 text-lg text-white hover:border-green-500 hover:text-green-400'
             >
-              <Image src={'/screen/1.png'} width={500} height={1000} alt={'Screen 1'} />
               <span className='mr-3 text-2xl'>📱</span>
               <div className='text-left'>
                 <div className='text-sm text-gray-400'>Download on the</div>

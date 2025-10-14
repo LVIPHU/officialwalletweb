@@ -116,13 +116,13 @@ const steps = [
   {
     position: [0.2, 0, 0],
     scale: 0.6,
-    rotation: [MathUtils.degToRad(-20), MathUtils.degToRad(136), MathUtils.degToRad(6)],
+    rotation: [MathUtils.degToRad(-20), MathUtils.degToRad(160), MathUtils.degToRad(6)],
     type: 1,
   },
   {
     position: [0.2, -0.1, 0],
     scale: 0.6,
-    rotation: [MathUtils.degToRad(-10), MathUtils.degToRad(338), MathUtils.degToRad(3)],
+    rotation: [MathUtils.degToRad(-10), MathUtils.degToRad(350), MathUtils.degToRad(3)],
     type: 1,
   },
   {
