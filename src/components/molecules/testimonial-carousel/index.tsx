@@ -12,8 +12,14 @@ import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar'
 function chunkArray<T>(array: T[], size: number): T[][] {
   return Array.from({ length: Math.ceil(array.length / size) }, (_, i) => array.slice(i * size, i * size + size))
 }
+
 function getCardGridClass(index: number) {
-  const layouts = ['col-span-5', 'col-span-5 col-end-11', 'col-span-5 col-start-2', 'col-span-5 col-end-12']
+  const layouts = [
+    'md:col-span-5',
+    'md:col-span-5 md:col-end-11',
+    'md:col-span-5 md:col-start-2',
+    'md:col-span-5 md:col-end-12',
+  ]
   return layouts[index % layouts.length]
 }
 
@@ -39,7 +45,7 @@ const TestimonialCard = ({ testimonial, className }: { testimonial: any; classNa
 )
 
 const TestimonialGrid = ({ testimonials }: { testimonials: any[] }) => (
-  <div className='grid h-full gap-4 md:grid-cols-11 md:gap-12'>
+  <div className='grid grid-cols-1 gap-6 md:grid-cols-11 md:gap-12'>
     {testimonials.map((t, i) => (
       <TestimonialCard key={t.id} testimonial={t} className={cn(getCardGridClass(i))} />
     ))}

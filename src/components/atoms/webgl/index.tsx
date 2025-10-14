@@ -190,7 +190,7 @@ const steps = [
 // const thresholds = [0, 1000, 2000, 3000, 4000, 5000]
 
 const material = new MeshPhysicalMaterial({
-  color: new Color('#FF98A2'),
+  color: new Color('#FFFFFF'),
   metalness: 1,
   roughness: 0.4,
   wireframe: true,
@@ -198,12 +198,12 @@ const material = new MeshPhysicalMaterial({
 })
 
 export function Arm() {
-  const { scene: model2 } = useGLTF('/models/arm2.glb')
+  // const { scene: model2 } = useGLTF('/models/arm2.glb')
   const [type, setType] = useState(1)
 
   const [{ color, roughness, metalness, wireframe }, setMaterial] = useControls(
     () => ({
-      color: '#b0b0b0',
+      color: '#FFFFFF',
       roughness: {
         min: 0,
         value: 0.4,
@@ -250,8 +250,8 @@ export function Arm() {
         value: 1,
         max: 1,
       },
-      lightsColor: '#FF98A2',
-      ambientColor: '#0E0E0E',
+      lightsColor: '#FFFFFF',
+      ambientColor: '#FFFFFF',
     }),
     []
   )
@@ -300,13 +300,13 @@ export function Arm() {
   //   }
   // }, [model1, material])
 
-  useEffect(() => {
-    if (model2) {
-      model2.traverse((node) => {
-        if ((node as Mesh).material) (node as Mesh).material = material
-      })
-    }
-  }, [model2, material])
+  // useEffect(() => {
+  //   if (model2) {
+  //     model2.traverse((node) => {
+  //       if ((node as Mesh).material) (node as Mesh).material = material
+  //     })
+  //   }
+  // }, [model2, material])
 
   const parent = useRef<any>(null)
 
@@ -324,11 +324,11 @@ export function Arm() {
       setLights({
         light1Intensity: 0.35,
         light2Intensity: 0.15,
-        lightsColor: '#FF98A2',
-        ambientColor: '#FF98A2',
+        lightsColor: '#FFFFFF',
+        ambientColor: '#FFFFFF',
       })
       setMaterial({
-        color: '#b0b0b0',
+        color: '#FFFFFF',
         roughness: 0.4,
         metalness: 1,
       })
@@ -336,11 +336,11 @@ export function Arm() {
       setLights({
         light1Intensity: 1,
         light2Intensity: 1,
-        lightsColor: '#efefef',
-        ambientColor: '#b0B0B0',
+        lightsColor: '#FFFFFF',
+        ambientColor: '#FFFFFF',
       })
       setMaterial({
-        color: '#efefef',
+        color: '#FFFFFF',
         roughness: 0.4,
         metalness: 0.6,
       })
@@ -445,7 +445,7 @@ export function Arm() {
         >
           {/* <TransformControls mode="rotate"> */}
           {type === 1 && <ModelIphone13 scale={[1, 1, 1]} />}
-          {type === 2 && <primitive object={model2} scale={[1, 1, 1]} />}
+          {/*{type === 2 && <primitive object={model2} scale={[1, 1, 1]} />}*/}
           {/* </TransformControls> */}
         </group>
       </Float>
@@ -490,7 +490,7 @@ export function WebGL({ render = true }) {
       camera={{ near: 0.01, far: 10000, position: [0, 0, 1000] }}
     >
       <Raf render={render} />
-      <Suspense>
+      <Suspense fallback={null}>
         <Content />
       </Suspense>
     </Canvas>

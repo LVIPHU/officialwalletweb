@@ -8,10 +8,10 @@ Source: https://sketchfab.com/3d-models/apple-iphone-13-pro-max-4328dea00e47497d
 Title: Apple iPhone 13 Pro Max
 */
 
-import React, { useEffect, useMemo, useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import * as THREE from 'three'
 import { GLTF } from 'three-stdlib'
-import { useGLTF, useTexture } from '@react-three/drei'
+import { Environment, useGLTF, useTexture } from '@react-three/drei'
 import { ObjectMap } from '@react-three/fiber'
 import { useStore } from '@/lib/store'
 
@@ -30,13 +30,17 @@ export function Model(props: ModelProps) {
   }) as Record<ScreenKey, THREE.Texture>
 
   useEffect(() => {
-    Object.values(textures).forEach((t) => (t.flipY = true))
+    Object.values(textures).forEach((t) => {
+      t.flipY = true
+      t.colorSpace = THREE.SRGBColorSpace
+      t.needsUpdate = true
+    })
   }, [textures])
 
   const [screenMaterial] = useState(
     () =>
       new THREE.MeshBasicMaterial({
-        toneMapped: false,
+        toneMapped: true,
         side: THREE.DoubleSide,
       })
   )
@@ -51,6 +55,7 @@ export function Model(props: ModelProps) {
 
   return (
     <group {...props} dispose={null}>
+      <Environment preset='city' />
       <group scale={0.01}>
         <group scale={100}>
           <mesh
@@ -101,6 +106,12 @@ export function Model(props: ModelProps) {
             geometry={(nodes.Body_Body_0 as THREE.Mesh).geometry}
             material={materials.Body}
           />
+          {/*<mesh*/}
+          {/*    castShadow*/}
+          {/*    receiveShadow*/}
+          {/*    geometry={(nodes.Body_Wallpaper_0 as THREE.Mesh).geometry}*/}
+          {/*    material={materials.Wallpaper}*/}
+          {/*/>*/}
           <mesh
             castShadow
             receiveShadow

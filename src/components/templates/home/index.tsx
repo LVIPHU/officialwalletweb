@@ -20,6 +20,7 @@ import Lenis from 'lenis'
 import { AuroraText } from '@/components/atoms/aurora-text'
 import { ChainCard } from '@/components/molecules/chain-card'
 import { TestimonialCarousel } from '@/components/molecules/testimonial-carousel'
+import Image from 'next/image'
 
 const Parallax = dynamic(() => import('@/components/atoms/parallax').then((Parallax) => Parallax), { ssr: false })
 
@@ -190,7 +191,7 @@ export default function HomeTemplate() {
   }, [lenis?.limit])
 
   useScroll((e) => {
-    console.log('[Home template] use scroll', window.scrollY, e.scroll, e.isScrolling, e.velocity, e.isLocked)
+    // console.log('[Home template] use scroll', window.scrollY, e.scroll, e.isScrolling, e.velocity, e.isLocked)
   })
 
   useFrame(() => {
@@ -199,7 +200,7 @@ export default function HomeTemplate() {
     } else {
       setScreenIphone('2')
     }
-    console.log('[Home template] use frame', window.scrollY, lenis?.scroll, lenis?.isScrolling)
+    // console.log('[Home template] use frame', window.scrollY, lenis?.scroll, lenis?.isScrolling)
   }, 1)
 
   const inUseRef = useRef<HTMLElement | null>(null)
@@ -223,7 +224,7 @@ export default function HomeTemplate() {
       {/* Hero Section */}
       <Container className='flex min-h-screen items-center pb-5 md:pb-10 xl:pb-16'>
         <div className='grid items-center gap-10 md:grid-cols-2'>
-          <div className={'flex flex-col gap-7 md:gap-13'}>
+          <div className='flex flex-col items-center gap-7 md:items-start md:gap-13'>
             <h1 className='font-clash-display text-3xl leading-16 font-extrabold tracking-tight sm:text-4xl md:text-6xl md:leading-20'>
               <AuroraText>True crypto ownership.</AuroraText>
               <br />
@@ -300,7 +301,7 @@ export default function HomeTemplate() {
               From Bitcoin, Ethereum, and Solana, to Cosmos, Optimism, and much more .
             </p>
           </div>
-          <div className='grid w-full grid-cols-1 md:grid-cols-2 md:gap-12 lg:grid-cols-4'>
+          <div className='grid w-full grid-cols-1 gap-6 md:grid-cols-2 md:gap-12 lg:grid-cols-4'>
             {CHAINS.map((crypto) => (
               <ChainCard key={crypto.id} chain={crypto} />
             ))}
@@ -308,8 +309,8 @@ export default function HomeTemplate() {
         </div>
       </Container>
 
-      {/* Community Testimonials */}
-      <Container id='community' className='h-screen py-5 md:py-10 xl:py-16' data-lenis-scroll-snap-align='start'>
+      {/*Community Testimonials*/}
+      <Container id='community' className='min-h-screen py-5 md:py-10 xl:py-16' data-lenis-scroll-snap-align='start'>
         <div className='relative flex h-full w-full flex-col items-center justify-center gap-12'>
           <h2 className='text-4xl'>Community talk about us</h2>
           <div className='background-glow' />
@@ -330,6 +331,7 @@ export default function HomeTemplate() {
               size='lg'
               className='border-gray-600 bg-gray-800 px-8 py-4 text-lg text-white hover:border-green-500 hover:text-green-400'
             >
+              <Image src={'/screen/1.png'} width={500} height={1000} alt={'Screen 1'} />
               <span className='mr-3 text-2xl'>📱</span>
               <div className='text-left'>
                 <div className='text-sm text-gray-400'>Download on the</div>
