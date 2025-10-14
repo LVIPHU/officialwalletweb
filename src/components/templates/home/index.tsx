@@ -194,10 +194,14 @@ export default function HomeTemplate() {
   })
 
   useFrame(() => {
-    if (window.scrollY > 300) {
+    if (window.scrollY <= 400) {
       setScreenIphone('1')
-    } else {
+    } else if (window.scrollY > 400 && window.scrollY <= 1600) {
       setScreenIphone('2')
+    } else if (window.scrollY > 1600 && window.scrollY <= 3400) {
+      setScreenIphone('3')
+    } else {
+      setScreenIphone('4')
     }
     // console.log('[Home template] use frame', window.scrollY, lenis?.scroll, lenis?.isScrolling)
   }, 1)

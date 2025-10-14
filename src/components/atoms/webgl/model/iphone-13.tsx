@@ -16,7 +16,7 @@ import { ObjectMap } from '@react-three/fiber'
 import { useStore } from '@/lib/store'
 
 type ModelProps = React.ComponentProps<'group'>
-type ScreenKey = '1' | '2'
+type ScreenKey = '1' | '2' | '3' | '4'
 
 THREE.Cache.enabled = true
 
@@ -27,6 +27,8 @@ export function Model(props: ModelProps) {
   const textures = useTexture({
     '1': '/screen/1.png',
     '2': '/screen/2.png',
+    '3': '/screen/3.png',
+    '4': '/screen/4.png',
   }) as Record<ScreenKey, THREE.Texture>
 
   useEffect(() => {
