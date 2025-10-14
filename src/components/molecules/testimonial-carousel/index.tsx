@@ -59,7 +59,7 @@ export function TestimonialCarousel() {
   return (
     <Carousel
       plugins={[plugin]}
-      className='flex h-full w-full items-center justify-center'
+      className='flex h-full w-full items-center justify-center px-10'
       onMouseEnter={plugin.stop}
       onMouseLeave={plugin.reset}
     >
@@ -70,8 +70,8 @@ export function TestimonialCarousel() {
           </CarouselItem>
         ))}
       </CarouselContent>
-      <CarouselPrevious variant={'ghost'} className={"[&_svg:not([class*='size-'])]:size-10"} />
-      <CarouselNext variant={'ghost'} className={"[&_svg:not([class*='size-'])]:size-10"} />
+      <CarouselPrevious variant={'ghost'} className={"-left-2 [&_svg:not([class*='size-'])]:size-10"} />
+      <CarouselNext variant={'ghost'} className={"-right-2 [&_svg:not([class*='size-'])]:size-10"} />
     </Carousel>
   )
 }

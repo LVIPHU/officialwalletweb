@@ -192,12 +192,6 @@
   .button-explore {
     @apply relative overflow-hidden border border-solid border-transparent;
     background: linear-gradient(180deg, #000b00 0%, #003300 232.94%);
-    border-image-source: linear-gradient(
-      108.84deg,
-      rgba(255, 255, 255, 0) 23.01%,
-      rgba(255, 255, 255, 0.5) 36.19%,
-      rgba(255, 255, 255, 0) 76.2%
-    );
     box-shadow:
       0 20px 40px -30px rgba(0, 0, 0, 0.8) inset,
       0 -40px 60px -30px rgba(0, 255, 100, 0.4) inset,
@@ -239,12 +233,6 @@
   .card-chain-green {
     @apply relative overflow-hidden border border-solid border-transparent;
     background: linear-gradient(180deg, #000b00 0%, #003300 232.94%);
-    border-image-source: linear-gradient(
-      108.84deg,
-      rgba(255, 255, 255, 0) 23.01%,
-      rgba(255, 255, 255, 0.5) 36.19%,
-      rgba(255, 255, 255, 0) 76.2%
-    );
     box-shadow:
       0 -80px 60px -30px rgba(13, 204, 97, 0.2) inset,
       0 -60px 40px -30px rgba(0, 255, 100, 0.4) inset,
@@ -275,14 +263,6 @@
   .card-chain-blue-purple {
     @apply relative overflow-hidden border border-solid border-transparent;
     background: linear-gradient(180deg, #000b00 0%, #3a008b 232.94%);
-    border-image-source: linear-gradient(
-      156.04deg,
-      #ffffff -3.59%,
-      rgba(255, 255, 255, 0) 32.81%,
-      rgba(255, 255, 255, 0.4) 58.76%,
-      rgba(255, 255, 255, 0) 83.29%,
-      rgba(255, 255, 255, 0.4) 107.73%
-    );
     box-shadow:
       0 -80px 60px -30px rgba(0, 120, 255, 0.2) inset,
       0 -60px 40px -30px rgba(0, 177, 241, 0.35) inset,
@@ -313,15 +293,6 @@
   .card-chain-purple {
     @apply relative overflow-hidden border border-solid border-transparent;
     background: linear-gradient(180deg, #000b00 -41.25%, #1a112f 155.83%);
-    border-image-source: linear-gradient(
-      156.04deg,
-      #ffffff -3.59%,
-      rgba(255, 255, 255, 0) 32.81%,
-      rgba(255, 255, 255, 0.4) 58.76%,
-      rgba(255, 255, 255, 0) 83.29%,
-      rgba(255, 255, 255, 0.4) 107.73%
-    );
-
     box-shadow:
       0 -53px 60px -30px rgba(70, 36, 112, 1) inset,
       0 -25px 30px -8px rgba(112, 60, 143, 1) inset,
@@ -350,15 +321,6 @@
   .card-chain-orange {
     @apply relative overflow-hidden border border-solid border-transparent;
     background: linear-gradient(180deg, #000b00 0%, #351d00 232.94%);
-    border-image-source: linear-gradient(
-      156.04deg,
-      #ffffff -3.59%,
-      rgba(255, 255, 255, 0) 32.81%,
-      rgba(255, 255, 255, 0.4) 58.76%,
-      rgba(255, 255, 255, 0) 83.29%,
-      rgba(255, 255, 255, 0.4) 107.73%
-    );
-
     box-shadow:
       0 -80px 60px -30px rgba(255, 81, 0, 0.25) inset,
       0 -60px 40px -30px rgba(255, 120, 0, 0.45) inset,
@@ -390,15 +352,6 @@
   .card-chain-olive {
     @apply relative overflow-hidden border border-solid border-transparent;
     background: linear-gradient(180deg, #000b00 0%, #3f5749 232.94%);
-    border-image-source: linear-gradient(
-      156.04deg,
-      #ffffff -3.59%,
-      rgba(255, 255, 255, 0) 32.81%,
-      rgba(255, 255, 255, 0.4) 58.76%,
-      rgba(255, 255, 255, 0) 83.29%,
-      rgba(255, 255, 255, 0.4) 107.73%
-    );
-
     box-shadow:
       0 -80px 60px -30px rgba(80, 106, 90, 0.25) inset,
       0 -60px 40px -30px rgba(117, 146, 129, 0.4) inset,

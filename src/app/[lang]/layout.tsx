@@ -34,7 +34,7 @@ export default async function RootLayout({ children, params }: Readonly<PropsWit
       )}
       suppressHydrationWarning
     >
-      <body className={cn('antialiased', 'relative min-h-screen pl-[calc(100vw-100%)]', 'flex flex-col')}>
+      <body className={cn('relative flex min-h-screen flex-col antialiased')}>
         <ProviderRegistry params={params}>
           <DefaultLayout>
             <div className={'background-hero'} />

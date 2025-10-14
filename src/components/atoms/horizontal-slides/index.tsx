@@ -6,6 +6,7 @@ import { useWindowSize } from '@/hooks/use-window-size'
 import { useIsMobile } from '@/hooks/use-mobile'
 import { cn } from '@/lib/styles'
 import { useControls } from 'leva'
+import AnimatedContent from '@/components/atoms/animated-content'
 
 gsap.registerPlugin(ScrollTrigger)
 
@@ -67,8 +68,8 @@ export default function HorizontalSlides({ children }: HorizontalSlidesProps) {
           scrollTrigger: {
             id: `card-fade-in-${idx}`,
             trigger: card,
-            start: 'left 95%',
-            end: 'center 90%',
+            start: 'left 49%',
+            end: 'center-=30% 44%',
             scrub: true,
             containerAnimation: scrollTrack,
             markers: markersCardFadeIn,
@@ -85,8 +86,8 @@ export default function HorizontalSlides({ children }: HorizontalSlidesProps) {
           scrollTrigger: {
             id: `card-fade-out-${idx}`,
             trigger: card,
-            start: 'center+=10% 50%',
-            end: 'center+=30% 50%',
+            start: 'center+=10% 40%',
+            end: 'center+=30% 40%',
             scrub: true,
             containerAnimation: scrollTrack,
             markers: markersCardFadeOut,
@@ -104,7 +105,10 @@ export default function HorizontalSlides({ children }: HorizontalSlidesProps) {
   }, [windowWidth, isMobile, markersHorizontalScroll, markersCardFadeIn, markersCardFadeOut])
 
   return (
-    <div data-slot='trigger' ref={triggerRef} className='relative overflow-hidden'>
+    <div data-slot='trigger' ref={triggerRef} className='relative'>
+      <AnimatedContent distance={10} threshold={0.4} className={'absolute top-0 left-0 z-[-1] h-[200px] w-[200px]'}>
+        <div className='background-glow' />
+      </AnimatedContent>
       <div
         data-slot='target'
         ref={targetRef}

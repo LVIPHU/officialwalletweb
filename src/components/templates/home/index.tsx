@@ -318,7 +318,7 @@ export default function HomeTemplate() {
 
       {/*Community Testimonials*/}
       <Container id='community' className='min-h-screen py-5 md:py-10 xl:py-16' data-lenis-scroll-snap-align='start'>
-        <div className='relative flex h-full w-full flex-col items-center justify-center gap-12'>
+        <div className='relative flex h-full flex-col items-center justify-center gap-12'>
           <h2 className='text-4xl'>Community talk about us</h2>
           <div className='background-glow' />
           <TestimonialCarousel />
