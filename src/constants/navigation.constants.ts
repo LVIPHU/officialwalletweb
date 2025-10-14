@@ -1,3 +1,8 @@
+import X from '@public/assets/icons/x.svg'
+import Discord from '@public/assets/icons/discord.svg'
+import Telegram from '@public/assets/icons/telegram.svg'
+import Youtube from '@public/assets/icons/youtube.svg'
+
 export const NAVIGATION_ITEMS = {
   wallet: [
     { id: 'download', href: '/download' },
@@ -30,4 +35,29 @@ export const NAVIGATION_ITEMS = {
     { id: 'terms-of-service', href: '/terms-of-service' },
     { id: 'privacy-policy', href: '/privacy-policy' },
   ],
-} as const
+}
+export type NavigationCategory = keyof typeof NAVIGATION_ITEMS
+export type NavigationItem = (typeof NAVIGATION_ITEMS)[NavigationCategory][number]
+
+export const SOCIAL_LINKS = [
+  {
+    id: 'x',
+    href: '#',
+    icon: X,
+  },
+  {
+    id: 'telegram',
+    href: '#',
+    icon: Telegram,
+  },
+  {
+    id: 'discord',
+    href: '#',
+    icon: Discord,
+  },
+  {
+    id: 'youTube',
+    href: '#',
+    icon: Youtube,
+  },
+]
