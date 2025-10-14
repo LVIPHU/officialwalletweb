@@ -1,3 +1,5 @@
+import React from 'react'
+
 /**
  * Type definitions for TB Wallet landing page
  */
@@ -5,8 +7,9 @@
 export interface Feature {
   readonly id: string
   readonly title: string
+  readonly subtitle: string
   readonly description: string
-  readonly icon: string
+  readonly icon: React.FC<React.SVGProps<SVGSVGElement>>
 }
 
 export interface Chain {

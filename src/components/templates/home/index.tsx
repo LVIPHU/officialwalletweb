@@ -9,7 +9,7 @@ import { useScroll } from '@/hooks/use-scroll'
 import { useFrame } from '@/hooks/use-frame'
 import { Button } from '@/components/ui/button'
 import { HorizontalCard } from '@/components/atoms/horizontal-slides/horizontal-card'
-import {FEATURES, CHAINS, DOWNLOADS} from '@/constants/landing.constants'
+import { FEATURES, CHAINS, DOWNLOADS } from '@/constants/landing.constants'
 import { isBrowser } from '@/lib/misc'
 import { useStore } from '@/lib/store'
 import { clamp, mapRange } from '@/lib/maths'
@@ -19,7 +19,7 @@ import Lenis from 'lenis'
 import { AuroraText } from '@/components/atoms/aurora-text'
 import { ChainCard } from '@/components/molecules/chain-card'
 import { TestimonialCarousel } from '@/components/molecules/testimonial-carousel'
-import {DownloadCard} from "@/components/molecules/download-card";
+import { DownloadCard } from '@/components/molecules/download-card'
 
 const Parallax = dynamic(() => import('@/components/atoms/parallax').then((Parallax) => Parallax), { ssr: false })
 
@@ -263,7 +263,11 @@ export default function HomeTemplate() {
       {/* Build Section */}
       <Container id='features' className='h-screen py-5 md:py-10 xl:py-16' data-lenis-scroll-snap-align='start'>
         <div className='grid h-full items-center justify-center gap-10 md:grid-cols-2'>
-          <div ref={platformRectRef} className='h-full w-full'></div>
+          <div ref={platformRectRef} className='relative h-full w-full'>
+            <AnimatedContent distance={10} threshold={0.4} className={'absolute inset-0 z-[-1]'}>
+              <div className='background-glow' />
+            </AnimatedContent>
+          </div>
           <AnimatedContent distance={10} threshold={0.4}>
             <div className='flex h-full max-w-md flex-col gap-y-6'>
               <h2 className='text-4xl'>Build for everyone</h2>

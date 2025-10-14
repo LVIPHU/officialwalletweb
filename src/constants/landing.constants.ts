@@ -1,45 +1,50 @@
-﻿import {Chain, Download, Feature, Testimonial} from '@/types/landing.types'
+﻿import { Chain, Download, Feature, Testimonial } from '@/types/landing.types'
 import BTC from '@public/assets/chain/BTC.svg'
 import ETH from '@public/assets/chain/ETH.svg'
 import SOL from '@public/assets/chain/SOL.svg'
 import TBC from '@public/assets/chain/TBC.svg'
 
+import Wallet from '@public/assets/icons/wallet.svg'
+import Message from '@public/assets/icons/message.svg'
+import Contact from '@public/assets/icons/contact.svg'
+import Layers from '@public/assets/icons/layers.svg'
+import User from '@public/assets/icons/user.svg'
+
 export const FEATURES: Feature[] = [
   {
-    id: 'secure-storage',
-    title: 'Secure Storage',
+    id: 'multi-signature',
+    title: 'multi-signature',
+    subtitle: 'multi-signature',
     description: 'Your assets are protected with military-grade encryption and multi-layer security protocols.',
-    icon: '',
+    icon: Wallet,
   },
   {
-    id: 'fast-transactions',
-    title: 'Fast Transactions',
+    id: 'swap',
+    title: 'swap',
+    subtitle: 'swap',
     description: 'Lightning-fast transaction processing with minimal fees and instant confirmations.',
-    icon: '',
+    icon: Message,
   },
   {
-    id: 'multi-currency',
-    title: 'Multi-Currency',
+    id: 'miner',
+    title: 'miner',
+    subtitle: 'miner',
     description: 'Support for hundreds of cryptocurrencies and tokens in one unified platform.',
-    icon: '',
+    icon: Contact,
   },
   {
-    id: 'mobile-app',
-    title: 'Mobile App',
+    id: 'instant-transfer',
+    title: 'instant-transfer',
+    subtitle: 'instant-transfer',
     description: 'Access your wallet anywhere with our intuitive mobile application.',
-    icon: '',
+    icon: Layers,
   },
   {
-    id: 'staking-rewards',
-    title: 'Staking Rewards',
+    id: 'nfts-wallet',
+    title: 'nfts-wallet',
+    subtitle: 'nfts-wallet',
     description: 'Earn passive income through our integrated staking and DeFi features.',
-    icon: '',
-  },
-  {
-    id: 'support',
-    title: '24/7 Support',
-    description: 'Round-the-clock customer support to help you with any questions or issues.',
-    icon: '',
+    icon: User,
   },
 ] as const
 
@@ -197,5 +202,5 @@ export const DOWNLOADS: Download[] = [
     id: 'android',
     url: '#',
     image: '/assets/download/android.webp',
-  }
+  },
 ]

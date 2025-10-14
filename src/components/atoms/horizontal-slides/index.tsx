@@ -54,7 +54,7 @@ export default function HorizontalSlides({ children }: HorizontalSlidesProps) {
           id: 'horizontal-scroll',
           trigger: triggerRef.current,
           start: 'top top',
-          end: `+=${totalScroll}`,
+          end: `+=${totalScroll + 100}`,
           scrub: 1,
           pin: true,
           markers: markersHorizontalScroll,
@@ -93,8 +93,9 @@ export default function HorizontalSlides({ children }: HorizontalSlidesProps) {
           },
         })
 
-        tl.to(card.querySelector('[data-title]'), { y: 60, opacity: 0, duration: 0.6 })
-          .to(card.querySelector('[data-icon]'), { scale: 0.8, opacity: 0, duration: 0.6 }, '<0.1')
+        tl.to(card.querySelector('[data-title]'), { y: 30, opacity: 0, duration: 0.6 }, '<0.1')
+          .to(card.querySelector('[data-icon]'), { y: 30, opacity: 0, duration: 0.6 }, '<0.1')
+          .to(card.querySelector('[data-subtitle]'), { y: 30, opacity: 0, duration: 0.6 }, '<0.1')
           .to(card.querySelector('[data-desc]'), { y: 30, opacity: 0, duration: 0.6 }, '<0.1')
       })
     }, targetRef)
@@ -103,8 +104,9 @@ export default function HorizontalSlides({ children }: HorizontalSlidesProps) {
   }, [windowWidth, isMobile, markersHorizontalScroll, markersCardFadeIn, markersCardFadeOut])
 
   return (
-    <div ref={triggerRef} className='relative overflow-hidden'>
+    <div data-slot='trigger' ref={triggerRef} className='relative overflow-hidden'>
       <div
+        data-slot='target'
         ref={targetRef}
         className={cn(
           'flex w-full items-center justify-start gap-8 py-8',
