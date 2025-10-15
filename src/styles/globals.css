@@ -160,10 +160,38 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 100vw; /* hoặc 100% nếu muốn fit section */
-    aspect-ratio: 720 / 446; /* tự động tính chiều cao */
-    background: url('/assets/background/glow.webp') center center / contain no-repeat;
+    width: 100vw;
+    aspect-ratio: 720 / 446;
     z-index: -1;
+  }
+
+  .background-glow {
+    @apply pointer-events-none absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80vw;
+    aspect-ratio: 720 / 446;
+    background-image: url('/assets/background/glow-green.webp');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    z-index: -1;
+  }
+  .background-glow[data-color='green'] {
+    background-image: url('/assets/background/glow-green.webp');
+  }
+  .background-glow[data-color='blue'] {
+    background-image: url('/assets/background/glow-blue.webp');
+  }
+  .background-glow[data-color='purple'] {
+    background-image: url('/assets/background/glow-purple.webp');
+  }
+  .background-glow[data-color='orange'] {
+    background-image: url('/assets/background/glow-orange.webp');
+  }
+  .background-glow[data-color='olive'] {
+    background-image: url('/assets/background/glow-olive.webp');
   }
 
   /* Aurora */

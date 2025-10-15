@@ -8,7 +8,7 @@ import { useWindowSize } from '@/hooks/use-window-size'
 import { useScroll } from '@/hooks/use-scroll'
 import { useFrame } from '@/hooks/use-frame'
 import { Button } from '@/components/ui/button'
-import { HorizontalCard } from '@/components/atoms/horizontal-slides/horizontal-card'
+import { FeatureCard } from '@/components/molecules/features-slides-horizontal/feature-card'
 import { FEATURES, CHAINS, DOWNLOADS } from '@/constants/landing.constants'
 import { isBrowser } from '@/lib/misc'
 import { useStore } from '@/lib/store'
@@ -20,15 +20,17 @@ import { AuroraText } from '@/components/atoms/aurora-text'
 import { ChainCard } from '@/components/molecules/chain-card'
 import { TestimonialCarousel } from '@/components/molecules/testimonial-carousel'
 import { DownloadCard } from '@/components/molecules/download-card'
-import Image from 'next/image'
 import PlatformTabs from '@/components/molecules/platform-tabs'
 
-const Parallax = dynamic(() => import('@/components/atoms/parallax').then((Parallax) => Parallax), { ssr: false })
+// const Parallax = dynamic(() => import('@/components/atoms/parallax').then((Parallax) => Parallax), { ssr: false })
 
 const WebGL = dynamic(() => import('@/components/atoms/webgl').then(({ WebGL }) => WebGL), { ssr: false })
 
-const HorizontalSlides = dynamic(
-  () => import('@/components/atoms/horizontal-slides').then((HorizontalSlides) => HorizontalSlides),
+const FeaturesSlidesHorizontal = dynamic(
+  () =>
+    import('@/components/molecules/features-slides-horizontal').then(
+      (FeaturesSlidesHorizontal) => FeaturesSlidesHorizontal
+    ),
   { ssr: false }
 )
 
@@ -291,11 +293,11 @@ export default function HomeTemplate() {
       <Container id='features' className='min-h-screen py-5 md:py-10 xl:py-16' data-lenis-scroll-snap-align='start'>
         <div ref={featuresRectRef} className='flex'>
           <div className='grow'>
-            <HorizontalSlides>
+            <FeaturesSlidesHorizontal>
               {FEATURES.map((feature) => (
-                <HorizontalCard key={feature.id} feature={feature} />
+                <FeatureCard key={feature.id} feature={feature} />
               ))}
-            </HorizontalSlides>
+            </FeaturesSlidesHorizontal>
           </div>
         </div>
       </Container>
