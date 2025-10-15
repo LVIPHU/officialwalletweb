@@ -86,8 +86,8 @@ export default function HorizontalSlides({ children }: HorizontalSlidesProps) {
           scrollTrigger: {
             id: `card-fade-out-${idx}`,
             trigger: card,
-            start: 'center+=10% 40%',
-            end: 'center+=30% 40%',
+            start: 'center+=10% 45%',
+            end: 'center+=30% 45%',
             scrub: true,
             containerAnimation: scrollTrack,
             markers: markersCardFadeOut,
