@@ -105,11 +105,11 @@ export default function HorizontalSlides({ children }: HorizontalSlidesProps) {
   }, [windowWidth, isMobile, markersHorizontalScroll, markersCardFadeIn, markersCardFadeOut])
 
   return (
-    <div data-slot='trigger' ref={triggerRef} className='relative'>
+    <div data-slot='trigger' ref={triggerRef} className='relative z-[-1]'>
       <AnimatedContent
-        distance={10}
-        threshold={0.4}
-        className={'absolute inset-y-2 left-0 z-[-1] h-screen w-[400px] translate-x-1/4'}
+        distance={0}
+        threshold={0.36}
+        className={'absolute inset-y-2 left-3 z-[-1] h-screen w-[200px] translate-x-11/12'}
       >
         <div className='background-glow' />
       </AnimatedContent>
@@ -117,7 +117,7 @@ export default function HorizontalSlides({ children }: HorizontalSlidesProps) {
         data-slot='target'
         ref={targetRef}
         className={cn(
-          'flex w-full items-center justify-start gap-8 py-8',
+          'relative flex w-full items-center justify-start gap-8 py-8',
           'md:h-screen md:flex-row md:flex-nowrap md:px-16',
           'h-auto flex-col px-6'
         )}
