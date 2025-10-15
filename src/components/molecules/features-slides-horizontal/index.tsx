@@ -50,6 +50,7 @@ export default function FeaturesSlidesHorizontal({ children }: HorizontalSlidesP
       gsap.set(cards[0], { opacity: 1 })
 
       if (isMobile) {
+        console.log('mobile')
         gsap.set(container, { clearProps: 'all' })
         gsap.set(cards, { clearProps: 'all' })
         return
@@ -116,7 +117,7 @@ export default function FeaturesSlidesHorizontal({ children }: HorizontalSlidesP
   }, [windowWidth, isMobile, markersHorizontalScroll, markersCardFadeIn, markersCardFadeOut])
 
   return (
-    <div data-slot='trigger' ref={triggerRef} className='relative z-[-1]'>
+    <div data-slot='trigger' ref={triggerRef} className='relative md:z-[-1]'>
       <AnimatedContent
         distance={0}
         threshold={0.36}

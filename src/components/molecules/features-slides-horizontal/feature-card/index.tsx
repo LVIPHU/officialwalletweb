@@ -19,7 +19,7 @@ export function FeatureCard({ feature, className }: FeatureCardProps) {
   return (
     <div
       className={cn(
-        'grid h-screen w-full grid-cols-1 opacity-0 md:w-xl md:grid-cols-12 first:md:ml-60 last:md:mr-60 lg:w-2xl xl:w-3xl 2xl:w-4xl',
+        'grid h-screen w-full grid-cols-1 md:w-xl md:grid-cols-12 md:opacity-0 first:md:ml-60 last:md:mr-60 lg:w-2xl xl:w-3xl 2xl:w-4xl',
         className
       )}
     >

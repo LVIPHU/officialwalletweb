@@ -15,9 +15,11 @@ export default function PlatformTabs() {
       </TabsList>
 
       {PLATFORMS.map(({ id, content }) => (
-        <TabsContent key={id} value={id} className='mt-11'>
+        <TabsContent key={id} value={id} className='mt-8 md:mt-11'>
           {content ? (
-            <Image src={content} alt={id} width={940} height={548} priority className='rounded-xl object-contain' />
+            <div className='flex h-[548px] items-center justify-center'>
+              <Image src={content} alt={id} width={940} height={548} priority className='rounded-xl object-contain' />
+            </div>
           ) : (
             <ComingSoon />
           )}
@@ -33,7 +35,7 @@ function PlatformTabTrigger({ value, label }: { value: string; label: string }) 
     <TabsTrigger
       value={value}
       className={cn(
-        'rounded-full border border-white! px-6 py-2 text-white! transition-all duration-300',
+        'rounded-full border border-white! px-6 py-2 text-center text-white! transition-all duration-300',
         'data-[state=active]:border-[#0DCC61]! data-[state=active]:bg-[#0DCC61]! data-[state=active]:text-black!',
         'hover:border-[#0DCC61]/70! hover:text-[#0DCC61]!'
       )}

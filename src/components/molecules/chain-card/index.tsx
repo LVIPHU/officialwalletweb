@@ -12,7 +12,7 @@ const chainCardVariants = cva('rounded-[52px] flex flex-col gap-5 justify-center
       SOL: 'card-chain-blue-purple',
     },
     size: {
-      default: 'h-[380px] w-full',
+      default: 'h-[200px] md:h-[380px] w-full',
     },
   },
   defaultVariants: {
@@ -33,14 +33,14 @@ export function ChainCard({ size = 'default', chain, className, iconClassName }:
     if (!chain?.logo) {
       return <span className='hidden'>Missing brand icon for {chain.name}</span>
     }
-    return <chain.logo className={cn('size-23', iconClassName)} fill='currentColor' />
+    return <chain.logo className={cn('size-12 md:size-19', iconClassName)} fill='currentColor' />
   }
 
   return (
     <NavigationLink href={chain?.url || '' + '?ref=TBChat'}>
       <div data-slot='chain-card' className={cn(chainCardVariants({ chain: chain.id, size }), className)}>
         <Logo />
-        <p className='text-center text-5xl font-black'>{chain.name}</p>
+        <p className='text-center text-2xl font-black md:text-5xl'>{chain.name}</p>
       </div>
     </NavigationLink>
   )

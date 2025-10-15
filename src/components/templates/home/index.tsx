@@ -21,6 +21,7 @@ import { ChainCard } from '@/components/molecules/chain-card'
 import { TestimonialCarousel } from '@/components/molecules/testimonial-carousel'
 import { DownloadCard } from '@/components/molecules/download-card'
 import PlatformTabs from '@/components/molecules/platform-tabs'
+import Image from 'next/image'
 
 // const Parallax = dynamic(() => import('@/components/atoms/parallax').then((Parallax) => Parallax), { ssr: false })
 
@@ -223,36 +224,42 @@ export default function HomeTemplate() {
   }, [intersection])
 
   return (
-    <div className='relative min-h-screen'>
+    <div className='relative min-h-screen overflow-x-hidden'>
       <div className={'canvas'}>
         <WebGL />
       </div>
 
       {/* Hero Section */}
-      <Container className='flex min-h-screen items-center pb-5 md:pb-10 xl:pb-16'>
-        <div className='grid items-center gap-10 md:grid-cols-2'>
-          <div className='flex flex-col items-center gap-7 md:items-start md:gap-13'>
-            <h1 className='font-clash-display text-3xl leading-16 font-extrabold tracking-tight sm:text-4xl md:text-6xl md:leading-20'>
+      <Container className='flex min-h-dvh items-center pb-5 md:pb-10 xl:pb-16'>
+        <div className='grid items-center md:grid-cols-2'>
+          <div className='flex flex-col items-center gap-8 md:items-start md:gap-13'>
+            <h1 className='font-clash-display text-center text-3xl font-extrabold tracking-tight sm:text-4xl md:text-start md:text-6xl md:leading-20'>
               <AuroraText>True crypto ownership.</AuroraText>
               <br />
               <AuroraText>Powerful Web3 experiences</AuroraText>
             </h1>
-            <p className='max-w-md'>
+            <p className='max-w-md text-center md:text-start'>
               Unlock the power of your cryptocurrency assets and explore the world of Web3 with Trust Wallet.
             </p>
+            <div className='min-h-svw md:hidden'>
+              <Image src={'/assets/background/network.webp'} alt={'network'} width={612} height={612} />
+            </div>
             <Button variant={'explore'} size={'2xl'} className={'w-fit'}>
               <span>Explore now</span>
             </Button>
+          </div>
+          <div className='hidden w-full md:block'>
+            <Image src={'/assets/background/network.webp'} alt={'network'} width={612} height={612} />
           </div>
         </div>
       </Container>
 
       {/* About Section */}
-      <Container id='about' className='h-screen py-5 md:py-10 xl:py-16' data-lenis-scroll-snap-align='start'>
-        <div className='flex h-full flex-col items-center gap-6'>
+      <Container id='about' className='h-dvh py-5 md:py-10 xl:py-16' data-lenis-scroll-snap-align='start'>
+        <div className='flex h-full flex-col items-center gap-8 md:gap-6'>
           <AnimatedContent distance={50} threshold={0.7}>
-            <div className='flex max-w-2xl flex-col gap-y-6 text-center'>
-              <h2 className='text-5xl font-semibold font-clash-display'>About</h2>
+            <div className='flex max-w-2xl flex-col gap-8 text-center md:gap-6'>
+              <h2 className='font-clash-display text-5xl font-semibold'>About</h2>
               <p>
                 As a leading self-custody multi-chain platform, we support millions of assets across 100+ blockchains.
                 We provide secure, user-friendly access to the decentralized web while maintaining complete control over
@@ -260,25 +267,22 @@ export default function HomeTemplate() {
               </p>
             </div>
           </AnimatedContent>
-          <div ref={aboutRectRef} className='relative mt-6 min-h-[500px] min-w-screen grow sm:mt-12 md:mt-24'>
+          <div ref={aboutRectRef} className='relative mt-6 h-full w-full grow sm:mt-12 md:mt-24'>
             <AnimatedContent distance={0} threshold={0.36} className={'absolute inset-0 z-[-1]'}>
-              <div className='background-glow' />
+              <div className='relative left-[4.5%] h-full w-full scale-200 md:scale-100'>
+                <div className='background-glow' />
+              </div>
             </AnimatedContent>
           </div>
         </div>
       </Container>
 
       {/* Build Section */}
-      <Container id='features' className='h-screen py-5 md:py-10 xl:py-16' data-lenis-scroll-snap-align='start'>
-        <div className='grid h-full items-center justify-center gap-10 md:grid-cols-2'>
-          <div ref={platformRectRef} className='relative h-full w-full'>
-            <AnimatedContent distance={10} threshold={0.4} className={'absolute inset-0 z-[-1]'}>
-              <div className='background-glow' />
-            </AnimatedContent>
-          </div>
-          <AnimatedContent distance={10} threshold={0.4}>
-            <div className='flex h-full max-w-md flex-col gap-y-6'>
-              <h2 className='text-4xl font-semibold font-clash-display'>Build for everyone</h2>
+      <Container id='features' className='h-dvh py-5 md:py-10 xl:py-16' data-lenis-scroll-snap-align='start'>
+        <div className='grid h-full items-center justify-center gap-8 md:grid-cols-2'>
+          <AnimatedContent distance={10} threshold={0.4} className='md:order-last'>
+            <div className='flex h-full max-w-md flex-col gap-8 text-center md:gap-6 md:text-start'>
+              <h2 className='font-clash-display text-4xl font-semibold'>Build for everyone</h2>
               <p>
                 Our platform is designed with accessibility and usability at its core. Whether you&apos;re a crypto
                 beginner or an experienced DeFi user, TB Wallet provides the tools and features you need to navigate the
@@ -286,11 +290,18 @@ export default function HomeTemplate() {
               </p>
             </div>
           </AnimatedContent>
+          <div ref={platformRectRef} className='relative h-full w-full'>
+            <AnimatedContent distance={10} threshold={0.4} className={'absolute inset-0 z-[-1]'}>
+              <div className='relative left-[4.5%] h-full w-full scale-200 md:scale-100'>
+                <div className='background-glow' />
+              </div>
+            </AnimatedContent>
+          </div>
         </div>
       </Container>
 
       {/* Features Section */}
-      <Container id='features' className='min-h-screen py-5 md:py-10 xl:py-16' data-lenis-scroll-snap-align='start'>
+      <Container id='features' className='min-h-dvh py-5 md:py-10 xl:py-16' data-lenis-scroll-snap-align='start'>
         <div ref={featuresRectRef} className='flex'>
           <div className='grow'>
             <FeaturesSlidesHorizontal>
@@ -303,16 +314,16 @@ export default function HomeTemplate() {
       </Container>
 
       {/* One Platform, Millions of Assets */}
-      <Container id='assets' className='min-h-screen py-5 md:py-10 xl:py-16' data-lenis-scroll-snap-align='start'>
-        <div className='flex flex-col items-center justify-center gap-6 md:gap-12'>
-          <div className='flex max-w-3xl flex-col items-center gap-y-6'>
-            <h2 className='text-4xl font-semibold font-clash-display'>One Platform, Millions of Assets</h2>
+      <Container id='assets' className='min-h-dvh py-5 md:py-10 xl:py-16' data-lenis-scroll-snap-align='start'>
+        <div className='flex flex-col items-center justify-center gap-8 md:gap-12'>
+          <div className='flex max-w-3xl flex-col items-center gap-8 text-center md:gap-6 md:text-start'>
+            <h2 className='font-clash-display text-4xl font-semibold'>One Platform, Millions of Assets</h2>
             <p>
               As a leading self- custody multi- chain platform, we support millions of assets across 100+ blockchains.
               From Bitcoin, Ethereum, and Solana, to Cosmos, Optimism, and much more .
             </p>
           </div>
-          <div className='grid w-full grid-cols-1 gap-6 md:grid-cols-2 md:gap-12 lg:grid-cols-4'>
+          <div className='grid w-full grid-cols-2 gap-4 md:gap-10 lg:grid-cols-4'>
             {CHAINS.map((crypto) => (
               <ChainCard key={crypto.id} chain={crypto} />
             ))}
@@ -321,9 +332,9 @@ export default function HomeTemplate() {
       </Container>
 
       {/* One wallet. Cross-platform */}
-      <Container id='platform' className='h-screen py-5 md:py-10 xl:py-16' data-lenis-scroll-snap-align='start'>
-        <div className='flex h-full flex-col items-center justify-center gap-12'>
-          <h2 className='text-4xl font-semibold font-clash-display'>One wallet. Cross platform</h2>
+      <Container id='platform' className='h-dvh py-5 md:py-10 xl:py-16' data-lenis-scroll-snap-align='start'>
+        <div className='flex h-full flex-col items-center justify-center gap-8 text-center md:gap-12 md:text-start'>
+          <h2 className='font-clash-display text-4xl font-semibold'>One wallet. Cross platform</h2>
           <div className='relative h-full grow'>
             <PlatformTabs />
             <AnimatedContent distance={0} threshold={0.36} className={'absolute inset-0 z-[-1]'}>
@@ -334,20 +345,19 @@ export default function HomeTemplate() {
       </Container>
 
       {/*Community Testimonials*/}
-      <Container id='community' className='min-h-screen py-5 md:py-10 xl:py-16' data-lenis-scroll-snap-align='start'>
-        <div className='relative flex h-full flex-col items-center justify-center gap-12'>
-          <h2 className='text-4xl font-semibold font-clash-display'>Community talk about us</h2>
+      <Container id='community' className='min-h-dvh py-5 md:py-10 xl:py-16' data-lenis-scroll-snap-align='start'>
+        <div className='relative flex h-full flex-col items-center justify-center gap-8 text-center md:gap-12 md:text-start'>
+          <h2 className='font-clash-display text-4xl font-semibold'>Community talk about us</h2>
           <div className='background-glow' />
           <TestimonialCarousel />
         </div>
       </Container>
 
       {/* Download Section */}
-      <Container id='download' className='min-h-screen py-5 md:py-10 xl:py-16' data-lenis-scroll-snap-align='start'>
-        <div className='relative flex flex-col items-center justify-center gap-12'>
-          <h2 className='text-4xl font-semibold font-clash-display'>Download now</h2>
-
-          <div className='grid grid-cols-1 gap-6 md:grid-cols-2 md:gap-12'>
+      <Container id='download' className='min-h-dvh py-5 md:py-10 xl:py-16' data-lenis-scroll-snap-align='start'>
+        <div className='relative flex w-full flex-col items-center justify-center gap-8 text-center md:gap-12 md:text-start'>
+          <h2 className='font-clash-display text-4xl font-semibold'>Download now</h2>
+          <div className='grid w-full max-w-[850px] grid-cols-2 gap-3 md:gap-6 lg:gap-12'>
             {DOWNLOADS.map((data) => (
               <DownloadCard key={data.id} data={data} />
             ))}

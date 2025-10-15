@@ -160,20 +160,11 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 100vw;
-    aspect-ratio: 720 / 446;
-    z-index: -1;
-  }
-
-  .background-glow {
-    @apply pointer-events-none absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 80vw;
-    aspect-ratio: 720 / 446;
+    width: 100%;
+    max-width: 100vw;
+    aspect-ratio: 3762 / 2788;
     background-image: url('/assets/background/glow-green.webp');
-    background-position: center;
+    background-position: center center;
     background-repeat: no-repeat;
     background-size: contain;
     z-index: -1;

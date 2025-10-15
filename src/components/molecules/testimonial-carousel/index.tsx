@@ -1,13 +1,13 @@
 'use client'
 
-import * as React from 'react'
-import Autoplay from 'embla-carousel-autoplay'
-
+import { useMemo } from 'react'
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from '@/components/ui/carousel'
 import { cn } from '@/lib/styles'
 import GlassCard from '@/components/molecules/glass-card'
 import { TESTIMONIALS } from '@/constants/landing.constants'
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar'
+import { useIsMobile } from '@/hooks/use-mobile'
+import Autoplay from 'embla-carousel-autoplay'
 
 function chunkArray<T>(array: T[], size: number): T[][] {
   return Array.from({ length: Math.ceil(array.length / size) }, (_, i) => array.slice(i * size, i * size + size))
@@ -15,10 +15,10 @@ function chunkArray<T>(array: T[], size: number): T[][] {
 
 function getCardGridClass(index: number) {
   const layouts = [
-    'md:col-span-5',
-    'md:col-span-5 md:col-end-11',
-    'md:col-span-5 md:col-start-2',
-    'md:col-span-5 md:col-end-12',
+    'col-span-1 md:col-span-5',
+    'col-span-1 md:col-span-5 md:col-end-11',
+    'col-span-1 md:col-span-5 md:col-start-2',
+    'col-span-1 md:col-span-5 md:col-end-12',
   ]
   return layouts[index % layouts.length]
 }
@@ -53,8 +53,10 @@ const TestimonialGrid = ({ testimonials }: { testimonials: any[] }) => (
 )
 
 export function TestimonialCarousel() {
-  const plugin = React.useMemo(() => Autoplay({ delay: 3000, stopOnInteraction: true }), [])
-  const testimonialGroups = React.useMemo(() => chunkArray(TESTIMONIALS, 4), [])
+  const isMobile = useIsMobile()
+  const size = useMemo(() => (isMobile ? 2 : 4), [isMobile])
+  const plugin = useMemo(() => Autoplay({ delay: 3000, stopOnInteraction: true }), [])
+  const testimonialGroups = useMemo(() => chunkArray(TESTIMONIALS, size), [size])
 
   return (
     <Carousel

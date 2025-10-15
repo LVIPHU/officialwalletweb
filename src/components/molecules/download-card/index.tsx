@@ -9,10 +9,10 @@ interface DownloadCardProps {
 
 export function DownloadCard({ data }: DownloadCardProps) {
   return (
-    <NavigationLink href={data.url}>
+    <NavigationLink href={data.url} className='w-full'>
       <div
         className={cn(
-          'relative flex h-[210px] w-[400px] items-center justify-center overflow-hidden rounded-3xl',
+          'relative flex min-h-[210px] w-full max-w-[400px] items-center justify-center overflow-hidden rounded-3xl',
           'border border-solid border-[rgba(255,_255,_255,_0.5)] hover:border-[#0DCC61]',
           'bg-[linear-gradient(294.04deg,_#003100_-39.23%,_#002500_-2.81%,_#000B00_82.39%,_#003E00_144.17%)] transition-all duration-300',
           // before element chỉ xuất hiện khi hover
