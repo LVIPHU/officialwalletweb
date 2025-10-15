@@ -119,7 +119,6 @@ export default function FeaturesSlidesHorizontal({ children }: HorizontalSlidesP
   return (
     <>
       <Head>
-        <link rel='preload' as='image' href='/assets/background/glow-green.webp' />
         <link rel='preload' as='image' href='/assets/background/glow-blue.webp' />
         <link rel='preload' as='image' href='/assets/background/glow-purple.webp' />
         <link rel='preload' as='image' href='/assets/background/glow-orange.webp' />
