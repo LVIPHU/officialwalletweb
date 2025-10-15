@@ -106,7 +106,11 @@ export default function HorizontalSlides({ children }: HorizontalSlidesProps) {
 
   return (
     <div data-slot='trigger' ref={triggerRef} className='relative'>
-      <AnimatedContent distance={10} threshold={0.4} className={'absolute top-0 left-0 z-[-1] h-[200px] w-[200px]'}>
+      <AnimatedContent
+        distance={10}
+        threshold={0.4}
+        className={'absolute inset-y-2 left-0 z-[-1] h-screen w-[400px] translate-x-1/4'}
+      >
         <div className='background-glow' />
       </AnimatedContent>
       <div

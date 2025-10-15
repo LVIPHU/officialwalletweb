@@ -37,7 +37,7 @@ export function ChainCard({ size = 'default', chain, className, iconClassName }:
   }
 
   return (
-    <NavigationLink href={`${chain?.url}?ref=btchat`}>
+    <NavigationLink href={`${chain?.url}?ref=TBChat`}>
       <div data-slot='chain-card' className={cn(chainCardVariants({ chain: chain.id, size }), className)}>
         <Logo />
         <p className='text-center text-5xl font-black'>{chain.name}</p>

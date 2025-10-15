@@ -17,14 +17,7 @@ export default function PlatformTabs() {
       {PLATFORMS.map(({ id, content }) => (
         <TabsContent key={id} value={id} className='mt-11'>
           {content ? (
-            <Image
-              src={content}
-              alt={id}
-              width={940}
-              height={548}
-              priority
-              className='rounded-xl object-contain shadow-lg'
-            />
+            <Image src={content} alt={id} width={940} height={548} priority className='rounded-xl object-contain' />
           ) : (
             <ComingSoon />
           )}
