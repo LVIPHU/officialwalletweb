@@ -118,12 +118,6 @@ export default function FeaturesSlidesHorizontal({ children }: HorizontalSlidesP
 
   return (
     <>
-      <Head>
-        <link rel='preload' as='image' href='/assets/background/glow-blue.webp' />
-        <link rel='preload' as='image' href='/assets/background/glow-purple.webp' />
-        <link rel='preload' as='image' href='/assets/background/glow-orange.webp' />
-        <link rel='preload' as='image' href='/assets/background/glow-olive.webp' />
-      </Head>
       <div data-slot='trigger' ref={triggerRef} className='relative z-[-1]'>
         <AnimatedContent
           distance={0}

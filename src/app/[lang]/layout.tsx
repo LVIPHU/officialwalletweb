@@ -34,6 +34,14 @@ export default async function RootLayout({ children, params }: Readonly<PropsWit
       )}
       suppressHydrationWarning
     >
+      <head>
+        <link rel="preload" as="image" href="/assets/background/glow-green.webp" />
+        <link rel="preload" as="image" href="/assets/background/glow-blue.webp" />
+        <link rel="preload" as="image" href="/assets/background/glow-purple.webp" />
+        <link rel="preload" as="image" href="/assets/background/glow-orange.webp" />
+        <link rel="preload" as="image" href="/assets/background/glow-olive.webp" />
+        <title/>
+      </head>
       <body className={cn('relative flex min-h-screen flex-col antialiased')}>
         <ProviderRegistry params={params}>
           <DefaultLayout>
