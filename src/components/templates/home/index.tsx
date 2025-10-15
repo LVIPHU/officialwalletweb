@@ -252,7 +252,7 @@ export default function HomeTemplate() {
         <div className='flex h-full flex-col items-center gap-6'>
           <AnimatedContent distance={50} threshold={0.7}>
             <div className='flex max-w-2xl flex-col gap-y-6 text-center'>
-              <h2 className='text-4xl'>About</h2>
+              <h2 className='text-5xl font-semibold font-clash-display'>About</h2>
               <p>
                 As a leading self-custody multi-chain platform, we support millions of assets across 100+ blockchains.
                 We provide secure, user-friendly access to the decentralized web while maintaining complete control over
@@ -278,7 +278,7 @@ export default function HomeTemplate() {
           </div>
           <AnimatedContent distance={10} threshold={0.4}>
             <div className='flex h-full max-w-md flex-col gap-y-6'>
-              <h2 className='text-4xl'>Build for everyone</h2>
+              <h2 className='text-4xl font-semibold font-clash-display'>Build for everyone</h2>
               <p>
                 Our platform is designed with accessibility and usability at its core. Whether you&apos;re a crypto
                 beginner or an experienced DeFi user, TB Wallet provides the tools and features you need to navigate the
@@ -306,7 +306,7 @@ export default function HomeTemplate() {
       <Container id='assets' className='min-h-screen py-5 md:py-10 xl:py-16' data-lenis-scroll-snap-align='start'>
         <div className='flex flex-col items-center justify-center gap-6 md:gap-12'>
           <div className='flex max-w-3xl flex-col items-center gap-y-6'>
-            <h2 className='text-4xl'>One Platform, Millions of Assets</h2>
+            <h2 className='text-4xl font-semibold font-clash-display'>One Platform, Millions of Assets</h2>
             <p>
               As a leading self- custody multi- chain platform, we support millions of assets across 100+ blockchains.
               From Bitcoin, Ethereum, and Solana, to Cosmos, Optimism, and much more .
@@ -320,10 +320,10 @@ export default function HomeTemplate() {
         </div>
       </Container>
 
-      {/* One wallet. Cross platform */}
+      {/* One wallet. Cross-platform */}
       <Container id='platform' className='h-screen py-5 md:py-10 xl:py-16' data-lenis-scroll-snap-align='start'>
         <div className='flex h-full flex-col items-center justify-center gap-12'>
-          <h2 className='text-4xl'>One wallet. Cross platform</h2>
+          <h2 className='text-4xl font-semibold font-clash-display'>One wallet. Cross platform</h2>
           <div className='relative h-full grow'>
             <PlatformTabs />
             <AnimatedContent distance={0} threshold={0.36} className={'absolute inset-0 z-[-1]'}>
@@ -336,7 +336,7 @@ export default function HomeTemplate() {
       {/*Community Testimonials*/}
       <Container id='community' className='min-h-screen py-5 md:py-10 xl:py-16' data-lenis-scroll-snap-align='start'>
         <div className='relative flex h-full flex-col items-center justify-center gap-12'>
-          <h2 className='text-4xl'>Community talk about us</h2>
+          <h2 className='text-4xl font-semibold font-clash-display'>Community talk about us</h2>
           <div className='background-glow' />
           <TestimonialCarousel />
         </div>
@@ -345,7 +345,7 @@ export default function HomeTemplate() {
       {/* Download Section */}
       <Container id='download' className='min-h-screen py-5 md:py-10 xl:py-16' data-lenis-scroll-snap-align='start'>
         <div className='relative flex flex-col items-center justify-center gap-12'>
-          <h2 className='text-4xl'>Download now</h2>
+          <h2 className='text-4xl font-semibold font-clash-display'>Download now</h2>
 
           <div className='grid grid-cols-1 gap-6 md:grid-cols-2 md:gap-12'>
             {DOWNLOADS.map((data) => (

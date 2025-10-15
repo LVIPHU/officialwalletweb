@@ -7,7 +7,6 @@ import { useIsMobile } from '@/hooks/use-mobile'
 import { cn } from '@/lib/styles'
 import { useControls } from 'leva'
 import AnimatedContent from '@/components/atoms/animated-content'
-import Head from 'next/head'
 
 gsap.registerPlugin(ScrollTrigger)
 

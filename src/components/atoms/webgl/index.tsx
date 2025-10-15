@@ -1,5 +1,5 @@
 'use client'
-import { Float, useGLTF } from '@react-three/drei'
+import { Float } from '@react-three/drei'
 import { Canvas, useFrame, useThree } from '@react-three/fiber'
 import { useFrame as useRaf } from '@/hooks/use-frame'
 import { useScroll } from '@/hooks/use-scroll'
@@ -22,6 +22,8 @@ import fragmentShader from './particles/fragment.glsl'
 import vertexShader from './particles/vertex.glsl'
 import { useTheme } from 'next-themes'
 import { Model as ModelIphone13 } from '@/components/atoms/webgl/model/iphone-13'
+import { useIsMobile } from '@/hooks/use-mobile'
+import { STEPS_DESKTOP, STEPS_MOBILE } from '@/constants/steps.constants'
 
 function Raf({ render = true }) {
   const { advance } = useThree()
@@ -111,83 +113,6 @@ function Particles({ width = 250, height = 250, depth = 250, count = 1000, scale
   )
 }
 
-const steps = [
-  {
-    position: [0.2, 0, 0],
-    scale: 0.6,
-    rotation: [MathUtils.degToRad(-20), MathUtils.degToRad(160), MathUtils.degToRad(6)],
-    type: 1,
-  },
-  {
-    position: [0.2, -0.1, 0],
-    scale: 0.6,
-    rotation: [MathUtils.degToRad(-10), MathUtils.degToRad(350), MathUtils.degToRad(3)],
-    type: 1,
-  },
-  {
-    position: [0, -0.18, 0],
-    scale: 0.6,
-    rotation: [MathUtils.degToRad(0), MathUtils.degToRad(540), MathUtils.degToRad(0)],
-    type: 1,
-  },
-  {
-    position: [0, -0.18, 0],
-    scale: 0.6,
-    rotation: [MathUtils.degToRad(0), MathUtils.degToRad(540), MathUtils.degToRad(0)],
-    type: 1,
-  },
-  {
-    position: [-0.1, -0.16, 0],
-    scale: 0.6,
-    rotation: [MathUtils.degToRad(0), MathUtils.degToRad(720), MathUtils.degToRad(0)],
-    type: 1,
-  },
-  {
-    position: [-0.2, -0.01, 0],
-    scale: 0.6,
-    rotation: [MathUtils.degToRad(0), MathUtils.degToRad(900), MathUtils.degToRad(0)],
-    type: 1,
-  },
-  {
-    position: [-0.2, -0.01, 0],
-    scale: 0.6,
-    rotation: [MathUtils.degToRad(0), MathUtils.degToRad(900), MathUtils.degToRad(0)],
-    type: 1,
-  },
-  {
-    position: [-0.2, -0.01, 0],
-    scale: 0.6,
-    rotation: [MathUtils.degToRad(0), MathUtils.degToRad(900), MathUtils.degToRad(0)],
-    type: 1,
-  },
-  {
-    position: [-0.2, -0.04, 0],
-    scale: 0.6,
-    rotation: [MathUtils.degToRad(0), MathUtils.degToRad(900), MathUtils.degToRad(0)],
-    type: 1,
-  },
-  {
-    position: [-0.2, -0.04, 0],
-    scale: 0.6,
-    rotation: [MathUtils.degToRad(0), MathUtils.degToRad(900), MathUtils.degToRad(0)],
-    type: 1,
-  },
-  {
-    position: [-0.2, 1, 0],
-    scale: 0.6,
-    rotation: [MathUtils.degToRad(0), MathUtils.degToRad(900), MathUtils.degToRad(0)],
-    type: 1,
-  },
-  {
-    position: [-0.2, 1, 0],
-    scale: 0.6,
-    rotation: [MathUtils.degToRad(0), MathUtils.degToRad(900), MathUtils.degToRad(0)],
-    type: 1,
-  },
-]
-
-// const thresholds = [0, 1000, 2000, 3000, 4000, 5000]
-
 const material = new MeshPhysicalMaterial({
   color: new Color('#FFFFFF'),
   metalness: 1,
@@ -196,9 +121,11 @@ const material = new MeshPhysicalMaterial({
   side: DoubleSide,
 })
 
-export function Arm() {
+export function IPhone() {
   // const { scene: model2 } = useGLTF('/models/arm2.glb')
-  const [type, setType] = useState(1)
+  const isMobile = useIsMobile()
+  const [type, setType] = useState<number>(1)
+  const steps = useMemo(() => (isMobile ? STEPS_MOBILE : STEPS_DESKTOP), [isMobile])
 
   const [{ color, roughness, metalness, wireframe }, setMaterial] = useControls(
     () => ({
@@ -468,7 +395,7 @@ function Content() {
       {/*  <Particles width={viewport.width} height={viewport.height} depth={500} count={100} scale={500} size={150} />*/}
       {/*)}*/}
 
-      <Arm />
+      <IPhone />
     </>
   )
 }

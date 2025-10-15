@@ -25,7 +25,7 @@ export function FeatureCard({ feature, className }: FeatureCardProps) {
     >
       <div className='col-span-5 flex items-center justify-center md:col-start-8'>
         <div className='flex flex-col justify-center gap-7'>
-          <h2 data-title className='text-4xl'>
+          <h2 data-title className='font-clash-display text-4xl font-semibold'>
             {feature.title}
           </h2>
           <div
