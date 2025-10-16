@@ -130,4 +130,22 @@ export const STEPS_MOBILE = [
     rotation: [MathUtils.degToRad(0), MathUtils.degToRad(900), MathUtils.degToRad(0)],
     type: 1,
   },
+  {
+    position: [0, 1, 0],
+    scale: 0.44,
+    rotation: [MathUtils.degToRad(0), MathUtils.degToRad(900), MathUtils.degToRad(0)],
+    type: 1,
+  },
+  {
+    position: [0, 1, 0],
+    scale: 0.44,
+    rotation: [MathUtils.degToRad(0), MathUtils.degToRad(900), MathUtils.degToRad(0)],
+    type: 1,
+  },
+  {
+    position: [0, 1, 0],
+    scale: 0.44,
+    rotation: [MathUtils.degToRad(0), MathUtils.degToRad(900), MathUtils.degToRad(0)],
+    type: 1,
+  },
 ]

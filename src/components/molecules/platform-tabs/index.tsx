@@ -8,16 +8,16 @@ import { cn } from '@/lib/styles'
 export default function PlatformTabs() {
   return (
     <Tabs defaultValue={PLATFORMS[0].id} className='flex w-full flex-col items-center'>
-      <TabsList className='flex flex-wrap justify-center gap-6 bg-transparent p-0'>
+      <TabsList className='flex flex-wrap justify-center gap-4 bg-transparent p-0 sm:gap-5 md:gap-6'>
         {PLATFORMS.map(({ id }) => (
           <PlatformTabTrigger key={id} value={id} label={id} />
         ))}
       </TabsList>
 
       {PLATFORMS.map(({ id, content, contentMobile }) => (
-        <TabsContent key={id} value={id} className='mt-8 md:mt-11'>
+        <TabsContent key={id} value={id} className='mt-11'>
           {content ? (
-            <div className='flex h-[450px] items-center justify-center md:h-[548px]'>
+            <div className='flex items-center justify-center'>
               <picture>
                 <source srcSet={contentMobile} media='(max-width: 767px)' />
                 <Image src={content} alt={id} width={940} height={548} className='object-contain' />
