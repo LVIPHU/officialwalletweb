@@ -19,14 +19,14 @@ export function FeatureCard({ feature, className }: FeatureCardProps) {
   return (
     <div
       className={cn(
-        'grid h-screen w-full grid-cols-1 md:w-xl md:grid-cols-12 md:opacity-0 first:md:ml-60 last:md:mr-60 lg:w-2xl xl:w-3xl 2xl:w-4xl',
+        'grid w-full grid-cols-1 md:h-screen md:w-xl md:grid-cols-12 md:opacity-0 first:md:ml-60 last:md:mr-60 lg:w-2xl xl:w-3xl 2xl:w-4xl',
         className
       )}
     >
       <div className='col-span-5 flex items-center justify-center md:col-start-8'>
-        <div className='flex flex-col justify-center gap-7'>
-          <h2 data-title className='font-clash-display text-4xl font-semibold'>
-            {feature.title}
+        <div className='flex flex-col items-center justify-center gap-7 md:items-start'>
+          <h2 data-title className='font-clash-display text-center text-4xl font-semibold md:text-start'>
+            Features
           </h2>
           <div
             data-icon
@@ -40,7 +40,7 @@ export function FeatureCard({ feature, className }: FeatureCardProps) {
           <p data-subtitle className='text-3xl font-semibold'>
             {feature.subtitle}
           </p>
-          <p data-desc className='max-w-md'>
+          <p data-desc className='max-w-md text-center md:text-start'>
             {feature.description}
           </p>
         </div>

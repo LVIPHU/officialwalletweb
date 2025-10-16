@@ -8,8 +8,7 @@ import { useWindowSize } from '@/hooks/use-window-size'
 import { useScroll } from '@/hooks/use-scroll'
 import { useFrame } from '@/hooks/use-frame'
 import { Button } from '@/components/ui/button'
-import { FeatureCard } from '@/components/molecules/features-slides-horizontal/feature-card'
-import { FEATURES, CHAINS, DOWNLOADS } from '@/constants/landing.constants'
+import { CHAINS, DOWNLOADS } from '@/constants/landing.constants'
 import { isBrowser } from '@/lib/misc'
 import { useStore } from '@/lib/store'
 import { clamp, mapRange } from '@/lib/maths'
@@ -22,18 +21,11 @@ import { TestimonialCarousel } from '@/components/molecules/testimonial-carousel
 import { DownloadCard } from '@/components/molecules/download-card'
 import PlatformTabs from '@/components/molecules/platform-tabs'
 import Image from 'next/image'
+import { FeaturesSection } from '@/components/organisms/features-section'
 
 // const Parallax = dynamic(() => import('@/components/atoms/parallax').then((Parallax) => Parallax), { ssr: false })
 
 const WebGL = dynamic(() => import('@/components/atoms/webgl').then(({ WebGL }) => WebGL), { ssr: false })
-
-const FeaturesSlidesHorizontal = dynamic(
-  () =>
-    import('@/components/molecules/features-slides-horizontal').then(
-      (FeaturesSlidesHorizontal) => FeaturesSlidesHorizontal
-    ),
-  { ssr: false }
-)
 
 if (isBrowser) {
   window.history.scrollRestoration = 'manual'
@@ -292,7 +284,7 @@ export default function HomeTemplate() {
           </AnimatedContent>
           <div ref={platformRectRef} className='relative h-full w-full'>
             <AnimatedContent distance={10} threshold={0.4} className={'absolute inset-0 z-[-1]'}>
-              <div className='relative left-[4.5%] h-full w-full scale-200 md:scale-100'>
+              <div className='relative left-[4.5%] h-full w-full scale-200 md:scale-160'>
                 <div className='background-glow' />
               </div>
             </AnimatedContent>
@@ -301,14 +293,14 @@ export default function HomeTemplate() {
       </Container>
 
       {/* Features Section */}
-      <Container id='features' className='min-h-dvh py-5 md:py-10 xl:py-16' data-lenis-scroll-snap-align='start'>
-        <div ref={featuresRectRef} className='flex'>
+      <Container
+        id='features'
+        className='h-dvh min-h-dvh py-5 md:h-auto md:py-10 xl:py-16'
+        data-lenis-scroll-snap-align='start'
+      >
+        <div ref={featuresRectRef} className='flex h-full items-center md:h-auto md:items-start'>
           <div className='grow'>
-            <FeaturesSlidesHorizontal>
-              {FEATURES.map((feature) => (
-                <FeatureCard key={feature.id} feature={feature} />
-              ))}
-            </FeaturesSlidesHorizontal>
+            <FeaturesSection />
           </div>
         </div>
       </Container>

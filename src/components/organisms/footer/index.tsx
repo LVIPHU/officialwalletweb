@@ -9,7 +9,7 @@ import { NAVIGATION_ITEMS, NavigationItem, SOCIAL_LINKS } from '@/constants/navi
 const Footer = () => {
   return (
     <Container>
-      <GlassCard className='mb-24 px-7 py-10'>
+      <GlassCard className='mb-4 px-7 py-10 sm:mb-6 md:mb-24'>
         {/* --- Top Grid --- */}
         <div className='grid gap-y-10 py-10 sm:grid-cols-4 md:gap-8 lg:grid-cols-7'>
           {/* Logo section */}

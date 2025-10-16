@@ -118,12 +118,10 @@ export default function FeaturesSlidesHorizontal({ children }: HorizontalSlidesP
 
   return (
     <div data-slot='trigger' ref={triggerRef} className='relative md:z-[-1]'>
-      <AnimatedContent
-        distance={0}
-        threshold={0.36}
-        className={'absolute inset-y-2 left-1/12 z-[-1] h-screen w-[200px] -translate-x-full'}
-      >
-        <div data-color={bgStep[step]} className='background-glow' />
+      <AnimatedContent distance={0} threshold={0.36} className={'absolute inset-y-2 left-0 z-[-1] h-screen w-[400px]'}>
+        <div className='relative left-[43%] h-full w-full scale-300'>
+          <div data-color={bgStep[step]} className='background-glow' />
+        </div>
       </AnimatedContent>
       <div
         data-slot='target'
