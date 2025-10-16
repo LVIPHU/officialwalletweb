@@ -3,18 +3,19 @@ import LogoSVG from '@public/assets/logo.svg'
 
 interface LogoProps {
   readonly className?: string
+  readonly classNameIcon?: string
   readonly showText?: boolean
   readonly size?: 'sm' | 'md' | 'lg' | 'xl' | '2xl' | '3xl'
 }
 
-export function Logo({ className, showText = true, size = 'md' }: LogoProps) {
+export function Logo({ className, classNameIcon, showText = true, size = 'md' }: LogoProps) {
   const sizeClasses: Record<NonNullable<LogoProps['size']>, string> = {
-    sm: 'w-6 h-6',
-    md: 'w-8 h-8',
-    lg: 'w-12 h-12',
-    xl: 'w-16 h-16',
-    '2xl': 'w-20 h-20',
-    '3xl': 'w-24 h-24',
+    sm: 'size-6',
+    md: 'size-8',
+    lg: 'size-12',
+    xl: 'size-16',
+    '2xl': 'size-20',
+    '3xl': 'size-24',
   }
 
   const textSizeClasses: Record<NonNullable<LogoProps['size']>, string> = {
@@ -28,7 +29,7 @@ export function Logo({ className, showText = true, size = 'md' }: LogoProps) {
 
   return (
     <div className={cn('flex items-center space-x-2', className)}>
-      <LogoSVG className={cn(sizeClasses[size])} />
+      <LogoSVG className={cn(sizeClasses[size], classNameIcon)} />
       {!showText && <span className={cn('font-semibold text-gray-900', textSizeClasses[size])}>Company</span>}
     </div>
   )

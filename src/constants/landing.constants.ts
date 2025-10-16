@@ -55,6 +55,14 @@ export const CHAINS: Chain[] = [
   { id: 'ETH', name: 'Ethereum', logo: ETH },
 ] as const
 
+export const BACKGROUND_ENUM: Record<number, string> = {
+  0: 'green',
+  1: 'blue',
+  2: 'purple',
+  3: 'orange',
+  4: 'olive',
+}
+
 export const PLATFORMS: Platform[] = [
   {
     id: 'mobile',

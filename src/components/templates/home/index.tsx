@@ -330,7 +330,9 @@ export default function HomeTemplate() {
           <div className='relative h-full grow'>
             <PlatformTabs />
             <AnimatedContent distance={0} threshold={0.36} className={'absolute inset-0 z-[-1]'}>
-              <div className='background-glow' />
+              <div className='relative left-[4.5%] h-full w-full scale-200 md:scale-130'>
+                <div className='background-glow' />
+              </div>
             </AnimatedContent>
           </div>
         </div>
@@ -340,7 +342,11 @@ export default function HomeTemplate() {
       <Container id='community' className='py-5 md:h-dvh md:py-10 xl:py-16' data-lenis-scroll-snap-align='start'>
         <div className='relative flex h-full flex-col items-center justify-center gap-8 text-center md:gap-12 md:text-start'>
           <h2 className='font-clash-display max-w-sm text-4xl font-semibold md:max-w-none'>Community talk about us</h2>
-          <div className='background-glow' />
+          <AnimatedContent distance={0} threshold={0.4} className={'absolute inset-0 z-[-1]'}>
+            <div className='relative top-1/5 left-[4.5%] h-full w-full scale-200 md:top-[5%] md:scale-130'>
+              <div className='background-glow' />
+            </div>
+          </AnimatedContent>
           <TestimonialCarousel />
         </div>
       </Container>

@@ -7,19 +7,12 @@ import { useIsMobile } from '@/hooks/use-mobile'
 import { cn } from '@/lib/styles'
 import { useControls } from 'leva'
 import AnimatedContent from '@/components/atoms/animated-content'
+import { BACKGROUND_ENUM } from '@/constants/landing.constants'
 
 gsap.registerPlugin(ScrollTrigger)
 
 interface HorizontalSlidesProps {
   children: ReactNode
-}
-
-const bgStep: Record<number, string> = {
-  0: 'green',
-  1: 'blue',
-  2: 'purple',
-  3: 'orange',
-  4: 'olive',
 }
 
 export default function FeaturesSlidesHorizontal({ children }: HorizontalSlidesProps) {
@@ -120,7 +113,7 @@ export default function FeaturesSlidesHorizontal({ children }: HorizontalSlidesP
     <div data-slot='trigger' ref={triggerRef} className='relative md:z-[-1]'>
       <AnimatedContent distance={0} threshold={0.36} className={'absolute inset-y-2 left-0 z-[-1] h-screen w-[400px]'}>
         <div className='relative left-[43%] h-full w-full scale-300'>
-          <div data-color={bgStep[step]} className='background-glow' />
+          <div data-color={BACKGROUND_ENUM[step]} className='background-glow' />
         </div>
       </AnimatedContent>
       <div

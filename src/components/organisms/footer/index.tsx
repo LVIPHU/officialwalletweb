@@ -9,15 +9,19 @@ import { NAVIGATION_ITEMS, NavigationItem, SOCIAL_LINKS } from '@/constants/navi
 const Footer = () => {
   return (
     <Container>
-      <GlassCard className='mb-4 px-7 py-10 sm:mb-6 md:mb-24'>
+      <GlassCard className='mb-4 border-0 px-0 py-5 sm:mb-6 md:mb-24 md:border md:px-7 md:py-10'>
         {/* --- Top Grid --- */}
-        <div className='grid gap-y-10 py-10 sm:grid-cols-4 md:gap-8 lg:grid-cols-7'>
+        <div className='grid grid-cols-2 gap-x-3 gap-y-10 pt-0 pb-30 md:grid-cols-7 md:gap-8 md:py-10'>
           {/* Logo section */}
-          <div className='col-span-full flex flex-col items-center gap-4 lg:col-span-2'>
+          <div className='col-span-full flex flex-col items-center gap-4 md:col-span-2'>
             <NavigationLink href='#'>
-              <Logo size='3xl' />
+              <Logo classNameIcon='size-16 md:size-24' />
             </NavigationLink>
             <p className='text-5xl font-black text-white'>TBChat</p>
+          </div>
+
+          <div className='col-span-full md:hidden'>
+            <SocialLink />
           </div>
 
           {/* Navigation sections */}
@@ -27,7 +31,7 @@ const Footer = () => {
         </div>
 
         {/* --- Bottom Bar --- */}
-        <div className='mt-5 flex flex-col items-center justify-center border-t border-white/10 pt-7 lg:flex-row lg:justify-between'>
+        <div className='absolute inset-x-0 bottom-2 mt-5 flex flex-col items-center justify-center border-t border-white/10 pt-7 md:relative lg:flex-row lg:justify-between'>
           <span className='text-sm text-gray-500 dark:text-gray-400'>
             © 2025{' '}
             <NavigationLink href='#' className='font-medium hover:text-[#0DCC61]'>
@@ -36,18 +40,8 @@ const Footer = () => {
             . All rights reserved.
           </span>
 
-          <div className='mt-4 flex items-center space-x-4 lg:mt-0'>
-            <p className='font-semibold text-gray-500'>Stay connect:</p>
-            {SOCIAL_LINKS.map((social) => (
-              <NavigationLink
-                key={social.id}
-                href={social.href}
-                aria-label={social.id}
-                className='flex h-9 w-9 items-center justify-center rounded-xl bg-gray-700 transition-colors duration-300 hover:bg-[#0DCC61]'
-              >
-                <social.icon className='size-5 text-white' fill='currentColor' />
-              </NavigationLink>
-            ))}
+          <div className='hidden lg:block'>
+            <SocialLink />
           </div>
         </div>
       </GlassCard>
@@ -55,20 +49,44 @@ const Footer = () => {
   )
 }
 
-/* --- Subcomponent: FooterColumn --- */
 function FooterColumn({ title, links }: { title: string; links: NavigationItem[] }) {
   return (
-    <div className='text-left lg:mx-auto'>
-      <h4 className='mb-6 text-lg font-medium text-white/90 capitalize'>{title}</h4>
-      <ul className='space-y-3 text-sm'>
-        {links.map((link) => (
-          <li key={link.id}>
-            <NavigationLink href={link.href} className='text-gray-400 transition-colors duration-200 hover:text-white'>
-              {link.id}
-            </NavigationLink>
-          </li>
+    <div className='flex items-start justify-center lg:mx-auto'>
+      <div className='flex flex-col gap-4 text-start md:gap-7'>
+        <h4 className='text-lg font-medium text-white/90 capitalize'>{title}</h4>
+        <ul className='space-y-3 text-sm md:space-y-7'>
+          {links.map((link) => (
+            <li key={link.id}>
+              <NavigationLink
+                href={link.href}
+                className='text-gray-400 transition-colors duration-200 hover:text-white'
+              >
+                {link.id}
+              </NavigationLink>
+            </li>
+          ))}
+        </ul>
+      </div>
+    </div>
+  )
+}
+
+function SocialLink() {
+  return (
+    <div className='mt-4 flex flex-col items-center gap-4 md:flex-row lg:mt-0'>
+      <p className='font-semibold text-gray-500'>Stay connect:</p>
+      <div className='flex items-center gap-x-4'>
+        {SOCIAL_LINKS.map((social) => (
+          <NavigationLink
+            key={social.id}
+            href={social.href}
+            aria-label={social.id}
+            className='flex size-13 items-center justify-center rounded-xl bg-gray-700 transition-colors duration-300 hover:bg-[#0DCC61] md:size-9'
+          >
+            <social.icon className='size-5 text-white' fill='currentColor' />
+          </NavigationLink>
         ))}
-      </ul>
+      </div>
     </div>
   )
 }
