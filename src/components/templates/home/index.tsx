@@ -224,7 +224,7 @@ export default function HomeTemplate() {
 
       {/* Hero Section */}
       <Container className='flex min-h-dvh items-center pb-5 md:pb-10 xl:pb-16'>
-        <div className='grid items-center md:grid-cols-2'>
+        <div className='grid items-center md:grid-cols-2 w-full'>
           <div className='flex flex-col items-center gap-8 md:items-start md:gap-13'>
             <h1 className='font-clash-display text-center text-3xl font-extrabold tracking-tight sm:text-4xl md:text-start md:text-6xl md:leading-20'>
               <AuroraText>
