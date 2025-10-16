@@ -61,7 +61,9 @@ export default function Header() {
         <div className='hidden items-center gap-2 md:flex'>
           <ThemeSwitcher />
           <LocaleSwitcher />
-          <Button>Download</Button>
+          <Button variant={'explore'} className='rounded-full' size='sm'>
+            Download
+          </Button>
         </div>
 
         {/* Sidebar for mobile */}

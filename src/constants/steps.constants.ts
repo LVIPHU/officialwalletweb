@@ -2,13 +2,13 @@ import { MathUtils } from 'three'
 
 export const STEPS_DESKTOP = [
   {
-    position: [0.2, 0, 0],
+    position: [0.16, 0, 0],
     scale: 0.6,
     rotation: [MathUtils.degToRad(-20), MathUtils.degToRad(160), MathUtils.degToRad(6)],
     type: 1,
   },
   {
-    position: [0.2, -0.1, 0],
+    position: [0.16, -0.1, 0],
     scale: 0.6,
     rotation: [MathUtils.degToRad(-10), MathUtils.degToRad(350), MathUtils.degToRad(3)],
     type: 1,

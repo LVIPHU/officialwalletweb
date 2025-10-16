@@ -54,7 +54,7 @@ const TestimonialGrid = ({ testimonials }: { testimonials: any[] }) => (
 
 export function TestimonialCarousel() {
   const isMobile = useIsMobile()
-  const size = useMemo(() => (isMobile ? 2 : 4), [isMobile])
+  const size = useMemo(() => (isMobile ? 1 : 4), [isMobile])
   const plugin = useMemo(() => Autoplay({ delay: 3000, stopOnInteraction: true }), [])
   const testimonialGroups = useMemo(() => chunkArray(TESTIMONIALS, size), [size])
 

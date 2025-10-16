@@ -209,7 +209,7 @@
   }
 
   .button-explore {
-    @apply relative overflow-hidden border border-solid border-transparent;
+    @apply relative overflow-hidden;
     background: linear-gradient(180deg, #000b00 0%, #003300 232.94%);
     box-shadow:
       0 20px 40px -30px rgba(0, 0, 0, 0.8) inset,

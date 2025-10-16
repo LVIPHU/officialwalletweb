@@ -1,18 +1,12 @@
 .wrapper {
   height: 100vh;
   width: 100%;
-  background-color: var(--primary);
+  background-color: var(--background);
   position: fixed;
   top: 0;
   left: 0;
   z-index: 1000;
   overflow: hidden;
-}
-
-@media (max-width: 768px) {
-  .wrapper {
-    display: none;
-  }
 }
 
 .wrapper.out {
@@ -22,24 +16,35 @@
 }
 
 .wrapper .start {
-  transform: translate3d(0, calc(var(--index) * 5% + 100%), 0);
+  transform: translate3d(0, 100%, 0);
 }
 
 .wrapper .relative {
-  padding: 40px 32.5px;
   transition: transform 1500ms var(--ease-out-expo);
-  transform: translate3d(0, 850px, 0);
+  transform: translate3d(0, 100%, 0);
   transition-delay: 1500ms;
 
   height: 100%;
   display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+  justify-content: center;
+  align-items: center;
+}
+
+.wrapper .ei {
+  width: 50dvw;
+  height: 50dvw;
+}
+
+@media (min-width: 768px) {
+  .wrapper .ei {
+    width: 180px;
+    height: 180px;
+  }
 }
 
 .wrapper .show {
   transition: transform 1500ms var(--ease-out-expo);
-  transition-delay: calc(var(--index) * 75ms);
+  transition-delay: calc(75ms);
   transform: translate3d(0, 0, 0);
 }
 
@@ -47,7 +52,7 @@
   /* desktop */
 }
 
-@media (min-width: 769px) {
+@media (min-width: 768px) {
   .translate {
     transform: translate3d(0, -100%, 0);
     transition: transform 1500ms var(--ease-out-expo);
