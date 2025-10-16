@@ -337,17 +337,17 @@ export default function HomeTemplate() {
       </Container>
 
       {/*Community Testimonials*/}
-      <Container id='community' className='min-h-dvh py-5 md:py-10 xl:py-16' data-lenis-scroll-snap-align='start'>
+      <Container id='community' className='py-5 md:h-dvh md:py-10 xl:py-16' data-lenis-scroll-snap-align='start'>
         <div className='relative flex h-full flex-col items-center justify-center gap-8 text-center md:gap-12 md:text-start'>
-          <h2 className='font-clash-display text-4xl font-semibold'>Community talk about us</h2>
+          <h2 className='font-clash-display max-w-sm text-4xl font-semibold md:max-w-none'>Community talk about us</h2>
           <div className='background-glow' />
           <TestimonialCarousel />
         </div>
       </Container>
 
       {/* Download Section */}
-      <Container id='download' className='min-h-dvh py-5 md:py-10 xl:py-16' data-lenis-scroll-snap-align='start'>
-        <div className='relative flex w-full flex-col items-center justify-center gap-8 text-center md:gap-12 md:text-start'>
+      <Container id='download' className='h-dvh py-5 md:py-10 xl:py-16' data-lenis-scroll-snap-align='start'>
+        <div className='relative flex h-full w-full flex-col items-center justify-center gap-8 text-center md:gap-12 md:text-start'>
           <h2 className='font-clash-display text-4xl font-semibold'>Download now</h2>
           <div className='grid w-full max-w-[850px] grid-cols-2 gap-3 md:gap-6 lg:gap-12'>
             {DOWNLOADS.map((data) => (

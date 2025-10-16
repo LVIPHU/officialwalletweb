@@ -1,5 +1,4 @@
 'use client'
-
 import dynamic from 'next/dynamic'
 import { useIsMobile } from '@/hooks/use-mobile'
 import { FEATURES } from '@/constants/landing.constants'

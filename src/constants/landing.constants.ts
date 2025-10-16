@@ -193,20 +193,24 @@ export const DOWNLOADS: Download[] = [
     id: 'app-store',
     url: '#',
     image: '/assets/download/app-store.webp',
+    imageMobile: '/assets/download/app-store-mobile.webp',
   },
   {
     id: 'windows',
     url: '#',
     image: '/assets/download/windows.webp',
+    imageMobile: '/assets/download/windows-mobile.webp',
   },
   {
     id: 'google-play',
     url: '#',
     image: '/assets/download/google-play.webp',
+    imageMobile: '/assets/download/google-play-mobile.webp',
   },
   {
     id: 'android',
     url: '#',
     image: '/assets/download/android.webp',
+    imageMobile: '/assets/download/android-mobile.webp',
   },
 ]

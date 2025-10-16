@@ -36,4 +36,5 @@ export interface Download {
   readonly id: string
   readonly url: string
   readonly image: string
+  readonly imageMobile: string
 }
