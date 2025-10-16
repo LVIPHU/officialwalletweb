@@ -129,9 +129,14 @@
 @layer component {
   /* Canvas */
   .canvas {
-    @apply fixed top-0 right-0 left-0 h-screen;
+    @apply fixed top-0 right-0 left-0 h-dvh;
   }
 
+  @supports not (height: 100dvh) {
+    .canvas {
+      height: 100vh;
+    }
+  }
   /* Background */
   .background-hero {
     @apply pointer-events-none absolute;
