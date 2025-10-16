@@ -56,9 +56,13 @@ export const CHAINS: Chain[] = [
 ] as const
 
 export const PLATFORMS: Platform[] = [
-  { id: 'mobile', content: '/assets/background/mobile-app.webp' },
-  { id: 'extensions', content: '' },
-  { id: 'desktop', content: '' },
+  {
+    id: 'mobile',
+    content: '/assets/background/mobile-app.webp',
+    contentMobile: '/assets/background/mobile-app-mobile.webp',
+  },
+  { id: 'extensions', content: '', contentMobile: '' },
+  { id: 'desktop', content: '', contentMobile: '' },
 ]
 
 export const TESTIMONIALS: Testimonial[] = [

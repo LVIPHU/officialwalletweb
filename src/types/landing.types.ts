@@ -22,6 +22,7 @@ export interface Chain {
 export interface Platform {
   readonly id: string
   readonly content: string
+  readonly contentMobile: string
 }
 
 export interface Testimonial {

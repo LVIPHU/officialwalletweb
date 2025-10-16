@@ -1,17 +1,13 @@
-'use client'
 import { Download } from '@/types/landing.types'
 import { NavigationLink } from '@/components/atoms/navigation-link'
 import Image from 'next/image'
 import { cn } from '@/lib/styles'
-import { useIsMobile } from '@/hooks/use-mobile'
 
 interface DownloadCardProps {
   data: Download
 }
 
 export function DownloadCard({ data }: DownloadCardProps) {
-  const isMobile = useIsMobile()
-  const srcImage = isMobile ? data.imageMobile : data.image
   return (
     <NavigationLink href={data.url} className='w-full'>
       <div
@@ -25,7 +21,10 @@ export function DownloadCard({ data }: DownloadCardProps) {
           'before:pointer-events-none before:opacity-0 before:transition-opacity before:duration-500 hover:before:opacity-100'
         )}
       >
-        <Image src={srcImage} alt={data.id} width={210} height={52} className='object-contain' />
+        <picture>
+          <source srcSet={data.imageMobile} media='(max-width: 767px)' />
+          <Image src={data.image} alt={data.id} width={210} height={52} className='object-contain' />
+        </picture>
       </div>
     </NavigationLink>
   )

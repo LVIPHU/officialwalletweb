@@ -14,11 +14,14 @@ export default function PlatformTabs() {
         ))}
       </TabsList>
 
-      {PLATFORMS.map(({ id, content }) => (
+      {PLATFORMS.map(({ id, content, contentMobile }) => (
         <TabsContent key={id} value={id} className='mt-8 md:mt-11'>
           {content ? (
-            <div className='flex h-[548px] items-center justify-center'>
-              <Image src={content} alt={id} width={940} height={548} priority className='rounded-xl object-contain' />
+            <div className='flex h-[450px] w-full items-center justify-center md:h-[548px]'>
+              <picture>
+                <source srcSet={contentMobile} media='(max-width: 767px)' />
+                <Image src={content} alt={id} fill className='object-contain' />
+              </picture>
             </div>
           ) : (
             <ComingSoon />
