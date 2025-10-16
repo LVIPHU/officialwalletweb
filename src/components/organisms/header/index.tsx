@@ -21,6 +21,10 @@ import { Container } from '@/components/atoms/container'
 import { NavigationLink } from '@/components/atoms/navigation-link'
 import { NAVIGATION_ITEMS } from '@/constants/navigation.constants'
 import { LocaleSwitcher } from '@/components/molecules/locale-switcher'
+import { Trans } from '@lingui/react/macro'
+import { NavSection } from '@/types/navigation.types'
+import type { MessageDescriptor } from '@lingui/core'
+import { useLingui } from '@lingui/react'
 
 export default function Header() {
   const [hasScrolled, setHasScrolled] = useState(false)
@@ -50,8 +54,8 @@ export default function Header() {
         <div className='hidden md:flex'>
           <NavigationMenu>
             <NavigationMenuList>
-              {Object.keys(NAVIGATION_ITEMS).map((title) => (
-                <NavigationItem key={title} title={title} />
+              {NAVIGATION_ITEMS.map((section) => (
+                <NavigationSection key={section.id} section={section} />
               ))}
             </NavigationMenuList>
           </NavigationMenu>
@@ -61,8 +65,8 @@ export default function Header() {
         <div className='hidden items-center gap-2 md:flex'>
           <ThemeSwitcher />
           <LocaleSwitcher />
-          <Button variant={'explore'} className='rounded-full' size='sm'>
-            Download
+          <Button variant='explore' className='rounded-full' size='sm'>
+            <Trans>Download</Trans>
           </Button>
         </div>
 
@@ -73,12 +77,24 @@ export default function Header() {
   )
 }
 
-function NavigationItem({ title }: { title: string }) {
+/* -------------------------------
+ * Navigation Section (each group)
+ * ----------------------------- */
+interface NavigationSectionProps {
+  section: NavSection
+}
+
+function NavigationSection({ section }: NavigationSectionProps) {
+  const { i18n } = useLingui()
   return (
-    <NavigationMenuItem key={title}>
-      <NavigationMenuTrigger className='data-[state=open]:text-primary bg-transparent'>{title}</NavigationMenuTrigger>
+    <NavigationMenuItem>
+      <NavigationMenuTrigger className='data-[state=open]:text-primary bg-transparent'>
+        {i18n._(section.title)}
+      </NavigationMenuTrigger>
+
       <NavigationMenuContent>
         <div className='flex gap-8 md:w-2xl lg:w-3xl xl:w-4xl 2xl:w-5xl'>
+          {/* Left highlight area */}
           <div className='row-span-3'>
             <div className='from-muted/50 to-muted flex h-full w-full flex-col justify-end rounded-md bg-linear-to-b p-6 no-underline outline-hidden select-none focus:shadow-md'>
               <div className='mt-4 mb-2 text-lg font-medium'>shadcn/ui</div>
@@ -88,9 +104,10 @@ function NavigationItem({ title }: { title: string }) {
             </div>
           </div>
 
+          {/* List of links */}
           <ul className='default-transition grid grid-cols-1 gap-x-6 gap-y-6 lg:grid-cols-2 xl:grid-cols-3 2xl:gap-x-10'>
-            {NAVIGATION_ITEMS[title as keyof typeof NAVIGATION_ITEMS]?.map((item: any) => (
-              <ListItem key={item.id} href={item.href} title={item.id}>
+            {section.items.map((item) => (
+              <ListItem key={item.id} href={item.href} title={item.title}>
                 Re-usable components built using Radix UI and Tailwind CSS.
               </ListItem>
             ))}
@@ -101,7 +118,16 @@ function NavigationItem({ title }: { title: string }) {
   )
 }
 
-function ListItem({ title, children, href, ...props }: React.ComponentPropsWithoutRef<'li'> & { href: string }) {
+/* -------------------------------
+ * List Item (each link)
+ * ----------------------------- */
+interface ListItemProps extends Omit<React.ComponentPropsWithoutRef<'li'>, 'title'> {
+  href: string
+  title: MessageDescriptor
+}
+
+function ListItem({ title, children, href, ...props }: ListItemProps) {
+  const { i18n } = useLingui()
   const pathname = usePathname()
   const isActive = pathname === href
 
@@ -117,7 +143,7 @@ function ListItem({ title, children, href, ...props }: React.ComponentPropsWitho
               : 'text-foreground/80 hover:text-foreground hover:bg-muted/40'
           )}
         >
-          <div className='text-sm leading-none font-medium'>{title}</div>
+          <div className='text-sm leading-none font-medium'>{i18n._(title)}</div>
           <p className='text-muted-foreground line-clamp-2 text-sm leading-snug'>{children}</p>
         </NavigationLink>
       </NavigationMenuLink>

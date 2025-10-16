@@ -4,7 +4,10 @@ import { Logo } from '@/components/atoms/logo'
 import { NavigationLink } from '@/components/atoms/navigation-link'
 import { Container } from '@/components/atoms/container'
 import GlassCard from '@/components/molecules/glass-card'
-import { NAVIGATION_ITEMS, NavigationItem, SOCIAL_LINKS } from '@/constants/navigation.constants'
+import { NAVIGATION_ITEMS, SOCIAL_LINKS } from '@/constants/navigation.constants'
+import { Trans } from '@lingui/react/macro'
+import { NavSection } from '@/types/navigation.types'
+import { useLingui } from '@lingui/react'
 
 const Footer = () => {
   return (
@@ -25,8 +28,8 @@ const Footer = () => {
           </div>
 
           {/* Navigation sections */}
-          {Object.entries(NAVIGATION_ITEMS).map(([title, links]) => (
-            <FooterColumn key={title} title={title} links={links} />
+          {NAVIGATION_ITEMS.map((section) => (
+            <FooterColumn key={section.id} section={section} />
           ))}
         </div>
 
@@ -36,8 +39,8 @@ const Footer = () => {
             © 2025{' '}
             <NavigationLink href='#' className='font-medium hover:text-[#0DCC61]'>
               TB Wallet
-            </NavigationLink>
-            . All rights reserved.
+            </NavigationLink>{' '}
+            <Trans>. All rights reserved.</Trans>
           </span>
 
           <div className='hidden lg:block'>
@@ -49,19 +52,26 @@ const Footer = () => {
   )
 }
 
-function FooterColumn({ title, links }: { title: string; links: NavigationItem[] }) {
+interface FooterColumnProps {
+  section: NavSection // type an toàn: phần tử của NAVIGATION_ITEMS
+}
+
+function FooterColumn({ section }: FooterColumnProps) {
+  const { i18n } = useLingui()
   return (
     <div className='flex items-start justify-center lg:mx-auto'>
       <div className='flex flex-col gap-4 text-start md:gap-7'>
-        <h4 className='text-lg font-medium text-white/90 capitalize'>{title}</h4>
+        {/* i18n title section */}
+        <h4 className='text-lg font-medium text-white/90 capitalize'>{i18n._(section.title)}</h4>
+
         <ul className='space-y-3 text-sm md:space-y-7'>
-          {links.map((link) => (
-            <li key={link.id}>
+          {section.items.map((item) => (
+            <li key={item.id}>
               <NavigationLink
-                href={link.href}
+                href={item.href}
                 className='text-gray-400 transition-colors duration-200 hover:text-white'
               >
-                {link.id}
+                {i18n._(item.title)}
               </NavigationLink>
             </li>
           ))}
@@ -74,7 +84,9 @@ function FooterColumn({ title, links }: { title: string; links: NavigationItem[]
 function SocialLink() {
   return (
     <div className='mt-4 flex flex-col items-center gap-4 md:flex-row lg:mt-0'>
-      <p className='font-semibold text-gray-500'>Stay connect:</p>
+      <p className='font-semibold text-gray-500'>
+        <Trans>Stay connected:</Trans>
+      </p>
       <div className='flex items-center gap-x-4'>
         {SOCIAL_LINKS.map((social) => (
           <NavigationLink

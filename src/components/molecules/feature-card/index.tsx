@@ -1,6 +1,8 @@
 ﻿'use client'
 import type { Feature } from '@/types/landing.types'
 import { cn } from '@/lib/styles'
+import { Trans } from '@lingui/react/macro'
+import { useLingui } from '@lingui/react'
 
 interface FeatureCardProps {
   readonly feature: Feature
@@ -16,6 +18,7 @@ const variantCard: Record<string, string> = {
 }
 
 export function FeatureCard({ feature, className }: FeatureCardProps) {
+  const { i18n } = useLingui()
   return (
     <div
       className={cn(
@@ -26,7 +29,7 @@ export function FeatureCard({ feature, className }: FeatureCardProps) {
       <div className='col-span-5 flex items-center justify-center md:col-start-8'>
         <div className='flex flex-col items-center justify-center gap-7 md:items-start'>
           <h2 data-title className='font-clash-display text-center text-4xl font-semibold md:text-start'>
-            Features
+            <Trans>Features</Trans>
           </h2>
           <div
             data-icon
@@ -38,10 +41,10 @@ export function FeatureCard({ feature, className }: FeatureCardProps) {
             <feature.icon className='size-20' fill='currentColor' />
           </div>
           <p data-subtitle className='text-3xl font-semibold'>
-            {feature.subtitle}
+            {i18n._(feature.title)}
           </p>
           <p data-desc className='max-w-md text-center md:text-start'>
-            {feature.description}
+            {i18n._(feature.description)}
           </p>
         </div>
       </div>

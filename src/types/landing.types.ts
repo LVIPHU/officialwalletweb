@@ -1,4 +1,5 @@
 import React from 'react'
+import { MessageDescriptor } from '@lingui/core'
 
 /**
  * Type definitions for TB Wallet landing page
@@ -6,23 +7,26 @@ import React from 'react'
 
 export interface Feature {
   readonly id: string
-  readonly title: string
-  readonly subtitle: string
-  readonly description: string
+  readonly title: MessageDescriptor
+  readonly description: MessageDescriptor
   readonly icon: React.FC<React.SVGProps<SVGSVGElement>>
 }
 
 export interface Chain {
   readonly id: 'TBC' | 'BTC' | 'ETH' | 'SOL'
-  readonly name: string
+  readonly title: MessageDescriptor
   readonly logo?: React.FC<React.SVGProps<SVGSVGElement>>
   readonly url?: string
 }
 
 export interface Platform {
   readonly id: string
-  readonly content: string
-  readonly contentMobile: string
+  readonly title: MessageDescriptor
+  readonly images: {
+    desktop: string
+    mobile?: string
+    tablet?: string
+  }
 }
 
 export interface Testimonial {
@@ -36,6 +40,9 @@ export interface Testimonial {
 export interface Download {
   readonly id: string
   readonly url: string
-  readonly image: string
-  readonly imageMobile: string
+  readonly images: {
+    desktop: string
+    mobile?: string
+    tablet?: string
+  }
 }

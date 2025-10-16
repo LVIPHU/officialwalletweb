@@ -1,23 +1,25 @@
 'use client'
 import { Button } from '@/components/ui/button'
-import { msg } from '@lingui/core/macro'
-import { useLingui } from '@lingui/react'
 import { usePathname, useRouter } from 'next/navigation'
 import { Item, ItemActions, ItemContent, ItemTitle } from '@/components/ui/item'
 import { Popover, PopoverContent, PopoverTrigger } from '@/components/ui/popover'
 import { Globe, Check } from 'lucide-react'
 import { useState } from 'react'
 import { cn } from '@/lib/styles'
+import { LOCALES } from '@/constants/direction.constants'
 
-type LOCALES = 'en' | 'fr'
-
-const languages = {
-  en: msg`English`,
-  fr: msg`French`,
+const languages: Record<LOCALES, string> = {
+  ar: 'العربية',
+  en: 'English',
+  es: 'Español',
+  fi: 'Suomi',
+  fr: 'Français',
+  pt: 'Português',
+  'zh-hans': '简体中文',
+  'zh-hant': '繁體中文',
 } as const
 
 export function LocaleSwitcher() {
-  const { i18n } = useLingui()
   const pathname = usePathname()
   const router = useRouter()
 
@@ -38,10 +40,10 @@ export function LocaleSwitcher() {
       <PopoverTrigger asChild>
         <Button variant='outline'>
           <Globe className='mr-2 h-4 w-4' />
-          {i18n._(languages[locale])}
+          {languages[locale]}
         </Button>
       </PopoverTrigger>
-      <PopoverContent className='w-80'>
+      <PopoverContent className='w-90'>
         <div className='grid grid-cols-2 gap-4'>
           {Object.keys(languages).map((lang) => (
             <Item
@@ -50,7 +52,7 @@ export function LocaleSwitcher() {
               className={cn('cursor-pointer', lang === locale && 'border-accent-foreground border-2')}
             >
               <ItemContent>
-                <ItemTitle>{i18n._(languages[lang as keyof typeof languages])}</ItemTitle>
+                <ItemTitle>{languages[lang as keyof typeof languages]}</ItemTitle>
               </ItemContent>
               <ItemActions>{lang === locale && <Check className='size-4' />}</ItemActions>
             </Item>

@@ -12,3 +12,239 @@ msgstr ""
 "Last-Translator: \n"
 "Language-Team: \n"
 "Plural-Forms: \n"
+
+#: src/components/organisms/footer/index.tsx:43
+msgid ". All rights reserved."
+msgstr ". Todos los derechos reservados."
+
+#: src/components/templates/home/index.tsx:264
+#: src/constants/navigation.constants.ts:49
+msgid "About"
+msgstr "Acerca de"
+
+#: src/constants/navigation.constants.ts:51
+msgid "About Us"
+msgstr "Sobre nosotros"
+
+#: src/constants/landing.constants.ts:35
+msgid "Access your wallet anywhere with our intuitive mobile application."
+msgstr "Accede a tu billetera desde cualquier lugar con nuestra aplicación móvil intuitiva."
+
+#: src/components/templates/home/index.tsx:333
+msgid "As a leading self-custody multi-chain platform, we support millions of assets across 100+ blockchains. From Bitcoin, Ethereum, and Solana, to Cosmos, Optimism, and much more."
+msgstr "Como una plataforma líder de autocustodia multichain, admitimos millones de activos en más de 100 blockchains. Desde Bitcoin, Ethereum y Solana, hasta Cosmos, Optimism y mucho más."
+
+#: src/components/templates/home/index.tsx:267
+msgid "As a leading self-custody multi-chain platform, we support millions of assets across 100+ blockchains. We provide secure, user-friendly access to the decentralized web while maintaining complete control over your digital assets."
+msgstr "Como una plataforma líder de autocustodia multichain, admitimos millones de activos en más de 100 blockchains. Brindamos acceso seguro y fácil de usar a la web descentralizada mientras mantienes el control total de tus activos digitales."
+
+#: src/constants/landing.constants.ts:49
+msgid "Bitcoin"
+msgstr "Bitcoin"
+
+#: src/constants/navigation.constants.ts:54
+msgid "Blog"
+msgstr "Blog"
+
+#: src/constants/navigation.constants.ts:14
+msgid "Browser Extension"
+msgstr "Extensión del navegador"
+
+#: src/constants/navigation.constants.ts:31
+msgid "Build"
+msgstr "Construir"
+
+#: src/components/templates/home/index.tsx:291
+msgid "Build for everyone"
+msgstr "Creado para todos"
+
+#: src/constants/navigation.constants.ts:25
+msgid "Buy Crypto"
+msgstr "Comprar criptomonedas"
+
+#: src/constants/navigation.constants.ts:52
+msgid "Careers"
+msgstr "Empleos"
+
+#: src/components/molecules/platform-tabs/index.tsx:58
+msgid "Coming soon"
+msgstr "Próximamente"
+
+#: src/components/templates/home/index.tsx:368
+msgid "Community talk about us"
+msgstr "La comunidad habla de nosotros"
+
+#: src/constants/navigation.constants.ts:44
+msgid "Contact Us"
+msgstr "Contáctanos"
+
+#: src/constants/landing.constants.ts:71
+msgid "Desktop app"
+msgstr "Aplicación de escritorio"
+
+#: src/constants/navigation.constants.ts:33
+msgid "Developer"
+msgstr "Desarrollador"
+
+#: src/components/organisms/header/index.tsx:69
+#: src/constants/navigation.constants.ts:13
+msgid "Download"
+msgstr "Descargar"
+
+#: src/components/templates/home/index.tsx:383
+msgid "Download now"
+msgstr "Descargar ahora"
+
+#: src/constants/landing.constants.ts:41
+msgid "Earn passive income through our integrated staking and DeFi features."
+msgstr "Gana ingresos pasivos con nuestras funciones integradas de staking y DeFi."
+
+#: src/constants/landing.constants.ts:50
+msgid "Ethereum"
+msgstr "Ethereum"
+
+#: src/components/templates/home/index.tsx:248
+msgid "Explore now"
+msgstr "Explorar ahora"
+
+#: src/constants/landing.constants.ts:70
+msgid "Extension"
+msgstr "Extensión"
+
+#: src/constants/navigation.constants.ts:43
+msgid "FAQ"
+msgstr "Preguntas frecuentes"
+
+#: src/components/molecules/feature-card/index.tsx:32
+#: src/constants/navigation.constants.ts:19
+msgid "Features"
+msgstr "Funciones"
+
+#: src/constants/navigation.constants.ts:36
+msgid "Get Assets Listed"
+msgstr "Listar activos"
+
+#: src/constants/landing.constants.ts:34
+msgid "Instant transfer"
+msgstr "Transferencia instantánea"
+
+#: src/constants/landing.constants.ts:23
+msgid "Lightning-fast transaction processing with minimal fees and instant confirmations."
+msgstr "Procesamiento de transacciones ultrarrápido con comisiones mínimas y confirmaciones instantáneas."
+
+#: src/constants/landing.constants.ts:28
+msgid "Miner"
+msgstr "Minero"
+
+#: src/components/molecules/chain-card/index.tsx:40
+msgid "Missing brand icon for"
+msgstr "Falta el ícono de la marca para"
+
+#: src/constants/landing.constants.ts:64
+msgid "Mobile app"
+msgstr "Aplicación móvil"
+
+#: src/constants/landing.constants.ts:16
+msgid "Multi signature"
+msgstr "Firma múltiple"
+
+#: src/constants/navigation.constants.ts:23
+msgid "NFT"
+msgstr "NFT"
+
+#: src/constants/landing.constants.ts:40
+msgid "NFTs wallet"
+msgstr "Billetera de NFT"
+
+#: src/components/templates/home/index.tsx:330
+msgid "One Platform, Millions of Assets"
+msgstr "Una plataforma, millones de activos"
+
+#: src/components/templates/home/index.tsx:351
+msgid "One wallet. Cross platform"
+msgstr "Una billetera. Multiplataforma"
+
+#: src/components/templates/home/index.tsx:294
+msgid "Our platform is designed with accessibility and usability at its core. Whether you're a crypto beginner or an experienced DeFi user, TB Wallet provides the tools and features you need to navigate the Web3 ecosystem safely and efficiently."
+msgstr "Nuestra plataforma está diseñada con la accesibilidad y la usabilidad como base. Ya seas un principiante en criptomonedas o un usuario experimentado de DeFi, TB Wallet te ofrece las herramientas y funciones necesarias para navegar por el ecosistema Web3 de forma segura y eficiente."
+
+#: src/components/templates/home/index.tsx:235
+msgid "Powerful Web3 experiences"
+msgstr "Experiencias Web3 potentes"
+
+#: src/constants/navigation.constants.ts:53
+msgid "Press Kit"
+msgstr "Kit de prensa"
+
+#: src/constants/navigation.constants.ts:57
+msgid "Privacy Policy"
+msgstr "Política de privacidad"
+
+#: src/constants/navigation.constants.ts:24
+msgid "Security"
+msgstr "Seguridad"
+
+#: src/constants/landing.constants.ts:48
+msgid "Solana"
+msgstr "Solana"
+
+#: src/constants/navigation.constants.ts:22
+msgid "Staking"
+msgstr "Staking"
+
+#: src/components/organisms/footer/index.tsx:88
+msgid "Stay connected:"
+msgstr "Mantente conectado:"
+
+#: src/constants/navigation.constants.ts:35
+msgid "Submit Dapp"
+msgstr "Enviar Dapp"
+
+#: src/constants/navigation.constants.ts:41
+msgid "Support"
+msgstr "Soporte"
+
+#: src/constants/landing.constants.ts:29
+msgid "Support for hundreds of cryptocurrencies and tokens in one unified platform."
+msgstr "Soporte para cientos de criptomonedas y tokens en una única plataforma unificada."
+
+#: src/constants/landing.constants.ts:22
+#: src/constants/navigation.constants.ts:21
+msgid "Swap"
+msgstr "Intercambiar"
+
+#: src/constants/navigation.constants.ts:26
+msgid "Swift"
+msgstr "Rápido"
+
+#: src/constants/landing.constants.ts:47
+msgid "TBChat"
+msgstr "TBChat"
+
+#: src/constants/navigation.constants.ts:56
+msgid "Terms of Service"
+msgstr "Términos de servicio"
+
+#: src/components/templates/home/index.tsx:231
+msgid "True crypto ownership."
+msgstr "Propiedad real de tus criptomonedas."
+
+#: src/constants/navigation.constants.ts:55
+msgid "Trust Squad"
+msgstr "Equipo de confianza"
+
+#: src/components/templates/home/index.tsx:239
+msgid "Unlock the power of your cryptocurrency assets and explore the world of Web3 with Trust Wallet."
+msgstr "Desbloquea el poder de tus activos en criptomonedas y explora el mundo de Web3 con Trust Wallet."
+
+#: src/constants/navigation.constants.ts:11
+msgid "Wallet"
+msgstr "Billetera"
+
+#: src/constants/navigation.constants.ts:34
+msgid "Wallet Core"
+msgstr "Núcleo de la billetera"
+
+#: src/constants/landing.constants.ts:17
+msgid "Your assets are protected with military-grade encryption and multi-layer security protocols."
+msgstr "Tus activos están protegidos con cifrado de grado militar y protocolos de seguridad multicapa."

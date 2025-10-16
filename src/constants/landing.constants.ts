@@ -1,58 +1,53 @@
-﻿import { Chain, Download, Feature, Platform, Testimonial } from '@/types/landing.types'
+﻿import { msg } from '@lingui/core/macro'
 import BTC from '@public/assets/chain/BTC.svg'
 import ETH from '@public/assets/chain/ETH.svg'
 import SOL from '@public/assets/chain/SOL.svg'
 import TBC from '@public/assets/chain/TBC.svg'
-
 import Wallet from '@public/assets/icons/wallet.svg'
 import Message from '@public/assets/icons/message.svg'
 import Contact from '@public/assets/icons/contact.svg'
 import Layers from '@public/assets/icons/layers.svg'
 import User from '@public/assets/icons/user.svg'
+import { Chain, Download, Feature, Platform, Testimonial } from '@/types/landing.types'
 
 export const FEATURES: Feature[] = [
   {
     id: 'multi-signature',
-    title: 'multi-signature',
-    subtitle: 'multi-signature',
-    description: 'Your assets are protected with military-grade encryption and multi-layer security protocols.',
+    title: msg`Multi signature`,
+    description: msg`Your assets are protected with military-grade encryption and multi-layer security protocols.`,
     icon: Wallet,
   },
   {
     id: 'swap',
-    title: 'swap',
-    subtitle: 'swap',
-    description: 'Lightning-fast transaction processing with minimal fees and instant confirmations.',
+    title: msg`Swap`,
+    description: msg`Lightning-fast transaction processing with minimal fees and instant confirmations.`,
     icon: Message,
   },
   {
     id: 'miner',
-    title: 'miner',
-    subtitle: 'miner',
-    description: 'Support for hundreds of cryptocurrencies and tokens in one unified platform.',
+    title: msg`Miner`,
+    description: msg`Support for hundreds of cryptocurrencies and tokens in one unified platform.`,
     icon: Contact,
   },
   {
     id: 'instant-transfer',
-    title: 'instant-transfer',
-    subtitle: 'instant-transfer',
-    description: 'Access your wallet anywhere with our intuitive mobile application.',
+    title: msg`Instant transfer`,
+    description: msg`Access your wallet anywhere with our intuitive mobile application.`,
     icon: Layers,
   },
   {
     id: 'nfts-wallet',
-    title: 'nfts-wallet',
-    subtitle: 'nfts-wallet',
-    description: 'Earn passive income through our integrated staking and DeFi features.',
+    title: msg`NFTs wallet`,
+    description: msg`Earn passive income through our integrated staking and DeFi features.`,
     icon: User,
   },
 ] as const
 
 export const CHAINS: Chain[] = [
-  { id: 'TBC', name: 'TBChat', logo: TBC },
-  { id: 'SOL', name: 'Solana', logo: SOL },
-  { id: 'BTC', name: 'Bitcoin', logo: BTC },
-  { id: 'ETH', name: 'Ethereum', logo: ETH },
+  { id: 'TBC', title: msg`TBChat`, logo: TBC },
+  { id: 'SOL', title: msg`Solana`, logo: SOL },
+  { id: 'BTC', title: msg`Bitcoin`, logo: BTC },
+  { id: 'ETH', title: msg`Ethereum`, logo: ETH },
 ] as const
 
 export const BACKGROUND_ENUM: Record<number, string> = {
@@ -66,11 +61,14 @@ export const BACKGROUND_ENUM: Record<number, string> = {
 export const PLATFORMS: Platform[] = [
   {
     id: 'mobile',
-    content: '/assets/background/mobile-app.webp',
-    contentMobile: '/assets/background/mobile-app-mobile.webp',
+    title: msg`Mobile app`,
+    images: {
+      desktop: '/assets/background/mobile-app.webp',
+      mobile: '/assets/background/mobile-app-mobile.webp',
+    },
   },
-  { id: 'extensions', content: '', contentMobile: '' },
-  { id: 'desktop', content: '', contentMobile: '' },
+  { id: 'extensions', title: msg`Extension`, images: { desktop: '', mobile: '' } },
+  { id: 'desktop', title: msg`Desktop app`, images: { desktop: '', mobile: '' } },
 ]
 
 export const TESTIMONIALS: Testimonial[] = [
@@ -204,25 +202,33 @@ export const DOWNLOADS: Download[] = [
   {
     id: 'app-store',
     url: '#',
-    image: '/assets/download/app-store.webp',
-    imageMobile: '/assets/download/app-store-mobile.webp',
+    images: {
+      desktop: '/assets/download/app-store.webp',
+      mobile: '/assets/download/app-store-mobile.webp',
+    },
   },
   {
     id: 'windows',
     url: '#',
-    image: '/assets/download/windows.webp',
-    imageMobile: '/assets/download/windows-mobile.webp',
+    images: {
+      desktop: '/assets/download/windows.webp',
+      mobile: '/assets/download/windows-mobile.webp',
+    },
   },
   {
     id: 'google-play',
     url: '#',
-    image: '/assets/download/google-play.webp',
-    imageMobile: '/assets/download/google-play-mobile.webp',
+    images: {
+      desktop: '/assets/download/google-play.webp',
+      mobile: '/assets/download/google-play-mobile.webp',
+    },
   },
   {
     id: 'android',
     url: '#',
-    image: '/assets/download/android.webp',
-    imageMobile: '/assets/download/android-mobile.webp',
+    images: {
+      desktop: '/assets/download/android.webp',
+      mobile: '/assets/download/android-mobile.webp',
+    },
   },
 ]

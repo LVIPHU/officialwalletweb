@@ -22,8 +22,8 @@ export function DownloadCard({ data }: DownloadCardProps) {
         )}
       >
         <picture>
-          <source srcSet={data.imageMobile} media='(max-width: 767px)' />
-          <Image src={data.image} alt={data.id} width={210} height={52} className='object-contain' />
+          <source srcSet={data.images.mobile} media='(max-width: 767px)' />
+          <Image src={data.images.desktop} alt={data.id} width={210} height={52} className='object-contain' />
         </picture>
       </div>
     </NavigationLink>

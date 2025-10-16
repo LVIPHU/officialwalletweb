@@ -10,6 +10,8 @@ import { PageLangParam } from '@/i18n/initLingui'
 import { FONT_CLASH_DISPLAY, FONT_POPPINS } from '@/styles/fonts'
 import MobileSidebar from '@/components/organisms/mobile-sidebar'
 import DefaultLayout from '@/layouts/default'
+import { getDirection } from '@/lib/direction'
+import { LOCALES } from '@/constants/direction.constants'
 
 export async function generateStaticParams() {
   return linguiConfig.locales.map((lang) => ({ lang }))
@@ -23,9 +25,10 @@ export const metadata: Metadata = {
 
 export default async function RootLayout({ children, params }: Readonly<PropsWithChildren<PageLangParam>>) {
   const lang = (await params).lang
-
+  const dir = getDirection(lang as LOCALES)
   return (
     <html
+      dir={dir}
       lang={lang}
       className={cn(
         'w-full overflow-x-hidden scroll-smooth antialiased',

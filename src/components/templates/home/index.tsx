@@ -22,6 +22,7 @@ import { DownloadCard } from '@/components/molecules/download-card'
 import PlatformTabs from '@/components/molecules/platform-tabs'
 import Image from 'next/image'
 import { FeaturesSection } from '@/components/organisms/features-section'
+import { Trans } from '@lingui/react/macro'
 
 // const Parallax = dynamic(() => import('@/components/atoms/parallax').then((Parallax) => Parallax), { ssr: false })
 
@@ -226,18 +227,26 @@ export default function HomeTemplate() {
         <div className='grid items-center md:grid-cols-2'>
           <div className='flex flex-col items-center gap-8 md:items-start md:gap-13'>
             <h1 className='font-clash-display text-center text-3xl font-extrabold tracking-tight sm:text-4xl md:text-start md:text-6xl md:leading-20'>
-              <AuroraText>True crypto ownership.</AuroraText>
+              <AuroraText>
+                <Trans>True crypto ownership.</Trans>
+              </AuroraText>
               <br />
-              <AuroraText>Powerful Web3 experiences</AuroraText>
+              <AuroraText>
+                <Trans>Powerful Web3 experiences</Trans>
+              </AuroraText>
             </h1>
             <p className='max-w-md text-center md:text-start'>
-              Unlock the power of your cryptocurrency assets and explore the world of Web3 with Trust Wallet.
+              <Trans>
+                Unlock the power of your cryptocurrency assets and explore the world of Web3 with Trust Wallet.
+              </Trans>
             </p>
             <div className='min-h-svw md:hidden'>
               <Image src={'/assets/background/network.webp'} alt={'network'} width={612} height={612} />
             </div>
             <Button variant={'explore'} size={'2xl'} className={'w-fit'}>
-              <span>Explore now</span>
+              <span>
+                <Trans>Explore now</Trans>
+              </span>
             </Button>
           </div>
           <div className='hidden w-full md:block'>
@@ -251,11 +260,15 @@ export default function HomeTemplate() {
         <div className='flex h-full flex-col items-center gap-8 md:gap-6'>
           <AnimatedContent distance={50} threshold={0.7}>
             <div className='flex max-w-2xl flex-col gap-8 text-center md:gap-6'>
-              <h2 className='font-clash-display text-5xl font-semibold'>About</h2>
+              <h2 className='font-clash-display text-5xl font-semibold'>
+                <Trans>About</Trans>
+              </h2>
               <p>
-                As a leading self-custody multi-chain platform, we support millions of assets across 100+ blockchains.
-                We provide secure, user-friendly access to the decentralized web while maintaining complete control over
-                your digital assets.
+                <Trans>
+                  As a leading self-custody multi-chain platform, we support millions of assets across 100+ blockchains.
+                  We provide secure, user-friendly access to the decentralized web while maintaining complete control
+                  over your digital assets.
+                </Trans>
               </p>
             </div>
           </AnimatedContent>
@@ -274,11 +287,15 @@ export default function HomeTemplate() {
         <div className='grid h-full items-center justify-center gap-8 md:grid-cols-2'>
           <AnimatedContent distance={10} threshold={0.4} className='md:order-last'>
             <div className='flex h-full max-w-md flex-col gap-8 text-center md:gap-6 md:text-start'>
-              <h2 className='font-clash-display text-4xl font-semibold'>Build for everyone</h2>
+              <h2 className='font-clash-display text-4xl font-semibold'>
+                <Trans>Build for everyone</Trans>
+              </h2>
               <p>
-                Our platform is designed with accessibility and usability at its core. Whether you&apos;re a crypto
-                beginner or an experienced DeFi user, TB Wallet provides the tools and features you need to navigate the
-                Web3 ecosystem safely and efficiently.
+                <Trans>
+                  Our platform is designed with accessibility and usability at its core. Whether you&apos;re a crypto
+                  beginner or an experienced DeFi user, TB Wallet provides the tools and features you need to navigate
+                  the Web3 ecosystem safely and efficiently.
+                </Trans>
               </p>
             </div>
           </AnimatedContent>
@@ -309,10 +326,14 @@ export default function HomeTemplate() {
       <Container id='assets' className='min-h-dvh py-5 md:py-10 xl:py-16' data-lenis-scroll-snap-align='start'>
         <div className='flex flex-col items-center justify-center gap-8 md:gap-12'>
           <div className='flex max-w-3xl flex-col items-center gap-8 text-center md:gap-6 md:text-start'>
-            <h2 className='font-clash-display text-4xl font-semibold'>One Platform, Millions of Assets</h2>
+            <h2 className='font-clash-display text-4xl font-semibold'>
+              <Trans>One Platform, Millions of Assets</Trans>
+            </h2>
             <p>
-              As a leading self- custody multi- chain platform, we support millions of assets across 100+ blockchains.
-              From Bitcoin, Ethereum, and Solana, to Cosmos, Optimism, and much more .
+              <Trans>
+                As a leading self-custody multi-chain platform, we support millions of assets across 100+ blockchains.
+                From Bitcoin, Ethereum, and Solana, to Cosmos, Optimism, and much more.
+              </Trans>
             </p>
           </div>
           <div className='grid w-full grid-cols-2 gap-4 md:gap-10 lg:grid-cols-4'>
@@ -326,7 +347,9 @@ export default function HomeTemplate() {
       {/* One wallet. Cross-platform */}
       <Container id='platform' className='h-dvh py-5 md:py-10 xl:py-16' data-lenis-scroll-snap-align='start'>
         <div className='flex h-full flex-col items-center justify-center gap-8 text-center md:gap-12 md:text-start'>
-          <h2 className='font-clash-display text-4xl font-semibold'>One wallet. Cross platform</h2>
+          <h2 className='font-clash-display text-4xl font-semibold'>
+            <Trans>One wallet. Cross platform</Trans>
+          </h2>
           <div className='relative h-full grow'>
             <PlatformTabs />
             <AnimatedContent distance={0} threshold={0.36} className={'absolute inset-0 z-[-1]'}>
@@ -341,7 +364,9 @@ export default function HomeTemplate() {
       {/*Community Testimonials*/}
       <Container id='community' className='py-5 md:h-dvh md:py-10 xl:py-16' data-lenis-scroll-snap-align='start'>
         <div className='relative flex h-full flex-col items-center justify-center gap-8 text-center md:gap-12 md:text-start'>
-          <h2 className='font-clash-display max-w-sm text-4xl font-semibold md:max-w-none'>Community talk about us</h2>
+          <h2 className='font-clash-display max-w-sm text-4xl font-semibold md:max-w-none'>
+            <Trans>Community talk about us</Trans>
+          </h2>
           <AnimatedContent distance={0} threshold={0.4} className={'absolute inset-0 z-[-1]'}>
             <div className='relative top-1/5 left-[4.5%] h-full w-full scale-200 md:top-[5%] md:scale-130'>
               <div className='background-glow' />
@@ -354,7 +379,9 @@ export default function HomeTemplate() {
       {/* Download Section */}
       <Container id='download' className='h-dvh py-5 md:py-10 xl:py-16' data-lenis-scroll-snap-align='start'>
         <div className='relative flex h-full w-full flex-col items-center justify-center gap-8 text-center md:gap-12 md:text-start'>
-          <h2 className='font-clash-display text-4xl font-semibold'>Download now</h2>
+          <h2 className='font-clash-display text-4xl font-semibold'>
+            <Trans>Download now</Trans>
+          </h2>
           <div className='grid w-full max-w-[850px] grid-cols-2 gap-3 md:gap-6 lg:gap-12'>
             {DOWNLOADS.map((data) => (
               <DownloadCard key={data.id} data={data} />
