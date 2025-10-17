@@ -38,8 +38,8 @@ export function LocaleSwitcher() {
   return (
     <Popover>
       <PopoverTrigger asChild>
-        <Button variant='outline'>
-          <Globe className='mr-2 h-4 w-4' />
+        <Button variant='outline' size='sm' className='border-primary! text-primary! bg-background/50! rounded-full'>
+          <Globe className='mr-2 size-4' />
           {languages[locale]}
         </Button>
       </PopoverTrigger>

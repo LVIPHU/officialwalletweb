@@ -8,7 +8,7 @@ interface LogoProps {
   readonly size?: 'sm' | 'md' | 'lg' | 'xl' | '2xl' | '3xl'
 }
 
-export function Logo({ className, classNameIcon, showText = true, size = 'md' }: LogoProps) {
+export function Logo({ className, classNameIcon, showText = false, size = 'md' }: LogoProps) {
   const sizeClasses: Record<NonNullable<LogoProps['size']>, string> = {
     sm: 'size-6',
     md: 'size-8',
@@ -30,7 +30,7 @@ export function Logo({ className, classNameIcon, showText = true, size = 'md' }:
   return (
     <div className={cn('flex items-center space-x-2', className)}>
       <LogoSVG className={cn(sizeClasses[size], classNameIcon)} />
-      {!showText && <span className={cn('font-semibold text-gray-900', textSizeClasses[size])}>Company</span>}
+      {showText && <span className={cn('text-foreground font-semibold', textSizeClasses[size])}>TB Wallet</span>}
     </div>
   )
 }

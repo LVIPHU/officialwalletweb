@@ -41,9 +41,9 @@ function PlatformTabTrigger({ value, label }: { value: string; label: MessageDes
     <TabsTrigger
       value={value}
       className={cn(
-        'rounded-full border border-white! px-6 py-2 text-center text-white! transition-all duration-300',
-        'data-[state=active]:border-[#0DCC61]! data-[state=active]:bg-[#0DCC61]! data-[state=active]:text-black!',
-        'hover:border-[#0DCC61]/70! hover:text-[#0DCC61]!'
+        'border-foreground! text-foreground! transition-[color, border-color, background-color] rounded-full border border-solid px-6 py-2 text-center duration-300',
+        'data-[state=active]:border-primary! data-[state=active]:bg-primary! dark:data-[state=active]:text-black!',
+        'hover:border-primary/70! hover:text-primary!'
       )}
     >
       {i18n._(label)}

@@ -6,7 +6,7 @@ import { NavigationLink } from '@/components/atoms/navigation-link'
 import { useLingui } from '@lingui/react'
 import { Trans } from '@lingui/react/macro'
 
-const chainCardVariants = cva('rounded-[52px] flex flex-col gap-5 justify-center items-center', {
+const chainCardVariants = cva('rounded-[52px] flex flex-col gap-5 justify-center items-center text-white', {
   variants: {
     chain: {
       TBC: 'card-chain-green',

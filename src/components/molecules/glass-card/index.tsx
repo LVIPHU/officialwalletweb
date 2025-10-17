@@ -9,7 +9,7 @@ const GlassCard: React.FC<GlassCardProps> = ({ children, className }) => {
   return (
     <div
       className={cn(
-        'rounded-2xl border border-white/40 bg-black/40 shadow-[0_4px_30px_rgba(0,0,0,0.1)] backdrop-blur-sm',
+        'rounded-2xl border border-white/40 bg-black/40 text-white shadow-[0_4px_30px_rgba(0,0,0,0.1)] backdrop-blur-sm',
         className
       )}
     >

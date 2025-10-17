@@ -33,8 +33,6 @@ export default function FeaturesSlidesHorizontal({ children }: HorizontalSlidesP
   useEffect(() => {
     if (!targetRef.current || !triggerRef.current) return
 
-    ScrollTrigger.getAll().forEach((t) => t.kill())
-
     const ctx = gsap.context(() => {
       const container = targetRef.current!
       const cards = Array.from(container.children) as HTMLElement[]
@@ -94,8 +92,12 @@ export default function FeaturesSlidesHorizontal({ children }: HorizontalSlidesP
             scrub: true,
             containerAnimation: scrollTrack,
             markers: markersCardFadeOut,
-            onLeave: () => setStep(idx + 1),
-            onEnterBack: () => setStep(idx),
+            onLeave: () => {
+              setStep(idx + 1)
+            },
+            onEnterBack: () => {
+              setStep(idx)
+            },
           },
         })
 
@@ -106,7 +108,9 @@ export default function FeaturesSlidesHorizontal({ children }: HorizontalSlidesP
       })
     }, targetRef)
 
-    return () => ctx.revert()
+    return () => {
+      ctx.revert()
+    }
   }, [windowWidth, isMobile, markersHorizontalScroll, markersCardFadeIn, markersCardFadeOut])
 
   return (

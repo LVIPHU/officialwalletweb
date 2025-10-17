@@ -45,7 +45,7 @@ const TestimonialCard = ({ testimonial, className }: { testimonial: any; classNa
         </Avatar>
         <div className='overflow-hidden'>
           <p className='font-semibold'>{testimonial.name}</p>
-          <p className='text-muted-foreground truncate text-sm'>{testimonial.role}</p>
+          <p className='dark:text-muted-foreground truncate text-sm text-white'>{testimonial.role}</p>
         </div>
       </div>
     </div>
@@ -104,8 +104,8 @@ export function TestimonialCarousel() {
             </CarouselItem>
           ))}
         </CarouselContent>
-        <CarouselPrevious variant={'ghost'} className={"md:-left-2 md:[&_svg:not([class*='size-'])]:size-10"} />
-        <CarouselNext variant={'ghost'} className={"md:-right-2 md:[&_svg:not([class*='size-'])]:size-10"} />
+        <CarouselPrevious variant={'ghost'} className={"size-14 md:-left-2 md:[&_svg:not([class*='size-'])]:size-10"} />
+        <CarouselNext variant={'ghost'} className={"size-14 md:-right-2 md:[&_svg:not([class*='size-'])]:size-10"} />
       </Carousel>
       <div className='mt-4 flex items-center justify-center gap-2.5 md:hidden'>
         {Array.from({ length: count }).map((_, index) => (

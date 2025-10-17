@@ -11,7 +11,7 @@ msgstr ""
 "PO-Revision-Date: \n"
 "Last-Translator: \n"
 "Language-Team: \n"
-"Plural-Forms: \n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
 
 #: src/components/organisms/footer/index.tsx:43
 msgid ". All rights reserved."
@@ -28,11 +28,11 @@ msgstr "À propos de nous"
 
 #: src/constants/landing.constants.ts:35
 msgid "Access your wallet anywhere with our intuitive mobile application."
-msgstr "Accédez à votre portefeuille n'importe où grâce à notre application mobile intuitive."
+msgstr "Accédez à votre portefeuille où que vous soyez grâce à notre application mobile intuitive."
 
 #: src/components/templates/home/index.tsx:333
 msgid "As a leading self-custody multi-chain platform, we support millions of assets across 100+ blockchains. From Bitcoin, Ethereum, and Solana, to Cosmos, Optimism, and much more."
-msgstr "En tant que plateforme multi-chaîne d’auto-garde de premier plan, nous prenons en charge des millions d’actifs sur plus de 100 blockchains, de Bitcoin, Ethereum et Solana à Cosmos, Optimism et bien d’autres."
+msgstr "En tant que plateforme multi-chaîne d’auto-garde de premier plan, nous prenons en charge des millions d’actifs sur plus de 100 blockchains — de Bitcoin, Ethereum et Solana à Cosmos, Optimism et bien d’autres."
 
 #: src/components/templates/home/index.tsx:267
 msgid "As a leading self-custody multi-chain platform, we support millions of assets across 100+ blockchains. We provide secure, user-friendly access to the decentralized web while maintaining complete control over your digital assets."
@@ -97,7 +97,7 @@ msgstr "Télécharger maintenant"
 
 #: src/constants/landing.constants.ts:41
 msgid "Earn passive income through our integrated staking and DeFi features."
-msgstr "Générez un revenu passif grâce à nos fonctions intégrées de staking et de DeFi."
+msgstr "Générez un revenu passif grâce à nos fonctionnalités intégrées de staking et de DeFi."
 
 #: src/constants/landing.constants.ts:50
 msgid "Ethereum"
@@ -122,7 +122,7 @@ msgstr "Fonctionnalités"
 
 #: src/constants/navigation.constants.ts:36
 msgid "Get Assets Listed"
-msgstr "Faire référencer des actifs"
+msgstr "Référencer des actifs"
 
 #: src/constants/landing.constants.ts:34
 msgid "Instant transfer"
@@ -170,7 +170,7 @@ msgstr "Notre plateforme est conçue avec l’accessibilité et la convivialité
 
 #: src/components/templates/home/index.tsx:235
 msgid "Powerful Web3 experiences"
-msgstr "Expériences Web3 puissantes"
+msgstr "Des expériences Web3 puissantes"
 
 #: src/constants/navigation.constants.ts:53
 msgid "Press Kit"
@@ -206,7 +206,7 @@ msgstr "Assistance"
 
 #: src/constants/landing.constants.ts:29
 msgid "Support for hundreds of cryptocurrencies and tokens in one unified platform."
-msgstr "Prise en charge de centaines de cryptomonnaies et de tokens sur une plateforme unifiée."
+msgstr "Prise en charge de centaines de cryptomonnaies et de jetons sur une plateforme unifiée."
 
 #: src/constants/landing.constants.ts:22
 #: src/constants/navigation.constants.ts:21
@@ -227,7 +227,7 @@ msgstr "Conditions d’utilisation"
 
 #: src/components/templates/home/index.tsx:231
 msgid "True crypto ownership."
-msgstr "Véritable propriété crypto."
+msgstr "Véritable propriété des cryptomonnaies."
 
 #: src/constants/navigation.constants.ts:55
 msgid "Trust Squad"

@@ -2,6 +2,7 @@
 import React, { useRef, useEffect, ReactNode } from 'react'
 import { gsap } from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
+import { useIsMobile } from '@/hooks/use-mobile'
 
 gsap.registerPlugin(ScrollTrigger)
 
@@ -16,11 +17,13 @@ interface AnimatedContentProps {
   animateOpacity?: boolean
   scale?: number
   threshold?: number
+  thresholdMobile?: number
   delay?: number
   mode?: 'scrub' | 'once'
   offsetVH?: number
   onComplete?: () => void
   className?: string
+  name?: string
 }
 
 const AnimatedContent: React.FC<AnimatedContentProps> = ({
@@ -34,21 +37,26 @@ const AnimatedContent: React.FC<AnimatedContentProps> = ({
   animateOpacity = true,
   scale = 1,
   threshold = 0.1,
+  thresholdMobile = 0.25,
   delay = 0,
   mode = 'scrub',
   offsetVH = 0,
   onComplete,
   className = '',
+  name = '',
 }) => {
+  const isMobile = useIsMobile()
   const ref = useRef<HTMLDivElement>(null)
 
   useEffect(() => {
     const el = ref.current
     if (!el) return
 
+    const activeThreshold = isMobile ? thresholdMobile : threshold
+
     const axis = direction === 'horizontal' ? 'x' : 'y'
     const offset = reverse ? -distance : distance
-    const startPct = (1 - threshold) * 100
+    const startPct = (1 - activeThreshold) * 100
 
     // 👇 thêm offset theo viewport height
     const startPosition = `top ${startPct + offsetVH * 100}%`
@@ -64,7 +72,7 @@ const AnimatedContent: React.FC<AnimatedContentProps> = ({
       trigger: el,
       start: startPosition,
       end: endPosition,
-      id: `animated-${Date.now()}`,
+      id: `animated-${name ? name : Date.now()}`,
       markers: false,
     }
 
@@ -100,6 +108,7 @@ const AnimatedContent: React.FC<AnimatedContentProps> = ({
     animateOpacity,
     scale,
     threshold,
+    thresholdMobile,
     delay,
     mode,
     offsetVH,

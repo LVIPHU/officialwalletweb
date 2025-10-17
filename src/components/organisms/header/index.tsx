@@ -48,7 +48,7 @@ export default function Header() {
     >
       <div className='flex items-center justify-between gap-3'>
         {/* Logo */}
-        <Logo />
+        <Logo showText={true} />
 
         {/* Navigation Links */}
         <div className='hidden md:flex'>
@@ -62,10 +62,10 @@ export default function Header() {
         </div>
 
         {/* Right section */}
-        <div className='hidden items-center gap-2 md:flex'>
+        <div className='hidden items-center gap-10 md:flex'>
           <ThemeSwitcher />
           <LocaleSwitcher />
-          <Button variant='explore' className='rounded-full' size='sm'>
+          <Button variant='explore' size='sm' className='rounded-full text-base! font-normal'>
             <Trans>Download</Trans>
           </Button>
         </div>
@@ -77,9 +77,6 @@ export default function Header() {
   )
 }
 
-/* -------------------------------
- * Navigation Section (each group)
- * ----------------------------- */
 interface NavigationSectionProps {
   section: NavSection
 }
@@ -88,7 +85,13 @@ function NavigationSection({ section }: NavigationSectionProps) {
   const { i18n } = useLingui()
   return (
     <NavigationMenuItem>
-      <NavigationMenuTrigger className='data-[state=open]:text-primary bg-transparent'>
+      <NavigationMenuTrigger
+        className={cn(
+          'h-8 rounded-full border border-solid border-transparent bg-transparent py-0',
+          'hover:bg-primary hover:border-primary hover:text-black',
+          'data-[state=open]:bg-primary! data-[state=open]:border-primary data-[state=open]:text-black'
+        )}
+      >
         {i18n._(section.title)}
       </NavigationMenuTrigger>
 
@@ -118,9 +121,6 @@ function NavigationSection({ section }: NavigationSectionProps) {
   )
 }
 
-/* -------------------------------
- * List Item (each link)
- * ----------------------------- */
 interface ListItemProps extends Omit<React.ComponentPropsWithoutRef<'li'>, 'title'> {
   href: string
   title: MessageDescriptor

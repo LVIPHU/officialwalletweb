@@ -20,10 +20,10 @@ import {
 } from 'three'
 import fragmentShader from './particles/fragment.glsl'
 import vertexShader from './particles/vertex.glsl'
-import { useTheme } from 'next-themes'
 import { Model as ModelIphone13 } from '@/components/atoms/webgl/model/iphone-13'
 import { useIsMobile } from '@/hooks/use-mobile'
 import { STEPS_DESKTOP, STEPS_MOBILE } from '@/constants/steps.constants'
+// import { useTheme } from 'next-themes'
 
 function Raf({ render = true }) {
   const { advance } = useThree()
@@ -190,7 +190,7 @@ export function IPhone() {
       max: 1,
       step: 0.001,
     },
-    position: { value: [0, 0, 0] },
+    position: { step: 0.01, min: -1, value: [0, 0, 0], max: 1 },
     rotation: { step: 1, min: -360, value: [0, 0, 0], max: 360 },
   }))
 
@@ -282,9 +282,13 @@ export function IPhone() {
 
   useScroll(({ scroll }) => {
     if (!parent.current) return
+
+    const aspect = viewport.width / viewport.height
+    const safeHeight = window.visualViewport?.height ?? viewport.height
+
     if (custom) {
-      parent.current.scale.setScalar(viewport.height * scale)
-      parent.current.position.set(viewport.width * position[0], viewport.height * position[1], 0)
+      parent.current.scale.setScalar(safeHeight * scale)
+      parent.current.position.set(viewport.width * (position[0] / aspect), viewport.height * position[1], 0)
       parent.current.rotation.fromArray(rotation.map((v) => MathUtils.degToRad(v)))
       return
     }
@@ -313,7 +317,7 @@ export function IPhone() {
 
     const _scale = mapRange(0, 1, progress, from.scale, to.scale)
     const _position = new Vector3(
-      viewport.width * mapRange(0, 1, progress, from.position[0], to.position[0]),
+      viewport.width * mapRange(0, 1, progress, from.position[0] / aspect, to.position[0] / aspect),
       viewport.height * mapRange(0, 1, progress, from.position[1], to.position[1]),
       0
     )
@@ -325,7 +329,7 @@ export function IPhone() {
       ]
     )
 
-    parent.current.scale.setScalar(viewport.height * _scale)
+    parent.current.scale.setScalar(safeHeight * _scale)
     parent.current.position.copy(_position)
     parent.current.rotation.copy(_rotation)
 
@@ -384,8 +388,8 @@ export function IPhone() {
 }
 
 function Content() {
-  const { resolvedTheme } = useTheme()
-  const { viewport } = useThree()
+  // const { resolvedTheme } = useTheme()
+  // const { viewport } = useThree()
 
   return (
     <>

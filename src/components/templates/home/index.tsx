@@ -224,7 +224,7 @@ export default function HomeTemplate() {
 
       {/* Hero Section */}
       <Container className='flex min-h-dvh items-center pb-5 md:pb-10 xl:pb-16'>
-        <div className='grid items-center md:grid-cols-2 w-full'>
+        <div className='grid w-full items-center md:grid-cols-2'>
           <div className='flex flex-col items-center gap-8 md:items-start md:gap-13'>
             <h1 className='font-clash-display text-center text-3xl font-extrabold tracking-tight sm:text-4xl md:text-start md:text-6xl md:leading-20'>
               <AuroraText>
@@ -243,7 +243,7 @@ export default function HomeTemplate() {
             <div className='min-h-svw md:hidden'>
               <Image src={'/assets/background/network.webp'} alt={'network'} width={612} height={612} />
             </div>
-            <Button variant={'explore'} size={'2xl'} className={'w-fit'}>
+            <Button variant={'explore'} size={'2xl'} className={'w-fit md:relative'}>
               <span>
                 <Trans>Explore now</Trans>
               </span>
@@ -316,25 +316,29 @@ export default function HomeTemplate() {
         data-lenis-scroll-snap-align='start'
       >
         <div ref={featuresRectRef} className='flex h-full items-center md:h-auto md:items-start'>
-          <div className='grow'>
+          <div className='relative grow'>
             <FeaturesSection />
           </div>
         </div>
       </Container>
 
       {/* One Platform, Millions of Assets */}
-      <Container id='assets' className='min-h-dvh py-5 md:py-10 xl:py-16' data-lenis-scroll-snap-align='start'>
+      <Container id='assets' className='min-h-dvh py-5 md:py-10 xl:py-16'>
         <div className='flex flex-col items-center justify-center gap-8 md:gap-12'>
-          <div className='flex max-w-3xl flex-col items-center gap-8 text-center md:gap-6 md:text-start'>
-            <h2 className='font-clash-display text-4xl font-semibold'>
-              <Trans>One Platform, Millions of Assets</Trans>
-            </h2>
-            <p>
-              <Trans>
-                As a leading self-custody multi-chain platform, we support millions of assets across 100+ blockchains.
-                From Bitcoin, Ethereum, and Solana, to Cosmos, Optimism, and much more.
-              </Trans>
-            </p>
+          <div className='relative flex max-w-3xl flex-col items-center gap-8 text-center md:gap-6'>
+            <AnimatedContent name={'asset-title'}>
+              <h2 className='font-clash-display text-4xl font-semibold'>
+                <Trans>One Platform, Millions of Assets</Trans>
+              </h2>
+            </AnimatedContent>
+            <AnimatedContent name={'asset-description'}>
+              <p>
+                <Trans>
+                  As a leading self-custody multi-chain platform, we support millions of assets across 100+ blockchains.
+                  From Bitcoin, Ethereum, and Solana, to Cosmos, Optimism, and much more.
+                </Trans>
+              </p>
+            </AnimatedContent>
           </div>
           <div className='grid w-full grid-cols-2 gap-4 md:gap-10 lg:grid-cols-4'>
             {CHAINS.map((crypto) => (
@@ -345,11 +349,13 @@ export default function HomeTemplate() {
       </Container>
 
       {/* One wallet. Cross-platform */}
-      <Container id='platform' className='h-dvh py-5 md:py-10 xl:py-16' data-lenis-scroll-snap-align='start'>
+      <Container id='platform' className='h-dvh py-5 md:py-10 xl:py-16'>
         <div className='flex h-full flex-col items-center justify-center gap-8 text-center md:gap-12 md:text-start'>
-          <h2 className='font-clash-display text-4xl font-semibold'>
-            <Trans>One wallet. Cross platform</Trans>
-          </h2>
+          <AnimatedContent>
+            <h2 className='font-clash-display text-4xl font-semibold'>
+              <Trans>One wallet. Cross platform</Trans>
+            </h2>
+          </AnimatedContent>
           <div className='relative h-full grow'>
             <PlatformTabs />
             <AnimatedContent distance={0} threshold={0.36} className={'absolute inset-0 z-[-1]'}>
@@ -362,7 +368,7 @@ export default function HomeTemplate() {
       </Container>
 
       {/*Community Testimonials*/}
-      <Container id='community' className='py-5 md:h-dvh md:py-10 xl:py-16' data-lenis-scroll-snap-align='start'>
+      <Container id='community' className='py-5 md:h-dvh md:py-10 xl:py-16'>
         <div className='relative flex h-full flex-col items-center justify-center gap-8 text-center md:gap-12 md:text-start'>
           <h2 className='font-clash-display max-w-sm text-4xl font-semibold md:max-w-none'>
             <Trans>Community talk about us</Trans>
@@ -377,7 +383,7 @@ export default function HomeTemplate() {
       </Container>
 
       {/* Download Section */}
-      <Container id='download' className='h-dvh py-5 md:py-10 xl:py-16' data-lenis-scroll-snap-align='start'>
+      <Container id='download' className='h-dvh py-5 md:py-10 xl:py-16'>
         <div className='relative flex h-full w-full flex-col items-center justify-center gap-8 text-center md:gap-12 md:text-start'>
           <h2 className='font-clash-display text-4xl font-semibold'>
             <Trans>Download now</Trans>
