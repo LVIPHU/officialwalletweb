@@ -6,7 +6,7 @@ import { useIsMobile } from '@/hooks/use-mobile'
 
 gsap.registerPlugin(ScrollTrigger)
 
-interface AnimatedContentProps {
+export interface AnimatedContentProps {
   children: ReactNode
   distance?: number
   direction?: 'vertical' | 'horizontal'
@@ -73,7 +73,7 @@ const AnimatedContent: React.FC<AnimatedContentProps> = ({
       start: startPosition,
       end: endPosition,
       id: `animated-${name ? name : Date.now()}`,
-      markers: false,
+      markers: true,
     }
 
     if (mode === 'scrub') {
