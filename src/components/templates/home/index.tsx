@@ -248,7 +248,7 @@ export default function HomeTemplate() {
               </Trans>
             </p>
             <div className='min-h-svw md:hidden'>
-              <Image src={'/assets/background/network.webp'} alt={'network'} width={612} height={612} />
+              <Image src={'/assets/background/network.webp'} alt={'network'} width={612} height={612} className='object-contain' />
             </div>
             <Button variant={'explore'} size={'2xl'} className={'w-fit md:relative'}>
               <span>
