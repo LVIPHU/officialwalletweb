@@ -8,6 +8,7 @@ import { cn } from '@/lib/styles'
 import { useControls } from 'leva'
 import AnimatedContent from '@/components/atoms/animated-content'
 import { BACKGROUND_ENUM } from '@/constants/landing.constants'
+import { Trans } from '@lingui/react/macro'
 
 gsap.registerPlugin(ScrollTrigger)
 
@@ -119,6 +120,15 @@ export default function FeaturesSlidesHorizontal({ children }: HorizontalSlidesP
         <div className='relative left-[43%] h-full w-full scale-300'>
           <div data-color={BACKGROUND_ENUM[step]} className='background-glow' />
         </div>
+        <h2
+          className={cn(
+            'font-clash-display absolute transform text-center text-4xl font-semibold md:text-start',
+            'top-2/6 md:top-1/4 md:translate-y-[50%] lg:translate-y-[84%] xl:translate-y-[106%] 2xl:translate-y-[104%]',
+            'left-full lg:translate-x-[38%] xl:translate-x-[76%] 2xl:translate-x-[124%]'
+          )}
+        >
+          <Trans>Features</Trans>
+        </h2>
       </AnimatedContent>
       <div
         data-slot='target'

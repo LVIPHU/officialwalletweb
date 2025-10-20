@@ -8,24 +8,30 @@ import { useWindowSize } from '@/hooks/use-window-size'
 import { useScroll } from '@/hooks/use-scroll'
 import { useFrame } from '@/hooks/use-frame'
 import { Button } from '@/components/ui/button'
-import { DOWNLOADS } from '@/constants/landing.constants'
+import { CHAINS, DOWNLOADS } from '@/constants/landing.constants'
 import { isBrowser } from '@/lib/misc'
 import { useStore } from '@/lib/store'
 import { clamp, mapRange } from '@/lib/maths'
 import { Container } from '@/components/atoms/container'
 import Lenis from 'lenis'
-import { AuroraText } from '@/components/atoms/aurora-text'
 import { TestimonialCarousel } from '@/components/molecules/testimonial-carousel'
 import { DownloadCard } from '@/components/molecules/download-card'
 import PlatformTabs from '@/components/molecules/platform-tabs'
 import Image from 'next/image'
 import { FeaturesSection } from '@/components/organisms/features-section'
 import { Trans } from '@lingui/react/macro'
-import AssetsSection from "@/components/organisms/assets-section";
+import { ChainCard } from '@/components/molecules/chain-card'
 
 // const Parallax = dynamic(() => import('@/components/atoms/parallax').then((Parallax) => Parallax), { ssr: false })
 
-const AnimatedContent = dynamic(() => import('@/components/atoms/animated-content').then((AnimatedContent) => AnimatedContent), { ssr: false })
+const AuroraText = dynamic(() => import('@/components/atoms/aurora-text').then(({ AuroraText }) => AuroraText), {
+  ssr: false,
+})
+
+const AnimatedContent = dynamic(
+  () => import('@/components/atoms/animated-content').then((AnimatedContent) => AnimatedContent),
+  { ssr: false }
+)
 
 const WebGL = dynamic(() => import('@/components/atoms/webgl').then(({ WebGL }) => WebGL), { ssr: false })
 
@@ -324,7 +330,30 @@ export default function HomeTemplate() {
       </Container>
 
       {/* One Platform, Millions of Assets */}
-      <AssetsSection/>
+      <Container id='assets' className='min-h-dvh py-5 md:py-10 xl:py-16'>
+        <div className='flex flex-col items-center justify-center gap-8 md:gap-12'>
+          <div className='relative flex max-w-3xl flex-col items-center gap-8 text-center md:gap-6'>
+            <AnimatedContent name={'asset-title'}>
+              <h2 className='font-clash-display text-4xl font-semibold'>
+                <Trans>One Platform, Millions of Assets</Trans>
+              </h2>
+            </AnimatedContent>
+            <AnimatedContent name={'asset-description'}>
+              <p>
+                <Trans>
+                  As a leading self-custody multi-chain platform, we support millions of assets across 100+ blockchains.
+                  From Bitcoin, Ethereum, and Solana, to Cosmos, Optimism, and much more.
+                </Trans>
+              </p>
+            </AnimatedContent>
+          </div>
+          <div className='grid w-full grid-cols-2 gap-4 md:gap-10 lg:grid-cols-4'>
+            {CHAINS.map((crypto) => (
+              <ChainCard key={crypto.id} chain={crypto} />
+            ))}
+          </div>
+        </div>
+      </Container>
 
       {/* One wallet. Cross-platform */}
       <Container id='platform' className='h-dvh py-5 md:py-10 xl:py-16'>

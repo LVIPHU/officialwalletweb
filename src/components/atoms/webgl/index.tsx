@@ -235,14 +235,12 @@ export function IPhone() {
   // }, [model2, material])
 
   const parent = useRef<any>(null)
-
   const { viewport } = useThree()
 
   const _thresholds: Record<string, number> = useStore((state) => state.thresholds)
   const thresholds = useMemo(() => {
     return Object.values(_thresholds).sort((a, b) => a - b)
   }, [_thresholds])
-
   const [step, setStep] = useState(0)
 
   useEffect(() => {
@@ -283,11 +281,16 @@ export function IPhone() {
   useScroll(({ scroll }) => {
     if (!parent.current) return
 
-    const aspect = viewport.width / viewport.height
-    const safeHeight = window.visualViewport?.height ?? viewport.height
+    const aspect =
+      viewport.width >= viewport.height ? viewport.width / viewport.height : viewport.height / viewport.width
+
+    const safe =
+      viewport.width >= viewport.height
+        ? (window.visualViewport?.height ?? viewport.height)
+        : (window.visualViewport?.width ?? viewport.width)
 
     if (custom) {
-      parent.current.scale.setScalar(safeHeight * scale)
+      parent.current.scale.setScalar(safe * scale)
       parent.current.position.set(viewport.width * (position[0] / aspect), viewport.height * position[1], 0)
       parent.current.rotation.fromArray(rotation.map((v) => MathUtils.degToRad(v)))
       return
@@ -329,7 +332,7 @@ export function IPhone() {
       ]
     )
 
-    parent.current.scale.setScalar(safeHeight * _scale)
+    parent.current.scale.setScalar(safe * _scale)
     parent.current.position.copy(_position)
     parent.current.rotation.copy(_rotation)
 
