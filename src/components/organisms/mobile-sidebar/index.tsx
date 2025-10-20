@@ -1,34 +1,46 @@
 'use client'
 
+import { useState, useCallback, memo } from 'react'
+import { useLingui } from '@lingui/react'
+import { Trans } from '@lingui/react/macro'
+import { ChevronDown } from 'lucide-react'
+import Image from 'next/image'
+
 import {
   Sidebar,
   SidebarContent,
   SidebarFooter,
   SidebarHeader,
-  SidebarMenu,
-  SidebarMenuButton,
-  SidebarMenuItem,
   SidebarTrigger,
-  SidebarGroupContent,
-  SidebarGroupLabel,
   SidebarGroup,
+  SidebarGroupLabel,
+  SidebarGroupContent,
+  SidebarMenu,
+  SidebarMenuItem,
+  SidebarMenuButton,
 } from '@/components/ui/sidebar'
 import { Collapsible, CollapsibleContent, CollapsibleTrigger } from '@/components/ui/collapsible'
-import { ChevronDown } from 'lucide-react'
-import { NAVIGATION_ITEMS, SOCIAL_LINKS } from '@/constants/navigation.constants'
-import { useLingui } from '@lingui/react'
-import { Logo } from '@/components/atoms/logo'
+import { Button } from '@/components/ui/button'
+import { ThemeSwitcher } from '@/components/molecules/theme-switcher'
+import { LocaleSwitcher } from '@/components/molecules/locale-switcher'
 import { NavigationLink } from '@/components/atoms/navigation-link'
-import Image from 'next/image'
+import { Logo } from '@/components/atoms/logo'
 import { cn } from '@/lib/styles'
+import { NAVIGATION_ITEMS } from '@/constants/navigation.constants'
+import { NavItem } from '@/types/navigation.types'
+import type { MessageDescriptor } from '@lingui/core'
 
 export default function MobileSidebar() {
-  const { i18n } = useLingui()
+  const [openId, setOpenId] = useState<string | null>(null)
+
+  const handleToggle = useCallback((id: string, isOpen: boolean) => {
+    setOpenId(isOpen ? id : null)
+  }, [])
 
   return (
     <Sidebar>
       {/* Header */}
-      <SidebarHeader>
+      <SidebarHeader className='mb-11'>
         <div className='mt-2 flex items-center justify-between'>
           <Logo showText />
           <SidebarTrigger />
@@ -38,59 +50,83 @@ export default function MobileSidebar() {
       {/* Content */}
       <SidebarContent>
         {NAVIGATION_ITEMS.map((section) => (
-          <Collapsible key={section.id} defaultOpen={false} className='group/collapsible'>
-            <SidebarGroup>
-              {/* Collapsible Trigger */}
-              <SidebarGroupLabel asChild>
-                <CollapsibleTrigger className='text-foreground/80 hover:text-foreground flex w-full items-center justify-between py-2 text-sm font-medium'>
-                  {i18n._(section.title)}
-                  <ChevronDown className='ml-auto h-4 w-4 transition-transform group-data-[state=open]/collapsible:rotate-180' />
-                </CollapsibleTrigger>
-              </SidebarGroupLabel>
-
-              {/* Collapsible Content */}
-              <CollapsibleContent>
-                <SidebarGroupContent>
-                  <SidebarMenu>
-                    {section.items.map((item) => (
-                      <SidebarMenuItem key={item.id}>
-                        <SidebarMenuButton asChild>
-                          <NavigationLink
-                            href={item.href}
-                            className={cn(
-                              'flex items-center rounded-md px-3 py-2 text-sm transition-colors',
-                              'text-foreground/80 hover:text-foreground hover:bg-muted/40'
-                            )}
-                          >
-                            {i18n._(item.title)}
-                          </NavigationLink>
-                        </SidebarMenuButton>
-                      </SidebarMenuItem>
-                    ))}
-                  </SidebarMenu>
-                </SidebarGroupContent>
-              </CollapsibleContent>
-            </SidebarGroup>
-          </Collapsible>
+          <NavSection
+            key={section.id}
+            id={section.id}
+            title={section.title}
+            items={section.items}
+            open={openId === section.id}
+            onToggle={handleToggle}
+          />
         ))}
       </SidebarContent>
 
       {/* Footer */}
       <SidebarFooter>
-        <div className='flex items-center justify-center gap-4 py-4'>
-          {SOCIAL_LINKS.map((social) => (
-            <a
-              key={social.id}
-              href={social.href}
-              target='_blank'
-              rel='noopener noreferrer'
-              className='opacity-70 transition-opacity hover:opacity-100'
-            >
-              <Image src={social.icon} alt={social.id} width={20} height={20} className='object-contain' />
-            </a>
-          ))}
+        <div className='flex w-full flex-col items-end gap-6 p-10'>
+          <div className='flex gap-6'>
+            <ThemeSwitcher />
+            <LocaleSwitcher />
+          </div>
+          <Button variant='explore' className='w-full rounded-full text-xl font-normal whitespace-nowrap'>
+            <Trans>Download</Trans>
+          </Button>
         </div>
       </SidebarFooter>
     </Sidebar>
   )
 }
+
+interface NavSectionProps {
+  id: string
+  title: MessageDescriptor
+  items: readonly NavItem[]
+  open: boolean
+  onToggle: (id: string, isOpen: boolean) => void
+}
+
+const NavSection = memo(({ id, title, items, open, onToggle }: NavSectionProps) => {
+  const { i18n } = useLingui()
+  const handleToggle = useCallback((state: boolean) => onToggle(id, state), [id, onToggle])
+
+  return (
+    <Collapsible open={open} onOpenChange={handleToggle} className='group/collapsible px-10'>
+      <SidebarGroup className='border-sidebar-border border-b px-0'>
+        <SidebarGroupLabel asChild>
+          <CollapsibleTrigger
+            className={cn(
+              'w-full pb-2 text-2xl! font-semibold transition-colors',
+              'text-foreground! hover:text-foreground group-data-[state=open]/collapsible:text-primary!'
+            )}
+          >
+            {i18n._(title)}
+          </CollapsibleTrigger>
+        </SidebarGroupLabel>
+
+        <CollapsibleContent>
+          <SidebarGroupContent>
+            <SidebarMenu>
+              {items.map(({ id, title, href }) => (
+                <SidebarMenuItem key={id}>
+                  <SidebarMenuButton asChild>
+                    <NavigationLink
+                      href={href}
+                      className={cn(
+                        'flex items-center rounded-md py-2 text-xl font-medium transition-colors',
+                        'hover:bg-muted/40 text-[#BEEDC8]'
+                      )}
+                    >
+                      {i18n._(title)}
+                    </NavigationLink>
+                  </SidebarMenuButton>
+                </SidebarMenuItem>
+              ))}
+            </SidebarMenu>
+          </SidebarGroupContent>
+        </CollapsibleContent>
+      </SidebarGroup>
+    </Collapsible>
+  )
+})
+
+NavSection.displayName = 'NavSection'
