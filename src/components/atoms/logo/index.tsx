@@ -30,7 +30,11 @@ export function Logo({ className, classNameIcon, showText = false, size = 'md' }
   return (
     <div className={cn('flex items-center space-x-2', className)}>
       <LogoSVG className={cn(sizeClasses[size], classNameIcon)} />
-      {showText && <span className={cn('text-foreground font-semibold', textSizeClasses[size])}>TB Wallet</span>}
+      {showText && (
+        <span className={cn('text-foreground hidden font-semibold lg:inline-block', textSizeClasses[size])}>
+          TB Wallet
+        </span>
+      )}
     </div>
   )
 }

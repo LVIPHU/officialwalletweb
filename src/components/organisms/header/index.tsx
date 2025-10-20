@@ -39,19 +39,17 @@ export default function Header() {
       as='header'
       className={cn(
         'transition-all duration-300 ease-in-out',
-        'rounded-full py-2 saturate-100',
-        hasScrolled
-          ? 'bg-white/80 shadow-md backdrop-blur-xl dark:bg-white/10'
-          : 'bg-transparent shadow-none backdrop-blur-none',
+        'rounded-full px-4 py-2',
+        hasScrolled ? 'bg-white/80 shadow-md backdrop-blur-xl dark:bg-white/10' : 'bg-transparent shadow-none',
         SITE_METADATA.stickyNav ? 'sticky top-2 z-50 lg:top-3' : 'mt-2 lg:mt-3'
       )}
     >
       <div className='flex items-center justify-between gap-3'>
-        {/* Logo */}
-        <Logo showText={true} />
+        {/* Left: Logo */}
+        <Logo showText />
 
-        {/* Navigation Links */}
-        <div className='hidden md:flex'>
+        {/* Middle: Navigation (tablet & up) */}
+        <div className='hidden flex-1 justify-center md:flex'>
           <NavigationMenu>
             <NavigationMenuList>
               {NAVIGATION_ITEMS.map((section) => (
@@ -61,16 +59,16 @@ export default function Header() {
           </NavigationMenu>
         </div>
 
-        {/* Right section */}
-        <div className='hidden items-center gap-10 md:flex'>
+        {/* Right: Utilities (tablet & up) */}
+        <div className='hidden items-center gap-2 md:flex lg:gap-10'>
           <ThemeSwitcher />
           <LocaleSwitcher />
-          <Button variant='explore' size='sm' className='rounded-full text-base! font-normal'>
+          <Button variant='explore' size='sm' className='rounded-full text-base! font-normal whitespace-nowrap'>
             <Trans>Download</Trans>
           </Button>
         </div>
 
-        {/* Sidebar for mobile */}
+        {/* Mobile: Sidebar */}
         <SidebarTrigger className='md:hidden' />
       </div>
     </Container>
@@ -83,11 +81,12 @@ interface NavigationSectionProps {
 
 function NavigationSection({ section }: NavigationSectionProps) {
   const { i18n } = useLingui()
+
   return (
     <NavigationMenuItem>
       <NavigationMenuTrigger
         className={cn(
-          'h-8 rounded-full border border-solid border-transparent bg-transparent py-0',
+          'h-8 rounded-full border border-transparent bg-transparent px-3 text-sm font-medium',
           'hover:bg-primary hover:border-primary hover:text-black',
           'data-[state=open]:bg-primary! data-[state=open]:border-primary data-[state=open]:text-black'
         )}
@@ -96,19 +95,17 @@ function NavigationSection({ section }: NavigationSectionProps) {
       </NavigationMenuTrigger>
 
       <NavigationMenuContent>
-        <div className='flex gap-8 md:w-2xl lg:w-3xl xl:w-4xl 2xl:w-5xl'>
-          {/* Left highlight area */}
-          <div className='row-span-3'>
-            <div className='from-muted/50 to-muted flex h-full w-full flex-col justify-end rounded-md bg-linear-to-b p-6 no-underline outline-hidden select-none focus:shadow-md'>
-              <div className='mt-4 mb-2 text-lg font-medium'>shadcn/ui</div>
-              <p className='text-muted-foreground text-sm leading-tight'>
-                Beautifully designed components built with Tailwind CSS.
-              </p>
-            </div>
+        <div className='flex w-[90vw] max-w-6xl flex-col gap-6 p-4 lg:flex-row lg:gap-8 lg:p-6'>
+          {/* Left Highlight */}
+          <div className='from-muted/40 to-muted hidden w-1/3 flex-col justify-end rounded-md bg-gradient-to-b p-6 select-none lg:flex'>
+            <div className='mb-2 text-lg font-medium'>shadcn/ui</div>
+            <p className='text-muted-foreground text-sm leading-snug'>
+              Beautifully designed components built with Tailwind CSS.
+            </p>
           </div>
 
-          {/* List of links */}
-          <ul className='default-transition grid grid-cols-1 gap-x-6 gap-y-6 lg:grid-cols-2 xl:grid-cols-3 2xl:gap-x-10'>
+          {/* Links */}
+          <ul className='grid flex-1 grid-cols-1 gap-4 sm:grid-cols-2 lg:gap-6 xl:grid-cols-3'>
             {section.items.map((item) => (
               <ListItem key={item.id} href={item.href} title={item.title}>
                 Re-usable components built using Radix UI and Tailwind CSS.
@@ -143,7 +140,7 @@ function ListItem({ title, children, href, ...props }: ListItemProps) {
               : 'text-foreground/80 hover:text-foreground hover:bg-muted/40'
           )}
         >
-          <div className='text-sm leading-none font-medium'>{i18n._(title)}</div>
+          <div className='mb-1 text-sm leading-none font-medium'>{i18n._(title)}</div>
           <p className='text-muted-foreground line-clamp-2 text-sm leading-snug'>{children}</p>
         </NavigationLink>
       </NavigationMenuLink>

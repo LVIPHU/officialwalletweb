@@ -116,20 +116,33 @@ export default function FeaturesSlidesHorizontal({ children }: HorizontalSlidesP
 
   return (
     <div data-slot='trigger' ref={triggerRef} className='relative md:z-[-1]'>
-      <AnimatedContent distance={0} threshold={0.36} className={'absolute inset-y-2 left-0 z-[-1] h-screen w-[400px]'}>
-        <div className='relative left-[43%] h-full w-full scale-300'>
+      <AnimatedContent
+        distance={0}
+        threshold={0.36}
+        className={
+          'absolute inset-y-2 left-0 z-[-1] h-screen w-[400px] md:left-[1%] lg:left-[1%] xl:left-[1%] 2xl:left-[2%]'
+        }
+      >
+        <div className='relative h-full w-full scale-300'>
           <div data-color={BACKGROUND_ENUM[step]} className='background-glow' />
         </div>
+      </AnimatedContent>
+      <div
+        className={cn(
+          'absolute top-4/12 -translate-y-4/12',
+          'flex items-center justify-center',
+          'w-[12rem] min-w-[180px]',
+          'left-2/12 -translate-x-8/12'
+        )}
+      >
         <h2
           className={cn(
-            'font-clash-display absolute transform text-center text-4xl font-semibold md:text-start',
-            'top-2/6 md:top-1/4 md:translate-y-[50%] lg:translate-y-[84%] xl:translate-y-[106%] 2xl:translate-y-[104%]',
-            'left-full lg:translate-x-[38%] xl:translate-x-[76%] 2xl:translate-x-[124%]'
+            'font-clash-display relative left-1/12 hidden text-center text-4xl leading-tight font-semibold md:text-start sm:portrait:inline-block sm:landscape:hidden lg:landscape:inline-block'
           )}
         >
           <Trans>Features</Trans>
         </h2>
-      </AnimatedContent>
+      </div>
       <div
         data-slot='target'
         ref={targetRef}

@@ -18,22 +18,21 @@ export const ThemeSwitcher = ({ size = 20, className }: ThemeSwitchProps) => {
 
   const toggleTheme = {
     light: 'dark',
-    system: 'light',
-    dark: 'system',
+    dark: 'light',
   }
 
-  const validThemes = ['light', 'dark', 'system'] as const
+  const validThemes = ['light', 'dark'] as const
   const currentTheme = validThemes.includes(theme as (typeof validThemes)[number])
     ? (theme as (typeof validThemes)[number])
-    : 'light'
+    : 'dark'
 
   useEffect(() => {
     if (!wrapperRef.current) return
 
     const xPositions = {
       light: 0,
-      system: -size,
-      dark: -size * 2,
+      // system: -size,
+      dark: -size,
     }
 
     gsap.to(wrapperRef.current, {
@@ -53,7 +52,7 @@ export const ThemeSwitcher = ({ size = 20, className }: ThemeSwitchProps) => {
       <div className='cursor-pointer overflow-hidden' style={{ width: size, height: size }}>
         <div ref={wrapperRef} className='flex gap-1 pt-0.5 pl-0.5' style={{ display: 'flex', flexDirection: 'row' }}>
           <Sun size={size} className='shrink-0' />
-          <CloudSun size={size} className='shrink-0' />
+          {/*<CloudSun size={size} className='shrink-0' />*/}
           <Moon size={size} className='shrink-0' />
         </div>
       </div>

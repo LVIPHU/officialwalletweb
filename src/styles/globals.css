@@ -126,6 +126,22 @@
   }
 }
 
+@layer utilities {
+  @media (min-width: 768px) and (orientation: portrait) {
+    .tablet-portrait\:block {
+      display: block;
+    }
+    .tablet-portrait\:h-80dvh {
+      height: 80dvh;
+    }
+  }
+  @media (max-width: 767px) and (orientation: landscape) {
+    .mobile-landscape\:hidden {
+      display: none;
+    }
+  }
+}
+
 @layer component {
   /* Canvas */
   .canvas {

@@ -11,7 +11,7 @@ export default async function ProviderRegistry({ children, params }: Readonly<Pr
   initLingui(lang)
   return (
     <LocaleProvider initialLocale={lang} initialMessages={allMessages[lang]!}>
-      <ThemeProvider attribute='class' defaultTheme='system' enableColorScheme enableSystem disableTransitionOnChange>
+      <ThemeProvider attribute='class' defaultTheme='dark' enableColorScheme enableSystem disableTransitionOnChange>
         <DebugProvider>
           <SidebarProvider defaultOpen={false}>{children}</SidebarProvider>
         </DebugProvider>

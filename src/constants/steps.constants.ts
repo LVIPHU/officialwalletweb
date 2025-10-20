@@ -144,7 +144,7 @@ export const STEPS_MOBILE = [
   },
   {
     position: [0, 1, 0],
-    scale: 1,
+    scale: 0.8,
     rotation: [MathUtils.degToRad(0), MathUtils.degToRad(900), MathUtils.degToRad(0)],
     type: 1,
   },

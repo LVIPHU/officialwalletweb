@@ -39,11 +39,9 @@ export function FeaturesCarousel({ children }: FeaturesCarouselProps) {
         data-color={BACKGROUND_ENUM[current]}
         className='background-glow translate-x-[18%] translate-y-[10%] scale-140'
       />
-      <CarouselContent className='relative'>
+      <CarouselContent>
         {slides.map((slide, idx) => (
-          <CarouselItem key={idx} className='relative flex justify-center'>
-            {slide}
-          </CarouselItem>
+          <CarouselItem key={idx}>{slide}</CarouselItem>
         ))}
       </CarouselContent>
       <CarouselPrevious />

@@ -38,9 +38,13 @@ export function LocaleSwitcher() {
   return (
     <Popover>
       <PopoverTrigger asChild>
-        <Button variant='outline' size='sm' className='border-primary! text-primary! bg-background/50! rounded-full'>
-          <Globe className='mr-2 size-4' />
-          {languages[locale]}
+        <Button
+          variant='outline'
+          size='sm'
+          className='border-primary! text-primary! bg-background/50! items-center justify-center gap-2 rounded-full'
+        >
+          <Globe className='size-4' />
+          <p className='hidden lg:inline-block'>{languages[locale]}</p>
         </Button>
       </PopoverTrigger>
       <PopoverContent className='w-90'>

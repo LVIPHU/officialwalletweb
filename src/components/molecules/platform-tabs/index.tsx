@@ -17,9 +17,9 @@ export default function PlatformTabs() {
       </TabsList>
 
       {PLATFORMS.map(({ id, images: { desktop, mobile } }) => (
-        <TabsContent key={id} value={id} className='mt-11'>
+        <TabsContent key={id} value={id} className='mt-11 md:mt-0'>
           {desktop ? (
-            <div className='flex items-center justify-center'>
+            <div className='flex items-center justify-center pt-5 lg:pt-11'>
               <picture>
                 <source srcSet={mobile} media='(max-width: 767px)' />
                 <Image src={desktop} alt={id} width={940} height={548} className='object-contain' />

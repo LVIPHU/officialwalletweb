@@ -319,7 +319,7 @@ export default function HomeTemplate() {
       {/* Features Section */}
       <Container
         id='features'
-        className='h-dvh min-h-dvh py-5 md:h-auto md:py-10 xl:py-16'
+        className='h-[75dvh] py-5 md:h-auto md:py-10 xl:py-16'
         data-lenis-scroll-snap-align='start'
       >
         <div ref={featuresRectRef} className='flex h-full items-center md:h-auto md:items-start'>
@@ -330,7 +330,7 @@ export default function HomeTemplate() {
       </Container>
 
       {/* One Platform, Millions of Assets */}
-      <Container id='assets' className='min-h-dvh py-5 md:py-10 xl:py-16'>
+      <Container id='assets' className='min-h-[85dvh] py-5 md:py-10 xl:py-16'>
         <div className='flex flex-col items-center justify-center gap-8 md:gap-12'>
           <div className='relative flex max-w-3xl flex-col items-center gap-8 text-center md:gap-6'>
             <AnimatedContent name={'asset-title'}>
@@ -356,7 +356,7 @@ export default function HomeTemplate() {
       </Container>
 
       {/* One wallet. Cross-platform */}
-      <Container id='platform' className='h-dvh py-5 md:py-10 xl:py-16'>
+      <Container id='platform' className='min-h-[85dvh] py-5 md:py-10 xl:py-16'>
         <div className='flex h-full flex-col items-center justify-center gap-8 text-center md:gap-12 md:text-start'>
           <AnimatedContent>
             <h2 className='font-clash-display text-4xl font-semibold'>
@@ -375,7 +375,7 @@ export default function HomeTemplate() {
       </Container>
 
       {/*Community Testimonials*/}
-      <Container id='community' className='py-5 md:h-dvh md:py-10 xl:py-16'>
+      <Container id='community' className='min-h-[85dvh] py-5 md:py-10 xl:py-16'>
         <div className='relative flex h-full flex-col items-center justify-center gap-8 text-center md:gap-12 md:text-start'>
           <h2 className='font-clash-display max-w-sm text-4xl font-semibold md:max-w-none'>
             <Trans>Community talk about us</Trans>
@@ -390,7 +390,7 @@ export default function HomeTemplate() {
       </Container>
 
       {/* Download Section */}
-      <Container id='download' className='h-dvh py-5 md:py-10 xl:py-16'>
+      <Container id='download' className='min-h-[70dvh] py-5 md:min-h-[85dvh] md:py-10 xl:py-16'>
         <div className='relative flex h-full w-full flex-col items-center justify-center gap-8 text-center md:gap-12 md:text-start'>
           <h2 className='font-clash-display text-4xl font-semibold'>
             <Trans>Download now</Trans>
