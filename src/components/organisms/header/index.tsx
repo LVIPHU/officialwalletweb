@@ -46,7 +46,7 @@ export default function Header() {
     >
       <div className='flex items-center justify-between gap-3'>
         {/* Left: Logo */}
-        <Logo showText />
+        <Logo showText={true} hiddenTextOnMobile={true} />
 
         {/* Middle: Navigation (tablet & up) */}
         <div className='hidden flex-1 justify-center md:flex'>

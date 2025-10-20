@@ -51,7 +51,7 @@ export default function DebugProvider({ children }: Readonly<PropsWithChildren>)
 
   return (
     <>
-      <Leva hidden={!debug} />
+      <Leva hidden={true} />
       {debug && (
         <>
           <GridDebugger />

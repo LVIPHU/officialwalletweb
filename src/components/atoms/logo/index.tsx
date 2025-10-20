@@ -5,10 +5,17 @@ interface LogoProps {
   readonly className?: string
   readonly classNameIcon?: string
   readonly showText?: boolean
+  readonly hiddenTextOnMobile?: boolean
   readonly size?: 'sm' | 'md' | 'lg' | 'xl' | '2xl' | '3xl'
 }
 
-export function Logo({ className, classNameIcon, showText = false, size = 'md' }: LogoProps) {
+export function Logo({
+  className,
+  classNameIcon,
+  showText = false,
+  size = 'md',
+  hiddenTextOnMobile = false,
+}: LogoProps) {
   const sizeClasses: Record<NonNullable<LogoProps['size']>, string> = {
     sm: 'size-6',
     md: 'size-8',
@@ -28,10 +35,16 @@ export function Logo({ className, classNameIcon, showText = false, size = 'md' }
   }
 
   return (
-    <div className={cn('flex items-center space-x-2', className)}>
+    <div className={cn('flex flex-row items-center justify-center space-x-2', className)}>
       <LogoSVG className={cn(sizeClasses[size], classNameIcon)} />
       {showText && (
-        <span className={cn('text-foreground hidden font-semibold lg:inline-block', textSizeClasses[size])}>
+        <span
+          className={cn(
+            'text-foreground font-semibold',
+            hiddenTextOnMobile ? 'hidden lg:inline-block' : '',
+            textSizeClasses[size]
+          )}
+        >
           TB Wallet
         </span>
       )}
