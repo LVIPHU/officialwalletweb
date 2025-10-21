@@ -7,6 +7,8 @@ import { useStore } from '@/lib/store'
 import { useFrame } from '@/hooks/use-frame'
 import { isBrowser } from '@/lib/misc'
 import Lenis from 'lenis'
+import MobileSidebar from '@/components/organisms/mobile-sidebar'
+import { SidebarInset } from '@/components/ui/sidebar'
 
 // const Cursor = dynamic(
 //     () => import('@/components/atoms/cursor').then((mod) => mod.Cursor),
@@ -96,7 +98,8 @@ export default function DefaultLayout({ children }: Readonly<PropsWithChildren>)
       {/*<Cursor/>*/}
       <Intro />
       <PageTransition />
-      {children}
+      <MobileSidebar />
+      <SidebarInset>{children}</SidebarInset>
     </div>
   )
 }

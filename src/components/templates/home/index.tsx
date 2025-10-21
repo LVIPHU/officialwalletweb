@@ -256,7 +256,7 @@ export default function HomeTemplate() {
                 className='object-contain'
               />
             </div>
-            <Button variant={'explore'} size={'2xl'} className={'w-fit md:relative'}>
+            <Button variant={'neon'} size={'2xl'} className={'w-fit md:relative'}>
               <span>
                 <Trans>Explore now</Trans>
               </span>

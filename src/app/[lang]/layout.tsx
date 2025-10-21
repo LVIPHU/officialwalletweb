@@ -8,7 +8,6 @@ import Footer from '@/components/organisms/footer'
 import { PropsWithChildren } from 'react'
 import { PageLangParam } from '@/i18n/initLingui'
 import { FONT_CLASH_DISPLAY, FONT_POPPINS } from '@/styles/fonts'
-import MobileSidebar from '@/components/organisms/mobile-sidebar'
 import DefaultLayout from '@/layouts/default'
 import { getDirection } from '@/lib/direction'
 import { LOCALES } from '@/constants/direction.constants'
@@ -44,12 +43,11 @@ export default async function RootLayout({ children, params }: Readonly<PropsWit
         <link rel='prefetch' as='image' href='/assets/background/glow-olive.webp' />
         <title />
       </head>
-      <body className={cn('relative flex min-h-screen flex-col antialiased')}>
+      <body className={cn('relative flex min-h-dvh flex-col antialiased')}>
         <ProviderRegistry params={params}>
           <DefaultLayout>
             <div className={'background-hero'} />
             <Header />
-            <MobileSidebar />
             <main className='grow'>{children}</main>
             <Footer />
             <div className={'background-footer'} />

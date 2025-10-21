@@ -1,12 +1,15 @@
 'use client'
 import { Button } from '@/components/ui/button'
 import { usePathname, useRouter } from 'next/navigation'
-import { Item, ItemActions, ItemContent, ItemTitle } from '@/components/ui/item'
 import { Popover, PopoverContent, PopoverTrigger } from '@/components/ui/popover'
-import { Globe, Check } from 'lucide-react'
+import { Drawer, DrawerContent, DrawerHeader, DrawerTitle, DrawerTrigger } from '@/components/ui/drawer'
+import { Command, CommandEmpty, CommandItem, CommandList, CommandSeparator } from '@/components/ui/command'
+import { Globe } from 'lucide-react'
 import { useState } from 'react'
 import { cn } from '@/lib/styles'
 import { LOCALES } from '@/constants/direction.constants'
+import { useIsMobile } from '@/hooks/use-mobile'
+import { Trans } from '@lingui/react/macro'
 
 const languages: Record<LOCALES, string> = {
   ar: 'العربية',
@@ -19,11 +22,18 @@ const languages: Record<LOCALES, string> = {
   'zh-hant': '繁體中文',
 } as const
 
-export function LocaleSwitcher() {
+interface LocaleSwitcherProps {
+  classNameLabel?: string
+}
+
+export function LocaleSwitcher({ classNameLabel }: LocaleSwitcherProps) {
+  const defaultLocale: LOCALES = 'en'
+
+  const isMobile = useIsMobile()
   const pathname = usePathname()
   const router = useRouter()
 
-  const defaultLocale: LOCALES = 'en'
+  const [open, setOpen] = useState<boolean>(false)
   const [locale, setLocale] = useState<LOCALES>((pathname?.split('/')[1] as LOCALES) || defaultLocale)
 
   function handleChange(value: string) {
@@ -35,33 +45,62 @@ export function LocaleSwitcher() {
     router.push(`${newPath}${window.location.search}${window.location.hash}`)
   }
 
+  function Content() {
+    return (
+      <Command className='border-primary border-x border-t md:border-none'>
+        <CommandList defaultValue={undefined} className='max-h-auto'>
+          <CommandEmpty>
+            <Trans>No language found.</Trans>
+          </CommandEmpty>
+          {Object.keys(languages).map((lang, idx) => (
+            <div key={lang}>
+              {idx ? <CommandSeparator /> : null}
+              <CommandItem
+                value={lang}
+                onSelect={handleChange}
+                className={cn(
+                  'data-[selected=true]:bg-primary/15 cursor-pointer px-5 py-4 transition-colors duration-300',
+                  lang === locale && 'text-primary hover:text-primary!'
+                )}
+              >
+                <p>{languages[lang as keyof typeof languages]}</p>
+              </CommandItem>
+            </div>
+          ))}
+        </CommandList>
+      </Command>
+    )
+  }
+
+  if (isMobile) {
+    return (
+      <Drawer open={open} onOpenChange={setOpen}>
+        <DrawerTrigger asChild>
+          <Button size='sm' variant='alternative' className='items-center justify-center gap-2 rounded-full'>
+            <Globe className='size-4' />
+            <p className={classNameLabel}>{languages[locale]}</p>
+          </Button>
+        </DrawerTrigger>
+        <DrawerContent className={'p-4'}>
+          <DrawerHeader>
+            <DrawerTitle />
+          </DrawerHeader>
+          <Content />
+        </DrawerContent>
+      </Drawer>
+    )
+  }
+
   return (
-    <Popover>
+    <Popover open={open} onOpenChange={setOpen}>
       <PopoverTrigger asChild>
-        <Button
-          variant='outline'
-          size='sm'
-          className='border-primary! text-primary! bg-background/50! items-center justify-center gap-2 rounded-full'
-        >
+        <Button size='sm' variant='alternative' className='items-center justify-center gap-2 rounded-full'>
           <Globe className='size-4' />
-          <p className='hidden lg:inline-block'>{languages[locale]}</p>
+          <p className={classNameLabel}>{languages[locale]}</p>
         </Button>
       </PopoverTrigger>
-      <PopoverContent className='w-90'>
-        <div className='grid grid-cols-2 gap-4'>
-          {Object.keys(languages).map((lang) => (
-            <Item
-              key={lang}
-              onClick={() => handleChange(lang)}
-              className={cn('cursor-pointer', lang === locale && 'border-accent-foreground border-2')}
-            >
-              <ItemContent>
-                <ItemTitle>{languages[lang as keyof typeof languages]}</ItemTitle>
-              </ItemContent>
-              <ItemActions>{lang === locale && <Check className='size-4' />}</ItemActions>
-            </Item>
-          ))}
-        </div>
+      <PopoverContent className='w-3xs'>
+        <Content />
       </PopoverContent>
     </Popover>
   )

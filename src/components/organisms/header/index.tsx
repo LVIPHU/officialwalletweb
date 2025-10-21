@@ -23,8 +23,8 @@ import { NAVIGATION_ITEMS } from '@/constants/navigation.constants'
 import { LocaleSwitcher } from '@/components/molecules/locale-switcher'
 import { Trans } from '@lingui/react/macro'
 import { NavSection } from '@/types/navigation.types'
-import type { MessageDescriptor } from '@lingui/core'
 import { useLingui } from '@lingui/react'
+import type { MessageDescriptor } from '@lingui/core'
 
 export default function Header() {
   const [hasScrolled, setHasScrolled] = useState(false)
@@ -46,9 +46,9 @@ export default function Header() {
     >
       <div className='flex items-center justify-between gap-3'>
         {/* Left: Logo */}
-        <Logo showText={true} hiddenTextOnMobile={true} />
+        <Logo showText={true} classNameLabel='sm:hidden lg:inline-block' />
 
-        {/* Middle: Navigation (tablet & up) */}
+        {/* Middle: Navigation (tablet and up) */}
         <div className='hidden flex-1 justify-center md:flex'>
           <NavigationMenu>
             <NavigationMenuList>
@@ -62,14 +62,14 @@ export default function Header() {
         {/* Right: Utilities (tablet & up) */}
         <div className='hidden items-center gap-2 md:flex lg:gap-10'>
           <ThemeSwitcher />
-          <LocaleSwitcher />
-          <Button variant='explore' size='sm' className='rounded-full text-base! font-normal whitespace-nowrap'>
+          <LocaleSwitcher classNameLabel='hidden lg:inline-block' />
+          <Button variant='neon' size='sm' className='rounded-full text-base! font-normal whitespace-nowrap'>
             <Trans>Download</Trans>
           </Button>
         </div>
 
         {/* Mobile: Sidebar */}
-        <SidebarTrigger className='md:hidden' />
+        <SidebarTrigger className='text-primary size-9 md:hidden [&_svg]:size-7!' />
       </div>
     </Container>
   )
@@ -86,8 +86,9 @@ function NavigationSection({ section }: NavigationSectionProps) {
     <NavigationMenuItem>
       <NavigationMenuTrigger
         className={cn(
-          'h-8 rounded-full border border-transparent bg-transparent px-3 text-sm font-medium',
+          'h-8 rounded-full border border-transparent bg-transparent px-3 text-sm font-medium transition-colors duration-300',
           'hover:bg-primary hover:border-primary hover:text-black',
+          'focus:bg-primary focus:border-primary focus:text-black',
           'data-[state=open]:bg-primary! data-[state=open]:border-primary data-[state=open]:text-black'
         )}
       >

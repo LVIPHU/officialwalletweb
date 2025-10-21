@@ -1,11 +1,11 @@
 'use client'
-
 import { Button } from '@/components/ui/button'
-import { CloudSun, Moon, Sun } from 'lucide-react'
+import { Moon, Sun } from 'lucide-react'
 import { useTheme } from 'next-themes'
 import { useEffect, useRef } from 'react'
 import gsap from 'gsap'
 import { cn } from '@/lib/styles'
+import * as React from 'react'
 
 interface ThemeSwitchProps {
   size?: number
@@ -31,7 +31,6 @@ export const ThemeSwitcher = ({ size = 20, className }: ThemeSwitchProps) => {
 
     const xPositions = {
       light: 0,
-      // system: -size,
       dark: -size,
     }
 
@@ -46,14 +45,14 @@ export const ThemeSwitcher = ({ size = 20, className }: ThemeSwitchProps) => {
     <Button
       size='icon'
       variant='ghost'
-      className={cn('rounded-full', className)}
+      className={cn('hover:bg-background/50 hover:text-primary rounded-full', className)}
       onClick={() => setTheme(toggleTheme[currentTheme])}
     >
       <div className='cursor-pointer overflow-hidden' style={{ width: size, height: size }}>
         <div ref={wrapperRef} className='flex gap-1 pt-0.5 pl-0.5' style={{ display: 'flex', flexDirection: 'row' }}>
           <Sun size={size} className='shrink-0' />
-          {/*<CloudSun size={size} className='shrink-0' />*/}
           <Moon size={size} className='shrink-0' />
+          <span className='sr-only'>Toggle theme</span>
         </div>
       </div>
     </Button>

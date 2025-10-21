@@ -67,8 +67,8 @@ const TestimonialGrid = ({ testimonials }: { testimonials: any[] }) => (
 export function TestimonialCarousel() {
   const isMobile = useIsMobile()
   const [api, setApi] = useState<CarouselApi>()
-  const [current, setCurrent] = useState(0)
-  const [count, setCount] = useState(0)
+  const [current, setCurrent] = useState<number>(0)
+  const [count, setCount] = useState<number>(0)
 
   useEffect(() => {
     if (!api) {
@@ -99,7 +99,7 @@ export function TestimonialCarousel() {
       >
         <CarouselContent>
           {testimonialGroups.map((group, index) => (
-            <CarouselItem key={index}>
+            <CarouselItem className='basis-10/11 md:basis-full' key={index}>
               <TestimonialGrid testimonials={group} />
             </CarouselItem>
           ))}

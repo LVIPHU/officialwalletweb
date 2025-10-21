@@ -1,5 +1,5 @@
 'use client'
-import React from 'react'
+import React, { useMemo } from 'react'
 import { Logo } from '@/components/atoms/logo'
 import { NavigationLink } from '@/components/atoms/navigation-link'
 import { Container } from '@/components/atoms/container'
@@ -8,8 +8,19 @@ import { NAVIGATION_ITEMS, SOCIAL_LINKS } from '@/constants/navigation.constants
 import { Trans } from '@lingui/react/macro'
 import { NavSection } from '@/types/navigation.types'
 import { useLingui } from '@lingui/react'
+import { useIsMobile } from '@/hooks/use-mobile'
 
 const Footer = () => {
+  const isMobile = useIsMobile()
+
+  const navigationList = useMemo(() => {
+    if (isMobile) {
+      const arrNav = [...NAVIGATION_ITEMS]
+      return arrNav.sort((a, b) => a.items.length - b.items.length)
+    }
+    return NAVIGATION_ITEMS
+  }, [isMobile])
+
   return (
     <Container>
       <GlassCard className='mb-4 rounded-[44px] border-0 px-0 py-5 sm:mb-6 md:mb-24 md:px-7 md:py-10'>
@@ -28,7 +39,7 @@ const Footer = () => {
           </div>
 
           {/* Navigation sections */}
-          {NAVIGATION_ITEMS.map((section) => (
+          {navigationList.map((section) => (
             <FooterColumn key={section.id} section={section} />
           ))}
         </div>

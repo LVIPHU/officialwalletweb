@@ -13,11 +13,11 @@ msgstr ""
 "Language-Team: \n"
 "Plural-Forms: \n"
 
-#: src/components/organisms/footer/index.tsx:43
+#: src/components/organisms/footer/index.tsx:54
 msgid ". All rights reserved."
 msgstr "。版权所有。"
 
-#: src/components/templates/home/index.tsx:264
+#: src/components/templates/home/index.tsx:277
 #: src/constants/navigation.constants.ts:49
 msgid "About"
 msgstr "关于"
@@ -30,11 +30,11 @@ msgstr "关于我们"
 msgid "Access your wallet anywhere with our intuitive mobile application."
 msgstr "通过我们直观的移动应用程序，随时随地访问您的钱包。"
 
-#: src/components/templates/home/index.tsx:333
+#: src/components/templates/home/index.tsx:349
 msgid "As a leading self-custody multi-chain platform, we support millions of assets across 100+ blockchains. From Bitcoin, Ethereum, and Solana, to Cosmos, Optimism, and much more."
 msgstr "作为领先的自托管多链平台，我们支持超过100条区块链上的数百万种资产，从比特币、以太坊、索拉纳到Cosmos、Optimism等更多。"
 
-#: src/components/templates/home/index.tsx:267
+#: src/components/templates/home/index.tsx:280
 msgid "As a leading self-custody multi-chain platform, we support millions of assets across 100+ blockchains. We provide secure, user-friendly access to the decentralized web while maintaining complete control over your digital assets."
 msgstr "作为领先的自托管多链平台，我们支持超过100条区块链上的数百万种资产。我们为用户提供安全、友好的去中心化网络访问体验，同时让您完全掌控自己的数字资产。"
 
@@ -54,7 +54,7 @@ msgstr "浏览器扩展"
 msgid "Build"
 msgstr "构建"
 
-#: src/components/templates/home/index.tsx:291
+#: src/components/templates/home/index.tsx:304
 msgid "Build for everyone"
 msgstr "为所有人而构建"
 
@@ -70,7 +70,11 @@ msgstr "加入我们"
 msgid "Coming soon"
 msgstr "即将上线"
 
-#: src/components/templates/home/index.tsx:368
+#: src/components/templates/coming-soon/index.tsx:17
+msgid "Coming Soon"
+msgstr ""
+
+#: src/components/templates/home/index.tsx:387
 msgid "Community talk about us"
 msgstr "社区对我们的评价"
 
@@ -86,12 +90,13 @@ msgstr "桌面应用"
 msgid "Developer"
 msgstr "开发者"
 
-#: src/components/organisms/header/index.tsx:69
+#: src/components/organisms/header/index.tsx:67
+#: src/components/organisms/mobile-sidebar/index.tsx:72
 #: src/constants/navigation.constants.ts:13
 msgid "Download"
 msgstr "下载"
 
-#: src/components/templates/home/index.tsx:383
+#: src/components/templates/home/index.tsx:402
 msgid "Download now"
 msgstr "立即下载"
 
@@ -103,7 +108,7 @@ msgstr "通过我们集成的质押和DeFi功能赚取被动收入。"
 msgid "Ethereum"
 msgstr "以太坊"
 
-#: src/components/templates/home/index.tsx:248
+#: src/components/templates/home/index.tsx:261
 msgid "Explore now"
 msgstr "立即探索"
 
@@ -115,7 +120,8 @@ msgstr "扩展程序"
 msgid "FAQ"
 msgstr "常见问题"
 
-#: src/components/molecules/feature-card/index.tsx:32
+#: src/components/molecules/feature-card/index.tsx:33
+#: src/components/molecules/features-slides-horizontal/index.tsx:143
 #: src/constants/navigation.constants.ts:19
 msgid "Features"
 msgstr "功能"
@@ -148,6 +154,10 @@ msgstr "移动应用"
 msgid "Multi signature"
 msgstr "多重签名"
 
+#: src/components/templates/coming-soon/index.tsx:30
+msgid "name@email.com"
+msgstr ""
+
 #: src/constants/navigation.constants.ts:23
 msgid "NFT"
 msgstr "NFT"
@@ -156,19 +166,23 @@ msgstr "NFT"
 msgid "NFTs wallet"
 msgstr "NFT钱包"
 
-#: src/components/templates/home/index.tsx:330
+#: src/components/molecules/locale-switcher/index.tsx:53
+msgid "No language found."
+msgstr ""
+
+#: src/components/templates/home/index.tsx:344
 msgid "One Platform, Millions of Assets"
 msgstr "一个平台，数百万资产"
 
-#: src/components/templates/home/index.tsx:351
+#: src/components/templates/home/index.tsx:369
 msgid "One wallet. Cross platform"
 msgstr "一个钱包，跨平台使用"
 
-#: src/components/templates/home/index.tsx:294
+#: src/components/templates/home/index.tsx:307
 msgid "Our platform is designed with accessibility and usability at its core. Whether you're a crypto beginner or an experienced DeFi user, TB Wallet provides the tools and features you need to navigate the Web3 ecosystem safely and efficiently."
 msgstr "我们的平台以可访问性和易用性为核心设计。无论您是加密货币新手还是经验丰富的DeFi用户，TB Wallet都能为您提供安全高效地探索Web3生态系统的工具与功能。"
 
-#: src/components/templates/home/index.tsx:235
+#: src/components/templates/home/index.tsx:242
 msgid "Powerful Web3 experiences"
 msgstr "强大的Web3体验"
 
@@ -184,15 +198,23 @@ msgstr "隐私政策"
 msgid "Security"
 msgstr "安全性"
 
+#: src/components/templates/coming-soon/index.tsx:33
+msgid "Sign up"
+msgstr ""
+
 #: src/constants/landing.constants.ts:48
 msgid "Solana"
 msgstr "索拉纳"
+
+#: src/components/templates/coming-soon/index.tsx:23
+msgid "Something incredible is on the horizon! Drop your email below to be first in line for early access."
+msgstr ""
 
 #: src/constants/navigation.constants.ts:22
 msgid "Staking"
 msgstr "质押"
 
-#: src/components/organisms/footer/index.tsx:88
+#: src/components/organisms/footer/index.tsx:99
 msgid "Stay connected:"
 msgstr "保持联系："
 
@@ -225,7 +247,7 @@ msgstr "TBChat"
 msgid "Terms of Service"
 msgstr "服务条款"
 
-#: src/components/templates/home/index.tsx:231
+#: src/components/templates/home/index.tsx:238
 msgid "True crypto ownership."
 msgstr "真正的加密资产所有权。"
 
@@ -233,7 +255,7 @@ msgstr "真正的加密资产所有权。"
 msgid "Trust Squad"
 msgstr "Trust 团队"
 
-#: src/components/templates/home/index.tsx:239
+#: src/components/templates/home/index.tsx:246
 msgid "Unlock the power of your cryptocurrency assets and explore the world of Web3 with Trust Wallet."
 msgstr "释放您的加密资产潜能，与Trust Wallet一起探索Web3世界。"
 
@@ -244,6 +266,10 @@ msgstr "钱包"
 #: src/constants/navigation.constants.ts:34
 msgid "Wallet Core"
 msgstr "钱包核心"
+
+#: src/components/templates/coming-soon/index.tsx:20
+msgid "We’re launching soon!"
+msgstr ""
 
 #: src/constants/landing.constants.ts:17
 msgid "Your assets are protected with military-grade encryption and multi-layer security protocols."

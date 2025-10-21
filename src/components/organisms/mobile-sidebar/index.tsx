@@ -1,11 +1,7 @@
 'use client'
-
 import { useState, useCallback, memo } from 'react'
 import { useLingui } from '@lingui/react'
 import { Trans } from '@lingui/react/macro'
-import { ChevronDown } from 'lucide-react'
-import Image from 'next/image'
-
 import {
   Sidebar,
   SidebarContent,
@@ -18,6 +14,7 @@ import {
   SidebarMenu,
   SidebarMenuItem,
   SidebarMenuButton,
+  SidebarRail,
 } from '@/components/ui/sidebar'
 import { Collapsible, CollapsibleContent, CollapsibleTrigger } from '@/components/ui/collapsible'
 import { Button } from '@/components/ui/button'
@@ -43,12 +40,12 @@ export default function MobileSidebar() {
       <SidebarHeader className='mb-11'>
         <div className='mt-2 flex items-center justify-between'>
           <Logo showText />
-          <SidebarTrigger />
+          <SidebarTrigger className='text-primary size-9 [&_svg]:size-7!' />
         </div>
       </SidebarHeader>
 
       {/* Content */}
-      <SidebarContent>
+      <SidebarContent data-lenis-prevent>
         {NAVIGATION_ITEMS.map((section) => (
           <NavSection
             key={section.id}
@@ -60,15 +57,18 @@ export default function MobileSidebar() {
           />
         ))}
       </SidebarContent>
+      <SidebarRail />
 
       {/* Footer */}
       <SidebarFooter>
-        <div className='flex w-full flex-col items-end gap-6 p-10'>
-          <div className='flex gap-6'>
-            <ThemeSwitcher />
-            <LocaleSwitcher />
+        <div className='flex w-full flex-col items-end gap-6 px-8 pt-4 pb-8'>
+          <div className='grid w-full grid-cols-2'>
+            <div className='col-start-2 flex w-full justify-between'>
+              <ThemeSwitcher className='relative right-4.5' />
+              <LocaleSwitcher />
+            </div>
           </div>
-          <Button variant='explore' className='w-full rounded-full text-xl font-normal whitespace-nowrap'>
+          <Button variant='neon' className='h-11! w-full rounded-full text-xl font-normal whitespace-nowrap'>
             <Trans>Download</Trans>
           </Button>
         </div>
@@ -92,7 +92,7 @@ const NavSection = memo(({ id, title, items, open, onToggle }: NavSectionProps) 
   return (
     <Collapsible open={open} onOpenChange={handleToggle} className='group/collapsible px-10'>
       <SidebarGroup className='border-sidebar-border border-b px-0'>
-        <SidebarGroupLabel asChild>
+        <SidebarGroupLabel asChild className='group/label'>
           <CollapsibleTrigger
             className={cn(
               'w-full pb-2 text-2xl! font-semibold transition-colors',

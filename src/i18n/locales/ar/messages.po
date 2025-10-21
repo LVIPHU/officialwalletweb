@@ -13,11 +13,11 @@ msgstr ""
 "Language-Team: \n"
 "Plural-Forms: \n"
 
-#: src/components/organisms/footer/index.tsx:43
+#: src/components/organisms/footer/index.tsx:54
 msgid ". All rights reserved."
 msgstr "جميع الحقوق محفوظة."
 
-#: src/components/templates/home/index.tsx:264
+#: src/components/templates/home/index.tsx:277
 #: src/constants/navigation.constants.ts:49
 msgid "About"
 msgstr "حول"
@@ -30,11 +30,11 @@ msgstr "معلومات عنا"
 msgid "Access your wallet anywhere with our intuitive mobile application."
 msgstr "ادخل إلى محفظتك في أي مكان من خلال تطبيق الهاتف الجوال السهل الاستخدام."
 
-#: src/components/templates/home/index.tsx:333
+#: src/components/templates/home/index.tsx:349
 msgid "As a leading self-custody multi-chain platform, we support millions of assets across 100+ blockchains. From Bitcoin, Ethereum, and Solana, to Cosmos, Optimism, and much more."
 msgstr "كوننا منصة رائدة للحفظ الذاتي عبر سلاسل متعددة، ندعم ملايين الأصول على أكثر من 100 سلسلة بلوكشين. من بيتكوين، إيثيريوم، وسولانا، إلى كوزموس، أوبتيميزم، وأكثر من ذلك بكثير."
 
-#: src/components/templates/home/index.tsx:267
+#: src/components/templates/home/index.tsx:280
 msgid "As a leading self-custody multi-chain platform, we support millions of assets across 100+ blockchains. We provide secure, user-friendly access to the decentralized web while maintaining complete control over your digital assets."
 msgstr "كوننا منصة رائدة للحفظ الذاتي عبر سلاسل متعددة، ندعم ملايين الأصول على أكثر من 100 سلسلة بلوكشين. نوفر وصولًا آمنًا وسهل الاستخدام إلى الويب اللامركزي مع الحفاظ على سيطرتك الكاملة على أصولك الرقمية."
 
@@ -54,7 +54,7 @@ msgstr "امتداد المتصفح"
 msgid "Build"
 msgstr "بناء"
 
-#: src/components/templates/home/index.tsx:291
+#: src/components/templates/home/index.tsx:304
 msgid "Build for everyone"
 msgstr "نبني للجميع"
 
@@ -70,7 +70,11 @@ msgstr "الوظائف"
 msgid "Coming soon"
 msgstr "قريبًا"
 
-#: src/components/templates/home/index.tsx:368
+#: src/components/templates/coming-soon/index.tsx:17
+msgid "Coming Soon"
+msgstr ""
+
+#: src/components/templates/home/index.tsx:387
 msgid "Community talk about us"
 msgstr "المجتمع يتحدث عنا"
 
@@ -86,12 +90,13 @@ msgstr "تطبيق سطح المكتب"
 msgid "Developer"
 msgstr "المطوّر"
 
-#: src/components/organisms/header/index.tsx:69
+#: src/components/organisms/header/index.tsx:67
+#: src/components/organisms/mobile-sidebar/index.tsx:72
 #: src/constants/navigation.constants.ts:13
 msgid "Download"
 msgstr "تحميل"
 
-#: src/components/templates/home/index.tsx:383
+#: src/components/templates/home/index.tsx:402
 msgid "Download now"
 msgstr "حمّل الآن"
 
@@ -103,7 +108,7 @@ msgstr "اكسب دخلاً سلبيًا من خلال ميزات الستاكي
 msgid "Ethereum"
 msgstr "إيثيريوم"
 
-#: src/components/templates/home/index.tsx:248
+#: src/components/templates/home/index.tsx:261
 msgid "Explore now"
 msgstr "استكشف الآن"
 
@@ -115,7 +120,8 @@ msgstr "امتداد"
 msgid "FAQ"
 msgstr "الأسئلة الشائعة"
 
-#: src/components/molecules/feature-card/index.tsx:32
+#: src/components/molecules/feature-card/index.tsx:33
+#: src/components/molecules/features-slides-horizontal/index.tsx:143
 #: src/constants/navigation.constants.ts:19
 msgid "Features"
 msgstr "الميزات"
@@ -148,6 +154,10 @@ msgstr "تطبيق الهاتف الجوال"
 msgid "Multi signature"
 msgstr "توقيع متعدد"
 
+#: src/components/templates/coming-soon/index.tsx:30
+msgid "name@email.com"
+msgstr ""
+
 #: src/constants/navigation.constants.ts:23
 msgid "NFT"
 msgstr "رمز غير قابل للاستبدال (NFT)"
@@ -156,19 +166,23 @@ msgstr "رمز غير قابل للاستبدال (NFT)"
 msgid "NFTs wallet"
 msgstr "محفظة رموز NFT"
 
-#: src/components/templates/home/index.tsx:330
+#: src/components/molecules/locale-switcher/index.tsx:53
+msgid "No language found."
+msgstr ""
+
+#: src/components/templates/home/index.tsx:344
 msgid "One Platform, Millions of Assets"
 msgstr "منصة واحدة، ملايين الأصول"
 
-#: src/components/templates/home/index.tsx:351
+#: src/components/templates/home/index.tsx:369
 msgid "One wallet. Cross platform"
 msgstr "محفظة واحدة. عبر المنصات"
 
-#: src/components/templates/home/index.tsx:294
+#: src/components/templates/home/index.tsx:307
 msgid "Our platform is designed with accessibility and usability at its core. Whether you're a crypto beginner or an experienced DeFi user, TB Wallet provides the tools and features you need to navigate the Web3 ecosystem safely and efficiently."
 msgstr "تم تصميم منصتنا مع التركيز على السهولة وقابلية الاستخدام. سواء كنت مبتدئًا في العملات الرقمية أو مستخدمًا متمرسًا في التمويل اللامركزي، فإن محفظة TB توفر لك الأدوات والميزات التي تحتاجها للتنقل في نظام Web3 بأمان وكفاءة."
 
-#: src/components/templates/home/index.tsx:235
+#: src/components/templates/home/index.tsx:242
 msgid "Powerful Web3 experiences"
 msgstr "تجارب Web3 قوية"
 
@@ -184,15 +198,23 @@ msgstr "سياسة الخصوصية"
 msgid "Security"
 msgstr "الأمان"
 
+#: src/components/templates/coming-soon/index.tsx:33
+msgid "Sign up"
+msgstr ""
+
 #: src/constants/landing.constants.ts:48
 msgid "Solana"
 msgstr "سولانا"
+
+#: src/components/templates/coming-soon/index.tsx:23
+msgid "Something incredible is on the horizon! Drop your email below to be first in line for early access."
+msgstr ""
 
 #: src/constants/navigation.constants.ts:22
 msgid "Staking"
 msgstr "الستاكينغ"
 
-#: src/components/organisms/footer/index.tsx:88
+#: src/components/organisms/footer/index.tsx:99
 msgid "Stay connected:"
 msgstr "ابقَ متصلاً:"
 
@@ -225,7 +247,7 @@ msgstr "TBChat"
 msgid "Terms of Service"
 msgstr "شروط الخدمة"
 
-#: src/components/templates/home/index.tsx:231
+#: src/components/templates/home/index.tsx:238
 msgid "True crypto ownership."
 msgstr "الملكية الحقيقية للعملات الرقمية."
 
@@ -233,7 +255,7 @@ msgstr "الملكية الحقيقية للعملات الرقمية."
 msgid "Trust Squad"
 msgstr "فريق الثقة"
 
-#: src/components/templates/home/index.tsx:239
+#: src/components/templates/home/index.tsx:246
 msgid "Unlock the power of your cryptocurrency assets and explore the world of Web3 with Trust Wallet."
 msgstr "افتح قوة أصولك الرقمية واستكشف عالم Web3 مع Trust Wallet."
 
@@ -244,6 +266,10 @@ msgstr "المحفظة"
 #: src/constants/navigation.constants.ts:34
 msgid "Wallet Core"
 msgstr "جوهر المحفظة"
+
+#: src/components/templates/coming-soon/index.tsx:20
+msgid "We’re launching soon!"
+msgstr ""
 
 #: src/constants/landing.constants.ts:17
 msgid "Your assets are protected with military-grade encryption and multi-layer security protocols."
