@@ -1,6 +1,6 @@
 ﻿import { cn } from '@/lib/styles'
 import LogoSVG from '@public/assets/logo.svg'
-import {NavigationLink} from "@/components/atoms/navigation-link";
+import { NavigationLink } from '@/components/atoms/navigation-link'
 
 interface LogoProps {
   readonly className?: string
@@ -34,7 +34,7 @@ export function Logo({ className, classNameIcon, classNameLabel, showText = fals
       <div className={cn('flex flex-row items-center justify-center space-x-2', className)}>
         <LogoSVG className={cn(sizeClasses[size], classNameIcon)} />
         {showText && (
-            <span className={cn('text-foreground font-semibold', textSizeClasses[size], classNameLabel)}>TB Wallet</span>
+          <span className={cn('text-foreground font-semibold', textSizeClasses[size], classNameLabel)}>TB Wallet</span>
         )}
       </div>
     </NavigationLink>

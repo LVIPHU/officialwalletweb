@@ -13,13 +13,13 @@ export default function ComingSoonTemplate() {
       <div className='background-ellipse' />
       <Empty className='h-full gap-8'>
         <EmptyHeader className='max-w-4xl'>
-          <EmptyMedia className='font-medium text-lg md:text-xl rounded-full border border-foreground px-8 py-2 mb-6'>
+          <EmptyMedia className='border-foreground mb-6 rounded-full border px-8 py-2 text-lg font-medium md:text-xl'>
             <Trans>Coming Soon</Trans>
           </EmptyMedia>
-          <EmptyTitle className='font-medium text-4xl md:text-6xl'>
+          <EmptyTitle className='text-4xl font-medium md:text-6xl'>
             <Trans>We’re launching soon!</Trans>
           </EmptyTitle>
-          <EmptyDescription className='font-medium text-lg md:text-xl'>
+          <EmptyDescription className='text-lg font-medium md:text-xl'>
             <Trans>
               Something incredible is on the horizon! Drop your email below to be first in line for early access.
             </Trans>
@@ -29,7 +29,7 @@ export default function ComingSoonTemplate() {
           <InputGroup className='h-16'>
             <InputGroupInput className='h-14 text-xl! font-medium!' placeholder={i18n._(msg`name@email.com`)} />
             <InputGroupAddon align='inline-end'>
-              <InputGroupButton variant='default' size='2xl' className='text-white rounded-xl'>
+              <InputGroupButton variant='default' size='2xl' className='rounded-xl text-white'>
                 <Trans>Sign up</Trans>
               </InputGroupButton>
             </InputGroupAddon>
