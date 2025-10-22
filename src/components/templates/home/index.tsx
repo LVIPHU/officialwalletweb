@@ -282,7 +282,7 @@ export default function HomeTemplate() {
                   TB Wallet is your gateway to the decentralized world, redefining self-custody with unmatched security
                   and simplicity. As a leading multi-chain platform, we empower you to manage millions of assets across
                   100+ blockchains, from Bitcoin to Solana and beyond. With TB Wallet, you hold the keys to your digital
-                  wealth, enjoying seamless access to Web3 while keeping full control over your assets. Whether you're
+                  wealth, enjoying seamless access to Web3 while keeping full control over your assets. Whether you&apos;re
                   exploring DeFi, trading NFTs, or building your crypto portfolio, TB Wallet is your trusted partner in
                   the decentralized revolution.
                 </Trans>
@@ -311,7 +311,7 @@ export default function HomeTemplate() {
                 <Trans>
                   At TB Wallet, we believe Web3 should be accessible to everyone. Our platform combines intuitive design
                   with powerful functionality, making it the perfect choice for crypto newcomers and DeFi veterans
-                  alike. Whether you're taking your first steps into blockchain or executing advanced strategies, TB
+                  alike. Whether you&apos;re taking your first steps into blockchain or executing advanced strategies, TB
                   Wallet equips you with the tools to navigate the decentralized ecosystem with ease, security, and
                   efficiency. Join millions of users worldwide and experience Web3 without limits.
                 </Trans>
