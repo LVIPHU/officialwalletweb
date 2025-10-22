@@ -6,7 +6,7 @@ interface StoreState {
   setNavIsOpen: (toggle: boolean) => void
 
   screenIphone: string
-  setScreenIphone: (screenIphone: string) => void
+  setScreenIphone: (value: string | ((prev: string) => string)) => void
 
   lenis: Lenis | null
   setLenis: (lenis: Lenis | null) => void
@@ -31,7 +31,10 @@ export const useStore = create<StoreState>((set, get) => ({
   setNavIsOpen: (toggle) => set({ navIsOpen: toggle, overflow: !toggle }),
 
   screenIphone: '1',
-  setScreenIphone: (screenIphone) => set({ screenIphone }),
+  setScreenIphone: (screenIphone) =>
+    set((state) => ({
+      screenIphone: typeof screenIphone === 'function' ? screenIphone(state.screenIphone) : screenIphone,
+    })),
 
   lenis: null,
   setLenis: (lenis) => set({ lenis }),

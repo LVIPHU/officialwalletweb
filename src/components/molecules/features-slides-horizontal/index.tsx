@@ -9,6 +9,7 @@ import { useControls } from 'leva'
 import AnimatedContent from '@/components/atoms/animated-content'
 import { BACKGROUND_ENUM } from '@/constants/landing.constants'
 import { Trans } from '@lingui/react/macro'
+import { useStore } from '@/lib/store'
 
 gsap.registerPlugin(ScrollTrigger)
 
@@ -17,11 +18,14 @@ interface HorizontalSlidesProps {
 }
 
 export default function FeaturesSlidesHorizontal({ children }: HorizontalSlidesProps) {
+  const isMobile = useIsMobile()
+  const { width: windowWidth } = useWindowSize()
+
+  const setScreenIphone = useStore((state) => state.setScreenIphone)
+
   const [step, setStep] = useState<number>(0)
   const triggerRef = useRef<HTMLDivElement | null>(null)
   const targetRef = useRef<HTMLDivElement | null>(null)
-  const { width: windowWidth } = useWindowSize()
-  const isMobile = useIsMobile()
 
   const [
     { horizontalScroll: markersHorizontalScroll, cardFadeIn: markersCardFadeIn, cardFadeOut: markersCardFadeOut },
@@ -95,9 +99,11 @@ export default function FeaturesSlidesHorizontal({ children }: HorizontalSlidesP
             markers: markersCardFadeOut,
             onLeave: () => {
               setStep(idx + 1)
+              setScreenIphone((prev) => `${Number(prev) + 1}`)
             },
             onEnterBack: () => {
               setStep(idx)
+              setScreenIphone((prev) => `${Number(prev) - 1}`)
             },
           },
         })
@@ -112,7 +118,7 @@ export default function FeaturesSlidesHorizontal({ children }: HorizontalSlidesP
     return () => {
       ctx.revert()
     }
-  }, [windowWidth, isMobile, markersHorizontalScroll, markersCardFadeIn, markersCardFadeOut])
+  }, [windowWidth, isMobile, markersHorizontalScroll, markersCardFadeIn, markersCardFadeOut, setScreenIphone, setStep])
 
   return (
     <div data-slot='trigger' ref={triggerRef} className='relative md:z-[-1]'>
@@ -129,7 +135,7 @@ export default function FeaturesSlidesHorizontal({ children }: HorizontalSlidesP
       </AnimatedContent>
       <div
         className={cn(
-          'absolute top-4/12 -translate-y-4/12',
+          'absolute top-3/12 -translate-y-3/12',
           'flex items-center justify-center',
           'w-[12rem] min-w-[180px]',
           'left-2/12 -translate-x-8/12'

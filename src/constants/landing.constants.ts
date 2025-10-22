@@ -4,47 +4,52 @@ import ETH from '@public/assets/chain/ETH.svg'
 import SOL from '@public/assets/chain/SOL.svg'
 import TBC from '@public/assets/chain/TBC.svg'
 import Wallet from '@public/assets/icons/wallet.svg'
-import Message from '@public/assets/icons/message.svg'
-import Contact from '@public/assets/icons/contact.svg'
+import Swap from '@public/assets/icons/swap.svg'
+import Miner from '@public/assets/icons/miner.svg'
 import Layers from '@public/assets/icons/layers.svg'
-import User from '@public/assets/icons/user.svg'
+import USD from '@public/assets/icons/usd.svg'
 import { Chain, Download, Feature, Platform, Testimonial } from '@/types/landing.types'
 
 export const FEATURES: Feature[] = [
   {
+    id: 'miner',
+    title: msg`Miner`,
+    description: msg`Maximize your crypto earnings with TB Wallet’s built-in miner support. Seamlessly connect to mining pools or manage your mining activities directly from the wallet. Our platform simplifies the process, letting you monitor rewards and optimize your mining strategy—all while keeping your assets secure and under your control.`,
+    icon: Miner,
+    color: 'card-chain-green',
+  },
+  {
     id: 'multi-signature',
     title: msg`Multi signature`,
-    description: msg`Your assets are protected with military-grade encryption and multi-layer security protocols.`,
+    description: msg`Protect your wealth with industry-leading security. TB Wallet’s multi-signature feature requires multiple approvals for transactions, adding an extra layer of protection against unauthorized access. Perfect for individuals and teams, this feature ensures your assets remain safe, giving you peace of mind in the fast-paced world of Web3.`,
     icon: Wallet,
+    color: 'card-chain-blue-purple',
   },
   {
     id: 'swap',
     title: msg`Swap`,
-    description: msg`Lightning-fast transaction processing with minimal fees and instant confirmations.`,
-    icon: Message,
-  },
-  {
-    id: 'miner',
-    title: msg`Miner`,
-    description: msg`Support for hundreds of cryptocurrencies and tokens in one unified platform.`,
-    icon: Contact,
+    description: msg`Trade with ease across 100+ blockchains. TB Wallet’s integrated swap feature lets you exchange assets instantly, from Bitcoin to altcoins, without leaving the platform. Enjoy competitive rates, low fees, and a user-friendly interface that makes swapping tokens as simple as a few clicks, whether you're a beginner or a DeFi pro.`,
+    icon: Swap,
+    color: 'card-chain-purple',
   },
   {
     id: 'instant-transfer',
     title: msg`Instant transfer`,
-    description: msg`Access your wallet anywhere with our intuitive mobile application.`,
+    description: msg`Move your assets at the speed of Web3. TB Wallet’s instant transfer feature enables lightning-fast transactions across supported blockchains, with minimal delays and low costs. Whether you're sending tokens to a friend or interacting with a dApp, TB Wallet ensures your transfers are quick, reliable, and hassle-free.`,
     icon: Layers,
+    color: 'card-chain-orange',
   },
   {
-    id: 'nfts-wallet',
-    title: msg`NFTs wallet`,
-    description: msg`Earn passive income through our integrated staking and DeFi features.`,
-    icon: User,
+    id: 'usdt-fee',
+    title: msg`USDT Fee`,
+    description: msg`Take control of transaction costs with TB Wallet’s USDT fee option. Pay network fees in USDT for predictable, stable costs, even in volatile markets. This feature simplifies budgeting for transactions and enhances your Web3 experience by offering flexibility and transparency in every interaction.`,
+    icon: USD,
+    color: 'card-chain-olive',
   },
 ] as const
 
 export const CHAINS: Chain[] = [
-  { id: 'TBC', title: msg`TBChat`, logo: TBC },
+  { id: 'TBC', title: msg`TBChain`, logo: TBC },
   { id: 'SOL', title: msg`Solana`, logo: SOL },
   { id: 'BTC', title: msg`Bitcoin`, logo: BTC },
   { id: 'ETH', title: msg`Ethereum`, logo: ETH },

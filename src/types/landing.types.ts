@@ -6,6 +6,12 @@ import { MessageDescriptor } from '@lingui/core'
  */
 
 export interface Feature {
+  readonly color:
+    | 'card-chain-green'
+    | 'card-chain-blue-purple'
+    | 'card-chain-purple'
+    | 'card-chain-orange'
+    | 'card-chain-olive'
   readonly id: string
   readonly title: MessageDescriptor
   readonly description: MessageDescriptor

@@ -195,19 +195,19 @@ export default function HomeTemplate() {
   }, [lenis?.limit])
 
   useScroll((e) => {
-    // console.log('[Home template] use scroll', window.scrollY, e.scroll, e.isScrolling, e.velocity, e.isLocked)
-  })
-
-  useFrame(() => {
     if (window.scrollY <= 400) {
       setScreenIphone('1')
     } else if (window.scrollY > 400 && window.scrollY <= 1600) {
       setScreenIphone('2')
-    } else if (window.scrollY > 1600 && window.scrollY <= 3400) {
+    } else if (window.scrollY > 1600 && window.scrollY <= 2600) {
       setScreenIphone('3')
-    } else {
+    } else if (window.scrollY > 2600 && window.scrollY <= 3000) {
       setScreenIphone('4')
     }
+    console.log('[Home template] use scroll', window.scrollY, e.scroll, e.isScrolling, e.velocity, e.isLocked)
+  })
+
+  useFrame(() => {
     // console.log('[Home template] use frame', window.scrollY, lenis?.scroll, lenis?.isScrolling)
   }, 1)
 
@@ -235,16 +235,17 @@ export default function HomeTemplate() {
           <div className='flex flex-col items-center gap-8 md:items-start md:gap-13'>
             <h1 className='font-clash-display text-center text-3xl font-extrabold tracking-tight sm:text-4xl md:text-start md:text-6xl md:leading-20'>
               <AuroraText>
-                <Trans>True crypto ownership.</Trans>
+                <Trans>Own Your Crypto.</Trans>
               </AuroraText>
               <br />
               <AuroraText>
-                <Trans>Powerful Web3 experiences</Trans>
+                <Trans>Unleash Web3 Possibilities.</Trans>
               </AuroraText>
             </h1>
             <p className='max-w-md text-center md:text-start'>
               <Trans>
-                Unlock the power of your cryptocurrency assets and explore the world of Web3 with Trust Wallet.
+                Take control of your digital future with TB Wallet. Securely manage millions of assets across 100+
+                blockchains and dive into the decentralized web with confidence.
               </Trans>
             </p>
             <div className='min-h-svw md:hidden'>
@@ -278,9 +279,12 @@ export default function HomeTemplate() {
               </h2>
               <p>
                 <Trans>
-                  As a leading self-custody multi-chain platform, we support millions of assets across 100+ blockchains.
-                  We provide secure, user-friendly access to the decentralized web while maintaining complete control
-                  over your digital assets.
+                  TB Wallet is your gateway to the decentralized world, redefining self-custody with unmatched security
+                  and simplicity. As a leading multi-chain platform, we empower you to manage millions of assets across
+                  100+ blockchains, from Bitcoin to Solana and beyond. With TB Wallet, you hold the keys to your digital
+                  wealth, enjoying seamless access to Web3 while keeping full control over your assets. Whether you're
+                  exploring DeFi, trading NFTs, or building your crypto portfolio, TB Wallet is your trusted partner in
+                  the decentralized revolution.
                 </Trans>
               </p>
             </div>
@@ -295,19 +299,21 @@ export default function HomeTemplate() {
         </div>
       </Container>
 
-      {/* Build Section */}
-      <Container id='features' className='h-dvh py-5 md:py-10 xl:py-16' data-lenis-scroll-snap-align='start'>
+      {/* Platform Section */}
+      <Container id='platform' className='h-dvh py-5 md:py-10 xl:py-16' data-lenis-scroll-snap-align='start'>
         <div className='grid h-full items-center justify-center gap-8 md:grid-cols-2'>
           <AnimatedContent distance={10} threshold={0.4} className='md:order-last'>
             <div className='flex h-full max-w-md flex-col gap-8 text-center md:gap-6 md:text-start'>
               <h2 className='font-clash-display text-4xl font-semibold'>
-                <Trans>Build for everyone</Trans>
+                <Trans>Designed for All, Built for You</Trans>
               </h2>
               <p>
                 <Trans>
-                  Our platform is designed with accessibility and usability at its core. Whether you&apos;re a crypto
-                  beginner or an experienced DeFi user, TB Wallet provides the tools and features you need to navigate
-                  the Web3 ecosystem safely and efficiently.
+                  At TB Wallet, we believe Web3 should be accessible to everyone. Our platform combines intuitive design
+                  with powerful functionality, making it the perfect choice for crypto newcomers and DeFi veterans
+                  alike. Whether you're taking your first steps into blockchain or executing advanced strategies, TB
+                  Wallet equips you with the tools to navigate the decentralized ecosystem with ease, security, and
+                  efficiency. Join millions of users worldwide and experience Web3 without limits.
                 </Trans>
               </p>
             </div>
@@ -341,14 +347,17 @@ export default function HomeTemplate() {
           <div className='relative flex max-w-3xl flex-col items-center gap-8 text-center md:gap-6'>
             <AnimatedContent name={'asset-title'}>
               <h2 className='font-clash-display text-4xl font-semibold'>
-                <Trans>One Platform, Millions of Assets</Trans>
+                <Trans>Your All-in-One Web3 Wallet</Trans>
               </h2>
             </AnimatedContent>
             <AnimatedContent name={'asset-description'}>
               <p>
                 <Trans>
-                  As a leading self-custody multi-chain platform, we support millions of assets across 100+ blockchains.
-                  From Bitcoin, Ethereum, and Solana, to Cosmos, Optimism, and much more.
+                  TB Wallet is the ultimate self-custody solution, supporting millions of assets across 100+
+                  blockchains. From heavyweights like Bitcoin, Ethereum, and Solana to innovative networks like Cosmos
+                  and Optimism, TB Wallet connects you to the entire Web3 ecosystem. Manage your portfolio, explore
+                  DeFi, trade NFTs, and interact with dApps—all from a single, secure platform designed to empower you.
+                  With TB Wallet, the possibilities are endless, and your assets are always yours.
                 </Trans>
               </p>
             </AnimatedContent>

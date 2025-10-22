@@ -28,9 +28,7 @@ const Footer = () => {
         <div className='grid grid-cols-2 gap-x-3 gap-y-10 pt-0 pb-30 md:grid-cols-7 md:gap-8 md:py-10'>
           {/* Logo section */}
           <div className='col-span-full flex flex-col items-center gap-4 md:col-span-2'>
-            <NavigationLink href='#'>
-              <Logo classNameIcon='size-16 md:size-24' />
-            </NavigationLink>
+            <Logo classNameIcon='size-16 md:size-24' />
             <p className='text-5xl font-black text-white'>TB Wallet</p>
           </div>
 

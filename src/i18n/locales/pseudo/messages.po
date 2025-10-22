@@ -13,11 +13,11 @@ msgstr ""
 "Language-Team: \n"
 "Plural-Forms: \n"
 
-#: src/components/organisms/footer/index.tsx:54
+#: src/components/organisms/footer/index.tsx:52
 msgid ". All rights reserved."
 msgstr ""
 
-#: src/components/templates/home/index.tsx:277
+#: src/components/templates/home/index.tsx:278
 #: src/constants/navigation.constants.ts:49
 msgid "About"
 msgstr ""
@@ -26,19 +26,11 @@ msgstr ""
 msgid "About Us"
 msgstr ""
 
-#: src/constants/landing.constants.ts:35
-msgid "Access your wallet anywhere with our intuitive mobile application."
+#: src/components/templates/home/index.tsx:311
+msgid "At TB Wallet, we believe Web3 should be accessible to everyone. Our platform combines intuitive design with powerful functionality, making it the perfect choice for crypto newcomers and DeFi veterans alike. Whether you're taking your first steps into blockchain or executing advanced strategies, TB Wallet equips you with the tools to navigate the decentralized ecosystem with ease, security, and efficiency. Join millions of users worldwide and experience Web3 without limits."
 msgstr ""
 
-#: src/components/templates/home/index.tsx:349
-msgid "As a leading self-custody multi-chain platform, we support millions of assets across 100+ blockchains. From Bitcoin, Ethereum, and Solana, to Cosmos, Optimism, and much more."
-msgstr ""
-
-#: src/components/templates/home/index.tsx:280
-msgid "As a leading self-custody multi-chain platform, we support millions of assets across 100+ blockchains. We provide secure, user-friendly access to the decentralized web while maintaining complete control over your digital assets."
-msgstr ""
-
-#: src/constants/landing.constants.ts:49
+#: src/constants/landing.constants.ts:54
 msgid "Bitcoin"
 msgstr ""
 
@@ -52,10 +44,6 @@ msgstr ""
 
 #: src/constants/navigation.constants.ts:31
 msgid "Build"
-msgstr ""
-
-#: src/components/templates/home/index.tsx:304
-msgid "Build for everyone"
 msgstr ""
 
 #: src/constants/navigation.constants.ts:25
@@ -74,7 +62,7 @@ msgstr ""
 msgid "Coming Soon"
 msgstr ""
 
-#: src/components/templates/home/index.tsx:387
+#: src/components/templates/home/index.tsx:396
 msgid "Community talk about us"
 msgstr ""
 
@@ -82,7 +70,11 @@ msgstr ""
 msgid "Contact Us"
 msgstr ""
 
-#: src/constants/landing.constants.ts:71
+#: src/components/templates/home/index.tsx:308
+msgid "Designed for All, Built for You"
+msgstr ""
+
+#: src/constants/landing.constants.ts:76
 msgid "Desktop app"
 msgstr ""
 
@@ -96,23 +88,19 @@ msgstr ""
 msgid "Download"
 msgstr ""
 
-#: src/components/templates/home/index.tsx:402
+#: src/components/templates/home/index.tsx:411
 msgid "Download now"
 msgstr ""
 
-#: src/constants/landing.constants.ts:41
-msgid "Earn passive income through our integrated staking and DeFi features."
-msgstr ""
-
-#: src/constants/landing.constants.ts:50
+#: src/constants/landing.constants.ts:55
 msgid "Ethereum"
 msgstr ""
 
-#: src/components/templates/home/index.tsx:261
+#: src/components/templates/home/index.tsx:262
 msgid "Explore now"
 msgstr ""
 
-#: src/constants/landing.constants.ts:70
+#: src/constants/landing.constants.ts:75
 msgid "Extension"
 msgstr ""
 
@@ -120,8 +108,8 @@ msgstr ""
 msgid "FAQ"
 msgstr ""
 
-#: src/components/molecules/feature-card/index.tsx:33
-#: src/components/molecules/features-slides-horizontal/index.tsx:143
+#: src/components/molecules/feature-card/index.tsx:25
+#: src/components/molecules/features-slides-horizontal/index.tsx:149
 #: src/constants/navigation.constants.ts:19
 msgid "Features"
 msgstr ""
@@ -130,15 +118,15 @@ msgstr ""
 msgid "Get Assets Listed"
 msgstr ""
 
-#: src/constants/landing.constants.ts:34
+#: src/constants/landing.constants.ts:37
 msgid "Instant transfer"
 msgstr ""
 
-#: src/constants/landing.constants.ts:23
-msgid "Lightning-fast transaction processing with minimal fees and instant confirmations."
+#: src/constants/landing.constants.ts:17
+msgid "Maximize your crypto earnings with TB Wallet’s built-in miner support. Seamlessly connect to mining pools or manage your mining activities directly from the wallet. Our platform simplifies the process, letting you monitor rewards and optimize your mining strategy—all while keeping your assets secure and under your control."
 msgstr ""
 
-#: src/constants/landing.constants.ts:28
+#: src/constants/landing.constants.ts:16
 msgid "Miner"
 msgstr ""
 
@@ -146,11 +134,15 @@ msgstr ""
 msgid "Missing brand icon for"
 msgstr ""
 
-#: src/constants/landing.constants.ts:64
+#: src/constants/landing.constants.ts:69
 msgid "Mobile app"
 msgstr ""
 
-#: src/constants/landing.constants.ts:16
+#: src/constants/landing.constants.ts:38
+msgid "Move your assets at the speed of Web3. TB Wallet’s instant transfer feature enables lightning-fast transactions across supported blockchains, with minimal delays and low costs. Whether you're sending tokens to a friend or interacting with a dApp, TB Wallet ensures your transfers are quick, reliable, and hassle-free."
+msgstr ""
+
+#: src/constants/landing.constants.ts:23
 msgid "Multi signature"
 msgstr ""
 
@@ -162,28 +154,16 @@ msgstr ""
 msgid "NFT"
 msgstr ""
 
-#: src/constants/landing.constants.ts:40
-msgid "NFTs wallet"
-msgstr ""
-
 #: src/components/molecules/locale-switcher/index.tsx:53
 msgid "No language found."
 msgstr ""
 
-#: src/components/templates/home/index.tsx:344
-msgid "One Platform, Millions of Assets"
-msgstr ""
-
-#: src/components/templates/home/index.tsx:369
+#: src/components/templates/home/index.tsx:378
 msgid "One wallet. Cross platform"
 msgstr ""
 
-#: src/components/templates/home/index.tsx:307
-msgid "Our platform is designed with accessibility and usability at its core. Whether you're a crypto beginner or an experienced DeFi user, TB Wallet provides the tools and features you need to navigate the Web3 ecosystem safely and efficiently."
-msgstr ""
-
-#: src/components/templates/home/index.tsx:242
-msgid "Powerful Web3 experiences"
+#: src/components/templates/home/index.tsx:238
+msgid "Own Your Crypto."
 msgstr ""
 
 #: src/constants/navigation.constants.ts:53
@@ -194,6 +174,10 @@ msgstr ""
 msgid "Privacy Policy"
 msgstr ""
 
+#: src/constants/landing.constants.ts:24
+msgid "Protect your wealth with industry-leading security. TB Wallet’s multi-signature feature requires multiple approvals for transactions, adding an extra layer of protection against unauthorized access. Perfect for individuals and teams, this feature ensures your assets remain safe, giving you peace of mind in the fast-paced world of Web3."
+msgstr ""
+
 #: src/constants/navigation.constants.ts:24
 msgid "Security"
 msgstr ""
@@ -202,7 +186,7 @@ msgstr ""
 msgid "Sign up"
 msgstr ""
 
-#: src/constants/landing.constants.ts:48
+#: src/constants/landing.constants.ts:53
 msgid "Solana"
 msgstr ""
 
@@ -214,7 +198,7 @@ msgstr ""
 msgid "Staking"
 msgstr ""
 
-#: src/components/organisms/footer/index.tsx:99
+#: src/components/organisms/footer/index.tsx:97
 msgid "Stay connected:"
 msgstr ""
 
@@ -226,11 +210,7 @@ msgstr ""
 msgid "Support"
 msgstr ""
 
-#: src/constants/landing.constants.ts:29
-msgid "Support for hundreds of cryptocurrencies and tokens in one unified platform."
-msgstr ""
-
-#: src/constants/landing.constants.ts:22
+#: src/constants/landing.constants.ts:30
 #: src/constants/navigation.constants.ts:21
 msgid "Swap"
 msgstr ""
@@ -239,24 +219,44 @@ msgstr ""
 msgid "Swift"
 msgstr ""
 
-#: src/constants/landing.constants.ts:47
-msgid "TBChat"
+#: src/constants/landing.constants.ts:45
+msgid "Take control of transaction costs with TB Wallet’s USDT fee option. Pay network fees in USDT for predictable, stable costs, even in volatile markets. This feature simplifies budgeting for transactions and enhances your Web3 experience by offering flexibility and transparency in every interaction."
+msgstr ""
+
+#: src/components/templates/home/index.tsx:246
+msgid "Take control of your digital future with TB Wallet. Securely manage millions of assets across 100+ blockchains and dive into the decentralized web with confidence."
+msgstr ""
+
+#: src/components/templates/home/index.tsx:355
+msgid "TB Wallet is the ultimate self-custody solution, supporting millions of assets across 100+ blockchains. From heavyweights like Bitcoin, Ethereum, and Solana to innovative networks like Cosmos and Optimism, TB Wallet connects you to the entire Web3 ecosystem. Manage your portfolio, explore DeFi, trade NFTs, and interact with dApps—all from a single, secure platform designed to empower you. With TB Wallet, the possibilities are endless, and your assets are always yours."
+msgstr ""
+
+#: src/components/templates/home/index.tsx:281
+msgid "TB Wallet is your gateway to the decentralized world, redefining self-custody with unmatched security and simplicity. As a leading multi-chain platform, we empower you to manage millions of assets across 100+ blockchains, from Bitcoin to Solana and beyond. With TB Wallet, you hold the keys to your digital wealth, enjoying seamless access to Web3 while keeping full control over your assets. Whether you're exploring DeFi, trading NFTs, or building your crypto portfolio, TB Wallet is your trusted partner in the decentralized revolution."
+msgstr ""
+
+#: src/constants/landing.constants.ts:52
+msgid "TBChain"
 msgstr ""
 
 #: src/constants/navigation.constants.ts:56
 msgid "Terms of Service"
 msgstr ""
 
-#: src/components/templates/home/index.tsx:238
-msgid "True crypto ownership."
+#: src/constants/landing.constants.ts:31
+msgid "Trade with ease across 100+ blockchains. TB Wallet’s integrated swap feature lets you exchange assets instantly, from Bitcoin to altcoins, without leaving the platform. Enjoy competitive rates, low fees, and a user-friendly interface that makes swapping tokens as simple as a few clicks, whether you're a beginner or a DeFi pro."
 msgstr ""
 
 #: src/constants/navigation.constants.ts:55
 msgid "Trust Squad"
 msgstr ""
 
-#: src/components/templates/home/index.tsx:246
-msgid "Unlock the power of your cryptocurrency assets and explore the world of Web3 with Trust Wallet."
+#: src/components/templates/home/index.tsx:242
+msgid "Unleash Web3 Possibilities."
+msgstr ""
+
+#: src/constants/landing.constants.ts:44
+msgid "USDT Fee"
 msgstr ""
 
 #: src/constants/navigation.constants.ts:11
@@ -271,6 +271,6 @@ msgstr ""
 msgid "We’re launching soon!"
 msgstr ""
 
-#: src/constants/landing.constants.ts:17
-msgid "Your assets are protected with military-grade encryption and multi-layer security protocols."
+#: src/components/templates/home/index.tsx:350
+msgid "Your All-in-One Web3 Wallet"
 msgstr ""

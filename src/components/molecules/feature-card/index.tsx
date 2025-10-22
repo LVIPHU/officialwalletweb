@@ -9,14 +9,6 @@ interface FeatureCardProps {
   readonly className?: string
 }
 
-const variantCard: Record<string, string> = {
-  'multi-signature': 'card-chain-green',
-  swap: 'card-chain-blue-purple',
-  miner: 'card-chain-purple',
-  'instant-transfer': 'card-chain-orange',
-  'nfts-wallet': 'card-chain-olive ',
-}
-
 export function FeatureCard({ feature, className }: FeatureCardProps) {
   const { i18n } = useLingui()
   return (
@@ -34,10 +26,7 @@ export function FeatureCard({ feature, className }: FeatureCardProps) {
           </h2>
           <div
             data-icon
-            className={cn(
-              'flex size-30 flex-col items-center justify-center gap-5 rounded-3xl',
-              variantCard[feature.id]
-            )}
+            className={cn('flex size-30 flex-col items-center justify-center gap-5 rounded-3xl', feature.color)}
           >
             <feature.icon className='size-20' fill='currentColor' />
           </div>
