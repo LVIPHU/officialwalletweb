@@ -35,7 +35,7 @@ const TestimonialCard = ({ testimonial, className }: { testimonial: any; classNa
   <GlassCard className={className}>
     <div className='flex h-full flex-col items-center justify-center gap-5 px-6 py-5 md:items-start md:gap-10'>
       <div className='flex flex-col items-center justify-center gap-6 md:items-start md:gap-4'>
-        <QuoteSVG className='size-7 md:size-4' />
+        <QuoteSVG className='size-7 fill-black md:size-4 dark:fill-white' />
         <p>{testimonial.content}</p>
       </div>
       <div className='flex flex-col items-center gap-3 md:flex-row'>
@@ -45,7 +45,7 @@ const TestimonialCard = ({ testimonial, className }: { testimonial: any; classNa
         </Avatar>
         <div className='overflow-hidden'>
           <p className='font-semibold'>{testimonial.name}</p>
-          <p className='dark:text-muted-foreground truncate text-sm text-white'>{testimonial.role}</p>
+          <p className='dark:text-muted-foreground truncate text-sm'>{testimonial.role}</p>
         </div>
       </div>
     </div>

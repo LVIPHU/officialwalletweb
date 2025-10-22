@@ -13,7 +13,7 @@ export function DownloadCard({ data }: DownloadCardProps) {
       <div
         className={cn(
           'relative flex min-h-[210px] w-full max-w-[400px] items-center justify-center overflow-hidden rounded-3xl p-4',
-          'border border-solid border-[rgba(255,_255,_255,_0.5)] hover:border-[#0DCC61]',
+          'hover:border-primary border border-solid border-[rgba(255,_255,_255,_0.5)]',
           'bg-[linear-gradient(294.04deg,_#003100_-39.23%,_#002500_-2.81%,_#000B00_82.39%,_#003E00_144.17%)] transition-all duration-300',
           // before element chỉ xuất hiện khi hover
           "before:absolute before:-bottom-30 before:h-[175px] before:w-[305px] before:content-['']",

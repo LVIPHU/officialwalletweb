@@ -36,6 +36,14 @@ export function Model(props: ModelProps) {
   }) as Record<ScreenKey, THREE.Texture>
 
   useEffect(() => {
+    if (materials?.Screen_Glass) {
+      materials.Screen_Glass.transparent = true
+      materials.Screen_Glass.opacity = 0
+      materials.Screen_Glass.depthWrite = false
+    }
+  }, [materials])
+
+  useEffect(() => {
     Object.values(textures).forEach((t) => {
       t.flipY = true
       t.colorSpace = THREE.SRGBColorSpace
@@ -61,7 +69,7 @@ export function Model(props: ModelProps) {
 
   return (
     <group {...props} dispose={null}>
-      <Environment preset='night' />
+      <Environment preset='city' resolution={256} />
       <group scale={0.01}>
         <group scale={100}>
           <mesh

@@ -29,7 +29,7 @@ const Footer = () => {
           {/* Logo section */}
           <div className='col-span-full flex flex-col items-center gap-4 md:col-span-2'>
             <Logo classNameIcon='size-16 md:size-24' />
-            <p className='text-5xl font-black text-white'>TB Wallet</p>
+            <p className='text-5xl font-black text-black dark:text-white'>TB Wallet</p>
           </div>
 
           <div className='col-span-full md:hidden'>
@@ -44,9 +44,9 @@ const Footer = () => {
 
         {/* --- Bottom Bar --- */}
         <div className='absolute inset-x-0 bottom-2 mt-5 flex flex-col items-center justify-center pt-7 md:relative lg:flex-row lg:justify-between'>
-          <span className='text-white dark:text-neutral-500'>
+          <span className='text-neutral-500'>
             © 2025{' '}
-            <NavigationLink href='#' className='hover:text-[#0DCC61]'>
+            <NavigationLink href='#' className='hover:text-primary'>
               TB Wallet
             </NavigationLink>{' '}
             <Trans>. All rights reserved.</Trans>
@@ -68,17 +68,17 @@ interface FooterColumnProps {
 function FooterColumn({ section }: FooterColumnProps) {
   const { i18n } = useLingui()
   return (
-    <div className='flex items-start justify-center lg:mx-auto'>
+    <div className='flex lg:mx-auto'>
       <div className='flex flex-col gap-4 text-start md:gap-7'>
         {/* i18n title section */}
-        <h4 className='text-lg font-medium text-white capitalize'>{i18n._(section.title)}</h4>
+        <h4 className='text-lg font-medium capitalize'>{i18n._(section.title)}</h4>
 
         <ul className='space-y-3 text-sm md:space-y-7'>
           {section.items.map((item) => (
             <li key={item.id}>
               <NavigationLink
                 href={item.href}
-                className='hover:text-primary dark:hover:text-primary text-white transition-colors duration-200 dark:text-neutral-500'
+                className='hover:text-primary dark:hover:text-primary text-neutral-500 transition-colors duration-200'
               >
                 {i18n._(item.title)}
               </NavigationLink>
@@ -93,7 +93,7 @@ function FooterColumn({ section }: FooterColumnProps) {
 function SocialLink() {
   return (
     <div className='mt-4 flex flex-col items-center gap-4 md:flex-row lg:mt-0'>
-      <p className='font-semibold text-white dark:text-neutral-500'>
+      <p className='font-semibold text-neutral-500'>
         <Trans>Stay connected:</Trans>
       </p>
       <div className='flex items-center gap-x-4'>
@@ -102,7 +102,7 @@ function SocialLink() {
             key={social.id}
             href={social.href}
             aria-label={social.id}
-            className='flex size-13 items-center justify-center rounded-xl bg-gray-700 transition-colors duration-300 hover:bg-[#0DCC61]'
+            className='hover:bg-primary flex size-13 items-center justify-center rounded-xl bg-gray-700 transition-colors duration-300'
           >
             <social.icon className='size-6 text-white' fill='currentColor' />
           </NavigationLink>

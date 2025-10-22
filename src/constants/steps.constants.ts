@@ -77,7 +77,7 @@ export const STEPS_DESKTOP = [
 
 export const STEPS_MOBILE = [
   {
-    position: [0, -0.1, 0],
+    position: [0, -0.125, 0],
     scale: 0.4,
     rotation: [MathUtils.degToRad(0), MathUtils.degToRad(180), MathUtils.degToRad(0)],
     type: 1,

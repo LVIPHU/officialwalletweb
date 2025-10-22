@@ -137,7 +137,16 @@
       height: 100vh;
     }
   }
+
   /* Background */
+  .background-aurora-light {
+    background: linear-gradient(279.95deg, #ffffff 10.42%, #c3f2d8 67.09%, #86e6b0 81.12%, #0dcc61 100.91%);
+  }
+
+  .background-aurora-dark {
+    background: linear-gradient(96.9deg, #000000 -2.41%, #0dcc61 58.61%);
+  }
+
   .background-hero {
     @apply pointer-events-none absolute;
     content: '';

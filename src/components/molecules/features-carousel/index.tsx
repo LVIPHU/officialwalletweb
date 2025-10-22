@@ -39,10 +39,7 @@ export function FeaturesCarousel({ children }: FeaturesCarouselProps) {
   return (
     <div className='w-full'>
       <Carousel setApi={setApi} className='relative w-full'>
-        <div
-          data-color={BACKGROUND_ENUM[current - 1]}
-          className='background-glow translate-x-[18%] translate-y-[10%] scale-140'
-        />
+        <div data-color={BACKGROUND_ENUM[current - 1]} className='background-glow translate-x-[20%] scale-140' />
         <CarouselContent>
           {slides.map((slide, idx) => (
             <CarouselItem key={idx}>{slide}</CarouselItem>

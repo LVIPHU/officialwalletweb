@@ -26,10 +26,6 @@ msgstr "حول"
 msgid "About Us"
 msgstr "معلومات عنا"
 
-#: src/components/templates/home/index.tsx:311
-msgid "At TB Wallet, we believe Web3 should be accessible to everyone. Our platform combines intuitive design with powerful functionality, making it the perfect choice for crypto newcomers and DeFi veterans alike. Whether you're taking your first steps into blockchain or executing advanced strategies, TB Wallet equips you with the tools to navigate the decentralized ecosystem with ease, security, and efficiency. Join millions of users worldwide and experience Web3 without limits."
-msgstr "في TB Wallet، نؤمن بأن Web3 يجب أن يكون متاحًا للجميع. يجمع منصّتنا بين التصميم البديهي والوظائف القوية، مما يجعلها الخيار المثالي للمبتدئين في عالم العملات الرقمية وكذلك للمحترفين في DeFi. سواء كنت تخطو خطواتك الأولى في البلوكشين أو تنفّذ استراتيجيات متقدمة، فإن TB Wallet تزوّدك بالأدوات اللازمة للتنقل بسهولة وأمان وكفاءة في النظام اللامركزي. انضم إلى ملايين المستخدمين حول العالم واختبر Web3 بلا حدود."
-
 #: src/constants/landing.constants.ts:54
 msgid "Bitcoin"
 msgstr "بيتكوين"
@@ -37,6 +33,10 @@ msgstr "بيتكوين"
 #: src/constants/navigation.constants.ts:54
 msgid "Blog"
 msgstr "مدوّنة"
+
+#: src/constants/landing.constants.ts:17
+msgid "Boost earnings by connecting to mining pools and tracking rewards in-app. TB Wallet simplifies mining management, helping both new and seasoned users maximize returns securely."
+msgstr ""
 
 #: src/constants/navigation.constants.ts:14
 msgid "Browser Extension"
@@ -62,7 +62,7 @@ msgstr "قريبًا"
 msgid "Coming Soon"
 msgstr "قريبًا"
 
-#: src/components/templates/home/index.tsx:396
+#: src/components/templates/home/index.tsx:388
 msgid "Community talk about us"
 msgstr "المجتمع يتحدث عنا"
 
@@ -70,7 +70,7 @@ msgstr "المجتمع يتحدث عنا"
 msgid "Contact Us"
 msgstr "اتصل بنا"
 
-#: src/components/templates/home/index.tsx:308
+#: src/components/templates/home/index.tsx:305
 msgid "Designed for All, Built for You"
 msgstr "مصمم للجميع، ومبني خصيصًا لك"
 
@@ -88,9 +88,13 @@ msgstr "المطوّر"
 msgid "Download"
 msgstr "تحميل"
 
-#: src/components/templates/home/index.tsx:411
+#: src/components/templates/home/index.tsx:403
 msgid "Download now"
 msgstr "حمّل الآن"
+
+#: src/constants/landing.constants.ts:31
+msgid "Effortlessly exchange tokens across chains with low fees and real-time rates. Whether trading Bitcoin for Solana or optimizing your portfolio, TB Wallet makes swaps quick and intuitive."
+msgstr ""
 
 #: src/constants/landing.constants.ts:55
 msgid "Ethereum"
@@ -114,6 +118,10 @@ msgstr "الأسئلة الشائعة"
 msgid "Features"
 msgstr "الميزات"
 
+#: src/constants/landing.constants.ts:24
+msgid "Fortify your wallet with multi-approval transactions for enhanced protection against threats—ideal for personal or shared use, ensuring your assets stay safe and accessible only to you."
+msgstr ""
+
 #: src/constants/navigation.constants.ts:36
 msgid "Get Assets Listed"
 msgstr "إدراج الأصول"
@@ -121,10 +129,6 @@ msgstr "إدراج الأصول"
 #: src/constants/landing.constants.ts:37
 msgid "Instant transfer"
 msgstr "تحويل فوري"
-
-#: src/constants/landing.constants.ts:17
-msgid "Maximize your crypto earnings with TB Wallet’s built-in miner support. Seamlessly connect to mining pools or manage your mining activities directly from the wallet. Our platform simplifies the process, letting you monitor rewards and optimize your mining strategy—all while keeping your assets secure and under your control."
-msgstr "زِد من أرباحك من العملات الرقمية بفضل دعم التعدين المدمج في TB Wallet. يمكنك الاتصال بسهولة بمجمعات التعدين أو إدارة أنشطة التعدين مباشرة من المحفظة. تُبسّط منصّتنا العملية، مما يتيح لك مراقبة المكافآت وتحسين استراتيجيتك في التعدين، مع الحفاظ على أمان أصولك وتحكمك الكامل بها."
 
 #: src/constants/landing.constants.ts:16
 msgid "Miner"
@@ -137,10 +141,6 @@ msgstr "أيقونة العلامة مفقودة لـ"
 #: src/constants/landing.constants.ts:69
 msgid "Mobile app"
 msgstr "تطبيق الهاتف الجوال"
-
-#: src/constants/landing.constants.ts:38
-msgid "Move your assets at the speed of Web3. TB Wallet’s instant transfer feature enables lightning-fast transactions across supported blockchains, with minimal delays and low costs. Whether you're sending tokens to a friend or interacting with a dApp, TB Wallet ensures your transfers are quick, reliable, and hassle-free."
-msgstr "انقل أصولك بسرعة Web3. تتيح لك ميزة التحويل الفوري في TB Wallet إجراء المعاملات بسرعة البرق عبر شبكات البلوكشين المدعومة، مع تأخيرات طفيفة وتكاليف منخفضة. سواء كنت ترسل الرموز إلى صديق أو تتفاعل مع تطبيق لامركزي، تضمن لك TB Wallet عمليات نقل سريعة وموثوقة وسلسة."
 
 #: src/constants/landing.constants.ts:23
 msgid "Multi signature"
@@ -158,13 +158,17 @@ msgstr "رمز غير قابل للاستبدال (NFT)"
 msgid "No language found."
 msgstr "لم يتم العثور على لغة."
 
-#: src/components/templates/home/index.tsx:378
+#: src/components/templates/home/index.tsx:370
 msgid "One wallet. Cross platform"
 msgstr "محفظة واحدة. عبر المنصات"
 
 #: src/components/templates/home/index.tsx:238
 msgid "Own Your Crypto."
 msgstr "امتلك عملاتك الرقمية."
+
+#: src/constants/landing.constants.ts:45
+msgid "Pay fees in USDT for stable, predictable costs amid market swings. This flexible feature adds transparency, making Web3 interactions more budget-friendly and user-centric."
+msgstr ""
 
 #: src/constants/navigation.constants.ts:53
 msgid "Press Kit"
@@ -174,13 +178,13 @@ msgstr "عدة الصحافة"
 msgid "Privacy Policy"
 msgstr "سياسة الخصوصية"
 
-#: src/constants/landing.constants.ts:24
-msgid "Protect your wealth with industry-leading security. TB Wallet’s multi-signature feature requires multiple approvals for transactions, adding an extra layer of protection against unauthorized access. Perfect for individuals and teams, this feature ensures your assets remain safe, giving you peace of mind in the fast-paced world of Web3."
-msgstr "احمِ ثروتك بأمان من الطراز الأول في المجال. تتطلب ميزة التوقيع المتعدد في TB Wallet موافقات متعددة على المعاملات، مما يضيف طبقة إضافية من الحماية ضد الوصول غير المصرّح به. هذه الميزة مثالية للأفراد والفرق، وتضمن بقاء أصولك آمنة وتمنحك راحة البال في عالم Web3 السريع."
-
 #: src/constants/navigation.constants.ts:24
 msgid "Security"
 msgstr "الأمان"
+
+#: src/constants/landing.constants.ts:38
+msgid "Send assets across chains with near-zero delays and minimal costs. TB Wallet ensures fast, reliable transactions for everyday use, from peer-to-peer sends to dApp funding."
+msgstr ""
 
 #: src/components/templates/coming-soon/index.tsx:33
 msgid "Sign up"
@@ -219,21 +223,21 @@ msgstr "المُبادلة"
 msgid "Swift"
 msgstr "سويفت"
 
-#: src/constants/landing.constants.ts:45
-msgid "Take control of transaction costs with TB Wallet’s USDT fee option. Pay network fees in USDT for predictable, stable costs, even in volatile markets. This feature simplifies budgeting for transactions and enhances your Web3 experience by offering flexibility and transparency in every interaction."
-msgstr "تحكم في تكاليف المعاملات باستخدام خيار رسوم USDT في TB Wallet. ادفع رسوم الشبكة بـ USDT لتكاليف مستقرة ومتوقعة، حتى في الأسواق المتقلبة. تبسّط هذه الميزة إعداد الميزانيات وتحسّن تجربتك في Web3 من خلال توفير المرونة والشفافية في كل معاملة."
+#: src/components/templates/home/index.tsx:308
+msgid "TB Wallet bridges the gap for beginners and experts alike. Its user-friendly design offers easy onboarding for newcomers and advanced tools for DeFi pros, ensuring secure, efficient navigation of the decentralized ecosystem."
+msgstr ""
+
+#: src/components/templates/home/index.tsx:350
+msgid "TB Wallet connects you to diverse ecosystems, from Bitcoin and Ethereum to Optimism and Cosmos. Manage portfolios, engage in DeFi, trade NFTs, and link to dApps—all in one secure, self-custody hub."
+msgstr ""
 
 #: src/components/templates/home/index.tsx:246
-msgid "Take control of your digital future with TB Wallet. Securely manage millions of assets across 100+ blockchains and dive into the decentralized web with confidence."
-msgstr "تحكّم في مستقبلك الرقمي مع TB Wallet. قم بإدارة ملايين الأصول بأمان عبر أكثر من 100 شبكة بلوكشين وادخل عالم الويب اللامركزي بثقة."
-
-#: src/components/templates/home/index.tsx:355
-msgid "TB Wallet is the ultimate self-custody solution, supporting millions of assets across 100+ blockchains. From heavyweights like Bitcoin, Ethereum, and Solana to innovative networks like Cosmos and Optimism, TB Wallet connects you to the entire Web3 ecosystem. Manage your portfolio, explore DeFi, trade NFTs, and interact with dApps—all from a single, secure platform designed to empower you. With TB Wallet, the possibilities are endless, and your assets are always yours."
-msgstr "TB Wallet هي الحل النهائي للحفظ الذاتي، حيث تدعم ملايين الأصول عبر أكثر من 100 شبكة بلوكشين. من العمالقة مثل Bitcoin وEthereum وSolana إلى الشبكات المبتكرة مثل Cosmos وOptimism، تربطك TB Wallet بكامل نظام Web3 البيئي. يمكنك إدارة محفظتك، واستكشاف DeFi، وتداول NFTs، والتفاعل مع التطبيقات اللامركزية — كل ذلك من منصة واحدة آمنة مصممة لتمكينك. مع TB Wallet، الاحتمالات لا تنتهي وأصولك تبقى دائمًا ملكك."
+msgid "TB Wallet empowers you to manage diverse assets like Bitcoin, Ethereum, and Solana. Securely dive into DeFi, NFTs, and dApps with full control. Your keys, your future."
+msgstr ""
 
 #: src/components/templates/home/index.tsx:281
-msgid "TB Wallet is your gateway to the decentralized world, redefining self-custody with unmatched security and simplicity. As a leading multi-chain platform, we empower you to manage millions of assets across 100+ blockchains, from Bitcoin to Solana and beyond. With TB Wallet, you hold the keys to your digital wealth, enjoying seamless access to Web3 while keeping full control over your assets. Whether you're exploring DeFi, trading NFTs, or building your crypto portfolio, TB Wallet is your trusted partner in the decentralized revolution."
-msgstr "TB Wallet هي بوابتك إلى العالم اللامركزي، حيث تعيد تعريف الحفظ الذاتي بأمان وبساطة لا مثيل لهما. بصفتها منصة متعددة السلاسل رائدة، نمنحك القدرة على إدارة ملايين الأصول عبر أكثر من 100 شبكة بلوكشين، من Bitcoin إلى Solana وما بعدها. مع TB Wallet، أنت تمتلك مفاتيح ثروتك الرقمية، وتتمتع بالوصول السلس إلى Web3 مع الحفاظ على السيطرة الكاملة على أصولك. سواء كنت تستكشف DeFi أو تتداول NFTs أو تبني محفظتك الرقمية، فإن TB Wallet هي شريكك الموثوق في الثورة اللامركزية."
+msgid "TB Wallet is a leading multi-chain wallet with robust security and an intuitive interface. It simplifies Web3 interactions, from token management to dApp access, while giving you total control over your digital wealth."
+msgstr ""
 
 #: src/constants/landing.constants.ts:52
 msgid "TBChain"
@@ -242,10 +246,6 @@ msgstr "سلسلة TB"
 #: src/constants/navigation.constants.ts:56
 msgid "Terms of Service"
 msgstr "شروط الخدمة"
-
-#: src/constants/landing.constants.ts:31
-msgid "Trade with ease across 100+ blockchains. TB Wallet’s integrated swap feature lets you exchange assets instantly, from Bitcoin to altcoins, without leaving the platform. Enjoy competitive rates, low fees, and a user-friendly interface that makes swapping tokens as simple as a few clicks, whether you're a beginner or a DeFi pro."
-msgstr "تداول بسهولة عبر أكثر من 100 شبكة بلوكشين. تتيح لك ميزة المبادلة المدمجة في TB Wallet تبادل الأصول فورًا، من Bitcoin إلى العملات البديلة، دون مغادرة المنصة. استمتع بأسعار تنافسية ورسوم منخفضة وواجهة سهلة الاستخدام تجعل تبديل الرموز بسيطًا مثل بضع نقرات، سواء كنت مبتدئًا أو محترفًا في DeFi."
 
 #: src/constants/navigation.constants.ts:55
 msgid "Trust Squad"
@@ -271,6 +271,6 @@ msgstr "جوهر المحفظة"
 msgid "We’re launching soon!"
 msgstr "سننطلق قريبًا!"
 
-#: src/components/templates/home/index.tsx:350
+#: src/components/templates/home/index.tsx:345
 msgid "Your All-in-One Web3 Wallet"
 msgstr "محفظتك الشاملة لكل ما يتعلق بـ Web3"

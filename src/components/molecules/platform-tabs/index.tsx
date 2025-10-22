@@ -41,9 +41,9 @@ function PlatformTabTrigger({ value, label }: { value: string; label: MessageDes
     <TabsTrigger
       value={value}
       className={cn(
-        'border-foreground! text-foreground! transition-[color, border-color, background-color] rounded-full border border-solid px-6 py-2 text-center duration-300',
-        'data-[state=active]:border-primary! data-[state=active]:bg-primary! dark:data-[state=active]:text-black!',
-        'hover:border-primary/70! hover:text-primary!'
+        'border-foreground! text-foreground! cursor-pointer rounded-full border border-solid px-6 py-2 text-center transition-colors duration-300 ease-in-out',
+        'hover:border-primary/70! hover:text-primary! hover:data-[state=active]:text-foreground!',
+        'data-[state=active]:border-primary! data-[state=active]:bg-primary! dark:data-[state=active]:text-black!'
       )}
     >
       {i18n._(label)}
@@ -54,7 +54,7 @@ function PlatformTabTrigger({ value, label }: { value: string; label: MessageDes
 function ComingSoon() {
   return (
     <div className='flex h-[548px] w-full items-center justify-center rounded-xl md:w-[940px]'>
-      <p className='text-6xl font-semibold tracking-wide text-white md:text-8xl'>
+      <p className='text-6xl font-semibold tracking-wide md:text-8xl'>
         <Trans>Coming soon</Trans>
       </p>
     </div>
