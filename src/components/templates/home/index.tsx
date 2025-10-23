@@ -233,13 +233,15 @@ export default function HomeTemplate() {
       <Container className='flex min-h-dvh items-center pb-5 md:pb-10 xl:pb-16'>
         <div className='grid w-full items-center md:grid-cols-2'>
           <div className='flex flex-col items-center gap-8 md:items-start md:gap-13'>
-            <h1 className='font-clash-display text-center text-3xl font-extrabold tracking-tight sm:text-4xl md:text-start md:text-6xl md:leading-20'>
+            <h1 className='font-clash-display flex flex-col text-center text-3xl font-extrabold tracking-tight sm:text-4xl md:text-start md:text-6xl md:leading-20'>
               <AuroraText speed={0}>
                 <Trans>Own Your Crypto.</Trans>
               </AuroraText>
-              <br />
               <AuroraText speed={0}>
-                <Trans>Unleash Web3 Possibilities.</Trans>
+                <Trans>Unleash Web3</Trans>
+              </AuroraText>
+              <AuroraText speed={0}>
+                <Trans>Possibilities.</Trans>
               </AuroraText>
             </h1>
             <p className='max-w-md text-center md:text-start'>

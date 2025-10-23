@@ -14,7 +14,7 @@ export default function ComingSoonTemplate() {
       <Empty className='h-full gap-8'>
         <EmptyHeader className='max-w-4xl'>
           <EmptyMedia className='border-foreground mb-6 rounded-full border px-8 py-2 text-lg font-medium md:text-xl'>
-            <Trans>Coming Soon</Trans>
+            <Trans>Coming soon</Trans>
           </EmptyMedia>
           <EmptyTitle className='text-4xl font-medium md:text-6xl'>
             <Trans>We’re launching soon!</Trans>
@@ -26,10 +26,10 @@ export default function ComingSoonTemplate() {
           </EmptyDescription>
         </EmptyHeader>
         <EmptyContent className='max-w-4xl'>
-          <InputGroup className='h-16'>
+          <InputGroup className='h-16 border border-black/5 bg-black/10 dark:border-white/10 dark:bg-white/10'>
             <InputGroupInput className='h-14 text-xl! font-medium!' placeholder={i18n._(msg`name@email.com`)} />
             <InputGroupAddon align='inline-end'>
-              <InputGroupButton variant='default' size='2xl' className='rounded-xl text-white'>
+              <InputGroupButton variant='default' size='2xl' className='text-foreground rounded-xl'>
                 <Trans>Sign up</Trans>
               </InputGroupButton>
             </InputGroupAddon>

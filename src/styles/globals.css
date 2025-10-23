@@ -165,8 +165,17 @@
     left: 50%;
     width: 100vw;
     aspect-ratio: 5760 / 2720;
-    background: url('/assets/background/footer.webp') center center / cover no-repeat;
+    background-image: url('/assets/background/footer-dark.webp');
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
     transform: translateX(-50%);
+  }
+  .background-footer[data-theme='light'] {
+    background-image: url('/assets/background/footer-light.webp');
+  }
+  .background-footer[data-theme='dark'] {
+    background-image: url('/assets/background/footer-dark.webp');
   }
 
   .background-ellipse {

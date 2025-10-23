@@ -46,11 +46,9 @@ export default async function RootLayout({ children, params }: Readonly<PropsWit
       <body className={cn('relative flex min-h-dvh flex-col antialiased')}>
         <ProviderRegistry params={params}>
           <DefaultLayout>
-            <div className={'background-hero'} />
             <Header />
             <main className='grow'>{children}</main>
             <Footer />
-            <div className={'background-footer'} />
           </DefaultLayout>
         </ProviderRegistry>
       </body>

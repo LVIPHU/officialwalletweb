@@ -13,11 +13,11 @@ msgstr ""
 "Language-Team: \n"
 "Plural-Forms: \n"
 
-#: src/components/organisms/footer/index.tsx:52
+#: src/components/organisms/footer/index.tsx:71
 msgid ". All rights reserved."
 msgstr "。保留所有權利。"
 
-#: src/components/templates/home/index.tsx:278
+#: src/components/templates/home/index.tsx:280
 #: src/constants/navigation.constants.ts:49
 msgid "About"
 msgstr "關於"
@@ -36,7 +36,7 @@ msgstr "部落格"
 
 #: src/constants/landing.constants.ts:17
 msgid "Boost earnings by connecting to mining pools and tracking rewards in-app. TB Wallet simplifies mining management, helping both new and seasoned users maximize returns securely."
-msgstr ""
+msgstr "透過連接挖礦池並在應用程式內追蹤獎勵來提升收入。TB Wallet 簡化挖礦管理，協助新手和資深使用者都能安全地最大化回報。"
 
 #: src/constants/navigation.constants.ts:14
 msgid "Browser Extension"
@@ -55,14 +55,13 @@ msgid "Careers"
 msgstr "職涯機會"
 
 #: src/components/molecules/platform-tabs/index.tsx:58
+#: src/components/organisms/header/index.tsx:101
+#: src/components/organisms/header/index.tsx:109
+#: src/components/templates/coming-soon/index.tsx:17
 msgid "Coming soon"
 msgstr "即將推出"
 
-#: src/components/templates/coming-soon/index.tsx:17
-msgid "Coming Soon"
-msgstr "即將推出"
-
-#: src/components/templates/home/index.tsx:388
+#: src/components/templates/home/index.tsx:390
 msgid "Community talk about us"
 msgstr "社群對我們的評價"
 
@@ -70,7 +69,7 @@ msgstr "社群對我們的評價"
 msgid "Contact Us"
 msgstr "聯絡我們"
 
-#: src/components/templates/home/index.tsx:305
+#: src/components/templates/home/index.tsx:307
 msgid "Designed for All, Built for You"
 msgstr "為所有人設計，專為您打造"
 
@@ -82,25 +81,25 @@ msgstr "桌面應用程式"
 msgid "Developer"
 msgstr "開發者"
 
-#: src/components/organisms/header/index.tsx:67
+#: src/components/organisms/header/index.tsx:65
 #: src/components/organisms/mobile-sidebar/index.tsx:72
 #: src/constants/navigation.constants.ts:13
 msgid "Download"
 msgstr "下載"
 
-#: src/components/templates/home/index.tsx:403
+#: src/components/templates/home/index.tsx:405
 msgid "Download now"
 msgstr "立即下載"
 
 #: src/constants/landing.constants.ts:31
 msgid "Effortlessly exchange tokens across chains with low fees and real-time rates. Whether trading Bitcoin for Solana or optimizing your portfolio, TB Wallet makes swaps quick and intuitive."
-msgstr ""
+msgstr "輕鬆在鏈間交換代幣，費用低且具備實時匯率。無論您是用比特幣換 Solana，還是優化您的投資組合，TB Wallet 讓交換變得快速且直觀。"
 
 #: src/constants/landing.constants.ts:55
 msgid "Ethereum"
 msgstr "以太坊"
 
-#: src/components/templates/home/index.tsx:262
+#: src/components/templates/home/index.tsx:264
 msgid "Explore now"
 msgstr "立即探索"
 
@@ -120,7 +119,7 @@ msgstr "功能特色"
 
 #: src/constants/landing.constants.ts:24
 msgid "Fortify your wallet with multi-approval transactions for enhanced protection against threats—ideal for personal or shared use, ensuring your assets stay safe and accessible only to you."
-msgstr ""
+msgstr "用多重批准交易強化您的錢包，以加強防禦威脅的保護 — 適用於個人或共用用途，確保您的資產僅由您安全且可訪問。"
 
 #: src/constants/navigation.constants.ts:36
 msgid "Get Assets Listed"
@@ -158,7 +157,7 @@ msgstr "NFT"
 msgid "No language found."
 msgstr "找不到語言。"
 
-#: src/components/templates/home/index.tsx:370
+#: src/components/templates/home/index.tsx:372
 msgid "One wallet. Cross platform"
 msgstr "單一錢包，跨平台支援"
 
@@ -168,7 +167,11 @@ msgstr "掌控您的加密資產。"
 
 #: src/constants/landing.constants.ts:45
 msgid "Pay fees in USDT for stable, predictable costs amid market swings. This flexible feature adds transparency, making Web3 interactions more budget-friendly and user-centric."
-msgstr ""
+msgstr "以 USDT 支付手續費，以實現成本穩定且可預測，即使面對市場波動。這項靈活功能增加透明度，使 Web3 互動更具預算友善性且以使用者為中心。"
+
+#: src/components/templates/home/index.tsx:244
+msgid "Possibilities."
+msgstr "可能性。"
 
 #: src/constants/navigation.constants.ts:53
 msgid "Press Kit"
@@ -184,7 +187,7 @@ msgstr "安全性"
 
 #: src/constants/landing.constants.ts:38
 msgid "Send assets across chains with near-zero delays and minimal costs. TB Wallet ensures fast, reliable transactions for everyday use, from peer-to-peer sends to dApp funding."
-msgstr ""
+msgstr "跨鏈傳送資產，實現近乎零延遲與極低成本。TB Wallet 確保日常使用情境中的交易快速且可靠──從點對點傳送到 dApp 資金支援。"
 
 #: src/components/templates/coming-soon/index.tsx:33
 msgid "Sign up"
@@ -202,7 +205,7 @@ msgstr "令人驚喜的事即將到來！請在下方留下您的電子郵件，
 msgid "Staking"
 msgstr "質押"
 
-#: src/components/organisms/footer/index.tsx:97
+#: src/components/organisms/footer/index.tsx:116
 msgid "Stay connected:"
 msgstr "保持聯繫："
 
@@ -223,21 +226,21 @@ msgstr "兌換"
 msgid "Swift"
 msgstr "Swift"
 
-#: src/components/templates/home/index.tsx:308
+#: src/components/templates/home/index.tsx:310
 msgid "TB Wallet bridges the gap for beginners and experts alike. Its user-friendly design offers easy onboarding for newcomers and advanced tools for DeFi pros, ensuring secure, efficient navigation of the decentralized ecosystem."
-msgstr ""
+msgstr "TB Wallet 架起新手與專家的橋樑。其用戶友善的設計為新手提供便捷入門，並為 DeFi 專業人士提供進階工具，確保您在去中心化生態系統中安全且高效地導航。"
 
-#: src/components/templates/home/index.tsx:350
+#: src/components/templates/home/index.tsx:352
 msgid "TB Wallet connects you to diverse ecosystems, from Bitcoin and Ethereum to Optimism and Cosmos. Manage portfolios, engage in DeFi, trade NFTs, and link to dApps—all in one secure, self-custody hub."
-msgstr ""
+msgstr "TB Wallet 將您連接至多元生態系統，從比特幣和以太坊到 Optimism 和 Cosmos。管理投資組合、參與 DeFi、交易 NFTs 並連結到 dApps ─ 所有這些皆在一個安全且自我保管的中心完成。"
 
-#: src/components/templates/home/index.tsx:246
+#: src/components/templates/home/index.tsx:248
 msgid "TB Wallet empowers you to manage diverse assets like Bitcoin, Ethereum, and Solana. Securely dive into DeFi, NFTs, and dApps with full control. Your keys, your future."
-msgstr ""
+msgstr "TB Wallet 賦能您管理比特幣、以太坊與 Solana 等多種資產。安全地深入 DeFi、NFTs 與 dApps，擁有完全控制權。您的密鑰，您的未來。"
 
-#: src/components/templates/home/index.tsx:281
+#: src/components/templates/home/index.tsx:283
 msgid "TB Wallet is a leading multi-chain wallet with robust security and an intuitive interface. It simplifies Web3 interactions, from token management to dApp access, while giving you total control over your digital wealth."
-msgstr ""
+msgstr "TB Wallet 是領先的多鏈錢包，具備穩健的安全性與直觀的介面。它簡化了 Web3 的互動──從代幣管理到 dApp 存取──同時賦予您對數位財富的完全掌控。"
 
 #: src/constants/landing.constants.ts:52
 msgid "TBChain"
@@ -251,9 +254,9 @@ msgstr "服務條款"
 msgid "Trust Squad"
 msgstr "信任團隊"
 
-#: src/components/templates/home/index.tsx:242
-msgid "Unleash Web3 Possibilities."
-msgstr "釋放 Web3 的無限潛能。"
+#: src/components/templates/home/index.tsx:241
+msgid "Unleash Web3"
+msgstr "釋放 Web3"
 
 #: src/constants/landing.constants.ts:44
 msgid "USDT Fee"
@@ -271,6 +274,6 @@ msgstr "錢包核心"
 msgid "We’re launching soon!"
 msgstr "我們即將上線！"
 
-#: src/components/templates/home/index.tsx:345
+#: src/components/templates/home/index.tsx:347
 msgid "Your All-in-One Web3 Wallet"
 msgstr "您的全方位 Web3 錢包"

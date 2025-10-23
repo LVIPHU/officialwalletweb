@@ -25,6 +25,7 @@ import { Trans } from '@lingui/react/macro'
 import { NavSection } from '@/types/navigation.types'
 import { useLingui } from '@lingui/react'
 import type { MessageDescriptor } from '@lingui/core'
+import Image from 'next/image'
 
 export default function Header() {
   const [hasScrolled, setHasScrolled] = useState(false)
@@ -45,10 +46,8 @@ export default function Header() {
       )}
     >
       <div className='flex items-center justify-between gap-3'>
-        {/* Left: Logo */}
         <Logo showText={true} classNameLabel='sm:hidden lg:inline-block' />
 
-        {/* Middle: Navigation (tablet and up) */}
         <div className='hidden flex-1 justify-center md:flex'>
           <NavigationMenu>
             <NavigationMenuList>
@@ -59,7 +58,6 @@ export default function Header() {
           </NavigationMenu>
         </div>
 
-        {/* Right: Utilities (tablet & up) */}
         <div className='hidden items-center gap-2 md:flex lg:gap-10'>
           <ThemeSwitcher />
           <LocaleSwitcher classNameLabel='hidden lg:inline-block' />
@@ -68,7 +66,6 @@ export default function Header() {
           </Button>
         </div>
 
-        {/* Mobile: Sidebar */}
         <SidebarTrigger className='text-primary size-9 md:hidden [&_svg]:size-7!' />
       </div>
     </Container>
@@ -86,7 +83,7 @@ function NavigationSection({ section }: NavigationSectionProps) {
     <NavigationMenuItem>
       <NavigationMenuTrigger
         className={cn(
-          'h-8 rounded-full border border-transparent bg-transparent px-3 text-sm font-medium transition-colors duration-300',
+          'h-8 rounded-full border border-transparent bg-transparent px-3 text-sm font-medium transition-colors duration-300 ease-in-out',
           'hover:bg-primary hover:border-primary hover:text-black',
           'focus:bg-primary focus:border-primary focus:text-black',
           'data-[state=open]:bg-primary! data-[state=open]:border-primary data-[state=open]:text-black'
@@ -99,9 +96,9 @@ function NavigationSection({ section }: NavigationSectionProps) {
         <div className='flex w-[90vw] max-w-6xl flex-col gap-6 p-4 lg:flex-row lg:gap-8 lg:p-6'>
           {/* Left Highlight */}
           <div className='from-muted/40 to-muted hidden w-1/3 flex-col justify-end rounded-md bg-gradient-to-b p-6 select-none lg:flex'>
-            <div className='mb-2 text-lg font-medium'>shadcn/ui</div>
+            <div className='mb-2 text-lg font-medium'>TB Wallet</div>
             <p className='text-muted-foreground text-sm leading-snug'>
-              Beautifully designed components built with Tailwind CSS.
+              <Trans>Coming soon</Trans>
             </p>
           </div>
 
@@ -109,7 +106,7 @@ function NavigationSection({ section }: NavigationSectionProps) {
           <ul className='grid flex-1 grid-cols-1 gap-4 sm:grid-cols-2 lg:gap-6 xl:grid-cols-3'>
             {section.items.map((item) => (
               <ListItem key={item.id} href={item.href} title={item.title}>
-                Re-usable components built using Radix UI and Tailwind CSS.
+                <Trans>Coming soon</Trans>
               </ListItem>
             ))}
           </ul>

@@ -9,9 +9,25 @@ import { Trans } from '@lingui/react/macro'
 import { NavSection } from '@/types/navigation.types'
 import { useLingui } from '@lingui/react'
 import { useIsMobile } from '@/hooks/use-mobile'
+import { useTheme } from 'next-themes'
+
+const footerStyleLight: React.CSSProperties = {
+  borderImageSlice: '1',
+  borderImageSource:
+    'linear-gradient(90deg, rgba(255, 255, 255, 0) 1.16%, rgba(0, 0, 0, 0.15) 25.87%, rgba(0, 0, 0, 0.3) 50.58%, rgba(0, 0, 0, 0.15) 75.29%, rgba(255, 255, 255, 0) 100%)',
+}
+
+const footerStyleDark: React.CSSProperties = {
+  borderImageSlice: '1',
+  borderImageSource:
+    'linear-gradient(90deg, rgba(255, 255, 255, 0) 1.16%, rgba(255, 255, 255, 0.15) 50.58%, rgba(255, 255, 255, 0) 100%)',
+}
 
 const Footer = () => {
   const isMobile = useIsMobile()
+  const { resolvedTheme } = useTheme()
+
+  const footerStyle = resolvedTheme === 'light' ? footerStyleLight : footerStyleDark
 
   const navigationList = useMemo(() => {
     if (isMobile) {
@@ -23,7 +39,10 @@ const Footer = () => {
 
   return (
     <Container>
-      <GlassCard className='mb-4 rounded-[44px] border-0 px-0 py-5 sm:mb-6 md:mb-24 md:px-7 md:py-10'>
+      <GlassCard
+        className='border-footer mb-4 rounded-[44px] px-0 py-5 sm:mb-6 md:mb-24 md:px-7 md:py-10'
+        style={footerStyle}
+      >
         {/* --- Top Grid --- */}
         <div className='grid grid-cols-2 gap-x-3 gap-y-10 pt-0 pb-30 md:grid-cols-7 md:gap-8 md:py-10'>
           {/* Logo section */}

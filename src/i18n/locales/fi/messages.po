@@ -13,11 +13,11 @@ msgstr ""
 "Language-Team: \n"
 "Plural-Forms: \n"
 
-#: src/components/organisms/footer/index.tsx:52
+#: src/components/organisms/footer/index.tsx:71
 msgid ". All rights reserved."
 msgstr ". Kaikki oikeudet pidätetään."
 
-#: src/components/templates/home/index.tsx:278
+#: src/components/templates/home/index.tsx:280
 #: src/constants/navigation.constants.ts:49
 msgid "About"
 msgstr "Tietoja"
@@ -36,7 +36,7 @@ msgstr "Blogi"
 
 #: src/constants/landing.constants.ts:17
 msgid "Boost earnings by connecting to mining pools and tracking rewards in-app. TB Wallet simplifies mining management, helping both new and seasoned users maximize returns securely."
-msgstr ""
+msgstr "Lisää tuottojasi yhdistämällä kaivosaltaisiin ja seuraamalla palkkioita sovelluksessa. TB Wallet yksinkertaistaa kaivoshallintaa ja auttaa sekä uusia että kokeneita käyttäjiä maksimoimaan tuotot turvallisesti."
 
 #: src/constants/navigation.constants.ts:14
 msgid "Browser Extension"
@@ -55,14 +55,13 @@ msgid "Careers"
 msgstr "Urat"
 
 #: src/components/molecules/platform-tabs/index.tsx:58
+#: src/components/organisms/header/index.tsx:101
+#: src/components/organisms/header/index.tsx:109
+#: src/components/templates/coming-soon/index.tsx:17
 msgid "Coming soon"
 msgstr "Tulossa pian"
 
-#: src/components/templates/coming-soon/index.tsx:17
-msgid "Coming Soon"
-msgstr "Tulossa pian"
-
-#: src/components/templates/home/index.tsx:388
+#: src/components/templates/home/index.tsx:390
 msgid "Community talk about us"
 msgstr "Yhteisö puhuu meistä"
 
@@ -70,7 +69,7 @@ msgstr "Yhteisö puhuu meistä"
 msgid "Contact Us"
 msgstr "Ota yhteyttä"
 
-#: src/components/templates/home/index.tsx:305
+#: src/components/templates/home/index.tsx:307
 msgid "Designed for All, Built for You"
 msgstr "Suunniteltu kaikille, rakennettu sinulle"
 
@@ -82,25 +81,25 @@ msgstr "Työpöytäsovellus"
 msgid "Developer"
 msgstr "Kehittäjä"
 
-#: src/components/organisms/header/index.tsx:67
+#: src/components/organisms/header/index.tsx:65
 #: src/components/organisms/mobile-sidebar/index.tsx:72
 #: src/constants/navigation.constants.ts:13
 msgid "Download"
 msgstr "Lataa"
 
-#: src/components/templates/home/index.tsx:403
+#: src/components/templates/home/index.tsx:405
 msgid "Download now"
 msgstr "Lataa nyt"
 
 #: src/constants/landing.constants.ts:31
 msgid "Effortlessly exchange tokens across chains with low fees and real-time rates. Whether trading Bitcoin for Solana or optimizing your portfolio, TB Wallet makes swaps quick and intuitive."
-msgstr ""
+msgstr "Vaihda tokeneita ketjujen välillä vaivattomasti alhaisilla kuluilla ja reaaliaikaisilla kursseilla. Olitpa vaihtamassa Bitcoinia Solanaan tai optimoimassa portfoliosi, TB Wallet tekee vaihdosta nopeaa ja intuitiivista."
 
 #: src/constants/landing.constants.ts:55
 msgid "Ethereum"
 msgstr "Ethereum"
 
-#: src/components/templates/home/index.tsx:262
+#: src/components/templates/home/index.tsx:264
 msgid "Explore now"
 msgstr "Tutustu nyt"
 
@@ -120,7 +119,7 @@ msgstr "Ominaisuudet"
 
 #: src/constants/landing.constants.ts:24
 msgid "Fortify your wallet with multi-approval transactions for enhanced protection against threats—ideal for personal or shared use, ensuring your assets stay safe and accessible only to you."
-msgstr ""
+msgstr "Vahvista lompakkosi monivaiheisilla hyväksymisillä parannettua suojausta varten — ihanteellinen henkilökohtaiseen tai jaettuun käyttöön, varmistaen että omaisuutesi pysyy turvassa ja saatavilla vain sinulle."
 
 #: src/constants/navigation.constants.ts:36
 msgid "Get Assets Listed"
@@ -158,7 +157,7 @@ msgstr "NFT"
 msgid "No language found."
 msgstr "Kieltä ei löytynyt."
 
-#: src/components/templates/home/index.tsx:370
+#: src/components/templates/home/index.tsx:372
 msgid "One wallet. Cross platform"
 msgstr "Yksi lompakko. Monialustainen"
 
@@ -168,7 +167,11 @@ msgstr "Omista kryptosi."
 
 #: src/constants/landing.constants.ts:45
 msgid "Pay fees in USDT for stable, predictable costs amid market swings. This flexible feature adds transparency, making Web3 interactions more budget-friendly and user-centric."
-msgstr ""
+msgstr "Maksa palkkiot USDT:ssä vakaiden, ennakoitavissa olevien kustannusten vuoksi markkinoiden vaihteluiden keskellä. Tämä joustava ominaisuus lisää läpinäkyvyyttä ja tekee Web3-vuorovaikutuksesta budjettiystävällisempää ja käyttäjäkeskeistä."
+
+#: src/components/templates/home/index.tsx:244
+msgid "Possibilities."
+msgstr "Mahdollisuudet."
 
 #: src/constants/navigation.constants.ts:53
 msgid "Press Kit"
@@ -184,7 +187,7 @@ msgstr "Turvallisuus"
 
 #: src/constants/landing.constants.ts:38
 msgid "Send assets across chains with near-zero delays and minimal costs. TB Wallet ensures fast, reliable transactions for everyday use, from peer-to-peer sends to dApp funding."
-msgstr ""
+msgstr "Lähetä varoja ketjujen välillä lähes nollaviiveellä ja minimaalisin kustannuksin. TB Wallet varmistaa nopeat ja luotettavat transaktiot päivittäiseen käyttöön, vertaislähetyksistä dApp-rahoitukseen."
 
 #: src/components/templates/coming-soon/index.tsx:33
 msgid "Sign up"
@@ -202,7 +205,7 @@ msgstr "Jotain uskomatonta on tulossa! Jätä sähköpostisi alle, niin olet ens
 msgid "Staking"
 msgstr "Panostus"
 
-#: src/components/organisms/footer/index.tsx:97
+#: src/components/organisms/footer/index.tsx:116
 msgid "Stay connected:"
 msgstr "Pysy yhteydessä:"
 
@@ -223,21 +226,21 @@ msgstr "Vaihda"
 msgid "Swift"
 msgstr "Nopea"
 
-#: src/components/templates/home/index.tsx:308
+#: src/components/templates/home/index.tsx:310
 msgid "TB Wallet bridges the gap for beginners and experts alike. Its user-friendly design offers easy onboarding for newcomers and advanced tools for DeFi pros, ensuring secure, efficient navigation of the decentralized ecosystem."
-msgstr ""
+msgstr "TB Wallet kaventaa kuilua aloittelijoiden ja asiantuntijoiden välillä. Sen käyttäjäystävällinen muotoilu tarjoaa vaivattoman alun uusille käyttäjille ja edistyneitä työkaluja DeFi-ammattilaisille, varmistaen turvallisen ja tehokkaan navigoinnin hajautetussa ekosysteemissä."
 
-#: src/components/templates/home/index.tsx:350
+#: src/components/templates/home/index.tsx:352
 msgid "TB Wallet connects you to diverse ecosystems, from Bitcoin and Ethereum to Optimism and Cosmos. Manage portfolios, engage in DeFi, trade NFTs, and link to dApps—all in one secure, self-custody hub."
-msgstr ""
+msgstr "TB Wallet yhdistää sinut monipuolisiin ekosysteemeihin, Bitcoinista ja Ethereumista Optimismiin ja Cosmokselle. Hallitse portfoliosi, osallistu DeFiin, käy kauppaa NFT:illä ja linkity dAppseihin — kaikki yhdessä turvallisessa itsehallintakeskuksessa."
 
-#: src/components/templates/home/index.tsx:246
+#: src/components/templates/home/index.tsx:248
 msgid "TB Wallet empowers you to manage diverse assets like Bitcoin, Ethereum, and Solana. Securely dive into DeFi, NFTs, and dApps with full control. Your keys, your future."
-msgstr ""
+msgstr "TB Wallet antaa sinulle mahdollisuuden hallita erilaisia varoja kuten Bitcoinia, Ethereumia ja Solanaa. Sukella turvallisesti DeFiin, NFT:ihin ja dAppsien maailmaan täydellä kontrollilla. Avaimesi, tulevaisuutesi."
 
-#: src/components/templates/home/index.tsx:281
+#: src/components/templates/home/index.tsx:283
 msgid "TB Wallet is a leading multi-chain wallet with robust security and an intuitive interface. It simplifies Web3 interactions, from token management to dApp access, while giving you total control over your digital wealth."
-msgstr ""
+msgstr "TB Wallet on johtava moniketjuinen lompakko, jolla on vankka turvallisuus ja intuitiivinen käyttöliittymä. Se yksinkertaistaa Web3-vuorovaikutuksia, tokenien hallinnasta dApps-käyttöön, samalla kun se antaa sinulle täyden kontrollin digitaalisesta omaisuudestasi."
 
 #: src/constants/landing.constants.ts:52
 msgid "TBChain"
@@ -251,9 +254,9 @@ msgstr "Käyttöehdot"
 msgid "Trust Squad"
 msgstr "Luottotiimi"
 
-#: src/components/templates/home/index.tsx:242
-msgid "Unleash Web3 Possibilities."
-msgstr "Anna Web3-mahdollisuuksien viedä."
+#: src/components/templates/home/index.tsx:241
+msgid "Unleash Web3"
+msgstr "Vapauta Web3"
 
 #: src/constants/landing.constants.ts:44
 msgid "USDT Fee"
@@ -271,6 +274,6 @@ msgstr "Lompakon ydin"
 msgid "We’re launching soon!"
 msgstr "Julkaisemme pian!"
 
-#: src/components/templates/home/index.tsx:345
+#: src/components/templates/home/index.tsx:347
 msgid "Your All-in-One Web3 Wallet"
 msgstr "Kaikki-yhdessä Web3-lompakkosi"

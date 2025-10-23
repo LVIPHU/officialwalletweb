@@ -113,7 +113,7 @@ const NavSection = memo(({ id, title, items, open, onToggle }: NavSectionProps) 
                       href={href}
                       className={cn(
                         'flex items-center rounded-md py-2 text-xl font-medium transition-colors',
-                        'hover:bg-muted/40 text-[#BEEDC8]'
+                        'hover:bg-muted/40 text-primary dark:text-[#BEEDC8]'
                       )}
                     >
                       {i18n._(title)}
