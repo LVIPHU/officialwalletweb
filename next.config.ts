@@ -1,7 +1,11 @@
 import type { NextConfig } from 'next'
 
 const nextConfig: NextConfig = {
+  pageExtensions: ['jsx', 'js', 'ts', 'tsx', 'mdx', 'md'],
+  reactStrictMode: true,
   experimental: {
+    reactCompiler: true,
+    scrollRestoration: true,
     swcPlugins: [['@lingui/swc-plugin', {}]],
     turbo: {
       rules: {
@@ -28,7 +32,16 @@ const nextConfig: NextConfig = {
       },
     },
   },
-  webpack: (config) => {
+  webpack: (config, { dev, isServer, ...options }) => {
+    if (process.env.ANALYZE) {
+      const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer')
+      config.plugins.push(
+        new BundleAnalyzerPlugin({
+          analyzerMode: 'static',
+          reportFilename: isServer ? '../analyze/server.html' : './analyze/client.html',
+        })
+      )
+    }
     config.module.rules.push({
       test: /\.po$/,
       use: {

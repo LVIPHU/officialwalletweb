@@ -281,9 +281,15 @@ export function IPhone() {
   useScroll(({ scroll }) => {
     if (!parent.current) return
 
+    const isPortrait = viewport.width < viewport.height
+
     if (custom) {
-      parent.current.scale.setScalar(viewport.height * scale)
-      parent.current.position.set((viewport.width * position[0]) / viewport.aspect, viewport.height * position[1], 0)
+      parent.current.scale.setScalar(isPortrait ? viewport.width * scale : viewport.height * scale)
+      parent.current.position.set(
+        viewport.width * (isPortrait ? position[0] * viewport.aspect : position[0] / viewport.aspect),
+        viewport.height * position[1],
+        0
+      )
       parent.current.rotation.fromArray(rotation.map((v) => MathUtils.degToRad(v)))
       return
     }
@@ -312,7 +318,14 @@ export function IPhone() {
 
     const _scale = mapRange(0, 1, progress, from.scale, to.scale)
     const _position = new Vector3(
-      viewport.width * mapRange(0, 1, progress, from.position[0] / viewport.aspect, to.position[0] / viewport.aspect),
+      viewport.width *
+        mapRange(
+          0,
+          1,
+          progress,
+          isPortrait ? from.position[0] * viewport.aspect : from.position[0] / viewport.aspect,
+          isPortrait ? to.position[0] * viewport.aspect : to.position[0] / viewport.aspect
+        ),
       viewport.height * mapRange(0, 1, progress, from.position[1], to.position[1]),
       0
     )
