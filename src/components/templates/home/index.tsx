@@ -21,6 +21,7 @@ import Image from 'next/image'
 import { FeaturesSection } from '@/components/organisms/features-section'
 import { Trans } from '@lingui/react/macro'
 import { ChainCard } from '@/components/molecules/chain-card'
+import { WebGLMobile } from '@/components/atoms/webgl/webgl-mobile'
 
 // const Parallax = dynamic(() => import('@/components/atoms/parallax').then((Parallax) => Parallax), { ssr: false })
 
@@ -225,14 +226,14 @@ export default function HomeTemplate() {
 
   return (
     <div className='relative min-h-dvh overflow-x-hidden'>
-      <div className={'canvas'}>
+      <div className={'canvas hidden md:block'}>
         <WebGL />
       </div>
 
       {/* Hero Section */}
       <Container className='flex min-h-dvh items-center pb-5 md:pb-10 xl:pb-16'>
         <div className='grid w-full items-center md:grid-cols-2'>
-          <div className='flex flex-col items-center gap-8 md:items-start md:gap-13'>
+          <div className='flex w-full flex-col items-center gap-8 md:items-start md:gap-13'>
             <h1 className='font-clash-display flex flex-col text-center text-3xl font-extrabold tracking-tight sm:text-4xl md:text-start md:text-6xl md:leading-20'>
               <AuroraText speed={0}>
                 <Trans>Own Your Crypto.</Trans>
@@ -250,14 +251,15 @@ export default function HomeTemplate() {
                 DeFi, NFTs, and dApps with full control. Your keys, your future.
               </Trans>
             </p>
-            <div className='min-h-svw md:hidden'>
+            <div className='relative h-svw w-full md:hidden'>
               <Image
                 src={'/assets/background/network.webp'}
                 alt={'network'}
                 width={612}
                 height={612}
-                className='object-contain'
+                className='absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-[-1] object-contain'
               />
+              <WebGLMobile screen={"1"}/>
             </div>
             <Button variant={'neon'} size={'2xl'} className={'w-fit md:relative'}>
               <span>
@@ -272,7 +274,7 @@ export default function HomeTemplate() {
       </Container>
 
       {/* About Section */}
-      <Container id='about' className='h-dvh py-5 md:py-10 xl:py-16' data-lenis-scroll-snap-align='start'>
+      <Container id='about' className='min-h-dvh md:h-dvh py-5 md:py-10 xl:py-16' data-lenis-scroll-snap-align='start'>
         <div className='flex h-full flex-col items-center gap-8 md:gap-6'>
           <AnimatedContent distance={50} threshold={0.7}>
             <div className='flex max-w-2xl flex-col gap-8 text-center md:gap-6'>
@@ -294,12 +296,15 @@ export default function HomeTemplate() {
                 <div className='background-glow' />
               </div>
             </AnimatedContent>
+            <div className='relative h-svw w-full md:hidden'>
+              <WebGLMobile screen={"2"}/>
+            </div>
           </div>
         </div>
       </Container>
 
       {/* Platform Section */}
-      <Container id='platform' className='h-dvh py-5 md:py-10 xl:py-16' data-lenis-scroll-snap-align='start'>
+      <Container id='platform' className='min-h-dvh md:h-dvh py-5 md:py-10 xl:py-16' data-lenis-scroll-snap-align='start'>
         <div className='grid h-full items-center justify-center gap-8 md:grid-cols-2'>
           <AnimatedContent distance={10} threshold={0.4} className='md:order-last'>
             <div className='flex h-full max-w-md flex-col gap-8 text-center md:gap-6 md:text-start'>
@@ -321,6 +326,9 @@ export default function HomeTemplate() {
                 <div className='background-glow' />
               </div>
             </AnimatedContent>
+            <div className='relative h-svw w-full md:hidden mb-5'>
+              <WebGLMobile screen={"3"}/>
+            </div>
           </div>
         </div>
       </Container>
@@ -328,7 +336,7 @@ export default function HomeTemplate() {
       {/* Features Section */}
       <Container
         id='features'
-        className='h-[75dvh] py-5 md:h-auto md:py-10 xl:py-16'
+        className='h-[80dvh] py-5 md:h-auto md:py-10 xl:py-16'
         data-lenis-scroll-snap-align='start'
       >
         <div ref={featuresRectRef} className='flex h-full items-center md:h-auto md:items-start'>

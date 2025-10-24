@@ -21,9 +21,7 @@ import {
 import fragmentShader from './particles/fragment.glsl'
 import vertexShader from './particles/vertex.glsl'
 import { Model as ModelIphone13 } from '@/components/atoms/webgl/model/iphone-13'
-import { useIsMobile } from '@/hooks/use-mobile'
-import { STEPS_DESKTOP, STEPS_MOBILE } from '@/constants/steps.constants'
-// import { useTheme } from 'next-themes'
+import { STEPS_DESKTOP } from '@/constants/steps.constants'
 
 function Raf({ render = true }) {
   const { advance } = useThree()
@@ -123,9 +121,7 @@ const material = new MeshPhysicalMaterial({
 
 export function IPhone() {
   // const { scene: model2 } = useGLTF('/models/arm2.glb')
-  const isMobile = useIsMobile()
   const [type, setType] = useState<number>(1)
-  const steps = useMemo(() => (isMobile ? STEPS_MOBILE : STEPS_DESKTOP), [isMobile])
 
   const [{ color, roughness, metalness, wireframe }, setMaterial] = useControls(
     () => ({
@@ -283,16 +279,12 @@ export function IPhone() {
 
     if (custom) {
       parent.current.scale.setScalar(viewport.height * scale)
-      parent.current.position.set(
-        viewport.width * position[0],
-        viewport.height * position[1],
-        0
-      )
+      parent.current.position.set(viewport.width * position[0], viewport.height * position[1], 0)
       parent.current.rotation.fromArray(rotation.map(MathUtils.degToRad))
       return
     }
 
-    console.log('[Webgl component] length: ', thresholds.length, steps.length)
+    console.log('[Webgl component] length: ', thresholds.length, STEPS_DESKTOP.length)
     console.log('[Webgl component] thresholds: ', _thresholds)
 
     const current = thresholds.findIndex((v) => scroll < v) - 1
@@ -302,8 +294,8 @@ export function IPhone() {
 
     console.log('[Webgl component] from step: ', current, start)
 
-    const from = steps[current]
-    const to = steps[current + 1]
+    const from = STEPS_DESKTOP[current]
+    const to = STEPS_DESKTOP[current + 1]
 
     // return
 
@@ -318,13 +310,13 @@ export function IPhone() {
 
     const _scale = mapRange(0, 1, progress, from.scale, to.scale)
     const _position = new Vector3(posX * viewport.width, posY * viewport.height, 0)
-      const _rotation = new Euler().fromArray(
-          new Array(3).fill(0).map((_, i) => mapRange(0, 1, progress, from.rotation[i], to.rotation[i])) as [
-              number,
-              number,
-              number,
-          ]
-      )
+    const _rotation = new Euler().fromArray(
+      new Array(3).fill(0).map((_, i) => mapRange(0, 1, progress, from.rotation[i], to.rotation[i])) as [
+        number,
+        number,
+        number,
+      ]
+    )
 
     parent.current.scale.setScalar(viewport.height * _scale)
     parent.current.position.copy(_position)
@@ -371,7 +363,7 @@ export function IPhone() {
           // ]}
         >
           {/* <TransformControls mode="rotate"> */}
-          {type === 1 && <ModelIphone13 scale={[1, 1, 1]} />}
+          <ModelIphone13 scale={[1, 1, 1]} />
           {/*{type === 2 && <primitive object={model2} scale={[1, 1, 1]} />}*/}
           {/* </TransformControls> */}
         </group>

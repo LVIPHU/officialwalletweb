@@ -15,14 +15,16 @@ import { Environment, useGLTF, useTexture } from '@react-three/drei'
 import { ObjectMap } from '@react-three/fiber'
 import { useStore } from '@/lib/store'
 
-type ModelProps = React.ComponentProps<'group'>
-type ScreenKey = '1' | '2' | '3' | '4' | '5' | '6' | '7' | '8'
+export type ScreenKey = '1' | '2' | '3' | '4' | '5' | '6' | '7' | '8'
+type ModelProps = React.ComponentProps<'group'> & {
+  screen?: ScreenKey
+}
 
 THREE.Cache.enabled = true
 
-export function Model(props: ModelProps) {
+export function Model({ screen, ...props }: ModelProps) {
   const { nodes, materials } = useGLTF('/models/iphone_13.glb') as GLTF & ObjectMap
-  const screenIphone = useStore((state) => state.screenIphone) as ScreenKey
+  const screenIphone = screen ?? (useStore((state) => state.screenIphone) as ScreenKey)
 
   const textures = useTexture({
     '1': '/screen/1.png',
