@@ -27,8 +27,6 @@ const Footer = () => {
   const isMobile = useIsMobile()
   const { resolvedTheme } = useTheme()
 
-  const footerStyle = resolvedTheme === 'light' ? footerStyleLight : footerStyleDark
-
   const navigationList = useMemo(() => {
     if (isMobile) {
       const arrNav = [...NAVIGATION_ITEMS]
@@ -40,8 +38,8 @@ const Footer = () => {
   return (
     <Container>
       <GlassCard
-        className='border-footer mb-4 rounded-[44px] px-0 py-5 sm:mb-6 md:mb-24 md:px-7 md:py-10'
-        style={footerStyle}
+        data-theme={resolvedTheme}
+        className='border-footer mb-4 rounded-[44px] px-0 py-5 sm:mb-6 md:mb-24 md:px-7 md:py-10 border-gradient-footer'
       >
         {/* --- Top Grid --- */}
         <div className='grid grid-cols-2 gap-x-3 gap-y-10 pt-0 pb-30 md:grid-cols-7 md:gap-8 md:py-10'>

@@ -281,16 +281,14 @@ export function IPhone() {
   useScroll(({ scroll }) => {
     if (!parent.current) return
 
-    const isPortrait = viewport.width < viewport.height
-
     if (custom) {
-      parent.current.scale.setScalar(isPortrait ? viewport.width * scale : viewport.height * scale)
+      parent.current.scale.setScalar(viewport.height * scale)
       parent.current.position.set(
-        viewport.width * (isPortrait ? position[0] * viewport.aspect : position[0] / viewport.aspect),
+        viewport.width * position[0],
         viewport.height * position[1],
         0
       )
-      parent.current.rotation.fromArray(rotation.map((v) => MathUtils.degToRad(v)))
+      parent.current.rotation.fromArray(rotation.map(MathUtils.degToRad))
       return
     }
 
@@ -298,7 +296,6 @@ export function IPhone() {
     console.log('[Webgl component] thresholds: ', _thresholds)
 
     const current = thresholds.findIndex((v) => scroll < v) - 1
-
     const start = thresholds[current]
     const end = thresholds[current + 1]
     const progress = mapRange(start, end, scroll, 0, 1)
@@ -316,26 +313,18 @@ export function IPhone() {
 
     if (!to) return
 
+    const posX = mapRange(0, 1, progress, from.position[0], to.position[0])
+    const posY = mapRange(0, 1, progress, from.position[1], to.position[1])
+
     const _scale = mapRange(0, 1, progress, from.scale, to.scale)
-    const _position = new Vector3(
-      viewport.width *
-        mapRange(
-          0,
-          1,
-          progress,
-          isPortrait ? from.position[0] * viewport.aspect : from.position[0] / viewport.aspect,
-          isPortrait ? to.position[0] * viewport.aspect : to.position[0] / viewport.aspect
-        ),
-      viewport.height * mapRange(0, 1, progress, from.position[1], to.position[1]),
-      0
-    )
-    const _rotation = new Euler().fromArray(
-      new Array(3).fill(0).map((_, i) => mapRange(0, 1, progress, from.rotation[i], to.rotation[i])) as [
-        number,
-        number,
-        number,
-      ]
-    )
+    const _position = new Vector3(posX * viewport.width, posY * viewport.height, 0)
+      const _rotation = new Euler().fromArray(
+          new Array(3).fill(0).map((_, i) => mapRange(0, 1, progress, from.rotation[i], to.rotation[i])) as [
+              number,
+              number,
+              number,
+          ]
+      )
 
     parent.current.scale.setScalar(viewport.height * _scale)
     parent.current.position.copy(_position)
