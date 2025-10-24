@@ -50,8 +50,8 @@ export const ThemeSwitcher = ({ size = 20, className }: ThemeSwitchProps) => {
     >
       <div className='cursor-pointer overflow-hidden' style={{ width: size, height: size }}>
         <div ref={wrapperRef} className='flex gap-1 pt-0.5 pl-0.5' style={{ display: 'flex', flexDirection: 'row' }}>
-          <Sun size={size} className='shrink-0' />
           <Moon size={size} className='shrink-0' />
+          <Sun size={size} className='shrink-0' />
           <span className='sr-only'>Toggle theme</span>
         </div>
       </div>

@@ -45,11 +45,11 @@ export function ChainCard({ size = 'default', chain, className, iconClassName }:
   }
 
   return (
-    <NavigationLink href={chain?.url || '' + '?ref=TBChat'}>
-      <div data-slot='chain-card' className={cn(chainCardVariants({ chain: chain.id, size }), className)}>
-        <Logo />
-        <p className='text-center text-2xl font-black md:text-5xl'>{i18n._(chain.title)}</p>
-      </div>
-    </NavigationLink>
+    // <NavigationLink href={chain?.url || '' + '?ref=TBChat'}>
+    <div data-slot='chain-card' className={cn(chainCardVariants({ chain: chain.id, size }), className)}>
+      <Logo />
+      <p className='text-center text-2xl font-black md:text-5xl'>{i18n._(chain.title)}</p>
+    </div>
+    // </NavigationLink>
   )
 }

@@ -31,7 +31,7 @@ export function Logo({ className, classNameIcon, classNameLabel, showText = fals
 
   return (
     <NavigationLink href='/'>
-      <div className={cn('flex flex-row items-center justify-center space-x-2', className)}>
+      <div className={cn('flex flex-row items-center justify-center gap-2', className)}>
         <LogoSVG className={cn(sizeClasses[size], classNameIcon)} />
         {showText && (
           <span className={cn('text-foreground font-semibold', textSizeClasses[size], classNameLabel)}>TB Wallet</span>

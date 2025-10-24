@@ -13,11 +13,11 @@ msgstr ""
 "Language-Team: \n"
 "Plural-Forms: \n"
 
-#: src/components/organisms/footer/index.tsx:71
+#: src/components/organisms/footer/index.tsx:69
 msgid ". All rights reserved."
 msgstr ". Todos os direitos reservados."
 
-#: src/components/templates/home/index.tsx:280
+#: src/components/templates/home/index.tsx:282
 #: src/constants/navigation.constants.ts:49
 msgid "About"
 msgstr "Sobre"
@@ -61,7 +61,7 @@ msgstr "Carreiras"
 msgid "Coming soon"
 msgstr "Em breve"
 
-#: src/components/templates/home/index.tsx:390
+#: src/components/templates/home/index.tsx:402
 msgid "Community talk about us"
 msgstr "A comunidade fala sobre nós"
 
@@ -69,7 +69,7 @@ msgstr "A comunidade fala sobre nós"
 msgid "Contact Us"
 msgstr "Fale Conosco"
 
-#: src/components/templates/home/index.tsx:307
+#: src/components/templates/home/index.tsx:316
 msgid "Designed for All, Built for You"
 msgstr "Projetado para todos, criado para você"
 
@@ -87,7 +87,7 @@ msgstr "Desenvolvedor"
 msgid "Download"
 msgstr "Baixar"
 
-#: src/components/templates/home/index.tsx:405
+#: src/components/templates/home/index.tsx:417
 msgid "Download now"
 msgstr "Baixe agora"
 
@@ -99,7 +99,7 @@ msgstr "Troque tokens entre cadeias sem esforço, com taxas baixas e taxas em te
 msgid "Ethereum"
 msgstr "Ethereum"
 
-#: src/components/templates/home/index.tsx:264
+#: src/components/templates/home/index.tsx:266
 msgid "Explore now"
 msgstr "Explorar agora"
 
@@ -157,11 +157,11 @@ msgstr "NFT"
 msgid "No language found."
 msgstr "Nenhum idioma encontrado."
 
-#: src/components/templates/home/index.tsx:372
+#: src/components/templates/home/index.tsx:384
 msgid "One wallet. Cross platform"
 msgstr "Uma carteira. Multiplataforma"
 
-#: src/components/templates/home/index.tsx:238
+#: src/components/templates/home/index.tsx:239
 msgid "Own Your Crypto."
 msgstr "Seja dono das suas criptomoedas."
 
@@ -169,9 +169,9 @@ msgstr "Seja dono das suas criptomoedas."
 msgid "Pay fees in USDT for stable, predictable costs amid market swings. This flexible feature adds transparency, making Web3 interactions more budget-friendly and user-centric."
 msgstr "Pague taxas em USDT para custos estáveis e previsíveis em meio às oscilações do mercado. Este recurso flexível adiciona transparência, tornando as interações Web3 mais amigáveis ao orçamento e centradas no usuário."
 
-#: src/components/templates/home/index.tsx:244
-msgid "Possibilities."
-msgstr "Possibilidades."
+#: src/components/templates/home/index.tsx:245
+msgid "Possibilities"
+msgstr "Possibilidades"
 
 #: src/constants/navigation.constants.ts:53
 msgid "Press Kit"
@@ -205,7 +205,7 @@ msgstr "Algo incrível está a caminho! Deixe seu e-mail abaixo para ser o prime
 msgid "Staking"
 msgstr "Staking"
 
-#: src/components/organisms/footer/index.tsx:116
+#: src/components/organisms/footer/index.tsx:114
 msgid "Stay connected:"
 msgstr "Mantenha-se conectado:"
 
@@ -226,19 +226,19 @@ msgstr "Troca"
 msgid "Swift"
 msgstr "Swift"
 
-#: src/components/templates/home/index.tsx:310
+#: src/components/templates/home/index.tsx:319
 msgid "TB Wallet bridges the gap for beginners and experts alike. Its user-friendly design offers easy onboarding for newcomers and advanced tools for DeFi pros, ensuring secure, efficient navigation of the decentralized ecosystem."
 msgstr "TB Wallet faz a ponte entre iniciantes e especialistas. Seu design amigável oferece integração fácil para novatos e ferramentas avançadas para profissionais de DeFi, garantindo navegação segura e eficiente no ecossistema descentralizado."
 
-#: src/components/templates/home/index.tsx:352
+#: src/components/templates/home/index.tsx:364
 msgid "TB Wallet connects you to diverse ecosystems, from Bitcoin and Ethereum to Optimism and Cosmos. Manage portfolios, engage in DeFi, trade NFTs, and link to dApps—all in one secure, self-custody hub."
 msgstr "TB Wallet conecta-lo a ecossistemas diversos, do Bitcoin e Ethereum ao Optimism e Cosmos. Gerencie portfólios, participe na DeFi, negocie NFTs e ligue-se a dApps — tudo num hub seguro de autocustódia."
 
-#: src/components/templates/home/index.tsx:248
+#: src/components/templates/home/index.tsx:249
 msgid "TB Wallet empowers you to manage diverse assets like Bitcoin, Ethereum, and Solana. Securely dive into DeFi, NFTs, and dApps with full control. Your keys, your future."
 msgstr "TB Wallet capacita-lo a gerir ativos variados como Bitcoin, Ethereum e Solana. Mergulhe com segurança em DeFi, NFTs e dApps com controlo total. Suas chaves, seu futuro."
 
-#: src/components/templates/home/index.tsx:283
+#: src/components/templates/home/index.tsx:285
 msgid "TB Wallet is a leading multi-chain wallet with robust security and an intuitive interface. It simplifies Web3 interactions, from token management to dApp access, while giving you total control over your digital wealth."
 msgstr "TB Wallet é uma carteira multi-cadeia líder com segurança robusta e interface intuitiva. Simplifica as interações Web3, da gestão de tokens ao acesso às dApps, enquanto lhe concede controlo total sobre sua riqueza digital."
 
@@ -254,7 +254,7 @@ msgstr "Termos de Serviço"
 msgid "Trust Squad"
 msgstr "Equipe Trust"
 
-#: src/components/templates/home/index.tsx:241
+#: src/components/templates/home/index.tsx:242
 msgid "Unleash Web3"
 msgstr "Liberte o Web3"
 
@@ -274,6 +274,6 @@ msgstr "Núcleo da Carteira"
 msgid "We’re launching soon!"
 msgstr "Lançaremos em breve!"
 
-#: src/components/templates/home/index.tsx:347
+#: src/components/templates/home/index.tsx:359
 msgid "Your All-in-One Web3 Wallet"
 msgstr "Sua carteira Web3 tudo-em-um"

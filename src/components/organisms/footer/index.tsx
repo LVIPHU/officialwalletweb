@@ -46,7 +46,7 @@ const Footer = () => {
           {/* Logo section */}
           <div className='col-span-full flex flex-col items-center gap-4 md:col-span-2'>
             <Logo classNameIcon='size-16 md:size-24' />
-            <p className='text-5xl font-black text-black dark:text-white'>TB Wallet</p>
+            <p className='isolate text-5xl font-black text-black mix-blend-normal dark:text-white'>TB Wallet</p>
           </div>
 
           <div className='col-span-full md:hidden'>

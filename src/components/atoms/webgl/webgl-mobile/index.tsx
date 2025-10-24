@@ -4,7 +4,7 @@ import { Canvas, useThree } from '@react-three/fiber'
 import { Float } from '@react-three/drei'
 import { Suspense, useEffect, useRef } from 'react'
 import { Color, MathUtils } from 'three'
-import {Model as ModelIphone13, ScreenKey} from '@/components/atoms/webgl/model/iphone-13'
+import { Model as ModelIphone13, ScreenKey } from '@/components/atoms/webgl/model/iphone-13'
 
 function IPhoneStatic({ screen }: { screen?: ScreenKey }) {
   const parent = useRef<any>(null)
@@ -38,27 +38,26 @@ function IPhoneStatic({ screen }: { screen?: ScreenKey }) {
 function Content({ screen }: { screen?: ScreenKey }) {
   return (
     <Suspense fallback={null}>
-      <IPhoneStatic screen={screen}/>
+      <IPhoneStatic screen={screen} />
     </Suspense>
   )
 }
 
 export function WebGLMobile({ screen }: { screen?: ScreenKey }) {
   return (
-      <div className='relative h-full w-full'>
-          <Canvas
-              orthographic
-              camera={{ position: [0, 0, 1000], near: 0.01, far: 10000 }}
-              gl={{
-                  powerPreference: 'high-performance',
-                  antialias: true,
-                  alpha: true,
-              }}
-              dpr={[1, 2]}
-          >
-              <Content screen={screen}/>
-          </Canvas>
-      </div>
-
+    <div className='relative h-full w-full'>
+      <Canvas
+        orthographic
+        camera={{ position: [0, 0, 1000], near: 0.01, far: 10000 }}
+        gl={{
+          powerPreference: 'high-performance',
+          antialias: true,
+          alpha: true,
+        }}
+        dpr={[1, 2]}
+      >
+        <Content screen={screen} />
+      </Canvas>
+    </div>
   )
 }

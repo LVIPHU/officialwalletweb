@@ -13,11 +13,11 @@ msgstr ""
 "Language-Team: \n"
 "Plural-Forms: \n"
 
-#: src/components/organisms/footer/index.tsx:71
+#: src/components/organisms/footer/index.tsx:69
 msgid ". All rights reserved."
 msgstr "。版权所有。"
 
-#: src/components/templates/home/index.tsx:280
+#: src/components/templates/home/index.tsx:282
 #: src/constants/navigation.constants.ts:49
 msgid "About"
 msgstr "关于"
@@ -61,7 +61,7 @@ msgstr "加入我们"
 msgid "Coming soon"
 msgstr "即将上线"
 
-#: src/components/templates/home/index.tsx:390
+#: src/components/templates/home/index.tsx:402
 msgid "Community talk about us"
 msgstr "社区对我们的评价"
 
@@ -69,7 +69,7 @@ msgstr "社区对我们的评价"
 msgid "Contact Us"
 msgstr "联系我们"
 
-#: src/components/templates/home/index.tsx:307
+#: src/components/templates/home/index.tsx:316
 msgid "Designed for All, Built for You"
 msgstr "为所有人而设计，为您量身打造"
 
@@ -87,7 +87,7 @@ msgstr "开发者"
 msgid "Download"
 msgstr "下载"
 
-#: src/components/templates/home/index.tsx:405
+#: src/components/templates/home/index.tsx:417
 msgid "Download now"
 msgstr "立即下载"
 
@@ -99,7 +99,7 @@ msgstr "轻松跨链兑换代币，费用低、实时汇率。无论是用比特
 msgid "Ethereum"
 msgstr "以太坊"
 
-#: src/components/templates/home/index.tsx:264
+#: src/components/templates/home/index.tsx:266
 msgid "Explore now"
 msgstr "立即探索"
 
@@ -157,11 +157,11 @@ msgstr "NFT"
 msgid "No language found."
 msgstr "未找到语言。"
 
-#: src/components/templates/home/index.tsx:372
+#: src/components/templates/home/index.tsx:384
 msgid "One wallet. Cross platform"
 msgstr "一个钱包，跨平台使用"
 
-#: src/components/templates/home/index.tsx:238
+#: src/components/templates/home/index.tsx:239
 msgid "Own Your Crypto."
 msgstr "掌控您的加密资产。"
 
@@ -169,9 +169,9 @@ msgstr "掌控您的加密资产。"
 msgid "Pay fees in USDT for stable, predictable costs amid market swings. This flexible feature adds transparency, making Web3 interactions more budget-friendly and user-centric."
 msgstr "以 USDT 支付费用，在市场波动中实现稳定且可预测的成本。此灵活功能增加了透明度，使 Web3 互动更符合预算、更以用户为中心。"
 
-#: src/components/templates/home/index.tsx:244
-msgid "Possibilities."
-msgstr "可能性。"
+#: src/components/templates/home/index.tsx:245
+msgid "Possibilities"
+msgstr "可能性"
 
 #: src/constants/navigation.constants.ts:53
 msgid "Press Kit"
@@ -205,7 +205,7 @@ msgstr "令人惊喜的事即将到来！留下您的电子邮箱，第一时间
 msgid "Staking"
 msgstr "质押"
 
-#: src/components/organisms/footer/index.tsx:116
+#: src/components/organisms/footer/index.tsx:114
 msgid "Stay connected:"
 msgstr "保持联系："
 
@@ -226,19 +226,19 @@ msgstr "兑换"
 msgid "Swift"
 msgstr "Swift"
 
-#: src/components/templates/home/index.tsx:310
+#: src/components/templates/home/index.tsx:319
 msgid "TB Wallet bridges the gap for beginners and experts alike. Its user-friendly design offers easy onboarding for newcomers and advanced tools for DeFi pros, ensuring secure, efficient navigation of the decentralized ecosystem."
 msgstr "TB Wallet 架起新手与高手之间的桥梁。其用户友好的设计为新用户提供便捷入门，为 DeFi 专业人士提供高级工具，确保您在去中心化生态系统中安全、高效地导航。"
 
-#: src/components/templates/home/index.tsx:352
+#: src/components/templates/home/index.tsx:364
 msgid "TB Wallet connects you to diverse ecosystems, from Bitcoin and Ethereum to Optimism and Cosmos. Manage portfolios, engage in DeFi, trade NFTs, and link to dApps—all in one secure, self-custody hub."
 msgstr "TB Wallet 将您连接至多元生态系统，从比特币和以太坊到 Optimism 和 Cosmos。管理投资组合、参与 DeFi、交易 NFTs，并链接至 dApps — 所有这一切都在一个安全的自我托管中心完成。"
 
-#: src/components/templates/home/index.tsx:248
+#: src/components/templates/home/index.tsx:249
 msgid "TB Wallet empowers you to manage diverse assets like Bitcoin, Ethereum, and Solana. Securely dive into DeFi, NFTs, and dApps with full control. Your keys, your future."
 msgstr "TB Wallet 赋能您管理比特币、以太坊和 Solana 等多种资产。安全地深入 DeFi、NFT 和 dApps，掌握完全控制权。您的密钥，您的未来。"
 
-#: src/components/templates/home/index.tsx:283
+#: src/components/templates/home/index.tsx:285
 msgid "TB Wallet is a leading multi-chain wallet with robust security and an intuitive interface. It simplifies Web3 interactions, from token management to dApp access, while giving you total control over your digital wealth."
 msgstr "TB Wallet 是领先的多链钱包，具备强大安全性和直观界面。它简化了 Web3 的互动—from 代币管理到 dApp 访问—同时赋予您对数字财富的完全控制。"
 
@@ -254,7 +254,7 @@ msgstr "服务条款"
 msgid "Trust Squad"
 msgstr "Trust 团队"
 
-#: src/components/templates/home/index.tsx:241
+#: src/components/templates/home/index.tsx:242
 msgid "Unleash Web3"
 msgstr "释放 Web3"
 
@@ -274,6 +274,6 @@ msgstr "钱包核心"
 msgid "We’re launching soon!"
 msgstr "我们即将上线！"
 
-#: src/components/templates/home/index.tsx:347
+#: src/components/templates/home/index.tsx:359
 msgid "Your All-in-One Web3 Wallet"
 msgstr "您的全能型 Web3 钱包"

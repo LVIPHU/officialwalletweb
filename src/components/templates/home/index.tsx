@@ -242,7 +242,7 @@ export default function HomeTemplate() {
                 <Trans>Unleash Web3</Trans>
               </AuroraText>
               <AuroraText speed={0}>
-                <Trans>Possibilities.</Trans>
+                <Trans>Possibilities</Trans>
               </AuroraText>
             </h1>
             <p className='max-w-md text-center md:text-start'>
@@ -257,9 +257,9 @@ export default function HomeTemplate() {
                 alt={'network'}
                 width={612}
                 height={612}
-                className='absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-[-1] object-contain'
+                className='absolute top-1/2 left-1/2 z-[-1] -translate-x-1/2 -translate-y-1/2 object-contain'
               />
-              <WebGLMobile screen={"1"}/>
+              <WebGLMobile screen={'1'} />
             </div>
             <Button variant={'neon'} size={'2xl'} className={'w-fit md:relative'}>
               <span>
@@ -274,7 +274,7 @@ export default function HomeTemplate() {
       </Container>
 
       {/* About Section */}
-      <Container id='about' className='min-h-dvh md:h-dvh py-5 md:py-10 xl:py-16' data-lenis-scroll-snap-align='start'>
+      <Container id='about' className='min-h-dvh py-5 md:h-dvh md:py-10 xl:py-16' data-lenis-scroll-snap-align='start'>
         <div className='flex h-full flex-col items-center gap-8 md:gap-6'>
           <AnimatedContent distance={50} threshold={0.7}>
             <div className='flex max-w-2xl flex-col gap-8 text-center md:gap-6'>
@@ -297,14 +297,18 @@ export default function HomeTemplate() {
               </div>
             </AnimatedContent>
             <div className='relative h-svw w-full md:hidden'>
-              <WebGLMobile screen={"2"}/>
+              <WebGLMobile screen={'2'} />
             </div>
           </div>
         </div>
       </Container>
 
       {/* Platform Section */}
-      <Container id='platform' className='min-h-dvh md:h-dvh py-5 md:py-10 xl:py-16' data-lenis-scroll-snap-align='start'>
+      <Container
+        id='platform'
+        className='min-h-dvh py-5 md:h-dvh md:py-10 xl:py-16'
+        data-lenis-scroll-snap-align='start'
+      >
         <div className='grid h-full items-center justify-center gap-8 md:grid-cols-2'>
           <AnimatedContent distance={10} threshold={0.4} className='md:order-last'>
             <div className='flex h-full max-w-md flex-col gap-8 text-center md:gap-6 md:text-start'>
@@ -326,8 +330,8 @@ export default function HomeTemplate() {
                 <div className='background-glow' />
               </div>
             </AnimatedContent>
-            <div className='relative h-svw w-full md:hidden mb-5'>
-              <WebGLMobile screen={"3"}/>
+            <div className='relative mb-5 h-svw w-full md:hidden'>
+              <WebGLMobile screen={'3'} />
             </div>
           </div>
         </div>

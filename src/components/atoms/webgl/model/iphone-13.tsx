@@ -24,8 +24,8 @@ THREE.Cache.enabled = true
 
 export function Model({ screen, ...props }: ModelProps) {
   const { nodes, materials } = useGLTF('/models/iphone_13.glb') as GLTF & ObjectMap
-  const screenIphone = screen ?? (useStore((state) => state.screenIphone) as ScreenKey)
-
+  const storeScreenIphone = useStore((state) => state.screenIphone) as ScreenKey
+  const screenIphone = screen ?? storeScreenIphone
   const textures = useTexture({
     '1': '/screen/1.png',
     '2': '/screen/2.png',
