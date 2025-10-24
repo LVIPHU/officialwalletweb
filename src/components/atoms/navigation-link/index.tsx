@@ -1,22 +1,39 @@
 'use client'
-import { ComponentProps } from 'react'
-import { cn } from '@/lib/styles'
 import Link from 'next/link'
+import { cn } from '@/lib/styles'
 
 const EXTERNAL_LINK_REGEX = /^(https?:)?\/\//i
 
-export function NavigationLink({ children, className, href, ...rest }: ComponentProps<'a'>) {
-  const isExternal = EXTERNAL_LINK_REGEX.test(href || '')
+interface NavigationLinkProps extends React.AnchorHTMLAttributes<HTMLAnchorElement> {
+  href: string
+  className?: string
+  children: React.ReactNode
+}
+
+export function NavigationLink({ children, className, href, ...rest }: NavigationLinkProps) {
+  const isExternal = EXTERNAL_LINK_REGEX.test(href)
+
+  if (isExternal) {
+    return (
+        <a
+            href={href}
+            target="_blank"
+            rel="noopener noreferrer"
+            className={cn('no-underline', className)}
+            {...rest}
+        >
+          {children}
+        </a>
+    )
+  }
+
   return (
-    <Link
-      href={href || '#'}
-      target={isExternal ? '_blank' : '_self'}
-      aria-current={isExternal ? undefined : 'page'}
-      rel={isExternal ? 'noopener noreferrer' : undefined}
-      className={cn('no-underline', className)}
-      {...rest}
-    >
-      {children}
-    </Link>
+      <Link
+          href={href}
+          className={cn('no-underline', className)}
+          {...rest}
+      >
+        {children}
+      </Link>
   )
 }

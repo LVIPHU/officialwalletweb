@@ -12,12 +12,12 @@ import { useIsMobile } from '@/hooks/use-mobile'
 import { Trans } from '@lingui/react/macro'
 
 const languages: Record<LOCALES, string> = {
-  ar: 'العربية',
   en: 'English',
   es: 'Español',
-  fi: 'Suomi',
-  fr: 'Français',
   pt: 'Português',
+  fr: 'Français',
+  ar: 'العربية',
+  fi: 'Suomi',
   'zh-hans': '简体中文',
   'zh-hant': '繁體中文',
 } as const
