@@ -95,7 +95,7 @@ const NavSection = memo(({ id, title, items, open, onToggle }: NavSectionProps) 
         <SidebarGroupLabel asChild className='group/label'>
           <CollapsibleTrigger
             className={cn(
-              'w-full pb-2 text-2xl! font-semibold transition-colors px-0!',
+              'w-full px-0! pb-2 text-2xl! font-semibold transition-colors',
               'text-foreground! hover:text-foreground group-data-[state=open]/collapsible:text-primary!'
             )}
           >

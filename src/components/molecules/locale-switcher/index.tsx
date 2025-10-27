@@ -29,8 +29,8 @@ interface LocaleSwitcherProps {
 export function LocaleSwitcher({ classNameLabel }: LocaleSwitcherProps) {
   const defaultLocale: LOCALES = 'en'
 
-  const isMobile = useIsMobile()
   const pathname = usePathname()
+  const isMobile = useIsMobile()
   const router = useRouter()
 
   const [open, setOpen] = useState<boolean>(false)
