@@ -36,7 +36,7 @@ export default function FeaturesSlidesHorizontal({ children }: HorizontalSlidesP
   }))
 
   useEffect(() => {
-    if (!targetRef.current || !triggerRef.current) return
+    if (!targetRef.current || !triggerRef.current || isMobile) return
 
     const ctx = gsap.context(() => {
       const container = targetRef.current!
@@ -44,13 +44,6 @@ export default function FeaturesSlidesHorizontal({ children }: HorizontalSlidesP
 
       // reset styles
       gsap.set(cards[0], { opacity: 1 })
-
-      if (isMobile) {
-        console.log('mobile')
-        gsap.set(container, { clearProps: 'all' })
-        gsap.set(cards, { clearProps: 'all' })
-        return
-      }
 
       const totalScroll = container.scrollWidth - windowWidth / 2 + 50
 
