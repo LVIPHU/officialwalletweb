@@ -11,18 +11,6 @@ import { useLingui } from '@lingui/react'
 import { useIsMobile } from '@/hooks/use-mobile'
 import { useTheme } from 'next-themes'
 
-const footerStyleLight: React.CSSProperties = {
-  borderImageSlice: '1',
-  borderImageSource:
-    'linear-gradient(90deg, rgba(255, 255, 255, 0) 1.16%, rgba(0, 0, 0, 0.15) 25.87%, rgba(0, 0, 0, 0.3) 50.58%, rgba(0, 0, 0, 0.15) 75.29%, rgba(255, 255, 255, 0) 100%)',
-}
-
-const footerStyleDark: React.CSSProperties = {
-  borderImageSlice: '1',
-  borderImageSource:
-    'linear-gradient(90deg, rgba(255, 255, 255, 0) 1.16%, rgba(255, 255, 255, 0.15) 50.58%, rgba(255, 255, 255, 0) 100%)',
-}
-
 const Footer = () => {
   const isMobile = useIsMobile()
   const { resolvedTheme } = useTheme()

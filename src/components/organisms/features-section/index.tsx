@@ -1,6 +1,5 @@
 'use client'
 import dynamic from 'next/dynamic'
-import { useIsMobile } from '@/hooks/use-mobile'
 import { FEATURES } from '@/constants/landing.constants'
 import { FeatureCard } from '@/components/molecules/feature-card'
 import { FeaturesCarousel } from '@/components/molecules/features-carousel'
@@ -13,18 +12,17 @@ const FeaturesSlidesHorizontal = dynamic(
   { ssr: false }
 )
 
-export function FeaturesSection() {
-  const isMobile = useIsMobile()
-
+export default function FeaturesSection() {
   const content = FEATURES.map((feature) => <FeatureCard key={feature.id} feature={feature} />)
 
   return (
-    <>
-      {isMobile ? (
+    <div>
+      <div className='block md:hidden'>
         <FeaturesCarousel>{content}</FeaturesCarousel>
-      ) : (
+      </div>
+      <div className='hidden md:block'>
         <FeaturesSlidesHorizontal>{content}</FeaturesSlidesHorizontal>
-      )}
-    </>
+      </div>
+    </div>
   )
 }

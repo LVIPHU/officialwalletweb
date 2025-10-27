@@ -1,5 +1,6 @@
 'use client'
 import { useEffect, useRef, useState } from 'react'
+import Lenis from 'lenis'
 import dynamic from 'next/dynamic'
 import { button, useControls } from 'leva'
 import { useRect, ensureRect } from '@/hooks/use-rect'
@@ -13,17 +14,17 @@ import { isBrowser } from '@/lib/misc'
 import { useStore } from '@/lib/store'
 import { clamp, mapRange } from '@/lib/maths'
 import { Container } from '@/components/atoms/container'
-import Lenis from 'lenis'
 import { TestimonialCarousel } from '@/components/molecules/testimonial-carousel'
 import { DownloadCard } from '@/components/molecules/download-card'
 import PlatformTabs from '@/components/molecules/platform-tabs'
 import Image from 'next/image'
-import { FeaturesSection } from '@/components/organisms/features-section'
 import { Trans } from '@lingui/react/macro'
 import { ChainCard } from '@/components/molecules/chain-card'
-import { WebGLMobile } from '@/components/atoms/webgl/webgl-mobile'
 
-// const Parallax = dynamic(() => import('@/components/atoms/parallax').then((Parallax) => Parallax), { ssr: false })
+const FeaturesSection = dynamic(
+  () => import('@/components/organisms/features-section').then((FeaturesSection) => FeaturesSection),
+  { ssr: false }
+)
 
 const AuroraText = dynamic(() => import('@/components/atoms/aurora-text').then(({ AuroraText }) => AuroraText), {
   ssr: false,
@@ -35,6 +36,11 @@ const AnimatedContent = dynamic(
 )
 
 const WebGL = dynamic(() => import('@/components/atoms/webgl').then(({ WebGL }) => WebGL), { ssr: false })
+
+const WebGLMobile = dynamic(
+  () => import('@/components/atoms/webgl/webgl-mobile').then(({ WebGLMobile }) => WebGLMobile),
+  { ssr: false }
+)
 
 if (isBrowser) {
   window.history.scrollRestoration = 'manual'
