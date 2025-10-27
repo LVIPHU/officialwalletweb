@@ -68,9 +68,11 @@ export default function MobileSidebar() {
               <LocaleSwitcher />
             </div>
           </div>
-          <Button variant='neon' className='h-11! w-full rounded-full text-xl font-normal whitespace-nowrap'>
-            <Trans>Download</Trans>
-          </Button>
+          <NavigationLink href='https://download.chainviews.net/'>
+            <Button variant='neon' className='h-11! w-full rounded-full text-xl font-normal whitespace-nowrap'>
+              <Trans>Download</Trans>
+            </Button>
+          </NavigationLink>
         </div>
       </SidebarFooter>
     </Sidebar>

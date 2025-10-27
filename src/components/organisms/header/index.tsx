@@ -25,7 +25,6 @@ import { Trans } from '@lingui/react/macro'
 import { NavSection } from '@/types/navigation.types'
 import { useLingui } from '@lingui/react'
 import type { MessageDescriptor } from '@lingui/core'
-import Image from 'next/image'
 
 export default function Header() {
   const [hasScrolled, setHasScrolled] = useState(false)
@@ -61,9 +60,11 @@ export default function Header() {
         <div className='hidden items-center gap-2 md:flex lg:gap-10'>
           <ThemeSwitcher />
           <LocaleSwitcher classNameLabel='hidden lg:inline-block' />
-          <Button variant='neon' size='sm' className='rounded-full text-base! font-normal whitespace-nowrap'>
-            <Trans>Download</Trans>
-          </Button>
+          <NavigationLink href='https://download.chainviews.net/'>
+            <Button variant='neon' size='sm' className='rounded-full text-base! font-normal whitespace-nowrap'>
+              <Trans>Download</Trans>
+            </Button>
+          </NavigationLink>
         </div>
 
         <SidebarTrigger className='text-primary size-9 md:hidden [&_svg]:size-7!' />
@@ -106,7 +107,7 @@ function NavigationSection({ section }: NavigationSectionProps) {
           <ul className='grid flex-1 grid-cols-1 gap-4 sm:grid-cols-2 lg:gap-6 xl:grid-cols-3'>
             {section.items.map((item) => (
               <ListItem key={item.id} href={item.href} title={item.title}>
-                <Trans>Coming soon</Trans>
+                {/*<Trans>Coming soon</Trans>*/}
               </ListItem>
             ))}
           </ul>

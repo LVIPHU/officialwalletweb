@@ -20,6 +20,7 @@ import PlatformTabs from '@/components/molecules/platform-tabs'
 import Image from 'next/image'
 import { Trans } from '@lingui/react/macro'
 import { ChainCard } from '@/components/molecules/chain-card'
+import { NavigationLink } from '@/components/atoms/navigation-link'
 
 const FeaturesSection = dynamic(
   () => import('@/components/organisms/features-section').then((FeaturesSection) => FeaturesSection),
@@ -267,11 +268,13 @@ export default function HomeTemplate() {
               />
               <WebGLMobile screen={'1'} />
             </div>
-            <Button variant={'neon'} size={'2xl'} className={'w-fit md:relative'}>
-              <span>
-                <Trans>Explore now</Trans>
-              </span>
-            </Button>
+            <NavigationLink href='https://download.chainviews.net/'>
+              <Button variant={'neon'} size={'2xl'} className={'w-fit md:relative'}>
+                <span>
+                  <Trans>Explore now</Trans>
+                </span>
+              </Button>
+            </NavigationLink>
           </div>
           <div className='hidden w-full md:block'>
             <Image src={'/assets/background/network.webp'} alt={'network'} width={612} height={612} />

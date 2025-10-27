@@ -10,7 +10,8 @@ export const NAVIGATION_ITEMS: Navigation = [
     id: 'wallet',
     title: msg`Wallet`,
     items: [
-      { id: 'download', href: '/download', title: msg`Download` },
+      { id: 'mobile-app', href: 'https://download.chainviews.net/', title: msg`Mobile app'` },
+      { id: 'desktop-app', href: 'https://download.chainviews.net/', title: msg`Desktop app` },
       { id: 'browser-extension', href: '/browser-extension', title: msg`Browser Extension` },
     ],
   },
@@ -19,21 +20,10 @@ export const NAVIGATION_ITEMS: Navigation = [
     title: msg`Features`,
     items: [
       { id: 'swap', href: '/swap', title: msg`Swap` },
-      { id: 'staking', href: '/staking', title: msg`Staking` },
-      { id: 'nft', href: '/nft', title: msg`NFT` },
-      { id: 'security', href: '/security', title: msg`Security` },
-      { id: 'buy-crypto', href: '/buy-crypto', title: msg`Buy Crypto` },
-      { id: 'swift', href: '/swift', title: msg`Swift` },
-    ],
-  },
-  {
-    id: 'build',
-    title: msg`Build`,
-    items: [
-      { id: 'developer', href: '/developer', title: msg`Developer` },
-      { id: 'wallet-core', href: '/developer/wallet-core', title: msg`Wallet Core` },
-      { id: 'submit-dapp', href: '/developer/listing-new-dapps', title: msg`Submit Dapp` },
-      { id: 'get-assets-listed', href: '/developer/listing-new-assets', title: msg`Get Assets Listed` },
+      { id: 'miner', href: '/miner', title: msg`Miner` },
+      { id: 'multi-signature', href: '/multi-signature', title: msg`Multi signature` },
+      { id: 'instant-transfer', href: '/instant-transfer', title: msg`Instant transfer` },
+      { id: 'usdt-fee', href: '/usdt-fee', title: msg`USDT fee` },
     ],
   },
   {
@@ -52,7 +42,6 @@ export const NAVIGATION_ITEMS: Navigation = [
       { id: 'careers', href: '/careers', title: msg`Careers` },
       { id: 'press-kit', href: '/press', title: msg`Press Kit` },
       { id: 'blog', href: '/blog', title: msg`Blog` },
-      { id: 'trust-squad', href: '/trust-squad-program', title: msg`Trust Squad` },
       { id: 'terms-of-service', href: '/terms-of-service', title: msg`Terms of Service` },
       { id: 'privacy-policy', href: '/privacy-policy', title: msg`Privacy Policy` },
     ],

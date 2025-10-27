@@ -1,9 +1,8 @@
 'use client'
 
 import { Canvas, useThree } from '@react-three/fiber'
-import { Float } from '@react-three/drei'
 import { Suspense, useEffect, useRef } from 'react'
-import { Color, MathUtils } from 'three'
+import { MathUtils } from 'three'
 import { Model as ModelIphone13, ScreenKey } from '@/components/atoms/webgl/model/iphone-13'
 
 function IPhoneStatic({ screen }: { screen?: ScreenKey }) {
@@ -23,23 +22,10 @@ function IPhoneStatic({ screen }: { screen?: ScreenKey }) {
 
   return (
     <>
-      <ambientLight intensity={0.6} color={new Color('#ffffff')} />
-      <directionalLight position={[150, 200, 300]} intensity={1} color={'#ffffff'} />
-      <directionalLight position={[-100, -50, -150]} intensity={0.5} color={'#ffffff'} />
-
-      <Float floatIntensity={0} rotationIntensity={0}>
-        <group ref={parent}>
-          <ModelIphone13 scale={[1, 1, 1]} screen={screen} />
-        </group>
-      </Float>
+      <group ref={parent}>
+        <ModelIphone13 scale={[1, 1, 1]} screen={screen} />
+      </group>
     </>
-  )
-}
-function Content({ screen }: { screen?: ScreenKey }) {
-  return (
-    <Suspense fallback={null}>
-      <IPhoneStatic screen={screen} />
-    </Suspense>
   )
 }
 
@@ -48,15 +34,28 @@ export function WebGLMobile({ screen }: { screen?: ScreenKey }) {
     <div className='relative h-full w-full'>
       <Canvas
         orthographic
-        camera={{ position: [0, 0, 1000], near: 0.01, far: 10000 }}
+        camera={{
+          position: [0, 0, 1000],
+          near: 0.1,
+          far: 5000,
+        }}
         gl={{
           powerPreference: 'high-performance',
-          antialias: true,
+          antialias: typeof window !== 'undefined' && window.devicePixelRatio <= 1.5, // tắt khử răng cưa trên mobile retina
           alpha: true,
+          stencil: false, // tắt stencil buffer (hiếm khi cần)
+          depth: true,
+          preserveDrawingBuffer: false, // giảm memory (chỉ bật nếu cần chụp ảnh)
         }}
-        dpr={[1, 2]}
+        dpr={[1, Math.min(1.5, window.devicePixelRatio || 1)]} // hạ DPR cho mobile
+        frameloop='demand' // render khi có thay đổi, tiết kiệm CPU
+        performance={{ min: 0.5 }} // giảm auto-performance limit của R3F
+        resize={{ scroll: false, debounce: 200 }} // giảm tần suất resize
+        shadows={false} // tắt shadow nếu không cần
       >
-        <Content screen={screen} />
+        <Suspense fallback={null}>
+          <IPhoneStatic screen={screen} />
+        </Suspense>
       </Canvas>
     </div>
   )
