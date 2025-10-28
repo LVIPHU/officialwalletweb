@@ -1,5 +1,5 @@
 'use client'
-import React, { useRef, useEffect, ReactNode } from 'react'
+import React, { useRef, useLayoutEffect, ReactNode } from 'react'
 import { gsap } from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import { useIsMobile } from '@/hooks/use-mobile'
@@ -48,7 +48,7 @@ const AnimatedContent: React.FC<AnimatedContentProps> = ({
   const isMobile = useIsMobile()
   const ref = useRef<HTMLDivElement>(null)
 
-  useEffect(() => {
+  useLayoutEffect(() => {
     const el = ref.current
     if (!el) return
 

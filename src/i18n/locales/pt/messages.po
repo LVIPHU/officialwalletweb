@@ -18,19 +18,24 @@ msgid ". All rights reserved."
 msgstr ". Todos os direitos reservados."
 
 #: src/components/templates/home/index.tsx:292
-#: src/constants/navigation.constants.ts:39
+#: src/constants/navigation.constants.ts:59
 msgid "About"
 msgstr "Sobre"
 
-#: src/constants/navigation.constants.ts:41
+#: src/constants/navigation.constants.ts:61
 msgid "About Us"
 msgstr "Sobre nós"
+
+#: src/constants/navigation.constants.ts:23
+#: src/constants/navigation.constants.ts:29
+msgid "An optimized Web3 experience for desktop"
+msgstr ""
 
 #: src/constants/landing.constants.ts:54
 msgid "Bitcoin"
 msgstr "Bitcoin"
 
-#: src/constants/navigation.constants.ts:44
+#: src/constants/navigation.constants.ts:64
 msgid "Blog"
 msgstr "Blog"
 
@@ -38,17 +43,29 @@ msgstr "Blog"
 msgid "Boost earnings by connecting to mining pools and tracking rewards in-app. TBC Wallet simplifies mining management, helping both new and seasoned users maximize returns securely."
 msgstr "Aumente os ganhos ao ligar-se a pools de mineração e acompanhar recompensas no app. TBC Wallet simplifica a gestão de mineração, ajudando tanto novos como experientes usuários a maximizar retornos com segurança."
 
-#: src/constants/navigation.constants.ts:15
+#: src/constants/navigation.constants.ts:28
 msgid "Browser Extension"
 msgstr "Extensão do navegador"
 
-#: src/constants/navigation.constants.ts:42
+#: src/constants/navigation.constants.ts:62
 msgid "Careers"
 msgstr "Carreiras"
 
 #: src/components/molecules/platform-tabs/index.tsx:58
-#: src/components/organisms/header/index.tsx:102
 #: src/components/templates/coming-soon/index.tsx:17
+#: src/constants/navigation.constants.ts:37
+#: src/constants/navigation.constants.ts:38
+#: src/constants/navigation.constants.ts:39
+#: src/constants/navigation.constants.ts:44
+#: src/constants/navigation.constants.ts:46
+#: src/constants/navigation.constants.ts:53
+#: src/constants/navigation.constants.ts:54
+#: src/constants/navigation.constants.ts:61
+#: src/constants/navigation.constants.ts:62
+#: src/constants/navigation.constants.ts:63
+#: src/constants/navigation.constants.ts:64
+#: src/constants/navigation.constants.ts:69
+#: src/constants/navigation.constants.ts:71
 msgid "Coming soon"
 msgstr "Em breve"
 
@@ -56,7 +73,7 @@ msgstr "Em breve"
 msgid "Community talk about us"
 msgstr "A comunidade fala sobre nós"
 
-#: src/constants/navigation.constants.ts:34
+#: src/constants/navigation.constants.ts:54
 msgid "Contact Us"
 msgstr "Fale Conosco"
 
@@ -65,11 +82,11 @@ msgid "Designed for All, Built for You"
 msgstr "Projetado para todos, criado para você"
 
 #: src/constants/landing.constants.ts:76
-#: src/constants/navigation.constants.ts:14
+#: src/constants/navigation.constants.ts:22
 msgid "Desktop app"
 msgstr "Aplicativo para desktop"
 
-#: src/components/organisms/header/index.tsx:65
+#: src/components/organisms/header/index.tsx:83
 #: src/components/organisms/mobile-sidebar/index.tsx:73
 msgid "Download"
 msgstr "Baixar"
@@ -94,13 +111,13 @@ msgstr "Explorar agora"
 msgid "Extension"
 msgstr "Extensão"
 
-#: src/constants/navigation.constants.ts:33
+#: src/constants/navigation.constants.ts:53
 msgid "FAQ"
 msgstr "Perguntas Frequentes"
 
 #: src/components/molecules/feature-card/index.tsx:25
-#: src/components/molecules/features-slides-horizontal/index.tsx:142
-#: src/constants/navigation.constants.ts:20
+#: src/components/molecules/features-slides-horizontal/index.tsx:129
+#: src/constants/navigation.constants.ts:35
 msgid "Features"
 msgstr "Recursos"
 
@@ -109,12 +126,12 @@ msgid "Fortify your wallet with multi-approval transactions for enhanced protect
 msgstr "Fortaleça sua carteira com transações de múltiplas aprovações para proteção reforçada contra ameaças — ideal para uso pessoal ou partilhado, garantindo que seus ativos permaneçam seguros e acessíveis somente por você."
 
 #: src/constants/landing.constants.ts:37
-#: src/constants/navigation.constants.ts:25
+#: src/constants/navigation.constants.ts:43
 msgid "Instant transfer"
 msgstr "Transferência instantânea"
 
 #: src/constants/landing.constants.ts:16
-#: src/constants/navigation.constants.ts:23
+#: src/constants/navigation.constants.ts:38
 msgid "Miner"
 msgstr "Minerador"
 
@@ -123,12 +140,12 @@ msgid "Missing brand icon for"
 msgstr "Ícone de marca ausente para"
 
 #: src/constants/landing.constants.ts:69
-#: src/constants/navigation.constants.ts:13
+#: src/constants/navigation.constants.ts:16
 msgid "Mobile app"
 msgstr "Aplicativo móvel"
 
 #: src/constants/landing.constants.ts:23
-#: src/constants/navigation.constants.ts:24
+#: src/constants/navigation.constants.ts:39
 msgid "Multi signature"
 msgstr "Assinatura múltipla"
 
@@ -156,11 +173,11 @@ msgstr "Pague taxas em USDT para custos estáveis e previsíveis em meio às osc
 msgid "Possibilities"
 msgstr "Possibilidades"
 
-#: src/constants/navigation.constants.ts:43
+#: src/constants/navigation.constants.ts:63
 msgid "Press Kit"
 msgstr "Kit de Imprensa"
 
-#: src/constants/navigation.constants.ts:46
+#: src/constants/navigation.constants.ts:71
 msgid "Privacy Policy"
 msgstr "Política de Privacidade"
 
@@ -184,12 +201,12 @@ msgstr "Algo incrível está a caminho! Deixe seu e-mail abaixo para ser o prime
 msgid "Stay connected:"
 msgstr "Mantenha-se conectado:"
 
-#: src/constants/navigation.constants.ts:31
+#: src/constants/navigation.constants.ts:51
 msgid "Support"
 msgstr "Suporte"
 
 #: src/constants/landing.constants.ts:30
-#: src/constants/navigation.constants.ts:22
+#: src/constants/navigation.constants.ts:37
 msgid "Swap"
 msgstr "Troca"
 
@@ -213,15 +230,19 @@ msgstr "TBC Wallet é uma carteira multi-cadeia líder com segurança robusta e 
 msgid "TBChain"
 msgstr "TBChain"
 
-#: src/constants/navigation.constants.ts:45
+#: src/constants/navigation.constants.ts:68
 msgid "Terms of Service"
 msgstr "Termos de Serviço"
+
+#: src/constants/navigation.constants.ts:17
+msgid "The world of Web3 in your pocket"
+msgstr ""
 
 #: src/components/templates/home/index.tsx:244
 msgid "Unleash Web3"
 msgstr "Liberte o Web3"
 
-#: src/constants/navigation.constants.ts:26
+#: src/constants/navigation.constants.ts:46
 msgid "USDT fee"
 msgstr ""
 

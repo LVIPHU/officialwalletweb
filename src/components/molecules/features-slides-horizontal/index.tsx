@@ -1,11 +1,10 @@
 'use client'
-import { useEffect, useRef, ReactNode, useState } from 'react'
+import { useLayoutEffect, useRef, ReactNode, useState } from 'react'
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/dist/ScrollTrigger'
 import { useWindowSize } from '@/hooks/use-window-size'
 import { useIsMobile } from '@/hooks/use-mobile'
 import { cn } from '@/lib/styles'
-import { useControls } from 'leva'
 import AnimatedContent from '@/components/atoms/animated-content'
 import { BACKGROUND_ENUM } from '@/constants/landing.constants'
 import { Trans } from '@lingui/react/macro'
@@ -20,22 +19,13 @@ interface HorizontalSlidesProps {
 export default function FeaturesSlidesHorizontal({ children }: HorizontalSlidesProps) {
   const isMobile = useIsMobile()
   const { width: windowWidth } = useWindowSize()
-
   const setScreenIphone = useStore((state) => state.setScreenIphone)
 
   const [step, setStep] = useState<number>(0)
   const triggerRef = useRef<HTMLDivElement | null>(null)
   const targetRef = useRef<HTMLDivElement | null>(null)
 
-  const [
-    { horizontalScroll: markersHorizontalScroll, cardFadeIn: markersCardFadeIn, cardFadeOut: markersCardFadeOut },
-  ] = useControls('markers', () => ({
-    horizontalScroll: false,
-    cardFadeIn: false,
-    cardFadeOut: false,
-  }))
-
-  useEffect(() => {
+  useLayoutEffect(() => {
     if (!targetRef.current || !triggerRef.current || isMobile) return
 
     const ctx = gsap.context(() => {
@@ -57,7 +47,6 @@ export default function FeaturesSlidesHorizontal({ children }: HorizontalSlidesP
           end: `+=${totalScroll + 100}`,
           scrub: 1,
           pin: true,
-          markers: markersHorizontalScroll,
         },
       })
 
@@ -71,7 +60,6 @@ export default function FeaturesSlidesHorizontal({ children }: HorizontalSlidesP
             end: 'center-=30% 44%',
             scrub: true,
             containerAnimation: scrollTrack,
-            markers: markersCardFadeIn,
           },
         })
 
@@ -89,7 +77,6 @@ export default function FeaturesSlidesHorizontal({ children }: HorizontalSlidesP
             end: 'center+=30% 45%',
             scrub: true,
             containerAnimation: scrollTrack,
-            markers: markersCardFadeOut,
             onLeave: () => {
               setStep(idx + 1)
               setScreenIphone((prev) => `${Number(prev) + 1}`)
@@ -111,7 +98,7 @@ export default function FeaturesSlidesHorizontal({ children }: HorizontalSlidesP
     return () => {
       ctx.revert()
     }
-  }, [windowWidth, isMobile, markersHorizontalScroll, markersCardFadeIn, markersCardFadeOut, setScreenIphone, setStep])
+  }, [windowWidth, isMobile, setScreenIphone])
 
   return (
     <div data-slot='trigger' ref={triggerRef} className='relative md:z-[-1]'>

@@ -1,7 +1,7 @@
 'use client'
 import { gsap } from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
-import { useEffect, useRef } from 'react'
+import { useLayoutEffect, useRef } from 'react'
 import { mapRange } from '@/lib/maths'
 import { useWindowSize } from '@/hooks/use-window-size'
 import { useControls } from 'leva'
@@ -25,7 +25,7 @@ export default function Parallax({ className, children, speed = 1, id = 'paralla
     parallax: false,
   }))
 
-  useEffect(() => {
+  useLayoutEffect(() => {
     if (!trigger.current || !target.current) return
 
     const y = windowWidth * speed * 0.1

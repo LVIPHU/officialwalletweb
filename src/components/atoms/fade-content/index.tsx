@@ -1,5 +1,5 @@
 'use client'
-import { useRef, useEffect, ReactNode } from 'react'
+import { useRef, ReactNode, useLayoutEffect } from 'react'
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/dist/ScrollTrigger'
 
@@ -28,7 +28,7 @@ const FadeContent: React.FC<FadeContentProps> = ({
 }) => {
   const ref = useRef<HTMLDivElement | null>(null)
 
-  useEffect(() => {
+  useLayoutEffect(() => {
     const el = ref.current
     if (!el) return
 

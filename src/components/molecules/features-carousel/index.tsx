@@ -19,27 +19,26 @@ interface FeaturesCarouselProps {
 export function FeaturesCarousel({ children }: FeaturesCarouselProps) {
   const slides = React.Children.toArray(children)
 
-  const [api, setApi] = useState<CarouselApi>()
-  const [current, setCurrent] = useState<number>(0)
-  const [count, setCount] = useState<number>(0)
+  const [carousel, setCarousel] = React.useState<CarouselApi | null>(null)
+  const [state, setState] = React.useState({ current: 1, count: slides.length })
 
   useEffect(() => {
-    if (!api) {
-      return
-    }
-    setCount(api.scrollSnapList().length)
-    setCurrent(api.selectedScrollSnap() + 1)
-    api.on('select', () => {
-      setCurrent(api.selectedScrollSnap() + 1)
-    })
-  }, [api])
+    if (!carousel) return
+    const update = () =>
+      setState({
+        current: carousel.selectedScrollSnap() + 1,
+        count: carousel.scrollSnapList().length,
+      })
+    update()
+    carousel.on('select', update)
+  }, [carousel])
 
   if (slides.length === 0) return null
 
   return (
     <div className='w-full'>
-      <Carousel setApi={setApi} className='relative w-full'>
-        <div data-color={BACKGROUND_ENUM[current - 1]} className='background-glow translate-x-[20%] scale-140' />
+      <Carousel setApi={setCarousel} className='relative w-full'>
+        <div data-color={BACKGROUND_ENUM[state.current - 1]} className='background-glow translate-x-[20%] scale-140' />
         <CarouselContent>
           {slides.map((slide, idx) => (
             <CarouselItem key={idx}>{slide}</CarouselItem>
@@ -49,12 +48,12 @@ export function FeaturesCarousel({ children }: FeaturesCarouselProps) {
         <CarouselNext />
       </Carousel>
       <div className='mt-4 flex items-center justify-center gap-2.5 md:hidden'>
-        {Array.from({ length: count }).map((_, index) => (
+        {Array.from({ length: state.count }).map((_, index) => (
           <button
             key={index}
-            onClick={() => api?.scrollTo(index)}
+            onClick={() => carousel?.scrollTo(index)}
             className={cn('bg-primary/10 h-2 w-7 rounded-full', {
-              'bg-primary': current === index + 1,
+              'bg-primary': state.current === index + 1,
             })}
           />
         ))}

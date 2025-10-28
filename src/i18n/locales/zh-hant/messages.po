@@ -18,19 +18,24 @@ msgid ". All rights reserved."
 msgstr "。保留所有權利。"
 
 #: src/components/templates/home/index.tsx:292
-#: src/constants/navigation.constants.ts:39
+#: src/constants/navigation.constants.ts:59
 msgid "About"
 msgstr "關於"
 
-#: src/constants/navigation.constants.ts:41
+#: src/constants/navigation.constants.ts:61
 msgid "About Us"
 msgstr "關於我們"
+
+#: src/constants/navigation.constants.ts:23
+#: src/constants/navigation.constants.ts:29
+msgid "An optimized Web3 experience for desktop"
+msgstr ""
 
 #: src/constants/landing.constants.ts:54
 msgid "Bitcoin"
 msgstr "比特幣"
 
-#: src/constants/navigation.constants.ts:44
+#: src/constants/navigation.constants.ts:64
 msgid "Blog"
 msgstr "部落格"
 
@@ -38,17 +43,29 @@ msgstr "部落格"
 msgid "Boost earnings by connecting to mining pools and tracking rewards in-app. TBC Wallet simplifies mining management, helping both new and seasoned users maximize returns securely."
 msgstr "透過連接挖礦池並在應用程式內追蹤獎勵來提升收入。TBC Wallet 簡化挖礦管理，協助新手和資深使用者都能安全地最大化回報。"
 
-#: src/constants/navigation.constants.ts:15
+#: src/constants/navigation.constants.ts:28
 msgid "Browser Extension"
 msgstr "瀏覽器擴充功能"
 
-#: src/constants/navigation.constants.ts:42
+#: src/constants/navigation.constants.ts:62
 msgid "Careers"
 msgstr "職涯機會"
 
 #: src/components/molecules/platform-tabs/index.tsx:58
-#: src/components/organisms/header/index.tsx:102
 #: src/components/templates/coming-soon/index.tsx:17
+#: src/constants/navigation.constants.ts:37
+#: src/constants/navigation.constants.ts:38
+#: src/constants/navigation.constants.ts:39
+#: src/constants/navigation.constants.ts:44
+#: src/constants/navigation.constants.ts:46
+#: src/constants/navigation.constants.ts:53
+#: src/constants/navigation.constants.ts:54
+#: src/constants/navigation.constants.ts:61
+#: src/constants/navigation.constants.ts:62
+#: src/constants/navigation.constants.ts:63
+#: src/constants/navigation.constants.ts:64
+#: src/constants/navigation.constants.ts:69
+#: src/constants/navigation.constants.ts:71
 msgid "Coming soon"
 msgstr "即將推出"
 
@@ -56,7 +73,7 @@ msgstr "即將推出"
 msgid "Community talk about us"
 msgstr "社群對我們的評價"
 
-#: src/constants/navigation.constants.ts:34
+#: src/constants/navigation.constants.ts:54
 msgid "Contact Us"
 msgstr "聯絡我們"
 
@@ -65,11 +82,11 @@ msgid "Designed for All, Built for You"
 msgstr "為所有人設計，專為您打造"
 
 #: src/constants/landing.constants.ts:76
-#: src/constants/navigation.constants.ts:14
+#: src/constants/navigation.constants.ts:22
 msgid "Desktop app"
 msgstr "桌面應用程式"
 
-#: src/components/organisms/header/index.tsx:65
+#: src/components/organisms/header/index.tsx:83
 #: src/components/organisms/mobile-sidebar/index.tsx:73
 msgid "Download"
 msgstr "下載"
@@ -94,13 +111,13 @@ msgstr "立即探索"
 msgid "Extension"
 msgstr "擴充功能"
 
-#: src/constants/navigation.constants.ts:33
+#: src/constants/navigation.constants.ts:53
 msgid "FAQ"
 msgstr "常見問題"
 
 #: src/components/molecules/feature-card/index.tsx:25
-#: src/components/molecules/features-slides-horizontal/index.tsx:142
-#: src/constants/navigation.constants.ts:20
+#: src/components/molecules/features-slides-horizontal/index.tsx:129
+#: src/constants/navigation.constants.ts:35
 msgid "Features"
 msgstr "功能特色"
 
@@ -109,12 +126,12 @@ msgid "Fortify your wallet with multi-approval transactions for enhanced protect
 msgstr "用多重批准交易強化您的錢包，以加強防禦威脅的保護 — 適用於個人或共用用途，確保您的資產僅由您安全且可訪問。"
 
 #: src/constants/landing.constants.ts:37
-#: src/constants/navigation.constants.ts:25
+#: src/constants/navigation.constants.ts:43
 msgid "Instant transfer"
 msgstr "即時轉帳"
 
 #: src/constants/landing.constants.ts:16
-#: src/constants/navigation.constants.ts:23
+#: src/constants/navigation.constants.ts:38
 msgid "Miner"
 msgstr "礦工"
 
@@ -123,12 +140,12 @@ msgid "Missing brand icon for"
 msgstr "缺少以下品牌圖示："
 
 #: src/constants/landing.constants.ts:69
-#: src/constants/navigation.constants.ts:13
+#: src/constants/navigation.constants.ts:16
 msgid "Mobile app"
 msgstr "行動應用程式"
 
 #: src/constants/landing.constants.ts:23
-#: src/constants/navigation.constants.ts:24
+#: src/constants/navigation.constants.ts:39
 msgid "Multi signature"
 msgstr "多重簽章"
 
@@ -156,11 +173,11 @@ msgstr "以 USDT 支付手續費，以實現成本穩定且可預測，即使面
 msgid "Possibilities"
 msgstr "可能性"
 
-#: src/constants/navigation.constants.ts:43
+#: src/constants/navigation.constants.ts:63
 msgid "Press Kit"
 msgstr "媒體資料包"
 
-#: src/constants/navigation.constants.ts:46
+#: src/constants/navigation.constants.ts:71
 msgid "Privacy Policy"
 msgstr "隱私權政策"
 
@@ -184,12 +201,12 @@ msgstr "令人驚喜的事即將到來！請在下方留下您的電子郵件，
 msgid "Stay connected:"
 msgstr "保持聯繫："
 
-#: src/constants/navigation.constants.ts:31
+#: src/constants/navigation.constants.ts:51
 msgid "Support"
 msgstr "支援"
 
 #: src/constants/landing.constants.ts:30
-#: src/constants/navigation.constants.ts:22
+#: src/constants/navigation.constants.ts:37
 msgid "Swap"
 msgstr "兌換"
 
@@ -213,15 +230,19 @@ msgstr "TBC Wallet 是領先的多鏈錢包，具備穩健的安全性與直觀�
 msgid "TBChain"
 msgstr "TB 鏈"
 
-#: src/constants/navigation.constants.ts:45
+#: src/constants/navigation.constants.ts:68
 msgid "Terms of Service"
 msgstr "服務條款"
+
+#: src/constants/navigation.constants.ts:17
+msgid "The world of Web3 in your pocket"
+msgstr ""
 
 #: src/components/templates/home/index.tsx:244
 msgid "Unleash Web3"
 msgstr "釋放 Web3"
 
-#: src/constants/navigation.constants.ts:26
+#: src/constants/navigation.constants.ts:46
 msgid "USDT fee"
 msgstr ""
 

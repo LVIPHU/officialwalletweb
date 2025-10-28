@@ -18,19 +18,24 @@ msgid ". All rights reserved."
 msgstr "جميع الحقوق محفوظة."
 
 #: src/components/templates/home/index.tsx:292
-#: src/constants/navigation.constants.ts:39
+#: src/constants/navigation.constants.ts:59
 msgid "About"
 msgstr "حول"
 
-#: src/constants/navigation.constants.ts:41
+#: src/constants/navigation.constants.ts:61
 msgid "About Us"
 msgstr "معلومات عنا"
+
+#: src/constants/navigation.constants.ts:23
+#: src/constants/navigation.constants.ts:29
+msgid "An optimized Web3 experience for desktop"
+msgstr ""
 
 #: src/constants/landing.constants.ts:54
 msgid "Bitcoin"
 msgstr "بيتكوين"
 
-#: src/constants/navigation.constants.ts:44
+#: src/constants/navigation.constants.ts:64
 msgid "Blog"
 msgstr "مدوّنة"
 
@@ -38,17 +43,29 @@ msgstr "مدوّنة"
 msgid "Boost earnings by connecting to mining pools and tracking rewards in-app. TBC Wallet simplifies mining management, helping both new and seasoned users maximize returns securely."
 msgstr "عزّز أرباحك بالربط بمجمعات التعدين وتتبع المكافآت داخل التطبيق. محفظة TB تُبسّط إدارة التعدين، الأمر الذي يساعد المستخدمين الجدد وذوي الخبرة على تعظيم العوائد بأمان."
 
-#: src/constants/navigation.constants.ts:15
+#: src/constants/navigation.constants.ts:28
 msgid "Browser Extension"
 msgstr "امتداد المتصفح"
 
-#: src/constants/navigation.constants.ts:42
+#: src/constants/navigation.constants.ts:62
 msgid "Careers"
 msgstr "الوظائف"
 
 #: src/components/molecules/platform-tabs/index.tsx:58
-#: src/components/organisms/header/index.tsx:102
 #: src/components/templates/coming-soon/index.tsx:17
+#: src/constants/navigation.constants.ts:37
+#: src/constants/navigation.constants.ts:38
+#: src/constants/navigation.constants.ts:39
+#: src/constants/navigation.constants.ts:44
+#: src/constants/navigation.constants.ts:46
+#: src/constants/navigation.constants.ts:53
+#: src/constants/navigation.constants.ts:54
+#: src/constants/navigation.constants.ts:61
+#: src/constants/navigation.constants.ts:62
+#: src/constants/navigation.constants.ts:63
+#: src/constants/navigation.constants.ts:64
+#: src/constants/navigation.constants.ts:69
+#: src/constants/navigation.constants.ts:71
 msgid "Coming soon"
 msgstr "قريبًا"
 
@@ -56,7 +73,7 @@ msgstr "قريبًا"
 msgid "Community talk about us"
 msgstr "المجتمع يتحدث عنا"
 
-#: src/constants/navigation.constants.ts:34
+#: src/constants/navigation.constants.ts:54
 msgid "Contact Us"
 msgstr "اتصل بنا"
 
@@ -65,11 +82,11 @@ msgid "Designed for All, Built for You"
 msgstr "مصمم للجميع، ومبني خصيصًا لك"
 
 #: src/constants/landing.constants.ts:76
-#: src/constants/navigation.constants.ts:14
+#: src/constants/navigation.constants.ts:22
 msgid "Desktop app"
 msgstr "تطبيق سطح المكتب"
 
-#: src/components/organisms/header/index.tsx:65
+#: src/components/organisms/header/index.tsx:83
 #: src/components/organisms/mobile-sidebar/index.tsx:73
 msgid "Download"
 msgstr "تحميل"
@@ -94,13 +111,13 @@ msgstr "استكشف الآن"
 msgid "Extension"
 msgstr "امتداد"
 
-#: src/constants/navigation.constants.ts:33
+#: src/constants/navigation.constants.ts:53
 msgid "FAQ"
 msgstr "الأسئلة الشائعة"
 
 #: src/components/molecules/feature-card/index.tsx:25
-#: src/components/molecules/features-slides-horizontal/index.tsx:142
-#: src/constants/navigation.constants.ts:20
+#: src/components/molecules/features-slides-horizontal/index.tsx:129
+#: src/constants/navigation.constants.ts:35
 msgid "Features"
 msgstr "الميزات"
 
@@ -109,12 +126,12 @@ msgid "Fortify your wallet with multi-approval transactions for enhanced protect
 msgstr "عزّز محفظتك بمعاملات ذات موافقات متعددة لحماية معزّزة ضد التهديدات — مثالية للاستخدام الشخصي أو التشاركي، لضمان بقاء أصولك آمنة ومُتاحة فقط لك."
 
 #: src/constants/landing.constants.ts:37
-#: src/constants/navigation.constants.ts:25
+#: src/constants/navigation.constants.ts:43
 msgid "Instant transfer"
 msgstr "تحويل فوري"
 
 #: src/constants/landing.constants.ts:16
-#: src/constants/navigation.constants.ts:23
+#: src/constants/navigation.constants.ts:38
 msgid "Miner"
 msgstr "منقّب"
 
@@ -123,12 +140,12 @@ msgid "Missing brand icon for"
 msgstr "أيقونة العلامة مفقودة لـ"
 
 #: src/constants/landing.constants.ts:69
-#: src/constants/navigation.constants.ts:13
+#: src/constants/navigation.constants.ts:16
 msgid "Mobile app"
 msgstr "تطبيق الهاتف الجوال"
 
 #: src/constants/landing.constants.ts:23
-#: src/constants/navigation.constants.ts:24
+#: src/constants/navigation.constants.ts:39
 msgid "Multi signature"
 msgstr "توقيع متعدد"
 
@@ -156,11 +173,11 @@ msgstr "ادفع الرسوم بـ USDT لتكلفة مستقرة ومتوقّع
 msgid "Possibilities"
 msgstr "إمكانيات."
 
-#: src/constants/navigation.constants.ts:43
+#: src/constants/navigation.constants.ts:63
 msgid "Press Kit"
 msgstr "عدة الصحافة"
 
-#: src/constants/navigation.constants.ts:46
+#: src/constants/navigation.constants.ts:71
 msgid "Privacy Policy"
 msgstr "سياسة الخصوصية"
 
@@ -184,12 +201,12 @@ msgstr "شيء مذهل يلوح في الأفق! أضف بريدك الإلكت
 msgid "Stay connected:"
 msgstr "ابقَ متصلاً:"
 
-#: src/constants/navigation.constants.ts:31
+#: src/constants/navigation.constants.ts:51
 msgid "Support"
 msgstr "الدعم"
 
 #: src/constants/landing.constants.ts:30
-#: src/constants/navigation.constants.ts:22
+#: src/constants/navigation.constants.ts:37
 msgid "Swap"
 msgstr "المُبادلة"
 
@@ -213,15 +230,19 @@ msgstr "محفظة TB هي محفظة متعددة السلاسل رائدة ب�
 msgid "TBChain"
 msgstr "سلسلة TB"
 
-#: src/constants/navigation.constants.ts:45
+#: src/constants/navigation.constants.ts:68
 msgid "Terms of Service"
 msgstr "شروط الخدمة"
+
+#: src/constants/navigation.constants.ts:17
+msgid "The world of Web3 in your pocket"
+msgstr ""
 
 #: src/components/templates/home/index.tsx:244
 msgid "Unleash Web3"
 msgstr "أطلق العنان للويب 3"
 
-#: src/constants/navigation.constants.ts:26
+#: src/constants/navigation.constants.ts:46
 msgid "USDT fee"
 msgstr ""
 

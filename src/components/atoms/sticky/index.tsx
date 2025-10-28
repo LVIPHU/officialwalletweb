@@ -1,5 +1,5 @@
 'use client'
-import { useEffect, useRef } from 'react'
+import { useEffect, useLayoutEffect, useRef } from 'react'
 import { gsap } from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 
@@ -33,7 +33,7 @@ export function Sticky({
   const targetRef = useRef<HTMLElement | null>(null)
 
   // Setup ScrollTrigger
-  useEffect(() => {
+  useLayoutEffect(() => {
     if (!enabled || !pinSpacer.current || !trigger.current || !targetRef.current) return
 
     gsap.set(trigger.current, { clearProps: 'all' })
@@ -67,7 +67,7 @@ export function Sticky({
   }, [id, start, enabled, end, pinType])
 
   // Resolve target element
-  useEffect(() => {
+  useLayoutEffect(() => {
     if (target) {
       targetRef.current = document.querySelector(target)
     } else if (pinSpacer.current) {

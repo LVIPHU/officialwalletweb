@@ -16,13 +16,13 @@ export default function FeaturesSection() {
   const content = FEATURES.map((feature) => <FeatureCard key={feature.id} feature={feature} />)
 
   return (
-    <div>
+    <>
       <div className='block md:hidden'>
         <FeaturesCarousel>{content}</FeaturesCarousel>
       </div>
       <div className='hidden md:block'>
         <FeaturesSlidesHorizontal>{content}</FeaturesSlidesHorizontal>
       </div>
-    </div>
+    </>
   )
 }
