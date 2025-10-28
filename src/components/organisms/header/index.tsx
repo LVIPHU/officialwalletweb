@@ -94,10 +94,10 @@ function NavigationSection({ section }: NavigationSectionProps) {
       </NavigationMenuTrigger>
 
       <NavigationMenuContent>
-        <div className='flex w-[90vw] max-w-6xl flex-col gap-6 p-4 lg:flex-row lg:gap-8 lg:p-6'>
+        <div className='flex w-[80vw] max-w-6xl flex-col gap-6 p-4 lg:w-[90vw] lg:flex-row lg:gap-8 lg:p-6'>
           {/* Left Highlight */}
           <div className='from-muted/40 to-muted hidden w-1/3 flex-col justify-end rounded-md bg-gradient-to-b p-6 select-none lg:flex'>
-            <div className='mb-2 text-lg font-medium'>TB Wallet</div>
+            <div className='mb-2 text-lg font-medium'>TBC Wallet</div>
             <p className='text-muted-foreground text-sm leading-snug'>
               <Trans>Coming soon</Trans>
             </p>

@@ -13,16 +13,16 @@ msgstr ""
 "Language-Team: \n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 
-#: src/components/organisms/footer/index.tsx:69
+#: src/components/organisms/footer/index.tsx:59
 msgid ". All rights reserved."
 msgstr ". Tous droits réservés."
 
-#: src/components/templates/home/index.tsx:282
-#: src/constants/navigation.constants.ts:49
+#: src/components/templates/home/index.tsx:292
+#: src/constants/navigation.constants.ts:39
 msgid "About"
 msgstr "À propos"
 
-#: src/constants/navigation.constants.ts:51
+#: src/constants/navigation.constants.ts:41
 msgid "About Us"
 msgstr "À propos de nous"
 
@@ -30,76 +30,63 @@ msgstr "À propos de nous"
 msgid "Bitcoin"
 msgstr "Bitcoin"
 
-#: src/constants/navigation.constants.ts:54
+#: src/constants/navigation.constants.ts:44
 msgid "Blog"
 msgstr "Blog"
 
 #: src/constants/landing.constants.ts:17
-msgid "Boost earnings by connecting to mining pools and tracking rewards in-app. TB Wallet simplifies mining management, helping both new and seasoned users maximize returns securely."
-msgstr "Augmentez vos gains en vous connectant à des pools de minage et en suivant les récompenses dans l’application. TB Wallet simplifie la gestion du minage, aidant aussi bien les nouveaux utilisateurs que les expérimentés à maximiser leurs rendements en toute sécurité."
+msgid "Boost earnings by connecting to mining pools and tracking rewards in-app. TBC Wallet simplifies mining management, helping both new and seasoned users maximize returns securely."
+msgstr "Augmentez vos gains en vous connectant à des pools de minage et en suivant les récompenses dans l’application. TBC Wallet simplifie la gestion du minage, aidant aussi bien les nouveaux utilisateurs que les expérimentés à maximiser leurs rendements en toute sécurité."
 
-#: src/constants/navigation.constants.ts:14
+#: src/constants/navigation.constants.ts:15
 msgid "Browser Extension"
 msgstr "Extension de navigateur"
 
-#: src/constants/navigation.constants.ts:31
-msgid "Build"
-msgstr "Développer"
-
-#: src/constants/navigation.constants.ts:25
-msgid "Buy Crypto"
-msgstr "Acheter des cryptomonnaies"
-
-#: src/constants/navigation.constants.ts:52
+#: src/constants/navigation.constants.ts:42
 msgid "Careers"
 msgstr "Carrières"
 
 #: src/components/molecules/platform-tabs/index.tsx:58
-#: src/components/organisms/header/index.tsx:101
-#: src/components/organisms/header/index.tsx:109
+#: src/components/organisms/header/index.tsx:102
 #: src/components/templates/coming-soon/index.tsx:17
 msgid "Coming soon"
 msgstr "Bientôt disponible"
 
-#: src/components/templates/home/index.tsx:402
+#: src/components/templates/home/index.tsx:424
 msgid "Community talk about us"
 msgstr "La communauté parle de nous"
 
-#: src/constants/navigation.constants.ts:44
+#: src/constants/navigation.constants.ts:34
 msgid "Contact Us"
 msgstr "Contactez-nous"
 
-#: src/components/templates/home/index.tsx:316
+#: src/components/templates/home/index.tsx:332
 msgid "Designed for All, Built for You"
 msgstr "Conçu pour tous, développé pour vous"
 
 #: src/constants/landing.constants.ts:76
+#: src/constants/navigation.constants.ts:14
 msgid "Desktop app"
 msgstr "Application de bureau"
 
-#: src/constants/navigation.constants.ts:33
-msgid "Developer"
-msgstr "Développeur"
-
 #: src/components/organisms/header/index.tsx:65
-#: src/components/organisms/mobile-sidebar/index.tsx:72
-#: src/constants/navigation.constants.ts:13
+#: src/components/organisms/mobile-sidebar/index.tsx:73
 msgid "Download"
 msgstr "Télécharger"
 
-#: src/components/templates/home/index.tsx:417
+#: src/components/templates/home/index.tsx:439
 msgid "Download now"
 msgstr "Télécharger maintenant"
 
 #: src/constants/landing.constants.ts:31
-msgid "Effortlessly exchange tokens across chains with low fees and real-time rates. Whether trading Bitcoin for Solana or optimizing your portfolio, TB Wallet makes swaps quick and intuitive."
-msgstr "Échangez des tokens entre chaînes sans effort, avec des frais faibles et des taux en temps réel. Que vous échangiez Bitcoin contre Solana ou optimisiez votre portefeuille, TB Wallet rend les swaps rapides et intuitifs."
+msgid "Effortlessly exchange tokens across chains with low fees and real-time rates. Whether trading Bitcoin for Solana or optimizing your portfolio, TBC Wallet makes swaps quick and intuitive."
+msgstr "Échangez des tokens entre chaînes sans effort, avec des frais faibles et des taux en temps réel. Que vous échangiez Bitcoin contre Solana ou optimisiez votre portefeuille, TBC Wallet rend les swaps rapides et intuitifs."
 
 #: src/constants/landing.constants.ts:55
 msgid "Ethereum"
 msgstr "Ethereum"
 
-#: src/components/templates/home/index.tsx:266
+#: src/components/templates/home/index.tsx:275
 msgid "Explore now"
 msgstr "Explorer maintenant"
 
@@ -107,13 +94,13 @@ msgstr "Explorer maintenant"
 msgid "Extension"
 msgstr "Extension"
 
-#: src/constants/navigation.constants.ts:43
+#: src/constants/navigation.constants.ts:33
 msgid "FAQ"
 msgstr "FAQ"
 
 #: src/components/molecules/feature-card/index.tsx:25
-#: src/components/molecules/features-slides-horizontal/index.tsx:149
-#: src/constants/navigation.constants.ts:19
+#: src/components/molecules/features-slides-horizontal/index.tsx:142
+#: src/constants/navigation.constants.ts:20
 msgid "Features"
 msgstr "Fonctionnalités"
 
@@ -121,15 +108,13 @@ msgstr "Fonctionnalités"
 msgid "Fortify your wallet with multi-approval transactions for enhanced protection against threats—ideal for personal or shared use, ensuring your assets stay safe and accessible only to you."
 msgstr "Renforcez votre portefeuille avec des transactions à approbations multiples pour une protection accrue contre les menaces — idéal pour un usage personnel ou partagé, garantissant que vos actifs restent sécurisés et accessibles uniquement par vous."
 
-#: src/constants/navigation.constants.ts:36
-msgid "Get Assets Listed"
-msgstr "Référencer des actifs"
-
 #: src/constants/landing.constants.ts:37
+#: src/constants/navigation.constants.ts:25
 msgid "Instant transfer"
 msgstr "Transfert instantané"
 
 #: src/constants/landing.constants.ts:16
+#: src/constants/navigation.constants.ts:23
 msgid "Miner"
 msgstr "Mineur"
 
@@ -138,10 +123,12 @@ msgid "Missing brand icon for"
 msgstr "Icône de marque manquante pour"
 
 #: src/constants/landing.constants.ts:69
+#: src/constants/navigation.constants.ts:13
 msgid "Mobile app"
 msgstr "Application mobile"
 
 #: src/constants/landing.constants.ts:23
+#: src/constants/navigation.constants.ts:24
 msgid "Multi signature"
 msgstr "Multisignature"
 
@@ -149,19 +136,15 @@ msgstr "Multisignature"
 msgid "name@email.com"
 msgstr "nom@email.com"
 
-#: src/constants/navigation.constants.ts:23
-msgid "NFT"
-msgstr "NFT"
-
 #: src/components/molecules/locale-switcher/index.tsx:53
 msgid "No language found."
 msgstr "Aucune langue trouvée."
 
-#: src/components/templates/home/index.tsx:384
+#: src/components/templates/home/index.tsx:406
 msgid "One wallet. Cross platform"
 msgstr "Un seul portefeuille. Multi-plateforme"
 
-#: src/components/templates/home/index.tsx:239
+#: src/components/templates/home/index.tsx:241
 msgid "Own Your Crypto."
 msgstr "Prenez le contrôle de votre crypto."
 
@@ -169,25 +152,21 @@ msgstr "Prenez le contrôle de votre crypto."
 msgid "Pay fees in USDT for stable, predictable costs amid market swings. This flexible feature adds transparency, making Web3 interactions more budget-friendly and user-centric."
 msgstr "Payez les frais en USDT pour des coûts stables et prévisibles au milieu des fluctuations du marché. Cette fonction flexible ajoute de la transparence, rendant les interactions Web3 plus économiques et centrées sur l’utilisateur."
 
-#: src/components/templates/home/index.tsx:245
+#: src/components/templates/home/index.tsx:247
 msgid "Possibilities"
 msgstr "Possibilités"
 
-#: src/constants/navigation.constants.ts:53
+#: src/constants/navigation.constants.ts:43
 msgid "Press Kit"
 msgstr "Kit de presse"
 
-#: src/constants/navigation.constants.ts:57
+#: src/constants/navigation.constants.ts:46
 msgid "Privacy Policy"
 msgstr "Politique de confidentialité"
 
-#: src/constants/navigation.constants.ts:24
-msgid "Security"
-msgstr "Sécurité"
-
 #: src/constants/landing.constants.ts:38
-msgid "Send assets across chains with near-zero delays and minimal costs. TB Wallet ensures fast, reliable transactions for everyday use, from peer-to-peer sends to dApp funding."
-msgstr "Envoyez des actifs entre chaînes avec des délais quasi nuls et des coûts minimaux. TB Wallet assure des transactions rapides et fiables pour un usage quotidien, des envois pair à pair jusqu’au financement de dApps."
+msgid "Send assets across chains with near-zero delays and minimal costs. TBC Wallet ensures fast, reliable transactions for everyday use, from peer-to-peer sends to dApp funding."
+msgstr "Envoyez des actifs entre chaînes avec des délais quasi nuls et des coûts minimaux. TBC Wallet assure des transactions rapides et fiables pour un usage quotidien, des envois pair à pair jusqu’au financement de dApps."
 
 #: src/components/templates/coming-soon/index.tsx:33
 msgid "Sign up"
@@ -201,62 +180,50 @@ msgstr "Solana"
 msgid "Something incredible is on the horizon! Drop your email below to be first in line for early access."
 msgstr "Quelque chose d’incroyable se prépare ! Entrez votre adresse e-mail ci-dessous pour être parmi les premiers à obtenir un accès anticipé."
 
-#: src/constants/navigation.constants.ts:22
-msgid "Staking"
-msgstr "Staking"
-
-#: src/components/organisms/footer/index.tsx:114
+#: src/components/organisms/footer/index.tsx:104
 msgid "Stay connected:"
 msgstr "Restez connecté :"
 
-#: src/constants/navigation.constants.ts:35
-msgid "Submit Dapp"
-msgstr "Soumettre une DApp"
-
-#: src/constants/navigation.constants.ts:41
+#: src/constants/navigation.constants.ts:31
 msgid "Support"
 msgstr "Assistance"
 
 #: src/constants/landing.constants.ts:30
-#: src/constants/navigation.constants.ts:21
+#: src/constants/navigation.constants.ts:22
 msgid "Swap"
 msgstr "Échange"
 
-#: src/constants/navigation.constants.ts:26
-msgid "Swift"
-msgstr "Rapide"
+#: src/components/templates/home/index.tsx:335
+msgid "TBC Wallet bridges the gap for beginners and experts alike. Its user-friendly design offers easy onboarding for newcomers and advanced tools for DeFi pros, ensuring secure, efficient navigation of the decentralized ecosystem."
+msgstr "TBC Wallet comble le fossé entre débutants et experts. Son design convivial offre un onboarding facile pour les nouveaux venus et des outils avancés pour les pros de la DeFi, garantissant une navigation sécurisée et efficiente dans l’écosystème décentralisé."
 
-#: src/components/templates/home/index.tsx:319
-msgid "TB Wallet bridges the gap for beginners and experts alike. Its user-friendly design offers easy onboarding for newcomers and advanced tools for DeFi pros, ensuring secure, efficient navigation of the decentralized ecosystem."
-msgstr "TB Wallet comble le fossé entre débutants et experts. Son design convivial offre un onboarding facile pour les nouveaux venus et des outils avancés pour les pros de la DeFi, garantissant une navigation sécurisée et efficiente dans l’écosystème décentralisé."
+#: src/components/templates/home/index.tsx:386
+msgid "TBC Wallet connects you to diverse ecosystems, from Bitcoin and Ethereum to Optimism and Cosmos. Manage portfolios, engage in DeFi, trade NFTs, and link to dApps—all in one secure, self-custody hub."
+msgstr "TBC Wallet vous connecte à des écosystèmes variés, de Bitcoin et Ethereum à Optimism et Cosmos. Gérez vos portefeuilles, participez à la DeFi, échangez des NFTs et accédez aux dApps — le tout dans un hub sécurisé en auto-custodie."
 
-#: src/components/templates/home/index.tsx:364
-msgid "TB Wallet connects you to diverse ecosystems, from Bitcoin and Ethereum to Optimism and Cosmos. Manage portfolios, engage in DeFi, trade NFTs, and link to dApps—all in one secure, self-custody hub."
-msgstr "TB Wallet vous connecte à des écosystèmes variés, de Bitcoin et Ethereum à Optimism et Cosmos. Gérez vos portefeuilles, participez à la DeFi, échangez des NFTs et accédez aux dApps — le tout dans un hub sécurisé en auto-custodie."
+#: src/components/templates/home/index.tsx:251
+msgid "TBC Wallet empowers you to manage diverse assets like Bitcoin, Ethereum, and Solana. Securely dive into DeFi, NFTs, and dApps with full control. Your keys, your future."
+msgstr "TBC Wallet vous permet de gérer des actifs variés comme Bitcoin, Ethereum et Solana. Plongez en toute sécurité dans la DeFi, les NFTs et les dApps avec un contrôle total. Vos clés, votre avenir."
 
-#: src/components/templates/home/index.tsx:249
-msgid "TB Wallet empowers you to manage diverse assets like Bitcoin, Ethereum, and Solana. Securely dive into DeFi, NFTs, and dApps with full control. Your keys, your future."
-msgstr "TB Wallet vous permet de gérer des actifs variés comme Bitcoin, Ethereum et Solana. Plongez en toute sécurité dans la DeFi, les NFTs et les dApps avec un contrôle total. Vos clés, votre avenir."
-
-#: src/components/templates/home/index.tsx:285
-msgid "TB Wallet is a leading multi-chain wallet with robust security and an intuitive interface. It simplifies Web3 interactions, from token management to dApp access, while giving you total control over your digital wealth."
-msgstr "TB Wallet est un portefeuille multi-chaînes de premier plan, doté d’une sécurité renforcée et d’une interface intuitive. Il simplifie les interactions Web3, de la gestion des tokens à l’accès aux dApps, tout en vous donnant un contrôle total sur votre richesse numérique."
+#: src/components/templates/home/index.tsx:295
+msgid "TBC Wallet is a leading multi-chain wallet with robust security and an intuitive interface. It simplifies Web3 interactions, from token management to dApp access, while giving you total control over your digital wealth."
+msgstr "TBC Wallet est un portefeuille multi-chaînes de premier plan, doté d’une sécurité renforcée et d’une interface intuitive. Il simplifie les interactions Web3, de la gestion des tokens à l’accès aux dApps, tout en vous donnant un contrôle total sur votre richesse numérique."
 
 #: src/constants/landing.constants.ts:52
 msgid "TBChain"
 msgstr "Chaîne TB"
 
-#: src/constants/navigation.constants.ts:56
+#: src/constants/navigation.constants.ts:45
 msgid "Terms of Service"
 msgstr "Conditions d’utilisation"
 
-#: src/constants/navigation.constants.ts:55
-msgid "Trust Squad"
-msgstr "Équipe de confiance"
-
-#: src/components/templates/home/index.tsx:242
+#: src/components/templates/home/index.tsx:244
 msgid "Unleash Web3"
 msgstr "Libérez le Web3"
+
+#: src/constants/navigation.constants.ts:26
+msgid "USDT fee"
+msgstr ""
 
 #: src/constants/landing.constants.ts:44
 msgid "USDT Fee"
@@ -266,14 +233,10 @@ msgstr "Frais en USDT"
 msgid "Wallet"
 msgstr "Portefeuille"
 
-#: src/constants/navigation.constants.ts:34
-msgid "Wallet Core"
-msgstr "Noyau du portefeuille"
-
 #: src/components/templates/coming-soon/index.tsx:20
 msgid "We’re launching soon!"
 msgstr "Nous lançons bientôt !"
 
-#: src/components/templates/home/index.tsx:359
+#: src/components/templates/home/index.tsx:381
 msgid "Your All-in-One Web3 Wallet"
 msgstr "Votre portefeuille Web3 tout-en-un"

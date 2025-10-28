@@ -34,7 +34,7 @@ export function Logo({ className, classNameIcon, classNameLabel, showText = fals
       <div className={cn('flex flex-row items-center justify-center gap-2', className)}>
         <LogoSVG className={cn(sizeClasses[size], classNameIcon)} />
         {showText && (
-          <span className={cn('text-foreground font-semibold', textSizeClasses[size], classNameLabel)}>TB Wallet</span>
+          <span className={cn('text-foreground font-semibold', textSizeClasses[size], classNameLabel)}>TBC Wallet</span>
         )}
       </div>
     </NavigationLink>

@@ -17,9 +17,9 @@ export async function generateStaticParams() {
 }
 
 export const metadata: Metadata = {
-  title: 'TB Wallet - The Future of Cryptocurrency Management',
+  title: 'TBC Wallet - The Future of Cryptocurrency Management',
   description:
-    'Experience the future of cryptocurrency management with TB Wallet. Secure, fast, and user-friendly platform for all your digital assets.',
+    'Experience the future of cryptocurrency management with TBC Wallet. Secure, fast, and user-friendly platform for all your digital assets.',
 }
 
 export default async function RootLayout({ children, params }: Readonly<PropsWithChildren<PageLangParam>>) {

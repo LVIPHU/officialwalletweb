@@ -2,7 +2,7 @@ import React from 'react'
 import { MessageDescriptor } from '@lingui/core'
 
 /**
- * Type definitions for TB Wallet landing page
+ * Type definitions for TBC Wallet landing page
  */
 
 export interface Feature {

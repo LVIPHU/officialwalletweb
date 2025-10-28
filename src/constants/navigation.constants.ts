@@ -10,7 +10,7 @@ export const NAVIGATION_ITEMS: Navigation = [
     id: 'wallet',
     title: msg`Wallet`,
     items: [
-      { id: 'mobile-app', href: 'https://download.chainviews.net/', title: msg`Mobile app'` },
+      { id: 'mobile-app', href: 'https://download.chainviews.net/', title: msg`Mobile app` },
       { id: 'desktop-app', href: 'https://download.chainviews.net/', title: msg`Desktop app` },
       { id: 'browser-extension', href: '/browser-extension', title: msg`Browser Extension` },
     ],

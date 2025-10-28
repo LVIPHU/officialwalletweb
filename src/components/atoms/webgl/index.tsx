@@ -278,7 +278,7 @@ export function IPhone() {
     if (!parent.current) return
 
     if (custom) {
-      parent.current.scale.setScalar(viewport.height * scale)
+      parent.current.scale.setScalar((viewport.aspect < 1 ? viewport.width : viewport.height) * scale)
       parent.current.position.set(viewport.width * position[0], viewport.height * position[1], 0)
       parent.current.rotation.fromArray(rotation.map(MathUtils.degToRad))
       return
@@ -318,7 +318,7 @@ export function IPhone() {
       ]
     )
 
-    parent.current.scale.setScalar(viewport.height * _scale)
+    parent.current.scale.setScalar((viewport.aspect < 1 ? viewport.width : viewport.height) * _scale)
     parent.current.position.copy(_position)
     parent.current.rotation.copy(_rotation)
 

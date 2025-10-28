@@ -47,8 +47,8 @@ export function LocaleSwitcher({ classNameLabel }: LocaleSwitcherProps) {
 
   function Content() {
     return (
-      <Command className='border-primary border-x border-t md:border-none'>
-        <CommandList defaultValue={undefined} className='max-h-auto'>
+      <Command value={locale} className='border-primary border-x border-t md:border-none'>
+        <CommandList className='max-h-auto'>
           <CommandEmpty>
             <Trans>No language found.</Trans>
           </CommandEmpty>
@@ -60,7 +60,7 @@ export function LocaleSwitcher({ classNameLabel }: LocaleSwitcherProps) {
                 onSelect={handleChange}
                 className={cn(
                   'data-[selected=true]:bg-primary/15 cursor-pointer px-5 py-4 transition-colors duration-300',
-                  lang === locale && 'text-primary hover:text-primary!'
+                  lang === locale && 'text-primary! hover:text-primary!'
                 )}
               >
                 <p>{languages[lang as keyof typeof languages]}</p>

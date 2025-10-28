@@ -27,14 +27,16 @@ const Footer = () => {
     <Container>
       <GlassCard
         data-theme={resolvedTheme}
-        className='border-footer border-gradient-footer mb-4 rounded-[44px] px-0 py-5 sm:mb-6 md:mb-24 md:px-7 md:py-10'
+        className='border-footer border-gradient-footer mb-4 rounded-[44px] px-0 py-5 sm:mb-6 md:mb-24 md:py-10 lg:px-7'
       >
         {/* --- Top Grid --- */}
-        <div className='grid grid-cols-2 gap-x-3 gap-y-10 pt-0 pb-30 md:grid-cols-7 md:gap-8 md:py-10'>
+        <div className='grid grid-cols-2 gap-x-3 gap-y-10 pt-0 pb-30 md:grid-cols-6 md:gap-8 md:py-10'>
           {/* Logo section */}
           <div className='col-span-full flex flex-col items-center gap-4 md:col-span-2'>
             <Logo classNameIcon='size-16 md:size-24' />
-            <p className='isolate text-5xl font-black text-black mix-blend-normal dark:text-white'>TB Wallet</p>
+            <p className='isolate text-center text-5xl font-black text-black mix-blend-normal dark:text-white'>
+              TBC Wallet
+            </p>
           </div>
 
           <div className='col-span-full md:hidden'>
@@ -52,7 +54,7 @@ const Footer = () => {
           <span className='text-neutral-500'>
             © 2025{' '}
             <NavigationLink href='#' className='hover:text-primary'>
-              TB Wallet
+              TBC Wallet
             </NavigationLink>{' '}
             <Trans>. All rights reserved.</Trans>
           </span>
@@ -76,14 +78,14 @@ function FooterColumn({ section }: FooterColumnProps) {
     <div className='flex lg:mx-auto'>
       <div className='flex flex-col gap-4 text-start md:gap-7'>
         {/* i18n title section */}
-        <h4 className='text-lg font-medium capitalize'>{i18n._(section.title)}</h4>
+        <h4 className='text-lg font-medium break-all capitalize'>{i18n._(section.title)}</h4>
 
         <ul className='space-y-3 text-sm md:space-y-7'>
           {section.items.map((item) => (
             <li key={item.id}>
               <NavigationLink
                 href={item.href}
-                className='hover:text-primary dark:hover:text-primary text-neutral-500 transition-colors duration-200'
+                className='hover:text-primary dark:hover:text-primary break-all text-neutral-500 transition-colors duration-200'
               >
                 {i18n._(item.title)}
               </NavigationLink>

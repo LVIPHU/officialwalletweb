@@ -38,11 +38,6 @@ const AnimatedContent = dynamic(
 
 const WebGL = dynamic(() => import('@/components/atoms/webgl').then(({ WebGL }) => WebGL), { ssr: false })
 
-const WebGLMobile = dynamic(
-  () => import('@/components/atoms/webgl/webgl-mobile').then(({ WebGLMobile }) => WebGLMobile),
-  { ssr: false }
-)
-
 if (isBrowser) {
   window.history.scrollRestoration = 'manual'
   window.scrollTo(0, 0)
@@ -254,11 +249,11 @@ export default function HomeTemplate() {
             </h1>
             <p className='max-w-md text-center md:text-start'>
               <Trans>
-                TB Wallet empowers you to manage diverse assets like Bitcoin, Ethereum, and Solana. Securely dive into
+                TBC Wallet empowers you to manage diverse assets like Bitcoin, Ethereum, and Solana. Securely dive into
                 DeFi, NFTs, and dApps with full control. Your keys, your future.
               </Trans>
             </p>
-            <div className='relative h-svw w-full md:hidden'>
+            <div className='relative flex h-svw w-full items-center justify-center md:hidden'>
               <Image
                 src={'/assets/background/network.webp'}
                 alt={'network'}
@@ -266,7 +261,13 @@ export default function HomeTemplate() {
                 height={612}
                 className='absolute top-1/2 left-1/2 z-[-1] -translate-x-1/2 -translate-y-1/2 object-contain'
               />
-              <WebGLMobile screen={'1'} />
+              <Image
+                src={'/mobile/screen/1.webp'}
+                alt={'network'}
+                width={271}
+                height={548}
+                className='scale-80 object-contain'
+              />
             </div>
             <NavigationLink href='https://download.chainviews.net/'>
               <Button variant={'neon'} size={'2xl'} className={'w-fit md:relative'}>
@@ -292,7 +293,7 @@ export default function HomeTemplate() {
               </h2>
               <p>
                 <Trans>
-                  TB Wallet is a leading multi-chain wallet with robust security and an intuitive interface. It
+                  TBC Wallet is a leading multi-chain wallet with robust security and an intuitive interface. It
                   simplifies Web3 interactions, from token management to dApp access, while giving you total control
                   over your digital wealth.
                 </Trans>
@@ -305,8 +306,14 @@ export default function HomeTemplate() {
                 <div className='background-glow' />
               </div>
             </AnimatedContent>
-            <div className='relative h-svw w-full md:hidden'>
-              <WebGLMobile screen={'2'} />
+            <div className='relative flex h-svw w-full items-center justify-center md:hidden'>
+              <Image
+                src={'/mobile/screen/2.webp'}
+                alt={'network'}
+                width={271}
+                height={548}
+                className='scale-80 object-contain'
+              />
             </div>
           </div>
         </div>
@@ -326,7 +333,7 @@ export default function HomeTemplate() {
               </h2>
               <p>
                 <Trans>
-                  TB Wallet bridges the gap for beginners and experts alike. Its user-friendly design offers easy
+                  TBC Wallet bridges the gap for beginners and experts alike. Its user-friendly design offers easy
                   onboarding for newcomers and advanced tools for DeFi pros, ensuring secure, efficient navigation of
                   the decentralized ecosystem.
                 </Trans>
@@ -339,8 +346,14 @@ export default function HomeTemplate() {
                 <div className='background-glow' />
               </div>
             </AnimatedContent>
-            <div className='relative mb-5 h-svw w-full md:hidden'>
-              <WebGLMobile screen={'3'} />
+            <div className='relative mb-5 flex h-svw w-full items-center justify-center md:hidden'>
+              <Image
+                src={'/mobile/screen/3.webp'}
+                alt={'network'}
+                width={271}
+                height={548}
+                className='scale-80 object-contain'
+              />
             </div>
           </div>
         </div>
@@ -371,13 +384,13 @@ export default function HomeTemplate() {
             <AnimatedContent name={'asset-description'}>
               <p>
                 <Trans>
-                  TB Wallet connects you to diverse ecosystems, from Bitcoin and Ethereum to Optimism and Cosmos. Manage
-                  portfolios, engage in DeFi, trade NFTs, and link to dApps—all in one secure, self-custody hub.
+                  TBC Wallet connects you to diverse ecosystems, from Bitcoin and Ethereum to Optimism and Cosmos.
+                  Manage portfolios, engage in DeFi, trade NFTs, and link to dApps—all in one secure, self-custody hub.
                 </Trans>
               </p>
             </AnimatedContent>
           </div>
-          <div className='grid w-full grid-cols-2 gap-4 md:gap-10 lg:grid-cols-4'>
+          <div className='grid w-full grid-cols-2 gap-4 md:gap-10 xl:grid-cols-4'>
             {CHAINS.map((crypto) => (
               <ChainCard key={crypto.id} chain={crypto} />
             ))}
@@ -411,7 +424,7 @@ export default function HomeTemplate() {
             <Trans>Community talk about us</Trans>
           </h2>
           <AnimatedContent distance={0} threshold={0.4} className={'absolute inset-0 z-[-1]'}>
-            <div className='relative top-1/5 left-[4.5%] h-full w-full scale-200 md:top-[5%] md:scale-130'>
+            <div className='relative top-1/5 left-[4%] h-full w-full scale-200 md:top-[5%] md:scale-90'>
               <div className='background-glow' />
             </div>
           </AnimatedContent>
