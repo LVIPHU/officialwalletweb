@@ -1,6 +1,6 @@
 'use client'
 
-import { useState } from 'react'
+import { useLayoutEffect, useRef, useState } from 'react'
 import { usePathname } from 'next/navigation'
 import { Button } from '@/components/ui/button'
 import {
@@ -25,33 +25,51 @@ import { Trans } from '@lingui/react/macro'
 import { NavSection } from '@/types/navigation.types'
 import { useLingui } from '@lingui/react'
 import type { MessageDescriptor } from '@lingui/core'
+import { AspectRatio } from '@/components/ui/aspect-ratio'
+import Image from 'next/image'
 
 export default function Header() {
-  const [hasScrolled, setHasScrolled] = useState(false)
+  const [hasScrolled, setHasScrolled] = useState<boolean>(false)
+  const [headerWidth, setHeaderWidth] = useState<number>()
+  const headerRef = useRef<HTMLDivElement>(null)
 
   useScroll(({ scroll }) => {
     const newState = scroll > 10
     setHasScrolled((prev) => (prev !== newState ? newState : prev))
   })
 
+  useLayoutEffect(() => {
+    const updateWidth = () => {
+      if (headerRef.current) {
+        setHeaderWidth(headerRef.current.offsetWidth)
+      }
+    }
+    updateWidth()
+    window.addEventListener('resize', updateWidth)
+    return () => window.removeEventListener('resize', updateWidth)
+  }, [])
+
   return (
     <Container
+      ref={headerRef}
       as='header'
       className={cn(
         'transition-all duration-300 ease-in-out',
-        'rounded-full px-4 py-2',
-        hasScrolled ? 'bg-white/80 shadow-md backdrop-blur-xl dark:bg-white/10' : 'bg-transparent shadow-none',
+        'rounded-xl border-[0.5px] px-4 py-2',
+        hasScrolled
+          ? 'border-white/10 bg-white/80 shadow-md backdrop-blur-md dark:bg-white/10'
+          : 'border-transparent bg-transparent shadow-none',
         SITE_METADATA.stickyNav ? 'sticky top-2 z-50 lg:top-3' : 'mt-2 lg:mt-3'
       )}
     >
       <div className='flex items-center justify-between gap-3'>
-        <Logo showText={true} classNameLabel='sm:hidden lg:inline-block' />
+        <Logo showText={true} classNameLabel='sm:hidden lg:inline-block lg:text-sm xl:text-md' />
 
         <div className='hidden flex-1 justify-center md:flex'>
           <NavigationMenu>
             <NavigationMenuList>
               {NAVIGATION_ITEMS.map((section) => (
-                <NavigationSection key={section.id} section={section} />
+                <NavigationSection key={section.id} section={section} contentWidth={headerWidth} />
               ))}
             </NavigationMenuList>
           </NavigationMenu>
@@ -75,9 +93,10 @@ export default function Header() {
 
 interface NavigationSectionProps {
   section: NavSection
+  contentWidth?: number
 }
 
-function NavigationSection({ section }: NavigationSectionProps) {
+function NavigationSection({ section, contentWidth }: NavigationSectionProps) {
   const { i18n } = useLingui()
 
   return (
@@ -94,20 +113,24 @@ function NavigationSection({ section }: NavigationSectionProps) {
       </NavigationMenuTrigger>
 
       <NavigationMenuContent>
-        <div className='flex w-[80vw] max-w-6xl flex-col gap-6 p-4 lg:w-[90vw] lg:flex-row lg:gap-8 lg:p-6'>
+        <div
+          className='flex flex-col gap-6 p-4 lg:flex-row lg:gap-8 lg:p-6 xl:gap-13'
+          style={{
+            width: contentWidth ? `${contentWidth - 15}px` : 'auto',
+          }}
+        >
           {/* Left Highlight */}
-          <div className='from-muted/40 to-muted hidden w-1/3 flex-col justify-end rounded-md bg-gradient-to-b p-6 select-none lg:flex'>
-            <div className='mb-2 text-lg font-medium'>TBC Wallet</div>
-            <p className='text-muted-foreground text-sm leading-snug'>
-              <Trans>Coming soon</Trans>
-            </p>
+          <div className='hidden w-1/4 flex-col justify-end select-none lg:flex'>
+            <AspectRatio className='h-full w-full' ratio={285 / 324}>
+              <Image src={'/assets/images/tbchat.webp'} fill alt={'tbchat'} className={'rounded-md object-cover'} />
+            </AspectRatio>
           </div>
 
           {/* Links */}
-          <ul className='grid flex-1 grid-cols-1 gap-4 sm:grid-cols-2 lg:gap-6 xl:grid-cols-3'>
+          <ul className='grid flex-1 grid-cols-1 gap-4 sm:grid-cols-2 lg:gap-6 xl:grid-cols-3 xl:gap-x-13'>
             {section.items.map((item) => (
-              <ListItem key={item.id} href={item.href} title={item.title}>
-                {/*<Trans>Coming soon</Trans>*/}
+              <ListItem key={item.id} href={item.href} title={item.title} className='h-full'>
+                {i18n._(item.description)}
               </ListItem>
             ))}
           </ul>
@@ -133,13 +156,13 @@ function ListItem({ title, children, href, ...props }: ListItemProps) {
         <NavigationLink
           href={href}
           className={cn(
-            'block rounded-md p-3 transition-colors',
+            'flex h-full max-h-[90px] rounded-md p-3 transition-colors',
             isActive
               ? 'bg-primary/10 text-primary font-semibold'
-              : 'text-foreground/80 hover:text-foreground hover:bg-muted/40'
+              : 'text-foreground/80 hover:text-foreground hover:bg-primary/10'
           )}
         >
-          <div className='mb-1 text-sm leading-none font-medium'>{i18n._(title)}</div>
+          <div className='mb-auto text-sm leading-none font-medium'>{i18n._(title)}</div>
           <p className='text-muted-foreground line-clamp-2 text-sm leading-snug'>{children}</p>
         </NavigationLink>
       </NavigationMenuLink>

@@ -1,11 +1,11 @@
 import { cn } from '@/lib/styles'
-import { ElementType, ReactNode, ComponentPropsWithoutRef } from 'react'
+import { ElementType, ReactNode, ComponentPropsWithRef } from 'react'
 
 type ContainerProps<T extends ElementType> = {
   as?: T
   className?: string
   children: ReactNode
-} & Omit<ComponentPropsWithoutRef<T>, 'as' | 'className' | 'children'>
+} & Omit<ComponentPropsWithRef<T>, 'as' | 'className' | 'children'>
 
 export function Container<T extends ElementType = 'section'>({ as, className, children, ...props }: ContainerProps<T>) {
   const Component = as || 'section'

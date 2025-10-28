@@ -43,7 +43,7 @@ export default async function RootLayout({ children, params }: Readonly<PropsWit
         <link rel='prefetch' as='image' href='/assets/background/glow-olive.webp' />
         <title />
       </head>
-      <body className={cn('relative flex min-h-dvh flex-col antialiased')}>
+      <body className={cn('relative flex min-h-dvh flex-col pl-[calc(100vw-100%)] antialiased')}>
         <ProviderRegistry params={params}>
           <DefaultLayout>
             <Header />
