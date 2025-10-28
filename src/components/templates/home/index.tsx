@@ -261,13 +261,7 @@ export default function HomeTemplate() {
                 height={612}
                 className='absolute top-1/2 left-1/2 z-[-1] -translate-x-1/2 -translate-y-1/2 object-contain'
               />
-              <Image
-                src={'/mobile/screen/1.webp'}
-                alt={'network'}
-                width={271}
-                height={548}
-                className='scale-80 object-contain'
-              />
+              <Image src={'/mobile/screen/1.webp'} alt={'network'} fill className='object-contain' />
             </div>
             <NavigationLink href='https://download.chainviews.net/'>
               <Button variant={'neon'} size={'2xl'} className={'w-fit md:relative'}>
@@ -278,7 +272,7 @@ export default function HomeTemplate() {
             </NavigationLink>
           </div>
           <div className='hidden w-full md:block'>
-            <Image src={'/assets/background/network.webp'} alt={'network'} width={612} height={612} />
+            <Image src={'/assets/background/network.webp'} alt={'hero'} width={612} height={612} />
           </div>
         </div>
       </Container>
@@ -307,13 +301,7 @@ export default function HomeTemplate() {
               </div>
             </AnimatedContent>
             <div className='relative flex h-svw w-full items-center justify-center md:hidden'>
-              <Image
-                src={'/mobile/screen/2.webp'}
-                alt={'network'}
-                width={271}
-                height={548}
-                className='scale-80 object-contain'
-              />
+              <Image src={'/mobile/screen/2.webp'} alt={'about'} fill className='object-contain' />
             </div>
           </div>
         </div>
@@ -347,13 +335,7 @@ export default function HomeTemplate() {
               </div>
             </AnimatedContent>
             <div className='relative mb-5 flex h-svw w-full items-center justify-center md:hidden'>
-              <Image
-                src={'/mobile/screen/3.webp'}
-                alt={'network'}
-                width={271}
-                height={548}
-                className='scale-80 object-contain'
-              />
+              <Image src={'/mobile/screen/3.webp'} alt={'platform'} fill className='object-contain' />
             </div>
           </div>
         </div>
