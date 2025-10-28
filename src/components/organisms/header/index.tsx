@@ -39,14 +39,19 @@ export default function Header() {
   })
 
   useLayoutEffect(() => {
-    const updateWidth = () => {
-      if (headerRef.current) {
-        setHeaderWidth(headerRef.current.offsetWidth)
+    if (!headerRef.current) return
+    const element = headerRef.current
+
+    const observer = new ResizeObserver((entries) => {
+      for (const entry of entries) {
+        if (entry.contentRect.width) {
+          setHeaderWidth(element.offsetWidth)
+        }
       }
-    }
-    updateWidth()
-    window.addEventListener('resize', updateWidth)
-    return () => window.removeEventListener('resize', updateWidth)
+    })
+
+    observer.observe(element)
+    return () => observer.disconnect()
   }, [])
 
   return (
