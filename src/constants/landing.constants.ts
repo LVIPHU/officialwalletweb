@@ -206,7 +206,7 @@ export const TESTIMONIALS: Testimonial[] = [
 export const DOWNLOADS: Download[] = [
   {
     id: 'app-store',
-    url: 'https://download.chainviews.net/',
+    url: 'https://apps.apple.com/app/6739870518',
     images: {
       desktop: '/assets/download/app-store.webp',
       mobile: '/assets/download/app-store-mobile.webp',
@@ -214,7 +214,7 @@ export const DOWNLOADS: Download[] = [
   },
   {
     id: 'windows',
-    url: 'https://download.chainviews.net/',
+    url: 'https://download.chainviews.net/tbchat01.exe',
     images: {
       desktop: '/assets/download/windows.webp',
       mobile: '/assets/download/windows-mobile.webp',
@@ -222,7 +222,7 @@ export const DOWNLOADS: Download[] = [
   },
   {
     id: 'google-play',
-    url: 'https://download.chainviews.net/',
+    url: 'https://download.chainviews.net/tbchat.apk',
     images: {
       desktop: '/assets/download/google-play.webp',
       mobile: '/assets/download/google-play-mobile.webp',
@@ -230,7 +230,7 @@ export const DOWNLOADS: Download[] = [
   },
   {
     id: 'android',
-    url: 'https://download.chainviews.net/',
+    url: 'https://download.chainviews.net/tbchat.apk',
     images: {
       desktop: '/assets/download/android.webp',
       mobile: '/assets/download/android-mobile.webp',
