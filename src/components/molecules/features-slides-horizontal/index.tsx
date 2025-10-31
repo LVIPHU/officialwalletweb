@@ -3,12 +3,12 @@ import { useLayoutEffect, useRef, ReactNode, useState } from 'react'
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/dist/ScrollTrigger'
 import { useWindowSize } from '@/hooks/use-window-size'
-import { useIsMobile } from '@/hooks/use-mobile'
 import { cn } from '@/lib/styles'
 import AnimatedContent from '@/components/atoms/animated-content'
 import { BACKGROUND_ENUM } from '@/constants/landing.constants'
 import { Trans } from '@lingui/react/macro'
 import { useStore } from '@/lib/store'
+import { useIsTablet } from '@/hooks/use-tablet'
 
 gsap.registerPlugin(ScrollTrigger)
 
@@ -17,7 +17,7 @@ interface HorizontalSlidesProps {
 }
 
 export default function FeaturesSlidesHorizontal({ children }: HorizontalSlidesProps) {
-  const isMobile = useIsMobile()
+  const isTablet = useIsTablet()
   const { width: windowWidth } = useWindowSize()
   const setScreenIphone = useStore((state) => state.setScreenIphone)
 
@@ -26,7 +26,7 @@ export default function FeaturesSlidesHorizontal({ children }: HorizontalSlidesP
   const targetRef = useRef<HTMLDivElement | null>(null)
 
   useLayoutEffect(() => {
-    if (!targetRef.current || !triggerRef.current || isMobile) return
+    if (!targetRef.current || !triggerRef.current || isTablet) return
 
     const ctx = gsap.context(() => {
       const container = targetRef.current!
@@ -98,16 +98,14 @@ export default function FeaturesSlidesHorizontal({ children }: HorizontalSlidesP
     return () => {
       ctx.revert()
     }
-  }, [windowWidth, isMobile, setScreenIphone])
+  }, [windowWidth, isTablet, setScreenIphone])
 
   return (
-    <div data-slot='trigger' ref={triggerRef} className='relative md:z-[-1]'>
+    <div data-slot='trigger' ref={triggerRef} className='relative lg:z-[-1]'>
       <AnimatedContent
         distance={0}
         threshold={0.36}
-        className={
-          'absolute inset-y-2 left-0 z-[-1] h-screen w-[400px] md:left-[1%] lg:left-[1%] xl:left-[1%] 2xl:left-[2%]'
-        }
+        className={'absolute inset-y-2 left-0 z-[-1] h-screen w-[400px] lg:left-[1%] xl:left-[1%] 2xl:left-[2%]'}
       >
         <div className='relative h-full w-full scale-300'>
           <div data-color={BACKGROUND_ENUM[step]} className='background-glow' />
@@ -123,7 +121,7 @@ export default function FeaturesSlidesHorizontal({ children }: HorizontalSlidesP
       >
         <h2
           className={cn(
-            'font-clash-display relative left-1/12 hidden text-center text-4xl leading-tight font-semibold md:text-start sm:portrait:inline-block sm:landscape:hidden lg:landscape:inline-block'
+            'font-clash-display relative left-1/12 hidden text-center text-4xl leading-tight font-semibold lg:text-start sm:portrait:inline-block sm:landscape:hidden lg:landscape:inline-block'
           )}
         >
           <Trans>Features</Trans>
@@ -134,7 +132,7 @@ export default function FeaturesSlidesHorizontal({ children }: HorizontalSlidesP
         ref={targetRef}
         className={cn(
           'relative flex w-full items-center justify-start gap-8 py-8',
-          'md:h-screen md:flex-row md:flex-nowrap md:px-16',
+          'lg:h-screen lg:flex-row lg:flex-nowrap lg:px-16',
           'h-auto flex-col px-6'
         )}
       >

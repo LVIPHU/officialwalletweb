@@ -12,6 +12,7 @@ const chainCardVariants = cva('rounded-[52px] flex flex-col gap-5 justify-center
       TBC: 'card-chain-green',
       BTC: 'card-chain-orange',
       ETH: 'card-chain-olive',
+      TRX: 'card-chain-red',
       SOL: 'card-chain-blue-purple',
     },
     size: {

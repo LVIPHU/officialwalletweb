@@ -1,5 +1,4 @@
 'use client'
-
 import { useLayoutEffect, useRef, useState } from 'react'
 import { usePathname } from 'next/navigation'
 import { Button } from '@/components/ui/button'
@@ -70,8 +69,8 @@ export default function Header() {
       <div className='flex items-center justify-between gap-3'>
         <Logo showText={true} classNameLabel='sm:hidden lg:inline-block lg:text-sm xl:text-md' />
 
-        <div className='hidden flex-1 justify-center md:flex'>
-          <NavigationMenu>
+        <div className='hidden flex-1 justify-center lg:flex'>
+          <NavigationMenu scrolled={hasScrolled}>
             <NavigationMenuList>
               {NAVIGATION_ITEMS.map((section) => (
                 <NavigationSection key={section.id} section={section} contentWidth={headerWidth} />
@@ -80,17 +79,17 @@ export default function Header() {
           </NavigationMenu>
         </div>
 
-        <div className='hidden items-center gap-2 md:flex lg:gap-10'>
+        <div className='hidden items-center gap-2 lg:flex lg:gap-10'>
           <ThemeSwitcher />
           <LocaleSwitcher classNameLabel='hidden lg:inline-block' />
-          <NavigationLink href='https://download.chainviews.net/'>
+          <NavigationLink href='/#download'>
             <Button variant='neon' size='sm' className='rounded-full text-base! font-normal whitespace-nowrap'>
               <Trans>Download</Trans>
             </Button>
           </NavigationLink>
         </div>
 
-        <SidebarTrigger className='text-primary size-9 md:hidden [&_svg]:size-7!' />
+        <SidebarTrigger className='text-primary size-9 lg:hidden [&_svg]:size-7!' />
       </div>
     </Container>
   )
@@ -125,7 +124,7 @@ function NavigationSection({ section, contentWidth }: NavigationSectionProps) {
           }}
         >
           {/* Left Highlight */}
-          <div className='hidden w-1/4 flex-col justify-end select-none lg:flex'>
+          <div className='hidden w-1/3 flex-col justify-end select-none lg:flex xl:w-1/6'>
             <AspectRatio className='h-full w-full' ratio={285 / 324}>
               <Image src={'/assets/images/tbchat.webp'} fill alt={'tbchat'} className={'rounded-md object-cover'} />
             </AspectRatio>

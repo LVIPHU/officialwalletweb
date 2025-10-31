@@ -22,7 +22,8 @@ export const PageTransition = () => {
   }, [pathname, curtainInComplete])
 
   useEffect(() => {
-    if (triggerTransition === '') return
+    if (!triggerTransition || !curtainRef.current) return
+
     timeline.current.to(curtainRef.current, {
       x: 0,
       duration: 0.7,
@@ -36,21 +37,20 @@ export const PageTransition = () => {
   }, [triggerTransition])
 
   useEffect(() => {
-    if (!pageLoaded) return
+    if (!pageLoaded || !curtainRef.current) return
 
     timeline.current.to(curtainRef.current, {
       x: '100%',
       paused: !pageLoaded,
-      duration: 0.7,
+      duration: 1,
+      ease: 'circ.out',
       startAt: { x: 0 },
       onComplete: () => {
         setTriggerTransition('')
         setCurtainInComplete(false)
         setPageloaded(false)
       },
-      ease: 'circ.out',
     })
   }, [pageLoaded])
-
   return <div className={s.transition} ref={curtainRef} />
 }

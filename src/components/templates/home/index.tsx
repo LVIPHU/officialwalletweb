@@ -21,11 +21,7 @@ import Image from 'next/image'
 import { Trans } from '@lingui/react/macro'
 import { ChainCard } from '@/components/molecules/chain-card'
 import { NavigationLink } from '@/components/atoms/navigation-link'
-
-const FeaturesSection = dynamic(
-  () => import('@/components/organisms/features-section').then((FeaturesSection) => FeaturesSection),
-  { ssr: false }
-)
+import FeaturesSection from '@/components/organisms/features-section'
 
 const AuroraText = dynamic(() => import('@/components/atoms/aurora-text').then(({ AuroraText }) => AuroraText), {
   ssr: false,
@@ -91,7 +87,7 @@ export default function HomeTemplate() {
     if (!lenis) return
 
     function onClassNameChange(lenis: Lenis) {
-      console.log('[Home template] Lenis className: ', lenis.className)
+      // console.log('[Home template] Lenis className: ', lenis.className)
     }
 
     lenis.on('className change' as any, onClassNameChange)
@@ -207,7 +203,7 @@ export default function HomeTemplate() {
     } else if (window.scrollY > 2600 && window.scrollY <= 3000) {
       setScreenIphone('4')
     }
-    console.log('[Home template] use scroll', window.scrollY, e.scroll, e.isScrolling, e.velocity, e.isLocked)
+    // console.log('[Home template] use scroll', window.scrollY, e.scroll, e.isScrolling, e.velocity, e.isLocked)
   })
 
   useFrame(() => {
@@ -228,15 +224,15 @@ export default function HomeTemplate() {
 
   return (
     <div className='relative min-h-dvh overflow-x-hidden'>
-      <div className={'canvas hidden md:block'}>
+      <div className={'canvas hidden lg:block'}>
         <WebGL />
       </div>
 
       {/* Hero Section */}
-      <Container className='flex min-h-dvh items-center pb-5 md:pb-10 xl:pb-16'>
-        <div className='grid w-full items-center md:grid-cols-2'>
-          <div className='flex w-full flex-col items-center gap-8 md:items-start md:gap-13'>
-            <h1 className='font-clash-display flex flex-col text-center text-3xl font-extrabold tracking-tight sm:text-4xl md:text-start md:text-6xl md:leading-20'>
+      <Container className='flex min-h-dvh items-center pb-5 lg:pb-10 xl:pb-16'>
+        <div className='grid w-full items-center lg:grid-cols-2'>
+          <div className='flex w-full flex-col items-center gap-8 lg:items-start lg:gap-13'>
+            <h1 className='font-clash-display flex flex-col text-center text-3xl font-extrabold tracking-tight sm:text-4xl lg:text-start lg:text-6xl lg:leading-20'>
               <AuroraText speed={0}>
                 <Trans>Own Your Crypto.</Trans>
               </AuroraText>
@@ -247,13 +243,13 @@ export default function HomeTemplate() {
                 <Trans>Possibilities</Trans>
               </AuroraText>
             </h1>
-            <p className='max-w-md text-center md:text-start'>
+            <p className='max-w-md text-center lg:text-start'>
               <Trans>
                 TBC Wallet empowers you to manage diverse assets like Bitcoin, Ethereum, and Solana. Securely dive into
                 DeFi, NFTs, and dApps with full control. Your keys, your future.
               </Trans>
             </p>
-            <div className='relative flex h-svw w-full items-center justify-center md:hidden'>
+            <div className='relative flex h-svw w-full items-center justify-center lg:hidden'>
               <Image
                 src={'/assets/background/network.webp'}
                 alt={'network'}
@@ -263,25 +259,25 @@ export default function HomeTemplate() {
               />
               <Image src={'/mobile/screen/1.webp'} alt={'network'} fill className='object-contain' />
             </div>
-            <NavigationLink href='https://download.chainviews.net/'>
-              <Button variant={'neon'} size={'2xl'} className={'w-fit md:relative'}>
+            <NavigationLink href='/#download'>
+              <Button variant={'neon'} size={'2xl'} className={'w-fit lg:relative'}>
                 <span>
                   <Trans>Explore now</Trans>
                 </span>
               </Button>
             </NavigationLink>
           </div>
-          <div className='hidden w-full md:block'>
+          <div className='hidden w-full lg:block'>
             <Image src={'/assets/background/network.webp'} alt={'hero'} width={612} height={612} />
           </div>
         </div>
       </Container>
 
       {/* About Section */}
-      <Container id='about' className='min-h-dvh py-5 md:h-dvh md:py-10 xl:py-16' data-lenis-scroll-snap-align='start'>
-        <div className='flex h-full flex-col items-center gap-8 md:gap-6'>
+      <Container id='about' className='min-h-dvh py-5 lg:h-dvh lg:py-10 xl:py-16' data-lenis-scroll-snap-align='start'>
+        <div className='flex h-full flex-col items-center gap-8 lg:gap-6'>
           <AnimatedContent distance={50} threshold={0.7}>
-            <div className='flex max-w-2xl flex-col gap-8 text-center md:gap-6'>
+            <div className='flex max-w-2xl flex-col gap-8 text-center lg:gap-6'>
               <h2 className='font-clash-display text-5xl font-semibold'>
                 <Trans>About</Trans>
               </h2>
@@ -294,13 +290,13 @@ export default function HomeTemplate() {
               </p>
             </div>
           </AnimatedContent>
-          <div ref={aboutRectRef} className='relative mt-6 h-full w-full grow sm:mt-12 md:mt-24'>
+          <div ref={aboutRectRef} className='relative mt-6 h-full w-full grow sm:mt-12 lg:mt-24'>
             <AnimatedContent distance={0} threshold={0.36} className={'absolute inset-0 z-[-1]'}>
-              <div className='relative left-[4.5%] h-full w-full scale-200 md:scale-100'>
+              <div className='relative left-[4.5%] h-full w-full scale-200 lg:scale-100'>
                 <div className='background-glow' />
               </div>
             </AnimatedContent>
-            <div className='relative flex h-svw w-full items-center justify-center md:hidden'>
+            <div className='relative flex h-svw w-full items-center justify-center lg:hidden'>
               <Image src={'/mobile/screen/2.webp'} alt={'about'} fill className='object-contain' />
             </div>
           </div>
@@ -310,12 +306,12 @@ export default function HomeTemplate() {
       {/* Platform Section */}
       <Container
         id='platform'
-        className='min-h-dvh py-5 md:h-dvh md:py-10 xl:py-16'
+        className='min-h-dvh py-5 lg:h-dvh lg:py-10 xl:py-16'
         data-lenis-scroll-snap-align='start'
       >
-        <div className='grid h-full items-center justify-center gap-8 md:grid-cols-2'>
-          <AnimatedContent distance={10} threshold={0.4} className='md:order-last'>
-            <div className='flex h-full max-w-md flex-col gap-8 text-center md:gap-6 md:text-start'>
+        <div className='grid h-full items-center justify-center gap-8 lg:grid-cols-2'>
+          <AnimatedContent distance={10} threshold={0.4} className='lg:order-last'>
+            <div className='flex h-full max-w-md flex-col gap-8 text-center lg:gap-6 lg:text-start'>
               <h2 className='font-clash-display text-4xl font-semibold'>
                 <Trans>Designed for All, Built for You</Trans>
               </h2>
@@ -330,11 +326,11 @@ export default function HomeTemplate() {
           </AnimatedContent>
           <div ref={platformRectRef} className='relative h-full w-full'>
             <AnimatedContent distance={10} threshold={0.4} className={'absolute inset-0 z-[-1]'}>
-              <div className='relative left-[4.5%] h-full w-full scale-200 md:scale-160'>
+              <div className='relative left-[4.5%] h-full w-full scale-200 lg:scale-160'>
                 <div className='background-glow' />
               </div>
             </AnimatedContent>
-            <div className='relative mb-5 flex h-svw w-full items-center justify-center md:hidden'>
+            <div className='relative mb-5 flex h-svw w-full items-center justify-center lg:hidden'>
               <Image src={'/mobile/screen/3.webp'} alt={'platform'} fill className='object-contain' />
             </div>
           </div>
@@ -344,10 +340,10 @@ export default function HomeTemplate() {
       {/* Features Section */}
       <Container
         id='features'
-        className='h-[80dvh] py-5 md:h-auto md:py-10 xl:py-16'
+        className='h-[80dvh] py-5 lg:h-auto lg:py-10 xl:py-16'
         data-lenis-scroll-snap-align='start'
       >
-        <div ref={featuresRectRef} className='flex h-full items-center md:h-auto md:items-start'>
+        <div ref={featuresRectRef} className='flex h-full items-center lg:h-auto lg:items-start'>
           <div className='relative grow'>
             <FeaturesSection />
           </div>
@@ -355,9 +351,9 @@ export default function HomeTemplate() {
       </Container>
 
       {/* One Platform, Millions of Assets */}
-      <Container id='assets' className='min-h-[85dvh] py-5 md:py-10 xl:py-16'>
-        <div className='flex flex-col items-center justify-center gap-8 md:gap-12'>
-          <div className='relative flex max-w-3xl flex-col items-center gap-8 text-center md:gap-6'>
+      <Container id='assets' className='min-h-[85dvh] py-5 lg:py-10 xl:py-16'>
+        <div className='flex flex-col items-center justify-center gap-8 lg:gap-12'>
+          <div className='relative flex max-w-3xl flex-col items-center gap-8 text-center lg:gap-6'>
             <AnimatedContent name={'asset-title'}>
               <h2 className='font-clash-display text-4xl font-semibold'>
                 <Trans>Your All-in-One Web3 Wallet</Trans>
@@ -372,7 +368,7 @@ export default function HomeTemplate() {
               </p>
             </AnimatedContent>
           </div>
-          <div className='grid w-full grid-cols-2 gap-4 md:gap-10 xl:grid-cols-4'>
+          <div className='grid w-full grid-cols-2 gap-4 lg:gap-10 xl:grid-cols-4'>
             {CHAINS.map((crypto) => (
               <ChainCard key={crypto.id} chain={crypto} />
             ))}
@@ -381,8 +377,8 @@ export default function HomeTemplate() {
       </Container>
 
       {/* One wallet. Cross-platform */}
-      <Container id='platform' className='min-h-[85dvh] py-5 md:py-10 xl:py-16'>
-        <div className='flex h-full flex-col items-center justify-center gap-8 text-center md:gap-12 md:text-start'>
+      <Container id='platform' className='min-h-[85dvh] py-5 lg:py-10 xl:py-16'>
+        <div className='flex h-full flex-col items-center justify-center gap-8 text-center lg:gap-12 lg:text-start'>
           <AnimatedContent>
             <h2 className='font-clash-display text-4xl font-semibold'>
               <Trans>One wallet. Cross platform</Trans>
@@ -391,7 +387,7 @@ export default function HomeTemplate() {
           <div className='relative h-full grow'>
             <PlatformTabs />
             <AnimatedContent distance={0} threshold={0.36} className={'absolute inset-0 z-[-1]'}>
-              <div className='relative top-[10%] left-[4.5%] h-full w-full scale-200 md:scale-130'>
+              <div className='relative top-[10%] left-[4.5%] h-full w-full scale-200 lg:scale-130'>
                 <div className='background-glow' />
               </div>
             </AnimatedContent>
@@ -400,13 +396,13 @@ export default function HomeTemplate() {
       </Container>
 
       {/*Community Testimonials*/}
-      <Container id='community' className='min-h-[85dvh] py-5 md:py-10 xl:py-16'>
-        <div className='relative flex h-full flex-col items-center justify-center gap-8 text-center md:gap-12 md:text-start'>
-          <h2 className='font-clash-display max-w-sm text-4xl font-semibold md:max-w-none'>
+      <Container id='community' className='min-h-[85dvh] py-5 lg:py-10 xl:py-16'>
+        <div className='relative flex h-full flex-col items-center justify-center gap-8 text-center lg:gap-12 lg:text-start'>
+          <h2 className='font-clash-display max-w-sm text-4xl font-semibold lg:max-w-none'>
             <Trans>Community talk about us</Trans>
           </h2>
           <AnimatedContent distance={0} threshold={0.4} className={'absolute inset-0 z-[-1]'}>
-            <div className='relative top-1/5 left-[4%] h-full w-full scale-200 md:top-[5%] md:scale-90'>
+            <div className='relative top-1/5 left-[4%] h-full w-full scale-200 lg:top-[5%] lg:scale-90'>
               <div className='background-glow' />
             </div>
           </AnimatedContent>
@@ -415,12 +411,12 @@ export default function HomeTemplate() {
       </Container>
 
       {/* Download Section */}
-      <Container id='download' className='min-h-[70dvh] py-5 md:min-h-[85dvh] md:py-10 xl:py-16'>
-        <div className='relative flex h-full w-full flex-col items-center justify-center gap-8 text-center md:gap-12 md:text-start'>
+      <Container id='download' className='min-h-[70dvh] py-5 lg:min-h-[85dvh] lg:py-10 xl:py-16'>
+        <div className='relative flex h-full w-full flex-col items-center justify-center gap-8 text-center lg:gap-12 lg:text-start'>
           <h2 className='font-clash-display text-4xl font-semibold'>
             <Trans>Download now</Trans>
           </h2>
-          <div className='grid w-full max-w-[850px] grid-cols-2 gap-3 md:gap-6 lg:gap-12'>
+          <div className='grid w-full max-w-[850px] grid-cols-2 gap-3 lg:gap-6 xl:gap-12'>
             {DOWNLOADS.map((data) => (
               <DownloadCard key={data.id} data={data} />
             ))}

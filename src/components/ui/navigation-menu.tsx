@@ -9,14 +9,17 @@ function NavigationMenu({
   className,
   children,
   viewport = true,
+  scrolled = false,
   ...props
 }: React.ComponentProps<typeof NavigationMenuPrimitive.Root> & {
   viewport?: boolean
+  scrolled?: boolean
 }) {
   return (
     <NavigationMenuPrimitive.Root
       data-slot='navigation-menu'
       data-viewport={viewport}
+      data-scrolled={scrolled}
       className={cn('group/navigation-menu relative flex max-w-max flex-1 items-center justify-center', className)}
       {...props}
     >
@@ -87,7 +90,7 @@ function NavigationMenuViewport({
   return (
     <div
       className={cn(
-        'absolute top-full -left-1/2 isolate z-50 flex justify-center md:translate-x-[11%] lg:-translate-x-[3%] xl:-translate-x-[12%] 2xl:-translate-x-[18.5%]'
+        'fixed top-11 left-1/2 isolate z-50 flex -translate-x-1/2 justify-center group-data-[scrolled=false]/navigation-menu:top-15'
       )}
     >
       <NavigationMenuPrimitive.Viewport

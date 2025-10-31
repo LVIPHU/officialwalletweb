@@ -5,6 +5,12 @@ import { Trans } from '@lingui/react/macro'
 import { InputGroup, InputGroupAddon, InputGroupButton, InputGroupInput } from '@/components/ui/input-group'
 import { msg } from '@lingui/core/macro'
 import { useLingui } from '@lingui/react'
+import { isBrowser } from '@/lib/misc'
+
+if (isBrowser) {
+  window.history.scrollRestoration = 'manual'
+  window.scrollTo(0, 0)
+}
 
 export default function ComingSoonTemplate() {
   const { i18n } = useLingui()

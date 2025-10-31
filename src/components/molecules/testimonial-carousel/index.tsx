@@ -13,9 +13,9 @@ import { cn } from '@/lib/styles'
 import GlassCard from '@/components/molecules/glass-card'
 import { TESTIMONIALS } from '@/constants/landing.constants'
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar'
-import { useIsMobile } from '@/hooks/use-mobile'
 import Autoplay from 'embla-carousel-autoplay'
 import QuoteSVG from '@public/assets/icons/quote.svg'
+import { useIsTablet } from '@/hooks/use-tablet'
 
 function chunkArray<T>(array: T[], size: number): T[][] {
   return Array.from({ length: Math.ceil(array.length / size) }, (_, i) => array.slice(i * size, i * size + size))
@@ -23,23 +23,23 @@ function chunkArray<T>(array: T[], size: number): T[][] {
 
 function getCardGridClass(index: number) {
   const layouts = [
-    'col-span-1 md:col-span-5',
-    'col-span-1 md:col-span-5 md:col-end-11',
-    'col-span-1 md:col-span-5 md:col-start-2',
-    'col-span-1 md:col-span-5 md:col-end-12',
+    'col-span-1 lg:col-span-5',
+    'col-span-1 lg:col-span-5 lg:col-end-11',
+    'col-span-1 lg:col-span-5 lg:col-start-2',
+    'col-span-1 lg:col-span-5 lg:col-end-12',
   ]
   return layouts[index % layouts.length]
 }
 
 const TestimonialCard = ({ testimonial, className }: { testimonial: any; className?: string }) => (
   <GlassCard className={cn('background-testimonial', className)}>
-    <div className='flex h-full flex-col items-center justify-center gap-5 px-6 py-5 text-white md:items-start md:gap-10'>
-      <div className='flex flex-col items-center justify-center gap-6 md:items-start md:gap-4'>
-        <QuoteSVG className='size-7 fill-white md:size-4' />
+    <div className='flex h-full flex-col items-center justify-center gap-5 px-6 py-5 text-white lg:items-start lg:gap-10'>
+      <div className='flex flex-col items-center justify-center gap-6 lg:items-start lg:gap-4'>
+        <QuoteSVG className='size-7 fill-white lg:size-4' />
         <p>{testimonial.content}</p>
       </div>
-      <div className='flex flex-col items-center gap-3 md:flex-row'>
-        <Avatar className='size-20 md:size-10'>
+      <div className='flex flex-col items-center gap-3 lg:flex-row'>
+        <Avatar className='size-20 lg:size-10'>
           <AvatarImage src={testimonial.avatar} alt={testimonial.name} />
           <AvatarFallback>{testimonial.name.slice(0, 2).toUpperCase()}</AvatarFallback>
         </Avatar>
@@ -53,19 +53,19 @@ const TestimonialCard = ({ testimonial, className }: { testimonial: any; classNa
 )
 
 const TestimonialGrid = ({ testimonials }: { testimonials: any[] }) => (
-  <div className='grid h-full grid-cols-1 gap-6 md:grid-cols-11 md:gap-12'>
+  <div className='grid h-full grid-cols-1 gap-6 lg:grid-cols-11 lg:gap-12'>
     {testimonials.map((t, i) => (
       <TestimonialCard
         key={t.id}
         testimonial={t}
-        className={cn(getCardGridClass(i), 'h-full min-h-[400px] md:min-h-0')}
+        className={cn(getCardGridClass(i), 'h-full min-h-[400px] lg:min-h-0')}
       />
     ))}
   </div>
 )
 
 export function TestimonialCarousel() {
-  const isMobile = useIsMobile()
+  const isTablet = useIsTablet()
   const [api, setApi] = useState<CarouselApi>()
   const [current, setCurrent] = useState<number>(0)
   const [count, setCount] = useState<number>(0)
@@ -81,11 +81,11 @@ export function TestimonialCarousel() {
     })
   }, [api])
 
-  const size = useMemo(() => (isMobile ? 1 : 4), [isMobile])
+  const size = useMemo(() => (isTablet ? 1 : 4), [isTablet])
   const plugin = useMemo(() => Autoplay({ delay: 3000, stopOnInteraction: true }), [])
   const testimonialGroups = useMemo(
-    () => chunkArray(isMobile ? TESTIMONIALS.slice(0, 4) : TESTIMONIALS, size),
-    [size, isMobile]
+    () => chunkArray(isTablet ? TESTIMONIALS.slice(0, 4) : TESTIMONIALS, size),
+    [size, isTablet]
   )
 
   return (
@@ -93,21 +93,21 @@ export function TestimonialCarousel() {
       <Carousel
         setApi={setApi}
         plugins={[plugin]}
-        className='flex w-full items-center justify-center md:px-10'
+        className='flex w-full items-center justify-center lg:px-10'
         onMouseEnter={plugin.stop}
         onMouseLeave={plugin.reset}
       >
         <CarouselContent>
           {testimonialGroups.map((group, index) => (
-            <CarouselItem className='basis-10/11 md:basis-full' key={index}>
+            <CarouselItem className='basis-10/11 lg:basis-full' key={index}>
               <TestimonialGrid testimonials={group} />
             </CarouselItem>
           ))}
         </CarouselContent>
-        <CarouselPrevious variant={'ghost'} className={"size-14 md:-left-2 md:[&_svg:not([class*='size-'])]:size-10"} />
-        <CarouselNext variant={'ghost'} className={"size-14 md:-right-2 md:[&_svg:not([class*='size-'])]:size-10"} />
+        <CarouselPrevious variant={'ghost'} className={"size-14 lg:-left-2 lg:[&_svg:not([class*='size-'])]:size-10"} />
+        <CarouselNext variant={'ghost'} className={"size-14 lg:-right-2 lg:[&_svg:not([class*='size-'])]:size-10"} />
       </Carousel>
-      <div className='mt-4 flex items-center justify-center gap-2.5 md:hidden'>
+      <div className='mt-4 flex items-center justify-center gap-2.5 lg:hidden'>
         {Array.from({ length: count }).map((_, index) => (
           <button
             key={index}

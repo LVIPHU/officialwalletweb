@@ -284,15 +284,15 @@ export function IPhone() {
       return
     }
 
-    console.log('[Webgl component] length: ', thresholds.length, STEPS_DESKTOP.length)
-    console.log('[Webgl component] thresholds: ', _thresholds)
+    // console.log('[Webgl component] length: ', thresholds.length, STEPS_DESKTOP.length)
+    // console.log('[Webgl component] thresholds: ', _thresholds)
 
     const current = thresholds.findIndex((v) => scroll < v) - 1
     const start = thresholds[current]
     const end = thresholds[current + 1]
     const progress = mapRange(start, end, scroll, 0, 1)
 
-    console.log('[Webgl component] from step: ', current, start)
+    // console.log('[Webgl component] from step: ', current, start)
 
     const from = STEPS_DESKTOP[current]
     const to = STEPS_DESKTOP[current + 1]

@@ -88,22 +88,17 @@ export const NAVIGATION_ITEMS: Navigation = [
 export const SOCIAL_LINKS = [
   {
     id: 'x',
-    href: '#',
+    href: 'https://x.com/tbchatofficial',
     icon: X,
   },
   {
     id: 'telegram',
-    href: '#',
+    href: 'https://t.me/TBChatGlobal',
     icon: Telegram,
   },
   {
     id: 'discord',
-    href: '#',
+    href: 'https://discord.com/invite/6UHYk6k372',
     icon: Discord,
-  },
-  {
-    id: 'youTube',
-    href: '#',
-    icon: Youtube,
   },
 ]

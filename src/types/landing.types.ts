@@ -19,7 +19,7 @@ export interface Feature {
 }
 
 export interface Chain {
-  readonly id: 'TBC' | 'BTC' | 'ETH' | 'SOL'
+  readonly id: 'TBC' | 'BTC' | 'ETH' | 'SOL' | 'TRX'
   readonly title: MessageDescriptor
   readonly logo?: React.FC<React.SVGProps<SVGSVGElement>>
   readonly url?: string

@@ -15,6 +15,7 @@ import {
   SidebarMenuItem,
   SidebarMenuButton,
   SidebarRail,
+  useSidebar,
 } from '@/components/ui/sidebar'
 import { Collapsible, CollapsibleContent, CollapsibleTrigger } from '@/components/ui/collapsible'
 import { Button } from '@/components/ui/button'
@@ -28,8 +29,8 @@ import { NavItem } from '@/types/navigation.types'
 import type { MessageDescriptor } from '@lingui/core'
 
 export default function MobileSidebar() {
+  const { toggleSidebar } = useSidebar()
   const [openId, setOpenId] = useState<string | null>(null)
-
   const handleToggle = useCallback((id: string, isOpen: boolean) => {
     setOpenId(isOpen ? id : null)
   }, [])
@@ -54,6 +55,7 @@ export default function MobileSidebar() {
             items={section.items}
             open={openId === section.id}
             onToggle={handleToggle}
+            toggleSidebar={toggleSidebar}
           />
         ))}
       </SidebarContent>
@@ -68,8 +70,12 @@ export default function MobileSidebar() {
               <LocaleSwitcher />
             </div>
           </div>
-          <NavigationLink href='https://download.chainviews.net/'>
-            <Button variant='neon' className='h-11! w-full rounded-full text-xl font-normal whitespace-nowrap'>
+          <NavigationLink href='/#download' className={'w-full'}>
+            <Button
+              variant='neon'
+              className='h-11! w-full rounded-full text-xl font-normal whitespace-nowrap'
+              onClick={toggleSidebar}
+            >
               <Trans>Download</Trans>
             </Button>
           </NavigationLink>
@@ -82,12 +88,13 @@ export default function MobileSidebar() {
 interface NavSectionProps {
   id: string
   title: MessageDescriptor
+  toggleSidebar: () => void
   items: readonly NavItem[]
   open: boolean
   onToggle: (id: string, isOpen: boolean) => void
 }
 
-const NavSection = memo(({ id, title, items, open, onToggle }: NavSectionProps) => {
+const NavSection = memo(({ id, title, items, open, onToggle, toggleSidebar }: NavSectionProps) => {
   const { i18n } = useLingui()
   const handleToggle = useCallback((state: boolean) => onToggle(id, state), [id, onToggle])
 
@@ -110,7 +117,7 @@ const NavSection = memo(({ id, title, items, open, onToggle }: NavSectionProps) 
             <SidebarMenu>
               {items.map(({ id, title, href }) => (
                 <SidebarMenuItem key={id}>
-                  <SidebarMenuButton asChild>
+                  <SidebarMenuButton asChild onClick={toggleSidebar}>
                     <NavigationLink
                       href={href}
                       className={cn(

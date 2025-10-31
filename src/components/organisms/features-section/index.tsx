@@ -3,6 +3,7 @@ import dynamic from 'next/dynamic'
 import { FEATURES } from '@/constants/landing.constants'
 import { FeatureCard } from '@/components/molecules/feature-card'
 import { FeaturesCarousel } from '@/components/molecules/features-carousel'
+import { useIsTablet } from '@/hooks/use-tablet'
 
 const FeaturesSlidesHorizontal = dynamic(
   () =>
@@ -13,16 +14,11 @@ const FeaturesSlidesHorizontal = dynamic(
 )
 
 export default function FeaturesSection() {
+  const isTablet = useIsTablet()
   const content = FEATURES.map((feature) => <FeatureCard key={feature.id} feature={feature} />)
 
-  return (
-    <>
-      <div className='block md:hidden'>
-        <FeaturesCarousel>{content}</FeaturesCarousel>
-      </div>
-      <div className='hidden md:block'>
-        <FeaturesSlidesHorizontal>{content}</FeaturesSlidesHorizontal>
-      </div>
-    </>
-  )
+  if (isTablet) {
+    return <FeaturesCarousel>{content}</FeaturesCarousel>
+  }
+  return <FeaturesSlidesHorizontal>{content}</FeaturesSlidesHorizontal>
 }

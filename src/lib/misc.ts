@@ -23,3 +23,16 @@ export function off<K extends keyof HTMLElementEventMap>(
 export const isBrowser = typeof window !== 'undefined'
 
 export const isNavigator = typeof navigator !== 'undefined'
+
+export function scrollToId(id = '', offset = 0, behavior: ScrollBehavior | undefined = 'smooth') {
+  const element = document.getElementById(id)
+  if (!element) return
+
+  const elementPosition = element.getBoundingClientRect().top + window.scrollY
+  const offsetPosition = elementPosition - offset
+
+  window.scrollTo({
+    top: offsetPosition,
+    behavior,
+  })
+}

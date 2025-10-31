@@ -1,5 +1,5 @@
-import { notFound } from 'next/navigation'
+import ComingSoonTemplate from '@/components/templates/coming-soon'
 
 export default function CatchAllPage() {
-  notFound()
+  return <ComingSoonTemplate />
 }
