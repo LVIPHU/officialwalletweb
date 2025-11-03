@@ -2,7 +2,7 @@
 import React, { useRef, useLayoutEffect, ReactNode } from 'react'
 import { gsap } from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
-import { useIsMobile } from '@/hooks/use-mobile'
+import {useIsTablet} from "@/hooks/use-tablet";
 
 gsap.registerPlugin(ScrollTrigger)
 
@@ -17,7 +17,6 @@ export interface AnimatedContentProps {
   animateOpacity?: boolean
   scale?: number
   threshold?: number
-  thresholdMobile?: number
   delay?: number
   mode?: 'scrub' | 'once'
   offsetVH?: number
@@ -37,7 +36,6 @@ const AnimatedContent: React.FC<AnimatedContentProps> = ({
   animateOpacity = true,
   scale = 1,
   threshold = 0.1,
-  thresholdMobile = 0.25,
   delay = 0,
   mode = 'scrub',
   offsetVH = 0,
@@ -45,18 +43,18 @@ const AnimatedContent: React.FC<AnimatedContentProps> = ({
   className = '',
   name = '',
 }) => {
-  const isMobile = useIsMobile()
+  const isTablet = useIsTablet()
   const ref = useRef<HTMLDivElement>(null)
 
   useLayoutEffect(() => {
+    if(isTablet) return
+
     const el = ref.current
     if (!el) return
 
-    const activeThreshold = isMobile ? thresholdMobile : threshold
-
     const axis = direction === 'horizontal' ? 'x' : 'y'
     const offset = reverse ? -distance : distance
-    const startPct = (1 - activeThreshold) * 100
+    const startPct = (1 - threshold) * 100
 
     // 👇 thêm offset theo viewport height
     const startPosition = `top ${startPct + offsetVH * 100}%`
@@ -108,7 +106,6 @@ const AnimatedContent: React.FC<AnimatedContentProps> = ({
     animateOpacity,
     scale,
     threshold,
-    thresholdMobile,
     delay,
     mode,
     offsetVH,

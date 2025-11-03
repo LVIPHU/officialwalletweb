@@ -7,7 +7,6 @@ import dynamic from 'next/dynamic'
 import { useDebug } from '@/hooks/use-debug'
 import { useStore } from '@/lib/store'
 import { useScroll } from '@/hooks/use-scroll'
-import { RealViewport } from '@/components/atoms/real-viewport'
 import { isBrowser } from '@/lib/misc'
 import { Leva } from 'leva'
 import {useIsTablet} from "@/hooks/use-tablet";
@@ -60,8 +59,6 @@ export default function DebugProvider({ children }: Readonly<PropsWithChildren>)
           <Stats />
         </>
       )}
-
-      <RealViewport />
       {children}
     </>
   )

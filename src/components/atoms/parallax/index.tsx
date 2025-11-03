@@ -5,6 +5,7 @@ import { useLayoutEffect, useRef } from 'react'
 import { mapRange } from '@/lib/maths'
 import { useWindowSize } from '@/hooks/use-window-size'
 import { useControls } from 'leva'
+import {useIsTablet} from "@/hooks/use-tablet";
 
 gsap.registerPlugin(ScrollTrigger)
 
@@ -20,13 +21,14 @@ export default function Parallax({ className, children, speed = 1, id = 'paralla
   const trigger = useRef<HTMLDivElement | null>(null)
   const target = useRef<HTMLDivElement | null>(null)
 
+  const isTablet = useIsTablet()
   const { width: windowWidth } = useWindowSize()
   const [{ parallax: markersParallax }] = useControls('markers', () => ({
     parallax: false,
   }))
 
   useLayoutEffect(() => {
-    if (!trigger.current || !target.current) return
+    if (!trigger.current || !target.current || isTablet) return
 
     const y = windowWidth * speed * 0.1
     const setY = gsap.quickSetter(target.current, 'y', 'px')
