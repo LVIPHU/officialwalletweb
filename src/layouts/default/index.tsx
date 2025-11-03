@@ -1,7 +1,6 @@
 'use client'
 import { Intro } from '@/components/atoms/intro'
 import { PropsWithChildren, useEffect, useState } from 'react'
-import dynamic from 'next/dynamic'
 import { usePathname } from 'next/navigation'
 import { useStore } from '@/lib/store'
 import { useFrame } from '@/hooks/use-frame'
@@ -11,26 +10,34 @@ import MobileSidebar from '@/components/organisms/mobile-sidebar'
 import { SidebarInset } from '@/components/ui/sidebar'
 import { useTheme } from 'next-themes'
 import { useIsTablet } from '@/hooks/use-tablet'
+import { useScroll } from '@/hooks/use-scroll'
 
 export default function DefaultLayout({ children }: Readonly<PropsWithChildren>) {
   const { resolvedTheme } = useTheme()
   const pathname = usePathname()
   const isTablet = useIsTablet()
+
+  // Access Lenis instance from Zustand store
   const lenis = useStore((state) => state.lenis)
   const setLenis = useStore((state) => state.setLenis)
 
+  /**
+   * Initialize Lenis smooth scrolling when the component mounts.
+   * - Disable smooth scrolling on tablet for better touch experience.
+   * - Store Lenis instance globally in Zustand.
+   * - Clean up when component unmounts.
+   */
   useEffect(() => {
     window.scrollTo(0, 0)
+
     const lenis = new Lenis({
-      // gestureOrientation: 'both',
       smoothWheel: !isTablet,
-      // smoothTouch: true,
       syncTouch: !isTablet,
     })
+
+    // Attach Lenis instance to global window for debugging if needed
     window.lenis = lenis
     setLenis(lenis)
-
-    // new ScrollSnap(lenis, { type: 'proximity' })
 
     return () => {
       lenis.destroy()
@@ -40,6 +47,10 @@ export default function DefaultLayout({ children }: Readonly<PropsWithChildren>)
 
   const [hash, setHash] = useState<string>('')
 
+  /**
+   * Handle scrolling to an element when hash changes (e.g., from clicking anchor links).
+   * Uses Lenis to smoothly scroll to the target section.
+   */
   useEffect(() => {
     if (lenis && hash) {
       // scroll to on hash change
@@ -50,6 +61,10 @@ export default function DefaultLayout({ children }: Readonly<PropsWithChildren>)
     }
   }, [lenis, hash])
 
+  /**
+   * Handle browser refresh or route change:
+   * If there’s a hash in the URL, trigger scroll to that section after navigation.
+   */
   useEffect(() => {
     if (isBrowser && window.location.hash) {
       const hash = window.location.hash.replace('#', '')
@@ -57,6 +72,10 @@ export default function DefaultLayout({ children }: Readonly<PropsWithChildren>)
     }
   }, [pathname])
 
+  /**
+   * Intercept internal anchor link clicks within the same page.
+   * Prevents default jump behavior and replaces it with Lenis smooth scroll.
+   */
   useEffect(() => {
     // catch anchor links clicks
     function onClick(e: Event) {
@@ -69,6 +88,7 @@ export default function DefaultLayout({ children }: Readonly<PropsWithChildren>)
       }, 0)
     }
 
+    // Only handle anchor links pointing to the same pathname
     const internalLinks = Array.from(document.querySelectorAll<HTMLAnchorElement>('a[href]')).filter(
       (node) => new URL(node.href).pathname === pathname && node.hash
     )
@@ -84,9 +104,42 @@ export default function DefaultLayout({ children }: Readonly<PropsWithChildren>)
     }
   }, [pathname])
 
+  /**
+   * Frame-based update for Lenis animation.
+   * This ensures Lenis updates smoothly every animation frame.
+   */
   useFrame((time) => {
     lenis?.raf(time)
   }, 0)
+
+  /**
+   * Alternative scroll listener using custom `useScroll` hook.
+   * This duplicates the logic above to keep track of which section is active,
+   * ensuring consistent hash updates across scrolling states.
+   */
+  useScroll(() => {
+    const sections = document.querySelectorAll('section[id]')
+    const scrollMiddle = window.innerHeight * 0.4
+    let currentId = ''
+
+    for (const section of sections) {
+      const rect = section.getBoundingClientRect()
+      const top = rect.top
+      const bottom = rect.bottom
+
+      if (top <= scrollMiddle && bottom >= scrollMiddle) {
+        currentId = section.id
+        break
+      }
+    }
+
+    if (currentId) {
+      const newHash = `#${currentId}`
+      if (window.location.hash !== newHash) {
+        history.replaceState(null, '', newHash)
+      }
+    }
+  }, [])
 
   return (
     <div className='mb-auto flex grow flex-col'>

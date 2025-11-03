@@ -1,3 +1,4 @@
+'use client'
 import Image from 'next/image'
 import { Container } from '@/components/atoms/container'
 import { Button } from '@/components/ui/button'
@@ -24,7 +25,8 @@ export default function HomeTemplateMobile() {
         </h1>
         <p className='max-w-md'>
           <Trans>
-            TBC Wallet empowers you to manage assets securely and explore DeFi, NFTs, and dApps with full control.
+            TBC Wallet empowers you to manage diverse assets like Bitcoin, Ethereum, and Solana. Securely dive into
+            DeFi, NFTs, and dApps with full control. Your keys, your future.
           </Trans>
         </p>
         <div className='relative flex h-svw w-full items-center justify-center'>
@@ -50,7 +52,11 @@ export default function HomeTemplateMobile() {
           <Trans>About</Trans>
         </h2>
         <p className='mt-4'>
-          <Trans>TBC Wallet is a leading multi-chain wallet with strong security and intuitive design.</Trans>
+          <Trans>
+            TBC Wallet is a leading multi-chain wallet with robust security and an intuitive interface. It simplifies
+            Web3 interactions, from token management to dApp access, while giving you total control over your digital
+            wealth.
+          </Trans>
         </p>
         <div className='relative mt-8 flex h-svw w-full items-center justify-center'>
           <Image src={'/mobile/screen/2.webp'} alt={'about'} fill className='object-contain' />
@@ -63,7 +69,11 @@ export default function HomeTemplateMobile() {
           <Trans>Designed for All, Built for You</Trans>
         </h2>
         <p className='mt-4'>
-          <Trans>User-friendly for newcomers and advanced tools for pros, ensuring smooth navigation in Web3.</Trans>
+          <Trans>
+            TBC Wallet bridges the gap for beginners and experts alike. Its user-friendly design offers easy onboarding
+            for newcomers and advanced tools for DeFi pros, ensuring secure, efficient navigation of the decentralized
+            ecosystem.
+          </Trans>
         </p>
         <div className='relative mt-8 flex h-svw w-full items-center justify-center'>
           <Image src={'/mobile/screen/3.webp'} alt={'platform'} fill className='object-contain' />
@@ -86,6 +96,12 @@ export default function HomeTemplateMobile() {
         <h2 className='font-clash-display text-4xl font-semibold'>
           <Trans>Your All-in-One Web3 Wallet</Trans>
         </h2>
+        <p className='mt-4'>
+          <Trans>
+            TBC Wallet connects you to diverse ecosystems, from Bitcoin and Ethereum to Optimism and Cosmos. Manage
+            portfolios, engage in DeFi, trade NFTs, and link to dApps—all in one secure, self-custody hub.
+          </Trans>
+        </p>
         <div className='mt-8 grid grid-cols-2 gap-4'>
           {CHAINS.map((chain) => (
             <ChainCard key={chain.id} chain={chain} />

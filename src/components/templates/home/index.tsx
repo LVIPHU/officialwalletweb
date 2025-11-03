@@ -1,12 +1,14 @@
 'use client'
-import dynamic from 'next/dynamic'
 import { useIsTablet } from '@/hooks/use-tablet'
+import HomeTemplateMobile from '@/components/templates/home/mobile'
+import HomeTemplateDesktop from '@/components/templates/home/desktop'
 
-const HomeTemplateDesktop = dynamic(() => import('./desktop'), { ssr: false })
-const HomeTemplateMobile = dynamic(() => import('./mobile'), { ssr: false })
-
-export default function HomeTemplate() {
+const HomeTemplate: React.FC<any> = () => {
   const isTablet = useIsTablet()
-
-  return isTablet ? <HomeTemplateMobile /> : <HomeTemplateDesktop />
+  if (isTablet) {
+    return <HomeTemplateMobile />
+  }
+  return <HomeTemplateDesktop />
 }
+
+export default HomeTemplate

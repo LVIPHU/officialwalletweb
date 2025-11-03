@@ -17,25 +17,31 @@ msgstr ""
 msgid ". All rights reserved."
 msgstr "جميع الحقوق محفوظة."
 
-#: src/components/templates/home/index.tsx:292
-#: src/constants/navigation.constants.ts:59
+#: src/components/templates/home/desktop/index.tsx:274
+#: src/components/templates/home/mobile/index.tsx:52
+#: src/constants/navigation.constants.ts:71
 msgid "About"
 msgstr "حول"
 
-#: src/constants/navigation.constants.ts:61
+#: src/constants/navigation.constants.ts:73
 msgid "About Us"
 msgstr "معلومات عنا"
 
-#: src/constants/navigation.constants.ts:23
 #: src/constants/navigation.constants.ts:29
+#: src/constants/navigation.constants.ts:35
+#: src/constants/navigation.constants.ts:41
 msgid "An optimized Web3 experience for desktop"
-msgstr ""
+msgstr "تجربة Web3 محسّنة لأجهزة سطح المكتب"
 
-#: src/constants/landing.constants.ts:54
+#: src/constants/navigation.constants.ts:22
+msgid "Android app"
+msgstr "تطبيق أندرويد"
+
+#: src/constants/landing.constants.ts:53
 msgid "Bitcoin"
 msgstr "بيتكوين"
 
-#: src/constants/navigation.constants.ts:64
+#: src/constants/navigation.constants.ts:76
 msgid "Blog"
 msgstr "مدوّنة"
 
@@ -43,67 +49,70 @@ msgstr "مدوّنة"
 msgid "Boost earnings by connecting to mining pools and tracking rewards in-app. TBC Wallet simplifies mining management, helping both new and seasoned users maximize returns securely."
 msgstr "عزّز أرباحك بالربط بمجمعات التعدين وتتبع المكافآت داخل التطبيق. محفظة TB تُبسّط إدارة التعدين، الأمر الذي يساعد المستخدمين الجدد وذوي الخبرة على تعظيم العوائد بأمان."
 
-#: src/constants/navigation.constants.ts:28
+#: src/constants/navigation.constants.ts:40
 msgid "Browser Extension"
 msgstr "امتداد المتصفح"
 
-#: src/constants/navigation.constants.ts:62
+#: src/constants/navigation.constants.ts:74
 msgid "Careers"
 msgstr "الوظائف"
 
 #: src/components/molecules/platform-tabs/index.tsx:58
 #: src/components/templates/coming-soon/index.tsx:17
-#: src/constants/navigation.constants.ts:37
-#: src/constants/navigation.constants.ts:38
-#: src/constants/navigation.constants.ts:39
-#: src/constants/navigation.constants.ts:44
-#: src/constants/navigation.constants.ts:46
-#: src/constants/navigation.constants.ts:53
-#: src/constants/navigation.constants.ts:54
-#: src/constants/navigation.constants.ts:61
-#: src/constants/navigation.constants.ts:62
-#: src/constants/navigation.constants.ts:63
-#: src/constants/navigation.constants.ts:64
-#: src/constants/navigation.constants.ts:69
-#: src/constants/navigation.constants.ts:71
+#: src/constants/navigation.constants.ts:49
+#: src/constants/navigation.constants.ts:50
+#: src/constants/navigation.constants.ts:51
+#: src/constants/navigation.constants.ts:56
+#: src/constants/navigation.constants.ts:58
+#: src/constants/navigation.constants.ts:65
+#: src/constants/navigation.constants.ts:66
+#: src/constants/navigation.constants.ts:73
+#: src/constants/navigation.constants.ts:74
+#: src/constants/navigation.constants.ts:75
+#: src/constants/navigation.constants.ts:76
+#: src/constants/navigation.constants.ts:81
+#: src/constants/navigation.constants.ts:83
 msgid "Coming soon"
 msgstr "قريبًا"
 
-#: src/components/templates/home/index.tsx:424
+#: src/components/templates/home/desktop/index.tsx:388
+#: src/components/templates/home/mobile/index.tsx:123
 msgid "Community talk about us"
 msgstr "المجتمع يتحدث عنا"
 
-#: src/constants/navigation.constants.ts:54
+#: src/constants/navigation.constants.ts:66
 msgid "Contact Us"
 msgstr "اتصل بنا"
 
-#: src/components/templates/home/index.tsx:332
+#: src/components/templates/home/desktop/index.tsx:301
+#: src/components/templates/home/mobile/index.tsx:69
 msgid "Designed for All, Built for You"
 msgstr "مصمم للجميع، ومبني خصيصًا لك"
 
 #: src/constants/landing.constants.ts:76
-#: src/constants/navigation.constants.ts:22
 msgid "Desktop app"
 msgstr "تطبيق سطح المكتب"
 
-#: src/components/organisms/header/index.tsx:83
-#: src/components/organisms/mobile-sidebar/index.tsx:73
+#: src/components/organisms/header/index.tsx:87
+#: src/components/organisms/mobile-sidebar/index.tsx:79
 msgid "Download"
 msgstr "تحميل"
 
-#: src/components/templates/home/index.tsx:439
+#: src/components/templates/home/desktop/index.tsx:403
+#: src/components/templates/home/mobile/index.tsx:131
 msgid "Download now"
 msgstr "حمّل الآن"
 
 #: src/constants/landing.constants.ts:31
 msgid "Effortlessly exchange tokens across chains with low fees and real-time rates. Whether trading Bitcoin for Solana or optimizing your portfolio, TBC Wallet makes swaps quick and intuitive."
-msgstr "بدون مجهود، تبادل التوكنات عبر السلاسل برسوم منخفضة وأسعار وقت-حقيقي. سواء كنت تتداول بيتكوين مقابل سولانا أو تحسّن محفظتك، محفظة TB تجعل التحوّلات سريعة وبديهية."
+msgstr "قم بتبادل التوكنات بسهولة عبر السلاسل برسوم منخفضة وأسعار فورية. سواء كنت تتداول بيتكوين مقابل سولانا أو تحسّن محفظتك، محفظة TB تجعل المبادلات سريعة وبديهية."
 
 #: src/constants/landing.constants.ts:55
 msgid "Ethereum"
 msgstr "إيثيريوم"
 
-#: src/components/templates/home/index.tsx:275
+#: src/components/templates/home/desktop/index.tsx:257
+#: src/components/templates/home/mobile/index.tsx:44
 msgid "Explore now"
 msgstr "استكشف الآن"
 
@@ -111,41 +120,48 @@ msgstr "استكشف الآن"
 msgid "Extension"
 msgstr "امتداد"
 
-#: src/constants/navigation.constants.ts:53
+#: src/constants/navigation.constants.ts:65
 msgid "FAQ"
 msgstr "الأسئلة الشائعة"
 
 #: src/components/molecules/feature-card/index.tsx:25
-#: src/components/molecules/features-slides-horizontal/index.tsx:129
-#: src/constants/navigation.constants.ts:35
+#: src/components/molecules/features-slides-horizontal/index.tsx:127
+#: src/constants/navigation.constants.ts:47
 msgid "Features"
 msgstr "الميزات"
 
 #: src/constants/landing.constants.ts:24
 msgid "Fortify your wallet with multi-approval transactions for enhanced protection against threats—ideal for personal or shared use, ensuring your assets stay safe and accessible only to you."
-msgstr "عزّز محفظتك بمعاملات ذات موافقات متعددة لحماية معزّزة ضد التهديدات — مثالية للاستخدام الشخصي أو التشاركي، لضمان بقاء أصولك آمنة ومُتاحة فقط لك."
+msgstr "عزّز محفظتك بمعاملات متعددة الموافقات لحماية أكبر من التهديدات — مثالية للاستخدام الشخصي أو المشترك، لضمان بقاء أصولك آمنة ومُتاحة فقط لك."
 
 #: src/constants/landing.constants.ts:37
-#: src/constants/navigation.constants.ts:43
+#: src/constants/navigation.constants.ts:55
 msgid "Instant transfer"
 msgstr "تحويل فوري"
 
+#: src/constants/navigation.constants.ts:16
+msgid "iOS app"
+msgstr "تطبيق iOS"
+
+#: src/constants/navigation.constants.ts:34
+msgid "macOS app"
+msgstr "تطبيق macOS"
+
 #: src/constants/landing.constants.ts:16
-#: src/constants/navigation.constants.ts:38
+#: src/constants/navigation.constants.ts:50
 msgid "Miner"
 msgstr "منقّب"
 
-#: src/components/molecules/chain-card/index.tsx:40
+#: src/components/molecules/chain-card/index.tsx:41
 msgid "Missing brand icon for"
 msgstr "أيقونة العلامة مفقودة لـ"
 
 #: src/constants/landing.constants.ts:69
-#: src/constants/navigation.constants.ts:16
 msgid "Mobile app"
 msgstr "تطبيق الهاتف الجوال"
 
 #: src/constants/landing.constants.ts:23
-#: src/constants/navigation.constants.ts:39
+#: src/constants/navigation.constants.ts:51
 msgid "Multi signature"
 msgstr "توقيع متعدد"
 
@@ -157,41 +173,42 @@ msgstr "name@email.com"
 msgid "No language found."
 msgstr "لم يتم العثور على لغة."
 
-#: src/components/templates/home/index.tsx:406
+#: src/components/templates/home/desktop/index.tsx:370
+#: src/components/templates/home/mobile/index.tsx:115
 msgid "One wallet. Cross platform"
 msgstr "محفظة واحدة. عبر المنصات"
 
-#: src/components/templates/home/index.tsx:241
+#: src/components/templates/home/desktop/index.tsx:239
 msgid "Own Your Crypto."
 msgstr "امتلك عملاتك الرقمية."
 
+#: src/components/templates/home/mobile/index.tsx:23
+msgid "Own Your Crypto. Unleash Web3 Possibilities"
+msgstr "امتلك عملاتك الرقمية. وأطلق العنان لإمكانيات Web3"
+
 #: src/constants/landing.constants.ts:45
 msgid "Pay fees in USDT for stable, predictable costs amid market swings. This flexible feature adds transparency, making Web3 interactions more budget-friendly and user-centric."
-msgstr "ادفع الرسوم بـ USDT لتكلفة مستقرة ومتوقّعة وسط تقلبات السوق. هذه الميزة المرنة تضيف شفافية، ما يجعل التفاعلات مع Web3 أكثر ملاءمة للميزانية وتركيزاً على المستخدم."
+msgstr "ادفع الرسوم بـ USDT لتكاليف مستقرة ومتوقّعة وسط تقلبات السوق. هذه الميزة المرنة تضيف شفافية وتجعل التعاملات في Web3 أكثر ملاءمة للميزانية وتركيزًا على المستخدم."
 
-#: src/components/templates/home/index.tsx:247
+#: src/components/templates/home/desktop/index.tsx:245
 msgid "Possibilities"
 msgstr "إمكانيات."
 
-#: src/constants/navigation.constants.ts:63
+#: src/constants/navigation.constants.ts:75
 msgid "Press Kit"
 msgstr "عدة الصحافة"
 
-#: src/constants/navigation.constants.ts:71
+#: src/constants/navigation.constants.ts:83
 msgid "Privacy Policy"
 msgstr "سياسة الخصوصية"
 
 #: src/constants/landing.constants.ts:38
 msgid "Send assets across chains with near-zero delays and minimal costs. TBC Wallet ensures fast, reliable transactions for everyday use, from peer-to-peer sends to dApp funding."
-msgstr "أرسل الأصول عبر السلاسل بزمن تأخير يكاد يكون معدوماً وتكاليف ضئيلة. محفظة TB تضمن معاملات سريعة وموثوقة للاستخدام اليومي، من الإرسال بين الأفراد إلى تمويل تطبيقات dApps."
+msgstr "أرسل الأصول عبر السلاسل بزمن تأخير شبه معدوم وتكاليف منخفضة. محفظة TB تضمن معاملات سريعة وموثوقة للاستخدام اليومي، من التحويلات الفردية إلى تمويل dApps."
 
 #: src/components/templates/coming-soon/index.tsx:33
 msgid "Sign up"
 msgstr "سجّل الآن"
-
-#: src/constants/landing.constants.ts:53
-msgid "Solana"
-msgstr "سولانا"
 
 #: src/components/templates/coming-soon/index.tsx:23
 msgid "Something incredible is on the horizon! Drop your email below to be first in line for early access."
@@ -201,50 +218,59 @@ msgstr "شيء مذهل يلوح في الأفق! أضف بريدك الإلكت
 msgid "Stay connected:"
 msgstr "ابقَ متصلاً:"
 
-#: src/constants/navigation.constants.ts:51
+#: src/constants/navigation.constants.ts:63
 msgid "Support"
 msgstr "الدعم"
 
 #: src/constants/landing.constants.ts:30
-#: src/constants/navigation.constants.ts:37
+#: src/constants/navigation.constants.ts:49
 msgid "Swap"
 msgstr "المُبادلة"
 
-#: src/components/templates/home/index.tsx:335
+#: src/components/templates/home/desktop/index.tsx:304
+#: src/components/templates/home/mobile/index.tsx:72
 msgid "TBC Wallet bridges the gap for beginners and experts alike. Its user-friendly design offers easy onboarding for newcomers and advanced tools for DeFi pros, ensuring secure, efficient navigation of the decentralized ecosystem."
-msgstr "محفظة TB تسد الفجوة بين المبتدئين والخبراء على حدٍ سواء. تصميمها سهل الاستخدام يوفّر اندماجاً سلساً للمبتدئين وأدوات متقدمة لمحترفي DeFi، ما يضمن تنقّلاً آمناً وفعّالاً داخل النظام اللامركزي."
+msgstr "محفظة TB تسد الفجوة بين المبتدئين والخبراء. تصميمها سهل الاستخدام يوفّر بداية سلسة للمستخدمين الجدد وأدوات متقدمة لمحترفي DeFi، مما يضمن تنقلًا آمنًا وفعالًا في النظام اللامركزي."
 
-#: src/components/templates/home/index.tsx:386
+#: src/components/templates/home/desktop/index.tsx:350
+#: src/components/templates/home/mobile/index.tsx:100
 msgid "TBC Wallet connects you to diverse ecosystems, from Bitcoin and Ethereum to Optimism and Cosmos. Manage portfolios, engage in DeFi, trade NFTs, and link to dApps—all in one secure, self-custody hub."
-msgstr "محفظة TB تربطك بأنظمة بيئية متنوعة، من بيتكوين وإيثيريوم إلى Optimism و Cosmos. أدِر محافظك، شارك في DeFi، تداول NFTs، وتوصّل بتطبيقات dApps — كل ذلك في مركز آمن تحت سيطرتك الخاصة."
+msgstr "محفظة TB تربطك بأنظمة بيئية متنوعة، من بيتكوين وإيثيريوم إلى Optimism و Cosmos. أدِر محافظك، وشارك في DeFi، وتداول NFTs، وتواصل مع dApps — كل ذلك من مركز آمن خاضع لسيطرتك."
 
-#: src/components/templates/home/index.tsx:251
+#: src/components/templates/home/desktop/index.tsx:249
+#: src/components/templates/home/mobile/index.tsx:27
 msgid "TBC Wallet empowers you to manage diverse assets like Bitcoin, Ethereum, and Solana. Securely dive into DeFi, NFTs, and dApps with full control. Your keys, your future."
-msgstr "محفظة TB تمكّنك من إدارة أصول متنوعة مثل بيتكوين وإيثيريوم وسولانا. انخرط بأمان في DeFi و NFTs وتطبيقات dApps مع تحكّمٍ كامل. مفاتيحك، مستقبلك."
+msgstr "محفظة TB تمكّنك من إدارة أصول متنوعة مثل بيتكوين وإيثيريوم وسولانا. انخرط بأمان في DeFi وNFTs وتطبيقات dApps مع تحكّمٍ كامل. مفاتيحك، مستقبلك."
 
-#: src/components/templates/home/index.tsx:295
+#: src/components/templates/home/desktop/index.tsx:277
+#: src/components/templates/home/mobile/index.tsx:55
 msgid "TBC Wallet is a leading multi-chain wallet with robust security and an intuitive interface. It simplifies Web3 interactions, from token management to dApp access, while giving you total control over your digital wealth."
-msgstr "محفظة TB هي محفظة متعددة السلاسل رائدة بأمن قوي وواجهة بديهية. تُبسّط التفاعلات مع Web3، من إدارة التوكنات إلى الوصول لتطبيقات dApps، بينما تمنحك تحكّماً كاملاً في ثروتك الرقمية."
+msgstr "محفظة TB هي محفظة متعددة السلاسل رائدة تتميز بأمان قوي وواجهة بديهية. تُبسّط التعاملات مع Web3، من إدارة الرموز إلى الوصول إلى dApps، مع منحك تحكمًا كاملًا بثروتك الرقمية."
 
 #: src/constants/landing.constants.ts:52
 msgid "TBChain"
 msgstr "سلسلة TB"
 
-#: src/constants/navigation.constants.ts:68
+#: src/constants/navigation.constants.ts:80
 msgid "Terms of Service"
 msgstr "شروط الخدمة"
 
 #: src/constants/navigation.constants.ts:17
+#: src/constants/navigation.constants.ts:23
 msgid "The world of Web3 in your pocket"
-msgstr ""
+msgstr "عالم Web3 في جيبك"
 
-#: src/components/templates/home/index.tsx:244
+#: src/constants/landing.constants.ts:54
+msgid "Tron"
+msgstr "ترون"
+
+#: src/components/templates/home/desktop/index.tsx:242
 msgid "Unleash Web3"
 msgstr "أطلق العنان للويب 3"
 
-#: src/constants/navigation.constants.ts:46
+#: src/constants/navigation.constants.ts:58
 msgid "USDT fee"
-msgstr ""
+msgstr "رسوم USDT"
 
 #: src/constants/landing.constants.ts:44
 msgid "USDT Fee"
@@ -258,6 +284,11 @@ msgstr "المحفظة"
 msgid "We’re launching soon!"
 msgstr "سننطلق قريبًا!"
 
-#: src/components/templates/home/index.tsx:381
+#: src/constants/navigation.constants.ts:28
+msgid "Windows app"
+msgstr "تطبيق ويندوز"
+
+#: src/components/templates/home/desktop/index.tsx:345
+#: src/components/templates/home/mobile/index.tsx:97
 msgid "Your All-in-One Web3 Wallet"
 msgstr "محفظتك الشاملة لكل ما يتعلق بـ Web3"

@@ -9,7 +9,6 @@ import { useStore } from '@/lib/store'
 import { useScroll } from '@/hooks/use-scroll'
 import { isBrowser } from '@/lib/misc'
 import { Leva } from 'leva'
-import { useIsTablet } from '@/hooks/use-tablet'
 
 if (isBrowser && Tempus) {
   gsap.registerPlugin(ScrollTrigger)
@@ -31,7 +30,6 @@ const GridDebugger = dynamic(
 )
 
 export default function DebugProvider({ children }: Readonly<PropsWithChildren>) {
-  const isTablet = useIsTablet()
   const debug = useDebug()
   const lenis = useStore(({ lenis }) => lenis)
 
@@ -44,16 +42,12 @@ export default function DebugProvider({ children }: Readonly<PropsWithChildren>)
     }
   }, [lenis])
 
-  useEffect(() => {
-    window.history.scrollRestoration = 'manual'
-  }, [])
-
   ScrollTrigger.defaults({ markers: process.env.NODE_ENV === 'development' })
 
   return (
     <>
-      {!isTablet && <Leva hidden={!debug} />}
-      {!isTablet && debug && (
+      <Leva hidden={!debug} />
+      {debug && (
         <>
           <GridDebugger />
           <Stats />

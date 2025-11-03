@@ -17,25 +17,31 @@ msgstr ""
 msgid ". All rights reserved."
 msgstr ""
 
-#: src/components/templates/home/index.tsx:292
-#: src/constants/navigation.constants.ts:59
+#: src/components/templates/home/desktop/index.tsx:274
+#: src/components/templates/home/mobile/index.tsx:52
+#: src/constants/navigation.constants.ts:71
 msgid "About"
 msgstr ""
 
-#: src/constants/navigation.constants.ts:61
+#: src/constants/navigation.constants.ts:73
 msgid "About Us"
 msgstr ""
 
-#: src/constants/navigation.constants.ts:23
 #: src/constants/navigation.constants.ts:29
+#: src/constants/navigation.constants.ts:35
+#: src/constants/navigation.constants.ts:41
 msgid "An optimized Web3 experience for desktop"
 msgstr ""
 
-#: src/constants/landing.constants.ts:54
+#: src/constants/navigation.constants.ts:22
+msgid "Android app"
+msgstr ""
+
+#: src/constants/landing.constants.ts:53
 msgid "Bitcoin"
 msgstr ""
 
-#: src/constants/navigation.constants.ts:64
+#: src/constants/navigation.constants.ts:76
 msgid "Blog"
 msgstr ""
 
@@ -43,55 +49,57 @@ msgstr ""
 msgid "Boost earnings by connecting to mining pools and tracking rewards in-app. TBC Wallet simplifies mining management, helping both new and seasoned users maximize returns securely."
 msgstr ""
 
-#: src/constants/navigation.constants.ts:28
+#: src/constants/navigation.constants.ts:40
 msgid "Browser Extension"
 msgstr ""
 
-#: src/constants/navigation.constants.ts:62
+#: src/constants/navigation.constants.ts:74
 msgid "Careers"
 msgstr ""
 
 #: src/components/molecules/platform-tabs/index.tsx:58
 #: src/components/templates/coming-soon/index.tsx:17
-#: src/constants/navigation.constants.ts:37
-#: src/constants/navigation.constants.ts:38
-#: src/constants/navigation.constants.ts:39
-#: src/constants/navigation.constants.ts:44
-#: src/constants/navigation.constants.ts:46
-#: src/constants/navigation.constants.ts:53
-#: src/constants/navigation.constants.ts:54
-#: src/constants/navigation.constants.ts:61
-#: src/constants/navigation.constants.ts:62
-#: src/constants/navigation.constants.ts:63
-#: src/constants/navigation.constants.ts:64
-#: src/constants/navigation.constants.ts:69
-#: src/constants/navigation.constants.ts:71
+#: src/constants/navigation.constants.ts:49
+#: src/constants/navigation.constants.ts:50
+#: src/constants/navigation.constants.ts:51
+#: src/constants/navigation.constants.ts:56
+#: src/constants/navigation.constants.ts:58
+#: src/constants/navigation.constants.ts:65
+#: src/constants/navigation.constants.ts:66
+#: src/constants/navigation.constants.ts:73
+#: src/constants/navigation.constants.ts:74
+#: src/constants/navigation.constants.ts:75
+#: src/constants/navigation.constants.ts:76
+#: src/constants/navigation.constants.ts:81
+#: src/constants/navigation.constants.ts:83
 msgid "Coming soon"
 msgstr ""
 
-#: src/components/templates/home/index.tsx:424
+#: src/components/templates/home/desktop/index.tsx:388
+#: src/components/templates/home/mobile/index.tsx:123
 msgid "Community talk about us"
 msgstr ""
 
-#: src/constants/navigation.constants.ts:54
+#: src/constants/navigation.constants.ts:66
 msgid "Contact Us"
 msgstr ""
 
-#: src/components/templates/home/index.tsx:332
+#: src/components/templates/home/desktop/index.tsx:301
+#: src/components/templates/home/mobile/index.tsx:69
 msgid "Designed for All, Built for You"
 msgstr ""
 
 #: src/constants/landing.constants.ts:76
-#: src/constants/navigation.constants.ts:22
 msgid "Desktop app"
 msgstr ""
 
-#: src/components/organisms/header/index.tsx:83
-#: src/components/organisms/mobile-sidebar/index.tsx:73
+#: src/components/organisms/header/index.tsx:87
+#: src/components/organisms/mobile-sidebar/index.tsx:79
 msgid "Download"
 msgstr ""
 
-#: src/components/templates/home/index.tsx:439
+#: src/components/templates/home/desktop/index.tsx:403
+#: src/components/templates/home/mobile/index.tsx:131
 msgid "Download now"
 msgstr ""
 
@@ -103,7 +111,8 @@ msgstr ""
 msgid "Ethereum"
 msgstr ""
 
-#: src/components/templates/home/index.tsx:275
+#: src/components/templates/home/desktop/index.tsx:257
+#: src/components/templates/home/mobile/index.tsx:44
 msgid "Explore now"
 msgstr ""
 
@@ -111,13 +120,13 @@ msgstr ""
 msgid "Extension"
 msgstr ""
 
-#: src/constants/navigation.constants.ts:53
+#: src/constants/navigation.constants.ts:65
 msgid "FAQ"
 msgstr ""
 
 #: src/components/molecules/feature-card/index.tsx:25
-#: src/components/molecules/features-slides-horizontal/index.tsx:129
-#: src/constants/navigation.constants.ts:35
+#: src/components/molecules/features-slides-horizontal/index.tsx:127
+#: src/constants/navigation.constants.ts:47
 msgid "Features"
 msgstr ""
 
@@ -126,26 +135,33 @@ msgid "Fortify your wallet with multi-approval transactions for enhanced protect
 msgstr ""
 
 #: src/constants/landing.constants.ts:37
-#: src/constants/navigation.constants.ts:43
+#: src/constants/navigation.constants.ts:55
 msgid "Instant transfer"
 msgstr ""
 
+#: src/constants/navigation.constants.ts:16
+msgid "iOS app"
+msgstr ""
+
+#: src/constants/navigation.constants.ts:34
+msgid "macOS app"
+msgstr ""
+
 #: src/constants/landing.constants.ts:16
-#: src/constants/navigation.constants.ts:38
+#: src/constants/navigation.constants.ts:50
 msgid "Miner"
 msgstr ""
 
-#: src/components/molecules/chain-card/index.tsx:40
+#: src/components/molecules/chain-card/index.tsx:41
 msgid "Missing brand icon for"
 msgstr ""
 
 #: src/constants/landing.constants.ts:69
-#: src/constants/navigation.constants.ts:16
 msgid "Mobile app"
 msgstr ""
 
 #: src/constants/landing.constants.ts:23
-#: src/constants/navigation.constants.ts:39
+#: src/constants/navigation.constants.ts:51
 msgid "Multi signature"
 msgstr ""
 
@@ -157,27 +173,32 @@ msgstr ""
 msgid "No language found."
 msgstr ""
 
-#: src/components/templates/home/index.tsx:406
+#: src/components/templates/home/desktop/index.tsx:370
+#: src/components/templates/home/mobile/index.tsx:115
 msgid "One wallet. Cross platform"
 msgstr ""
 
-#: src/components/templates/home/index.tsx:241
+#: src/components/templates/home/desktop/index.tsx:239
 msgid "Own Your Crypto."
+msgstr ""
+
+#: src/components/templates/home/mobile/index.tsx:23
+msgid "Own Your Crypto. Unleash Web3 Possibilities"
 msgstr ""
 
 #: src/constants/landing.constants.ts:45
 msgid "Pay fees in USDT for stable, predictable costs amid market swings. This flexible feature adds transparency, making Web3 interactions more budget-friendly and user-centric."
 msgstr ""
 
-#: src/components/templates/home/index.tsx:247
+#: src/components/templates/home/desktop/index.tsx:245
 msgid "Possibilities"
 msgstr ""
 
-#: src/constants/navigation.constants.ts:63
+#: src/constants/navigation.constants.ts:75
 msgid "Press Kit"
 msgstr ""
 
-#: src/constants/navigation.constants.ts:71
+#: src/constants/navigation.constants.ts:83
 msgid "Privacy Policy"
 msgstr ""
 
@@ -189,10 +210,6 @@ msgstr ""
 msgid "Sign up"
 msgstr ""
 
-#: src/constants/landing.constants.ts:53
-msgid "Solana"
-msgstr ""
-
 #: src/components/templates/coming-soon/index.tsx:23
 msgid "Something incredible is on the horizon! Drop your email below to be first in line for early access."
 msgstr ""
@@ -201,28 +218,32 @@ msgstr ""
 msgid "Stay connected:"
 msgstr ""
 
-#: src/constants/navigation.constants.ts:51
+#: src/constants/navigation.constants.ts:63
 msgid "Support"
 msgstr ""
 
 #: src/constants/landing.constants.ts:30
-#: src/constants/navigation.constants.ts:37
+#: src/constants/navigation.constants.ts:49
 msgid "Swap"
 msgstr ""
 
-#: src/components/templates/home/index.tsx:335
+#: src/components/templates/home/desktop/index.tsx:304
+#: src/components/templates/home/mobile/index.tsx:72
 msgid "TBC Wallet bridges the gap for beginners and experts alike. Its user-friendly design offers easy onboarding for newcomers and advanced tools for DeFi pros, ensuring secure, efficient navigation of the decentralized ecosystem."
 msgstr ""
 
-#: src/components/templates/home/index.tsx:386
+#: src/components/templates/home/desktop/index.tsx:350
+#: src/components/templates/home/mobile/index.tsx:100
 msgid "TBC Wallet connects you to diverse ecosystems, from Bitcoin and Ethereum to Optimism and Cosmos. Manage portfolios, engage in DeFi, trade NFTs, and link to dApps—all in one secure, self-custody hub."
 msgstr ""
 
-#: src/components/templates/home/index.tsx:251
+#: src/components/templates/home/desktop/index.tsx:249
+#: src/components/templates/home/mobile/index.tsx:27
 msgid "TBC Wallet empowers you to manage diverse assets like Bitcoin, Ethereum, and Solana. Securely dive into DeFi, NFTs, and dApps with full control. Your keys, your future."
 msgstr ""
 
-#: src/components/templates/home/index.tsx:295
+#: src/components/templates/home/desktop/index.tsx:277
+#: src/components/templates/home/mobile/index.tsx:55
 msgid "TBC Wallet is a leading multi-chain wallet with robust security and an intuitive interface. It simplifies Web3 interactions, from token management to dApp access, while giving you total control over your digital wealth."
 msgstr ""
 
@@ -230,19 +251,24 @@ msgstr ""
 msgid "TBChain"
 msgstr ""
 
-#: src/constants/navigation.constants.ts:68
+#: src/constants/navigation.constants.ts:80
 msgid "Terms of Service"
 msgstr ""
 
 #: src/constants/navigation.constants.ts:17
+#: src/constants/navigation.constants.ts:23
 msgid "The world of Web3 in your pocket"
 msgstr ""
 
-#: src/components/templates/home/index.tsx:244
+#: src/constants/landing.constants.ts:54
+msgid "Tron"
+msgstr ""
+
+#: src/components/templates/home/desktop/index.tsx:242
 msgid "Unleash Web3"
 msgstr ""
 
-#: src/constants/navigation.constants.ts:46
+#: src/constants/navigation.constants.ts:58
 msgid "USDT fee"
 msgstr ""
 
@@ -258,6 +284,11 @@ msgstr ""
 msgid "We’re launching soon!"
 msgstr ""
 
-#: src/components/templates/home/index.tsx:381
+#: src/constants/navigation.constants.ts:28
+msgid "Windows app"
+msgstr ""
+
+#: src/components/templates/home/desktop/index.tsx:345
+#: src/components/templates/home/mobile/index.tsx:97
 msgid "Your All-in-One Web3 Wallet"
 msgstr ""

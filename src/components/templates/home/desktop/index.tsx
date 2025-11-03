@@ -10,7 +10,6 @@ import { useScroll } from '@/hooks/use-scroll'
 import { useFrame } from '@/hooks/use-frame'
 import { Button } from '@/components/ui/button'
 import { CHAINS, DOWNLOADS, FEATURES } from '@/constants/landing.constants'
-import { isBrowser } from '@/lib/misc'
 import { useStore } from '@/lib/store'
 import { clamp, mapRange } from '@/lib/maths'
 import { Container } from '@/components/atoms/container'
@@ -42,12 +41,7 @@ const AnimatedContent = dynamic(
 
 const WebGL = dynamic(() => import('@/components/atoms/webgl').then(({ WebGL }) => WebGL), { ssr: false })
 
-if (isBrowser) {
-  window.history.scrollRestoration = 'manual'
-  window.scrollTo(0, 0)
-}
-
-export default function HomeTemplate() {
+export default function HomeTemplateDesktop() {
   const zoomRef = useRef<HTMLElement | null>(null)
   const [theme, setTheme] = useState('dark')
   const [hasScrolled, setHasScrolled] = useState(false)
