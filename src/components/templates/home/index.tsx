@@ -345,7 +345,7 @@ export default function HomeTemplate() {
       >
         <div ref={featuresRectRef} className='flex h-full items-center lg:h-auto lg:items-start'>
           <div className='relative grow'>
-            <FeaturesSection />
+            {/*<FeaturesSection />*/}
           </div>
         </div>
       </Container>
