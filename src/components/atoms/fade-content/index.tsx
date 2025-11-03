@@ -2,7 +2,6 @@
 import { useRef, ReactNode, useLayoutEffect } from 'react'
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/dist/ScrollTrigger'
-import {useIsTablet} from "@/hooks/use-tablet";
 
 gsap.registerPlugin(ScrollTrigger)
 
@@ -28,11 +27,8 @@ const FadeContent: React.FC<FadeContentProps> = ({
   className = '',
 }) => {
   const ref = useRef<HTMLDivElement | null>(null)
-  const isTablet = useIsTablet()
 
   useLayoutEffect(() => {
-    if(isTablet) return
-
     const el = ref.current
     if (!el) return
 

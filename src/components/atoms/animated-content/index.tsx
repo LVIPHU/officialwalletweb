@@ -2,7 +2,6 @@
 import React, { useRef, useLayoutEffect, ReactNode } from 'react'
 import { gsap } from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
-import {useIsTablet} from "@/hooks/use-tablet";
 
 gsap.registerPlugin(ScrollTrigger)
 
@@ -43,12 +42,9 @@ const AnimatedContent: React.FC<AnimatedContentProps> = ({
   className = '',
   name = '',
 }) => {
-  const isTablet = useIsTablet()
   const ref = useRef<HTMLDivElement>(null)
 
   useLayoutEffect(() => {
-    if(isTablet) return
-
     const el = ref.current
     if (!el) return
 

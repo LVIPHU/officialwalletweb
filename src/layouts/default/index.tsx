@@ -10,7 +10,7 @@ import Lenis from 'lenis'
 import MobileSidebar from '@/components/organisms/mobile-sidebar'
 import { SidebarInset } from '@/components/ui/sidebar'
 import { useTheme } from 'next-themes'
-import {useIsTablet} from "@/hooks/use-tablet";
+import { useIsTablet } from '@/hooks/use-tablet'
 
 // const Cursor = dynamic(
 //     () => import('@/components/atoms/cursor').then((mod) => mod.Cursor),

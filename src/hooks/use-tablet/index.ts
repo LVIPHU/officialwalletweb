@@ -1,11 +1,11 @@
 'use client'
 import { useMediaQuery } from '../use-media-query'
-import {useEffect, useState} from "react";
+import { useEffect, useState } from 'react'
 
 const TABLET_BREAKPOINT = 1024
 
 export function useIsTablet() {
-  const isTabletWidth =  useMediaQuery(`(max-width: ${TABLET_BREAKPOINT - 1}px)`, {
+  const isTabletWidth = useMediaQuery(`(max-width: ${TABLET_BREAKPOINT - 1}px)`, {
     defaultValue: false,
     initializeWithValue: false,
   })

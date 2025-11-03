@@ -9,7 +9,7 @@ import { useStore } from '@/lib/store'
 import { useScroll } from '@/hooks/use-scroll'
 import { isBrowser } from '@/lib/misc'
 import { Leva } from 'leva'
-import {useIsTablet} from "@/hooks/use-tablet";
+import { useIsTablet } from '@/hooks/use-tablet'
 
 if (isBrowser && Tempus) {
   gsap.registerPlugin(ScrollTrigger)

@@ -1,6 +1,6 @@
 'use client'
 import { useMediaQuery } from '../use-media-query'
-import {useEffect, useState} from "react";
+import { useEffect, useState } from 'react'
 
 const MOBILE_BREAKPOINT = 768
 
