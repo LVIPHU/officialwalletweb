@@ -12,19 +12,10 @@ import { SidebarInset } from '@/components/ui/sidebar'
 import { useTheme } from 'next-themes'
 import { useIsTablet } from '@/hooks/use-tablet'
 
-// const Cursor = dynamic(
-//     () => import('@/components/atoms/cursor').then((mod) => mod.Cursor),
-//     { ssr: false }
-// )
-
-const PageTransition = dynamic(() => import('@/components/atoms/page-transition').then((mod) => mod.PageTransition), {
-  ssr: false,
-})
-
 export default function DefaultLayout({ children }: Readonly<PropsWithChildren>) {
   const { resolvedTheme } = useTheme()
-  const isTablet = useIsTablet()
   const pathname = usePathname()
+  const isTablet = useIsTablet()
   const lenis = useStore((state) => state.lenis)
   const setLenis = useStore((state) => state.setLenis)
 
@@ -32,7 +23,7 @@ export default function DefaultLayout({ children }: Readonly<PropsWithChildren>)
     window.scrollTo(0, 0)
     const lenis = new Lenis({
       // gestureOrientation: 'both',
-      smoothWheel: true,
+      smoothWheel: !isTablet,
       // smoothTouch: true,
       syncTouch: !isTablet,
     })
@@ -45,7 +36,7 @@ export default function DefaultLayout({ children }: Readonly<PropsWithChildren>)
       lenis.destroy()
       setLenis(null)
     }
-  }, [])
+  }, [isTablet])
 
   const [hash, setHash] = useState<string>('')
 
@@ -101,12 +92,11 @@ export default function DefaultLayout({ children }: Readonly<PropsWithChildren>)
     <div className='mb-auto flex grow flex-col'>
       {/*<Cursor/>*/}
       <Intro />
-      <PageTransition />
       <MobileSidebar />
       <SidebarInset>
         <div className={'background-hero'} />
         {children}
-        <div data-theme={resolvedTheme} className={'background-footer'} />
+        <div data-theme={resolvedTheme || 'dark'} className={'background-footer'} />
       </SidebarInset>
     </div>
   )

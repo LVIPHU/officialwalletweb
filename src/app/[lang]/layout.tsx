@@ -29,11 +29,7 @@ export default async function RootLayout({ children, params }: Readonly<PropsWit
     <html
       dir={dir}
       lang={lang}
-      className={cn(
-        'w-full overflow-x-hidden antialiased',
-        FONT_POPPINS.variable,
-        FONT_CLASH_DISPLAY.variable
-      )}
+      className={cn('w-full overflow-x-hidden antialiased', FONT_POPPINS.variable, FONT_CLASH_DISPLAY.variable)}
       suppressHydrationWarning
     >
       <head>
