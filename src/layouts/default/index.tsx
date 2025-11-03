@@ -34,7 +34,7 @@ export default function DefaultLayout({ children }: Readonly<PropsWithChildren>)
       // gestureOrientation: 'both',
       smoothWheel: true,
       // smoothTouch: true,
-      syncTouch: true,
+      syncTouch: !isTablet,
     })
     window.lenis = lenis
     setLenis(lenis)
