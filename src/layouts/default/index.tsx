@@ -10,6 +10,7 @@ import Lenis from 'lenis'
 import MobileSidebar from '@/components/organisms/mobile-sidebar'
 import { SidebarInset } from '@/components/ui/sidebar'
 import { useTheme } from 'next-themes'
+import {useIsTablet} from "@/hooks/use-tablet";
 
 // const Cursor = dynamic(
 //     () => import('@/components/atoms/cursor').then((mod) => mod.Cursor),
@@ -22,6 +23,7 @@ const PageTransition = dynamic(() => import('@/components/atoms/page-transition'
 
 export default function DefaultLayout({ children }: Readonly<PropsWithChildren>) {
   const { resolvedTheme } = useTheme()
+  const isTablet = useIsTablet()
   const pathname = usePathname()
   const lenis = useStore((state) => state.lenis)
   const setLenis = useStore((state) => state.setLenis)

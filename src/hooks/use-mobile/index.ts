@@ -1,11 +1,24 @@
 'use client'
 import { useMediaQuery } from '../use-media-query'
+import {useEffect, useState} from "react";
 
 const MOBILE_BREAKPOINT = 768
 
 export function useIsMobile() {
-  return useMediaQuery(`(max-width: ${MOBILE_BREAKPOINT - 1}px)`, {
+  const isMobileWidth = useMediaQuery(`(max-width: ${MOBILE_BREAKPOINT - 1}px)`, {
     defaultValue: false,
     initializeWithValue: false,
   })
+
+  const [isMobileAgent, setIsMobileAgent] = useState(false)
+
+  useEffect(() => {
+    if (typeof navigator === 'undefined') return
+
+    const ua = navigator.userAgent
+    const mobileRegex = /Mobi|iPhone|iPod|Android.*Mobile|Windows Phone/i
+    setIsMobileAgent(mobileRegex.test(ua))
+  }, [])
+
+  return isMobileAgent || isMobileWidth
 }
