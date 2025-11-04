@@ -35,8 +35,10 @@ export function MarkdownContent({ content, className }: MarkdownContentProps) {
       <ReactMarkdown
         remarkPlugins={[
           remarkGfm,
+          // @ts-ignore
           [remarkSlug, {}],
           [
+            // @ts-ignore
             remarkExternalLinks,
             {
               target: '_blank',
