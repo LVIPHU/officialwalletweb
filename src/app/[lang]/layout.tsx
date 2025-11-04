@@ -1,4 +1,13 @@
-﻿import '@/styles/globals.css'
+/**
+ * Copyright (c) 2025 NEXSOFT. All rights reserved.
+ *
+ * This source code is proprietary and confidential.
+ * Unauthorized copying, distribution, or modification of this file,
+ * in whole or in part, is strictly prohibited without prior written consent
+ * from NEXSOFT.
+ */
+
+import '@/styles/globals.css'
 import linguiConfig from '../../../lingui.config'
 import type { Metadata } from 'next'
 import ProviderRegistry from '@/providers'

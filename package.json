@@ -12,7 +12,8 @@
     "format": "prettier --check --ignore-path .gitignore .",
     "format:write": "prettier --write --ignore-path .gitignore .",
     "lingui:extract": "lingui extract --clean --overwrite",
-    "lingui:compile": "lingui compile"
+    "lingui:compile": "lingui compile",
+    "copyright": "node scripts/copyright.js"
   },
   "dependencies": {
     "@lingui/core": "^5.5.0",

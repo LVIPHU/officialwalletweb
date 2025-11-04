@@ -1,8 +1,16 @@
+/**
+ * Copyright (c) 2025 NEXSOFT. All rights reserved.
+ *
+ * This source code is proprietary and confidential.
+ * Unauthorized copying, distribution, or modification of this file,
+ * in whole or in part, is strictly prohibited without prior written consent
+ * from NEXSOFT.
+ */
+
 'use client'
 import { cva, type VariantProps } from 'class-variance-authority'
 import { cn } from '@/lib/styles'
 import { Chain } from '@/types/landing.types'
-import { NavigationLink } from '@/components/atoms/navigation-link'
 import { useLingui } from '@lingui/react'
 import { Trans } from '@lingui/react/macro'
 

@@ -1,8 +1,16 @@
+/**
+ * Copyright (c) 2025 NEXSOFT. All rights reserved.
+ *
+ * This source code is proprietary and confidential.
+ * Unauthorized copying, distribution, or modification of this file,
+ * in whole or in part, is strictly prohibited without prior written consent
+ * from NEXSOFT.
+ */
+
 import { msg } from '@lingui/core/macro'
 import X from '@public/assets/icons/x.svg'
 import Discord from '@public/assets/icons/discord.svg'
 import Telegram from '@public/assets/icons/telegram.svg'
-import Youtube from '@public/assets/icons/youtube.svg'
 import { Navigation } from '@/types/navigation.types'
 
 export const NAVIGATION_ITEMS: Navigation = [
@@ -71,9 +79,6 @@ export const NAVIGATION_ITEMS: Navigation = [
     title: msg`About`,
     items: [
       { id: 'about-us', href: '/about-us', title: msg`About Us`, description: msg`Coming soon` },
-      { id: 'careers', href: '/careers', title: msg`Careers`, description: msg`Coming soon` },
-      { id: 'press-kit', href: '/press', title: msg`Press Kit`, description: msg`Coming soon` },
-      { id: 'blog', href: '/blog', title: msg`Blog`, description: msg`Coming soon` },
       {
         id: 'terms-of-service',
         href: '/terms-of-service',

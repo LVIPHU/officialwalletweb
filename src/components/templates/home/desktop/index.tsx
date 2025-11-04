@@ -1,3 +1,12 @@
+/**
+ * Copyright (c) 2025 NEXSOFT. All rights reserved.
+ *
+ * This source code is proprietary and confidential.
+ * Unauthorized copying, distribution, or modification of this file,
+ * in whole or in part, is strictly prohibited without prior written consent
+ * from NEXSOFT.
+ */
+
 'use client'
 import { useEffect, useRef, useState } from 'react'
 import Lenis from 'lenis'
@@ -340,12 +349,12 @@ export default function HomeTemplateDesktop() {
       <Container id='assets' className='min-h-[85dvh] py-5 lg:py-10 xl:py-16'>
         <div className='flex flex-col items-center justify-center gap-8 lg:gap-12'>
           <div className='relative flex max-w-3xl flex-col items-center gap-8 text-center lg:gap-6'>
-            <AnimatedContent name={'asset-title'}>
+            <AnimatedContent threshold={0.4}>
               <h2 className='font-clash-display text-4xl font-semibold'>
                 <Trans>Your All-in-One Web3 Wallet</Trans>
               </h2>
             </AnimatedContent>
-            <AnimatedContent name={'asset-description'}>
+            <AnimatedContent threshold={0.4}>
               <p>
                 <Trans>
                   TBC Wallet connects you to diverse ecosystems, from Bitcoin and Ethereum to Optimism and Cosmos.
@@ -355,8 +364,10 @@ export default function HomeTemplateDesktop() {
             </AnimatedContent>
           </div>
           <div className='grid w-full grid-cols-2 gap-4 lg:gap-10 xl:grid-cols-4'>
-            {CHAINS.map((crypto) => (
-              <ChainCard key={crypto.id} chain={crypto} />
+            {CHAINS.map((crypto, idx) => (
+              <AnimatedContent key={crypto.id} threshold={0.4} delay={idx * 10}>
+                <ChainCard chain={crypto} />
+              </AnimatedContent>
             ))}
           </div>
         </div>
