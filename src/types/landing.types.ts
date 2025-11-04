@@ -55,8 +55,11 @@ export interface Testimonial {
 export interface Download {
   readonly id: string
   readonly url: string
-  readonly images: {
-    desktop: string
+  readonly logo?: React.FC<React.SVGProps<SVGSVGElement>>
+  readonly title: MessageDescriptor
+  readonly subtitle: MessageDescriptor
+  readonly images?: {
+    desktop?: string
     mobile?: string
     tablet?: string
   }

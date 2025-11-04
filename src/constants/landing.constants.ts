@@ -17,6 +17,10 @@ import Swap from '@public/assets/icons/swap.svg'
 import Miner from '@public/assets/icons/miner.svg'
 import Layers from '@public/assets/icons/layers.svg'
 import USD from '@public/assets/icons/usd.svg'
+import Android from '@public/assets/brands/android.svg'
+import Apple from '@public/assets/brands/apple.svg'
+import Appstore from '@public/assets/brands/appstore.svg'
+import Windows from '@public/assets/brands/windows.svg'
 import { Chain, Download, Feature, Platform, Testimonial } from '@/types/landing.types'
 
 export const FEATURES: Feature[] = [
@@ -215,34 +219,33 @@ export const TESTIMONIALS: Testimonial[] = [
 export const DOWNLOADS: Download[] = [
   {
     id: 'app-store',
-    url: 'https://apps.apple.com/app/6739870518',
+    logo: Appstore,
+    title: msg`App Store`,
+    subtitle: msg`Download on the`,
     images: {
-      desktop: '/assets/download/app-store.webp',
-      mobile: '/assets/download/app-store-mobile.webp',
+      desktop: '/assets/brands/appstore.svg',
     },
+    url: 'https://apps.apple.com/app/6739870518',
+  },
+  {
+    id: 'mac-os',
+    logo: Apple,
+    title: msg`Mac OS`,
+    subtitle: msg`Download on the`,
+    url: 'https://download.chainviews.net/tbchat.dmg',
   },
   {
     id: 'windows',
+    logo: Windows,
+    title: msg`Windows`,
+    subtitle: msg`Get it from`,
     url: 'https://download.chainviews.net/tbchat01.exe',
-    images: {
-      desktop: '/assets/download/windows.webp',
-      mobile: '/assets/download/windows-mobile.webp',
-    },
-  },
-  {
-    id: 'google-play',
-    url: 'https://download.chainviews.net/tbchat.apk',
-    images: {
-      desktop: '/assets/download/google-play.webp',
-      mobile: '/assets/download/google-play-mobile.webp',
-    },
   },
   {
     id: 'android',
+    logo: Android,
+    title: msg`Android APK`,
+    subtitle: msg`Get it from`,
     url: 'https://download.chainviews.net/tbchat.apk',
-    images: {
-      desktop: '/assets/download/android.webp',
-      mobile: '/assets/download/android-mobile.webp',
-    },
   },
 ]

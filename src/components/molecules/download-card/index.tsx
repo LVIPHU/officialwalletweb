@@ -11,12 +11,20 @@ import { Download } from '@/types/landing.types'
 import { NavigationLink } from '@/components/atoms/navigation-link'
 import Image from 'next/image'
 import { cn } from '@/lib/styles'
+import { useLingui } from '@lingui/react'
 
 interface DownloadCardProps {
   data: Download
 }
 
 export function DownloadCard({ data }: DownloadCardProps) {
+  const { i18n } = useLingui()
+  const classNameLogo: Record<string, string> = {
+    'app-store': '',
+    'mac-os': 'size-16',
+    windows: 'size-17',
+    android: 'h-15',
+  }
   return (
     <NavigationLink href={data.url} className='w-full'>
       <div
@@ -30,10 +38,23 @@ export function DownloadCard({ data }: DownloadCardProps) {
           'before:pointer-events-none before:opacity-0 before:transition-opacity before:duration-500 hover:before:opacity-100'
         )}
       >
-        <picture>
-          <source srcSet={data.images.mobile} media='(max-width: 767px)' />
-          <Image src={data.images.desktop} alt={data.id} width={210} height={52} className='object-contain' />
-        </picture>
+        <div className={'flex h-fit flex-col items-center justify-center gap-x-3 gap-y-1.5 lg:flex-row'}>
+          {data.images ? (
+            <picture>
+              <source srcSet={data.images.mobile} media='(max-width: 767px)' />
+              {data.images.desktop && (
+                <Image src={data.images.desktop} alt={data.id} width={80} height={80} className='object-contain' />
+              )}
+            </picture>
+          ) : data.logo ? (
+            <data.logo className={cn(classNameLogo[data.id])} fill='currentColor' />
+          ) : null}
+
+          <div className='flex flex-col gap-1.5'>
+            <p className='mb-auto'>{i18n._(data.subtitle)}</p>
+            <h5 className='mt-auto text-3xl font-semibold text-white'>{i18n._(data.title)}</h5>
+          </div>
+        </div>
       </div>
     </NavigationLink>
   )
