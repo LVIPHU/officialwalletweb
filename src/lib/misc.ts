@@ -58,12 +58,11 @@ export function decodeHashSelector(hash: string): string {
   }
 
   try {
-    // Remove # and decode URI component
-    const id = hash.replace('#', '')
+    const id = hash.slice(1)
     const decodedId = decodeURIComponent(id)
-    return `#${decodedId}`
+
+    return `#${CSS.escape(decodedId)}`
   } catch {
-    // Fallback if decode fails (e.g., invalid encoding)
-    return hash
+    return CSS.escape(hash)
   }
 }

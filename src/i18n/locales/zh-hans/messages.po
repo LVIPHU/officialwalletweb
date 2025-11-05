@@ -13,282 +13,293 @@ msgstr ""
 "Language-Team: \n"
 "Plural-Forms: \n"
 
-#: src/components/organisms/footer/index.tsx:59
+#: src/components/organisms/footer/index.tsx:68
 msgid ". All rights reserved."
 msgstr "。版权所有。"
 
-#: src/components/templates/home/desktop/index.tsx:274
-#: src/components/templates/home/mobile/index.tsx:52
-#: src/constants/navigation.constants.ts:71
+#: src/components/templates/home/desktop/index.tsx:283
+#: src/components/templates/home/mobile/index.tsx:61
+#: src/constants/navigation.constants.ts:79
 msgid "About"
 msgstr "关于"
 
-#: src/constants/navigation.constants.ts:73
+#: src/constants/navigation.constants.ts:81
 msgid "About Us"
 msgstr "关于我们"
 
-#: src/constants/navigation.constants.ts:29
-#: src/constants/navigation.constants.ts:35
-#: src/constants/navigation.constants.ts:41
+#: src/constants/navigation.constants.ts:37
+#: src/constants/navigation.constants.ts:43
+#: src/constants/navigation.constants.ts:49
 msgid "An optimized Web3 experience for desktop"
 msgstr "为桌面优化的 Web3 体验"
 
-#: src/constants/navigation.constants.ts:22
+#: src/constants/landing.constants.ts:247
+msgid "Android APK"
+msgstr ""
+
+#: src/constants/navigation.constants.ts:30
 msgid "Android app"
 msgstr "Android 应用"
 
-#: src/constants/landing.constants.ts:53
+#: src/constants/landing.constants.ts:223
+msgid "App Store"
+msgstr ""
+
+#: src/constants/landing.constants.ts:66
 msgid "Bitcoin"
 msgstr "比特币"
 
-#: src/constants/navigation.constants.ts:76
-msgid "Blog"
-msgstr "博客"
-
-#: src/constants/landing.constants.ts:17
+#: src/constants/landing.constants.ts:30
 msgid "Boost earnings by connecting to mining pools and tracking rewards in-app. TBC Wallet simplifies mining management, helping both new and seasoned users maximize returns securely."
 msgstr "通过连接矿池并在应用内跟踪奖励来提升收益。TBC Wallet 简化了矿业管理，帮助新手和资深用户都能安全地最大化回报。"
 
-#: src/constants/navigation.constants.ts:40
+#: src/constants/navigation.constants.ts:48
 msgid "Browser Extension"
 msgstr "浏览器扩展"
 
-#: src/constants/navigation.constants.ts:74
-msgid "Careers"
-msgstr "加入我们"
-
-#: src/components/molecules/platform-tabs/index.tsx:58
-#: src/components/templates/coming-soon/index.tsx:17
-#: src/constants/navigation.constants.ts:49
-#: src/constants/navigation.constants.ts:50
-#: src/constants/navigation.constants.ts:51
-#: src/constants/navigation.constants.ts:56
+#: src/components/molecules/platform-tabs/index.tsx:67
+#: src/components/templates/coming-soon/index.tsx:26
+#: src/constants/navigation.constants.ts:57
 #: src/constants/navigation.constants.ts:58
-#: src/constants/navigation.constants.ts:65
+#: src/constants/navigation.constants.ts:59
+#: src/constants/navigation.constants.ts:64
 #: src/constants/navigation.constants.ts:66
 #: src/constants/navigation.constants.ts:73
 #: src/constants/navigation.constants.ts:74
-#: src/constants/navigation.constants.ts:75
-#: src/constants/navigation.constants.ts:76
 #: src/constants/navigation.constants.ts:81
-#: src/constants/navigation.constants.ts:83
+#: src/constants/navigation.constants.ts:86
+#: src/constants/navigation.constants.ts:92
 msgid "Coming soon"
 msgstr "即将上线"
 
-#: src/components/templates/home/desktop/index.tsx:388
-#: src/components/templates/home/mobile/index.tsx:123
+#: src/components/templates/home/desktop/index.tsx:399
+#: src/components/templates/home/mobile/index.tsx:132
 msgid "Community talk about us"
 msgstr "社区对我们的评价"
 
-#: src/constants/navigation.constants.ts:66
+#: src/constants/navigation.constants.ts:74
 msgid "Contact Us"
 msgstr "联系我们"
 
-#: src/components/templates/home/desktop/index.tsx:301
-#: src/components/templates/home/mobile/index.tsx:69
+#: src/components/templates/home/desktop/index.tsx:310
+#: src/components/templates/home/mobile/index.tsx:78
 msgid "Designed for All, Built for You"
 msgstr "为所有人而设计，为您量身打造"
 
-#: src/constants/landing.constants.ts:76
+#: src/constants/landing.constants.ts:89
 msgid "Desktop app"
 msgstr "桌面应用"
 
-#: src/components/organisms/header/index.tsx:87
-#: src/components/organisms/mobile-sidebar/index.tsx:79
+#: src/components/organisms/header/index.tsx:96
+#: src/components/organisms/mobile-sidebar/index.tsx:88
 msgid "Download"
 msgstr "下载"
 
-#: src/components/templates/home/desktop/index.tsx:403
-#: src/components/templates/home/mobile/index.tsx:131
+#: src/components/templates/home/desktop/index.tsx:414
+#: src/components/templates/home/mobile/index.tsx:140
 msgid "Download now"
 msgstr "立即下载"
 
-#: src/constants/landing.constants.ts:31
+#: src/constants/landing.constants.ts:224
+#: src/constants/landing.constants.ts:234
+msgid "Download on the"
+msgstr ""
+
+#: src/constants/landing.constants.ts:44
 msgid "Effortlessly exchange tokens across chains with low fees and real-time rates. Whether trading Bitcoin for Solana or optimizing your portfolio, TBC Wallet makes swaps quick and intuitive."
 msgstr "轻松跨链兑换代币，费用低、实时汇率。无论是用比特币兑换 Solana，还是优化您的投资组合，TBC Wallet 都让兑换快速且直观。"
 
-#: src/constants/landing.constants.ts:55
+#: src/constants/landing.constants.ts:68
 msgid "Ethereum"
 msgstr "以太坊"
 
-#: src/components/templates/home/desktop/index.tsx:257
-#: src/components/templates/home/mobile/index.tsx:44
+#: src/components/templates/home/desktop/index.tsx:266
+#: src/components/templates/home/mobile/index.tsx:53
 msgid "Explore now"
 msgstr "立即探索"
 
-#: src/constants/landing.constants.ts:75
+#: src/constants/landing.constants.ts:88
 msgid "Extension"
 msgstr "扩展程序"
 
-#: src/constants/navigation.constants.ts:65
+#: src/constants/navigation.constants.ts:73
 msgid "FAQ"
 msgstr "常见问题"
 
-#: src/components/molecules/feature-card/index.tsx:25
-#: src/components/molecules/features-slides-horizontal/index.tsx:127
-#: src/constants/navigation.constants.ts:47
+#: src/components/molecules/feature-card/index.tsx:34
+#: src/components/molecules/features-slides-horizontal/index.tsx:136
+#: src/constants/navigation.constants.ts:55
 msgid "Features"
 msgstr "功能"
 
-#: src/constants/landing.constants.ts:24
+#: src/constants/landing.constants.ts:37
 msgid "Fortify your wallet with multi-approval transactions for enhanced protection against threats—ideal for personal or shared use, ensuring your assets stay safe and accessible only to you."
 msgstr "通过多重审批交易强化您的钱包，以增强对抗威胁的保护——无论是个人使用还是共享使用，都能确保您的资产仅您可访。"
 
-#: src/constants/landing.constants.ts:37
-#: src/constants/navigation.constants.ts:55
+#: src/constants/landing.constants.ts:241
+#: src/constants/landing.constants.ts:248
+msgid "Get it from"
+msgstr ""
+
+#: src/constants/landing.constants.ts:50
+#: src/constants/navigation.constants.ts:63
 msgid "Instant transfer"
 msgstr "即时转账"
 
-#: src/constants/navigation.constants.ts:16
+#: src/constants/navigation.constants.ts:24
 msgid "iOS app"
 msgstr "iOS 应用"
 
-#: src/constants/navigation.constants.ts:34
+#: src/constants/landing.constants.ts:233
+msgid "Mac OS"
+msgstr ""
+
+#: src/constants/navigation.constants.ts:42
 msgid "macOS app"
 msgstr "macOS 应用"
 
-#: src/constants/landing.constants.ts:16
-#: src/constants/navigation.constants.ts:50
+#: src/constants/landing.constants.ts:29
+#: src/constants/navigation.constants.ts:58
 msgid "Miner"
 msgstr "矿工"
 
-#: src/components/molecules/chain-card/index.tsx:41
+#: src/components/molecules/chain-card/index.tsx:49
 msgid "Missing brand icon for"
 msgstr "缺少品牌图标："
 
-#: src/constants/landing.constants.ts:69
+#: src/constants/landing.constants.ts:82
 msgid "Mobile app"
 msgstr "移动应用"
 
-#: src/constants/landing.constants.ts:23
-#: src/constants/navigation.constants.ts:51
+#: src/constants/landing.constants.ts:36
+#: src/constants/navigation.constants.ts:59
 msgid "Multi signature"
 msgstr "多重签名"
 
-#: src/components/templates/coming-soon/index.tsx:30
+#: src/components/templates/coming-soon/index.tsx:39
 msgid "name@email.com"
 msgstr "name@email.com"
 
-#: src/components/molecules/locale-switcher/index.tsx:53
+#: src/components/molecules/locale-switcher/index.tsx:62
 msgid "No language found."
 msgstr "未找到语言。"
 
-#: src/components/templates/home/desktop/index.tsx:370
-#: src/components/templates/home/mobile/index.tsx:115
+#: src/components/templates/home/desktop/index.tsx:381
+#: src/components/templates/home/mobile/index.tsx:124
 msgid "One wallet. Cross platform"
 msgstr "一个钱包，跨平台使用"
 
-#: src/components/templates/home/desktop/index.tsx:239
+#: src/components/templates/home/desktop/index.tsx:248
 msgid "Own Your Crypto."
 msgstr "掌控您的加密资产。"
 
-#: src/components/templates/home/mobile/index.tsx:23
+#: src/components/templates/home/mobile/index.tsx:32
 msgid "Own Your Crypto. Unleash Web3 Possibilities"
 msgstr "掌控您的加密资产，释放 Web3 潜能"
 
-#: src/constants/landing.constants.ts:45
+#: src/constants/landing.constants.ts:58
 msgid "Pay fees in USDT for stable, predictable costs amid market swings. This flexible feature adds transparency, making Web3 interactions more budget-friendly and user-centric."
 msgstr "以 USDT 支付费用，在市场波动中实现稳定且可预测的成本。此灵活功能增加了透明度，使 Web3 互动更符合预算、更以用户为中心。"
 
-#: src/components/templates/home/desktop/index.tsx:245
+#: src/components/templates/home/desktop/index.tsx:254
 msgid "Possibilities"
 msgstr "可能性"
 
-#: src/constants/navigation.constants.ts:75
-msgid "Press Kit"
-msgstr "媒体资料包"
-
-#: src/constants/navigation.constants.ts:83
+#: src/constants/navigation.constants.ts:91
 msgid "Privacy Policy"
 msgstr "隐私政策"
 
-#: src/constants/landing.constants.ts:38
+#: src/constants/landing.constants.ts:51
 msgid "Send assets across chains with near-zero delays and minimal costs. TBC Wallet ensures fast, reliable transactions for everyday use, from peer-to-peer sends to dApp funding."
 msgstr "跨链发送资产，实现几乎零延迟和极低成本。TBC Wallet 确保日常使用中的交易快速且可靠—from 点对点发送到 dApp 资金支持。"
 
-#: src/components/templates/coming-soon/index.tsx:33
+#: src/components/templates/coming-soon/index.tsx:42
 msgid "Sign up"
 msgstr "注册"
 
-#: src/components/templates/coming-soon/index.tsx:23
+#: src/components/templates/coming-soon/index.tsx:32
 msgid "Something incredible is on the horizon! Drop your email below to be first in line for early access."
 msgstr "令人惊喜的事即将到来！留下您的电子邮箱，第一时间获得抢先体验。"
 
-#: src/components/organisms/footer/index.tsx:104
+#: src/components/organisms/footer/index.tsx:113
 msgid "Stay connected:"
 msgstr "保持联系："
 
-#: src/constants/navigation.constants.ts:63
+#: src/constants/navigation.constants.ts:71
 msgid "Support"
 msgstr "支持"
 
-#: src/constants/landing.constants.ts:30
-#: src/constants/navigation.constants.ts:49
+#: src/constants/landing.constants.ts:43
+#: src/constants/navigation.constants.ts:57
 msgid "Swap"
 msgstr "兑换"
 
-#: src/components/templates/home/desktop/index.tsx:304
-#: src/components/templates/home/mobile/index.tsx:72
+#: src/components/templates/home/desktop/index.tsx:313
+#: src/components/templates/home/mobile/index.tsx:81
 msgid "TBC Wallet bridges the gap for beginners and experts alike. Its user-friendly design offers easy onboarding for newcomers and advanced tools for DeFi pros, ensuring secure, efficient navigation of the decentralized ecosystem."
 msgstr "TBC Wallet 架起新手与高手之间的桥梁。其用户友好的设计为新用户提供便捷入门，为 DeFi 专业人士提供高级工具，确保您在去中心化生态系统中安全、高效地导航。"
 
-#: src/components/templates/home/desktop/index.tsx:350
-#: src/components/templates/home/mobile/index.tsx:100
+#: src/components/templates/home/desktop/index.tsx:359
+#: src/components/templates/home/mobile/index.tsx:109
 msgid "TBC Wallet connects you to diverse ecosystems, from Bitcoin and Ethereum to Optimism and Cosmos. Manage portfolios, engage in DeFi, trade NFTs, and link to dApps—all in one secure, self-custody hub."
 msgstr "TBC Wallet 将您连接至多元生态系统，从比特币和以太坊到 Optimism 和 Cosmos。管理投资组合、参与 DeFi、交易 NFTs，并链接至 dApps — 所有这一切都在一个安全的自我托管中心完成。"
 
-#: src/components/templates/home/desktop/index.tsx:249
-#: src/components/templates/home/mobile/index.tsx:27
+#: src/components/templates/home/desktop/index.tsx:258
+#: src/components/templates/home/mobile/index.tsx:36
 msgid "TBC Wallet empowers you to manage diverse assets like Bitcoin, Ethereum, and Solana. Securely dive into DeFi, NFTs, and dApps with full control. Your keys, your future."
 msgstr "TBC Wallet 赋能您管理比特币、以太坊和 Solana 等多种资产。安全地深入 DeFi、NFT 和 dApps，掌握完全控制权。您的密钥，您的未来。"
 
-#: src/components/templates/home/desktop/index.tsx:277
-#: src/components/templates/home/mobile/index.tsx:55
+#: src/components/templates/home/desktop/index.tsx:286
+#: src/components/templates/home/mobile/index.tsx:64
 msgid "TBC Wallet is a leading multi-chain wallet with robust security and an intuitive interface. It simplifies Web3 interactions, from token management to dApp access, while giving you total control over your digital wealth."
 msgstr "TBC Wallet 是领先的多链钱包，具备强大安全性和直观界面。它简化了 Web3 的互动—from 代币管理到 dApp 访问—同时赋予您对数字财富的完全控制。"
 
-#: src/constants/landing.constants.ts:52
+#: src/constants/landing.constants.ts:65
 msgid "TBChain"
 msgstr "TB 链"
 
-#: src/constants/navigation.constants.ts:80
+#: src/constants/navigation.constants.ts:85
 msgid "Terms of Service"
 msgstr "服务条款"
 
-#: src/constants/navigation.constants.ts:17
-#: src/constants/navigation.constants.ts:23
+#: src/constants/navigation.constants.ts:25
+#: src/constants/navigation.constants.ts:31
 msgid "The world of Web3 in your pocket"
 msgstr "将 Web3 世界装进口袋"
 
-#: src/constants/landing.constants.ts:54
+#: src/constants/landing.constants.ts:67
 msgid "Tron"
 msgstr "波场"
 
-#: src/components/templates/home/desktop/index.tsx:242
+#: src/components/templates/home/desktop/index.tsx:251
 msgid "Unleash Web3"
 msgstr "释放 Web3"
 
-#: src/constants/navigation.constants.ts:58
+#: src/constants/navigation.constants.ts:66
 msgid "USDT fee"
 msgstr "USDT 手续费"
 
-#: src/constants/landing.constants.ts:44
+#: src/constants/landing.constants.ts:57
 msgid "USDT Fee"
 msgstr "USDT 手续费"
 
-#: src/constants/navigation.constants.ts:11
+#: src/constants/navigation.constants.ts:19
 msgid "Wallet"
 msgstr "钱包"
 
-#: src/components/templates/coming-soon/index.tsx:20
+#: src/components/templates/coming-soon/index.tsx:29
 msgid "We’re launching soon!"
 msgstr "我们即将上线！"
 
-#: src/constants/navigation.constants.ts:28
+#: src/constants/landing.constants.ts:240
+msgid "Windows"
+msgstr ""
+
+#: src/constants/navigation.constants.ts:36
 msgid "Windows app"
 msgstr "Windows 应用"
 
-#: src/components/templates/home/desktop/index.tsx:345
-#: src/components/templates/home/mobile/index.tsx:97
+#: src/components/templates/home/desktop/index.tsx:354
+#: src/components/templates/home/mobile/index.tsx:106
 msgid "Your All-in-One Web3 Wallet"
 msgstr "您的全能型 Web3 钱包"
