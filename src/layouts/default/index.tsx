@@ -80,14 +80,22 @@ export default function DefaultLayout({ children }: Readonly<PropsWithChildren>)
    * Handle browser refresh or route change:
    * If there's a hash in the URL, trigger scroll to that section after navigation.
    * Preserves encoded hash as-is (will be decoded in scroll handler).
+   * Otherwise, scroll to top when pathname changes.
    */
   useEffect(() => {
     if (isBrowser && window.location.hash) {
       // Preserve the hash as-is (may be encoded), will be decoded when scrolling
       const hash = window.location.hash
       setHash(hash)
+    } else {
+      // Auto scroll to top when pathname changes (only if no hash)
+      if (lenis) {
+        lenis.scrollTo(0, { immediate: false })
+      } else {
+        window.scrollTo({ top: 0, behavior: 'smooth' })
+      }
     }
-  }, [pathname])
+  }, [pathname, lenis])
 
   /**
    * Intercept internal anchor link clicks within the same page.
