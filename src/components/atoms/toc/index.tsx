@@ -37,7 +37,7 @@ export function Toc({ headings }: TocProps) {
   return (
     <nav
       role='navigation'
-      className='group sticky top-0 hidden h-fit w-[200px] lg:block'
+      className='group sticky top-0 hidden h-fit w-[200px] xl:block'
       style={{
         left: 'calc((100vw - min(100vw, 768px)) / 2 + min(100vw, 768px) + 200px)',
         top: '50%',
@@ -57,8 +57,8 @@ export function Toc({ headings }: TocProps) {
               <li key={`heading-${h.url}-${i}`} className={cn('text-sm transition-all duration-200')}>
                 <a
                   className={cn(
-                    'hover:text-primary! flex py-2 leading-normal',
-                    'transition-colors duration-300 ease-in-out before:me-2 before:font-black before:content-["-"]',
+                    'hover:text-primary! flex leading-normal transition-colors duration-300 ease-in-out ',
+                    'before:me-2 before:font-black before:content-["-"]',
                     isActive ? 'text-primary' : 'text-gray-600 dark:text-white'
                   )}
                   href={h.url}
@@ -66,7 +66,7 @@ export function Toc({ headings }: TocProps) {
                 >
                   <p
                     className={cn(
-                      'font-semibold transition-opacity truncate duration-300 ease-in-out',
+                      'font-bold text-xs transition-opacity truncate duration-300 ease-in-out',
                       isActive ? 'opacity-100' : 'opacity-0 group-hover:opacity-100'
                     )}
                   >

@@ -54,7 +54,7 @@ export const NAVIGATION_ITEMS: Navigation = [
     id: 'features',
     title: msg`Features`,
     items: [
-      { id: 'swap', href: 'https://dex-test.nexsoft.duckdns.org/', title: msg`Swap`, description: msg`Coming soon` },
+      { id: 'swap', href: 'https://dex-test.nexsoft.duckdns.org/', title: msg`Swap`, description: msg`Swap securely and seamlessly` },
       { id: 'miner', href: '/miner', title: msg`Miner`, description: msg`Coming soon` },
       { id: 'multi-signature', href: '/multi-signature', title: msg`Multi signature`, description: msg`Coming soon` },
       {
@@ -78,18 +78,17 @@ export const NAVIGATION_ITEMS: Navigation = [
     id: 'about',
     title: msg`About`,
     items: [
-      { id: 'about-us', href: '/about-us', title: msg`About Us`, description: msg`Coming soon` },
       {
         id: 'terms-of-service',
         href: '/legal/terms-of-service',
         title: msg`Terms of Service`,
-        description: msg`Coming soon`,
+        description: msg`What you need to know to use our services`,
       },
       {
         id: 'privacy-policy',
         href: '/legal/privacy-policy',
         title: msg`Privacy Policy`,
-        description: msg`Coming soon`,
+        description: msg`Your privacy matters, learn how we protect it`,
       },
     ],
   },

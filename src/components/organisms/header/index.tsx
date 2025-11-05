@@ -140,7 +140,7 @@ function NavigationSection({ section, contentWidth }: NavigationSectionProps) {
           </div>
 
           {/* Links */}
-          <ul className='grid flex-1 grid-cols-1 gap-4 sm:grid-cols-2 lg:gap-6 xl:grid-cols-3 xl:gap-x-13'>
+          <ul className='grid flex-1 grid-cols-1 gap-4 sm:grid-cols-2 lg:gap-6 xl:grid-cols-3 xl:grid-rows-3 xl:gap-x-13'>
             {section.items.map((item) => (
               <ListItem key={item.id} href={item.href} title={item.title} className='h-full'>
                 {i18n._(item.description)}

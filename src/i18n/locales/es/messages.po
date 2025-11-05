@@ -23,10 +23,6 @@ msgstr ". Todos los derechos reservados."
 msgid "About"
 msgstr "Acerca de"
 
-#: src/constants/navigation.constants.ts:81
-msgid "About Us"
-msgstr "Sobre nosotros"
-
 #: src/constants/navigation.constants.ts:37
 #: src/constants/navigation.constants.ts:43
 #: src/constants/navigation.constants.ts:49
@@ -59,16 +55,12 @@ msgstr "Extensión del navegador"
 
 #: src/components/molecules/platform-tabs/index.tsx:67
 #: src/components/templates/coming-soon/index.tsx:26
-#: src/constants/navigation.constants.ts:57
 #: src/constants/navigation.constants.ts:58
 #: src/constants/navigation.constants.ts:59
 #: src/constants/navigation.constants.ts:64
 #: src/constants/navigation.constants.ts:66
 #: src/constants/navigation.constants.ts:73
 #: src/constants/navigation.constants.ts:74
-#: src/constants/navigation.constants.ts:81
-#: src/constants/navigation.constants.ts:86
-#: src/constants/navigation.constants.ts:92
 msgid "Coming soon"
 msgstr "Próximamente"
 
@@ -205,7 +197,7 @@ msgstr "Paga tarifas en USDT para mantener costos estables y predecibles ante la
 msgid "Possibilities"
 msgstr "Posibilidades"
 
-#: src/constants/navigation.constants.ts:91
+#: src/constants/navigation.constants.ts:90
 msgid "Privacy Policy"
 msgstr "Política de privacidad"
 
@@ -234,6 +226,10 @@ msgstr "Soporte"
 msgid "Swap"
 msgstr "Intercambiar"
 
+#: src/constants/navigation.constants.ts:57
+msgid "Swap securely and seamlessly"
+msgstr ""
+
 #: src/components/templates/home/desktop/index.tsx:313
 #: src/components/templates/home/mobile/index.tsx:81
 msgid "TBC Wallet bridges the gap for beginners and experts alike. Its user-friendly design offers easy onboarding for newcomers and advanced tools for DeFi pros, ensuring secure, efficient navigation of the decentralized ecosystem."
@@ -258,7 +254,7 @@ msgstr "TBC Wallet es una billetera multichain líder con seguridad robusta e in
 msgid "TBChain"
 msgstr "TBChain"
 
-#: src/constants/navigation.constants.ts:85
+#: src/constants/navigation.constants.ts:84
 msgid "Terms of Service"
 msgstr "Términos de servicio"
 
@@ -291,6 +287,10 @@ msgstr "Billetera"
 msgid "We’re launching soon!"
 msgstr "¡Lanzaremos pronto!"
 
+#: src/constants/navigation.constants.ts:85
+msgid "What you need to know to use our services"
+msgstr ""
+
 #: src/constants/landing.constants.ts:240
 msgid "Windows"
 msgstr ""
@@ -303,3 +303,7 @@ msgstr "Aplicación para Windows"
 #: src/components/templates/home/mobile/index.tsx:106
 msgid "Your All-in-One Web3 Wallet"
 msgstr "Tu billetera Web3 todo en uno"
+
+#: src/constants/navigation.constants.ts:91
+msgid "Your privacy matters, learn how we protect it"
+msgstr ""

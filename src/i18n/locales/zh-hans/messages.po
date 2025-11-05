@@ -23,10 +23,6 @@ msgstr "。版权所有。"
 msgid "About"
 msgstr "关于"
 
-#: src/constants/navigation.constants.ts:81
-msgid "About Us"
-msgstr "关于我们"
-
 #: src/constants/navigation.constants.ts:37
 #: src/constants/navigation.constants.ts:43
 #: src/constants/navigation.constants.ts:49
@@ -59,16 +55,12 @@ msgstr "浏览器扩展"
 
 #: src/components/molecules/platform-tabs/index.tsx:67
 #: src/components/templates/coming-soon/index.tsx:26
-#: src/constants/navigation.constants.ts:57
 #: src/constants/navigation.constants.ts:58
 #: src/constants/navigation.constants.ts:59
 #: src/constants/navigation.constants.ts:64
 #: src/constants/navigation.constants.ts:66
 #: src/constants/navigation.constants.ts:73
 #: src/constants/navigation.constants.ts:74
-#: src/constants/navigation.constants.ts:81
-#: src/constants/navigation.constants.ts:86
-#: src/constants/navigation.constants.ts:92
 msgid "Coming soon"
 msgstr "即将上线"
 
@@ -205,7 +197,7 @@ msgstr "以 USDT 支付费用，在市场波动中实现稳定且可预测的成
 msgid "Possibilities"
 msgstr "可能性"
 
-#: src/constants/navigation.constants.ts:91
+#: src/constants/navigation.constants.ts:90
 msgid "Privacy Policy"
 msgstr "隐私政策"
 
@@ -234,6 +226,10 @@ msgstr "支持"
 msgid "Swap"
 msgstr "兑换"
 
+#: src/constants/navigation.constants.ts:57
+msgid "Swap securely and seamlessly"
+msgstr ""
+
 #: src/components/templates/home/desktop/index.tsx:313
 #: src/components/templates/home/mobile/index.tsx:81
 msgid "TBC Wallet bridges the gap for beginners and experts alike. Its user-friendly design offers easy onboarding for newcomers and advanced tools for DeFi pros, ensuring secure, efficient navigation of the decentralized ecosystem."
@@ -258,7 +254,7 @@ msgstr "TBC Wallet 是领先的多链钱包，具备强大安全性和直观界�
 msgid "TBChain"
 msgstr "TB 链"
 
-#: src/constants/navigation.constants.ts:85
+#: src/constants/navigation.constants.ts:84
 msgid "Terms of Service"
 msgstr "服务条款"
 
@@ -291,6 +287,10 @@ msgstr "钱包"
 msgid "We’re launching soon!"
 msgstr "我们即将上线！"
 
+#: src/constants/navigation.constants.ts:85
+msgid "What you need to know to use our services"
+msgstr ""
+
 #: src/constants/landing.constants.ts:240
 msgid "Windows"
 msgstr ""
@@ -303,3 +303,7 @@ msgstr "Windows 应用"
 #: src/components/templates/home/mobile/index.tsx:106
 msgid "Your All-in-One Web3 Wallet"
 msgstr "您的全能型 Web3 钱包"
+
+#: src/constants/navigation.constants.ts:91
+msgid "Your privacy matters, learn how we protect it"
+msgstr ""
