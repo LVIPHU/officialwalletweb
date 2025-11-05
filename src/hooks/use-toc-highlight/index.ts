@@ -11,11 +11,11 @@
 
 import { useState, useRef, useEffect } from 'react'
 
-const TOP_OFFSET = 85
+const TOP_OFFSET = 120
 
 /**
  * Get header anchor elements from the DOM
- * @returns Array of anchor elements that are headings (h1, h2, h3)
+ * @returns Array of anchor elements that are headings (h1, h2)
  */
 export function getHeaderAnchors(): HTMLAnchorElement[] {
   return Array.prototype.filter.call(

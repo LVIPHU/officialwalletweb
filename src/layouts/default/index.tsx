@@ -13,7 +13,7 @@ import { PropsWithChildren, useEffect, useState } from 'react'
 import { usePathname } from 'next/navigation'
 import { useStore } from '@/lib/store'
 import { useFrame } from '@/hooks/use-frame'
-import { isBrowser } from '@/lib/misc'
+import { isBrowser, decodeHashSelector } from '@/lib/misc'
 import Lenis from 'lenis'
 import MobileSidebar from '@/components/organisms/mobile-sidebar'
 import { SidebarInset } from '@/components/ui/sidebar'
@@ -59,11 +59,17 @@ export default function DefaultLayout({ children }: Readonly<PropsWithChildren>)
   /**
    * Handle scrolling to an element when hash changes (e.g., from clicking anchor links).
    * Uses Lenis to smoothly scroll to the target section.
+   * Decodes URL-encoded hash to handle Unicode characters in headings.
    */
   useEffect(() => {
     if (lenis && hash) {
-      // scroll to on hash change
-      const target = document.querySelector(hash)
+      // Decode hash for safe querySelector usage (handles Unicode characters)
+      const decodedHash = decodeHashSelector(hash)
+      // Try querySelector first, fallback to getElementById if needed
+      const target =
+        document.querySelector(decodedHash) ||
+        document.getElementById(hash.replace('#', '')) ||
+        document.getElementById(decodeURIComponent(hash.replace('#', '')))
       if (target instanceof HTMLElement) {
         lenis.scrollTo(target, { offset: 0 })
       }
@@ -72,12 +78,14 @@ export default function DefaultLayout({ children }: Readonly<PropsWithChildren>)
 
   /**
    * Handle browser refresh or route change:
-   * If there’s a hash in the URL, trigger scroll to that section after navigation.
+   * If there's a hash in the URL, trigger scroll to that section after navigation.
+   * Preserves encoded hash as-is (will be decoded in scroll handler).
    */
   useEffect(() => {
     if (isBrowser && window.location.hash) {
-      const hash = window.location.hash.replace('#', '')
-      setHash(`#${hash}`)
+      // Preserve the hash as-is (may be encoded), will be decoded when scrolling
+      const hash = window.location.hash
+      setHash(hash)
     }
   }, [pathname])
 

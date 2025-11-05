@@ -30,8 +30,6 @@ interface TocProps {
 export function Toc({ headings }: TocProps) {
   const { currentIndex } = useTocHighlight()
 
-  // Select the max TOC item we have here for now
-
   if (headings.length === 0) {
     return null
   }
@@ -59,17 +57,21 @@ export function Toc({ headings }: TocProps) {
               <li key={`heading-${h.url}-${i}`} className={cn('text-sm transition-all duration-200')}>
                 <a
                   className={cn(
-                    'block truncate py-2 leading-normal transition-opacity duration-200',
-                    'before:me-2 before:content-["•"]',
-                    isActive
-                      ? 'text-primary font-semibold opacity-100'
-                      : 'text-gray-600 opacity-0 group-hover:opacity-100 dark:text-white',
-                    'hover:text-primary!'
+                    'hover:text-primary! flex truncate py-2 leading-normal',
+                    'transition-colors duration-300 ease-in-out before:me-2 before:font-black before:content-["-"]',
+                    isActive ? 'text-primary' : 'text-gray-600 dark:text-white'
                   )}
                   href={h.url}
                   title={h.text}
                 >
-                  {h.text}
+                  <p
+                    className={cn(
+                      'font-semibold transition-opacity duration-300 ease-in-out',
+                      isActive ? 'opacity-100' : 'opacity-0 group-hover:opacity-100'
+                    )}
+                  >
+                    {h.text}
+                  </p>
                 </a>
               </li>
             )

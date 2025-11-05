@@ -45,3 +45,25 @@ export function scrollToId(id = '', offset = 0, behavior: ScrollBehavior | undef
     behavior,
   })
 }
+
+/**
+ * Decode URL encoded hash selector for safe querySelector usage
+ * Handles Unicode characters in hash (e.g., #vi-%E7%94%A8%E6%88%B7...)
+ * @param hash - Hash string with # prefix (e.g., "#vi-%E7%94%A8%E6%88%B7")
+ * @returns Decoded hash string safe for querySelector, or original hash if decode fails
+ */
+export function decodeHashSelector(hash: string): string {
+  if (!hash || !hash.startsWith('#')) {
+    return hash
+  }
+
+  try {
+    // Remove # and decode URI component
+    const id = hash.replace('#', '')
+    const decodedId = decodeURIComponent(id)
+    return `#${decodedId}`
+  } catch {
+    // Fallback if decode fails (e.g., invalid encoding)
+    return hash
+  }
+}
