@@ -81,11 +81,16 @@ export const NAVIGATION_ITEMS: Navigation = [
       { id: 'about-us', href: '/about-us', title: msg`About Us`, description: msg`Coming soon` },
       {
         id: 'terms-of-service',
-        href: '/terms-of-service',
+        href: '/legal/terms-of-service',
         title: msg`Terms of Service`,
         description: msg`Coming soon`,
       },
-      { id: 'privacy-policy', href: '/privacy-policy', title: msg`Privacy Policy`, description: msg`Coming soon` },
+      {
+        id: 'privacy-policy',
+        href: '/legal/privacy-policy',
+        title: msg`Privacy Policy`,
+        description: msg`Coming soon`,
+      },
     ],
   },
 ]

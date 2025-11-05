@@ -44,6 +44,7 @@ You are an expert full-stack developer proficient in TypeScript, React, Next.js 
 - **Data Fetching:** TanStack Query for client-side, React Server Components for server-side
 - **Testing:** Jest + React Testing Library + Playwright
 - **API:** next-safe-action for type-safe server actions
+- **Internationalization:** next-intl App Router 
 
 ### Rationale
 - Next.js App Router provides superior SSR/SSG capabilities, modern routing patterns, and built-in optimizations

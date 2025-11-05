@@ -47,14 +47,55 @@ export function MarkdownContent({ content, className }: MarkdownContentProps) {
           ],
         ]}
         components={{
-          h1: ({ node, ...props }) => (
-            <h1 className='font-clash-display mt-8 mb-6 text-4xl font-semibold first:mt-0 lg:text-5xl' {...props} />
+          h1: ({ node, id, ...props }) => (
+            <h1
+              id={id}
+              className='font-clash-display mt-8 mb-6 text-4xl font-semibold first:mt-0 lg:text-5xl'
+              {...props}
+            >
+              {props.children}
+              {id && (
+                <a
+                  href={`#${id}`}
+                  className='mdx-header-anchor text-primary ml-2 opacity-0 transition-opacity hover:opacity-100'
+                  aria-label={`Link to ${props.children}`}
+                >
+                  #
+                </a>
+              )}
+            </h1>
           ),
-          h2: ({ node, ...props }) => (
-            <h2 className='font-clash-display mt-8 mb-4 text-3xl font-semibold first:mt-0 lg:text-4xl' {...props} />
+          h2: ({ node, id, ...props }) => (
+            <h2
+              id={id}
+              className='font-clash-display mt-8 mb-4 text-3xl font-semibold first:mt-0 lg:text-4xl'
+              {...props}
+            >
+              {props.children}
+              {id && (
+                <a
+                  href={`#${id}`}
+                  className='mdx-header-anchor text-primary ml-2 opacity-0 transition-opacity hover:opacity-100'
+                  aria-label={`Link to ${props.children}`}
+                >
+                  #
+                </a>
+              )}
+            </h2>
           ),
-          h3: ({ node, ...props }) => (
-            <h3 className='mt-6 mb-3 text-2xl font-semibold first:mt-0 lg:text-3xl' {...props} />
+          h3: ({ node, id, ...props }) => (
+            <h3 id={id} className='mt-6 mb-3 text-2xl font-semibold first:mt-0 lg:text-3xl' {...props}>
+              {props.children}
+              {id && (
+                <a
+                  href={`#${id}`}
+                  className='mdx-header-anchor text-primary ml-2 opacity-0 transition-opacity hover:opacity-100'
+                  aria-label={`Link to ${props.children}`}
+                >
+                  #
+                </a>
+              )}
+            </h3>
           ),
           h4: ({ node, ...props }) => (
             <h4 className='mt-4 mb-2 text-xl font-semibold first:mt-0 lg:text-2xl' {...props} />

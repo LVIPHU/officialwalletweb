@@ -9,59 +9,53 @@
 
 import 'server-only'
 import { readFile } from 'fs/promises'
-import { join } from 'path'
 import matter from 'gray-matter'
-
-export type LegalContentType = 'privacy' | 'terms'
-
-interface LegalContentResult {
-  content: string
-  data: Record<string, unknown>
-}
+import { getContentPath, extractHeadings } from './content-utils'
+import type { ContentResult, ContentMetadata } from '@/types/content.types'
 
 /**
- * Get legal content from filesystem
+ * Get content by path segments (dynamic routing)
  * @param lang - Language code (e.g., 'en', 'ar', 'es')
- * @param type - Type of legal content ('privacy' or 'terms')
- * @returns Content string and frontmatter data
+ * @param pathSegments - Array of path segments (e.g., ['legal', 'privacy-policy'])
+ * @returns Content result with content, metadata, and headings
  * @throws Error if file doesn't exist
  */
-export async function getLegalContent(lang: string, type: LegalContentType): Promise<LegalContentResult> {
-  const contentDir = join(process.cwd(), 'src', 'content', lang, 'legal')
+export async function getContentByPath(lang: string, pathSegments: readonly string[]): Promise<ContentResult> {
+  const filePath = getContentPath(lang, pathSegments)
 
-  // Try .mdx first, then .md
-  const extensions = ['mdx', 'md']
   let content = ''
-  let filePath = ''
-
-  for (const ext of extensions) {
-    filePath = join(contentDir, `${type}.${ext}`)
-    try {
-      content = await readFile(filePath, 'utf-8')
-      break
-    } catch (error) {
-      // File doesn't exist with this extension, try next
-      continue
-    }
-  }
-
-  if (!content) {
+  try {
+    content = await readFile(filePath, 'utf-8')
+  } catch (error) {
     // Fallback to English if content not found for requested language
-    if (lang !== 'en') {
+    if (lang !== 'en' && pathSegments.length > 0) {
       try {
-        return await getLegalContent('en', type)
+        return await getContentByPath('en', pathSegments)
       } catch {
         // If English also fails, throw original error
       }
     }
-    throw new Error(`Legal content file not found: ${filePath}`)
+    throw new Error(`Content file not found: ${filePath}`)
   }
 
   // Parse frontmatter if present
   const parsed = matter(content)
 
+  // Extract headings from content using remark
+  const headings = await extractHeadings(parsed.content)
+  const filteredHeadings = headings.filter((h) => h.depth <= 2)
+
+  // Parse metadata with defaults
+  const metadata: ContentMetadata = {
+    title: (parsed.data.title as string) || '',
+    date: parsed.data.date as string | undefined,
+    description: parsed.data.description as string | undefined,
+    category: parsed.data.category as string | undefined,
+  }
+
   return {
     content: parsed.content,
-    data: parsed.data,
+    data: metadata,
+    headings: filteredHeadings,
   }
 }
