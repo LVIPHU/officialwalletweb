@@ -42,7 +42,8 @@ export function genPageMetadata({
   const siteUrl = SITE_METADATA.siteUrl || 'https://tbchatofficial.com'
   const fullTitle = title ? `${title} | ${SITE_METADATA.title}` : SITE_METADATA.title
   // Ensure description is never empty - use default if missing
-  const fullDescription = description?.trim() || SITE_METADATA.description || 'TBC Wallet - Secure cryptocurrency management platform'
+  const fullDescription =
+    description?.trim() || SITE_METADATA.description || 'TBC Wallet - Secure cryptocurrency management platform'
   const fullImage = image || SITE_METADATA.socialBanner
   const canonicalUrl = `${siteUrl}/${lang}${path ? `/${path}` : ''}`
 

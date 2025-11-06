@@ -53,10 +53,6 @@ export default async function RootLayout({ children, params }: Readonly<PropsWit
       suppressHydrationWarning
     >
       <head>
-        <link rel='prefetch' as='image' href='/assets/background/glow-blue.webp' />
-        <link rel='prefetch' as='image' href='/assets/background/glow-purple.webp' />
-        <link rel='prefetch' as='image' href='/assets/background/glow-orange.webp' />
-        <link rel='prefetch' as='image' href='/assets/background/glow-olive.webp' />
         <link
           rel='alternate'
           type='application/rss+xml'

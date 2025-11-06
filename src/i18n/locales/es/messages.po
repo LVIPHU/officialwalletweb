@@ -19,7 +19,7 @@ msgstr ". Todos los derechos reservados."
 
 #: src/components/templates/home/desktop/index.tsx:283
 #: src/components/templates/home/mobile/index.tsx:61
-#: src/constants/navigation.constants.ts:79
+#: src/constants/navigation.constants.ts:84
 msgid "About"
 msgstr "Acerca de"
 
@@ -31,7 +31,7 @@ msgstr "Una experiencia Web3 optimizada para computadoras de escritorio"
 
 #: src/constants/landing.constants.ts:247
 msgid "Android APK"
-msgstr ""
+msgstr "APK de Android"
 
 #: src/constants/navigation.constants.ts:30
 msgid "Android app"
@@ -39,11 +39,15 @@ msgstr "Aplicación para Android"
 
 #: src/constants/landing.constants.ts:223
 msgid "App Store"
-msgstr ""
+msgstr "App Store"
 
 #: src/constants/landing.constants.ts:66
 msgid "Bitcoin"
 msgstr "Bitcoin"
+
+#: src/constants/navigation.constants.ts:63
+msgid "Boost earnings by connecting to mining pools and tracking rewards in-app"
+msgstr "Incrementa tus ganancias conectándote a pools de minería y siguiendo recompensas en la app"
 
 #: src/constants/landing.constants.ts:30
 msgid "Boost earnings by connecting to mining pools and tracking rewards in-app. TBC Wallet simplifies mining management, helping both new and seasoned users maximize returns securely."
@@ -55,12 +59,6 @@ msgstr "Extensión del navegador"
 
 #: src/components/molecules/platform-tabs/index.tsx:67
 #: src/components/templates/coming-soon/index.tsx:26
-#: src/constants/navigation.constants.ts:58
-#: src/constants/navigation.constants.ts:59
-#: src/constants/navigation.constants.ts:64
-#: src/constants/navigation.constants.ts:66
-#: src/constants/navigation.constants.ts:73
-#: src/constants/navigation.constants.ts:74
 msgid "Coming soon"
 msgstr "Próximamente"
 
@@ -69,7 +67,7 @@ msgstr "Próximamente"
 msgid "Community talk about us"
 msgstr "La comunidad habla de nosotros"
 
-#: src/constants/navigation.constants.ts:74
+#: src/constants/navigation.constants.ts:79
 msgid "Contact Us"
 msgstr "Contáctanos"
 
@@ -95,7 +93,7 @@ msgstr "Descargar ahora"
 #: src/constants/landing.constants.ts:224
 #: src/constants/landing.constants.ts:234
 msgid "Download on the"
-msgstr ""
+msgstr "Descargar en"
 
 #: src/constants/landing.constants.ts:44
 msgid "Effortlessly exchange tokens across chains with low fees and real-time rates. Whether trading Bitcoin for Solana or optimizing your portfolio, TBC Wallet makes swaps quick and intuitive."
@@ -114,7 +112,7 @@ msgstr "Explorar ahora"
 msgid "Extension"
 msgstr "Extensión"
 
-#: src/constants/navigation.constants.ts:73
+#: src/constants/navigation.constants.ts:78
 msgid "FAQ"
 msgstr "Preguntas frecuentes"
 
@@ -124,17 +122,29 @@ msgstr "Preguntas frecuentes"
 msgid "Features"
 msgstr "Funciones"
 
+#: src/constants/navigation.constants.ts:78
+msgid "Find answers to frequently asked questions about TBC Wallet"
+msgstr "Encuentra respuestas a preguntas frecuentes sobre TBC Wallet"
+
+#: src/constants/navigation.constants.ts:64
+msgid "Fortify your wallet with multi-approval transactions for enhanced protection"
+msgstr "Fortalece tu billetera con transacciones de aprobación múltiple para mayor protección"
+
 #: src/constants/landing.constants.ts:37
 msgid "Fortify your wallet with multi-approval transactions for enhanced protection against threats—ideal for personal or shared use, ensuring your assets stay safe and accessible only to you."
 msgstr "Fortalece tu billetera con transacciones de aprobación múltiple para una protección mejorada contra amenazas — ideal para uso personal o compartido, asegurando que tus activos permanezcan seguros y accesibles solo para ti."
 
+#: src/constants/navigation.constants.ts:79
+msgid "Get in touch with our support team for assistance"
+msgstr "Ponte en contacto con nuestro equipo de soporte para obtener ayuda"
+
 #: src/constants/landing.constants.ts:241
 #: src/constants/landing.constants.ts:248
 msgid "Get it from"
-msgstr ""
+msgstr "Obtener desde"
 
 #: src/constants/landing.constants.ts:50
-#: src/constants/navigation.constants.ts:63
+#: src/constants/navigation.constants.ts:68
 msgid "Instant transfer"
 msgstr "Transferencia instantánea"
 
@@ -144,14 +154,14 @@ msgstr "Aplicación para iOS"
 
 #: src/constants/landing.constants.ts:233
 msgid "Mac OS"
-msgstr ""
+msgstr "Mac OS"
 
 #: src/constants/navigation.constants.ts:42
 msgid "macOS app"
 msgstr "Aplicación para macOS"
 
 #: src/constants/landing.constants.ts:29
-#: src/constants/navigation.constants.ts:58
+#: src/constants/navigation.constants.ts:63
 msgid "Miner"
 msgstr "Minero"
 
@@ -164,7 +174,7 @@ msgid "Mobile app"
 msgstr "Aplicación móvil"
 
 #: src/constants/landing.constants.ts:36
-#: src/constants/navigation.constants.ts:59
+#: src/constants/navigation.constants.ts:64
 msgid "Multi signature"
 msgstr "Firma múltiple"
 
@@ -189,6 +199,10 @@ msgstr "Sé dueño de tus criptomonedas."
 msgid "Own Your Crypto. Unleash Web3 Possibilities"
 msgstr "Sé dueño de tus criptomonedas. Libera las posibilidades de Web3"
 
+#: src/constants/navigation.constants.ts:71
+msgid "Pay fees in USDT for stable, predictable costs amid market swings"
+msgstr "Paga tarifas en USDT para costos estables y predecibles ante las fluctuaciones del mercado"
+
 #: src/constants/landing.constants.ts:58
 msgid "Pay fees in USDT for stable, predictable costs amid market swings. This flexible feature adds transparency, making Web3 interactions more budget-friendly and user-centric."
 msgstr "Paga tarifas en USDT para mantener costos estables y predecibles ante las fluctuaciones del mercado. Esta función flexible añade transparencia, haciendo las interacciones con Web3 más económicas y centradas en el usuario."
@@ -197,9 +211,13 @@ msgstr "Paga tarifas en USDT para mantener costos estables y predecibles ante la
 msgid "Possibilities"
 msgstr "Posibilidades"
 
-#: src/constants/navigation.constants.ts:90
+#: src/constants/navigation.constants.ts:95
 msgid "Privacy Policy"
 msgstr "Política de privacidad"
+
+#: src/constants/navigation.constants.ts:69
+msgid "Send assets across chains with near-zero delays and minimal costs"
+msgstr "Envía activos entre cadenas con retrasos casi nulos y costos mínimos"
 
 #: src/constants/landing.constants.ts:51
 msgid "Send assets across chains with near-zero delays and minimal costs. TBC Wallet ensures fast, reliable transactions for everyday use, from peer-to-peer sends to dApp funding."
@@ -217,18 +235,18 @@ msgstr "¡Algo increíble está por llegar! Deja tu correo electrónico abajo pa
 msgid "Stay connected:"
 msgstr "Mantente conectado:"
 
-#: src/constants/navigation.constants.ts:71
+#: src/constants/navigation.constants.ts:76
 msgid "Support"
 msgstr "Soporte"
 
 #: src/constants/landing.constants.ts:43
-#: src/constants/navigation.constants.ts:57
+#: src/constants/navigation.constants.ts:60
 msgid "Swap"
 msgstr "Intercambiar"
 
-#: src/constants/navigation.constants.ts:57
+#: src/constants/navigation.constants.ts:61
 msgid "Swap securely and seamlessly"
-msgstr ""
+msgstr "Intercambia de forma segura y sin problemas"
 
 #: src/components/templates/home/desktop/index.tsx:313
 #: src/components/templates/home/mobile/index.tsx:81
@@ -254,7 +272,7 @@ msgstr "TBC Wallet es una billetera multichain líder con seguridad robusta e in
 msgid "TBChain"
 msgstr "TBChain"
 
-#: src/constants/navigation.constants.ts:84
+#: src/constants/navigation.constants.ts:89
 msgid "Terms of Service"
 msgstr "Términos de servicio"
 
@@ -271,7 +289,7 @@ msgstr "Tron"
 msgid "Unleash Web3"
 msgstr "Libera el Web3"
 
-#: src/constants/navigation.constants.ts:66
+#: src/constants/navigation.constants.ts:71
 msgid "USDT fee"
 msgstr "Tarifa USDT"
 
@@ -287,13 +305,13 @@ msgstr "Billetera"
 msgid "We’re launching soon!"
 msgstr "¡Lanzaremos pronto!"
 
-#: src/constants/navigation.constants.ts:85
+#: src/constants/navigation.constants.ts:90
 msgid "What you need to know to use our services"
-msgstr ""
+msgstr "Lo que necesitas saber para usar nuestros servicios"
 
 #: src/constants/landing.constants.ts:240
 msgid "Windows"
-msgstr ""
+msgstr "Windows"
 
 #: src/constants/navigation.constants.ts:36
 msgid "Windows app"
@@ -304,6 +322,6 @@ msgstr "Aplicación para Windows"
 msgid "Your All-in-One Web3 Wallet"
 msgstr "Tu billetera Web3 todo en uno"
 
-#: src/constants/navigation.constants.ts:91
+#: src/constants/navigation.constants.ts:96
 msgid "Your privacy matters, learn how we protect it"
-msgstr ""
+msgstr "Tu privacidad es importante, aprende cómo la protegemos"

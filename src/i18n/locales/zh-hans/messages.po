@@ -19,7 +19,7 @@ msgstr "。版权所有。"
 
 #: src/components/templates/home/desktop/index.tsx:283
 #: src/components/templates/home/mobile/index.tsx:61
-#: src/constants/navigation.constants.ts:79
+#: src/constants/navigation.constants.ts:84
 msgid "About"
 msgstr "关于"
 
@@ -31,7 +31,7 @@ msgstr "为桌面优化的 Web3 体验"
 
 #: src/constants/landing.constants.ts:247
 msgid "Android APK"
-msgstr ""
+msgstr "Android APK"
 
 #: src/constants/navigation.constants.ts:30
 msgid "Android app"
@@ -39,11 +39,15 @@ msgstr "Android 应用"
 
 #: src/constants/landing.constants.ts:223
 msgid "App Store"
-msgstr ""
+msgstr "App Store"
 
 #: src/constants/landing.constants.ts:66
 msgid "Bitcoin"
 msgstr "比特币"
+
+#: src/constants/navigation.constants.ts:63
+msgid "Boost earnings by connecting to mining pools and tracking rewards in-app"
+msgstr "通过连接矿池并在应用内跟踪奖励来提升收益"
 
 #: src/constants/landing.constants.ts:30
 msgid "Boost earnings by connecting to mining pools and tracking rewards in-app. TBC Wallet simplifies mining management, helping both new and seasoned users maximize returns securely."
@@ -55,12 +59,6 @@ msgstr "浏览器扩展"
 
 #: src/components/molecules/platform-tabs/index.tsx:67
 #: src/components/templates/coming-soon/index.tsx:26
-#: src/constants/navigation.constants.ts:58
-#: src/constants/navigation.constants.ts:59
-#: src/constants/navigation.constants.ts:64
-#: src/constants/navigation.constants.ts:66
-#: src/constants/navigation.constants.ts:73
-#: src/constants/navigation.constants.ts:74
 msgid "Coming soon"
 msgstr "即将上线"
 
@@ -69,7 +67,7 @@ msgstr "即将上线"
 msgid "Community talk about us"
 msgstr "社区对我们的评价"
 
-#: src/constants/navigation.constants.ts:74
+#: src/constants/navigation.constants.ts:79
 msgid "Contact Us"
 msgstr "联系我们"
 
@@ -95,7 +93,7 @@ msgstr "立即下载"
 #: src/constants/landing.constants.ts:224
 #: src/constants/landing.constants.ts:234
 msgid "Download on the"
-msgstr ""
+msgstr "在"
 
 #: src/constants/landing.constants.ts:44
 msgid "Effortlessly exchange tokens across chains with low fees and real-time rates. Whether trading Bitcoin for Solana or optimizing your portfolio, TBC Wallet makes swaps quick and intuitive."
@@ -114,7 +112,7 @@ msgstr "立即探索"
 msgid "Extension"
 msgstr "扩展程序"
 
-#: src/constants/navigation.constants.ts:73
+#: src/constants/navigation.constants.ts:78
 msgid "FAQ"
 msgstr "常见问题"
 
@@ -124,17 +122,29 @@ msgstr "常见问题"
 msgid "Features"
 msgstr "功能"
 
+#: src/constants/navigation.constants.ts:78
+msgid "Find answers to frequently asked questions about TBC Wallet"
+msgstr "查找有关 TBC Wallet 的常见问题解答"
+
+#: src/constants/navigation.constants.ts:64
+msgid "Fortify your wallet with multi-approval transactions for enhanced protection"
+msgstr "通过多重审批交易强化您的钱包，以增强保护"
+
 #: src/constants/landing.constants.ts:37
 msgid "Fortify your wallet with multi-approval transactions for enhanced protection against threats—ideal for personal or shared use, ensuring your assets stay safe and accessible only to you."
 msgstr "通过多重审批交易强化您的钱包，以增强对抗威胁的保护——无论是个人使用还是共享使用，都能确保您的资产仅您可访。"
 
+#: src/constants/navigation.constants.ts:79
+msgid "Get in touch with our support team for assistance"
+msgstr "联系我们的支持团队获取帮助"
+
 #: src/constants/landing.constants.ts:241
 #: src/constants/landing.constants.ts:248
 msgid "Get it from"
-msgstr ""
+msgstr "从"
 
 #: src/constants/landing.constants.ts:50
-#: src/constants/navigation.constants.ts:63
+#: src/constants/navigation.constants.ts:68
 msgid "Instant transfer"
 msgstr "即时转账"
 
@@ -144,14 +154,14 @@ msgstr "iOS 应用"
 
 #: src/constants/landing.constants.ts:233
 msgid "Mac OS"
-msgstr ""
+msgstr "Mac OS"
 
 #: src/constants/navigation.constants.ts:42
 msgid "macOS app"
 msgstr "macOS 应用"
 
 #: src/constants/landing.constants.ts:29
-#: src/constants/navigation.constants.ts:58
+#: src/constants/navigation.constants.ts:63
 msgid "Miner"
 msgstr "矿工"
 
@@ -164,7 +174,7 @@ msgid "Mobile app"
 msgstr "移动应用"
 
 #: src/constants/landing.constants.ts:36
-#: src/constants/navigation.constants.ts:59
+#: src/constants/navigation.constants.ts:64
 msgid "Multi signature"
 msgstr "多重签名"
 
@@ -189,6 +199,10 @@ msgstr "掌控您的加密资产。"
 msgid "Own Your Crypto. Unleash Web3 Possibilities"
 msgstr "掌控您的加密资产，释放 Web3 潜能"
 
+#: src/constants/navigation.constants.ts:71
+msgid "Pay fees in USDT for stable, predictable costs amid market swings"
+msgstr "使用 USDT 支付费用，在市场波动中实现稳定且可预测的成本"
+
 #: src/constants/landing.constants.ts:58
 msgid "Pay fees in USDT for stable, predictable costs amid market swings. This flexible feature adds transparency, making Web3 interactions more budget-friendly and user-centric."
 msgstr "以 USDT 支付费用，在市场波动中实现稳定且可预测的成本。此灵活功能增加了透明度，使 Web3 互动更符合预算、更以用户为中心。"
@@ -197,9 +211,13 @@ msgstr "以 USDT 支付费用，在市场波动中实现稳定且可预测的成
 msgid "Possibilities"
 msgstr "可能性"
 
-#: src/constants/navigation.constants.ts:90
+#: src/constants/navigation.constants.ts:95
 msgid "Privacy Policy"
 msgstr "隐私政策"
+
+#: src/constants/navigation.constants.ts:69
+msgid "Send assets across chains with near-zero delays and minimal costs"
+msgstr "跨链发送资产，实现几乎零延迟和极低成本"
 
 #: src/constants/landing.constants.ts:51
 msgid "Send assets across chains with near-zero delays and minimal costs. TBC Wallet ensures fast, reliable transactions for everyday use, from peer-to-peer sends to dApp funding."
@@ -217,18 +235,18 @@ msgstr "令人惊喜的事即将到来！留下您的电子邮箱，第一时间
 msgid "Stay connected:"
 msgstr "保持联系："
 
-#: src/constants/navigation.constants.ts:71
+#: src/constants/navigation.constants.ts:76
 msgid "Support"
 msgstr "支持"
 
 #: src/constants/landing.constants.ts:43
-#: src/constants/navigation.constants.ts:57
+#: src/constants/navigation.constants.ts:60
 msgid "Swap"
 msgstr "兑换"
 
-#: src/constants/navigation.constants.ts:57
+#: src/constants/navigation.constants.ts:61
 msgid "Swap securely and seamlessly"
-msgstr ""
+msgstr "安全无缝地兑换"
 
 #: src/components/templates/home/desktop/index.tsx:313
 #: src/components/templates/home/mobile/index.tsx:81
@@ -254,7 +272,7 @@ msgstr "TBC Wallet 是领先的多链钱包，具备强大安全性和直观界�
 msgid "TBChain"
 msgstr "TB 链"
 
-#: src/constants/navigation.constants.ts:84
+#: src/constants/navigation.constants.ts:89
 msgid "Terms of Service"
 msgstr "服务条款"
 
@@ -271,7 +289,7 @@ msgstr "波场"
 msgid "Unleash Web3"
 msgstr "释放 Web3"
 
-#: src/constants/navigation.constants.ts:66
+#: src/constants/navigation.constants.ts:71
 msgid "USDT fee"
 msgstr "USDT 手续费"
 
@@ -287,13 +305,13 @@ msgstr "钱包"
 msgid "We’re launching soon!"
 msgstr "我们即将上线！"
 
-#: src/constants/navigation.constants.ts:85
+#: src/constants/navigation.constants.ts:90
 msgid "What you need to know to use our services"
-msgstr ""
+msgstr "使用我们服务需要了解的内容"
 
 #: src/constants/landing.constants.ts:240
 msgid "Windows"
-msgstr ""
+msgstr "Windows"
 
 #: src/constants/navigation.constants.ts:36
 msgid "Windows app"
@@ -304,6 +322,6 @@ msgstr "Windows 应用"
 msgid "Your All-in-One Web3 Wallet"
 msgstr "您的全能型 Web3 钱包"
 
-#: src/constants/navigation.constants.ts:91
+#: src/constants/navigation.constants.ts:96
 msgid "Your privacy matters, learn how we protect it"
-msgstr ""
+msgstr "您的隐私很重要，了解我们如何保护它"

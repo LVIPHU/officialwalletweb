@@ -106,6 +106,9 @@ function getContentType(segments: readonly string[]): ContentType {
   if (segments[0] === 'features') {
     return 'features'
   }
+  if (segments[0] === 'support') {
+    return 'support'
+  }
   return 'blog'
 }
 

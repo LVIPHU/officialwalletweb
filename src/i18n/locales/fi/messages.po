@@ -19,7 +19,7 @@ msgstr ". Kaikki oikeudet pidätetään."
 
 #: src/components/templates/home/desktop/index.tsx:283
 #: src/components/templates/home/mobile/index.tsx:61
-#: src/constants/navigation.constants.ts:79
+#: src/constants/navigation.constants.ts:84
 msgid "About"
 msgstr "Tietoja"
 
@@ -31,7 +31,7 @@ msgstr "Optimoitu Web3-kokemus työpöydälle"
 
 #: src/constants/landing.constants.ts:247
 msgid "Android APK"
-msgstr ""
+msgstr "Android APK"
 
 #: src/constants/navigation.constants.ts:30
 msgid "Android app"
@@ -39,11 +39,15 @@ msgstr "Android-sovellus"
 
 #: src/constants/landing.constants.ts:223
 msgid "App Store"
-msgstr ""
+msgstr "App Store"
 
 #: src/constants/landing.constants.ts:66
 msgid "Bitcoin"
 msgstr "Bitcoin"
+
+#: src/constants/navigation.constants.ts:63
+msgid "Boost earnings by connecting to mining pools and tracking rewards in-app"
+msgstr "Lisää tuottojasi yhdistämällä kaivosaltaisiin ja seuraamalla palkkioita sovelluksessa"
 
 #: src/constants/landing.constants.ts:30
 msgid "Boost earnings by connecting to mining pools and tracking rewards in-app. TBC Wallet simplifies mining management, helping both new and seasoned users maximize returns securely."
@@ -55,12 +59,6 @@ msgstr "Selainlaajennus"
 
 #: src/components/molecules/platform-tabs/index.tsx:67
 #: src/components/templates/coming-soon/index.tsx:26
-#: src/constants/navigation.constants.ts:58
-#: src/constants/navigation.constants.ts:59
-#: src/constants/navigation.constants.ts:64
-#: src/constants/navigation.constants.ts:66
-#: src/constants/navigation.constants.ts:73
-#: src/constants/navigation.constants.ts:74
 msgid "Coming soon"
 msgstr "Tulossa pian"
 
@@ -69,7 +67,7 @@ msgstr "Tulossa pian"
 msgid "Community talk about us"
 msgstr "Yhteisö puhuu meistä"
 
-#: src/constants/navigation.constants.ts:74
+#: src/constants/navigation.constants.ts:79
 msgid "Contact Us"
 msgstr "Ota yhteyttä"
 
@@ -95,7 +93,7 @@ msgstr "Lataa nyt"
 #: src/constants/landing.constants.ts:224
 #: src/constants/landing.constants.ts:234
 msgid "Download on the"
-msgstr ""
+msgstr "Lataa"
 
 #: src/constants/landing.constants.ts:44
 msgid "Effortlessly exchange tokens across chains with low fees and real-time rates. Whether trading Bitcoin for Solana or optimizing your portfolio, TBC Wallet makes swaps quick and intuitive."
@@ -114,7 +112,7 @@ msgstr "Tutustu nyt"
 msgid "Extension"
 msgstr "Laajennus"
 
-#: src/constants/navigation.constants.ts:73
+#: src/constants/navigation.constants.ts:78
 msgid "FAQ"
 msgstr "UKK"
 
@@ -124,17 +122,29 @@ msgstr "UKK"
 msgid "Features"
 msgstr "Ominaisuudet"
 
+#: src/constants/navigation.constants.ts:78
+msgid "Find answers to frequently asked questions about TBC Wallet"
+msgstr "Löydä vastauksia usein kysyttyihin kysymyksiin TBC Walletista"
+
+#: src/constants/navigation.constants.ts:64
+msgid "Fortify your wallet with multi-approval transactions for enhanced protection"
+msgstr "Vahvista lompakkosi monivaiheisilla hyväksymisillä parannettua suojausta varten"
+
 #: src/constants/landing.constants.ts:37
 msgid "Fortify your wallet with multi-approval transactions for enhanced protection against threats—ideal for personal or shared use, ensuring your assets stay safe and accessible only to you."
 msgstr "Vahvista lompakkosi monivaiheisilla hyväksymisillä parannettua suojausta varten — ihanteellinen henkilökohtaiseen tai jaettuun käyttöön, varmistaen että omaisuutesi pysyy turvassa ja saatavilla vain sinulle."
 
+#: src/constants/navigation.constants.ts:79
+msgid "Get in touch with our support team for assistance"
+msgstr "Ota yhteyttä tukitiimiimme apua varten"
+
 #: src/constants/landing.constants.ts:241
 #: src/constants/landing.constants.ts:248
 msgid "Get it from"
-msgstr ""
+msgstr "Hanki se"
 
 #: src/constants/landing.constants.ts:50
-#: src/constants/navigation.constants.ts:63
+#: src/constants/navigation.constants.ts:68
 msgid "Instant transfer"
 msgstr "Välitön siirto"
 
@@ -144,14 +154,14 @@ msgstr "iOS-sovellus"
 
 #: src/constants/landing.constants.ts:233
 msgid "Mac OS"
-msgstr ""
+msgstr "Mac OS"
 
 #: src/constants/navigation.constants.ts:42
 msgid "macOS app"
 msgstr "macOS-sovellus"
 
 #: src/constants/landing.constants.ts:29
-#: src/constants/navigation.constants.ts:58
+#: src/constants/navigation.constants.ts:63
 msgid "Miner"
 msgstr "Lohkonlouhija"
 
@@ -164,7 +174,7 @@ msgid "Mobile app"
 msgstr "Mobiilisovellus"
 
 #: src/constants/landing.constants.ts:36
-#: src/constants/navigation.constants.ts:59
+#: src/constants/navigation.constants.ts:64
 msgid "Multi signature"
 msgstr "Moniallekirjoitus"
 
@@ -189,6 +199,10 @@ msgstr "Omista kryptosi."
 msgid "Own Your Crypto. Unleash Web3 Possibilities"
 msgstr "Omista kryptosi. Vapauta Web3-mahdollisuudet"
 
+#: src/constants/navigation.constants.ts:71
+msgid "Pay fees in USDT for stable, predictable costs amid market swings"
+msgstr "Maksa palkkiot USDT:ssä vakaiden, ennakoitavissa olevien kustannusten vuoksi markkinoiden vaihteluiden keskellä"
+
 #: src/constants/landing.constants.ts:58
 msgid "Pay fees in USDT for stable, predictable costs amid market swings. This flexible feature adds transparency, making Web3 interactions more budget-friendly and user-centric."
 msgstr "Maksa palkkiot USDT:ssä vakaiden, ennakoitavissa olevien kustannusten vuoksi markkinoiden vaihteluiden keskellä. Tämä joustava ominaisuus lisää läpinäkyvyyttä ja tekee Web3-vuorovaikutuksesta budjettiystävällisempää ja käyttäjäkeskeistä."
@@ -197,9 +211,13 @@ msgstr "Maksa palkkiot USDT:ssä vakaiden, ennakoitavissa olevien kustannusten v
 msgid "Possibilities"
 msgstr "Mahdollisuudet"
 
-#: src/constants/navigation.constants.ts:90
+#: src/constants/navigation.constants.ts:95
 msgid "Privacy Policy"
 msgstr "Tietosuojakäytäntö"
+
+#: src/constants/navigation.constants.ts:69
+msgid "Send assets across chains with near-zero delays and minimal costs"
+msgstr "Lähetä varoja ketjujen välillä lähes nollaviiveellä ja minimaalisin kustannuksin"
 
 #: src/constants/landing.constants.ts:51
 msgid "Send assets across chains with near-zero delays and minimal costs. TBC Wallet ensures fast, reliable transactions for everyday use, from peer-to-peer sends to dApp funding."
@@ -217,18 +235,18 @@ msgstr "Jotain uskomatonta on tulossa! Jätä sähköpostisi alle, niin olet ens
 msgid "Stay connected:"
 msgstr "Pysy yhteydessä:"
 
-#: src/constants/navigation.constants.ts:71
+#: src/constants/navigation.constants.ts:76
 msgid "Support"
 msgstr "Tuki"
 
 #: src/constants/landing.constants.ts:43
-#: src/constants/navigation.constants.ts:57
+#: src/constants/navigation.constants.ts:60
 msgid "Swap"
 msgstr "Vaihda"
 
-#: src/constants/navigation.constants.ts:57
+#: src/constants/navigation.constants.ts:61
 msgid "Swap securely and seamlessly"
-msgstr ""
+msgstr "Vaihda turvallisesti ja saumattomasti"
 
 #: src/components/templates/home/desktop/index.tsx:313
 #: src/components/templates/home/mobile/index.tsx:81
@@ -254,7 +272,7 @@ msgstr "TBC Wallet on johtava moniketjuinen lompakko, jolla on vankka turvallisu
 msgid "TBChain"
 msgstr "TBChain"
 
-#: src/constants/navigation.constants.ts:84
+#: src/constants/navigation.constants.ts:89
 msgid "Terms of Service"
 msgstr "Käyttöehdot"
 
@@ -271,7 +289,7 @@ msgstr "Tron"
 msgid "Unleash Web3"
 msgstr "Vapauta Web3"
 
-#: src/constants/navigation.constants.ts:66
+#: src/constants/navigation.constants.ts:71
 msgid "USDT fee"
 msgstr "USDT-maksu"
 
@@ -287,13 +305,13 @@ msgstr "Lompakko"
 msgid "We’re launching soon!"
 msgstr "Julkaisemme pian!"
 
-#: src/constants/navigation.constants.ts:85
+#: src/constants/navigation.constants.ts:90
 msgid "What you need to know to use our services"
-msgstr ""
+msgstr "Mitä sinun tarvitsee tietää palveluidemme käyttämiseksi"
 
 #: src/constants/landing.constants.ts:240
 msgid "Windows"
-msgstr ""
+msgstr "Windows"
 
 #: src/constants/navigation.constants.ts:36
 msgid "Windows app"
@@ -304,6 +322,6 @@ msgstr "Windows-sovellus"
 msgid "Your All-in-One Web3 Wallet"
 msgstr "Kaikki-yhdessä Web3-lompakkosi"
 
-#: src/constants/navigation.constants.ts:91
+#: src/constants/navigation.constants.ts:96
 msgid "Your privacy matters, learn how we protect it"
-msgstr ""
+msgstr "Yksityisyytesi on tärkeä, opi miten suojaamme sitä"

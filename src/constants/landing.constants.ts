@@ -96,7 +96,7 @@ export const TESTIMONIALS: Testimonial[] = [
     role: 'Crypto Investor',
     content:
       "TBC Wallet has completely transformed how I manage my crypto portfolio. The interface is intuitive and the security is top-notch.'",
-    avatar: 'https://i.pravatar.cc/201',
+    avatar: '/assets/avatar/1.webp',
   },
   {
     id: '2',
@@ -104,7 +104,7 @@ export const TESTIMONIALS: Testimonial[] = [
     role: 'DeFi Enthusiast',
     content:
       'The staking features and DeFi integration make TBC Wallet my go-to platform. I have earned more rewards than ever before.',
-    avatar: 'https://i.pravatar.cc/202',
+    avatar: '/assets/avatar/2.webp',
   },
   {
     id: '3',
@@ -112,14 +112,14 @@ export const TESTIMONIALS: Testimonial[] = [
     role: 'Beginner Trader',
     content:
       'As someone new to crypto, TBC Wallet made it so easy to get started. The tutorials and support team are amazing.',
-    avatar: 'https://i.pravatar.cc/203',
+    avatar: '/assets/avatar/3.webp',
   },
   {
     id: '4',
     name: 'Jay Jay',
     role: 'Free trader',
     content: 'As a leading self- custody multi- chain platform, we support millions of assets across 100+ blockchains.',
-    avatar: 'https://i.pravatar.cc/204',
+    avatar: '/assets/avatar/4.webp',
   },
   {
     id: '5',
@@ -127,7 +127,7 @@ export const TESTIMONIALS: Testimonial[] = [
     role: 'Crypto Investor',
     content:
       "TBC Wallet has completely transformed how I manage my crypto portfolio. The interface is intuitive and the security is top-notch.'",
-    avatar: 'https://i.pravatar.cc/205',
+    avatar: '/assets/avatar/5.webp',
   },
   {
     id: '6',
@@ -135,7 +135,7 @@ export const TESTIMONIALS: Testimonial[] = [
     role: 'DeFi Enthusiast',
     content:
       'The staking features and DeFi integration make TBC Wallet my go-to platform. I have earned more rewards than ever before.',
-    avatar: 'https://i.pravatar.cc/206',
+    avatar: '/assets/avatar/6.webp',
   },
   {
     id: '7',
@@ -143,14 +143,14 @@ export const TESTIMONIALS: Testimonial[] = [
     role: 'Beginner Trader',
     content:
       'As someone new to crypto, TBC Wallet made it so easy to get started. The tutorials and support team are amazing.',
-    avatar: 'https://i.pravatar.cc/207',
+    avatar: '/assets/avatar/7.webp',
   },
   {
     id: '8',
     name: 'Jay Jay',
     role: 'Free trader',
     content: 'As a leading self- custody multi- chain platform, we support millions of assets across 100+ blockchains.',
-    avatar: 'https://i.pravatar.cc/208',
+    avatar: '/assets/avatar/8.webp',
   },
   {
     id: '9',
@@ -158,7 +158,7 @@ export const TESTIMONIALS: Testimonial[] = [
     role: 'Crypto Investor',
     content:
       "TBC Wallet has completely transformed how I manage my crypto portfolio. The interface is intuitive and the security is top-notch.'",
-    avatar: 'https://i.pravatar.cc/209',
+    avatar: '/assets/avatar/9.webp',
   },
   {
     id: '10',
@@ -166,7 +166,7 @@ export const TESTIMONIALS: Testimonial[] = [
     role: 'DeFi Enthusiast',
     content:
       'The staking features and DeFi integration make TBC Wallet my go-to platform. I have earned more rewards than ever before.',
-    avatar: 'https://i.pravatar.cc/210',
+    avatar: '/assets/avatar/10.webp',
   },
   {
     id: '11',
@@ -174,14 +174,14 @@ export const TESTIMONIALS: Testimonial[] = [
     role: 'Beginner Trader',
     content:
       'As someone new to crypto, TBC Wallet made it so easy to get started. The tutorials and support team are amazing.',
-    avatar: 'https://i.pravatar.cc/211',
+    avatar: '/assets/avatar/11.webp',
   },
   {
     id: '12',
     name: 'Jay Jay',
     role: 'Free trader',
     content: 'As a leading self- custody multi- chain platform, we support millions of assets across 100+ blockchains.',
-    avatar: 'https://i.pravatar.cc/212',
+    avatar: '/assets/avatar/12.webp',
   },
   {
     id: '13',
@@ -189,7 +189,7 @@ export const TESTIMONIALS: Testimonial[] = [
     role: 'Crypto Investor',
     content:
       "TBC Wallet has completely transformed how I manage my crypto portfolio. The interface is intuitive and the security is top-notch.'",
-    avatar: 'https://i.pravatar.cc/213',
+    avatar: '/assets/avatar/13.webp',
   },
   {
     id: '14',
@@ -197,7 +197,7 @@ export const TESTIMONIALS: Testimonial[] = [
     role: 'DeFi Enthusiast',
     content:
       'The staking features and DeFi integration make TBC Wallet my go-to platform. I have earned more rewards than ever before.',
-    avatar: 'https://i.pravatar.cc/214',
+    avatar: '/assets/avatar/14.webp',
   },
   {
     id: '15',
@@ -205,14 +205,14 @@ export const TESTIMONIALS: Testimonial[] = [
     role: 'Beginner Trader',
     content:
       'As someone new to crypto, TBC Wallet made it so easy to get started. The tutorials and support team are amazing.',
-    avatar: 'https://i.pravatar.cc/215',
+    avatar: '/assets/avatar/15.webp',
   },
   {
     id: '16',
     name: 'Jay Jay',
     role: 'Free trader',
     content: 'As a leading self- custody multi- chain platform, we support millions of assets across 100+ blockchains.',
-    avatar: 'https://i.pravatar.cc/216',
+    avatar: '/assets/avatar/16.webp',
   },
 ] as const
 

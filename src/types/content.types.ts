@@ -7,7 +7,7 @@
  * from NEXSOFT.
  */
 
-export type ContentType = 'legal' | 'features' | 'blog'
+export type ContentType = 'legal' | 'features' | 'blog' | 'support'
 
 export interface TocHeading {
   readonly url: string
