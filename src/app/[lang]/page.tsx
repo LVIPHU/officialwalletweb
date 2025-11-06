@@ -7,8 +7,21 @@
  * from NEXSOFT.
  */
 
+import type { Metadata } from 'next'
 import HomeTemplate from '@/components/templates/home'
 import { initLingui, PageLangParam } from '@/i18n/initLingui'
+import { genPageMetadata } from '@/lib/seo'
+import { SITE_METADATA } from '@/constants/site-metadata.constants'
+
+export async function generateMetadata({ params }: PageLangParam): Promise<Metadata> {
+  const lang = (await params).lang
+  return genPageMetadata({
+    title: SITE_METADATA.titleHeader,
+    description: SITE_METADATA.description,
+    lang,
+    path: '',
+  })
+}
 
 export default async function HomePage(props: PageLangParam) {
   const lang = (await props.params).lang

@@ -57,7 +57,7 @@ export function Toc({ headings }: TocProps) {
               <li key={`heading-${h.url}-${i}`} className={cn('text-sm transition-all duration-200')}>
                 <a
                   className={cn(
-                    'hover:text-primary! flex leading-normal transition-colors duration-300 ease-in-out ',
+                    'hover:text-primary! flex leading-normal transition-colors duration-300 ease-in-out',
                     'before:me-2 before:font-black before:content-["-"]',
                     isActive ? 'text-primary' : 'text-gray-600 dark:text-white'
                   )}
@@ -66,7 +66,7 @@ export function Toc({ headings }: TocProps) {
                 >
                   <p
                     className={cn(
-                      'font-bold text-xs transition-opacity truncate duration-300 ease-in-out',
+                      'truncate text-xs font-bold transition-opacity duration-300 ease-in-out',
                       isActive ? 'opacity-100' : 'opacity-0 group-hover:opacity-100'
                     )}
                   >

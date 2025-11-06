@@ -1,0 +1,118 @@
+/**
+ * Copyright (c) 2025 NEXSOFT. All rights reserved.
+ *
+ * This source code is proprietary and confidential.
+ * Unauthorized copying, distribution, or modification of this file,
+ * in whole or in part, is strictly prohibited without prior written consent
+ * from NEXSOFT.
+ */
+
+import type { Metadata } from 'next'
+import linguiConfig from '../../lingui.config'
+import { SITE_METADATA } from '@/constants/site-metadata.constants'
+
+const { locales } = linguiConfig
+
+interface PageSEOProps {
+  title: string
+  description?: string
+  image?: string
+  lang?: string
+  path?: string
+  date?: string
+  type?: 'website' | 'article'
+  [key: string]: unknown
+}
+
+/**
+ * Generate page metadata with SEO optimization for multi-language support
+ * @param props - SEO properties including title, description, image, lang, path, etc.
+ * @returns Complete Metadata object for Next.js
+ */
+export function genPageMetadata({
+  title,
+  description,
+  image,
+  lang = 'en',
+  path = '',
+  date,
+  type = 'website',
+  ...rest
+}: PageSEOProps): Metadata {
+  const siteUrl = SITE_METADATA.siteUrl || 'https://tbchatofficial.com'
+  const fullTitle = title ? `${title} | ${SITE_METADATA.title}` : SITE_METADATA.title
+  // Ensure description is never empty - use default if missing
+  const fullDescription = description?.trim() || SITE_METADATA.description || 'TBC Wallet - Secure cryptocurrency management platform'
+  const fullImage = image || SITE_METADATA.socialBanner
+  const canonicalUrl = `${siteUrl}/${lang}${path ? `/${path}` : ''}`
+
+  // Generate hreflang alternates for all locales
+  const languages: Record<string, string> = {}
+
+  // Add hreflang for all supported locales
+  locales.forEach((locale) => {
+    if (locale !== 'pseudo') {
+      const alternatePath = path ? `/${locale}/${path}` : `/${locale}`
+      languages[locale] = `${siteUrl}${alternatePath}`
+    }
+  })
+
+  const alternates: Metadata['alternates'] = {
+    canonical: canonicalUrl,
+    languages,
+  }
+
+  // Add RSS feed alternates
+  alternates.types = {
+    'application/rss+xml': [
+      {
+        url: `${siteUrl}/${lang}/feed.xml`,
+        title: `${SITE_METADATA.title} - ${lang.toUpperCase()}`,
+      },
+    ],
+  }
+
+  const metadata: Metadata = {
+    title: fullTitle,
+    description: fullDescription,
+    alternates,
+    openGraph: {
+      title: fullTitle,
+      description: fullDescription,
+      url: canonicalUrl,
+      siteName: SITE_METADATA.titleHeader,
+      images: [
+        {
+          url: fullImage,
+          width: 1200,
+          height: 630,
+          alt: title || SITE_METADATA.title,
+        },
+      ],
+      locale: lang === 'zh-hans' ? 'zh_CN' : lang === 'zh-hant' ? 'zh_TW' : lang,
+      type,
+      ...(date && type === 'article' ? { publishedTime: date } : {}),
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title: fullTitle,
+      description: fullDescription,
+      images: [fullImage],
+      creator: SITE_METADATA.x,
+    },
+    robots: {
+      index: true,
+      follow: true,
+      googleBot: {
+        index: true,
+        follow: true,
+        'max-video-preview': -1,
+        'max-image-preview': 'large',
+        'max-snippet': -1,
+      },
+    },
+    ...rest,
+  }
+
+  return metadata
+}

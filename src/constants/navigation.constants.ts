@@ -54,7 +54,12 @@ export const NAVIGATION_ITEMS: Navigation = [
     id: 'features',
     title: msg`Features`,
     items: [
-      { id: 'swap', href: 'https://dex-test.nexsoft.duckdns.org/', title: msg`Swap`, description: msg`Swap securely and seamlessly` },
+      {
+        id: 'swap',
+        href: 'https://dex-test.nexsoft.duckdns.org/',
+        title: msg`Swap`,
+        description: msg`Swap securely and seamlessly`,
+      },
       { id: 'miner', href: '/miner', title: msg`Miner`, description: msg`Coming soon` },
       { id: 'multi-signature', href: '/multi-signature', title: msg`Multi signature`, description: msg`Coming soon` },
       {

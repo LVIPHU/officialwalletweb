@@ -6,6 +6,7 @@
     "analyze": "ANALYZE=true next build",
     "dev": "next dev --turbopack",
     "build": "next build --turbopack",
+    "deploy": "npm run rss:generate && next build --turbopack",
     "start": "next start",
     "lint": "eslint --no-cache",
     "lint:fix": "eslint --no-cache --fix",
@@ -13,7 +14,9 @@
     "format:write": "prettier --write --ignore-path .gitignore .",
     "lingui:extract": "lingui extract --clean --overwrite",
     "lingui:compile": "lingui compile",
-    "copyright": "node scripts/copyright.js"
+    "copyright": "node scripts/copyright.js",
+    "rss:generate": "node scripts/generate-rss.js",
+    "prebuild": "npm run rss:generate"
   },
   "dependencies": {
     "@lingui/core": "^5.5.0",

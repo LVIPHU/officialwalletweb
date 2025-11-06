@@ -20,15 +20,26 @@ import { FONT_CLASH_DISPLAY, FONT_POPPINS } from '@/styles/fonts'
 import DefaultLayout from '@/layouts/default'
 import { getDirection } from '@/lib/direction'
 import { LOCALES } from '@/constants/direction.constants'
+import { genPageMetadata } from '@/lib/seo'
+import { SITE_METADATA } from '@/constants/site-metadata.constants'
 
 export async function generateStaticParams() {
   return linguiConfig.locales.map((lang) => ({ lang }))
 }
 
-export const metadata: Metadata = {
-  title: 'TBC Wallet - The Future of Cryptocurrency Management',
-  description:
-    'Experience the future of cryptocurrency management with TBC Wallet. Secure, fast, and user-friendly platform for all your digital assets.',
+export async function generateMetadata({ params }: PageLangParam): Promise<Metadata> {
+  const lang = (await params).lang
+  const metadata = genPageMetadata({
+    title: SITE_METADATA.titleHeader,
+    description: SITE_METADATA.description,
+    lang,
+    path: '',
+  })
+
+  return {
+    ...metadata,
+    metadataBase: new URL(SITE_METADATA.siteUrl || 'https://officialwalletweb.vercel.app'),
+  }
 }
 
 export default async function RootLayout({ children, params }: Readonly<PropsWithChildren<PageLangParam>>) {
@@ -46,6 +57,30 @@ export default async function RootLayout({ children, params }: Readonly<PropsWit
         <link rel='prefetch' as='image' href='/assets/background/glow-purple.webp' />
         <link rel='prefetch' as='image' href='/assets/background/glow-orange.webp' />
         <link rel='prefetch' as='image' href='/assets/background/glow-olive.webp' />
+        <link
+          rel='alternate'
+          type='application/rss+xml'
+          href={`${SITE_METADATA.siteUrl}/${lang}/feed.xml`}
+          title={`${SITE_METADATA.titleHeader} - ${lang.toUpperCase()}`}
+        />
+        <link
+          rel='alternate'
+          type='application/rss+xml'
+          href={`${SITE_METADATA.siteUrl}/${lang}/feed-legal.xml`}
+          title={`${SITE_METADATA.titleHeader} - Legal (${lang.toUpperCase()})`}
+        />
+        <link
+          rel='alternate'
+          type='application/rss+xml'
+          href={`${SITE_METADATA.siteUrl}/${lang}/feed-features.xml`}
+          title={`${SITE_METADATA.titleHeader} - Features (${lang.toUpperCase()})`}
+        />
+        <link
+          rel='alternate'
+          type='application/rss+xml'
+          href={`${SITE_METADATA.siteUrl}/${lang}/feed-blog.xml`}
+          title={`${SITE_METADATA.titleHeader} - Blog (${lang.toUpperCase()})`}
+        />
         <title />
       </head>
       <body className={cn('relative flex min-h-dvh flex-col pl-[calc(100vw-100%)] antialiased')}>

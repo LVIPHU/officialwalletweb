@@ -15,10 +15,15 @@ import MdxLayout from '@/components/templates/mdx-layout'
 import { initLingui } from '@/i18n/initLingui'
 import { getAllContentPaths } from '@/lib/content-utils'
 import type { ContentType } from '@/types/content.types'
+import { genPageMetadata } from '@/lib/seo'
 
 interface DynamicPageParams {
   params: Promise<{ lang: string; rest: string[] }>
 }
+
+// Constants - valid locales (excluding pseudo locale)
+const VALID_LOCALES = ['ar', 'en', 'es', 'fi', 'fr', 'pt', 'zh-hans', 'zh-hant']
+const EXCLUDED_PATHS = ['.well-known']
 
 /**
  * Generate static params for all MDX content files
@@ -38,24 +43,56 @@ export async function generateStaticParams() {
 }
 
 /**
+ * Validate if route should be handled
+ */
+function shouldHandleRoute(lang: string, rest: string[]): boolean {
+  if (!VALID_LOCALES.includes(lang)) return false
+
+  const firstSegment = rest[0] || ''
+  if (EXCLUDED_PATHS.some((path) => firstSegment.startsWith(path))) return false
+
+  // RSS feeds are served as static files from public/
+  if (firstSegment === 'feed.xml' || firstSegment.startsWith('feed-')) return false
+
+  return true
+}
+
+/**
  * Generate metadata for the page based on content frontmatter
  */
 export async function generateMetadata({ params }: DynamicPageParams): Promise<Metadata> {
   const { lang, rest } = await params
 
+  if (!shouldHandleRoute(lang, rest)) {
+    return genPageMetadata({
+      title: 'TBC Wallet',
+      description: 'TBC Wallet documentation and content',
+      lang: 'en',
+      path: '',
+    })
+  }
+
   try {
     initLingui(lang)
     const { data } = await getContentByPath(lang, rest)
+    const pathString = rest.join('/')
+    const contentType = getContentType(rest)
 
-    return {
-      title: data.title ? `${data.title} - TBC Wallet` : 'TBC Wallet',
+    return genPageMetadata({
+      title: data.title || pathString,
       description: data.description || 'TBC Wallet documentation and content',
-    }
+      lang,
+      path: pathString,
+      date: data.date,
+      type: contentType === 'blog' ? 'article' : 'website',
+    })
   } catch {
-    return {
+    return genPageMetadata({
       title: 'TBC Wallet',
       description: 'TBC Wallet documentation and content',
-    }
+      lang: VALID_LOCALES.includes(lang) ? lang : 'en',
+      path: rest.join('/'),
+    })
   }
 }
 
@@ -80,8 +117,8 @@ function getContentType(segments: readonly string[]): ContentType {
 export default async function DynamicContentPage({ params }: DynamicPageParams) {
   const { lang, rest } = await params
 
-  // Skip if rest is empty or has invalid segments
-  if (!rest || rest.length === 0) {
+  // Early return for invalid routes
+  if (!rest || rest.length === 0 || !shouldHandleRoute(lang, rest)) {
     notFound()
   }
 
