@@ -61,6 +61,19 @@ const nextConfig: NextConfig = {
       test: /\.(glsl|vs|fs|vert|frag)$/,
       use: ['raw-loader', 'glslify-loader'],
     })
+    // MDX loader for content files
+    config.module.rules.push({
+      test: /\.mdx$/,
+      use: [
+        {
+          loader: '@mdx-js/loader',
+          options: {
+            remarkPlugins: [require('remark-gfm'), require('remark-slug')],
+            rehypePlugins: [],
+          },
+        },
+      ],
+    })
 
     return config
   },

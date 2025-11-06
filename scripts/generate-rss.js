@@ -17,7 +17,7 @@ const matter = require('gray-matter')
 const CONTENT_DIR = path.join(process.cwd(), 'src', 'content')
 const OUTPUT_DIR = path.join(process.cwd(), 'public')
 const LOCALES = ['ar', 'en', 'es', 'fi', 'fr', 'pt', 'zh-hans', 'zh-hant']
-const VALID_TYPES = ['legal', 'features', 'support', 'blog']
+const VALID_TYPES = ['legal', 'features', 'blog']
 
 const SITE_METADATA = {
   title: 'TBC Wallet - The Future of Cryptocurrency Management',

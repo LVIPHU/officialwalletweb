@@ -15,11 +15,31 @@ msgstr ""
 msgid ". All rights reserved."
 msgstr "。版權所有。"
 
+#: src/constants/faq.constants.ts:47
+msgid "1. Download TBC Wallet from the App Store, Google Play, or our website. 2. Create a new wallet or import an existing one. 3. Secure your wallet with a strong password and backup your recovery phrase. 4. Start managing your digital assets."
+msgstr ""
+
+#: src/constants/faq.constants.ts:162
+msgid "1. Go to Settings. 2. Select Security. 3. Choose Change Password. 4. Enter your current and new password. 5. Confirm the change."
+msgstr ""
+
 #: src/components/templates/home/desktop/index.tsx:283
 #: src/components/templates/home/mobile/index.tsx:61
-#: src/constants/navigation.constants.ts:84
+#: src/constants/navigation.constants.ts:109
 msgid "About"
 msgstr "關於"
+
+#: src/constants/faq.constants.ts:157
+msgid "Account Management"
+msgstr ""
+
+#: src/constants/faq.constants.ts:199
+msgid "Additional Resources"
+msgstr ""
+
+#: src/constants/faq.constants.ts:68
+msgid "Always backup your recovery phrase (12 or 24 words) in a secure location: Write it down on paper and store it safely. Never store it digitally or share it online. Consider using a hardware wallet for additional security."
+msgstr ""
 
 #: src/constants/navigation.constants.ts:37
 #: src/constants/navigation.constants.ts:43
@@ -39,11 +59,15 @@ msgstr "Android 應用程式"
 msgid "App Store"
 msgstr "App Store"
 
+#: src/constants/faq.constants.ts:208
+msgid "Are there tutorials available?"
+msgstr ""
+
 #: src/constants/landing.constants.ts:66
 msgid "Bitcoin"
 msgstr "比特幣"
 
-#: src/constants/navigation.constants.ts:63
+#: src/constants/navigation.constants.ts:67
 msgid "Boost earnings by connecting to mining pools and tracking rewards in-app"
 msgstr "透過連接礦池並在應用程式中追蹤獎勵以提升收益"
 
@@ -55,6 +79,22 @@ msgstr "透過連接礦池並在應用程式中追蹤獎勵以提升收益。TBC
 msgid "Browser Extension"
 msgstr "瀏覽器擴充功能"
 
+#: src/constants/faq.constants.ts:119
+msgid "Can I cancel a transaction?"
+msgstr ""
+
+#: src/constants/faq.constants.ts:166
+msgid "Can I have multiple wallets?"
+msgstr ""
+
+#: src/constants/faq.constants.ts:98
+msgid "Can I pay fees with USDT?"
+msgstr ""
+
+#: src/constants/faq.constants.ts:72
+msgid "Can TBC Wallet access my funds?"
+msgstr ""
+
 #: src/components/molecules/platform-tabs/index.tsx:67
 #: src/components/templates/coming-soon/index.tsx:26
 msgid "Coming soon"
@@ -65,7 +105,8 @@ msgstr "即將推出"
 msgid "Community talk about us"
 msgstr "社群對我們的評價"
 
-#: src/constants/navigation.constants.ts:79
+#: src/components/molecules/contact-title/index.tsx:24
+#: src/constants/navigation.constants.ts:102
 msgid "Contact Us"
 msgstr "聯絡我們"
 
@@ -110,21 +151,22 @@ msgstr "立即探索"
 msgid "Extension"
 msgstr "擴充功能"
 
-#: src/constants/navigation.constants.ts:78
+#: src/constants/navigation.constants.ts:96
 msgid "FAQ"
 msgstr "常見問題"
 
 #: src/components/molecules/feature-card/index.tsx:34
 #: src/components/molecules/features-slides-horizontal/index.tsx:136
+#: src/constants/faq.constants.ts:79
 #: src/constants/navigation.constants.ts:55
 msgid "Features"
 msgstr "功能特色"
 
-#: src/constants/navigation.constants.ts:78
+#: src/constants/navigation.constants.ts:97
 msgid "Find answers to frequently asked questions about TBC Wallet"
 msgstr "查找有關 TBC Wallet 的常見問題解答"
 
-#: src/constants/navigation.constants.ts:64
+#: src/constants/navigation.constants.ts:73
 msgid "Fortify your wallet with multi-approval transactions for enhanced protection"
 msgstr "透過多重簽章交易強化錢包防護"
 
@@ -132,7 +174,16 @@ msgstr "透過多重簽章交易強化錢包防護"
 msgid "Fortify your wallet with multi-approval transactions for enhanced protection against threats—ideal for personal or shared use, ensuring your assets stay safe and accessible only to you."
 msgstr "透過多重簽章交易強化錢包防護，防範潛在威脅。無論個人或團隊使用，都能確保資產安全且僅由您掌控。"
 
-#: src/constants/navigation.constants.ts:79
+#: src/components/molecules/faq-title/index.tsx:23
+msgid "Frequently Asked Questions"
+msgstr ""
+
+#: src/constants/faq.constants.ts:27
+msgid "General Questions"
+msgstr ""
+
+#: src/components/molecules/contact-title/index.tsx:28
+#: src/constants/navigation.constants.ts:103
 msgid "Get in touch with our support team for assistance"
 msgstr "聯繫我們的支援團隊獲取幫助"
 
@@ -141,14 +192,74 @@ msgstr "聯繫我們的支援團隊獲取幫助"
 msgid "Get it from"
 msgstr "從"
 
+#: src/constants/faq.constants.ts:182
+msgid "How can I contact support?"
+msgstr ""
+
+#: src/constants/faq.constants.ts:67
+msgid "How do I backup my wallet?"
+msgstr ""
+
+#: src/constants/faq.constants.ts:161
+msgid "How do I change my password?"
+msgstr ""
+
+#: src/constants/faq.constants.ts:171
+msgid "How do I delete my wallet?"
+msgstr ""
+
+#: src/constants/faq.constants.ts:46
+msgid "How do I get started with TBC Wallet?"
+msgstr ""
+
+#: src/constants/faq.constants.ts:150
+msgid "How do I update TBC Wallet?"
+msgstr ""
+
+#: src/constants/faq.constants.ts:93
+msgid "How does Instant Transfer work?"
+msgstr ""
+
+#: src/constants/faq.constants.ts:109
+msgid "How long do transactions take?"
+msgstr ""
+
+#: src/constants/faq.constants.ts:57
+msgid "How secure is TBC Wallet?"
+msgstr ""
+
+#: src/constants/faq.constants.ts:140
+msgid "I can't see my balance. What's wrong?"
+msgstr ""
+
+#: src/constants/faq.constants.ts:136
+msgid "If a transaction fails: 1. Check your network connection. 2. Verify you have sufficient balance for fees. 3. Try increasing the transaction fee. 4. Contact support if the issue persists."
+msgstr ""
+
+#: src/constants/faq.constants.ts:63
+msgid "If you lose your device: 1. Use your recovery phrase on a new device to restore your wallet. 2. Immediately transfer funds to a new wallet if possible. 3. Contact support if you need assistance. 4. Never share your recovery phrase with anyone."
+msgstr ""
+
+#: src/constants/faq.constants.ts:141
+msgid "If your balance isn't showing: 1. Check your internet connection. 2. Refresh the wallet. 3. Verify you're on the correct network. 4. Check if the transaction was successful on a blockchain explorer."
+msgstr ""
+
 #: src/constants/landing.constants.ts:50
-#: src/constants/navigation.constants.ts:68
+#: src/constants/navigation.constants.ts:78
 msgid "Instant transfer"
 msgstr "即時轉帳"
+
+#: src/constants/faq.constants.ts:94
+msgid "Instant Transfer enables fast cross-chain transactions with minimal fees. It uses advanced cross-chain protocols to transfer assets between different blockchain networks almost instantly."
+msgstr ""
 
 #: src/constants/navigation.constants.ts:24
 msgid "iOS app"
 msgstr "iOS 應用程式"
+
+#: src/constants/faq.constants.ts:41
+msgid "Is TBC Wallet free to use?"
+msgstr ""
 
 #: src/constants/landing.constants.ts:233
 msgid "Mac OS"
@@ -159,7 +270,7 @@ msgid "macOS app"
 msgstr "macOS 應用程式"
 
 #: src/constants/landing.constants.ts:29
-#: src/constants/navigation.constants.ts:63
+#: src/constants/navigation.constants.ts:66
 msgid "Miner"
 msgstr "礦工"
 
@@ -172,9 +283,17 @@ msgid "Mobile app"
 msgstr "行動應用程式"
 
 #: src/constants/landing.constants.ts:36
-#: src/constants/navigation.constants.ts:64
+#: src/constants/navigation.constants.ts:72
 msgid "Multi signature"
 msgstr "多重簽章"
+
+#: src/constants/faq.constants.ts:89
+msgid "Multi-signature (multi-sig) requires multiple approvals before a transaction can be executed. This adds an extra layer of security, ideal for shared wallets or high-value accounts."
+msgstr ""
+
+#: src/constants/faq.constants.ts:135
+msgid "My transaction failed. What should I do?"
+msgstr ""
 
 #: src/components/templates/coming-soon/index.tsx:39
 msgid "name@email.com"
@@ -184,10 +303,22 @@ msgstr "name@email.com"
 msgid "No language found."
 msgstr "未找到語言。"
 
+#: src/constants/faq.constants.ts:73
+msgid "No, TBC Wallet cannot access your funds. Your private keys are stored locally on your device and are never transmitted to our servers. You have complete control over your assets."
+msgstr ""
+
+#: src/constants/faq.constants.ts:120
+msgid "Once a transaction is confirmed on the blockchain, it cannot be cancelled. Always verify transaction details before confirming."
+msgstr ""
+
 #: src/components/templates/home/desktop/index.tsx:381
 #: src/components/templates/home/mobile/index.tsx:124
 msgid "One wallet. Cross platform"
 msgstr "一個錢包，跨平台使用"
+
+#: src/constants/faq.constants.ts:193
+msgid "Our support team is available 24/7 to assist you with any questions or issues."
+msgstr ""
 
 #: src/components/templates/home/desktop/index.tsx:248
 msgid "Own Your Crypto."
@@ -197,7 +328,7 @@ msgstr "掌控您的加密資產。"
 msgid "Own Your Crypto. Unleash Web3 Possibilities"
 msgstr "掌控您的加密資產，釋放 Web3 潛能"
 
-#: src/constants/navigation.constants.ts:71
+#: src/constants/navigation.constants.ts:85
 msgid "Pay fees in USDT for stable, predictable costs amid market swings"
 msgstr "以 USDT 支付手續費，在市場波動中保持穩定、可預測的成本"
 
@@ -209,11 +340,15 @@ msgstr "以 USDT 支付手續費，在市場波動中保持穩定、可預測的
 msgid "Possibilities"
 msgstr "無限潛能"
 
-#: src/constants/navigation.constants.ts:95
+#: src/constants/navigation.constants.ts:120
 msgid "Privacy Policy"
 msgstr "隱私政策"
 
-#: src/constants/navigation.constants.ts:69
+#: src/constants/faq.constants.ts:53
+msgid "Security"
+msgstr ""
+
+#: src/constants/navigation.constants.ts:79
 msgid "Send assets across chains with near-zero delays and minimal costs"
 msgstr "跨鏈轉移資產，延遲近乎為零、成本極低"
 
@@ -233,7 +368,8 @@ msgstr "令人驚豔的新體驗即將登場！留下您的電子郵件，搶先
 msgid "Stay connected:"
 msgstr "保持聯繫："
 
-#: src/constants/navigation.constants.ts:76
+#: src/constants/faq.constants.ts:178
+#: src/constants/navigation.constants.ts:91
 msgid "Support"
 msgstr "支援"
 
@@ -256,6 +392,10 @@ msgstr "TBC Wallet 為新手與專業用戶架起橋樑。其友善的設計讓�
 msgid "TBC Wallet connects you to diverse ecosystems, from Bitcoin and Ethereum to Optimism and Cosmos. Manage portfolios, engage in DeFi, trade NFTs, and link to dApps—all in one secure, self-custody hub."
 msgstr "TBC Wallet 連結多元生態系，從比特幣、以太坊到 Optimism 與 Cosmos。集中管理資產組合、參與 DeFi、交易 NFT 並連接 dApp——一切盡在安全自託中心。"
 
+#: src/constants/faq.constants.ts:58
+msgid "TBC Wallet employs multiple security layers: Encrypted Storage: All private keys are encrypted and stored locally on your device. Multi-Signature Support: Enhanced security for high-value transactions. Biometric Authentication: Fingerprint and face recognition support. Regular Security Updates: Continuous security improvements."
+msgstr ""
+
 #: src/components/templates/home/desktop/index.tsx:258
 #: src/components/templates/home/mobile/index.tsx:36
 msgid "TBC Wallet empowers you to manage diverse assets like Bitcoin, Ethereum, and Solana. Securely dive into DeFi, NFTs, and dApps with full control. Your keys, your future."
@@ -266,34 +406,86 @@ msgstr "TBC Wallet 讓您輕鬆管理多樣資產，如比特幣、以太坊與 
 msgid "TBC Wallet is a leading multi-chain wallet with robust security and an intuitive interface. It simplifies Web3 interactions, from token management to dApp access, while giving you total control over your digital wealth."
 msgstr "TBC Wallet 是領先的多鏈錢包，具備強大安全性與直觀介面。從代幣管理到 dApp 存取，簡化您的 Web3 體驗，同時讓您完全掌控數位資產。"
 
+#: src/constants/faq.constants.ts:32
+msgid "TBC Wallet is a secure, multi-chain cryptocurrency wallet that supports multiple blockchain networks including TBChain, Bitcoin, Ethereum, and Tron. It provides a user-friendly interface for managing digital assets, executing transactions, and accessing DeFi services."
+msgstr ""
+
+#: src/constants/faq.constants.ts:37
+msgid "TBC Wallet is available on: Mobile: iOS and Android applications, Desktop: Windows and macOS applications, Browser: Browser extension for Chrome, Firefox, and Edge."
+msgstr ""
+
+#: src/constants/faq.constants.ts:84
+msgid "TBC Wallet supports: TBChain (native network), Bitcoin, Ethereum and EVM-compatible chains, Tron, And more networks continuously being added."
+msgstr ""
+
 #: src/constants/landing.constants.ts:65
 msgid "TBChain"
 msgstr "TBChain"
 
-#: src/constants/navigation.constants.ts:89
+#: src/constants/navigation.constants.ts:114
 msgid "Terms of Service"
 msgstr "服務條款"
+
+#: src/constants/faq.constants.ts:145
+msgid "The app is not working properly. What can I do?"
+msgstr ""
 
 #: src/constants/navigation.constants.ts:25
 #: src/constants/navigation.constants.ts:31
 msgid "The world of Web3 in your pocket"
 msgstr "將 Web3 世界裝進您的口袋"
 
+#: src/constants/faq.constants.ts:172
+msgid "To delete a wallet: 1. Go to Settings. 2. Select Wallet Management. 3. Choose the wallet to delete. 4. Confirm deletion (make sure you have your recovery phrase backed up)."
+msgstr ""
+
+#: src/constants/faq.constants.ts:115
+msgid "Transaction fees are network charges for processing transactions. Fees vary by: Network congestion, Transaction complexity, Priority level selected."
+msgstr ""
+
+#: src/constants/faq.constants.ts:110
+msgid "Transaction times vary by network: TBChain: Usually completes in seconds. Bitcoin: 10-60 minutes depending on network congestion. Ethereum: 15 seconds to several minutes. Tron: Usually completes in under a minute."
+msgstr ""
+
+#: src/constants/faq.constants.ts:105
+msgid "Transactions"
+msgstr ""
+
+#: src/constants/faq.constants.ts:125
+msgid "Transactions may be pending due to: Network congestion, Low transaction fee, Network maintenance, Insufficient balance."
+msgstr ""
+
 #: src/constants/landing.constants.ts:67
 msgid "Tron"
 msgstr "波場"
+
+#: src/constants/faq.constants.ts:131
+msgid "Troubleshooting"
+msgstr ""
+
+#: src/constants/faq.constants.ts:146
+msgid "Try these steps: 1. Update to the latest version. 2. Clear app cache. 3. Restart the application. 4. Reinstall if necessary (make sure you have your recovery phrase)."
+msgstr ""
 
 #: src/components/templates/home/desktop/index.tsx:251
 msgid "Unleash Web3"
 msgstr "釋放 Web3 潛能"
 
-#: src/constants/navigation.constants.ts:71
+#: src/constants/faq.constants.ts:151
+msgid "Updates are available through: Mobile: App Store or Google Play Store. Desktop: Download from our website. Browser Extension: Update through your browser's extension store."
+msgstr ""
+
+#: src/constants/navigation.constants.ts:84
 msgid "USDT fee"
 msgstr "USDT 手續費"
 
 #: src/constants/landing.constants.ts:57
 msgid "USDT Fee"
 msgstr "USDT 手續費"
+
+#: src/constants/faq.constants.ts:204
+msgid "Visit our website for detailed documentation. Check our blog for updates and tutorials. Join our community on Telegram and Discord. Follow us on social media for the latest news."
+msgstr ""
 
 #: src/constants/navigation.constants.ts:19
 msgid "Wallet"
@@ -303,9 +495,53 @@ msgstr "錢包"
 msgid "We’re launching soon!"
 msgstr "我們即將上線！"
 
-#: src/constants/navigation.constants.ts:90
+#: src/constants/faq.constants.ts:114
+msgid "What are transaction fees?"
+msgstr ""
+
+#: src/constants/faq.constants.ts:192
+msgid "What are your support hours?"
+msgstr ""
+
+#: src/constants/faq.constants.ts:83
+msgid "What blockchain networks are supported?"
+msgstr ""
+
+#: src/constants/faq.constants.ts:187
+msgid "What information should I provide when contacting support?"
+msgstr ""
+
+#: src/constants/faq.constants.ts:88
+msgid "What is Multi-Signature?"
+msgstr ""
+
+#: src/constants/faq.constants.ts:31
+msgid "What is TBC Wallet?"
+msgstr ""
+
+#: src/constants/faq.constants.ts:62
+msgid "What should I do if I lose my device?"
+msgstr ""
+
+#: src/constants/navigation.constants.ts:115
 msgid "What you need to know to use our services"
 msgstr "使用我們服務需要了解的內容"
+
+#: src/constants/faq.constants.ts:188
+msgid "When contacting support, please provide: Your wallet version, Device and operating system, Description of the issue, Screenshots if applicable, Transaction hash if related to a transaction."
+msgstr ""
+
+#: src/constants/faq.constants.ts:203
+msgid "Where can I learn more about TBC Wallet?"
+msgstr ""
+
+#: src/constants/faq.constants.ts:36
+msgid "Which platforms does TBC Wallet support?"
+msgstr ""
+
+#: src/constants/faq.constants.ts:124
+msgid "Why is my transaction pending?"
+msgstr ""
 
 #: src/constants/landing.constants.ts:240
 msgid "Windows"
@@ -315,11 +551,31 @@ msgstr "Windows"
 msgid "Windows app"
 msgstr "Windows 應用程式"
 
+#: src/constants/faq.constants.ts:42
+msgid "Yes, TBC Wallet is free to download and use. However, blockchain networks charge transaction fees for processing transactions, which are standard across all wallets."
+msgstr ""
+
+#: src/constants/faq.constants.ts:99
+msgid "Yes, TBC Wallet supports paying transaction fees with USDT (Tether), providing price stability and predictability, especially valuable during volatile market conditions."
+msgstr ""
+
+#: src/constants/faq.constants.ts:209
+msgid "Yes, we provide comprehensive tutorials and guides on: Setting up your wallet, Making transactions, Using advanced features, Security best practices. For more information, visit our Support Center or check our documentation."
+msgstr ""
+
+#: src/constants/faq.constants.ts:167
+msgid "Yes, you can create and manage multiple wallets within TBC Wallet. Each wallet has its own recovery phrase and private keys."
+msgstr ""
+
+#: src/constants/faq.constants.ts:183
+msgid "You can reach us through: Email: contact@tbchatofficial.com, Support Center: Visit our Contact Us page, Social Media: Follow us on X, Telegram, and Discord."
+msgstr ""
+
 #: src/components/templates/home/desktop/index.tsx:354
 #: src/components/templates/home/mobile/index.tsx:106
 msgid "Your All-in-One Web3 Wallet"
 msgstr "您的一站式 Web3 錢包"
 
-#: src/constants/navigation.constants.ts:96
+#: src/constants/navigation.constants.ts:121
 msgid "Your privacy matters, learn how we protect it"
 msgstr "您的隱私很重要，了解我們如何保護它"

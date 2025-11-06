@@ -45,6 +45,20 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       priority: 1,
     })
 
+    // Static support routes (FAQ and Contact Us are now TSX pages, not MDX)
+    sitemapEntries.push({
+      url: `${siteUrl}/${locale}/support/faq`,
+      lastModified: new Date(),
+      changeFrequency: 'monthly',
+      priority: 0.8,
+    })
+    sitemapEntries.push({
+      url: `${siteUrl}/${locale}/support/contact-us`,
+      lastModified: new Date(),
+      changeFrequency: 'monthly',
+      priority: 0.8,
+    })
+
     // Process content paths for this locale
     const localeContentPaths = allContentPaths.filter((path) => path.lang === locale)
 
