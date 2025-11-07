@@ -25,7 +25,7 @@ msgstr "1. Baixe o TBC Wallet na App Store, Google Play ou em nosso site. 2. Cri
 msgid "1. Go to Settings. 2. Select Security. 3. Choose Change Password. 4. Enter your current and new password. 5. Confirm the change."
 msgstr "1. Vá para Configurações. 2. Selecione Segurança. 3. Escolha Alterar Senha. 4. Digite sua senha atual e nova. 5. Confirme a alteração."
 
-#: src/components/templates/home/desktop/index.tsx:283
+#: src/components/templates/home/desktop/index.tsx:282
 #: src/components/templates/home/mobile/index.tsx:61
 #: src/constants/navigation.constants.ts:109
 msgid "About"
@@ -102,7 +102,7 @@ msgstr "O TBC Wallet pode acessar meus fundos?"
 msgid "Coming soon"
 msgstr "Em breve"
 
-#: src/components/templates/home/desktop/index.tsx:399
+#: src/components/templates/home/desktop/index.tsx:398
 #: src/components/templates/home/mobile/index.tsx:132
 msgid "Community talk about us"
 msgstr "A comunidade fala sobre nós"
@@ -112,7 +112,7 @@ msgstr "A comunidade fala sobre nós"
 msgid "Contact Us"
 msgstr "Fale conosco"
 
-#: src/components/templates/home/desktop/index.tsx:310
+#: src/components/templates/home/desktop/index.tsx:309
 #: src/components/templates/home/mobile/index.tsx:78
 msgid "Designed for All, Built for You"
 msgstr "Projetado para todos, feito para você"
@@ -126,7 +126,7 @@ msgstr "Aplicativo para desktop"
 msgid "Download"
 msgstr "Baixar"
 
-#: src/components/templates/home/desktop/index.tsx:414
+#: src/components/templates/home/desktop/index.tsx:413
 #: src/components/templates/home/mobile/index.tsx:140
 msgid "Download now"
 msgstr "Baixe agora"
@@ -144,7 +144,7 @@ msgstr "Troque tokens entre cadeias com facilidade, taxas baixas e cotações em
 msgid "Ethereum"
 msgstr "Ethereum"
 
-#: src/components/templates/home/desktop/index.tsx:266
+#: src/components/templates/home/desktop/index.tsx:265
 #: src/components/templates/home/mobile/index.tsx:53
 msgid "Explore now"
 msgstr "Explorar agora"
@@ -313,7 +313,7 @@ msgstr "Não, o TBC Wallet não pode acessar seus fundos. Suas chaves privadas s
 msgid "Once a transaction is confirmed on the blockchain, it cannot be cancelled. Always verify transaction details before confirming."
 msgstr "Uma vez que uma transação é confirmada na blockchain, ela não pode ser cancelada. Sempre verifique os detalhes da transação antes de confirmar."
 
-#: src/components/templates/home/desktop/index.tsx:381
+#: src/components/templates/home/desktop/index.tsx:380
 #: src/components/templates/home/mobile/index.tsx:124
 msgid "One wallet. Cross platform"
 msgstr "Uma carteira. Multiplataforma"
@@ -322,7 +322,7 @@ msgstr "Uma carteira. Multiplataforma"
 msgid "Our support team is available 24/7 to assist you with any questions or issues."
 msgstr "Nossa equipe de suporte está disponível 24/7 para ajudá-lo com quaisquer perguntas ou problemas."
 
-#: src/components/templates/home/desktop/index.tsx:248
+#: src/components/templates/home/desktop/index.tsx:247
 msgid "Own Your Crypto."
 msgstr "Seja dono das suas criptomoedas."
 
@@ -338,7 +338,7 @@ msgstr "Pague taxas em USDT para custos estáveis e previsíveis em meio às osc
 msgid "Pay fees in USDT for stable, predictable costs amid market swings. This flexible feature adds transparency, making Web3 interactions more budget-friendly and user-centric."
 msgstr "Pague taxas em USDT para custos estáveis e previsíveis em meio às oscilações do mercado. Este recurso flexível adiciona transparência, tornando as interações Web3 mais acessíveis e centradas no usuário."
 
-#: src/components/templates/home/desktop/index.tsx:254
+#: src/components/templates/home/desktop/index.tsx:253
 msgid "Possibilities"
 msgstr "Possibilidades"
 
@@ -384,12 +384,12 @@ msgstr "Troca"
 msgid "Swap securely and seamlessly"
 msgstr "Troque de forma segura e perfeita"
 
-#: src/components/templates/home/desktop/index.tsx:313
+#: src/components/templates/home/desktop/index.tsx:312
 #: src/components/templates/home/mobile/index.tsx:81
 msgid "TBC Wallet bridges the gap for beginners and experts alike. Its user-friendly design offers easy onboarding for newcomers and advanced tools for DeFi pros, ensuring secure, efficient navigation of the decentralized ecosystem."
 msgstr "A TBC Wallet faz a ponte entre iniciantes e especialistas. Seu design intuitivo oferece integração fácil para novatos e ferramentas avançadas para profissionais de DeFi, garantindo navegação segura e eficiente no ecossistema descentralizado."
 
-#: src/components/templates/home/desktop/index.tsx:359
+#: src/components/templates/home/desktop/index.tsx:358
 #: src/components/templates/home/mobile/index.tsx:109
 msgid "TBC Wallet connects you to diverse ecosystems, from Bitcoin and Ethereum to Optimism and Cosmos. Manage portfolios, engage in DeFi, trade NFTs, and link to dApps—all in one secure, self-custody hub."
 msgstr "A TBC Wallet conecta você a diversos ecossistemas, do Bitcoin e Ethereum ao Optimism e Cosmos. Gerencie portfólios, participe da DeFi, negocie NFTs e conecte-se a dApps — tudo em um hub seguro e de autocustódia."
@@ -398,12 +398,12 @@ msgstr "A TBC Wallet conecta você a diversos ecossistemas, do Bitcoin e Ethereu
 msgid "TBC Wallet employs multiple security layers: Encrypted Storage: All private keys are encrypted and stored locally on your device. Multi-Signature Support: Enhanced security for high-value transactions. Biometric Authentication: Fingerprint and face recognition support. Regular Security Updates: Continuous security improvements."
 msgstr "O TBC Wallet emprega múltiplas camadas de segurança: Armazenamento Criptografado: Todas as chaves privadas são criptografadas e armazenadas localmente no seu dispositivo. Suporte a Assinatura Múltipla: Segurança aprimorada para transações de alto valor. Autenticação Biométrica: Suporte para impressão digital e reconhecimento facial. Atualizações de Segurança Regulares: Melhorias contínuas de segurança."
 
-#: src/components/templates/home/desktop/index.tsx:258
+#: src/components/templates/home/desktop/index.tsx:257
 #: src/components/templates/home/mobile/index.tsx:36
 msgid "TBC Wallet empowers you to manage diverse assets like Bitcoin, Ethereum, and Solana. Securely dive into DeFi, NFTs, and dApps with full control. Your keys, your future."
 msgstr "A TBC Wallet capacita você a gerenciar ativos variados como Bitcoin, Ethereum e Solana. Mergulhe com segurança em DeFi, NFTs e dApps com controle total. Suas chaves, seu futuro."
 
-#: src/components/templates/home/desktop/index.tsx:286
+#: src/components/templates/home/desktop/index.tsx:285
 #: src/components/templates/home/mobile/index.tsx:64
 msgid "TBC Wallet is a leading multi-chain wallet with robust security and an intuitive interface. It simplifies Web3 interactions, from token management to dApp access, while giving you total control over your digital wealth."
 msgstr "A TBC Wallet é uma carteira multi-chain líder com segurança robusta e interface intuitiva. Simplifica as interações Web3, desde a gestão de tokens até o acesso a dApps, garantindo controle total sobre sua riqueza digital."
@@ -469,7 +469,7 @@ msgstr "Solução de Problemas"
 msgid "Try these steps: 1. Update to the latest version. 2. Clear app cache. 3. Restart the application. 4. Reinstall if necessary (make sure you have your recovery phrase)."
 msgstr "Tente estes passos: 1. Atualize para a versão mais recente. 2. Limpe o cache do aplicativo. 3. Reinicie o aplicativo. 4. Reinstale se necessário (certifique-se de ter sua frase de recuperação)."
 
-#: src/components/templates/home/desktop/index.tsx:251
+#: src/components/templates/home/desktop/index.tsx:250
 msgid "Unleash Web3"
 msgstr "Liberte o Web3"
 
@@ -573,7 +573,7 @@ msgstr "Sim, você pode criar e gerenciar várias carteiras dentro do TBC Wallet
 msgid "You can reach us through: Email: contact@tbchatofficial.com, Support Center: Visit our Contact Us page, Social Media: Follow us on X, Telegram, and Discord."
 msgstr "Você pode nos contatar através de: Email: contact@tbchatofficial.com, Centro de Suporte: Visite nossa página Entre em Contato, Redes Sociais: Siga-nos no X, Telegram e Discord."
 
-#: src/components/templates/home/desktop/index.tsx:354
+#: src/components/templates/home/desktop/index.tsx:353
 #: src/components/templates/home/mobile/index.tsx:106
 msgid "Your All-in-One Web3 Wallet"
 msgstr "Sua carteira Web3 tudo-em-um"

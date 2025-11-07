@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>TBC Wallet - The Future of Cryptocurrency Management - ES</title>
+    <link>https://officialwalletweb.vercel.app/es</link>
+    <description>Experience the future of cryptocurrency management with TBC Wallet. Secure, fast, and user-friendly platform for all your digital assets.</description>
+    <language>es</language>
+    <managingEditor>contact@tbchatofficial.com (NEXSOFT)</managingEditor>
+    <webMaster>contact@tbchatofficial.com (NEXSOFT)</webMaster>
+    <lastBuildDate>Fri, 07 Nov 2025 10:00:53 GMT</lastBuildDate>
+    <atom:link href="https://officialwalletweb.vercel.app/feeds/es.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <guid isPermaLink="true">https://officialwalletweb.vercel.app/es/legal/privacy-policy</guid>
+      <title>Política de Privacidad</title>
+      <link>https://officialwalletweb.vercel.app/es/legal/privacy-policy</link>
+      <description>
+Bienvenido/a a la entidad operadora de nuestro sitio web oficial (en adelante, &quot;el Sitio Web&quot;). Respetamos y protegemos su privacidad. Al usar o recibir nuestros servicios, la información personal q</description>
+      <pubDate>Fri, 07 Nov 2025 10:00:53 GMT</pubDate>
+      <category>legal</category>
+    </item>
+    <item>
+      <guid isPermaLink="true">https://officialwalletweb.vercel.app/es/legal/terms-of-service</guid>
+      <title>Cláusulas de servicio</title>
+      <link>https://officialwalletweb.vercel.app/es/legal/terms-of-service</link>
+      <description>
+ Lea atentamente estos términos de servicio.
+
+Acceder o utilizar nuestros servicios significa que está de acuerdo en estar sujeto a estos términos de servicio y a todos los términos incorporados p</description>
+      <pubDate>Fri, 07 Nov 2025 10:00:53 GMT</pubDate>
+      <category>legal</category>
+    </item>
+    <item>
+      <guid isPermaLink="true">https://officialwalletweb.vercel.app/es/features/instant-transfer</guid>
+      <title>Transferencia Instantánea - Transacciones Rápidas entre Cadenas</title>
+      <link>https://officialwalletweb.vercel.app/es/features/instant-transfer</link>
+      <description>
+ Resumen
+
+La función de Transferencia Instantánea de TBC Wallet permite transacciones ultrarrápidas entre cadenas con tarifas mínimas y liquidación casi instantánea. Ya sea que estés enviando fond</description>
+      <pubDate>Wed, 15 Jan 2025 00:00:00 GMT</pubDate>
+      <category>features</category>
+    </item>
+    <item>
+      <guid isPermaLink="true">https://officialwalletweb.vercel.app/es/features/miner</guid>
+      <title>Miner - Sistema de Staking PoS y Validadores</title>
+      <link>https://officialwalletweb.vercel.app/es/features/miner</link>
+      <description>
+ Resumen
+
+La función Miner de TBC Wallet te permite participar en el mecanismo de consenso Proof of Stake (PoS). Apuesta tus tokens, vota por validadores, gestiona nodos y gana recompensas a travé</description>
+      <pubDate>Wed, 15 Jan 2025 00:00:00 GMT</pubDate>
+      <category>features</category>
+    </item>
+    <item>
+      <guid isPermaLink="true">https://officialwalletweb.vercel.app/es/features/multi-signature</guid>
+      <title>Multi-Firma - Seguridad Mejorada para tu Billetera</title>
+      <link>https://officialwalletweb.vercel.app/es/features/multi-signature</link>
+      <description>
+ Resumen
+
+La tecnología de multi-firma (multi-sig) agrega una capa adicional de seguridad a tu TBC Wallet al requerir múltiples aprobaciones antes de que cualquier transacción pueda ejecutarse. Es</description>
+      <pubDate>Wed, 15 Jan 2025 00:00:00 GMT</pubDate>
+      <category>features</category>
+    </item>
+    <item>
+      <guid isPermaLink="true">https://officialwalletweb.vercel.app/es/features/usdt-fee</guid>
+      <title>Tarifa USDT - Paga Tarifas con Stablecoin</title>
+      <link>https://officialwalletweb.vercel.app/es/features/usdt-fee</link>
+      <description>
+ Resumen
+
+La función de Tarifa USDT de TBC Wallet te permite pagar tarifas de transacción usando USDT (Tether) en lugar de tokens nativos de red. Esto proporciona estabilidad de precios y previsib</description>
+      <pubDate>Wed, 15 Jan 2025 00:00:00 GMT</pubDate>
+      <category>features</category>
+    </item>
+  </channel>
+</rss>

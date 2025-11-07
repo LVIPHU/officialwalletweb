@@ -12,9 +12,9 @@ import path from 'node:path'
 import { SITE_METADATA } from '../src/constants/site-metadata.constants'
 import { escape } from '../src/lib/utils/content/html-escaper'
 
-const RSS_PAGE = 'feed.xml'
-const LOCALES = ['ar', 'en', 'es', 'fi', 'fr', 'pt', 'zh-hans', 'zh-hant']
-const VALID_TYPES = ['legal', 'features']
+const LOCALES = ['ar', 'en', 'es', 'fi', 'fr', 'pt', 'zh-hans', 'zh-hant'] as const
+const FEEDS_DIR = 'feeds'
+const OUTPUT_DIR = path.join(process.cwd(), 'public', FEEDS_DIR)
 
 interface ContentItem {
   title: string
@@ -31,17 +31,28 @@ interface ContentItem {
 
 interface RssItem {
   title: string
-  description?: string
+  description: string
   url: string
   pubDate: string
   category: string
 }
 
+interface RssOptions {
+  title: string
+  link: string
+  description: string
+  language: string
+  feedUrl: string
+  lastBuildDate: string
+}
+
 /**
  * Load contentlayer data from JSON files
- * This approach works better with tsx than module imports
+ * Uses synchronous file reading for better performance in build scripts
+ * @returns Object containing all features and legal documents
+ * @throws Error if contentlayer data is not found
  */
-function loadContentlayerData() {
+function loadContentlayerData(): { allFeatures: ContentItem[]; allLegals: ContentItem[] } {
   const contentlayerPath = path.join(process.cwd(), '.contentlayer', 'generated')
 
   try {
@@ -64,49 +75,13 @@ function loadContentlayerData() {
   }
 }
 
-function generateRssItem(item: RssItem): string {
-  const { title, description, url, pubDate, category } = item
-  return `
-    <item>
-      <guid isPermaLink="true">${url}</guid>
-      <title>${escape(title)}</title>
-      <link>${url}</link>
-      ${description ? `<description>${escape(description)}</description>` : ''}
-      <pubDate>${pubDate}</pubDate>
-      <category>${escape(category)}</category>
-    </item>`
-}
-
-function generateRss(
-  items: RssItem[],
-  options: {
-    title: string
-    link: string
-    description: string
-    language: string
-    feedUrl: string
-    lastBuildDate: string
-  }
-): string {
-  const { title, link, description, language, feedUrl, lastBuildDate } = options
-  const { email, author } = SITE_METADATA
-
-  return `<?xml version="1.0" encoding="UTF-8"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>${escape(title)}</title>
-    <link>${link}</link>
-    <description>${escape(description)}</description>
-    <language>${language}</language>
-    <managingEditor>${email} (${author})</managingEditor>
-    <webMaster>${email} (${author})</webMaster>
-    <lastBuildDate>${lastBuildDate}</lastBuildDate>
-    <atom:link href="${feedUrl}" rel="self" type="application/rss+xml"/>
-    ${items.map(generateRssItem).join('')}
-  </channel>
-</rss>`
-}
-
+/**
+ * Extract description from content body or use fallback
+ * Removes markdown formatting and limits to 200 characters
+ * @param content - Raw markdown content
+ * @param fallback - Fallback description if content is empty
+ * @returns Extracted description
+ */
 function extractDescription(content: string, fallback?: string): string {
   if (!content) return fallback || ''
   const firstParagraph = content
@@ -118,7 +93,31 @@ function extractDescription(content: string, fallback?: string): string {
 }
 
 /**
+ * Convert content item to RSS item
+ * @param content - Content item from contentlayer
+ * @param lang - Language code
+ * @returns RSS item ready for XML generation
+ */
+function contentToRssItem(content: ContentItem, lang: string): RssItem {
+  const category = (content.category || 'features').trim()
+  const pathString = `${category}/${content.slug}`
+  const url = `${SITE_METADATA.siteUrl}/${lang}/${pathString}`
+  const pubDate = content.date ? new Date(content.date).toUTCString() : new Date().toUTCString()
+  const description = extractDescription(content.body?.raw || '', content.description)
+
+  return {
+    title: content.title || content.slug,
+    description: description || '',
+    url,
+    pubDate,
+    category,
+  }
+}
+
+/**
  * Sort RSS items by date (newest first)
+ * @param items - Array of RSS items
+ * @returns Sorted array of RSS items
  */
 function sortRssItems(items: RssItem[]): RssItem[] {
   return [...items].sort((a, b) => {
@@ -128,82 +127,82 @@ function sortRssItems(items: RssItem[]): RssItem[] {
   })
 }
 
-async function generateFeedForType(
-  lang: string,
-  type: 'legal' | 'features',
-  allFeatures: ContentItem[],
-  allLegals: ContentItem[]
-) {
-  const allContent = type === 'features' ? allFeatures : allLegals
-  const langContent = allContent.filter((item) => item.lang === lang && !item.draft)
+/**
+ * Generate RSS item XML string
+ * Optimized with template literals for better performance
+ * @param item - RSS item to convert to XML
+ * @returns XML string for RSS item
+ */
+function generateRssItem(item: RssItem): string {
+  const { title, description, url, pubDate, category } = item
+  const escapedTitle = escape(title)
+  const escapedDescription = description ? escape(description) : ''
+  const escapedCategory = escape(category)
 
-  const contentItems: RssItem[] = []
-
-  for (const content of langContent) {
-    const pathString = `${type}/${content.slug}`
-    const url = `${SITE_METADATA.siteUrl}/${lang}/${pathString}`
-    const pubDate = content.date ? new Date(content.date).toUTCString() : new Date().toUTCString()
-    const description = extractDescription(content.body?.raw || '', content.description)
-
-    contentItems.push({
-      title: content.title || content.slug,
-      description,
-      url,
-      pubDate,
-      category: content.category || type,
-    })
-  }
-
-  // Sort by date (newest first)
-  const sortedItems = sortRssItems(contentItems)
-  const lastBuildDate =
-    sortedItems.length > 0 && sortedItems[0].pubDate ? sortedItems[0].pubDate : new Date().toUTCString()
-
-  const typeTitle = type.charAt(0).toUpperCase() + type.slice(1)
-  const feedUrl = `${SITE_METADATA.siteUrl}/${lang}/feed-${type}.xml`
-
-  const rss = generateRss(sortedItems, {
-    title: `${SITE_METADATA.title} - ${typeTitle} (${lang.toUpperCase()})`,
-    link: `${SITE_METADATA.siteUrl}/${lang}/${type}`,
-    description: `${SITE_METADATA.description} - ${type} content`,
-    language: lang,
-    feedUrl,
-    lastBuildDate,
-  })
-
-  return rss
+  return `    <item>
+      <guid isPermaLink="true">${url}</guid>
+      <title>${escapedTitle}</title>
+      <link>${url}</link>
+      ${escapedDescription ? `<description>${escapedDescription}</description>` : ''}
+      <pubDate>${pubDate}</pubDate>
+      <category>${escapedCategory}</category>
+    </item>`
 }
 
-async function generateFeedForLocale(lang: string, allFeatures: ContentItem[], allLegals: ContentItem[]) {
-  const allContent = [...allFeatures, ...allLegals]
-  const langContent = allContent.filter((item) => item.lang === lang && !item.draft)
+/**
+ * Generate complete RSS XML feed
+ * @param items - Array of RSS items
+ * @param options - RSS feed options
+ * @returns Complete RSS XML string
+ */
+function generateRss(items: RssItem[], options: RssOptions): string {
+  const { title, link, description, language, feedUrl, lastBuildDate } = options
+  const { email, author } = SITE_METADATA
 
-  const contentItems: RssItem[] = []
+  // Pre-escape values to avoid repeated escaping
+  const escapedTitle = escape(title)
+  const escapedDescription = escape(description)
 
-  for (const content of langContent) {
-    const category = content.category || 'features'
-    const pathString = `${category}/${content.slug}`
-    const url = `${SITE_METADATA.siteUrl}/${lang}/${pathString}`
-    const pubDate = content.date ? new Date(content.date).toUTCString() : new Date().toUTCString()
-    const description = extractDescription(content.body?.raw || '', content.description)
+  // Generate items XML in batch
+  const itemsXml = items.map(generateRssItem).join('\n')
 
-    contentItems.push({
-      title: content.title || content.slug,
-      description,
-      url,
-      pubDate,
-      category: category || 'general',
-    })
-  }
+  return `<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>${escapedTitle}</title>
+    <link>${link}</link>
+    <description>${escapedDescription}</description>
+    <language>${language}</language>
+    <managingEditor>${email} (${author})</managingEditor>
+    <webMaster>${email} (${author})</webMaster>
+    <lastBuildDate>${lastBuildDate}</lastBuildDate>
+    <atom:link href="${feedUrl}" rel="self" type="application/rss+xml"/>
+${itemsXml}
+  </channel>
+</rss>`
+}
+
+/**
+ * Generate RSS feed for a specific locale
+ * Uses Map for O(1) lookup performance instead of O(n) filtering
+ * @param lang - Language code
+ * @param contentMap - Map of content items keyed by language
+ * @returns RSS XML string for the locale
+ */
+function generateFeedForLocale(lang: string, contentMap: Map<string, ContentItem[]>): string {
+  const langContent = contentMap.get(lang) || []
+
+  // Convert content to RSS items in batch
+  const contentItems: RssItem[] = langContent.map((content) => contentToRssItem(content, lang))
 
   // Sort by date (newest first)
   const sortedItems = sortRssItems(contentItems)
   const lastBuildDate =
     sortedItems.length > 0 && sortedItems[0].pubDate ? sortedItems[0].pubDate : new Date().toUTCString()
 
-  const feedUrl = `${SITE_METADATA.siteUrl}/${lang}/feed.xml`
+  const feedUrl = `${SITE_METADATA.siteUrl}/${FEEDS_DIR}/${lang}.xml`
 
-  const rss = generateRss(sortedItems, {
+  return generateRss(sortedItems, {
     title: `${SITE_METADATA.title} - ${lang.toUpperCase()}`,
     link: `${SITE_METADATA.siteUrl}/${lang}`,
     description: SITE_METADATA.description,
@@ -211,41 +210,73 @@ async function generateFeedForLocale(lang: string, allFeatures: ContentItem[], a
     feedUrl,
     lastBuildDate,
   })
-
-  return rss
 }
 
-export async function generateRssFeeds() {
-  console.log('🗒️  Generating RSS feeds...')
+/**
+ * Build content map by language for O(1) lookup
+ * Filters out draft content and groups by language
+ * @param allFeatures - All feature content items
+ * @param allLegals - All legal content items
+ * @returns Map of content items grouped by language
+ */
+function buildContentMap(
+  allFeatures: ContentItem[],
+  allLegals: ContentItem[]
+): Map<string, ContentItem[]> {
+  const contentMap = new Map<string, ContentItem[]>()
 
-  // Load contentlayer data from JSON files
-  const { allFeatures, allLegals } = loadContentlayerData()
-
-  const outputDir = path.join(process.cwd(), 'public')
-
-  let generatedCount = 0
-
-  // Generate feeds for each locale
+  // Initialize map for all locales
   for (const lang of LOCALES) {
-    // Generate main feed for locale
-    const mainFeed = await generateFeedForLocale(lang, allFeatures, allLegals)
-    const mainFeedPath = path.join(outputDir, lang, RSS_PAGE)
-    mkdirSync(path.dirname(mainFeedPath), { recursive: true })
-    writeFileSync(mainFeedPath, mainFeed, 'utf-8')
-    generatedCount++
-    console.log(`  ✓ Generated ${lang}/feed.xml`)
+    contentMap.set(lang, [])
+  }
 
-    // Generate feeds for each content type
-    for (const type of VALID_TYPES) {
-      const typeFeed = await generateFeedForType(lang, type as 'legal' | 'features', allFeatures, allLegals)
-      const typeFeedPath = path.join(outputDir, lang, `feed-${type}.xml`)
-      writeFileSync(typeFeedPath, typeFeed, 'utf-8')
-      generatedCount++
-      console.log(`  ✓ Generated ${lang}/feed-${type}.xml`)
+  // Add features and legals to map
+  const allContent = [...allFeatures, ...allLegals]
+  for (const content of allContent) {
+    if (content.draft) continue
+
+    const lang = content.lang
+    if (contentMap.has(lang)) {
+      contentMap.get(lang)!.push(content)
     }
   }
 
-  console.log(`\n✅ Successfully generated ${generatedCount} RSS feed files!`)
+  return contentMap
+}
+
+/**
+ * Main function to generate all RSS feeds
+ * Generates feeds into public/feeds/{lang}.xml for better organization
+ * Uses batch processing and optimized data structures for performance
+ */
+export async function generateRssFeeds(): Promise<void> {
+  console.log('🗒️  Generating RSS feeds...')
+
+  // Load contentlayer data
+  const { allFeatures, allLegals } = loadContentlayerData()
+
+  // Build content map for O(1) lookup
+  const contentMap = buildContentMap(allFeatures, allLegals)
+
+  // Ensure output directory exists
+  mkdirSync(OUTPUT_DIR, { recursive: true })
+
+  // Generate feeds for each locale in batch
+  const feedPromises: Array<{ lang: string; content: string; path: string }> = []
+
+  for (const lang of LOCALES) {
+    const feedContent = generateFeedForLocale(lang, contentMap)
+    const feedPath = path.join(OUTPUT_DIR, `${lang}.xml`)
+    feedPromises.push({ lang, content: feedContent, path: feedPath })
+  }
+
+  // Batch write all files
+  for (const { lang, content, path: feedPath } of feedPromises) {
+    writeFileSync(feedPath, content, 'utf-8')
+    console.log(`  ✓ Generated ${FEEDS_DIR}/${lang}.xml`)
+  }
+
+  console.log(`\n✅ Successfully generated ${feedPromises.length} RSS feed files in ${FEEDS_DIR}/`)
 }
 
 // Run if called directly

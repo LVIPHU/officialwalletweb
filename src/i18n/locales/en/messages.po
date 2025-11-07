@@ -25,7 +25,7 @@ msgstr "1. Download TBC Wallet from the App Store, Google Play, or our website. 
 msgid "1. Go to Settings. 2. Select Security. 3. Choose Change Password. 4. Enter your current and new password. 5. Confirm the change."
 msgstr "1. Go to Settings. 2. Select Security. 3. Choose Change Password. 4. Enter your current and new password. 5. Confirm the change."
 
-#: src/components/templates/home/desktop/index.tsx:283
+#: src/components/templates/home/desktop/index.tsx:282
 #: src/components/templates/home/mobile/index.tsx:61
 #: src/constants/navigation.constants.ts:109
 msgid "About"
@@ -102,7 +102,7 @@ msgstr "Can TBC Wallet access my funds?"
 msgid "Coming soon"
 msgstr "Coming soon"
 
-#: src/components/templates/home/desktop/index.tsx:399
+#: src/components/templates/home/desktop/index.tsx:398
 #: src/components/templates/home/mobile/index.tsx:132
 msgid "Community talk about us"
 msgstr "Community talk about us"
@@ -112,7 +112,7 @@ msgstr "Community talk about us"
 msgid "Contact Us"
 msgstr "Contact Us"
 
-#: src/components/templates/home/desktop/index.tsx:310
+#: src/components/templates/home/desktop/index.tsx:309
 #: src/components/templates/home/mobile/index.tsx:78
 msgid "Designed for All, Built for You"
 msgstr "Designed for All, Built for You"
@@ -126,7 +126,7 @@ msgstr "Desktop app"
 msgid "Download"
 msgstr "Download"
 
-#: src/components/templates/home/desktop/index.tsx:414
+#: src/components/templates/home/desktop/index.tsx:413
 #: src/components/templates/home/mobile/index.tsx:140
 msgid "Download now"
 msgstr "Download now"
@@ -144,7 +144,7 @@ msgstr "Effortlessly exchange tokens across chains with low fees and real-time r
 msgid "Ethereum"
 msgstr "Ethereum"
 
-#: src/components/templates/home/desktop/index.tsx:266
+#: src/components/templates/home/desktop/index.tsx:265
 #: src/components/templates/home/mobile/index.tsx:53
 msgid "Explore now"
 msgstr "Explore now"
@@ -313,7 +313,7 @@ msgstr "No, TBC Wallet cannot access your funds. Your private keys are stored lo
 msgid "Once a transaction is confirmed on the blockchain, it cannot be cancelled. Always verify transaction details before confirming."
 msgstr "Once a transaction is confirmed on the blockchain, it cannot be cancelled. Always verify transaction details before confirming."
 
-#: src/components/templates/home/desktop/index.tsx:381
+#: src/components/templates/home/desktop/index.tsx:380
 #: src/components/templates/home/mobile/index.tsx:124
 msgid "One wallet. Cross platform"
 msgstr "One wallet. Cross platform"
@@ -322,7 +322,7 @@ msgstr "One wallet. Cross platform"
 msgid "Our support team is available 24/7 to assist you with any questions or issues."
 msgstr "Our support team is available 24/7 to assist you with any questions or issues."
 
-#: src/components/templates/home/desktop/index.tsx:248
+#: src/components/templates/home/desktop/index.tsx:247
 msgid "Own Your Crypto."
 msgstr "Own Your Crypto."
 
@@ -338,7 +338,7 @@ msgstr "Pay fees in USDT for stable, predictable costs amid market swings"
 msgid "Pay fees in USDT for stable, predictable costs amid market swings. This flexible feature adds transparency, making Web3 interactions more budget-friendly and user-centric."
 msgstr "Pay fees in USDT for stable, predictable costs amid market swings. This flexible feature adds transparency, making Web3 interactions more budget-friendly and user-centric."
 
-#: src/components/templates/home/desktop/index.tsx:254
+#: src/components/templates/home/desktop/index.tsx:253
 msgid "Possibilities"
 msgstr "Possibilities"
 
@@ -384,12 +384,12 @@ msgstr "Swap"
 msgid "Swap securely and seamlessly"
 msgstr "Swap securely and seamlessly"
 
-#: src/components/templates/home/desktop/index.tsx:313
+#: src/components/templates/home/desktop/index.tsx:312
 #: src/components/templates/home/mobile/index.tsx:81
 msgid "TBC Wallet bridges the gap for beginners and experts alike. Its user-friendly design offers easy onboarding for newcomers and advanced tools for DeFi pros, ensuring secure, efficient navigation of the decentralized ecosystem."
 msgstr "TBC Wallet bridges the gap for beginners and experts alike. Its user-friendly design offers easy onboarding for newcomers and advanced tools for DeFi pros, ensuring secure, efficient navigation of the decentralized ecosystem."
 
-#: src/components/templates/home/desktop/index.tsx:359
+#: src/components/templates/home/desktop/index.tsx:358
 #: src/components/templates/home/mobile/index.tsx:109
 msgid "TBC Wallet connects you to diverse ecosystems, from Bitcoin and Ethereum to Optimism and Cosmos. Manage portfolios, engage in DeFi, trade NFTs, and link to dApps—all in one secure, self-custody hub."
 msgstr "TBC Wallet connects you to diverse ecosystems, from Bitcoin and Ethereum to Optimism and Cosmos. Manage portfolios, engage in DeFi, trade NFTs, and link to dApps—all in one secure, self-custody hub."
@@ -398,12 +398,12 @@ msgstr "TBC Wallet connects you to diverse ecosystems, from Bitcoin and Ethereum
 msgid "TBC Wallet employs multiple security layers: Encrypted Storage: All private keys are encrypted and stored locally on your device. Multi-Signature Support: Enhanced security for high-value transactions. Biometric Authentication: Fingerprint and face recognition support. Regular Security Updates: Continuous security improvements."
 msgstr "TBC Wallet employs multiple security layers: Encrypted Storage: All private keys are encrypted and stored locally on your device. Multi-Signature Support: Enhanced security for high-value transactions. Biometric Authentication: Fingerprint and face recognition support. Regular Security Updates: Continuous security improvements."
 
-#: src/components/templates/home/desktop/index.tsx:258
+#: src/components/templates/home/desktop/index.tsx:257
 #: src/components/templates/home/mobile/index.tsx:36
 msgid "TBC Wallet empowers you to manage diverse assets like Bitcoin, Ethereum, and Solana. Securely dive into DeFi, NFTs, and dApps with full control. Your keys, your future."
 msgstr "TBC Wallet empowers you to manage diverse assets like Bitcoin, Ethereum, and Solana. Securely dive into DeFi, NFTs, and dApps with full control. Your keys, your future."
 
-#: src/components/templates/home/desktop/index.tsx:286
+#: src/components/templates/home/desktop/index.tsx:285
 #: src/components/templates/home/mobile/index.tsx:64
 msgid "TBC Wallet is a leading multi-chain wallet with robust security and an intuitive interface. It simplifies Web3 interactions, from token management to dApp access, while giving you total control over your digital wealth."
 msgstr "TBC Wallet is a leading multi-chain wallet with robust security and an intuitive interface. It simplifies Web3 interactions, from token management to dApp access, while giving you total control over your digital wealth."
@@ -469,7 +469,7 @@ msgstr "Troubleshooting"
 msgid "Try these steps: 1. Update to the latest version. 2. Clear app cache. 3. Restart the application. 4. Reinstall if necessary (make sure you have your recovery phrase)."
 msgstr "Try these steps: 1. Update to the latest version. 2. Clear app cache. 3. Restart the application. 4. Reinstall if necessary (make sure you have your recovery phrase)."
 
-#: src/components/templates/home/desktop/index.tsx:251
+#: src/components/templates/home/desktop/index.tsx:250
 msgid "Unleash Web3"
 msgstr "Unleash Web3"
 
@@ -573,7 +573,7 @@ msgstr "Yes, you can create and manage multiple wallets within TBC Wallet. Each 
 msgid "You can reach us through: Email: contact@tbchatofficial.com, Support Center: Visit our Contact Us page, Social Media: Follow us on X, Telegram, and Discord."
 msgstr "You can reach us through: Email: contact@tbchatofficial.com, Support Center: Visit our Contact Us page, Social Media: Follow us on X, Telegram, and Discord."
 
-#: src/components/templates/home/desktop/index.tsx:354
+#: src/components/templates/home/desktop/index.tsx:353
 #: src/components/templates/home/mobile/index.tsx:106
 msgid "Your All-in-One Web3 Wallet"
 msgstr "Your All-in-One Web3 Wallet"

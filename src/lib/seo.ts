@@ -13,6 +13,15 @@ import { SITE_METADATA } from '@/constants/site-metadata.constants'
 
 const { locales } = linguiConfig
 
+// Cache valid locales (exclude pseudo)
+const VALID_LOCALES = locales.filter((locale) => locale !== 'pseudo')
+
+// Cache locale mapping for OpenGraph
+const LOCALE_MAP: Record<string, string> = {
+  'zh-hans': 'zh_CN',
+  'zh-hant': 'zh_TW',
+}
+
 interface PageSEOProps {
   title: string
   description?: string
@@ -25,7 +34,67 @@ interface PageSEOProps {
 }
 
 /**
+ * Generate structured data (JSON-LD) for SEO
+ * @param options - Structured data options
+ * @returns JSON-LD string or undefined
+ */
+export function generateStructuredData(options: {
+  type: 'Article' | 'WebSite' | 'Organization'
+  title: string
+  description?: string
+  url?: string
+  datePublished?: string
+  dateModified?: string
+  image?: string
+}): string | undefined {
+  const { type, title, description, url, datePublished, dateModified, image } = options
+
+  const baseData: Record<string, unknown> = {
+    '@context': 'https://schema.org',
+    '@type': type,
+    name: title,
+    ...(description && { description }),
+    ...(url && { url }),
+    ...(image && { image }),
+  }
+
+  if (type === 'Article') {
+    return JSON.stringify({
+      ...baseData,
+      ...(datePublished && { datePublished }),
+      ...(dateModified && { dateModified }),
+      publisher: {
+        '@type': 'Organization',
+        name: SITE_METADATA.author,
+        url: SITE_METADATA.siteUrl,
+      },
+    })
+  }
+
+  return JSON.stringify(baseData)
+}
+
+/**
+ * Generate hreflang alternates for all locales
+ * Cached and optimized to reduce object creation
+ * @param siteUrl - Base site URL
+ * @param path - Page path (without locale)
+ * @returns Record of locale to URL mapping
+ */
+function generateHreflangAlternates(siteUrl: string, path: string): Record<string, string> {
+  const languages: Record<string, string> = {}
+
+  for (const locale of VALID_LOCALES) {
+    const alternatePath = path ? `/${locale}/${path}` : `/${locale}`
+    languages[locale] = `${siteUrl}${alternatePath}`
+  }
+
+  return languages
+}
+
+/**
  * Generate page metadata with SEO optimization for multi-language support
+ * Optimized with caching and reduced object creation
  * @param props - SEO properties including title, description, image, lang, path, etc.
  * @returns Complete Metadata object for Next.js
  */
@@ -47,31 +116,34 @@ export function genPageMetadata({
   const fullImage = image || SITE_METADATA.socialBanner
   const canonicalUrl = `${siteUrl}/${lang}${path ? `/${path}` : ''}`
 
-  // Generate hreflang alternates for all locales
-  const languages: Record<string, string> = {}
+  // Generate hreflang alternates (cached)
+  const languages = generateHreflangAlternates(siteUrl, path)
 
-  // Add hreflang for all supported locales
-  locales.forEach((locale) => {
-    if (locale !== 'pseudo') {
-      const alternatePath = path ? `/${locale}/${path}` : `/${locale}`
-      languages[locale] = `${siteUrl}${alternatePath}`
-    }
-  })
+  // Get OpenGraph locale (cached mapping)
+  const ogLocale = LOCALE_MAP[lang] || lang
 
   const alternates: Metadata['alternates'] = {
     canonical: canonicalUrl,
     languages,
+    types: {
+      'application/rss+xml': [
+        {
+          url: `${siteUrl}/feeds/${lang}.xml`,
+          title: `${SITE_METADATA.title} - ${lang.toUpperCase()}`,
+        },
+      ],
+    },
   }
 
-  // Add RSS feed alternates
-  alternates.types = {
-    'application/rss+xml': [
-      {
-        url: `${siteUrl}/${lang}/feed.xml`,
-        title: `${SITE_METADATA.title} - ${lang.toUpperCase()}`,
-      },
-    ],
-  }
+  // Build OpenGraph images array (reused)
+  const ogImages = [
+    {
+      url: fullImage,
+      width: 1200,
+      height: 630,
+      alt: title || SITE_METADATA.title,
+    },
+  ]
 
   const metadata: Metadata = {
     title: fullTitle,
@@ -82,15 +154,8 @@ export function genPageMetadata({
       description: fullDescription,
       url: canonicalUrl,
       siteName: SITE_METADATA.titleHeader,
-      images: [
-        {
-          url: fullImage,
-          width: 1200,
-          height: 630,
-          alt: title || SITE_METADATA.title,
-        },
-      ],
-      locale: lang === 'zh-hans' ? 'zh_CN' : lang === 'zh-hant' ? 'zh_TW' : lang,
+      images: ogImages,
+      locale: ogLocale,
       type,
       ...(date && type === 'article' ? { publishedTime: date } : {}),
     },

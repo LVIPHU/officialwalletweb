@@ -64,7 +64,7 @@ export function Toc({ headings }: TocProps) {
             const isActive = currentIndex === i
 
             return (
-              <li key={`heading-${h.url}-${i}`} className={cn('text-sm transition-all duration-200')}>
+              <li key={`heading-${h.url}-${i}`}>
                 <button
                   type='button'
                   className={cn(
@@ -77,8 +77,8 @@ export function Toc({ headings }: TocProps) {
                 >
                   <p
                     className={cn(
-                      'truncate text-xs font-bold transition-opacity duration-300 ease-in-out',
-                      isActive ? 'opacity-100' : 'opacity-0 group-hover:opacity-100'
+                      'truncate text-xs xl:text-base font-bold transition-opacity duration-300 ease-in-out',
+                      isActive ? 'opacity-100' : 'group-hover:opacity-100'
                     )}
                   >
                     {h.text}

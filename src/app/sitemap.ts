@@ -15,8 +15,93 @@ import { SITE_METADATA } from '@/constants/site-metadata.constants'
 
 const { locales } = linguiConfig
 
+// Constants for sitemap configuration
+const VALID_LOCALES = locales.filter((locale) => locale !== 'pseudo')
+const STATIC_ROUTES = [
+  { path: '', changeFrequency: 'daily' as const, priority: 1 },
+  { path: 'support/faq', changeFrequency: 'monthly' as const, priority: 0.8 },
+  { path: 'support/contact-us', changeFrequency: 'monthly' as const, priority: 0.8 },
+]
+
+/**
+ * Build content maps for O(1) lookup by locale
+ * Filters out draft content and groups by language
+ * @returns Object with features and legals maps
+ */
+function buildContentMaps() {
+  const featuresMap = new Map<string, typeof allFeatures>()
+  const legalsMap = new Map<string, typeof allLegals>()
+
+  // Initialize maps for all locales
+  for (const locale of VALID_LOCALES) {
+    featuresMap.set(locale, [])
+    legalsMap.set(locale, [])
+  }
+
+  // Group features by locale
+  for (const feature of allFeatures) {
+    if ('draft' in feature && feature.draft) continue
+    const locale = feature.lang
+    if (featuresMap.has(locale)) {
+      featuresMap.get(locale)!.push(feature)
+    }
+  }
+
+  // Group legals by locale
+  for (const legal of allLegals) {
+    if ('draft' in legal && legal.draft) continue
+    const locale = legal.lang
+    if (legalsMap.has(locale)) {
+      legalsMap.get(locale)!.push(legal)
+    }
+  }
+
+  return { featuresMap, legalsMap }
+}
+
+/**
+ * Generate sitemap entries for static routes
+ * @param siteUrl - Base site URL
+ * @param locale - Locale code
+ * @returns Array of sitemap entries for static routes
+ */
+function generateStaticRouteEntries(siteUrl: string, locale: string): MetadataRoute.Sitemap {
+  return STATIC_ROUTES.map((route) => ({
+    url: `${siteUrl}/${locale}${route.path ? `/${route.path}` : ''}`,
+    lastModified: new Date(),
+    changeFrequency: route.changeFrequency,
+    priority: route.priority,
+  }))
+}
+
+/**
+ * Generate sitemap entries for content items
+ * @param siteUrl - Base site URL
+ * @param locale - Locale code
+ * @param items - Content items (features or legals)
+ * @param type - Content type ('features' or 'legal')
+ * @returns Array of sitemap entries for content
+ */
+function generateContentEntries(
+  siteUrl: string,
+  locale: string,
+  items: Array<{ slug: string; date?: string }>,
+  type: 'features' | 'legal'
+): MetadataRoute.Sitemap {
+  const changeFrequency = type === 'features' ? ('weekly' as const) : ('yearly' as const)
+  const priority = type === 'features' ? 0.8 : 0.5
+
+  return items.map((item) => ({
+    url: `${siteUrl}/${locale}/${type}/${item.slug}`,
+    lastModified: item.date ? new Date(item.date) : new Date(),
+    changeFrequency,
+    priority,
+  }))
+}
+
 /**
  * Generate sitemap for all locales and content
+ * Optimized with Map-based filtering and batch processing
  * Includes static routes and dynamic content routes
  */
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
@@ -27,57 +112,23 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     return []
   }
 
+  // Build content maps for efficient lookup
+  const { featuresMap, legalsMap } = buildContentMaps()
+
   const sitemapEntries: MetadataRoute.Sitemap = []
 
-  // Generate entries for each locale
-  for (const locale of locales) {
-    if (locale === 'pseudo') continue // Skip pseudo locale
+  // Generate entries for each locale in batch
+  for (const locale of VALID_LOCALES) {
+    // Add static routes
+    sitemapEntries.push(...generateStaticRouteEntries(siteUrl, locale))
 
-    // Static home route for each locale
-    sitemapEntries.push({
-      url: `${siteUrl}/${locale}`,
-      lastModified: new Date(),
-      changeFrequency: 'daily',
-      priority: 1,
-    })
+    // Add features
+    const localeFeatures = featuresMap.get(locale) || []
+    sitemapEntries.push(...generateContentEntries(siteUrl, locale, localeFeatures, 'features'))
 
-    // Static support routes (FAQ and Contact Us are now TSX pages, not MDX)
-    sitemapEntries.push({
-      url: `${siteUrl}/${locale}/support/faq`,
-      lastModified: new Date(),
-      changeFrequency: 'monthly',
-      priority: 0.8,
-    })
-    sitemapEntries.push({
-      url: `${siteUrl}/${locale}/support/contact-us`,
-      lastModified: new Date(),
-      changeFrequency: 'monthly',
-      priority: 0.8,
-    })
-
-    // Process features for this locale
-    const localeFeatures = allFeatures.filter((f) => f.lang === locale && !('draft' in f && f.draft))
-    for (const feature of localeFeatures) {
-      const url = `${siteUrl}/${locale}/features/${feature.slug}`
-      sitemapEntries.push({
-        url,
-        lastModified: feature.date ? new Date(feature.date) : new Date(),
-        changeFrequency: 'weekly',
-        priority: 0.8,
-      })
-    }
-
-    // Process legal docs for this locale
-    const localeLegals = allLegals.filter((l) => l.lang === locale && !('draft' in l && l.draft))
-    for (const legal of localeLegals) {
-      const url = `${siteUrl}/${locale}/legal/${legal.slug}`
-      sitemapEntries.push({
-        url,
-        lastModified: legal.date ? new Date(legal.date) : new Date(),
-        changeFrequency: 'yearly',
-        priority: 0.5,
-      })
-    }
+    // Add legal docs
+    const localeLegals = legalsMap.get(locale) || []
+    sitemapEntries.push(...generateContentEntries(siteUrl, locale, localeLegals, 'legal'))
   }
 
   return sitemapEntries

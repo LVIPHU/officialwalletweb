@@ -48,7 +48,7 @@ export const config = {
      * - favicon.ico (favicon file)
      * - manifest.json (manifest file)
      * - sitemap.xml (sitemap file)
-     * - feed.xml (RSS feed file)
+     * - feeds/*.xml (RSS feed files)
      * - images - .svg, .png, .jpg, .jpeg, .gif, .webp
      * - audio - .wav
      * - video - .mp4
@@ -56,6 +56,6 @@ export const config = {
      * - 3D models - .gltf, .glb, .fbx, .obj, .usdz
      * Feel free to modify this pattern to include more paths.
      */
-    '/((?!_next/static|_next/image|favicon.ico|manifest.json|sitemap.xml|feed.xml|.*\\.(?:svg|png|jpg|jpeg|gif|webp|wav|mp4|xml|json|gltf|glb|fbx)$).*)',
+    '/((?!_next/static|_next/image|favicon.ico|manifest.json|sitemap.xml|feeds/.*\\.xml|.*\\.(?:svg|png|jpg|jpeg|gif|webp|wav|mp4|xml|json|gltf|glb|fbx)$).*)',
   ],
 }

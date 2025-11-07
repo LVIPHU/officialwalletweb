@@ -8,6 +8,7 @@
  */
 
 import '@/styles/globals.css'
+import 'react-medium-image-zoom/dist/styles.css'
 import linguiConfig from '../../../lingui.config'
 import type { Metadata } from 'next'
 import ProviderRegistry from '@/providers'
@@ -52,33 +53,6 @@ export default async function RootLayout({ children, params }: Readonly<PropsWit
       className={cn('w-full overflow-x-hidden antialiased', FONT_POPPINS.variable, FONT_CLASH_DISPLAY.variable)}
       suppressHydrationWarning
     >
-      <head>
-        <link
-          rel='alternate'
-          type='application/rss+xml'
-          href={`${SITE_METADATA.siteUrl}/${lang}/feed.xml`}
-          title={`${SITE_METADATA.titleHeader} - ${lang.toUpperCase()}`}
-        />
-        <link
-          rel='alternate'
-          type='application/rss+xml'
-          href={`${SITE_METADATA.siteUrl}/${lang}/feed-legal.xml`}
-          title={`${SITE_METADATA.titleHeader} - Legal (${lang.toUpperCase()})`}
-        />
-        <link
-          rel='alternate'
-          type='application/rss+xml'
-          href={`${SITE_METADATA.siteUrl}/${lang}/feed-features.xml`}
-          title={`${SITE_METADATA.titleHeader} - Features (${lang.toUpperCase()})`}
-        />
-        <link
-          rel='alternate'
-          type='application/rss+xml'
-          href={`${SITE_METADATA.siteUrl}/${lang}/feed-blog.xml`}
-          title={`${SITE_METADATA.titleHeader} - Blog (${lang.toUpperCase()})`}
-        />
-        <title />
-      </head>
       <body className={cn('relative flex min-h-dvh flex-col pl-[calc(100vw-100%)] antialiased')}>
         <ProviderRegistry params={params}>
           <DefaultLayout>

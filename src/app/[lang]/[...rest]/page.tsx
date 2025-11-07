@@ -81,7 +81,8 @@ function shouldHandleRoute(lang: string, rest: string[]): boolean {
   const firstSegment = rest[0] || ''
   if (EXCLUDED_PATHS.some((path) => firstSegment.startsWith(path))) return false
 
-  // RSS feeds are served as static files from public/
+  // RSS feeds are served as static files from public/feeds/
+  // Skip any feed-related paths (legacy support)
   if (firstSegment === 'feed.xml' || firstSegment.startsWith('feed-')) return false
 
   return true
