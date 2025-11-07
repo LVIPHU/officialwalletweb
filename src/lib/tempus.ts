@@ -7,7 +7,7 @@
  * from NEXSOFT.
  */
 
-import { isBrowser } from '@/lib/misc'
+import { isBrowser } from '@/lib/utils/dom/browser'
 
 type TempusCallback = (now: number, deltaTime: number) => void
 

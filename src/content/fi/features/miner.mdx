@@ -1,116 +1,358 @@
 ---
-title: Louhija - Kasvata Tuloja TBC Walletilla
-description: Opi kasvattamaan tuloja yhdistämällä louhintapooliin ja seuraamalla palkkioita sovelluksessa TBC Walletin integroidulla louhintaominaisuudella.
+title: Louhija - PoS Staking ja Validointijärjestelmä
+description: Opi osallistumaan Proof of Stake -louhintaan panostamalla tokeneita, äänestämällä validoijia ja ansaitsemalla palkkioita TBC Walletin integroidulla PoS-louhijaominaisuudella.
 date: '2025-01-15'
-category: 'features'
+category: features
 ---
 
 ## Yleiskatsaus
 
-TBC Wallet yksinkertaistaa louhinnan hallintaa, auttaen sekä uusia että kokeneita käyttäjiä maksimoimaan tuotot turvallisesti. Integroitu louhintaominaisuutemme antaa sinun yhdistää louhintapooliin ja seurata palkkioitasi suoraan lompakkosovelluksessa.
+TBC Walletin Louhija-ominaisuus mahdollistaa osallistumisen Proof of Stake (PoS) -konsensusmekanismiin. Panosta tokeneitasi, äänestä validoijia, hallinnoi solmuja ja ansaitse palkkioita turvallisen ja käyttäjäystävällisen käyttöliittymän kautta.
 
-## Miten se toimii
+## 1. Staking ja Validointimoduuli
 
-### Yhdistäminen louhintapooliin
+### Omat Validoijat
 
-TBC Wallet tukee yhteyksiä suuriin louhintapooliin useilla blockchain-verkoilla. Voit helposti yhdistää lompakkosi haluamaasi louhintapooliin ja aloittaa palkkioiden ansaitsemisen.
+Näytä kaikki validoijat, joiden kanssa panostat tällä hetkellä **Omat Validoijat** -osiossa. Tämä kojelauta tarjoaa yleiskuvan panostusasemistasi, kokonaispanostetusta määrästä ja nykyisistä palkkioista.
 
-1. **Valitse louhintapooli**: Valitse listaltamme vahvistettuja louhintapoolia
-2. **Yhdistä lompakkosi**: Yhdistä TBC Wallet turvallisesti valittuun pooliin
-3. **Aloita louhinta**: Aloita palkkioiden ansaitseminen automaattisesti
-4. **Seuraa suorituskykyä**: Tarkkaile louhintatilastoja reaaliaikaisesti
+### Validoijan Yksityiskohdat
 
-### Reaaliaikainen seuranta
+Jokainen validoija näyttää kattavat tiedot:
 
-Seuraa louhintasuorituskykyäsi suoraan sovelluksessa:
+- **Solmun Nimi/Tunnus**: Ainutlaatuinen tunniste validoijasolmulle
+- **Palkkioprosentti**: Prosenttiosuus palkkioista, jonka validoija ottaa
+- **Kokonaispanos**: Kokonaismäärä tokeneita, joita on panostettu kaikkien delegoijien kesken
+- **Suorituskykymittarit**: Käyttöaika-prosentti ja lohkon allekirjoituksen onnistumisprosentti
+- **Palkkiohistoria**: Historialliset palkkiojakelutiedot
 
-- **Hash-nopeus**: Tarkkaile panostasi louhintapooliin
-- **Palkkiot**: Näe kertyneet ja odottavat palkkiot
-- **Tulohistoria**: Pääsy yksityiskohtaiseen tapahtumahistoriaan
-- **Suorituskykymittarit**: Analysoi louhintatehokkuuttasi
+### Panostusvaihtoehdot
 
-## Edut
+#### Tavallinen Solmu Com.Node-panostukseen
 
-### Parannettu turvallisuus
+Panosta tokeneitasi Tavallisiin Solmuihin (Com.Node) tai tavallisiin validoijasolmuihin:
 
-Kaikki louhintaoperaatiot on turvattu TBC Walletin kehittyneiden turvallisuusominaisuuksien avulla:
+1. Siirry validoijaluetteloon
+2. Valitse validoija, jonka kanssa haluat panostaa
+3. Tarkista validoijan yksityiskohdat ja palkkioprosentit
+4. Syötä haluamasi panostusmäärä
+5. Vahvista transaktio
 
-- **Moniallekirjoituksen tuki**: Lisää lisäkerroksia turvallisuutta louhintaoperaatioihisi
-- **Salatut yhteydet**: Kaikki pooliyhteydet on salattu
-- **Yksityisen avaimen suojaus**: Avaimet eivät koskaan jätä laitetta
+#### Light Node -yksityiskohdat / Com.Node -yksityiskohdat
 
-### Käyttäjäystävällinen käyttöliittymä
+Näytä yksityiskohtaiset tiedot tietyistä solmutyypeistä:
 
-Intuitiivinen käyttöliittymämme tekee louhinnan kaikkien saatavilla:
+- **Light Node**: Kevyet validoijasolmut optimoidulla resurssien käytöllä
+- **Com.Node**: Tavalliset solmut, jotka toimivat verkon vakio-validoijina
 
-- **Yksinkertainen asennus**: Aloita minuuteissa, ei tunneissa
-- **Selkeät visualisoinnit**: Ymmärrä suorituskykysi silmäyksellä
-- **Automatisoidut prosessit**: Aseta se ja unohda se - louhinta toimii automaattisesti
+Molemmat solmutyypit näyttävät:
 
-### Kustannustehokkuus
+- Kokonaispanostusmäärä
+- Nykyinen palkkioaste
+- Toimintatila (aktiivinen/passiivinen)
+- Suorituskykytilastot
 
-Maksimoi voittosi:
+### Panostuksen poistaminen
 
-- **Alhaiset maksut**: Kilpailukykyiset transaktiomaksut
-- **Läpinäkyvä hinnoittelu**: Ei piilotettuja kustannuksia
-- **Optimoitu palkkiot**: Automaattinen palkkioiden jakelu
+#### Light Node -panostuksen poistaminen / Com.Node -panostuksen poistaminen
+
+Poista panostettuja tokeneitasi:
+
+1. Siirry **Omat Validoijat** -osioon
+2. Valitse validoija, jolta haluat poistaa panostuksen
+3. Klikkaa **Poista panostus** ja syötä määrä
+4. Vahvista panostuksen poistamisen transaktio
+5. Odota irrottamisjaksoa (jos soveltuu)
+
+**Huom**: Panostuksen poistaminen voi vaatia irrottamisjakson ennen kuin tokeneet ovat saatavilla nostoon.
+
+### Solmun luominen
+
+Tule validoijaksi luomalla oma solmusi:
+
+1. Siirry **Luo Solmu** -osioon
+2. Anna solmun konfiguraatiotiedot
+3. Panosta vähimmäismäärä
+4. Aseta palkkioprosenttisi
+5. Lähetä solmun luomispyyntö
+
+**Vaatimukset**:
+
+- Vähimmäispanostusmäärä
+- Vakaa palvelininfrastruktuuri
+- Kelvollinen solmukonfiguraatio
+- Parhaat turvallisuuskäytännöt
+
+### Työnkulku
+
+**Validoijaluettelo** → **Validoijan Yksityiskohdat** → **Panosta/Poista panostus** → **Omat Validoijat**
+
+## 2. Hallintomoduuli ja Äänestys
+
+### Äänestysvalinta
+
+Osallistu verkon hallintoon äänestämällä ehdotuksista ja validoijista:
+
+1. Pääsy **Äänestysvalinta** -käyttöliittymään
+2. Selaa saatavilla olevia ehdotuksia tai validoijavaaleja
+3. Tarkista ehdotuksen yksityiskohdat ja vaikutukset
+4. Valitse äänestysvaihtoehtosi
+
+### Äänestä Com.Nodea
+
+Äänestä Tavallisia Solmuja validoijavaaleissa:
+
+1. Siirry **Äänestä Com.Nodea** -osioon
+2. Valitse solmu, jota haluat tukea
+3. Tarkista solmun menestyshistoria ja suorituskyky
+4. Vahvista äänesi
+5. Seuraa äänestyksen edistymistä
+
+### Äänestyksen Yksityiskohdat
+
+Näytä kattavat tiedot jokaisesta äänestyksestä:
+
+- **Äänestyksen Tila**: Nykyinen äänestysvaihe ja edistyminen
+- **Äänijakauma**: Äänien jakautuminen puolesta/vastaan
+- **Jäljellä oleva aika**: Lähtölaskenta äänestyspäättymiseen
+- **Sinun Äänesi**: Nykyinen äänestysasemasi
+- **Ehdotuksen Vaikutus**: Odotetut vaikutukset, jos ehdotus hyväksytään
+
+### Äänestyshistoria
+
+#### Äänestyshistorian Yksityiskohdat / Äänestyshistorian Yksityiskohdat Com.Node
+
+Pääsy täydelliseen äänestyshistoriaasi:
+
+- **Äänestyshistoria**: Kaikki antamasi äänet
+- **Ehdotuksen Tila**: Äänestettyjen ehdotusten nykyinen tila
+- **Äänestystulokset**: Menneiden äänestysten tulokset
+- **Palkkiovaikutus**: Miten äänesi vaikuttivat palkkioihin
+
+### Äänen peruuttaminen
+
+#### Äänen peruuttamisen varoitus
+
+Ennen äänen peruuttamista, tarkista:
+
+- **Vaikutus**: Miten peruuttaminen vaikuttaa äänestystulokseen
+- **Päättymisaika**: Oletko peruutusikkunan sisällä
+- **Seuraukset**: Mahdolliset rangaistukset tai rajoitukset
+
+**Varoitus**: Jotkut äänet eivät ehkä ole peruutettavissa tietyn ajanjakson jälkeen.
+
+### Työnkulku
+
+**Äänestysvalinta** → **Äänestä Com.Nodea** → **Äänestyksen Yksityiskohdat** → **Äänestyshistorian Yksityiskohdat**
+
+## 3. Solmuhallintamoduuli
+
+### Light Node -yksityiskohdat
+
+Light Nodet ovat optimoituja validoijasolmuja, jotka on suunniteltu tehokkuutta varten:
+
+- **Konfiguraatio**: Solmun asennus ja tekniset määritykset
+- **Panostusmäärä**: Kokonaismäärä tokeneita, joita on panostettu tähän solmuun
+- **Suorituskykymittarit**: Käyttöaika, lohkon allekirjoitusaste, viive
+- **Toimintatila**: Aktiivinen, passiivinen tai ylläpitotila
+
+### Com.Node -yksityiskohdat
+
+Tavalliset Solmut toimivat vakio-validoijina:
+
+- **Solmutiedot**: Yksityiskohtaiset solmun määritykset
+- **Panostuspooli**: Kokonaispanos kaikilta delegoijilta
+- **Palkkiojako**: Nykyiset palkkioasteet ja historia
+- **Verkon Sijainti**: Sijoitus kaikkien validoijien joukossa
+
+### Panostuskäyttöliittymä
+
+#### Tavallinen Solmu Com.Node-panostukseen
+
+Muunna tai panosta eri solmutyppien välillä:
+
+1. Valitse lähdesolmu (Tavallinen Solmu)
+2. Valitse kohde Com.Node
+3. Syötä panostusmäärä
+4. Tarkista muunnosasteet ja maksut
+5. Vahvista transaktio
+
+### Suodatin (Valitse Solmu)
+
+Käytä edistyneitä suodattimia löytääksesi oikean solmun:
+
+- **Suorituskyky**: Suodata käyttöajan ja onnistumisprosentin mukaan
+- **Palkkiot**: Järjestä palkkioasteiden tai palkkioprosenttien mukaan
+- **Tila**: Aktiiviset, passiiviset tai uudet solmut
+- **Panostusmäärä**: Vähimmäis/maksimipanostusvaatimukset
+- **Palkkioprosentti**: Alhaisesta korkeaan palkkioprosenttiin
+
+### Työnkulku
+
+**Solmuluettelo** → **(Suodatin)** → **Solmun Yksityiskohdat** → **Panosta/Poista panostus**
+
+## 4. Palkkio- ja Louhijahistoriamoduuli
+
+### Louhijahistoria
+
+Seuraa panostus- ja validointitoimintaasi:
+
+#### Palkkiohistoria
+
+- **Päivittäiset Palkkiot**: Palkkioiden jakautuminen päivittäin
+- **Palkkio per Lohko**: Ansiot lohkon validoinnista
+- **Kokonaiskertymä**: Kaikkien ansaittujen palkkioiden summa
+- **Nostohistoria**: Palkkionostojen tietueet
+
+#### Lohkon allekirjoitushistoria
+
+- **Allekirjoitetut Lohkot**: Luettelo validoimistasi lohkoista
+- **Onnistumisprosentti**: Onnistuneiden lohkon allekirjoitusten prosenttiosuus
+- **Lohkopalkkiot**: Ansiot jokaisesta allekirjoitetusta lohkosta
+- **Verkon Panos**: Vaikutuksesi verkon turvallisuuteen
+
+#### Validoijan Suorituskyky
+
+- **Käyttöaikatilastot**: Prosenttiosuus ajasta, jolloin validoija oli aktiivinen
+- **Palkkiotehokkuus**: Keskimääräiset palkkiot per panostettu tokeni
+- **Vertailu**: Suorituskykysi verrattuna verkon keskiarvoon
+
+### Seurantaominaisuudet
+
+- Reaaliaikaiset palkkiopäivitykset
+- Historialliset suorituskykytaulukot
+- Viedyt transaktiohistoria
+- Palkkioennusteet nykyisten astemien perusteella
+
+## 5. Lompakko- ja Tokenmoduuli
+
+### Tokenin Yksityiskohdat
+
+Näytä yksityiskohtaiset tiedot panostustokeneista:
+
+- **Tokenin Saldo**: Käytettävissä olevat tokeneet lompakossasi
+- **Panostettu Määrä**: Tällä hetkellä panostuksessa lukitut tokeneet
+- **Panostukseen Vapaana**: Panostamattomat tokeneet valmiina käyttöön
+- **Palkkiosaldo**: Kertyneet mutta nostamattomat palkkiot
+
+### Nosto
+
+#### Palkkioiden nostaminen
+
+Nosta ansaitsemasi panostuspalkkiot:
+
+1. Siirry **Nosto** -osioon
+2. Tarkista käytettävissä oleva palkkiosaldo
+3. Syötä nostosumma
+4. Tarkista transaktiomaksut
+5. Vahvista nosto
+
+#### Panostettujen tokenien nostaminen
+
+Panostuksen poistamisen jälkeen, nosta tokeneitasi:
+
+1. Varmista, että irrottamisjakso on kulunut (jos soveltuu)
+2. Siirry **Nosto** -osioon
+3. Valitse panostettavat tokeneet nostoon
+4. Syötä määrä
+5. Vahvista transaktio
+
+### Tokeninhallinta
+
+- **Saldojen Seuranta**: Seuraa kaikkia tokenisaldoja
+- **Transaktiohistoria**: Täydellinen tietue kaikista transaktioista
+- **Palkkiolaskelmat**: Yksityiskohtainen jakautuminen palkkioiden kertymisestä
+- **Monitokenin Tuki**: Hallitse useita tokentyyppejä
+
+### Työnkulku
+
+**Tokenin Yksityiskohdat** → **Nosto** → **Transaktion Vahvistus**
 
 ## Aloittaminen
 
 ### Edellytykset
 
-Ennen kuin aloitat louhinnan TBC Walletilla, varmista että sinulla on:
+Ennen kuin aloitat PoS-louhinnan:
 
-- TBC Wallet -tili riittävällä saldolla
+- TBC Wallet -tili riittävällä tokenisaldolla
+- Ymmärrys PoS-panostusmekaniikoista
 - Vakaa internet-yhteys
-- Ymmärrys louhinnan peruskäsitteistä
+- Perustiedot blockchain-validoinnista
 
 ### Vaiheittainen opas
 
-1. **Avaa TBC Wallet**: Käynnistä sovellus laitteellasi
-2. **Siirry louhintaan**: Mene Ominaisuudet-osiin ja valitse "Miner"
-3. **Valitse pooli**: Selaa ja valitse louhintapooli, joka sopii tarpeisiisi
-4. **Määritä asetukset**: Aseta louhinta-asetukset ja parametrit
-5. **Aloita louhinta**: Aktivoi louhinta ja aloita palkkioiden ansaitseminen
+1. **Avaa TBC Wallet**: Käynnistä sovellus
+2. **Siirry Louhijaan**: Mene Ominaisuudet-osiin ja valitse "Miner"
+3. **Tutustu Validoijiin**: Selaa saatavilla olevia validoijia ja solmuja
+4. **Tarkista Suorituskyky**: Tarkista validoijamittarit ja palkkioprosentit
+5. **Panosta Tokeneita**: Valitse validoija ja panosta tokeneitasi
+6. **Seuraa Palkkioita**: Seuraa panostuspalkkioitasi reaaliaikaisesti
+7. **Osallistu Hallintoon**: Äänestä ehdotuksista ja validoijavaaleista
+8. **Hallinnoi Asemaasi**: Säädä panostuksia, poista panostus tai luo oma solmusi
 
 ### Parhaat käytännöt
 
-- **Säännöllinen seuranta**: Tarkista louhintatilasi säännöllisesti
-- **Poolin valinta**: Tutki pooleja ennen yhdistämistä
-- **Turvallisuus**: Älä koskaan jaa yksityisiä avaimiasi tai tunnistetietoja
-- **Päivitykset**: Pidä lompakkosi ajan tasalla uusimmalla versiolla
+- **Hajauta Panostukset**: Älä panosta kaikkia tokeneitasi yhdellä validoijalla
+- **Seuraa Suorituskykyä**: Tarkista säännöllisesti validoijan käyttöaika ja palkkiot
+- **Pysy Ajan tasalla**: Pysy ajan tasalla verkon hallintoehdotuksista
+- **Turvallisuus**: Älä koskaan jaa yksityisiä avaimiasi tai palautuslauseita
+- **Tutki**: Tutki validoijia ennen suurten määrien panostamista
+- **Irrottamisjakso**: Ole tietoinen irrottamisjaksoista ennen panostuksen poistamista
+
+## Turvallisuusominaisuudet
+
+### Parannettu suojaus
+
+Kaikki panostusoperaatiot on turvattu TBC Walletin turvallisuusominaisuuksien kautta:
+
+- **Moniallekirjoituksen Tuki**: Lisää ylimääräisiä turvallisuuskerroksia panostustransaktioihin
+- **Salatut Transaktiot**: Kaikki operaatiot on salattu päästä päähän
+- **Yksityisen Avaimen Suojaus**: Avaimet eivät koskaan jätä laitetta
+- **Transaktion Vahvistus**: Monivaiheinen vahvistus kriittisille toiminnoille
+
+### Riskinhallinta
+
+- **Validoijan Seuranta**: Automaattiset hälytykset validoijaongelmiin
+- **Leikkauksen Suojaus**: Tietoa leikkausriskeistä
+- **Hätäpanostuksen poistaminen**: Menettelyt kiireellisiin panostuksen poistamistarpeisiin
 
 ## Tuetut verkot
 
-TBC Walletin louhintaominaisuus tukee useita blockchain-verkkoja:
+TBC Walletin Louhija-ominaisuus tukee PoS-verkkoja:
 
-- **TBChain**: Natiivi verkkotuki optimoidulla suorituskyvyllä
-- **Bitcoin**: Yhdistä Bitcoin-louhintapooliin
-- **Ethereum**: Tuki Ethereum-pohjaiselle louhinalle
-- **Tron**: Louhintakyvyt Tron-verkossa
+- **TBChain**: Natiiviverkko optimoidulla PoS-toteutuksella
+- **Cross-chain Panostus**: Tuki useille blockchain-verkoille
+- **Validoijaverkot**: Eri validoijaekosysteemit
 
 ## Usein kysytyt kysymykset
 
-### Onko louhinta turvallista TBC Walletilla?
+### Onko PoS-panostus turvallista TBC Walletilla?
 
-Kyllä, louhinta TBC Walletin kautta on turvallista. Kaikki yhteydet on salattu ja yksityiset avaimesi pysyvät laitteellasi koko ajan.
+Kyllä, panostus TBC Walletin kautta on turvallista. Kaikki transaktiot on salattu ja yksityiset avaimesi pysyvät laitteellasi. Panostus kuitenkin sisältää luontaisia riskejä, mukaan lukien validoijaleikkaus ja verkkoriskit.
 
 ### Kuinka usein palkkiot jaetaan?
 
-Palkkioiden jakelu riippuu louhintapoolista, johon olet yhdistetty. Useimmat poolit jakavat palkkiot päivittäin tai viikoittain.
+Palkkiojako riippuu verkosta ja validoijasta. Useimmat PoS-verkot jakavat palkkiot jatkuvasti lohkojen validoinnin yhteydessä, nosto on saatavilla milloin tahansa.
 
-### Voinko louhia useita kryptovaluuttoja samanaikaisesti?
+### Voinko panostaa useilla validoijilla?
 
-Kyllä, TBC Wallet tukee useiden kryptovaluuttojen louhintaa, mutta sinun on yhdistettävä eri pooleihin kullekin verkolle.
+Kyllä, voit panostaa useilla validoijilla samanaikaisesti hajauttaaksesi riskisi ja mahdollisesti lisätäksesi palkkioita.
 
-### Mitkä ovat vähimmäisvaatimukset?
+### Mikä on vähimmäispanostusmäärä?
 
-Vähimmäisvaatimukset vaihtelevat verkon ja poolin mukaan. Yleensä tarvitset riittävän saldon kattamaan transaktiomaksut ja poolin vaatimukset.
+Vähimmäispanostusmäärät vaihtelevat verkon ja validoijan mukaan. Tarkista yksittäiset validoijavaatimukset ennen panostamista.
 
-### Miten voin nostaa louhintapalkkioni?
+### Miten voin nostaa panostuspalkkioni?
 
-Palkkiot lisätään automaattisesti lompakkosi saldoon. Voit nostaa ne kuten minkä tahansa muun omaisuuden lompakossasi.
+Palkkiot voidaan nostaa milloin tahansa Nosto-osion kautta. Panostetut tokeneet voivat vaatia irrottamisjakson ennen nostoa.
+
+### Mitä tapahtuu, jos validoija leikataan?
+
+Jos validoija, jonka kanssa olet panostanut, leikataan, saatat menettää osan panostetuista tokeneistasi suhteessa leikkausmäärään. Tutki aina validoijia ennen panostamista.
+
+### Voinko vaihtaa validoijia panostuksen jälkeen?
+
+Kyllä, voit poistaa panostuksen yhdeltä validoijalta ja panostaa toiselle. Ole tietoinen mahdollisista irrottamisjaksoista.
 
 ## Tuki
 
-Jos kohtaat ongelmia tai sinulla on kysymyksiä louhinnasta TBC Walletilla, vieraile [Tukikeskuksessamme](/support/contact-us) tai tarkista [UKK](/support/faq) saadaksesi lisätietoja.
+Jos kohtaat ongelmia tai sinulla on kysymyksiä PoS-louhinnasta TBC Walletilla, vieraile [Tukikeskuksessamme](/support/contact-us) tai tarkista [UKK](/support/faq) saadaksesi lisätietoja.

@@ -98,7 +98,7 @@ export default function HomeTemplateDesktop() {
     if (!lenis) return
 
     function onClassNameChange(lenis: Lenis) {
-      // console.log('[Home template] Lenis className: ', lenis.className)
+      // Handle className change
     }
 
     lenis.on('className change' as any, onClassNameChange)
@@ -214,11 +214,10 @@ export default function HomeTemplateDesktop() {
     } else if (window.scrollY > 2600 && window.scrollY <= 3000) {
       setScreenIphone('4')
     }
-    // console.log('[Home template] use scroll', window.scrollY, e.scroll, e.isScrolling, e.velocity, e.isLocked)
   })
 
   useFrame(() => {
-    // console.log('[Home template] use frame', window.scrollY, lenis?.scroll, lenis?.isScrolling)
+    // Frame handler
   }, 1)
 
   const inUseRef = useRef<HTMLElement | null>(null)

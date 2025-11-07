@@ -1,116 +1,358 @@
 ---
-title: Mineur - Augmentez vos Gains avec TBC Wallet
-description: Apprenez comment augmenter vos gains en vous connectant à des pools de minage et en suivant vos récompenses dans l'application avec la fonctionnalité de minage intégrée de TBC Wallet.
+title: Mineur - Système de Staking PoS et Validateurs
+description: Apprenez comment participer à l'extraction Proof of Stake en misant des tokens, en votant pour des validateurs et en gagnant des récompenses avec la fonctionnalité de mineur PoS intégrée de TBC Wallet.
 date: '2025-01-15'
-category: 'features'
+category: features
 ---
 
 ## Vue d'ensemble
 
-TBC Wallet simplifie la gestion du minage, aidant les utilisateurs novices et expérimentés à maximiser leurs rendements en toute sécurité. Notre fonctionnalité de minage intégrée vous permet de vous connecter à des pools de minage et de suivre vos récompenses directement dans l'application du portefeuille.
+La fonctionnalité Miner de TBC Wallet vous permet de participer au mécanisme de consensus Proof of Stake (PoS). Misez vos tokens, votez pour des validateurs, gérez des nœuds et gagnez des récompenses via une interface sécurisée et conviviale.
 
-## Comment ça fonctionne
+## 1. Module de Staking et Validateurs
 
-### Connexion aux Pools de Minage
+### Mes Validateurs
 
-TBC Wallet prend en charge les connexions aux principaux pools de minage sur plusieurs réseaux blockchain. Vous pouvez facilement connecter votre portefeuille à un pool de minage de votre choix et commencer à gagner des récompenses.
+Visualisez tous les validateurs avec lesquels vous misez actuellement dans la section **Mes Validateurs**. Ce tableau de bord fournit un aperçu de vos positions de staking, du montant total misé et des récompenses actuelles.
 
-1. **Sélectionnez un Pool de Minage**: Choisissez parmi notre liste de pools de minage vérifiés
-2. **Connectez votre Portefeuille**: Connectez en toute sécurité votre TBC Wallet au pool sélectionné
-3. **Commencez à Miner**: Commencez à gagner des récompenses automatiquement
-4. **Suivez les Performances**: Surveillez vos statistiques de minage en temps réel
+### Détails du Validador
 
-### Suivi en Temps Réel
+Chaque validador affiche des informations complètes:
 
-Suivez vos performances de minage directement dans l'application:
+- **Nom/ID du Nœud**: Identifiant unique pour le nœud validador
+- **Taux de Commission**: Pourcentage des récompenses prises par le validador
+- **Mise Totale**: Montant total de tokens misés par tous les délégateurs
+- **Métriques de Performance**: Pourcentage de disponibilité et taux de succès de signature de bloc
+- **Historique des Récompenses**: Données historiques de distribution des récompenses
 
-- **Taux de Hash**: Surveillez votre contribution au pool de minage
-- **Récompenses**: Visualisez les récompenses accumulées et en attente
-- **Historique des Gains**: Accédez à l'historique détaillé des transactions
-- **Métriques de Performance**: Analysez l'efficacité de votre minage
+### Options de Staking
 
-## Avantages
+#### Staking de Nœud Commun vers Com.Node
 
-### Sécurité Renforcée
+Misez vos tokens dans des Nœuds Communs (Com.Node) ou des nœuds validateurs réguliers:
 
-Toutes les opérations de minage sont sécurisées grâce aux fonctionnalités de sécurité avancées de TBC Wallet:
+1. Naviguez vers la liste des validateurs
+2. Sélectionnez un validador avec lequel vous souhaitez miser
+3. Examinez les détails du validador et les taux de commission
+4. Entrez le montant que vous souhaitez miser
+5. Confirmez la transaction
 
-- **Support Multi-signature**: Ajoutez des couches supplémentaires de sécurité à vos opérations de minage
-- **Connexions Cryptées**: Toutes les connexions aux pools sont cryptées
-- **Protection de la Clé Privée**: Vos clés ne quittent jamais votre appareil
+#### Détails Light Node / Détails Com.Node
 
-### Interface Conviviale
+Visualisez des informations détaillées sur des types de nœuds spécifiques:
 
-Notre interface intuitive rend le minage accessible à tous:
+- **Light Node**: Nœuds validateurs légers avec utilisation optimisée des ressources
+- **Com.Node**: Nœuds communs qui servent de validateurs standard sur le réseau
 
-- **Configuration Simple**: Démarrez en quelques minutes, pas en heures
-- **Visualisations Claires**: Comprenez vos performances d'un coup d'œil
-- **Processus Automatisés**: Configurez et oubliez - le minage s'exécute automatiquement
+Les deux types de nœuds affichent:
 
-### Efficacité des Coûts
+- Montant total de la mise
+- Taux de récompense actuel
+- État opérationnel (actif/inactif)
+- Statistiques de performance
 
-Maximisez vos profits avec:
+### Unstaking
 
-- **Frais Bas**: Frais de transaction compétitifs
-- **Tarification Transparente**: Aucun coût caché
-- **Récompenses Optimisées**: Distribution automatique des récompenses
+#### Unstake Light Node / Unstake Com.Node
+
+Pour retirer vos tokens misés:
+
+1. Allez dans la section **Mes Validateurs**
+2. Sélectionnez le validador dont vous souhaitez retirer
+3. Cliquez sur **Unstake** et entrez le montant
+4. Confirmez la transaction d'unstaking
+5. Attendez la période de déliaison (si applicable)
+
+**Note**: L'unstaking peut nécessiter une période de déliaison avant que les tokens ne soient disponibles pour le retrait.
+
+### Créer un Nœud
+
+Devenez validador en créant votre propre nœud:
+
+1. Naviguez vers la section **Créer un Nœud**
+2. Fournissez les détails de configuration du nœud
+3. Misez le montant minimum requis
+4. Définissez votre taux de commission
+5. Soumettez la demande de création de nœud
+
+**Exigences**:
+
+- Montant de mise minimum
+- Infrastructure serveur stable
+- Configuration de nœud valide
+- Meilleures pratiques de sécurité
+
+### Flux de Travail
+
+**Liste des Validateurs** → **Détails du Validador** → **Stake/Unstake** → **Mes Validateurs**
+
+## 2. Module de Gouvernance et Vote
+
+### Sélection de Vote
+
+Participez à la gouvernance du réseau en votant sur les propositions et les validateurs:
+
+1. Accédez à l'interface **Sélection de Vote**
+2. Parcourez les propositions disponibles ou les élections de validateurs
+3. Examinez les détails de la proposition et ses implications
+4. Sélectionnez votre option de vote
+
+### Voter pour Com.Node
+
+Votez pour les Nœuds Communs lors des élections de validateurs:
+
+1. Naviguez vers **Voter pour Com.Node**
+2. Sélectionnez le nœud que vous souhaitez soutenir
+3. Examinez les antécédents et les performances du nœud
+4. Confirmez votre vote
+5. Surveillez la progression du vote
+
+### Détails du Vote
+
+Visualisez des informations complètes sur chaque vote:
+
+- **Statut du Vote**: Phase de vote actuelle et progression
+- **Distribution des Votes**: Répartition des votes pour/contre
+- **Temps Restant**: Compte à rebours jusqu'à la date limite
+- **Votre Vote**: Votre position de vote actuelle
+- **Impact de la Proposition**: Effets attendus si la proposition passe
+
+### Historique des Votes
+
+#### Détails de l'Historique des Votes / Détails de l'Historique des Votes Com.Node
+
+Accédez à votre historique de vote complet:
+
+- **Historique des Votes**: Tous les votes que vous avez émis
+- **Statut de la Proposition**: État actuel des propositions votées
+- **Résultats des Votes**: Résultats des votes passés
+- **Impact sur les Récompenses**: Comment vos votes ont affecté les récompenses
+
+### Annuler le Vote
+
+#### Avertissement d'Annulation de Vote
+
+Avant d'annuler un vote, examinez:
+
+- **Impact**: Comment l'annulation affecte le résultat du vote
+- **Date Limite**: Si vous êtes dans la fenêtre d'annulation
+- **Conséquences**: Toute pénalité ou restriction
+
+**Avertissement**: Certains votes peuvent ne pas être annulables après une certaine période.
+
+### Flux de Travail
+
+**Sélection de Vote** → **Voter pour Com.Node** → **Détails du Vote** → **Détails de l'Historique des Votes**
+
+## 3. Module de Gestion des Nœuds
+
+### Détails Light Node
+
+Les Light Nodes sont des nœuds validateurs optimisés conçus pour l'efficacité:
+
+- **Configuration**: Configuration du nœud et spécifications techniques
+- **Montant de la Mise**: Total des tokens misés sur ce nœud
+- **Métriques de Performance**: Disponibilité, taux de signature de bloc, latence
+- **État Opérationnel**: Actif, inactif ou mode maintenance
+
+### Détails Com.Node
+
+Les Nœuds Communs servent de validateurs standard:
+
+- **Informations du Nœud**: Spécifications détaillées du nœud
+- **Pool de Staking**: Mise totale de tous les délégateurs
+- **Distribution des Récompenses**: Taux de récompense actuels et historique
+- **Position sur le Réseau**: Classement parmi tous les validateurs
+
+### Interface de Staking
+
+#### Staking de Nœud Commun vers Com.Node
+
+Convertir ou miser entre différents types de nœuds:
+
+1. Sélectionnez le nœud source (Nœud Commun)
+2. Choisissez le Com.Node cible
+3. Entrez le montant de la mise
+4. Examinez les taux de conversion et les frais
+5. Confirmez la transaction
+
+### Filtre (Sélectionner un Nœud)
+
+Utilisez des filtres avancés pour trouver le bon nœud:
+
+- **Performance**: Filtrer par disponibilité, taux de succès
+- **Récompenses**: Trier par taux de récompense ou commission
+- **Statut**: Nœuds actifs, inactifs ou nouveaux
+- **Montant de la Mise**: Exigences de mise minimum/maximum
+- **Commission**: Taux de commission de faible à élevé
+
+### Flux de Travail
+
+**Liste des Nœuds** → **(Filtre)** → **Détails du Nœud** → **Stake/Unstake**
+
+## 4. Module de Récompenses et Historique du Mineur
+
+### Historique du Mineur
+
+Suivez votre activité de staking et de validation:
+
+#### Historique des Récompenses
+
+- **Récompenses Quotidiennes**: Répartition des récompenses par jour
+- **Récompense par Bloc**: Gains de validation de bloc
+- **Total Accumulé**: Somme de toutes les récompenses gagnées
+- **Historique des Retraits**: Enregistrements des retraits de récompenses
+
+#### Historique de Signature de Bloc
+
+- **Blocs Signés**: Liste des blocs que vous avez validés
+- **Taux de Succès**: Pourcentage de signatures de bloc réussies
+- **Récompenses par Bloc**: Gains de chaque bloc signé
+- **Contribution au Réseau**: Votre impact sur la sécurité du réseau
+
+#### Performance du Validador
+
+- **Statistiques de Disponibilité**: Pourcentage de temps où le validador était actif
+- **Efficacité des Récompenses**: Récompenses moyennes par token misé
+- **Comparaison**: Votre performance vs. moyenne du réseau
+
+### Fonctionnalités de Suivi
+
+- Mises à jour de récompenses en temps réel
+- Graphiques de performance historiques
+- Historique des transactions exportable
+- Projections de récompenses basées sur les taux actuels
+
+## 5. Module Portefeuille et Tokens
+
+### Détails du Token
+
+Visualisez des informations détaillées sur les tokens de staking:
+
+- **Solde du Token**: Tokens disponibles dans votre portefeuille
+- **Montant Misé**: Tokens actuellement verrouillés en staking
+- **Disponible pour Staking**: Tokens non misés prêts à être utilisés
+- **Solde des Récompenses**: Récompenses accumulées mais non retirées
+
+### Retrait
+
+#### Retirer les Récompenses
+
+Retirez vos récompenses de staking gagnées:
+
+1. Naviguez vers la section **Retrait**
+2. Examinez le solde de récompenses disponible
+3. Entrez le montant du retrait
+4. Vérifiez les frais de transaction
+5. Confirmez le retrait
+
+#### Retirer les Tokens Misés
+
+Après l'unstaking, retirez vos tokens:
+
+1. Assurez-vous que la période de déliaison est passée (si applicable)
+2. Allez dans la section **Retrait**
+3. Sélectionnez les tokens misés à retirer
+4. Entrez le montant
+5. Confirmez la transaction
+
+### Gestion des Tokens
+
+- **Suivi du Solde**: Surveillez tous les soldes de tokens
+- **Historique des Transactions**: Enregistrement complet de toutes les transactions
+- **Calculs de Récompenses**: Répartition détaillée de l'accumulation des récompenses
+- **Support Multi-tokens**: Gérez plusieurs types de tokens
+
+### Flux de Travail
+
+**Détails du Token** → **Retrait** → **Confirmation de Transaction**
 
 ## Pour Commencer
 
 ### Prérequis
 
-Avant de commencer à miner avec TBC Wallet, assurez-vous d'avoir:
+Avant de commencer avec l'extraction PoS:
 
-- Un compte TBC Wallet avec un solde suffisant
-- Une connexion Internet stable
-- Une compréhension des concepts de base du minage
+- Compte TBC Wallet avec un solde de tokens suffisant
+- Compréhension de la mécanique de staking PoS
+- Connexion Internet stable
+- Connaissances de base sur la validation blockchain
 
 ### Guide Étape par Étape
 
-1. **Ouvrez TBC Wallet**: Lancez l'application sur votre appareil
-2. **Naviguez vers le Minage**: Allez dans la section Fonctionnalités et sélectionnez "Miner"
-3. **Choisissez un Pool**: Parcourez et sélectionnez un pool de minage qui correspond à vos besoins
-4. **Configurez les Paramètres**: Définissez vos préférences et paramètres de minage
-5. **Commencez à Miner**: Activez le minage et commencez à gagner des récompenses
+1. **Ouvrez TBC Wallet**: Lancez l'application
+2. **Naviguez vers Miner**: Allez dans la section Fonctionnalités et sélectionnez "Miner"
+3. **Explorez les Validateurs**: Parcourez les validateurs et nœuds disponibles
+4. **Examinez les Performances**: Vérifiez les métriques des validateurs et les taux de commission
+5. **Misez des Tokens**: Sélectionnez un validador et misez vos tokens
+6. **Surveillez les Récompenses**: Suivez vos récompenses de staking en temps réel
+7. **Participez à la Gouvernance**: Votez sur les propositions et les élections de validateurs
+8. **Gérez votre Position**: Ajustez les mises, unstake ou créez votre propre nœud
 
 ### Meilleures Pratiques
 
-- **Surveillance Régulière**: Vérifiez régulièrement l'état de votre minage
-- **Sélection de Pool**: Recherchez les pools avant de vous connecter
-- **Sécurité**: Ne partagez jamais vos clés privées ou identifiants
-- **Mises à Jour**: Gardez votre portefeuille à jour avec la dernière version
+- **Diversifiez les Mises**: Ne misez pas tous vos tokens avec un seul validador
+- **Surveillez les Performances**: Vérifiez régulièrement la disponibilité et les récompenses du validador
+- **Restez Informé**: Tenez-vous au courant des propositions de gouvernance du réseau
+- **Sécurité**: Ne partagez jamais vos clés privées ou phrases de récupération
+- **Recherche**: Recherchez les validateurs avant de miser de gros montants
+- **Période de Déliaison**: Soyez conscient des périodes de déliaison avant l'unstaking
+
+## Fonctionnalités de Sécurité
+
+### Protection Renforcée
+
+Toutes les opérations de staking sont sécurisées via les fonctionnalités de sécurité de TBC Wallet:
+
+- **Support Multi-signature**: Ajoutez des couches supplémentaires de sécurité aux transactions de staking
+- **Transactions Cryptées**: Toutes les opérations sont cryptées de bout en bout
+- **Protection de la Clé Privée**: Les clés ne quittent jamais votre appareil
+- **Vérification des Transactions**: Confirmation en plusieurs étapes pour les opérations critiques
+
+### Gestion des Risques
+
+- **Surveillance des Validateurs**: Alertes automatiques pour les problèmes de validateurs
+- **Protection contre le Slashing**: Informations sur les risques de slashing
+- **Unstaking d'Urgence**: Procédures pour les besoins urgents d'unstaking
 
 ## Réseaux Supportés
 
-La fonctionnalité de minage de TBC Wallet prend en charge plusieurs réseaux blockchain:
+La fonctionnalité Miner de TBC Wallet supporte les réseaux PoS:
 
-- **TBChain**: Support réseau natif avec performances optimisées
-- **Bitcoin**: Connectez-vous aux pools de minage Bitcoin
-- **Ethereum**: Support pour le minage basé sur Ethereum
-- **Tron**: Capacités de minage sur le réseau Tron
+- **TBChain**: Réseau natif avec implémentation PoS optimisée
+- **Staking Cross-chain**: Support pour plusieurs réseaux blockchain
+- **Réseaux de Validateurs**: Divers écosystèmes de validateurs
 
 ## Questions Fréquentes
 
-### Le minage est-il sûr avec TBC Wallet?
+### Le staking PoS est-il sûr avec TBC Wallet?
 
-Oui, le minage via TBC Wallet est sécurisé. Toutes les connexions sont cryptées et vos clés privées restent sur votre appareil en permanence.
+Oui, le staking via TBC Wallet est sécurisé. Toutes les transactions sont cryptées et vos clés privées restent sur votre appareil. Cependant, le staking comporte des risques inhérents, notamment le slashing des validateurs et les risques réseau.
 
 ### À quelle fréquence les récompenses sont-elles distribuées?
 
-La distribution des récompensas dépend du pool de minage auquel vous êtes connecté. La plupart des pools distribuent les récompenses quotidiennement ou hebdomadairement.
+La distribution des récompenses dépend du réseau et du validador. La plupart des réseaux PoS distribuent les récompenses en continu lors de la validation des blocs, avec retrait disponible à tout moment.
 
-### Puis-je miner plusieurs cryptomonnaies simultanément?
+### Puis-je miser avec plusieurs validateurs?
 
-Oui, TBC Wallet prend en charge le minage de plusieurs cryptomonnaies, mais vous devrez vous connecter à différents pools pour chaque réseau.
+Oui, vous pouvez miser avec plusieurs validateurs simultanément pour diversifier votre risque et potentiellement augmenter les récompenses.
 
-### Quels sont les exigences minimales?
+### Quel est le montant minimum de staking?
 
-Les exigences minimales varient selon le réseau et le pool. Généralement, vous aurez besoin d'un solde suffisant pour couvrir les frais de transaction et les exigences du pool.
+Les montants minimums de staking varient selon le réseau et le validador. Vérifiez les exigences individuelles des validateurs avant de miser.
 
-### Comment retirer mes récompenses de minage?
+### Comment retirer mes récompenses de staking?
 
-Les récompenses sont automatiquement ajoutées au solde de votre portefeuille. Vous pouvez les retirer comme tout autre actif dans votre portefeuille.
+Les récompenses peuvent être retirées à tout moment via la section Retrait. Les tokens misés peuvent nécessiter une période de déliaison avant le retrait.
+
+### Que se passe-t-il si un validador est slasheado?
+
+Si un validador avec lequel vous avez misé est slasheado, vous pouvez perdre une partie de vos tokens misés proportionnellement au montant du slash. Recherchez toujours les validateurs avant de miser.
+
+### Puis-je changer de validateurs après avoir misé?
+
+Oui, vous pouvez unstake d'un validador et miser avec un autre. Soyez conscient de toute période de déliaison qui pourrait s'appliquer.
 
 ## Support
 
-Si vous rencontrez des problèmes ou avez des questions sur le minage avec TBC Wallet, veuillez visiter notre [Centre de Support](/support/contact-us) ou consulter notre [FAQ](/support/faq) pour plus d'informations.
+Si vous rencontrez des problèmes ou avez des questions sur l'extraction PoS avec TBC Wallet, veuillez visiter notre [Centre de Support](/support/contact-us) ou consulter notre [FAQ](/support/faq) pour plus d'informations.

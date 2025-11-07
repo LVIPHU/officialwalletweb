@@ -8,7 +8,7 @@
  */
 
 'use client'
-import { useLayoutEffect, useRef, useState } from 'react'
+import { memo, useLayoutEffect, useRef, useState } from 'react'
 import { usePathname } from 'next/navigation'
 import { Button } from '@/components/ui/button'
 import {
@@ -109,7 +109,7 @@ interface NavigationSectionProps {
   contentWidth?: number
 }
 
-function NavigationSection({ section, contentWidth }: NavigationSectionProps) {
+const NavigationSection = memo(function NavigationSection({ section, contentWidth }: NavigationSectionProps) {
   const { i18n } = useLingui()
 
   return (
@@ -151,14 +151,14 @@ function NavigationSection({ section, contentWidth }: NavigationSectionProps) {
       </NavigationMenuContent>
     </NavigationMenuItem>
   )
-}
+})
 
 interface ListItemProps extends Omit<React.ComponentPropsWithoutRef<'li'>, 'title'> {
   href: string
   title: MessageDescriptor
 }
 
-function ListItem({ title, children, href, ...props }: ListItemProps) {
+const ListItem = memo(function ListItem({ title, children, href, ...props }: ListItemProps) {
   const { i18n } = useLingui()
   const pathname = usePathname()
   const isActive = pathname === href
@@ -181,4 +181,4 @@ function ListItem({ title, children, href, ...props }: ListItemProps) {
       </NavigationMenuLink>
     </li>
   )
-}
+})

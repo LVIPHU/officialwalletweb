@@ -1,116 +1,358 @@
 ---
-title: Miner - Boost Your Earnings with TBC Wallet
-description: Learn how to boost your earnings by connecting to mining pools and tracking rewards in-app with TBC Wallet's integrated mining feature.
+title: Miner - PoS Staking & Validator System
+description: Learn how to participate in Proof of Stake mining by staking tokens, voting for validators, and earning rewards with TBC Wallet's integrated PoS miner feature.
 date: '2025-01-15'
-category: 'features'
+category: features
 ---
 
 ## Overview
 
-TBC Wallet simplifies mining management, helping both new and seasoned users maximize returns securely. Our integrated mining feature allows you to connect to mining pools and track your rewards directly within the wallet application.
+TBC Wallet's Miner feature enables you to participate in the Proof of Stake (PoS) consensus mechanism. Stake your tokens, vote for validators, manage nodes, and earn rewards through a secure and user-friendly interface.
 
-## How It Works
+## 1. Staking & Validator Module
 
-### Connecting to Mining Pools
+### My Validator
 
-TBC Wallet supports connections to major mining pools across multiple blockchain networks. You can easily connect your wallet to a mining pool of your choice and start earning rewards.
+View all validators you're currently staking with in the **My Validator** section. This dashboard provides an overview of your staking positions, total staked amount, and current rewards.
 
-1. **Select a Mining Pool**: Choose from our list of verified mining pools
-2. **Connect Your Wallet**: Securely connect your TBC Wallet to the selected pool
-3. **Start Mining**: Begin earning rewards automatically
-4. **Track Performance**: Monitor your mining statistics in real-time
+### Validator Detail
 
-### Real-Time Tracking
+Each validator displays comprehensive information:
 
-Track your mining performance directly in the app:
+- **Node Name/ID**: Unique identifier for the validator node
+- **Commission Rate**: Percentage of rewards taken by the validator
+- **Total Stake**: Total amount of tokens staked across all delegators
+- **Performance Metrics**: Uptime percentage and block signing success rate
+- **Reward History**: Historical reward distribution data
 
-- **Hash Rate**: Monitor your contribution to the mining pool
-- **Rewards**: View accumulated and pending rewards
-- **Earnings History**: Access detailed transaction history
-- **Performance Metrics**: Analyze your mining efficiency
+### Staking Options
 
-## Benefits
+#### Common Node to Com.Node Staking
 
-### Enhanced Security
+Stake your tokens into Common Nodes (Com.Node) or regular validator nodes:
 
-All mining operations are secured through TBC Wallet's advanced security features:
+1. Navigate to the validator list
+2. Select a validator you want to stake with
+3. Review validator details and commission rates
+4. Enter the amount you want to stake
+5. Confirm the transaction
 
-- **Multi-signature Support**: Add extra layers of security to your mining operations
-- **Encrypted Connections**: All pool connections are encrypted
-- **Private Key Protection**: Your keys never leave your device
+#### Light Node Detail / Com.Node Detail
 
-### User-Friendly Interface
+View detailed information about specific node types:
 
-Our intuitive interface makes mining accessible to everyone:
+- **Light Node**: Lightweight validator nodes with optimized resource usage
+- **Com.Node**: Common nodes that serve as standard validators in the network
 
-- **Simple Setup**: Get started in minutes, not hours
-- **Clear Visualizations**: Understand your performance at a glance
-- **Automated Processes**: Set it and forget it - mining runs automatically
+Both node types display:
 
-### Cost Efficiency
+- Total stake amount
+- Current reward rate
+- Operational status (active/inactive)
+- Performance statistics
 
-Maximize your profits with:
+### Unstaking
 
-- **Low Fees**: Competitive transaction fees
-- **Transparent Pricing**: No hidden costs
-- **Optimized Rewards**: Automatic reward distribution
+#### Light Node Unstake / Com.Node Unstake
+
+To withdraw your staked tokens:
+
+1. Go to **My Validator** section
+2. Select the validator you want to unstake from
+3. Click **Unstake** and enter the amount
+4. Confirm the unstaking transaction
+5. Wait for the unbonding period (if applicable)
+
+**Note**: Unstaking may require an unbonding period before tokens are available for withdrawal.
+
+### Create Node
+
+Become a validator by creating your own node:
+
+1. Navigate to **Create Node** section
+2. Provide node configuration details
+3. Stake the minimum required amount
+4. Set your commission rate
+5. Submit the node creation request
+
+**Requirements**:
+
+- Minimum stake amount
+- Stable server infrastructure
+- Valid node configuration
+- Security best practices
+
+### Workflow
+
+**Validator List** → **Validator Detail** → **Stake/Unstake** → **My Validator**
+
+## 2. Governance & Voting Module
+
+### Voting Selection
+
+Participate in network governance by voting on proposals and validators:
+
+1. Access the **Voting Selection** interface
+2. Browse available proposals or validator elections
+3. Review proposal details and implications
+4. Select your voting option
+
+### Vote for Com.Node
+
+Vote for Common Nodes in validator elections:
+
+1. Navigate to **Vote for Com.Node**
+2. Select the node you want to support
+3. Review the node's track record and performance
+4. Confirm your vote
+5. Monitor voting progress
+
+### Voting Detail
+
+View comprehensive information about each vote:
+
+- **Voting Status**: Current voting phase and progress
+- **Vote Distribution**: Breakdown of votes for/against
+- **Time Remaining**: Countdown to voting deadline
+- **Your Vote**: Your current voting position
+- **Proposal Impact**: Expected effects if proposal passes
+
+### Voting Record
+
+#### Voting Record Detail / Voting Record Detail Com.Node
+
+Access your complete voting history:
+
+- **Vote History**: All votes you've cast
+- **Proposal Status**: Current state of voted proposals
+- **Voting Outcomes**: Results of past votes
+- **Reward Impact**: How your votes affected rewards
+
+### Cancel Vote
+
+#### Cancel Vote Warning
+
+Before canceling a vote, review:
+
+- **Impact**: How canceling affects the voting outcome
+- **Deadline**: Whether you're within the cancellation window
+- **Consequences**: Any penalties or restrictions
+
+**Warning**: Some votes may not be cancellable after a certain period.
+
+### Workflow
+
+**Voting Selection** → **Vote for Com.Node** → **Voting Detail** → **Voting Record Detail**
+
+## 3. Node Management Module
+
+### Light Node Detail
+
+Light Nodes are optimized validator nodes designed for efficiency:
+
+- **Configuration**: Node setup and technical specifications
+- **Stake Amount**: Total tokens staked on this node
+- **Performance Metrics**: Uptime, block signing rate, latency
+- **Operational Status**: Active, inactive, or maintenance mode
+
+### Com.Node Detail
+
+Common Nodes serve as standard validators:
+
+- **Node Information**: Detailed node specifications
+- **Staking Pool**: Total stake from all delegators
+- **Reward Distribution**: Current reward rates and history
+- **Network Position**: Ranking among all validators
+
+### Staking Interface
+
+#### Common Node to Com.Node Staking
+
+Convert or stake between different node types:
+
+1. Select source node (Common Node)
+2. Choose target Com.Node
+3. Enter stake amount
+4. Review conversion rates and fees
+5. Confirm transaction
+
+### Filter (Select Node)
+
+Use advanced filters to find the right node:
+
+- **Performance**: Filter by uptime, success rate
+- **Rewards**: Sort by reward rates or commission
+- **Status**: Active, inactive, or new nodes
+- **Stake Amount**: Minimum/maximum stake requirements
+- **Commission**: Low to high commission rates
+
+### Workflow
+
+**Node List** → **(Filter)** → **Node Detail** → **Stake/Unstake**
+
+## 4. Reward & Miner History Module
+
+### Miner History
+
+Track your staking and validation activity:
+
+#### Reward History
+
+- **Daily Rewards**: Breakdown of rewards by day
+- **Reward per Block**: Earnings from block validation
+- **Total Accumulated**: Sum of all rewards earned
+- **Withdrawal History**: Records of reward withdrawals
+
+#### Block Signing History
+
+- **Signed Blocks**: List of blocks you've validated
+- **Success Rate**: Percentage of successful block signs
+- **Block Rewards**: Earnings from each signed block
+- **Network Contribution**: Your impact on network security
+
+#### Validator Performance
+
+- **Uptime Statistics**: Percentage of time validator was active
+- **Reward Efficiency**: Average rewards per staked token
+- **Comparison**: Your performance vs. network average
+
+### Tracking Features
+
+- Real-time reward updates
+- Historical performance charts
+- Exportable transaction history
+- Reward projections based on current rates
+
+## 5. Wallet & Token Module
+
+### Token Detail
+
+View detailed information about staking tokens:
+
+- **Token Balance**: Available tokens in your wallet
+- **Staked Amount**: Tokens currently locked in staking
+- **Available for Staking**: Unstaked tokens ready to use
+- **Reward Balance**: Accumulated but unwithdrawn rewards
+
+### Withdrawal
+
+#### Withdraw Rewards
+
+Withdraw your earned staking rewards:
+
+1. Navigate to **Withdrawal** section
+2. Review available reward balance
+3. Enter withdrawal amount
+4. Check transaction fees
+5. Confirm withdrawal
+
+#### Withdraw Staked Tokens
+
+After unstaking, withdraw your tokens:
+
+1. Ensure unbonding period has passed (if applicable)
+2. Go to **Withdrawal** section
+3. Select staked tokens to withdraw
+4. Enter amount
+5. Confirm transaction
+
+### Token Management
+
+- **Balance Tracking**: Monitor all token balances
+- **Transaction History**: Complete record of all transactions
+- **Reward Calculations**: Detailed breakdown of reward accrual
+- **Multi-token Support**: Manage multiple token types
+
+### Workflow
+
+**Token Detail** → **Withdrawal** → **Transaction Confirmation**
 
 ## Getting Started
 
 ### Prerequisites
 
-Before you begin mining with TBC Wallet, ensure you have:
+Before starting with PoS mining:
 
-- A TBC Wallet account with sufficient balance
+- TBC Wallet account with sufficient token balance
+- Understanding of PoS staking mechanics
 - Stable internet connection
-- Understanding of basic mining concepts
+- Basic knowledge of blockchain validation
 
 ### Step-by-Step Guide
 
-1. **Open TBC Wallet**: Launch the application on your device
-2. **Navigate to Mining**: Go to the Features section and select "Miner"
-3. **Choose a Pool**: Browse and select a mining pool that suits your needs
-4. **Configure Settings**: Set your mining preferences and parameters
-5. **Start Mining**: Activate mining and begin earning rewards
+1. **Open TBC Wallet**: Launch the application
+2. **Navigate to Miner**: Go to Features section and select "Miner"
+3. **Explore Validators**: Browse available validators and nodes
+4. **Review Performance**: Check validator metrics and commission rates
+5. **Stake Tokens**: Select a validator and stake your tokens
+6. **Monitor Rewards**: Track your staking rewards in real-time
+7. **Participate in Governance**: Vote on proposals and validator elections
+8. **Manage Your Position**: Adjust stakes, unstake, or create your own node
 
 ### Best Practices
 
-- **Regular Monitoring**: Check your mining status regularly
-- **Pool Selection**: Research pools before connecting
-- **Security**: Never share your private keys or credentials
-- **Updates**: Keep your wallet updated to the latest version
+- **Diversify Stakes**: Don't stake all tokens with a single validator
+- **Monitor Performance**: Regularly check validator uptime and rewards
+- **Stay Informed**: Keep up with network governance proposals
+- **Security**: Never share your private keys or recovery phrases
+- **Research**: Research validators before staking large amounts
+- **Unbonding Period**: Be aware of unbonding periods before unstaking
+
+## Security Features
+
+### Enhanced Protection
+
+All staking operations are secured through TBC Wallet's security features:
+
+- **Multi-signature Support**: Add extra security layers to staking transactions
+- **Encrypted Transactions**: All operations are encrypted end-to-end
+- **Private Key Protection**: Keys never leave your device
+- **Transaction Verification**: Multi-step confirmation for critical operations
+
+### Risk Management
+
+- **Validator Monitoring**: Automatic alerts for validator issues
+- **Slashing Protection**: Information about slashing risks
+- **Emergency Unstaking**: Procedures for urgent unstaking needs
 
 ## Supported Networks
 
-TBC Wallet's mining feature supports multiple blockchain networks:
+TBC Wallet's Miner feature supports PoS networks:
 
-- **TBChain**: Native network support with optimized performance
-- **Bitcoin**: Connect to Bitcoin mining pools
-- **Ethereum**: Support for Ethereum-based mining
-- **Tron**: Tron network mining capabilities
+- **TBChain**: Native network with optimized PoS implementation
+- **Cross-chain Staking**: Support for multiple blockchain networks
+- **Validator Networks**: Various validator ecosystems
 
 ## Frequently Asked Questions
 
-### Is mining safe with TBC Wallet?
+### Is PoS staking safe with TBC Wallet?
 
-Yes, mining through TBC Wallet is secure. All connections are encrypted, and your private keys remain on your device at all times.
+Yes, staking through TBC Wallet is secure. All transactions are encrypted, and your private keys remain on your device. However, staking carries inherent risks including validator slashing and network risks.
 
 ### How often are rewards distributed?
 
-Reward distribution depends on the mining pool you're connected to. Most pools distribute rewards daily or weekly.
+Reward distribution depends on the network and validator. Most PoS networks distribute rewards continuously as blocks are validated, with withdrawal available at any time.
 
-### Can I mine multiple cryptocurrencies simultaneously?
+### Can I stake with multiple validators?
 
-Yes, TBC Wallet supports mining multiple cryptocurrencies, but you'll need to connect to different pools for each network.
+Yes, you can stake with multiple validators simultaneously to diversify your risk and potentially increase rewards.
 
-### What are the minimum requirements?
+### What is the minimum staking amount?
 
-Minimum requirements vary by network and pool. Generally, you'll need sufficient balance to cover transaction fees and pool requirements.
+Minimum staking amounts vary by network and validator. Check individual validator requirements before staking.
 
-### How do I withdraw my mining rewards?
+### How do I withdraw my staking rewards?
 
-Rewards are automatically added to your wallet balance. You can withdraw them like any other asset in your wallet.
+Rewards can be withdrawn at any time through the Withdrawal section. Staked tokens may require an unbonding period before withdrawal.
+
+### What happens if a validator is slashed?
+
+If a validator you've staked with is slashed, you may lose a portion of your staked tokens proportional to the slash amount. Always research validators before staking.
+
+### Can I change validators after staking?
+
+Yes, you can unstake from one validator and stake with another. Be aware of any unbonding periods that may apply.
 
 ## Support
 
-If you encounter any issues or have questions about mining with TBC Wallet, please visit our [Support Center](/support/contact-us) or check our [FAQ](/support/faq) for more information.
+If you encounter any issues or have questions about PoS mining with TBC Wallet, please visit our [Support Center](/support/contact-us) or check our [FAQ](/support/faq) for more information.

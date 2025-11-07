@@ -15,6 +15,8 @@ export interface TocHeading {
   readonly depth: number
 }
 
+// Legacy types - kept for backward compatibility if needed
+// These are now replaced by contentlayer generated types
 export interface ContentMetadata {
   readonly title: string
   readonly date?: string
@@ -32,3 +34,6 @@ export interface ContentResult {
   readonly data: ContentMetadata
   readonly headings: readonly TocHeading[]
 }
+
+// Re-export contentlayer types for convenience
+export type { MDXDocument } from '@/lib/utils/content/contentlayer'

@@ -9,11 +9,10 @@
 
 import { notFound } from 'next/navigation'
 import type { Metadata } from 'next'
-import { getContentByPath } from '@/lib/content'
-import { MarkdownContent } from '@/components/molecules/markdown-content'
+import { allFeatures, allLegals } from 'contentlayer/generated'
+import { MdxLayoutRenderer } from '@/components/molecules/mdx-layout-renderer'
 import MdxLayout from '@/components/templates/mdx-layout'
 import { initLingui } from '@/i18n/initLingui'
-import { getAllContentPaths } from '@/lib/content-utils'
 import type { ContentType } from '@/types/content.types'
 import { genPageMetadata } from '@/lib/seo'
 
@@ -26,16 +25,47 @@ const VALID_LOCALES = ['ar', 'en', 'es', 'fi', 'fr', 'pt', 'zh-hans', 'zh-hant']
 const EXCLUDED_PATHS = ['.well-known']
 
 /**
+ * Create lookup maps for efficient content retrieval
+ * Key format: "{type}:{lang}:{slug}" e.g., "features:en:miner"
+ */
+const featuresMap = new Map(allFeatures.map((f) => [`features:${f.lang}:${f.slug}`, f]))
+
+const legalsMap = new Map(allLegals.map((l) => [`legal:${l.lang}:${l.slug}`, l]))
+
+/**
+ * Find content by language and path segments
+ * Returns the matching feature or legal document, or undefined if not found
+ * Uses Map lookup for O(1) performance instead of O(n) array.find()
+ */
+function findContentByPath(lang: string, rest: string[]) {
+  if (rest[0] === 'features' && rest.length > 1) {
+    return featuresMap.get(`features:${lang}:${rest[1]}`)
+  }
+  if (rest[0] === 'legal' && rest.length > 1) {
+    return legalsMap.get(`legal:${lang}:${rest[1]}`)
+  }
+  return undefined
+}
+
+/**
  * Generate static params for all MDX content files
  */
 export async function generateStaticParams() {
-  const paths = await getAllContentPaths()
   const allParams: Array<{ lang: string; rest: string[] }> = []
 
-  for (const path of paths) {
+  // Add features
+  for (const feature of allFeatures) {
     allParams.push({
-      lang: path.lang,
-      rest: path.segments,
+      lang: feature.lang,
+      rest: ['features', feature.slug],
+    })
+  }
+
+  // Add legal docs
+  for (const legal of allLegals) {
+    allParams.push({
+      lang: legal.lang,
+      rest: ['legal', legal.slug],
     })
   }
 
@@ -74,26 +104,32 @@ export async function generateMetadata({ params }: DynamicPageParams): Promise<M
 
   try {
     initLingui(lang)
-    const { data } = await getContentByPath(lang, rest)
     const pathString = rest.join('/')
     const contentType = getContentType(rest)
 
-    return genPageMetadata({
-      title: data.title || pathString,
-      description: data.description || 'TBC Wallet documentation and content',
-      lang,
-      path: pathString,
-      date: data.date,
-      type: contentType === 'blog' ? 'article' : 'website',
-    })
-  } catch {
-    return genPageMetadata({
-      title: 'TBC Wallet',
-      description: 'TBC Wallet documentation and content',
-      lang: VALID_LOCALES.includes(lang) ? lang : 'en',
-      path: rest.join('/'),
-    })
+    // Find content from contentlayer
+    const content = findContentByPath(lang, rest)
+
+    if (content) {
+      return genPageMetadata({
+        title: content.title || pathString,
+        description: content.description || 'TBC Wallet documentation and content',
+        lang,
+        path: pathString,
+        date: content.date,
+        type: contentType === 'blog' ? 'article' : 'website',
+      })
+    }
+  } catch (error) {
+    console.error('Error generating metadata:', error)
   }
+
+  return genPageMetadata({
+    title: 'TBC Wallet',
+    description: 'TBC Wallet documentation and content',
+    lang: VALID_LOCALES.includes(lang) ? lang : 'en',
+    path: rest.join('/'),
+  })
 }
 
 /**
@@ -124,17 +160,19 @@ export default async function DynamicContentPage({ params }: DynamicPageParams) 
 
   initLingui(lang)
 
-  try {
-    const { content, data, headings } = await getContentByPath(lang, rest)
-    const contentType = getContentType(rest)
+  // Find content from contentlayer
+  const content = findContentByPath(lang, rest)
 
-    return (
-      <MdxLayout type={contentType} title={data.title} category={data.category || rest[0]} headings={headings}>
-        <MarkdownContent content={content} />
-      </MdxLayout>
-    )
-  } catch (error) {
-    console.error('Error loading content:', error)
+  if (!content) {
     notFound()
   }
+
+  const contentType = getContentType(rest)
+  const headings = (content.toc as Array<{ url: string; text: string; depth: number }>) || []
+
+  return (
+    <MdxLayout type={contentType} title={content.title} category={content.category || rest[0]} headings={headings}>
+      <MdxLayoutRenderer code={content.body.code} toc={headings} />
+    </MdxLayout>
+  )
 }

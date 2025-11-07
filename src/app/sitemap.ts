@@ -9,8 +9,7 @@
 
 import 'server-only'
 import type { MetadataRoute } from 'next'
-import { getAllContentPaths } from '@/lib/content-utils'
-import { getContentByPath } from '@/lib/content'
+import { allFeatures, allLegals } from 'contentlayer/generated'
 import linguiConfig from '../../lingui.config'
 import { SITE_METADATA } from '@/constants/site-metadata.constants'
 
@@ -29,9 +28,6 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   }
 
   const sitemapEntries: MetadataRoute.Sitemap = []
-
-  // Get all content paths
-  const allContentPaths = await getAllContentPaths()
 
   // Generate entries for each locale
   for (const locale of locales) {
@@ -59,42 +55,28 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       priority: 0.8,
     })
 
-    // Process content paths for this locale
-    const localeContentPaths = allContentPaths.filter((path) => path.lang === locale)
+    // Process features for this locale
+    const localeFeatures = allFeatures.filter((f) => f.lang === locale && !('draft' in f && f.draft))
+    for (const feature of localeFeatures) {
+      const url = `${siteUrl}/${locale}/features/${feature.slug}`
+      sitemapEntries.push({
+        url,
+        lastModified: feature.date ? new Date(feature.date) : new Date(),
+        changeFrequency: 'weekly',
+        priority: 0.8,
+      })
+    }
 
-    for (const contentPath of localeContentPaths) {
-      try {
-        const { data } = await getContentByPath(contentPath.lang, contentPath.segments)
-        const pathString = contentPath.segments.join('/')
-        const url = `${siteUrl}/${contentPath.lang}/${pathString}`
-
-        // Determine priority based on content type
-        let priority = 0.7
-        let changeFrequency: 'daily' | 'weekly' | 'monthly' | 'yearly' = 'monthly'
-
-        if (contentPath.segments[0] === 'legal') {
-          priority = 0.5
-          changeFrequency = 'yearly'
-        } else if (contentPath.segments[0] === 'features') {
-          priority = 0.8
-          changeFrequency = 'weekly'
-        } else if (contentPath.segments[0] === 'blog') {
-          priority = 0.9
-          changeFrequency = 'weekly'
-        }
-
-        sitemapEntries.push({
-          url,
-          lastModified: data.date ? new Date(data.date) : new Date(),
-          changeFrequency,
-          priority,
-        })
-      } catch (error) {
-        console.warn(
-          `Failed to generate sitemap entry for ${contentPath.lang}/${contentPath.segments.join('/')}:`,
-          error
-        )
-      }
+    // Process legal docs for this locale
+    const localeLegals = allLegals.filter((l) => l.lang === locale && !('draft' in l && l.draft))
+    for (const legal of localeLegals) {
+      const url = `${siteUrl}/${locale}/legal/${legal.slug}`
+      sitemapEntries.push({
+        url,
+        lastModified: legal.date ? new Date(legal.date) : new Date(),
+        changeFrequency: 'yearly',
+        priority: 0.5,
+      })
     }
   }
 
