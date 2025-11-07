@@ -9,19 +9,6 @@
 
 import type Lenis from 'lenis'
 
-export function scrollToId(id = '', offset = 0, behavior: ScrollBehavior | undefined = 'smooth') {
-  const element = document.getElementById(id)
-  if (!element) return
-
-  const elementPosition = element.getBoundingClientRect().top + window.scrollY
-  const offsetPosition = elementPosition - offset
-
-  window.scrollTo({
-    top: offsetPosition,
-    behavior,
-  })
-}
-
 /**
  * Decode URL encoded hash selector for safe querySelector usage
  * Handles Unicode characters in hash (e.g., #vi-%E7%94%A8%E6%88%B7...)
