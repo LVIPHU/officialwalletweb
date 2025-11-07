@@ -19,11 +19,11 @@ msgstr ". Kaikki oikeudet pidätetään."
 
 #: src/constants/faq.constants.ts:47
 msgid "1. Download TBC Wallet from the App Store, Google Play, or our website. 2. Create a new wallet or import an existing one. 3. Secure your wallet with a strong password and backup your recovery phrase. 4. Start managing your digital assets."
-msgstr ""
+msgstr "1. Lataa TBC Wallet App Storesta, Google Playsta tai verkkosivuiltamme. 2. Luo uusi lompakko tai tuo olemassa oleva. 3. Suojaa lompakkosi vahvalla salasanalla ja varmuuskopioi palautuslauseesi. 4. Aloita digitaalisten varojesi hallinta."
 
 #: src/constants/faq.constants.ts:162
 msgid "1. Go to Settings. 2. Select Security. 3. Choose Change Password. 4. Enter your current and new password. 5. Confirm the change."
-msgstr ""
+msgstr "1. Siirry Asetuksiin. 2. Valitse Turvallisuus. 3. Valitse Vaihda salasana. 4. Syötä nykyinen ja uusi salasanasi. 5. Vahvista muutos."
 
 #: src/components/templates/home/desktop/index.tsx:283
 #: src/components/templates/home/mobile/index.tsx:61
@@ -33,15 +33,15 @@ msgstr "Tietoja"
 
 #: src/constants/faq.constants.ts:157
 msgid "Account Management"
-msgstr ""
+msgstr "Tilin hallinta"
 
 #: src/constants/faq.constants.ts:199
 msgid "Additional Resources"
-msgstr ""
+msgstr "Lisäresurssit"
 
 #: src/constants/faq.constants.ts:68
 msgid "Always backup your recovery phrase (12 or 24 words) in a secure location: Write it down on paper and store it safely. Never store it digitally or share it online. Consider using a hardware wallet for additional security."
-msgstr ""
+msgstr "Varmuuskopioi aina palautuslauseesi (12 tai 24 sanaa) turvallisessa paikassa: Kirjoita se paperille ja säilytä turvallisesti. Älä koskaan tallenna sitä digitaalisesti tai jaa verkossa. Harkitse laitelompakon käyttöä lisäturvallisuudeksi."
 
 #: src/constants/navigation.constants.ts:37
 #: src/constants/navigation.constants.ts:43
@@ -63,7 +63,7 @@ msgstr "App Store"
 
 #: src/constants/faq.constants.ts:208
 msgid "Are there tutorials available?"
-msgstr ""
+msgstr "Onko opetusohjelmia saatavilla?"
 
 #: src/constants/landing.constants.ts:66
 msgid "Bitcoin"
@@ -83,19 +83,19 @@ msgstr "Selainlaajennus"
 
 #: src/constants/faq.constants.ts:119
 msgid "Can I cancel a transaction?"
-msgstr ""
+msgstr "Voinko peruuttaa tapahtuman?"
 
 #: src/constants/faq.constants.ts:166
 msgid "Can I have multiple wallets?"
-msgstr ""
+msgstr "Voinko omistaa useita lompakoita?"
 
 #: src/constants/faq.constants.ts:98
 msgid "Can I pay fees with USDT?"
-msgstr ""
+msgstr "Voinko maksaa maksut USDT:llä?"
 
 #: src/constants/faq.constants.ts:72
 msgid "Can TBC Wallet access my funds?"
-msgstr ""
+msgstr "Voiko TBC Wallet käyttää varojani?"
 
 #: src/components/molecules/platform-tabs/index.tsx:67
 #: src/components/templates/coming-soon/index.tsx:26
@@ -178,11 +178,11 @@ msgstr "Vahvista lompakkosi monivaiheisilla hyväksymisillä parannettua suojaus
 
 #: src/components/molecules/faq-title/index.tsx:23
 msgid "Frequently Asked Questions"
-msgstr ""
+msgstr "Usein kysytyt kysymykset"
 
 #: src/constants/faq.constants.ts:27
 msgid "General Questions"
-msgstr ""
+msgstr "Yleiset kysymykset"
 
 #: src/components/molecules/contact-title/index.tsx:28
 #: src/constants/navigation.constants.ts:103
@@ -196,55 +196,55 @@ msgstr "Hanki se"
 
 #: src/constants/faq.constants.ts:182
 msgid "How can I contact support?"
-msgstr ""
+msgstr "Miten voin ottaa yhteyttä tukeen?"
 
 #: src/constants/faq.constants.ts:67
 msgid "How do I backup my wallet?"
-msgstr ""
+msgstr "Miten varmuuskopioin lompakkoni?"
 
 #: src/constants/faq.constants.ts:161
 msgid "How do I change my password?"
-msgstr ""
+msgstr "Miten vaihdan salasanani?"
 
 #: src/constants/faq.constants.ts:171
 msgid "How do I delete my wallet?"
-msgstr ""
+msgstr "Miten poistan lompakkoni?"
 
 #: src/constants/faq.constants.ts:46
 msgid "How do I get started with TBC Wallet?"
-msgstr ""
+msgstr "Miten aloitan TBC Walletin käytön?"
 
 #: src/constants/faq.constants.ts:150
 msgid "How do I update TBC Wallet?"
-msgstr ""
+msgstr "Miten päivitän TBC Walletin?"
 
 #: src/constants/faq.constants.ts:93
 msgid "How does Instant Transfer work?"
-msgstr ""
+msgstr "Miten Pikasiirto toimii?"
 
 #: src/constants/faq.constants.ts:109
 msgid "How long do transactions take?"
-msgstr ""
+msgstr "Kuinka kauan tapahtumat kestävät?"
 
 #: src/constants/faq.constants.ts:57
 msgid "How secure is TBC Wallet?"
-msgstr ""
+msgstr "Kuinka turvallinen TBC Wallet on?"
 
 #: src/constants/faq.constants.ts:140
 msgid "I can't see my balance. What's wrong?"
-msgstr ""
+msgstr "En näe saldoani. Mikä on vikana?"
 
 #: src/constants/faq.constants.ts:136
 msgid "If a transaction fails: 1. Check your network connection. 2. Verify you have sufficient balance for fees. 3. Try increasing the transaction fee. 4. Contact support if the issue persists."
-msgstr ""
+msgstr "Jos tapahtuma epäonnistuu: 1. Tarkista verkkoyhteytesi. 2. Varmista, että sinulla on riittävä saldo maksuihin. 3. Kokeile lisätä tapahtumamaksua. 4. Ota yhteyttä tukeen, jos ongelma jatkuu."
 
 #: src/constants/faq.constants.ts:63
 msgid "If you lose your device: 1. Use your recovery phrase on a new device to restore your wallet. 2. Immediately transfer funds to a new wallet if possible. 3. Contact support if you need assistance. 4. Never share your recovery phrase with anyone."
-msgstr ""
+msgstr "Jos kadotat laitteesi: 1. Käytä palautuslauseesi uudella laitteella palauttaaksesi lompakkosi. 2. Siirrä varat välittömästi uuteen lompakkoon, jos mahdollista. 3. Ota yhteyttä tukeen, jos tarvitset apua. 4. Älä koskaan jaa palautuslauseesi kenellekään."
 
 #: src/constants/faq.constants.ts:141
 msgid "If your balance isn't showing: 1. Check your internet connection. 2. Refresh the wallet. 3. Verify you're on the correct network. 4. Check if the transaction was successful on a blockchain explorer."
-msgstr ""
+msgstr "Jos saldosi ei näy: 1. Tarkista internetyhteytesi. 2. Päivitä lompakko. 3. Varmista, että olet oikealla verkolla. 4. Tarkista, onko tapahtuma onnistunut lohkoketjuesploraattorissa."
 
 #: src/constants/landing.constants.ts:50
 #: src/constants/navigation.constants.ts:78
@@ -253,7 +253,7 @@ msgstr "Välitön siirto"
 
 #: src/constants/faq.constants.ts:94
 msgid "Instant Transfer enables fast cross-chain transactions with minimal fees. It uses advanced cross-chain protocols to transfer assets between different blockchain networks almost instantly."
-msgstr ""
+msgstr "Pikasiirto mahdollistaa nopeat ketjujenväliset tapahtumat minimaalisilla maksuilla. Se käyttää kehittyneitä ketjujenvälisiä protokollia siirtääkseen varoja eri lohkoketjeverkkojen välillä lähes hetkessä."
 
 #: src/constants/navigation.constants.ts:24
 msgid "iOS app"
@@ -261,7 +261,7 @@ msgstr "iOS-sovellus"
 
 #: src/constants/faq.constants.ts:41
 msgid "Is TBC Wallet free to use?"
-msgstr ""
+msgstr "Onko TBC Wallet ilmainen käyttää?"
 
 #: src/constants/landing.constants.ts:233
 msgid "Mac OS"
@@ -291,11 +291,11 @@ msgstr "Moniallekirjoitus"
 
 #: src/constants/faq.constants.ts:89
 msgid "Multi-signature (multi-sig) requires multiple approvals before a transaction can be executed. This adds an extra layer of security, ideal for shared wallets or high-value accounts."
-msgstr ""
+msgstr "Moniallekirjoitus (multi-sig) vaatii useita hyväksyntöjä ennen kuin tapahtuma voidaan suorittaa. Tämä lisää ylimääräisen turvallisuuskerroksen, ihanteellinen jaetuille lompakoille tai korkean arvon tileille."
 
 #: src/constants/faq.constants.ts:135
 msgid "My transaction failed. What should I do?"
-msgstr ""
+msgstr "Tapahtumani epäonnistui. Mitä minun pitäisi tehdä?"
 
 #: src/components/templates/coming-soon/index.tsx:39
 msgid "name@email.com"
@@ -307,11 +307,11 @@ msgstr "Kieltä ei löytynyt."
 
 #: src/constants/faq.constants.ts:73
 msgid "No, TBC Wallet cannot access your funds. Your private keys are stored locally on your device and are never transmitted to our servers. You have complete control over your assets."
-msgstr ""
+msgstr "Ei, TBC Wallet ei voi käyttää varojasi. Yksityiset avaimesi tallennetaan paikallisesti laitteellesi eikä niitä koskaan lähetetä palvelimillemme. Sinulla on täysi valvonta varojasi."
 
 #: src/constants/faq.constants.ts:120
 msgid "Once a transaction is confirmed on the blockchain, it cannot be cancelled. Always verify transaction details before confirming."
-msgstr ""
+msgstr "Kun tapahtuma on vahvistettu lohkoketjussa, sitä ei voi peruuttaa. Tarkista aina tapahtuman tiedot ennen vahvistamista."
 
 #: src/components/templates/home/desktop/index.tsx:381
 #: src/components/templates/home/mobile/index.tsx:124
@@ -320,7 +320,7 @@ msgstr "Yksi lompakko. Monialustainen"
 
 #: src/constants/faq.constants.ts:193
 msgid "Our support team is available 24/7 to assist you with any questions or issues."
-msgstr ""
+msgstr "Tukitiimimme on saatavilla 24/7 auttamaan sinua kaikissa kysymyksissä tai ongelmissa."
 
 #: src/components/templates/home/desktop/index.tsx:248
 msgid "Own Your Crypto."
@@ -348,7 +348,7 @@ msgstr "Tietosuojakäytäntö"
 
 #: src/constants/faq.constants.ts:53
 msgid "Security"
-msgstr ""
+msgstr "Turvallisuus"
 
 #: src/constants/navigation.constants.ts:79
 msgid "Send assets across chains with near-zero delays and minimal costs"
@@ -396,7 +396,7 @@ msgstr "TBC Wallet yhdistää sinut monipuolisiin ekosysteemeihin, Bitcoinista j
 
 #: src/constants/faq.constants.ts:58
 msgid "TBC Wallet employs multiple security layers: Encrypted Storage: All private keys are encrypted and stored locally on your device. Multi-Signature Support: Enhanced security for high-value transactions. Biometric Authentication: Fingerprint and face recognition support. Regular Security Updates: Continuous security improvements."
-msgstr ""
+msgstr "TBC Wallet käyttää useita turvallisuuskerroksia: Salattu tallennus: Kaikki yksityiset avaimet salataan ja tallennetaan paikallisesti laitteellesi. Moniallekirjoituksen tuki: Parannettu turvallisuus korkean arvon tapahtumille. Biometrinen todennus: Sormenjälki- ja kasvontunnistuksen tuki. Säännölliset turvallisuuspäivitykset: Jatkuvat turvallisuusparannukset."
 
 #: src/components/templates/home/desktop/index.tsx:258
 #: src/components/templates/home/mobile/index.tsx:36
@@ -410,15 +410,15 @@ msgstr "TBC Wallet on johtava moniketjuinen lompakko, jolla on vankka turvallisu
 
 #: src/constants/faq.constants.ts:32
 msgid "TBC Wallet is a secure, multi-chain cryptocurrency wallet that supports multiple blockchain networks including TBChain, Bitcoin, Ethereum, and Tron. It provides a user-friendly interface for managing digital assets, executing transactions, and accessing DeFi services."
-msgstr ""
+msgstr "TBC Wallet on turvallinen moniketjuinen kryptovaluuttalompakko, joka tukee useita lohkoketjeverkkoja, mukaan lukien TBChain, Bitcoin, Ethereum ja Tron. Se tarjoaa käyttäjäystävällisen käyttöliittymän digitaalisten varojen hallintaan, tapahtumien suorittamiseen ja DeFi-palveluiden käyttöön."
 
 #: src/constants/faq.constants.ts:37
 msgid "TBC Wallet is available on: Mobile: iOS and Android applications, Desktop: Windows and macOS applications, Browser: Browser extension for Chrome, Firefox, and Edge."
-msgstr ""
+msgstr "TBC Wallet on saatavilla: Mobiili: iOS- ja Android-sovellukset, Työpöytä: Windows- ja macOS-sovellukset, Selain: Selaimen laajennus Chrome, Firefox ja Edge -selaimille."
 
 #: src/constants/faq.constants.ts:84
 msgid "TBC Wallet supports: TBChain (native network), Bitcoin, Ethereum and EVM-compatible chains, Tron, And more networks continuously being added."
-msgstr ""
+msgstr "TBC Wallet tukee: TBChain (alkuperäinen verkko), Bitcoin, Ethereum ja EVM-yhteensopivat ketjut, Tron, ja lisää verkkoja lisätään jatkuvasti."
 
 #: src/constants/landing.constants.ts:65
 msgid "TBChain"
@@ -430,7 +430,7 @@ msgstr "Käyttöehdot"
 
 #: src/constants/faq.constants.ts:145
 msgid "The app is not working properly. What can I do?"
-msgstr ""
+msgstr "Sovellus ei toimi kunnolla. Mitä voin tehdä?"
 
 #: src/constants/navigation.constants.ts:25
 #: src/constants/navigation.constants.ts:31
@@ -439,23 +439,23 @@ msgstr "Web3-maailma taskussasi"
 
 #: src/constants/faq.constants.ts:172
 msgid "To delete a wallet: 1. Go to Settings. 2. Select Wallet Management. 3. Choose the wallet to delete. 4. Confirm deletion (make sure you have your recovery phrase backed up)."
-msgstr ""
+msgstr "Lompakon poistamiseksi: 1. Siirry Asetuksiin. 2. Valitse Lompakon hallinta. 3. Valitse poistettava lompakko. 4. Vahvista poisto (varmista, että olet varmuuskopioinut palautuslauseesi)."
 
 #: src/constants/faq.constants.ts:115
 msgid "Transaction fees are network charges for processing transactions. Fees vary by: Network congestion, Transaction complexity, Priority level selected."
-msgstr ""
+msgstr "Tapahtumamaksut ovat verkon veloituksia tapahtumien käsittelystä. Maksut vaihtelevat: Verkon ruuhkaisuus, Tapahtuman monimutkaisuus, Valittu prioriteettitaso."
 
 #: src/constants/faq.constants.ts:110
 msgid "Transaction times vary by network: TBChain: Usually completes in seconds. Bitcoin: 10-60 minutes depending on network congestion. Ethereum: 15 seconds to several minutes. Tron: Usually completes in under a minute."
-msgstr ""
+msgstr "Tapahtuma-ajat vaihtelevat verkon mukaan: TBChain: Yleensä valmistuu sekunneissa. Bitcoin: 10-60 minuuttia verkon ruuhkaisuudesta riippuen. Ethereum: 15 sekuntia useisiin minuutteihin. Tron: Yleensä valmistuu alle minuutissa."
 
 #: src/constants/faq.constants.ts:105
 msgid "Transactions"
-msgstr ""
+msgstr "Tapahtumat"
 
 #: src/constants/faq.constants.ts:125
 msgid "Transactions may be pending due to: Network congestion, Low transaction fee, Network maintenance, Insufficient balance."
-msgstr ""
+msgstr "Tapahtumat voivat olla odottamassa seuraavista syistä: Verkon ruuhkaisuus, Matala tapahtumamaksu, Verkon ylläpito, Riittämätön saldo."
 
 #: src/constants/landing.constants.ts:67
 msgid "Tron"
@@ -463,11 +463,11 @@ msgstr "Tron"
 
 #: src/constants/faq.constants.ts:131
 msgid "Troubleshooting"
-msgstr ""
+msgstr "Vianetsintä"
 
 #: src/constants/faq.constants.ts:146
 msgid "Try these steps: 1. Update to the latest version. 2. Clear app cache. 3. Restart the application. 4. Reinstall if necessary (make sure you have your recovery phrase)."
-msgstr ""
+msgstr "Kokeile näitä vaiheita: 1. Päivitä uusimpaan versioon. 2. Tyhjennä sovelluksen välimuisti. 3. Käynnistä sovellus uudelleen. 4. Asenna uudelleen tarvittaessa (varmista, että sinulla on palautuslauseesi)."
 
 #: src/components/templates/home/desktop/index.tsx:251
 msgid "Unleash Web3"
@@ -475,7 +475,7 @@ msgstr "Vapauta Web3"
 
 #: src/constants/faq.constants.ts:151
 msgid "Updates are available through: Mobile: App Store or Google Play Store. Desktop: Download from our website. Browser Extension: Update through your browser's extension store."
-msgstr ""
+msgstr "Päivitykset ovat saatavilla: Mobiili: App Store tai Google Play Store. Työpöytä: Lataa verkkosivuiltamme. Selaimen laajennus: Päivitä selaimen laajennuskaupasta."
 
 #: src/constants/navigation.constants.ts:84
 msgid "USDT fee"
@@ -487,7 +487,7 @@ msgstr "USDT-maksu"
 
 #: src/constants/faq.constants.ts:204
 msgid "Visit our website for detailed documentation. Check our blog for updates and tutorials. Join our community on Telegram and Discord. Follow us on social media for the latest news."
-msgstr ""
+msgstr "Vieraile verkkosivuiltamme saadaksesi yksityiskohtaista dokumentaatiota. Tarkista blogimme päivityksiä ja opetusohjelmia varten. Liity yhteisöömme Telegramissa ja Discordissa. Seuraa meitä sosiaalisessa mediassa saadaksesi uusimmat uutiset."
 
 #: src/constants/navigation.constants.ts:19
 msgid "Wallet"
@@ -499,31 +499,31 @@ msgstr "Julkaisemme pian!"
 
 #: src/constants/faq.constants.ts:114
 msgid "What are transaction fees?"
-msgstr ""
+msgstr "Mitä ovat tapahtumamaksut?"
 
 #: src/constants/faq.constants.ts:192
 msgid "What are your support hours?"
-msgstr ""
+msgstr "Mitkä ovat tukesi aukioloajat?"
 
 #: src/constants/faq.constants.ts:83
 msgid "What blockchain networks are supported?"
-msgstr ""
+msgstr "Mitkä lohkoketjeverkot ovat tuettuja?"
 
 #: src/constants/faq.constants.ts:187
 msgid "What information should I provide when contacting support?"
-msgstr ""
+msgstr "Mitä tietoja minun pitäisi antaa ottaessani yhteyttä tukeen?"
 
 #: src/constants/faq.constants.ts:88
 msgid "What is Multi-Signature?"
-msgstr ""
+msgstr "Mikä on moniallekirjoitus?"
 
 #: src/constants/faq.constants.ts:31
 msgid "What is TBC Wallet?"
-msgstr ""
+msgstr "Mikä on TBC Wallet?"
 
 #: src/constants/faq.constants.ts:62
 msgid "What should I do if I lose my device?"
-msgstr ""
+msgstr "Mitä minun pitäisi tehdä, jos kadotan laitteeni?"
 
 #: src/constants/navigation.constants.ts:115
 msgid "What you need to know to use our services"
@@ -531,19 +531,19 @@ msgstr "Mitä sinun tarvitsee tietää palveluidemme käyttämiseksi"
 
 #: src/constants/faq.constants.ts:188
 msgid "When contacting support, please provide: Your wallet version, Device and operating system, Description of the issue, Screenshots if applicable, Transaction hash if related to a transaction."
-msgstr ""
+msgstr "Ottaessasi yhteyttä tukeen, anna: Lompakkosi versio, Laitteesi ja käyttöjärjestelmä, Ongelman kuvaus, Kuvakaappaukset tarvittaessa, Tapahtuman hash, jos liittyy tapahtumaan."
 
 #: src/constants/faq.constants.ts:203
 msgid "Where can I learn more about TBC Wallet?"
-msgstr ""
+msgstr "Mistä voin oppia lisää TBC Walletista?"
 
 #: src/constants/faq.constants.ts:36
 msgid "Which platforms does TBC Wallet support?"
-msgstr ""
+msgstr "Mitkä alustat TBC Wallet tukee?"
 
 #: src/constants/faq.constants.ts:124
 msgid "Why is my transaction pending?"
-msgstr ""
+msgstr "Miksi tapahtumani on odottamassa?"
 
 #: src/constants/landing.constants.ts:240
 msgid "Windows"
@@ -555,23 +555,23 @@ msgstr "Windows-sovellus"
 
 #: src/constants/faq.constants.ts:42
 msgid "Yes, TBC Wallet is free to download and use. However, blockchain networks charge transaction fees for processing transactions, which are standard across all wallets."
-msgstr ""
+msgstr "Kyllä, TBC Wallet on ilmainen ladata ja käyttää. Lohkoketjeverkot veloittavat kuitenkin tapahtumamaksuja tapahtumien käsittelystä, mikä on standardi kaikissa lompakoissa."
 
 #: src/constants/faq.constants.ts:99
 msgid "Yes, TBC Wallet supports paying transaction fees with USDT (Tether), providing price stability and predictability, especially valuable during volatile market conditions."
-msgstr ""
+msgstr "Kyllä, TBC Wallet tukee tapahtumamaksujen maksamista USDT:llä (Tether), tarjoten hintavakautta ja ennakoitavuutta, erityisen arvokasta epävakaiden markkinaolosuhteiden aikana."
 
 #: src/constants/faq.constants.ts:209
 msgid "Yes, we provide comprehensive tutorials and guides on: Setting up your wallet, Making transactions, Using advanced features, Security best practices. For more information, visit our Support Center or check our documentation."
-msgstr ""
+msgstr "Kyllä, tarjoamme kattavia opetusohjelmia ja oppaita: Lompakon asettaminen, Tapahtumien tekeminen, Kehittyneiden ominaisuuksien käyttö, Turvallisuuden parhaat käytännöt. Lisätietoja varten vieraile Tukikeskuksessamme tai tarkista dokumentaatiomme."
 
 #: src/constants/faq.constants.ts:167
 msgid "Yes, you can create and manage multiple wallets within TBC Wallet. Each wallet has its own recovery phrase and private keys."
-msgstr ""
+msgstr "Kyllä, voit luoda ja hallita useita lompakoita TBC Walletissa. Jokaisella lompakolla on oma palautuslauseensa ja yksityiset avaimensa."
 
 #: src/constants/faq.constants.ts:183
 msgid "You can reach us through: Email: contact@tbchatofficial.com, Support Center: Visit our Contact Us page, Social Media: Follow us on X, Telegram, and Discord."
-msgstr ""
+msgstr "Voit ottaa meihin yhteyttä: Sähköposti: contact@tbchatofficial.com, Tukikeskus: Vieraile Ota yhteyttä -sivullamme, Sosiaalinen media: Seuraa meitä X:ssä, Telegramissa ja Discordissa."
 
 #: src/components/templates/home/desktop/index.tsx:354
 #: src/components/templates/home/mobile/index.tsx:106
