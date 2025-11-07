@@ -12,6 +12,8 @@
 import { useTocHighlight } from '@/hooks/use-toc-highlight'
 import { cn } from '@/lib/styles'
 import type { TocHeading } from '@/types/content.types'
+import { scrollToHash } from '@/lib/utils/dom/scroll'
+import { useStore } from '@/lib/store'
 
 interface TocProps {
   headings: readonly TocHeading[]
@@ -29,9 +31,17 @@ interface TocProps {
  */
 export function Toc({ headings }: TocProps) {
   const { currentIndex } = useTocHighlight()
+  const lenis = useStore((state) => state.lenis)
 
   if (headings.length === 0) {
     return null
+  }
+
+  const handleClick = (e: React.MouseEvent<HTMLButtonElement>, url: string) => {
+    e.preventDefault()
+    if (url) {
+      scrollToHash(url, lenis)
+    }
   }
 
   return (
@@ -55,13 +65,14 @@ export function Toc({ headings }: TocProps) {
 
             return (
               <li key={`heading-${h.url}-${i}`} className={cn('text-sm transition-all duration-200')}>
-                <a
+                <button
+                  type='button'
                   className={cn(
-                    'hover:text-primary! flex leading-normal transition-colors duration-300 ease-in-out',
+                    'hover:text-primary! flex w-full cursor-pointer leading-normal transition-colors duration-300 ease-in-out',
                     'before:me-2 before:font-black before:content-["-"]',
                     isActive ? 'text-primary' : 'text-gray-600 dark:text-white'
                   )}
-                  href={h.url}
+                  onClick={(e) => handleClick(e, h.url)}
                   title={h.text}
                 >
                   <p
@@ -72,7 +83,7 @@ export function Toc({ headings }: TocProps) {
                   >
                     {h.text}
                   </p>
-                </a>
+                </button>
               </li>
             )
           })}

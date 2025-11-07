@@ -13,13 +13,13 @@ import { PropsWithChildren, useEffect, useState } from 'react'
 import { usePathname } from 'next/navigation'
 import { useStore } from '@/lib/store'
 import { useFrame } from '@/hooks/use-frame'
-import { isBrowser, decodeHashSelector } from '@/lib/misc'
+import { isBrowser } from '@/lib/misc'
 import Lenis from 'lenis'
 import MobileSidebar from '@/components/organisms/mobile-sidebar'
 import { SidebarInset } from '@/components/ui/sidebar'
 import { useTheme } from 'next-themes'
 import { useIsTablet } from '@/hooks/use-tablet'
-import { useScroll } from '@/hooks/use-scroll'
+import { scrollToHash } from '@/lib/utils/dom/scroll'
 
 export default function DefaultLayout({ children }: Readonly<PropsWithChildren>) {
   const { resolvedTheme } = useTheme()
@@ -57,22 +57,12 @@ export default function DefaultLayout({ children }: Readonly<PropsWithChildren>)
   const [hash, setHash] = useState<string>('')
 
   /**
-   * Handle scrolling to an element when hash changes (e.g., from clicking anchor links).
-   * Uses Lenis to smoothly scroll to the target section.
-   * Decodes URL-encoded hash to handle Unicode characters in headings.
+   * Handle scrolling to an element when hash changes (e.g., from browser refresh with hash).
+   * Uses scrollToHash utility which handles force scroll and Unicode characters.
    */
   useEffect(() => {
-    if (lenis && hash) {
-      // Decode hash for safe querySelector usage (handles Unicode characters)
-      const decodedHash = decodeHashSelector(hash)
-      // Try querySelector first, fallback to getElementById if needed
-      const target =
-        document.querySelector(decodedHash) ||
-        document.getElementById(hash.replace('#', '')) ||
-        document.getElementById(decodeURIComponent(hash.replace('#', '')))
-      if (target instanceof HTMLElement) {
-        lenis.scrollTo(target, { offset: 0 })
-      }
+    if (hash) {
+      scrollToHash(hash, lenis)
     }
   }, [lenis, hash])
 
@@ -99,7 +89,7 @@ export default function DefaultLayout({ children }: Readonly<PropsWithChildren>)
 
   /**
    * Intercept internal anchor link clicks within the same page.
-   * Prevents default jump behavior and replaces it with Lenis smooth scroll.
+   * Prevents default jump behavior and replaces it with smooth scroll using scrollToHash.
    */
   useEffect(() => {
     // catch anchor links clicks
@@ -107,10 +97,9 @@ export default function DefaultLayout({ children }: Readonly<PropsWithChildren>)
       e.preventDefault()
       const node = e.currentTarget as HTMLAnchorElement
       const hash = node.href.split('#').pop() || ''
-      setHash(`#${hash}`)
-      setTimeout(() => {
-        window.location.hash = hash
-      }, 0)
+      if (hash) {
+        scrollToHash(`#${hash}`, lenis)
+      }
     }
 
     // Only handle anchor links pointing to the same pathname
@@ -127,7 +116,7 @@ export default function DefaultLayout({ children }: Readonly<PropsWithChildren>)
         node.removeEventListener('click', onClick, false)
       })
     }
-  }, [pathname])
+  }, [pathname, lenis])
 
   /**
    * Frame-based update for Lenis animation.
@@ -136,35 +125,6 @@ export default function DefaultLayout({ children }: Readonly<PropsWithChildren>)
   useFrame((time) => {
     lenis?.raf(time)
   }, 0)
-
-  /**
-   * Alternative scroll listener using custom `useScroll` hook.
-   * This duplicates the logic above to keep track of which section is active,
-   * ensuring consistent hash updates across scrolling states.
-   */
-  useScroll(() => {
-    const sections = document.querySelectorAll('section[id]')
-    const scrollMiddle = window.innerHeight * 0.4
-    let currentId = ''
-
-    for (const section of sections) {
-      const rect = section.getBoundingClientRect()
-      const top = rect.top
-      const bottom = rect.bottom
-
-      if (top <= scrollMiddle && bottom >= scrollMiddle) {
-        currentId = section.id
-        break
-      }
-    }
-
-    if (currentId) {
-      const newHash = `#${currentId}`
-      if (window.location.hash !== newHash) {
-        history.replaceState(null, '', newHash)
-      }
-    }
-  }, [])
 
   return (
     <div className='mb-auto flex grow flex-col'>
