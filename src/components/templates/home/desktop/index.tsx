@@ -48,6 +48,11 @@ const AnimatedContent = dynamic(
   { ssr: false }
 )
 
+const AnimatedSequence = dynamic(
+  () => import('@/components/atoms/animated-content').then(({ AnimatedSequence }) => AnimatedSequence),
+  { ssr: false }
+)
+
 const WebGL = dynamic(() => import('@/components/atoms/webgl').then(({ WebGL }) => WebGL), { ssr: false })
 
 export default function HomeTemplateDesktop() {
@@ -362,13 +367,16 @@ export default function HomeTemplateDesktop() {
               </p>
             </AnimatedContent>
           </div>
-          <div className='grid w-full grid-cols-2 gap-4 lg:gap-10 xl:grid-cols-4'>
-            {CHAINS.map((crypto, idx) => (
-              <AnimatedContent key={crypto.id} threshold={0.4} delay={idx * 10}>
-                <ChainCard chain={crypto} />
-              </AnimatedContent>
+          <AnimatedSequence
+            className='grid w-full grid-cols-2 gap-4 lg:gap-10 xl:grid-cols-4'
+            threshold={0.4}
+            distance={80}
+            stagger={0.18}
+          >
+            {CHAINS.map((crypto) => (
+              <ChainCard key={crypto.id} chain={crypto} />
             ))}
-          </div>
+          </AnimatedSequence>
         </div>
       </Container>
 
@@ -409,14 +417,21 @@ export default function HomeTemplateDesktop() {
       {/* Download Section */}
       <Container id='download' className='min-h-[70dvh] py-5 lg:min-h-[85dvh] lg:py-10 xl:py-16'>
         <div className='relative flex h-full w-full flex-col items-center justify-center gap-8 text-center lg:gap-12 lg:text-start'>
-          <h2 className='font-clash-display text-4xl font-semibold'>
-            <Trans>Download now</Trans>
-          </h2>
-          <div className='grid w-full max-w-[850px] grid-cols-2 gap-3 lg:gap-6 xl:gap-12'>
+          <AnimatedContent threshold={0.4}>
+            <h2 className='font-clash-display text-4xl font-semibold'>
+              <Trans>Download now</Trans>
+            </h2>
+          </AnimatedContent>
+          <AnimatedSequence
+            className='grid w-full max-w-[850px] grid-cols-2 gap-3 lg:gap-6 xl:gap-12'
+            threshold={0.4}
+            distance={80}
+            stagger={0.18}
+          >
             {DOWNLOADS.map((data) => (
               <DownloadCard key={data.id} data={data} />
             ))}
-          </div>
+          </AnimatedSequence>
         </div>
       </Container>
     </div>
