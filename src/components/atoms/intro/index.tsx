@@ -10,9 +10,9 @@
 'use client'
 import { useStore } from '@/lib/store'
 import { useEffect, useState } from 'react'
-import s from './intro.module.css'
 import { useIsMobile } from '@/hooks/use-mobile'
 import { cn } from '@/lib/styles'
+import s from './intro.module.css'
 
 export const Intro = () => {
   const isMobile = useIsMobile()
@@ -77,7 +77,7 @@ export const Intro = () => {
             />
           </div>
         </div>
-        <Logo isLoaded={isLoaded} className={cn(introOut && s.translate)} />
+        <Logo isLoaded={isLoaded} className={cn(introOut && s.translate)} setIntroOut={setIntroOut} />
       </div>
     </div>
   )
@@ -86,11 +86,23 @@ export const Intro = () => {
 interface ChartSVGProps {
   readonly isLoaded?: boolean
   readonly className?: string
+  readonly setIntroOut?: (introOut: boolean) => void
 }
 
-const Logo = ({ isLoaded, className }: ChartSVGProps) => {
+const Logo = ({ isLoaded, className, setIntroOut }: ChartSVGProps) => {
   return (
-    <svg viewBox='0 0 1024 1025' fill='none' xmlns='http://www.w3.org/2000/svg' className={cn(s.ei, className)}>
+    <svg
+      viewBox='0 0 1024 1025'
+      fill='none'
+      xmlns='http://www.w3.org/2000/svg'
+      className={cn(s.ei, className)}
+      onTransitionEnd={(e) => {
+        const target = e.target as SVGElement
+        if (target.classList.contains(s.show) && setIntroOut) {
+          setIntroOut(true)
+        }
+      }}
+    >
       <g clipPath='url(#clip0_8893_5810)' className={cn(s.start, isLoaded && s.show)}>
         <path
           d='M0 183.907C0 82.8391 81.9319 0.907227 183 0.907227H841C942.068 0.907227 1024 82.8391 1024 183.907V841.907C1024 942.975 942.068 1024.91 841 1024.91H183C81.9319 1024.91 0 942.975 0 841.907V183.907Z'

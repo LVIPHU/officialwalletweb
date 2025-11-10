@@ -27,7 +27,7 @@ if (isBrowser && Tempus) {
   gsap.ticker.lagSmoothing(0)
   gsap.ticker.remove(gsap.updateRoot)
   Tempus.add((time) => {
-    gsap.updateRoot(time / 1000)
+    gsap.updateRoot(time * 1000)
   }, 0)
 }
 

@@ -68,9 +68,9 @@ function loadContentlayerData(): { allFeatures: ContentItem[]; allLegals: Conten
 
     return { allFeatures, allLegals }
   } catch (error) {
-    console.error('❌ Error loading contentlayer data.')
-    console.error('Please ensure contentlayer is built first: npm run contentlayer:build')
-    console.error('Error:', error)
+    console.error('❌ Error loading contentlayer data.', '\n')
+    console.error('Please ensure contentlayer is built first: npm run contentlayer:build', '\n')
+    console.error('Error:', error, '\n')
     throw new Error('Contentlayer generated files not found. Run: npm run contentlayer:build')
   }
 }
@@ -247,7 +247,7 @@ function buildContentMap(allFeatures: ContentItem[], allLegals: ContentItem[]): 
  * Uses batch processing and optimized data structures for performance
  */
 export async function generateRssFeeds(): Promise<void> {
-  console.log('🗒️  Generating RSS feeds...')
+  console.info('🗒️ Generating RSS feeds...', '\n')
 
   // Load contentlayer data
   const { allFeatures, allLegals } = loadContentlayerData()
@@ -270,16 +270,15 @@ export async function generateRssFeeds(): Promise<void> {
   // Batch write all files
   for (const { lang, content, path: feedPath } of feedPromises) {
     writeFileSync(feedPath, content, 'utf-8')
-    console.log(`  ✓ Generated ${FEEDS_DIR}/${lang}.xml`)
+    console.info(`✅ Generated ${FEEDS_DIR}/${lang}.xml`, '\n')
   }
-
-  console.log(`\n✅ Successfully generated ${feedPromises.length} RSS feed files in ${FEEDS_DIR}/`)
+  console.info(`✅ Successfully generated ${feedPromises.length} RSS feed files in ${FEEDS_DIR}/`, '\n')
 }
 
 // Run if called directly
 if (require.main === module) {
   generateRssFeeds().catch((error) => {
-    console.error('❌ Error generating RSS feeds:', error)
+    console.error('❌ Error generating RSS feeds:', error, '\n')
     process.exit(1)
   })
 }

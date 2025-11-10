@@ -10,7 +10,7 @@
 }
 
 .wrapper.out {
-  transition: transform 1500ms var(--ease-out-expo);
+  transition: transform var(--intro-out) var(--ease-out-expo);
   transform: translate3d(0, -100%, 0);
   transition-delay: 1500ms;
 }
@@ -20,9 +20,9 @@
 }
 
 .wrapper .relative {
-  transition: transform 1500ms var(--ease-out-expo);
+  transition: transform var(--intro-out) var(--ease-out-expo);
   transform: translate3d(0, 100%, 0);
-  transition-delay: 1500ms;
+  transition-delay: calc(var(--intro-in) + 0ms);
 
   height: 100%;
   display: flex;
@@ -35,7 +35,7 @@
   height: 50dvw;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 1024px) {
   .wrapper .ei {
     width: 180px;
     height: 180px;
@@ -43,7 +43,7 @@
 }
 
 .wrapper .show {
-  transition: transform 1500ms var(--ease-out-expo);
+  transition: transform var(--intro-in) var(--ease-out-expo);
   transition-delay: calc(75ms);
   transform: translate3d(0, 0, 0);
 }
@@ -52,10 +52,10 @@
   /* desktop */
 }
 
-@media (min-width: 768px) {
+@media (min-width: 1024px) {
   .translate {
     transform: translate3d(0, -100%, 0);
-    transition: transform 1500ms var(--ease-out-expo);
+    transition: transform var(--intro-out) var(--ease-out-expo);
   }
 }
 
@@ -63,7 +63,7 @@
   /* mobile */
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1023px) {
   .mobile {
     transform: translate3d(0, -105%, 0);
   }

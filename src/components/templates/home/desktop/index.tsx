@@ -8,19 +8,16 @@
  */
 
 'use client'
-import { useEffect, useRef, useState } from 'react'
+import { ReactNode, useEffect } from 'react'
 import Lenis from 'lenis'
 import dynamic from 'next/dynamic'
 import { button, useControls } from 'leva'
 import { useRect, ensureRect } from '@/hooks/use-rect'
-import { useIntersection } from '@/hooks/use-intersection'
 import { useWindowSize } from '@/hooks/use-window-size'
 import { useScroll } from '@/hooks/use-scroll'
-import { useFrame } from '@/hooks/use-frame'
 import { Button } from '@/components/ui/button'
 import { CHAINS, DOWNLOADS, FEATURES } from '@/constants/landing.constants'
 import { useStore } from '@/lib/store'
-import { clamp, mapRange } from '@/lib/maths'
 import { Container } from '@/components/atoms/container'
 import { TestimonialCarousel } from '@/components/molecules/testimonial-carousel'
 import { DownloadCard } from '@/components/molecules/download-card'
@@ -30,6 +27,7 @@ import { Trans } from '@lingui/react/macro'
 import { ChainCard } from '@/components/molecules/chain-card'
 import { NavigationLink } from '@/components/atoms/navigation-link'
 import { FeatureCard } from '@/components/molecules/feature-card'
+import { cn } from '@/lib/styles'
 
 const FeaturesSlidesHorizontal = dynamic(
   () =>
@@ -56,11 +54,6 @@ const AnimatedSequence = dynamic(
 const WebGL = dynamic(() => import('@/components/atoms/webgl').then(({ WebGL }) => WebGL), { ssr: false })
 
 export default function HomeTemplateDesktop() {
-  const zoomRef = useRef<HTMLElement | null>(null)
-  const [theme, setTheme] = useState('dark')
-  const [hasScrolled, setHasScrolled] = useState(false)
-
-  const [zoomWrapperRectRef, zoomWrapperRect] = useRect()
   const { height: windowHeight } = useWindowSize()
 
   const lenis = useStore(({ lenis }) => lenis)
@@ -101,46 +94,15 @@ export default function HomeTemplateDesktop() {
 
   useEffect(() => {
     if (!lenis) return
-
     function onClassNameChange(lenis: Lenis) {
-      // Handle className change
+      console.info(lenis.className)
     }
-
     lenis.on('className change' as any, onClassNameChange)
 
     return () => {
       lenis.off('className change' as any, onClassNameChange)
     }
   }, [lenis])
-
-  useScroll(({ scroll }) => {
-    setHasScrolled(scroll > 10)
-    const rect = ensureRect(zoomWrapperRect)
-
-    const top = rect.top || 0
-    const height = rect.height || 0
-
-    const start = top + windowHeight * 0.5
-    const end = top + height - windowHeight
-
-    const progress = clamp(0, mapRange(start, end, scroll, 0, 1), 1)
-    const center = 0.6
-    const progress1 = clamp(0, mapRange(0, center, progress, 0, 1), 1)
-    const progress2 = clamp(0, mapRange(center - 0.055, 1, progress, 0, 1), 1)
-    setTheme(progress2 === 1 ? 'light' : 'dark')
-
-    const el = zoomRef.current
-    if (!el) return
-
-    el.style.setProperty('--progress1', `${progress1}`)
-    el.style.setProperty('--progress2', `${progress2}`)
-
-    if (progress === 1) {
-      el.style.setProperty('background-color', 'currentColor')
-    } else {
-      el.style.removeProperty('background-color')
-    }
-  })
 
   const [aboutRectRef, aboutRect] = useRect()
   const [platformRectRef, platformRect] = useRect()
@@ -209,7 +171,7 @@ export default function HomeTemplateDesktop() {
     addThreshold({ id: 'end', value: top })
   }, [lenis?.limit])
 
-  useScroll((e) => {
+  useScroll(() => {
     if (window.scrollY <= 400) {
       setScreenIphone('1')
     } else if (window.scrollY > 400 && window.scrollY <= 1600) {
@@ -220,22 +182,6 @@ export default function HomeTemplateDesktop() {
       setScreenIphone('4')
     }
   })
-
-  useFrame(() => {
-    // Frame handler
-  }, 1)
-
-  const inUseRef = useRef<HTMLElement | null>(null)
-
-  const [visible, setIsVisible] = useState(false)
-  const intersection = useIntersection(inUseRef, {
-    threshold: 0.2,
-  })
-  useEffect(() => {
-    if (intersection?.isIntersecting) {
-      setIsVisible(true)
-    }
-  }, [intersection])
 
   return (
     <div className='relative min-h-dvh overflow-x-hidden'>
@@ -248,24 +194,36 @@ export default function HomeTemplateDesktop() {
         <div className='grid w-full items-center lg:grid-cols-2'>
           <div className='flex w-full flex-col items-center gap-8 lg:items-start lg:gap-13'>
             <h1 className='font-clash-display flex flex-col text-center text-3xl font-extrabold tracking-tight sm:text-4xl lg:text-start lg:text-6xl lg:leading-20'>
-              <AuroraText speed={0}>
-                <Trans>Own Your Crypto.</Trans>
-              </AuroraText>
-              <AuroraText speed={0}>
-                <Trans>Unleash Web3</Trans>
-              </AuroraText>
-              <AuroraText speed={0}>
-                <Trans>Possibilities</Trans>
-              </AuroraText>
+              <HeroTextIn introOut={introOut}>
+                <AuroraText speed={0}>
+                  <Trans>Own Your Crypto.</Trans>
+                </AuroraText>
+              </HeroTextIn>
+              <HeroTextIn introOut={introOut}>
+                <AuroraText speed={0}>
+                  <Trans>Unleash Web3</Trans>
+                </AuroraText>
+              </HeroTextIn>
+              <HeroTextIn introOut={introOut}>
+                <AuroraText speed={0}>
+                  <Trans>Possibilities</Trans>
+                </AuroraText>
+              </HeroTextIn>
             </h1>
-            <p className='max-w-md text-center lg:text-start'>
-              <Trans>
-                TBC Wallet empowers you to manage diverse assets like Bitcoin, Ethereum, and Solana. Securely dive into
-                DeFi, NFTs, and dApps with full control. Your keys, your future.
-              </Trans>
-            </p>
+            <HeroTextIn introOut={introOut}>
+              <p className='max-w-md text-center lg:text-start'>
+                <Trans>
+                  TBC Wallet empowers you to manage diverse assets like Bitcoin, Ethereum, and Solana. Securely dive
+                  into DeFi, NFTs, and dApps with full control. Your keys, your future.
+                </Trans>
+              </p>
+            </HeroTextIn>
             <NavigationLink href='/#download'>
-              <Button variant={'neon'} size={'2xl'} className={'w-fit lg:relative'}>
+              <Button
+                variant={'neon'}
+                size={'2xl'}
+                className={cn('hide-button w-fit lg:relative', introOut && 'show-button')}
+              >
                 <span>
                   <Trans>Explore now</Trans>
                 </span>
@@ -353,12 +311,12 @@ export default function HomeTemplateDesktop() {
       <Container id='assets' className='min-h-[85dvh] py-5 lg:py-10 xl:py-16'>
         <div className='flex flex-col items-center justify-center gap-8 lg:gap-12'>
           <div className='relative flex max-w-3xl flex-col items-center gap-8 text-center lg:gap-6'>
-            <AnimatedContent threshold={0.4}>
+            <AnimatedContent distance={150} duration={3} threshold={0.3}>
               <h2 className='font-clash-display text-4xl font-semibold'>
                 <Trans>Your All-in-One Web3 Wallet</Trans>
               </h2>
             </AnimatedContent>
-            <AnimatedContent threshold={0.4}>
+            <AnimatedContent duration={3} threshold={0.4}>
               <p>
                 <Trans>
                   TBC Wallet connects you to diverse ecosystems, from Bitcoin and Ethereum to Optimism and Cosmos.
@@ -370,8 +328,8 @@ export default function HomeTemplateDesktop() {
           <AnimatedSequence
             className='grid w-full grid-cols-2 gap-4 lg:gap-10 xl:grid-cols-4'
             threshold={0.4}
-            distance={80}
-            stagger={0.18}
+            distance={100}
+            stagger={0.5}
           >
             {CHAINS.map((crypto) => (
               <ChainCard key={crypto.id} chain={crypto} />
@@ -417,7 +375,7 @@ export default function HomeTemplateDesktop() {
       {/* Download Section */}
       <Container id='download' className='min-h-[70dvh] py-5 lg:min-h-[85dvh] lg:py-10 xl:py-16'>
         <div className='relative flex h-full w-full flex-col items-center justify-center gap-8 text-center lg:gap-12 lg:text-start'>
-          <AnimatedContent threshold={0.4}>
+          <AnimatedContent threshold={0.3}>
             <h2 className='font-clash-display text-4xl font-semibold'>
               <Trans>Download now</Trans>
             </h2>
@@ -425,8 +383,8 @@ export default function HomeTemplateDesktop() {
           <AnimatedSequence
             className='grid w-full max-w-[850px] grid-cols-2 gap-3 lg:gap-6 xl:gap-12'
             threshold={0.4}
-            distance={80}
-            stagger={0.18}
+            distance={100}
+            stagger={0.5}
           >
             {DOWNLOADS.map((data) => (
               <DownloadCard key={data.id} data={data} />
@@ -436,4 +394,8 @@ export default function HomeTemplateDesktop() {
       </Container>
     </div>
   )
+}
+
+const HeroTextIn = ({ children, introOut }: { children: ReactNode; introOut: boolean }) => {
+  return <span className={cn('hide-text', introOut && 'show-text')}>{children}</span>
 }

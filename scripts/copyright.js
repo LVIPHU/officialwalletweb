@@ -40,13 +40,13 @@ files.forEach((file) => {
   }
 })
 if (hasErrors) {
-  console.error('❌ Update failed')
+  console.error('❌ Update failed', '\n')
   process.exit(1)
 } else {
   for (const [file, source] of updatedFiles) {
     fs.writeFileSync(file, source, 'utf8')
   }
-  console.log('✅ Update complete')
+  console.info('✅ Update complete', '\n')
 }
 
 function processFile(file) {

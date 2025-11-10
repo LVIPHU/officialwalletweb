@@ -42,6 +42,7 @@ export default function DefaultLayout({ children }: Readonly<PropsWithChildren>)
     const lenis = new Lenis({
       smoothWheel: !isTablet,
       syncTouch: !isTablet,
+      duration: isTablet ? 1 : 2,
     })
 
     // Attach Lenis instance to global window for debugging if needed

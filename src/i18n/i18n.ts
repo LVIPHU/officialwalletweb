@@ -44,7 +44,7 @@ export const allI18nInstances: AllI18nInstances = locales.reduce((acc: any, loca
 
 export const getI18nInstance = (locale: SupportedLocales): I18n => {
   if (!allI18nInstances[locale]) {
-    console.warn(`No i18n instance found for locale "${locale}"`)
+    console.warn(`No i18n instance found for locale "${locale}"`, '\n')
   }
   return allI18nInstances[locale]! || allI18nInstances['en']!
 }

@@ -29,7 +29,7 @@ export function DownloadCard({ data }: DownloadCardProps) {
     <NavigationLink href={data.url} className='w-full'>
       <div
         className={cn(
-          'relative flex min-h-[210px] h-full w-full max-w-[400px] items-center justify-center overflow-hidden rounded-3xl p-4',
+          'relative flex h-full min-h-[210px] w-full max-w-[400px] items-center justify-center overflow-hidden rounded-3xl p-4',
           'hover:border-primary border border-solid border-[rgba(255,_255,_255,_0.5)]',
           'bg-[linear-gradient(294.04deg,_#003100_-39.23%,_#002500_-2.81%,_#000B00_82.39%,_#003E00_144.17%)] transition-all duration-300',
           // before element chỉ xuất hiện khi hover
@@ -43,7 +43,13 @@ export function DownloadCard({ data }: DownloadCardProps) {
             <picture>
               <source srcSet={data.images.mobile} media='(max-width: 767px)' />
               {data.images.desktop && (
-                <Image src={data.images.desktop} alt={data.id} width={80} height={80} className={cn('object-contain', classNameLogo[data.id])} />
+                <Image
+                  src={data.images.desktop}
+                  alt={data.id}
+                  width={80}
+                  height={80}
+                  className={cn('object-contain', classNameLogo[data.id])}
+                />
               )}
             </picture>
           ) : data.logo ? (
@@ -52,7 +58,7 @@ export function DownloadCard({ data }: DownloadCardProps) {
 
           <div className='flex flex-col gap-1.5'>
             <p className='mb-auto'>{i18n._(data.subtitle)}</p>
-            <h5 className='mt-auto text-2xl sm:text-3xl font-semibold text-white'>{i18n._(data.title)}</h5>
+            <h5 className='mt-auto text-2xl font-semibold text-white sm:text-3xl'>{i18n._(data.title)}</h5>
           </div>
         </div>
       </div>

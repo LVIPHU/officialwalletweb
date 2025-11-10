@@ -26,7 +26,7 @@
   transition: transform 600ms var(--ease-out-expo);
 }
 
-@media (min-width: 768px) {
+@media (min-width: 1024px) {
   /* desktop giả định từ 768px trở lên */
   .container .cursor {
     border: 2px solid var(--primary); /* desktop-vw(2px) => fallback 2px */
