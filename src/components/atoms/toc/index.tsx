@@ -47,7 +47,7 @@ export function Toc({ headings }: TocProps) {
   return (
     <nav
       role='navigation'
-      className='group sticky top-0 hidden h-fit w-[200px] xl:block'
+      className='group pointer-events-auto sticky top-0 hidden h-fit w-[200px] xl:block'
       style={{
         left: 'calc((100vw - min(100vw, 768px)) / 2 + min(100vw, 768px) + 200px)',
         top: '50%',
@@ -77,7 +77,7 @@ export function Toc({ headings }: TocProps) {
                 >
                   <p
                     className={cn(
-                      'truncate text-xs xl:text-base font-bold transition-opacity duration-300 ease-in-out',
+                      'truncate text-xs font-bold transition-opacity duration-300 ease-in-out xl:text-base',
                       isActive ? 'opacity-100' : 'group-hover:opacity-100'
                     )}
                   >

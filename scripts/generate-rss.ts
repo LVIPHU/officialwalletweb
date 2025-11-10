@@ -219,10 +219,7 @@ function generateFeedForLocale(lang: string, contentMap: Map<string, ContentItem
  * @param allLegals - All legal content items
  * @returns Map of content items grouped by language
  */
-function buildContentMap(
-  allFeatures: ContentItem[],
-  allLegals: ContentItem[]
-): Map<string, ContentItem[]> {
+function buildContentMap(allFeatures: ContentItem[], allLegals: ContentItem[]): Map<string, ContentItem[]> {
   const contentMap = new Map<string, ContentItem[]>()
 
   // Initialize map for all locales

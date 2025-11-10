@@ -49,7 +49,7 @@ export default function MdxLayout({ children, title, category, headings = [], cl
 
       {/* TOC Sidebar - Positioned absolutely outside container */}
       {headings.length > 0 && (
-        <div className='absolute inset-0 pointer-events-none'>
+        <div className='pointer-events-none absolute inset-0'>
           <div className='relative h-full w-full'>
             <Toc headings={headings} />
           </div>

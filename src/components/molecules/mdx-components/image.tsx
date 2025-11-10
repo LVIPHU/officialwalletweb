@@ -16,7 +16,7 @@ import { Image, type ImageProps, Zoom } from '@/components/ui/image'
  */
 export const mdxImage: Partial<MDXComponents> = {
   // Map img tag to our Image component with Zoom
-  img: ({ alt, src, ...props }) => {
+  Image: ({ alt, src, ...props }) => {
     if (!src) return null
     return (
       <Zoom>

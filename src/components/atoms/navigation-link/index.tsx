@@ -38,7 +38,7 @@ export function NavigationLink({ children, className, href, onClick, ...rest }: 
 
   // Check if this is a hash link (starts with # or contains #)
   const isHashLink = href.startsWith('#') || href.includes('#')
-  
+
   // Extract hash from href
   const hashMatch = href.match(/#(.+)$/)
   const hash = hashMatch ? `#${hashMatch[1]}` : null
@@ -68,12 +68,7 @@ export function NavigationLink({ children, className, href, onClick, ...rest }: 
   // If it's a hash link on the same page, use anchor tag with onClick
   if (isSamePageHash) {
     return (
-      <a
-        href={hash || href}
-        className={cn('no-underline', className)}
-        onClick={handleClick}
-        {...rest}
-      >
+      <a href={hash || href} className={cn('no-underline', className)} onClick={handleClick} {...rest}>
         {children}
       </a>
     )

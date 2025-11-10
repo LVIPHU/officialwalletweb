@@ -51,7 +51,7 @@ export function scrollToHash(hash: string, lenis?: Lenis | null): void {
 
   // Decode hash for safe querySelector usage (handles Unicode characters)
   const decodedHash = decodeHashSelector(hash)
-  
+
   // Try multiple methods to find the target element
   const target =
     document.querySelector(decodedHash) ||
@@ -69,7 +69,7 @@ export function scrollToHash(hash: string, lenis?: Lenis | null): void {
   if (hashMatches) {
     // Temporarily remove hash to force browser to recognize the scroll
     history.replaceState(null, '', window.location.pathname + window.location.search)
-    
+
     // Small delay to ensure browser processes the hash removal
     requestAnimationFrame(() => {
       if (lenisInstance) {
@@ -81,7 +81,7 @@ export function scrollToHash(hash: string, lenis?: Lenis | null): void {
           behavior: 'smooth',
         })
       }
-      
+
       // Set hash back after a short delay to ensure scroll has started
       setTimeout(() => {
         history.replaceState(null, '', hash)
@@ -98,7 +98,7 @@ export function scrollToHash(hash: string, lenis?: Lenis | null): void {
         behavior: 'smooth',
       })
     }
-    
+
     // Update hash in URL
     history.replaceState(null, '', hash)
   }
