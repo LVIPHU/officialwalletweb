@@ -39,7 +39,7 @@ export const NAVIGATION_ITEMS: Navigation = [
       {
         id: 'macos-app',
         href: 'https://download.chainviews.net/tbchat.dmg',
-        title: msg`macOS app`,
+        title: msg`MacOS app`,
         description: msg`An optimized Web3 experience for desktop`,
       },
       {

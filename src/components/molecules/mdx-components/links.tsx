@@ -8,6 +8,8 @@
  */
 
 import type { MDXComponents } from 'mdx/types'
+import {NavigationLink} from "@/components/atoms/navigation-link";
+import {cn} from "@/lib/styles";
 
 /**
  * MDX Link Components
@@ -15,12 +17,7 @@ import type { MDXComponents } from 'mdx/types'
  */
 export const mdxLinks: Partial<MDXComponents> = {
   // Links
-  a: ({ ...props }) => (
-    <a
-      className='text-primary underline-offset-4 hover:underline'
-      target='_blank'
-      rel='noopener noreferrer'
-      {...props}
-    />
+  a: ({ href, className, ...props }) => (
+    <NavigationLink href={href} className={cn('text-primary underline-offset-4 hover:underline', className)} target='_blank' rel='noopener noreferrer' {...props}/>
   ),
 }

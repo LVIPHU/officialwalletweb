@@ -25,7 +25,7 @@ msgstr "1. 从 App Store、Google Play 或我们的网站下载 TBC Wallet。2. 
 msgid "1. Go to Settings. 2. Select Security. 3. Choose Change Password. 4. Enter your current and new password. 5. Confirm the change."
 msgstr "1. 前往设置。2. 选择安全。3. 选择更改密码。4. 输入您当前的密码和新密码。5. 确认更改。"
 
-#: src/components/templates/home/desktop/index.tsx:282
+#: src/components/templates/home/desktop/index.tsx:245
 #: src/components/templates/home/mobile/index.tsx:61
 #: src/constants/navigation.constants.ts:109
 msgid "About"
@@ -102,7 +102,7 @@ msgstr "TBC Wallet 可以访问我的资金吗？"
 msgid "Coming soon"
 msgstr "即将上线"
 
-#: src/components/templates/home/desktop/index.tsx:398
+#: src/components/templates/home/desktop/index.tsx:364
 #: src/components/templates/home/mobile/index.tsx:132
 msgid "Community talk about us"
 msgstr "社区对我们的评价"
@@ -112,7 +112,7 @@ msgstr "社区对我们的评价"
 msgid "Contact Us"
 msgstr "联系我们"
 
-#: src/components/templates/home/desktop/index.tsx:309
+#: src/components/templates/home/desktop/index.tsx:272
 #: src/components/templates/home/mobile/index.tsx:78
 msgid "Designed for All, Built for You"
 msgstr "为所有人而设计，为您量身打造"
@@ -121,12 +121,12 @@ msgstr "为所有人而设计，为您量身打造"
 msgid "Desktop app"
 msgstr "桌面应用"
 
-#: src/components/organisms/header/index.tsx:96
+#: src/components/organisms/header/index.tsx:97
 #: src/components/organisms/mobile-sidebar/index.tsx:88
 msgid "Download"
 msgstr "下载"
 
-#: src/components/templates/home/desktop/index.tsx:413
+#: src/components/templates/home/desktop/index.tsx:380
 #: src/components/templates/home/mobile/index.tsx:140
 msgid "Download now"
 msgstr "立即下载"
@@ -144,7 +144,7 @@ msgstr "轻松跨链兑换代币，费用低、实时汇率。无论是用比特
 msgid "Ethereum"
 msgstr "以太坊"
 
-#: src/components/templates/home/desktop/index.tsx:265
+#: src/components/templates/home/desktop/index.tsx:228
 #: src/components/templates/home/mobile/index.tsx:53
 msgid "Explore now"
 msgstr "立即探索"
@@ -268,8 +268,8 @@ msgid "Mac OS"
 msgstr "Mac OS"
 
 #: src/constants/navigation.constants.ts:42
-msgid "macOS app"
-msgstr "macOS 应用"
+msgid "MacOS app"
+msgstr "MacOS 应用"
 
 #: src/constants/landing.constants.ts:29
 #: src/constants/navigation.constants.ts:66
@@ -313,7 +313,7 @@ msgstr "不，TBC Wallet 无法访问您的资金。您的私钥存储在您设�
 msgid "Once a transaction is confirmed on the blockchain, it cannot be cancelled. Always verify transaction details before confirming."
 msgstr "一旦交易在区块链上确认，就无法取消。在确认之前，请始终验证交易详情。"
 
-#: src/components/templates/home/desktop/index.tsx:380
+#: src/components/templates/home/desktop/index.tsx:346
 #: src/components/templates/home/mobile/index.tsx:124
 msgid "One wallet. Cross platform"
 msgstr "一个钱包，跨平台使用"
@@ -322,7 +322,7 @@ msgstr "一个钱包，跨平台使用"
 msgid "Our support team is available 24/7 to assist you with any questions or issues."
 msgstr "我们的支持团队全天候 24/7 为您提供帮助，解答任何问题或处理任何问题。"
 
-#: src/components/templates/home/desktop/index.tsx:247
+#: src/components/templates/home/desktop/index.tsx:199
 msgid "Own Your Crypto."
 msgstr "掌控您的加密资产。"
 
@@ -338,7 +338,7 @@ msgstr "使用 USDT 支付费用，在市场波动中实现稳定且可预测的
 msgid "Pay fees in USDT for stable, predictable costs amid market swings. This flexible feature adds transparency, making Web3 interactions more budget-friendly and user-centric."
 msgstr "以 USDT 支付费用，在市场波动中实现稳定且可预测的成本。此灵活功能增加了透明度，使 Web3 互动更符合预算、更以用户为中心。"
 
-#: src/components/templates/home/desktop/index.tsx:253
+#: src/components/templates/home/desktop/index.tsx:209
 msgid "Possibilities"
 msgstr "可能性"
 
@@ -384,12 +384,12 @@ msgstr "兑换"
 msgid "Swap securely and seamlessly"
 msgstr "安全无缝地兑换"
 
-#: src/components/templates/home/desktop/index.tsx:312
+#: src/components/templates/home/desktop/index.tsx:275
 #: src/components/templates/home/mobile/index.tsx:81
 msgid "TBC Wallet bridges the gap for beginners and experts alike. Its user-friendly design offers easy onboarding for newcomers and advanced tools for DeFi pros, ensuring secure, efficient navigation of the decentralized ecosystem."
 msgstr "TBC Wallet 架起新手与高手之间的桥梁。其用户友好的设计为新用户提供便捷入门，为 DeFi 专业人士提供高级工具，确保您在去中心化生态系统中安全、高效地导航。"
 
-#: src/components/templates/home/desktop/index.tsx:358
+#: src/components/templates/home/desktop/index.tsx:321
 #: src/components/templates/home/mobile/index.tsx:109
 msgid "TBC Wallet connects you to diverse ecosystems, from Bitcoin and Ethereum to Optimism and Cosmos. Manage portfolios, engage in DeFi, trade NFTs, and link to dApps—all in one secure, self-custody hub."
 msgstr "TBC Wallet 将您连接至多元生态系统，从比特币和以太坊到 Optimism 和 Cosmos。管理投资组合、参与 DeFi、交易 NFTs，并链接至 dApps — 所有这一切都在一个安全的自我托管中心完成。"
@@ -398,12 +398,12 @@ msgstr "TBC Wallet 将您连接至多元生态系统，从比特币和以太坊�
 msgid "TBC Wallet employs multiple security layers: Encrypted Storage: All private keys are encrypted and stored locally on your device. Multi-Signature Support: Enhanced security for high-value transactions. Biometric Authentication: Fingerprint and face recognition support. Regular Security Updates: Continuous security improvements."
 msgstr "TBC Wallet 采用多层安全保护：加密存储：所有私钥均经过加密并存储在您设备的本地。多重签名支持：为高价值交易提供增强安全性。生物识别认证：支持指纹和面部识别。定期安全更新：持续的安全改进。"
 
-#: src/components/templates/home/desktop/index.tsx:257
+#: src/components/templates/home/desktop/index.tsx:215
 #: src/components/templates/home/mobile/index.tsx:36
 msgid "TBC Wallet empowers you to manage diverse assets like Bitcoin, Ethereum, and Solana. Securely dive into DeFi, NFTs, and dApps with full control. Your keys, your future."
 msgstr "TBC Wallet 赋能您管理比特币、以太坊和 Solana 等多种资产。安全地深入 DeFi、NFT 和 dApps，掌握完全控制权。您的密钥，您的未来。"
 
-#: src/components/templates/home/desktop/index.tsx:285
+#: src/components/templates/home/desktop/index.tsx:248
 #: src/components/templates/home/mobile/index.tsx:64
 msgid "TBC Wallet is a leading multi-chain wallet with robust security and an intuitive interface. It simplifies Web3 interactions, from token management to dApp access, while giving you total control over your digital wealth."
 msgstr "TBC Wallet 是领先的多链钱包，具备强大安全性和直观界面。它简化了 Web3 的互动—from 代币管理到 dApp 访问—同时赋予您对数字财富的完全控制。"
@@ -413,8 +413,8 @@ msgid "TBC Wallet is a secure, multi-chain cryptocurrency wallet that supports m
 msgstr "TBC Wallet 是一个安全的多链加密货币钱包，支持包括 TBChain、比特币、以太坊和波场在内的多个区块链网络。它提供用户友好的界面，用于管理数字资产、执行交易和访问 DeFi 服务。"
 
 #: src/constants/faq.constants.ts:37
-msgid "TBC Wallet is available on: Mobile: iOS and Android applications, Desktop: Windows and macOS applications, Browser: Browser extension for Chrome, Firefox, and Edge."
-msgstr "TBC Wallet 可在以下平台使用：移动端：iOS 和 Android 应用程序，桌面端：Windows 和 macOS 应用程序，浏览器：适用于 Chrome、Firefox 和 Edge 的浏览器扩展。"
+msgid "TBC Wallet is available on: Mobile: iOS and Android applications, Desktop: Windows and MacOS applications, Browser: Browser extension for Chrome, Firefox, and Edge."
+msgstr "TBC Wallet 可在以下平台使用：移动端：iOS 和 Android 应用程序，桌面端：Windows 和 MacOS 应用程序，浏览器：适用于 Chrome、Firefox 和 Edge 的浏览器扩展。"
 
 #: src/constants/faq.constants.ts:84
 msgid "TBC Wallet supports: TBChain (native network), Bitcoin, Ethereum and EVM-compatible chains, Tron, And more networks continuously being added."
@@ -469,7 +469,7 @@ msgstr "故障排除"
 msgid "Try these steps: 1. Update to the latest version. 2. Clear app cache. 3. Restart the application. 4. Reinstall if necessary (make sure you have your recovery phrase)."
 msgstr "尝试以下步骤：1. 更新到最新版本。2. 清除应用缓存。3. 重启应用程序。4. 如有必要，重新安装（确保您有恢复短语）。"
 
-#: src/components/templates/home/desktop/index.tsx:250
+#: src/components/templates/home/desktop/index.tsx:204
 msgid "Unleash Web3"
 msgstr "释放 Web3"
 
@@ -573,7 +573,7 @@ msgstr "是的，您可以在 TBC Wallet 内创建和管理多个钱包。每个
 msgid "You can reach us through: Email: contact@tbchatofficial.com, Support Center: Visit our Contact Us page, Social Media: Follow us on X, Telegram, and Discord."
 msgstr "您可以通过以下方式联系我们：电子邮件：contact@tbchatofficial.com，支持中心：访问我们的\"联系我们\"页面，社交媒体：在 X、Telegram 和 Discord 上关注我们。"
 
-#: src/components/templates/home/desktop/index.tsx:353
+#: src/components/templates/home/desktop/index.tsx:316
 #: src/components/templates/home/mobile/index.tsx:106
 msgid "Your All-in-One Web3 Wallet"
 msgstr "您的全能型 Web3 钱包"

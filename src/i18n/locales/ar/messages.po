@@ -25,7 +25,7 @@ msgstr "1. قم بتنزيل محفظة TBC من App Store أو Google Play أو
 msgid "1. Go to Settings. 2. Select Security. 3. Choose Change Password. 4. Enter your current and new password. 5. Confirm the change."
 msgstr "1. انتقل إلى الإعدادات. 2. اختر الأمان. 3. اختر تغيير كلمة المرور. 4. أدخل كلمة المرور الحالية والجديدة. 5. أكد التغيير."
 
-#: src/components/templates/home/desktop/index.tsx:282
+#: src/components/templates/home/desktop/index.tsx:245
 #: src/components/templates/home/mobile/index.tsx:61
 #: src/constants/navigation.constants.ts:109
 msgid "About"
@@ -102,7 +102,7 @@ msgstr "هل يمكن لمحفظة TBC الوصول إلى أموالي؟"
 msgid "Coming soon"
 msgstr "قريبًا"
 
-#: src/components/templates/home/desktop/index.tsx:398
+#: src/components/templates/home/desktop/index.tsx:364
 #: src/components/templates/home/mobile/index.tsx:132
 msgid "Community talk about us"
 msgstr "المجتمع يتحدث عنا"
@@ -112,7 +112,7 @@ msgstr "المجتمع يتحدث عنا"
 msgid "Contact Us"
 msgstr "اتصل بنا"
 
-#: src/components/templates/home/desktop/index.tsx:309
+#: src/components/templates/home/desktop/index.tsx:272
 #: src/components/templates/home/mobile/index.tsx:78
 msgid "Designed for All, Built for You"
 msgstr "مصمم للجميع، ومبني خصيصًا لك"
@@ -121,12 +121,12 @@ msgstr "مصمم للجميع، ومبني خصيصًا لك"
 msgid "Desktop app"
 msgstr "تطبيق سطح المكتب"
 
-#: src/components/organisms/header/index.tsx:96
+#: src/components/organisms/header/index.tsx:97
 #: src/components/organisms/mobile-sidebar/index.tsx:88
 msgid "Download"
 msgstr "تحميل"
 
-#: src/components/templates/home/desktop/index.tsx:413
+#: src/components/templates/home/desktop/index.tsx:380
 #: src/components/templates/home/mobile/index.tsx:140
 msgid "Download now"
 msgstr "حمّل الآن"
@@ -144,7 +144,7 @@ msgstr "قم بتبادل التوكنات بسهولة عبر السلاسل ب
 msgid "Ethereum"
 msgstr "إيثيريوم"
 
-#: src/components/templates/home/desktop/index.tsx:265
+#: src/components/templates/home/desktop/index.tsx:228
 #: src/components/templates/home/mobile/index.tsx:53
 msgid "Explore now"
 msgstr "استكشف الآن"
@@ -268,8 +268,8 @@ msgid "Mac OS"
 msgstr "Mac OS"
 
 #: src/constants/navigation.constants.ts:42
-msgid "macOS app"
-msgstr "تطبيق macOS"
+msgid "MacOS app"
+msgstr "تطبيق MacOS"
 
 #: src/constants/landing.constants.ts:29
 #: src/constants/navigation.constants.ts:66
@@ -313,7 +313,7 @@ msgstr "لا، لا يمكن لمحفظة TBC الوصول إلى أموالك. 
 msgid "Once a transaction is confirmed on the blockchain, it cannot be cancelled. Always verify transaction details before confirming."
 msgstr "بمجرد تأكيد المعاملة على البلوك تشين، لا يمكن إلغاؤها. تحقق دائمًا من تفاصيل المعاملة قبل التأكيد."
 
-#: src/components/templates/home/desktop/index.tsx:380
+#: src/components/templates/home/desktop/index.tsx:346
 #: src/components/templates/home/mobile/index.tsx:124
 msgid "One wallet. Cross platform"
 msgstr "محفظة واحدة. عبر المنصات"
@@ -322,7 +322,7 @@ msgstr "محفظة واحدة. عبر المنصات"
 msgid "Our support team is available 24/7 to assist you with any questions or issues."
 msgstr "فريق الدعم لدينا متاح على مدار الساعة طوال أيام الأسبوع لمساعدتك في أي أسئلة أو مشاكل."
 
-#: src/components/templates/home/desktop/index.tsx:247
+#: src/components/templates/home/desktop/index.tsx:199
 msgid "Own Your Crypto."
 msgstr "امتلك عملاتك الرقمية."
 
@@ -338,7 +338,7 @@ msgstr "ادفع الرسوم بـ USDT لتكاليف مستقرة ومتوقّ
 msgid "Pay fees in USDT for stable, predictable costs amid market swings. This flexible feature adds transparency, making Web3 interactions more budget-friendly and user-centric."
 msgstr "ادفع الرسوم بـ USDT لتكاليف مستقرة ومتوقّعة وسط تقلبات السوق. هذه الميزة المرنة تضيف شفافية وتجعل التعاملات في Web3 أكثر ملاءمة للميزانية وتركيزًا على المستخدم."
 
-#: src/components/templates/home/desktop/index.tsx:253
+#: src/components/templates/home/desktop/index.tsx:209
 msgid "Possibilities"
 msgstr "إمكانيات."
 
@@ -384,12 +384,12 @@ msgstr "المُبادلة"
 msgid "Swap securely and seamlessly"
 msgstr "المُبادلة بشكل آمن وسلس"
 
-#: src/components/templates/home/desktop/index.tsx:312
+#: src/components/templates/home/desktop/index.tsx:275
 #: src/components/templates/home/mobile/index.tsx:81
 msgid "TBC Wallet bridges the gap for beginners and experts alike. Its user-friendly design offers easy onboarding for newcomers and advanced tools for DeFi pros, ensuring secure, efficient navigation of the decentralized ecosystem."
 msgstr "محفظة TB تسد الفجوة بين المبتدئين والخبراء. تصميمها سهل الاستخدام يوفّر بداية سلسة للمستخدمين الجدد وأدوات متقدمة لمحترفي DeFi، مما يضمن تنقلًا آمنًا وفعالًا في النظام اللامركزي."
 
-#: src/components/templates/home/desktop/index.tsx:358
+#: src/components/templates/home/desktop/index.tsx:321
 #: src/components/templates/home/mobile/index.tsx:109
 msgid "TBC Wallet connects you to diverse ecosystems, from Bitcoin and Ethereum to Optimism and Cosmos. Manage portfolios, engage in DeFi, trade NFTs, and link to dApps—all in one secure, self-custody hub."
 msgstr "محفظة TB تربطك بأنظمة بيئية متنوعة، من بيتكوين وإيثيريوم إلى Optimism و Cosmos. أدِر محافظك، وشارك في DeFi، وتداول NFTs، وتواصل مع dApps — كل ذلك من مركز آمن خاضع لسيطرتك."
@@ -398,12 +398,12 @@ msgstr "محفظة TB تربطك بأنظمة بيئية متنوعة، من ب�
 msgid "TBC Wallet employs multiple security layers: Encrypted Storage: All private keys are encrypted and stored locally on your device. Multi-Signature Support: Enhanced security for high-value transactions. Biometric Authentication: Fingerprint and face recognition support. Regular Security Updates: Continuous security improvements."
 msgstr "تستخدم محفظة TBC طبقات أمان متعددة: التخزين المشفر: جميع المفاتيح الخاصة مشفرة ومخزنة محليًا على جهازك. دعم التوقيع المتعدد: أمان محسّن للمعاملات عالية القيمة. المصادقة البيومترية: دعم بصمة الإصبع والتعرف على الوجه. تحديثات الأمان المنتظمة: تحسينات أمنية مستمرة."
 
-#: src/components/templates/home/desktop/index.tsx:257
+#: src/components/templates/home/desktop/index.tsx:215
 #: src/components/templates/home/mobile/index.tsx:36
 msgid "TBC Wallet empowers you to manage diverse assets like Bitcoin, Ethereum, and Solana. Securely dive into DeFi, NFTs, and dApps with full control. Your keys, your future."
 msgstr "محفظة TB تمكّنك من إدارة أصول متنوعة مثل بيتكوين وإيثيريوم وسولانا. انخرط بأمان في DeFi وNFTs وتطبيقات dApps مع تحكّمٍ كامل. مفاتيحك، مستقبلك."
 
-#: src/components/templates/home/desktop/index.tsx:285
+#: src/components/templates/home/desktop/index.tsx:248
 #: src/components/templates/home/mobile/index.tsx:64
 msgid "TBC Wallet is a leading multi-chain wallet with robust security and an intuitive interface. It simplifies Web3 interactions, from token management to dApp access, while giving you total control over your digital wealth."
 msgstr "محفظة TB هي محفظة متعددة السلاسل رائدة تتميز بأمان قوي وواجهة بديهية. تُبسّط التعاملات مع Web3، من إدارة الرموز إلى الوصول إلى dApps، مع منحك تحكمًا كاملًا بثروتك الرقمية."
@@ -413,8 +413,8 @@ msgid "TBC Wallet is a secure, multi-chain cryptocurrency wallet that supports m
 msgstr "محفظة TBC هي محفظة عملات رقمية آمنة متعددة السلاسل تدعم شبكات بلوك تشين متعددة بما في ذلك TBChain و Bitcoin و Ethereum و Tron. توفر واجهة سهلة الاستخدام لإدارة الأصول الرقمية وتنفيذ المعاملات والوصول إلى خدمات DeFi."
 
 #: src/constants/faq.constants.ts:37
-msgid "TBC Wallet is available on: Mobile: iOS and Android applications, Desktop: Windows and macOS applications, Browser: Browser extension for Chrome, Firefox, and Edge."
-msgstr "محفظة TBC متاحة على: الهاتف المحمول: تطبيقات iOS و Android، سطح المكتب: تطبيقات Windows و macOS، المتصفح: امتداد المتصفح لـ Chrome و Firefox و Edge."
+msgid "TBC Wallet is available on: Mobile: iOS and Android applications, Desktop: Windows and MacOS applications, Browser: Browser extension for Chrome, Firefox, and Edge."
+msgstr "محفظة TBC متاحة على: الهاتف المحمول: تطبيقات iOS و Android، سطح المكتب: تطبيقات Windows و MacOS، المتصفح: امتداد المتصفح لـ Chrome و Firefox و Edge."
 
 #: src/constants/faq.constants.ts:84
 msgid "TBC Wallet supports: TBChain (native network), Bitcoin, Ethereum and EVM-compatible chains, Tron, And more networks continuously being added."
@@ -469,7 +469,7 @@ msgstr "استكشاف الأخطاء وإصلاحها"
 msgid "Try these steps: 1. Update to the latest version. 2. Clear app cache. 3. Restart the application. 4. Reinstall if necessary (make sure you have your recovery phrase)."
 msgstr "جرب هذه الخطوات: 1. قم بالتحديث إلى أحدث إصدار. 2. امسح ذاكرة التخزين المؤقت للتطبيق. 3. أعد تشغيل التطبيق. 4. أعد التثبيت إذا لزم الأمر (تأكد من أن لديك عبارة الاسترداد)."
 
-#: src/components/templates/home/desktop/index.tsx:250
+#: src/components/templates/home/desktop/index.tsx:204
 msgid "Unleash Web3"
 msgstr "أطلق العنان للويب 3"
 
@@ -573,7 +573,7 @@ msgstr "نعم، يمكنك إنشاء وإدارة محافظ متعددة دا
 msgid "You can reach us through: Email: contact@tbchatofficial.com, Support Center: Visit our Contact Us page, Social Media: Follow us on X, Telegram, and Discord."
 msgstr "يمكنك الوصول إلينا من خلال: البريد الإلكتروني: contact@tbchatofficial.com، مركز الدعم: قم بزيارة صفحة اتصل بنا، وسائل التواصل الاجتماعي: تابعنا على X و Telegram و Discord."
 
-#: src/components/templates/home/desktop/index.tsx:353
+#: src/components/templates/home/desktop/index.tsx:316
 #: src/components/templates/home/mobile/index.tsx:106
 msgid "Your All-in-One Web3 Wallet"
 msgstr "محفظتك الشاملة لكل ما يتعلق بـ Web3"

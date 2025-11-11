@@ -34,7 +34,7 @@ export const FAQ_CATEGORIES: readonly FAQCategory[] = [
       {
         id: 'which-platforms',
         question: msg`Which platforms does TBC Wallet support?`,
-        answer: msg`TBC Wallet is available on: Mobile: iOS and Android applications, Desktop: Windows and macOS applications, Browser: Browser extension for Chrome, Firefox, and Edge.`,
+        answer: msg`TBC Wallet is available on: Mobile: iOS and Android applications, Desktop: Windows and MacOS applications, Browser: Browser extension for Chrome, Firefox, and Edge.`,
       },
       {
         id: 'is-free',

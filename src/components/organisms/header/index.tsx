@@ -35,6 +35,7 @@ import { useLingui } from '@lingui/react'
 import type { MessageDescriptor } from '@lingui/core'
 import { AspectRatio } from '@/components/ui/aspect-ratio'
 import Image from 'next/image'
+import {LOCALES} from "@/constants/direction.constants";
 
 export default function Header() {
   const [hasScrolled, setHasScrolled] = useState<boolean>(false)
@@ -142,7 +143,7 @@ const NavigationSection = memo(function NavigationSection({ section, contentWidt
           {/* Links */}
           <ul className='grid flex-1 grid-cols-1 gap-4 sm:grid-cols-2 lg:gap-6 xl:grid-cols-3 xl:grid-rows-3 xl:gap-x-13'>
             {section.items.map((item) => (
-              <ListItem key={item.id} href={item.href} title={item.title} className='h-full'>
+              <ListItem key={item.id} id={item.id} href={item.href} title={item.title} className='h-full'>
                 {i18n._(item.description)}
               </ListItem>
             ))}
@@ -154,20 +155,24 @@ const NavigationSection = memo(function NavigationSection({ section, contentWidt
 })
 
 interface ListItemProps extends Omit<React.ComponentPropsWithoutRef<'li'>, 'title'> {
+  id: string
   href: string
   title: MessageDescriptor
 }
 
-const ListItem = memo(function ListItem({ title, children, href, ...props }: ListItemProps) {
+const ListItem = memo(function ListItem({ title, id, children, href, ...props }: ListItemProps) {
   const { i18n } = useLingui()
   const pathname = usePathname()
   const isActive = pathname === href
+
+  const locale = (pathname?.split('/')[1] as LOCALES) || 'en'
+  const customHref = id === 'swap' ? href + locale : href
 
   return (
     <li {...props}>
       <NavigationMenuLink asChild>
         <NavigationLink
-          href={href}
+          href={customHref}
           className={cn(
             'flex h-full max-h-[90px] rounded-md p-3 transition-colors',
             isActive

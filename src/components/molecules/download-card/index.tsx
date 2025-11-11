@@ -57,7 +57,7 @@ export function DownloadCard({ data }: DownloadCardProps) {
           ) : null}
 
           <div className='flex flex-col gap-1.5'>
-            <p className='mb-auto'>{i18n._(data.subtitle)}</p>
+            <p className='mb-auto text-white'>{i18n._(data.subtitle)}</p>
             <h5 className='mt-auto text-2xl font-semibold text-white sm:text-3xl'>{i18n._(data.title)}</h5>
           </div>
         </div>

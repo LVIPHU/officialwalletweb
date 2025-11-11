@@ -25,7 +25,7 @@ msgstr "1. Lataa TBC Wallet App Storesta, Google Playsta tai verkkosivuiltamme. 
 msgid "1. Go to Settings. 2. Select Security. 3. Choose Change Password. 4. Enter your current and new password. 5. Confirm the change."
 msgstr "1. Siirry Asetuksiin. 2. Valitse Turvallisuus. 3. Valitse Vaihda salasana. 4. Syötä nykyinen ja uusi salasanasi. 5. Vahvista muutos."
 
-#: src/components/templates/home/desktop/index.tsx:282
+#: src/components/templates/home/desktop/index.tsx:245
 #: src/components/templates/home/mobile/index.tsx:61
 #: src/constants/navigation.constants.ts:109
 msgid "About"
@@ -102,7 +102,7 @@ msgstr "Voiko TBC Wallet käyttää varojani?"
 msgid "Coming soon"
 msgstr "Tulossa pian"
 
-#: src/components/templates/home/desktop/index.tsx:398
+#: src/components/templates/home/desktop/index.tsx:364
 #: src/components/templates/home/mobile/index.tsx:132
 msgid "Community talk about us"
 msgstr "Yhteisö puhuu meistä"
@@ -112,7 +112,7 @@ msgstr "Yhteisö puhuu meistä"
 msgid "Contact Us"
 msgstr "Ota yhteyttä"
 
-#: src/components/templates/home/desktop/index.tsx:309
+#: src/components/templates/home/desktop/index.tsx:272
 #: src/components/templates/home/mobile/index.tsx:78
 msgid "Designed for All, Built for You"
 msgstr "Suunniteltu kaikille, rakennettu sinulle"
@@ -121,12 +121,12 @@ msgstr "Suunniteltu kaikille, rakennettu sinulle"
 msgid "Desktop app"
 msgstr "Työpöytäsovellus"
 
-#: src/components/organisms/header/index.tsx:96
+#: src/components/organisms/header/index.tsx:97
 #: src/components/organisms/mobile-sidebar/index.tsx:88
 msgid "Download"
 msgstr "Lataa"
 
-#: src/components/templates/home/desktop/index.tsx:413
+#: src/components/templates/home/desktop/index.tsx:380
 #: src/components/templates/home/mobile/index.tsx:140
 msgid "Download now"
 msgstr "Lataa nyt"
@@ -144,7 +144,7 @@ msgstr "Vaihda tokeneita ketjujen välillä vaivattomasti alhaisilla kuluilla ja
 msgid "Ethereum"
 msgstr "Ethereum"
 
-#: src/components/templates/home/desktop/index.tsx:265
+#: src/components/templates/home/desktop/index.tsx:228
 #: src/components/templates/home/mobile/index.tsx:53
 msgid "Explore now"
 msgstr "Tutustu nyt"
@@ -268,8 +268,8 @@ msgid "Mac OS"
 msgstr "Mac OS"
 
 #: src/constants/navigation.constants.ts:42
-msgid "macOS app"
-msgstr "macOS-sovellus"
+msgid "MacOS app"
+msgstr "MacOS-sovellus"
 
 #: src/constants/landing.constants.ts:29
 #: src/constants/navigation.constants.ts:66
@@ -313,7 +313,7 @@ msgstr "Ei, TBC Wallet ei voi käyttää varojasi. Yksityiset avaimesi tallennet
 msgid "Once a transaction is confirmed on the blockchain, it cannot be cancelled. Always verify transaction details before confirming."
 msgstr "Kun tapahtuma on vahvistettu lohkoketjussa, sitä ei voi peruuttaa. Tarkista aina tapahtuman tiedot ennen vahvistamista."
 
-#: src/components/templates/home/desktop/index.tsx:380
+#: src/components/templates/home/desktop/index.tsx:346
 #: src/components/templates/home/mobile/index.tsx:124
 msgid "One wallet. Cross platform"
 msgstr "Yksi lompakko. Monialustainen"
@@ -322,7 +322,7 @@ msgstr "Yksi lompakko. Monialustainen"
 msgid "Our support team is available 24/7 to assist you with any questions or issues."
 msgstr "Tukitiimimme on saatavilla 24/7 auttamaan sinua kaikissa kysymyksissä tai ongelmissa."
 
-#: src/components/templates/home/desktop/index.tsx:247
+#: src/components/templates/home/desktop/index.tsx:199
 msgid "Own Your Crypto."
 msgstr "Omista kryptosi."
 
@@ -338,7 +338,7 @@ msgstr "Maksa palkkiot USDT:ssä vakaiden, ennakoitavissa olevien kustannusten v
 msgid "Pay fees in USDT for stable, predictable costs amid market swings. This flexible feature adds transparency, making Web3 interactions more budget-friendly and user-centric."
 msgstr "Maksa palkkiot USDT:ssä vakaiden, ennakoitavissa olevien kustannusten vuoksi markkinoiden vaihteluiden keskellä. Tämä joustava ominaisuus lisää läpinäkyvyyttä ja tekee Web3-vuorovaikutuksesta budjettiystävällisempää ja käyttäjäkeskeistä."
 
-#: src/components/templates/home/desktop/index.tsx:253
+#: src/components/templates/home/desktop/index.tsx:209
 msgid "Possibilities"
 msgstr "Mahdollisuudet"
 
@@ -384,12 +384,12 @@ msgstr "Vaihda"
 msgid "Swap securely and seamlessly"
 msgstr "Vaihda turvallisesti ja saumattomasti"
 
-#: src/components/templates/home/desktop/index.tsx:312
+#: src/components/templates/home/desktop/index.tsx:275
 #: src/components/templates/home/mobile/index.tsx:81
 msgid "TBC Wallet bridges the gap for beginners and experts alike. Its user-friendly design offers easy onboarding for newcomers and advanced tools for DeFi pros, ensuring secure, efficient navigation of the decentralized ecosystem."
 msgstr "TBC Wallet kaventaa kuilua aloittelijoiden ja asiantuntijoiden välillä. Sen käyttäjäystävällinen muotoilu tarjoaa vaivattoman alun uusille käyttäjille ja edistyneitä työkaluja DeFi-ammattilaisille, varmistaen turvallisen ja tehokkaan navigoinnin hajautetussa ekosysteemissä."
 
-#: src/components/templates/home/desktop/index.tsx:358
+#: src/components/templates/home/desktop/index.tsx:321
 #: src/components/templates/home/mobile/index.tsx:109
 msgid "TBC Wallet connects you to diverse ecosystems, from Bitcoin and Ethereum to Optimism and Cosmos. Manage portfolios, engage in DeFi, trade NFTs, and link to dApps—all in one secure, self-custody hub."
 msgstr "TBC Wallet yhdistää sinut monipuolisiin ekosysteemeihin, Bitcoinista ja Ethereumista Optimismiin ja Cosmokseen. Hallitse portfoliosi, osallistu DeFiin, käy kauppaa NFT:illä ja linkity dAppseihin — kaikki yhdessä turvallisessa itsehallintakeskuksessa."
@@ -398,12 +398,12 @@ msgstr "TBC Wallet yhdistää sinut monipuolisiin ekosysteemeihin, Bitcoinista j
 msgid "TBC Wallet employs multiple security layers: Encrypted Storage: All private keys are encrypted and stored locally on your device. Multi-Signature Support: Enhanced security for high-value transactions. Biometric Authentication: Fingerprint and face recognition support. Regular Security Updates: Continuous security improvements."
 msgstr "TBC Wallet käyttää useita turvallisuuskerroksia: Salattu tallennus: Kaikki yksityiset avaimet salataan ja tallennetaan paikallisesti laitteellesi. Moniallekirjoituksen tuki: Parannettu turvallisuus korkean arvon tapahtumille. Biometrinen todennus: Sormenjälki- ja kasvontunnistuksen tuki. Säännölliset turvallisuuspäivitykset: Jatkuvat turvallisuusparannukset."
 
-#: src/components/templates/home/desktop/index.tsx:257
+#: src/components/templates/home/desktop/index.tsx:215
 #: src/components/templates/home/mobile/index.tsx:36
 msgid "TBC Wallet empowers you to manage diverse assets like Bitcoin, Ethereum, and Solana. Securely dive into DeFi, NFTs, and dApps with full control. Your keys, your future."
 msgstr "TBC Wallet antaa sinulle mahdollisuuden hallita erilaisia varoja kuten Bitcoinia, Ethereumia ja Solanaa. Sukella turvallisesti DeFiin, NFT:ihin ja dAppsien maailmaan täydellä kontrollilla. Avaimesi, tulevaisuutesi."
 
-#: src/components/templates/home/desktop/index.tsx:285
+#: src/components/templates/home/desktop/index.tsx:248
 #: src/components/templates/home/mobile/index.tsx:64
 msgid "TBC Wallet is a leading multi-chain wallet with robust security and an intuitive interface. It simplifies Web3 interactions, from token management to dApp access, while giving you total control over your digital wealth."
 msgstr "TBC Wallet on johtava moniketjuinen lompakko, jolla on vankka turvallisuus ja intuitiivinen käyttöliittymä. Se yksinkertaistaa Web3-vuorovaikutuksia, tokenien hallinnasta dApps-käyttöön, samalla kun se antaa sinulle täyden kontrollin digitaalisesta omaisuudestasi."
@@ -413,8 +413,8 @@ msgid "TBC Wallet is a secure, multi-chain cryptocurrency wallet that supports m
 msgstr "TBC Wallet on turvallinen moniketjuinen kryptovaluuttalompakko, joka tukee useita lohkoketjeverkkoja, mukaan lukien TBChain, Bitcoin, Ethereum ja Tron. Se tarjoaa käyttäjäystävällisen käyttöliittymän digitaalisten varojen hallintaan, tapahtumien suorittamiseen ja DeFi-palveluiden käyttöön."
 
 #: src/constants/faq.constants.ts:37
-msgid "TBC Wallet is available on: Mobile: iOS and Android applications, Desktop: Windows and macOS applications, Browser: Browser extension for Chrome, Firefox, and Edge."
-msgstr "TBC Wallet on saatavilla: Mobiili: iOS- ja Android-sovellukset, Työpöytä: Windows- ja macOS-sovellukset, Selain: Selaimen laajennus Chrome, Firefox ja Edge -selaimille."
+msgid "TBC Wallet is available on: Mobile: iOS and Android applications, Desktop: Windows and MacOS applications, Browser: Browser extension for Chrome, Firefox, and Edge."
+msgstr "TBC Wallet on saatavilla: Mobiili: iOS- ja Android-sovellukset, Työpöytä: Windows- ja MacOS-sovellukset, Selain: Selaimen laajennus Chrome, Firefox ja Edge -selaimille."
 
 #: src/constants/faq.constants.ts:84
 msgid "TBC Wallet supports: TBChain (native network), Bitcoin, Ethereum and EVM-compatible chains, Tron, And more networks continuously being added."
@@ -469,7 +469,7 @@ msgstr "Vianetsintä"
 msgid "Try these steps: 1. Update to the latest version. 2. Clear app cache. 3. Restart the application. 4. Reinstall if necessary (make sure you have your recovery phrase)."
 msgstr "Kokeile näitä vaiheita: 1. Päivitä uusimpaan versioon. 2. Tyhjennä sovelluksen välimuisti. 3. Käynnistä sovellus uudelleen. 4. Asenna uudelleen tarvittaessa (varmista, että sinulla on palautuslauseesi)."
 
-#: src/components/templates/home/desktop/index.tsx:250
+#: src/components/templates/home/desktop/index.tsx:204
 msgid "Unleash Web3"
 msgstr "Vapauta Web3"
 
@@ -573,7 +573,7 @@ msgstr "Kyllä, voit luoda ja hallita useita lompakoita TBC Walletissa. Jokaisel
 msgid "You can reach us through: Email: contact@tbchatofficial.com, Support Center: Visit our Contact Us page, Social Media: Follow us on X, Telegram, and Discord."
 msgstr "Voit ottaa meihin yhteyttä: Sähköposti: contact@tbchatofficial.com, Tukikeskus: Vieraile Ota yhteyttä -sivullamme, Sosiaalinen media: Seuraa meitä X:ssä, Telegramissa ja Discordissa."
 
-#: src/components/templates/home/desktop/index.tsx:353
+#: src/components/templates/home/desktop/index.tsx:316
 #: src/components/templates/home/mobile/index.tsx:106
 msgid "Your All-in-One Web3 Wallet"
 msgstr "Kaikki-yhdessä Web3-lompakkosi"
