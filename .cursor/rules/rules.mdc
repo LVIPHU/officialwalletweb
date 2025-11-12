@@ -19,40 +19,47 @@ You are an expert full-stack developer proficient in TypeScript, React, Next.js 
 9. [Performance Optimization](mdc:#performance-optimization)
 10. [Error Handling & Validation](mdc:#error-handling--validation)
 11. [State Management](mdc:#state-management)
-12. [Form Handling](mdc:#form-handling)
-13. [Testing Strategy](mdc:#testing-strategy)
-14. [JSDoc Documentation](mdc:#jsdoc-documentation)
-15. [Accessibility (a11y)](mdc:#accessibility-a11y)
-16. [Security Best Practices](mdc:#security-best-practices)
+12. [Content Management & MDX](mdc:#content-management--mdx)
+13. [3D Graphics & Animations](mdc:#3d-graphics--animations)
+14. [Testing Strategy](mdc:#testing-strategy)
+15. [JSDoc Documentation](mdc:#jsdoc-documentation)
+16. [Accessibility (a11y)](mdc:#accessibility-a11y)
+17. [Security Best Practices](mdc:#security-best-practices)
+18. [Build Scripts & Automation](mdc:#build-scripts--automation)
 
 ---
 
 ## Tech Stack
 
 ### Core Technologies
-- **Framework:** Next.js 15+ (App Router)
+- **Framework:** Next.js 15+ (App Router with Turbopack)
 - **Language:** TypeScript (strict mode enabled)
 - **UI Framework:** React 19+ (functional components only)
-- **Styling:** Tailwind CSS 4+
+- **Styling:** Tailwind CSS 4+ with PostCSS, CSS Modules for component-specific styles
 - **Component Library:** Shadcn UI + Radix UI
 - **State Management:**
   - Local state: React hooks (useState, useReducer, useContext)
-  - Global state: Zustand (lightweight) or Redux Toolkit (complex apps)
-  - Server state: TanStack Query (React Query)
-  - URL state: nuqs
-- **Form Handling:** React Hook Form + Zod validation
-- **Data Fetching:** TanStack Query for client-side, React Server Components for server-side
-- **Testing:** Jest + React Testing Library + Playwright
-- **API:** next-safe-action for type-safe server actions
-- **Internationalization:** next-intl App Router 
+  - Global state: Zustand (lightweight)
+  - Server state: React Server Components for server-side data fetching
+  - URL state: Next.js searchParams
+- **Content Management:** Contentlayer2 with MDX
+- **Internationalization:** Lingui (@lingui/react, @lingui/macro) with PO files
+- **3D Graphics:** Three.js + React Three Fiber (@react-three/fiber, @react-three/drei)
+- **Animations:** GSAP, Lenis (smooth scrolling)
+- **Build Tool:** Turbopack (Next.js 15+)
+- **Testing:** Jest + React Testing Library + Playwright (when needed)
+- **RSS Feeds:** Custom RSS generation script 
 
 ### Rationale
-- Next.js App Router provides superior SSR/SSG capabilities, modern routing patterns, and built-in optimizations
+- Next.js App Router with Turbopack provides superior SSR/SSG capabilities, modern routing patterns, and faster builds
 - TypeScript strict mode catches bugs at compile-time and provides excellent IDE support
-- Tailwind CSS offers utility-first approach with tiny bundle sizes via PurgeCSS
+- Tailwind CSS 4 offers utility-first approach with tiny bundle sizes via PurgeCSS
 - Shadcn UI provides accessible, customizable components without vendor lock-in
 - Zustand offers simpler API than Redux with minimal boilerplate
-- TanStack Query handles caching, refetching, deduplication, and offline support automatically
+- Contentlayer2 provides type-safe content management with MDX support
+- Lingui offers powerful i18n with compile-time message extraction and PO file support
+- React Three Fiber enables declarative 3D graphics with Three.js
+- GSAP and Lenis provide smooth, performant animations and scrolling
 
 ---
 
@@ -157,7 +164,7 @@ Before finalizing, review:
 ### General Principles
 - Write concise, technical TypeScript code with accurate examples
 - Use functional and declarative programming patterns exclusively
-- Avoid classes unless integrating with class-based libraries
+- Avoid classes unless integrating with class-based libraries (Three.js, etc.)
 - Favor composition over inheritance
 - Keep functions small and focused (single responsibility principle)
 - Use descriptive variable names with auxiliary verbs
@@ -165,14 +172,16 @@ Before finalizing, review:
 - Apply DRY principle judiciously (don't over-abstract)
 - Use early returns to reduce nesting depth
 - Limit function parameters to 3 (use object destructuring for more)
+- Add copyright headers to all source files (use `npm run copyright`)
 
 ### Code Organization
 - Group related functionality together
-- Order imports: external → internal → types
+- Order imports: external → internal → types → contentlayer/generated
 - Place types near their usage point
 - Extract magic numbers to named constants
 - Keep files under 300 lines (split when larger)
 - One component per file (except tightly coupled sub-components)
+- Use index.tsx for component exports
 
 ### Syntax Preferences
 - Omit semicolons (follow Standard.js)
@@ -183,6 +192,8 @@ Before finalizing, review:
 - Destructure props and state immediately
 - Use optional chaining and nullish coalescing
 - Prefer const over let, never use var
+- Use 'use client' directive at top of client components
+- Use 'server-only' for server-only modules
 
 ---
 
@@ -227,6 +238,8 @@ Before finalizing, review:
 - Enable noImplicitReturns for explicit return statements
 - Enable noFallthroughCasesInSwitch for switch safety
 - Use moduleResolution: bundler for modern module resolution
+- Include contentlayer/generated in paths for type imports
+- Use baseUrl: "." with paths: { "@/*": ["./src/*"] }
 
 ### Type Definitions
 - Prefer interfaces over types for object shapes (better error messages)
@@ -315,32 +328,50 @@ Before finalizing, review:
 ```
 src/
 ├── app/                          # Next.js App Router
-│   ├── (auth)/                  # Route groups for layout sharing
-│   ├── (dashboard)/
-│   ├── api/                     # API routes
-│   ├── layout.tsx               # Root layout
-│   ├── page.tsx                 # Home page
-│   ├── error.tsx                # Error boundary
-│   ├── loading.tsx              # Loading UI
-│   └── not-found.tsx            # 404 page
+│   ├── [lang]/                 # Language-based routing
+│   │   ├── [...rest]/          # Dynamic catch-all routes
+│   │   ├── layout.tsx          # Language-specific layout
+│   │   ├── page.tsx            # Home page
+│   │   ├── not-found.tsx       # 404 page
+│   │   └── support/            # Support routes
+│   ├── robots.ts               # Robots.txt generator
+│   ├── sitemap.ts              # Sitemap generator
+│   └── manifest.json           # PWA manifest
 │
 ├── components/
-│   ├── atoms/                   # Basic components
+│   ├── atoms/                   # Basic building blocks
 │   ├── molecules/               # Composite components
 │   ├── organisms/               # Complex components
 │   ├── templates/               # Page layouts
 │   └── ui/                      # Shadcn UI components
 │
+├── content/                     # MDX content files
+│   ├── {locale}/                # Content organized by locale
+│   │   ├── features/           # Feature documentation
+│   │   └── about/              # About pages
+│
 ├── hooks/                       # Custom React hooks
 ├── lib/                         # Utility functions
-├── stores/                      # State management (Zustand)
-├── actions/                     # Server actions
-├── services/                    # Business logic layer
+│   └── utils/                   # Organized utility modules
+├── i18n/                        # Internationalization
+│   ├── locales/                # Translation files (PO format)
+│   ├── i18n.ts                 # I18n setup
+│   └── initLingui.tsx          # Lingui initialization
+├── providers/                   # React context providers
+├── layouts/                     # Layout components
 ├── types/                       # TypeScript type definitions
-├── config/                      # Configuration files
 ├── constants/                   # Application constants
-├── styles/                      # Global styles
-└── __tests__/                   # Test utilities and mocks
+├── styles/                      # Global styles and CSS modules
+└── middleware.ts                # Next.js middleware
+
+scripts/                         # Build and utility scripts
+├── generate-rss.ts             # RSS feed generator
+└── copyright.js                # Copyright header injector
+
+public/                          # Static assets
+├── feeds/                      # Generated RSS feeds
+├── assets/                     # Images and media
+└── models/                     # 3D models (GLTF, GLB, etc.)
 ```
 
 ### Component File Structure
@@ -379,13 +410,16 @@ Every component file should follow this structure:
 - Better performance (less JavaScript to browser)
 - Automatic request deduplication
 - Can access backend resources directly
+- Use for content rendering (MDX, static content)
 
 **Use Client Components only for:**
 - Event listeners (onClick, onChange, onSubmit)
 - Browser APIs (localStorage, window, document)
 - React hooks (useState, useEffect, useContext)
-- Third-party libraries requiring browser environment
+- Third-party libraries requiring browser environment (Three.js, GSAP, Lenis)
 - Interactive animations and transitions
+- 3D graphics and WebGL
+- Smooth scrolling implementations
 
 **Best Practices:**
 - Keep client components small and focused
@@ -393,6 +427,7 @@ Every component file should follow this structure:
 - Use 'use client' directive at top of file
 - Don't import server components into client components
 - Create client wrappers when necessary
+- Use dynamic imports with `ssr: false` for heavy client-only components (Three.js, animations)
 
 ### Custom Hooks Patterns
 
@@ -457,18 +492,27 @@ Every component file should follow this structure:
 - Component has expensive rendering logic
 - Component is in a list with many items
 - Parent re-renders often but props rarely change
+- 3D components and WebGL scenes
 
 **When to use useMemo:**
 - Computationally expensive calculations
 - Creating objects/arrays passed as props
 - Filtering or transforming large datasets
 - Creating derived state from props
+- Three.js scene setup and geometry calculations
 
 **When to use useCallback:**
 - Functions passed to memoized child components
 - Functions used as dependencies in other hooks
 - Event handlers passed to optimized children
 - Callbacks in dependency arrays
+- Animation callbacks and scroll handlers
+
+**Dynamic Imports:**
+- Use `dynamic()` with `ssr: false` for client-only components
+- Lazy load heavy libraries (Three.js, GSAP)
+- Split 3D components and animations into separate chunks
+- Load interactive features on demand
 
 ### Next.js Optimization
 
@@ -479,6 +523,7 @@ Every component file should follow this structure:
 - Implement lazy loading for below-fold images
 - Use appropriate formats (WebP, AVIF)
 - Optimize quality setting (75-80 is usually sufficient)
+- Handle 3D model preview images appropriately
 
 **Code Splitting:**
 - Use dynamic imports for heavy components
@@ -486,6 +531,7 @@ Every component file should follow this structure:
 - Split vendor bundles strategically
 - Lazy load modals, dialogs, and drawer content
 - Load third-party scripts asynchronously
+- Use `dynamic()` with `ssr: false` for Three.js and animation libraries
 
 **Data Fetching Optimization:**
 - Parallel data fetching where possible
@@ -493,15 +539,23 @@ Every component file should follow this structure:
 - Implement proper caching strategies
 - Prefetch data on link hover
 - Use ISR for semi-static content
-- Implement pagination for large datasets
+- Generate static paths for all content at build time
+- Cache Contentlayer generated data
 
 **Bundle Size Optimization:**
-- Use bundle analyzer to identify large dependencies
+- Use bundle analyzer (`npm run analyze`) to identify large dependencies
 - Import only needed functions from libraries
 - Replace heavy libraries with lighter alternatives
 - Remove unused CSS with PurgeCSS
 - Enable tree shaking
 - Minimize polyfills for modern browsers
+- Consider code splitting for Three.js and GSAP
+
+**Turbopack Benefits:**
+- Faster development builds with Turbopack
+- Improved HMR (Hot Module Replacement)
+- Better incremental compilation
+- Use `--turbopack` flag for dev and build commands
 
 ### Rendering Strategies
 
@@ -546,43 +600,38 @@ Every component file should follow this structure:
 - Check for null/undefined early
 - Verify permissions upfront
 - Fail fast principle
+- Validate locale and route parameters
 
 **Error Boundaries:**
-- Implement at route level (error.tsx)
+- Implement at route level (error.tsx, not-found.tsx)
 - Create reusable component-level boundaries
 - Provide meaningful fallback UI
 - Log errors to monitoring service
 - Allow graceful recovery where possible
+- Handle missing content gracefully (404)
 
-**Server Actions Error Handling:**
-- Use next-safe-action for type-safe actions
-- Return error objects, don't throw for expected errors
-- Validate input with Zod schemas
-- Provide user-friendly error messages
-- Log unexpected errors server-side
+**Content Error Handling:**
+- Handle missing content with `notFound()`
+- Validate locale before content lookup
+- Provide fallback content for missing translations
+- Handle Contentlayer generation errors gracefully
+- Validate content structure and metadata
 
-### Validation Strategy
+### Content Validation
 
-**Client-Side Validation:**
-- Use Zod for schema definitions
-- Integrate with React Hook Form
-- Provide immediate feedback
-- Show field-level errors
-- Disable submit on validation errors
+**Contentlayer Validation:**
+- Define required fields in document type schemas
+- Use computed fields for validation
+- Validate content structure at build time
+- Handle missing or invalid frontmatter
+- Filter out draft content in production
 
-**Server-Side Validation:**
-- Always validate on server (never trust client)
-- Use same Zod schemas for consistency
-- Return detailed validation errors
-- Sanitize all user inputs
-- Log validation failures for monitoring
-
-**Validation Patterns:**
-- Define schemas in separate files
-- Create reusable validation utilities
-- Compose schemas for complex forms
-- Use custom validators for business rules
-- Transform data during validation
+**Route Validation:**
+- Validate locale in middleware
+- Check content existence before rendering
+- Handle invalid route segments gracefully
+- Redirect to default locale if needed
+- Provide 404 for non-existent content
 
 ---
 
@@ -592,29 +641,28 @@ Every component file should follow this structure:
 
 **Local State (useState/useReducer):**
 - UI state (toggles, inputs, modals)
-- Form state (managed by React Hook Form)
 - Component-specific state
 - Temporary state that doesn't need persistence
+- Animation state
+- Scroll position tracking
 
 **Global Client State (Zustand):**
-- Authentication state
 - Theme preferences
-- Shopping cart
-- User settings
 - UI state shared across routes
+- Debug mode state
+- Global animation settings
+- 3D scene state (if needed)
 
-**Server State (TanStack Query):**
-- Data from API
-- Cached responses
-- Paginated data
-- Real-time data
-- Any data that originates from server
+**Server State (React Server Components):**
+- Content from Contentlayer (MDX files)
+- Static data fetched at build time
+- Server-rendered data
+- Metadata and SEO information
 
-**URL State (nuqs):**
-- Search parameters
-- Filters and sorting
-- Pagination state
-- Tab selections
+**URL State (Next.js searchParams):**
+- Language/locale selection (via [lang] route)
+- Dynamic route parameters
+- Query parameters for filtering
 - Any state that should be shareable via URL
 
 ### Zustand Best Practices
@@ -633,64 +681,131 @@ Every component file should follow this structure:
 - Create typed hooks for store access
 - Use immer middleware for immutable updates
 
-### TanStack Query Best Practices
+### Contentlayer2 Best Practices
 
-**Query Configuration:**
-- Use query keys consistently
-- Implement proper stale time
-- Configure cache time appropriately
-- Enable refetch on window focus selectively
-- Use placeholderData for better UX
+**Content Organization:**
+- Organize content by locale in `src/content/{locale}/`
+- Use MDX for rich content with React components
+- Define document types in `contentlayer.config.ts`
+- Leverage computed fields for metadata (slug, path, TOC, reading time)
+- Use frontmatter for content metadata
 
-**Mutation Patterns:**
-- Invalidate related queries after mutations
-- Use optimistic updates for better UX
-- Handle rollback on mutation failure
-- Provide loading states during mutations
-- Show success/error notifications
+**Content Patterns:**
+- Import generated types from `contentlayer/generated`
+- Use `allFeatures`, `allAbouts` for content queries
+- Filter content by locale and category
+- Generate static paths at build time
+- Use MDX components for custom rendering
+
+**MDX Components:**
+- Create reusable MDX components in `components/molecules/mdx-components/`
+- Customize heading rendering with anchor links
+- Style code blocks and tables appropriately
+- Handle images with Next.js Image component
+- Support external links with proper attributes
 
 ---
 
-## Form Handling
+## Content Management & MDX
 
-### React Hook Form Integration
+### Contentlayer2 Integration
 
-**Form Setup:**
-- Use useForm hook with Zod resolver
-- Define validation schema with Zod
-- Register fields with proper validation
-- Handle submission with async functions
-- Provide loading states during submission
+**Content Setup:**
+- Define document types in `contentlayer.config.ts`
+- Use computed fields for derived data (slug, path, TOC)
+- Organize content by locale: `src/content/{locale}/{category}/`
+- Use MDX for rich content with React components
+- Generate types automatically via Contentlayer
 
-**Field Registration:**
-- Use register for simple inputs
-- Use Controller for complex components
-- Apply proper validation rules
-- Show field-level errors
-- Disable fields during submission
+**MDX Best Practices:**
+- Use frontmatter for metadata (title, description, date, category)
+- Create custom MDX components for consistent styling
+- Support code syntax highlighting
+- Handle images with Next.js Image optimization
+- Generate table of contents from headings
+- Calculate reading time automatically
 
-**Form Patterns:**
-- Extract reusable form components
-- Implement proper error handling
-- Show validation errors clearly
-- Provide success feedback
-- Handle file uploads appropriately
+**Content Patterns:**
+- Filter content by locale and category
+- Generate static paths at build time
+- Use `allFeatures` and `allAbouts` for content queries
+- Implement proper 404 handling for missing content
+- Support draft content in development
 
-### Validation with Zod
+### Internationalization with Lingui
 
-**Schema Definition:**
-- Define schemas close to usage
-- Create reusable sub-schemas
-- Use transformers for data normalization
-- Implement custom validators
-- Add helpful error messages
+**Lingui Setup:**
+- Use `@lingui/react/macro` for compile-time message extraction
+- Store translations in PO files: `src/i18n/locales/{locale}/messages.po`
+- Initialize Lingui in middleware and providers
+- Use `<Trans>` component for translations
+- Extract messages with `lingui extract`
 
-**Advanced Patterns:**
-- Conditional validation with refine
-- Cross-field validation
-- Async validation for uniqueness checks
-- Dynamic schemas based on conditions
-- Schema composition and extension
+**Translation Patterns:**
+- Use macro functions for type-safe translations
+- Support pluralization and formatting
+- Handle locale switching via [lang] route
+- Provide fallback to default locale (en)
+- Use server-only i18n setup for SSR
+
+---
+
+## 3D Graphics & Animations
+
+### Three.js & React Three Fiber
+
+**Setup and Configuration:**
+- Use `@react-three/fiber` for declarative 3D scenes
+- Use `@react-three/drei` for helpers and utilities
+- Load 3D models (GLTF, GLB) from `public/models/`
+- Use dynamic imports with `ssr: false` for 3D components
+- Optimize models before including in project
+
+**Best Practices:**
+- Create separate WebGL components in `components/atoms/webgl/`
+- Use `useFrame` hook for animations and updates
+- Implement proper cleanup in useEffect
+- Use `useMemo` for expensive geometry calculations
+- Lazy load 3D scenes to reduce initial bundle size
+- Handle WebGL context loss gracefully
+- Provide fallback UI for devices without WebGL support
+
+**Performance Optimization:**
+- Use `React.memo` for 3D components
+- Limit polygon count in models
+- Use texture compression
+- Implement level-of-detail (LOD) for complex scenes
+- Use instancing for repeated objects
+- Monitor FPS and optimize accordingly
+
+### GSAP Animations
+
+**Setup:**
+- Use GSAP for complex animations and timelines
+- Import only needed GSAP modules
+- Use dynamic imports for animation-heavy components
+
+**Best Practices:**
+- Create reusable animation utilities
+- Use GSAP ScrollTrigger for scroll-based animations
+- Clean up animations in useEffect cleanup
+- Use `useRef` to store GSAP instances
+- Prefer CSS transforms over layout properties
+- Respect `prefers-reduced-motion` media query
+
+### Lenis Smooth Scrolling
+
+**Setup:**
+- Initialize Lenis in client components
+- Use `useEffect` for setup and cleanup
+- Integrate with GSAP ScrollTrigger if needed
+
+**Best Practices:**
+- Initialize once per page/app
+- Clean up on unmount
+- Configure options for performance (duration, easing)
+- Handle scroll events efficiently
+- Disable on mobile if performance is an issue
 
 ---
 
@@ -904,6 +1019,7 @@ Every component file should follow this structure:
 - Use form elements inside form tags
 - Implement proper heading hierarchy (h1-h6)
 - Use nav, main, article, aside appropriately
+- Ensure proper language attributes (lang prop) for i18n
 
 **Keyboard Navigation:**
 - All interactive elements must be keyboard accessible
@@ -911,13 +1027,15 @@ Every component file should follow this structure:
 - Provide visible focus indicators
 - Support standard keyboard shortcuts
 - Trap focus in modals and dialogs
+- Ensure 3D scenes and animations don't trap keyboard focus
 
 **Screen Reader Support:**
 - Add descriptive ARIA labels
 - Use aria-describedby for additional context
 - Implement aria-live regions for dynamic content
-- Use aria-hidden to hide decorative elements
+- Use aria-hidden to hide decorative elements (3D scenes, animations)
 - Provide alternative text for images
+- Use Lingui's Trans component for accessible translations
 
 ### ARIA Best Practices
 
@@ -971,6 +1089,7 @@ Every component file should follow this structure:
 - Use parameterized queries for database
 - Validate file uploads (type, size, content)
 - Implement rate limiting on endpoints
+- Validate locale parameters in middleware
 
 **XSS Prevention:**
 - Never use dangerouslySetInnerHTML with user content
@@ -978,6 +1097,15 @@ Every component file should follow this structure:
 - Use CSP headers to restrict inline scripts
 - Encode output based on context
 - Validate and sanitize all user-generated content
+- Sanitize MDX content before rendering
+- Validate Contentlayer frontmatter
+
+**Content Security:**
+- Validate locale in middleware before processing
+- Sanitize route parameters
+- Filter out draft content in production
+- Validate content structure from Contentlayer
+- Escape HTML in RSS feed generation
 
 ### Authentication and Authorization
 
@@ -1029,28 +1157,100 @@ Every component file should follow this structure:
 
 ---
 
+## Build Scripts & Automation
+
+### Build Process
+
+**Pre-build Steps:**
+- Contentlayer generates content types: `npm run contentlayer:build`
+- RSS feeds are generated: `npm run rss:generate`
+- Copyright headers are added: `npm run copyright` (optional, manual)
+
+**Build Commands:**
+- Development: `npm run dev` (uses Turbopack)
+- Production build: `npm run build` (uses Turbopack)
+- Contentlayer dev: `npm run contentlayer:dev` (watch mode)
+
+### RSS Feed Generation
+
+**Setup:**
+- RSS feeds are generated via `scripts/generate-rss.ts`
+- Outputs to `public/feeds/` directory
+- Generates feeds per locale
+- Includes content from Contentlayer
+
+**Best Practices:**
+- Run RSS generation before build (`prebuild` script)
+- Escape HTML content properly
+- Include proper metadata (title, description, date)
+- Filter out draft content
+- Generate feeds for all supported locales
+
+### Copyright Headers
+
+**Usage:**
+- Run `npm run copyright` to add copyright headers to all source files
+- Headers are automatically generated with NEXSOFT copyright
+- Applied to TypeScript, JavaScript, TSX, JSX files
+- Excludes node_modules, .next, and other build directories
+
+**Format:**
+```typescript
+/**
+ * Copyright (c) 2025 NEXSOFT. All rights reserved.
+ *
+ * This source code is proprietary and confidential.
+ * Unauthorized copying, distribution, or modification of this file,
+ * in whole or in part, is strictly prohibited without prior written consent
+ * from NEXSOFT.
+ */
+```
+
+### Lingui Workflow
+
+**Message Extraction:**
+- Run `npm run lingui:extract` to extract translatable strings
+- Updates PO files in `src/i18n/locales/{locale}/messages.po`
+- Use `--clean --overwrite` flags for clean extraction
+
+**Message Compilation:**
+- Run `npm run lingui:compile` to compile PO files to JS
+- Generates compiled messages for runtime
+- Required before building for production
+
+---
+
 ## Final Checklist
 
 ### Before Committing
 - [ ] TypeScript compiles without errors
-- [ ] All tests pass
+- [ ] All tests pass (if applicable)
 - [ ] No console.logs or debugger statements
 - [ ] Code follows naming conventions
+- [ ] Copyright headers added (run `npm run copyright`)
 - [ ] JSDoc added for public APIs
 - [ ] Accessibility requirements met
 - [ ] Error handling implemented
 - [ ] Loading states provided
 - [ ] Responsive design tested
 - [ ] Images optimized
+- [ ] Contentlayer builds successfully
+- [ ] Lingui messages extracted and compiled
+- [ ] No linting errors
 
 ### Before Deployment
 - [ ] Environment variables configured
-- [ ] Build succeeds
+- [ ] Build succeeds with Turbopack
+- [ ] Contentlayer generates all content types
+- [ ] RSS feeds generated (`npm run rss:generate`)
+- [ ] All locales have translations
 - [ ] Lighthouse scores acceptable
 - [ ] Security audit passed
 - [ ] Performance metrics within targets
-- [ ] SEO metadata complete
+- [ ] SEO metadata complete (sitemap, robots.txt)
 - [ ] Analytics integrated
 - [ ] Error monitoring setup
+- [ ] 3D models optimized and loaded correctly
+- [ ] Animations performant on target devices
 - [ ] Backup strategy in place
 - [ ] Rollback plan documented
