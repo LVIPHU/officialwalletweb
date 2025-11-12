@@ -49,10 +49,10 @@ interface RssOptions {
 /**
  * Load contentlayer data from JSON files
  * Uses synchronous file reading for better performance in build scripts
- * @returns Object containing all features and legal documents
+ * @returns Object containing all features and about documents
  * @throws Error if contentlayer data is not found
  */
-function loadContentlayerData(): { allFeatures: ContentItem[]; allLegals: ContentItem[] } {
+function loadContentlayerData(): { allFeatures: ContentItem[]; allAbouts: ContentItem[] } {
   const contentlayerPath = path.join(process.cwd(), '.contentlayer', 'generated')
 
   try {
@@ -61,12 +61,12 @@ function loadContentlayerData(): { allFeatures: ContentItem[]; allLegals: Conten
     const featuresData = JSON.parse(readFileSync(featuresPath, 'utf-8'))
     const allFeatures: ContentItem[] = Array.isArray(featuresData) ? featuresData : []
 
-    // Load Legal data
-    const legalsPath = path.join(contentlayerPath, 'Legal', '_index.json')
-    const legalsData = JSON.parse(readFileSync(legalsPath, 'utf-8'))
-    const allLegals: ContentItem[] = Array.isArray(legalsData) ? legalsData : []
+    // Load About data
+    const aboutsPath = path.join(contentlayerPath, 'About', '_index.json')
+    const aboutsData = JSON.parse(readFileSync(aboutsPath, 'utf-8'))
+    const allAbouts: ContentItem[] = Array.isArray(aboutsData) ? aboutsData : []
 
-    return { allFeatures, allLegals }
+    return { allFeatures, allAbouts }
   } catch (error) {
     console.error('❌ Error loading contentlayer data.', '\n')
     console.error('Please ensure contentlayer is built first: npm run contentlayer:build', '\n')
@@ -216,10 +216,10 @@ function generateFeedForLocale(lang: string, contentMap: Map<string, ContentItem
  * Build content map by language for O(1) lookup
  * Filters out draft content and groups by language
  * @param allFeatures - All feature content items
- * @param allLegals - All legal content items
+ * @param allAbouts - All about content items
  * @returns Map of content items grouped by language
  */
-function buildContentMap(allFeatures: ContentItem[], allLegals: ContentItem[]): Map<string, ContentItem[]> {
+function buildContentMap(allFeatures: ContentItem[], allAbouts: ContentItem[]): Map<string, ContentItem[]> {
   const contentMap = new Map<string, ContentItem[]>()
 
   // Initialize map for all locales
@@ -227,8 +227,8 @@ function buildContentMap(allFeatures: ContentItem[], allLegals: ContentItem[]): 
     contentMap.set(lang, [])
   }
 
-  // Add features and legals to map
-  const allContent = [...allFeatures, ...allLegals]
+  // Add features and abouts to map
+  const allContent = [...allFeatures, ...allAbouts]
   for (const content of allContent) {
     if (content.draft) continue
 
@@ -250,10 +250,10 @@ export async function generateRssFeeds(): Promise<void> {
   console.info('🗒️ Generating RSS feeds...', '\n')
 
   // Load contentlayer data
-  const { allFeatures, allLegals } = loadContentlayerData()
+  const { allFeatures, allAbouts } = loadContentlayerData()
 
   // Build content map for O(1) lookup
-  const contentMap = buildContentMap(allFeatures, allLegals)
+  const contentMap = buildContentMap(allFeatures, allAbouts)
 
   // Ensure output directory exists
   mkdirSync(OUTPUT_DIR, { recursive: true })
