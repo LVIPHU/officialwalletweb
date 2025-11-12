@@ -8,7 +8,15 @@
  */
 
 import { cn } from '@/lib/styles'
-import { ChevronRight } from 'lucide-react'
+import {
+  Breadcrumb,
+  BreadcrumbItem,
+  BreadcrumbLink,
+  BreadcrumbList,
+  BreadcrumbSeparator,
+} from '@/components/ui/breadcrumb'
+import { NavigationLink } from '@/components/atoms/navigation-link'
+import { Trans } from '@lingui/react/macro'
 
 interface BreadcrumbsProps {
   category?: string
@@ -19,7 +27,6 @@ interface BreadcrumbsProps {
 /**
  * Breadcrumbs component
  * Displays category and title in format: [Category] > [Title]
- * Does not include Home link
  */
 export function Breadcrumbs({ category, title, className }: BreadcrumbsProps) {
   if (!category && !title) {
@@ -27,17 +34,27 @@ export function Breadcrumbs({ category, title, className }: BreadcrumbsProps) {
   }
 
   return (
-    <nav
-      aria-label='Breadcrumbs'
-      className={cn('text-muted-foreground mb-6 flex items-center gap-2 text-sm', className)}
-    >
-      {category && (
-        <>
-          <span className='capitalize'>{category}</span>
-          <ChevronRight className='size-4' />
-        </>
-      )}
-      <span className='text-foreground font-medium'>{title}</span>
-    </nav>
+    <Breadcrumb className={cn('mb-6', className)}>
+      <BreadcrumbList>
+        {category ? (
+          <>
+            <BreadcrumbItem>{category}</BreadcrumbItem>
+            <BreadcrumbSeparator />
+          </>
+        ) : (
+          <>
+            <BreadcrumbItem>
+              <BreadcrumbLink asChild>
+                <NavigationLink href='/'>
+                  <Trans>Home</Trans>
+                </NavigationLink>
+              </BreadcrumbLink>
+            </BreadcrumbItem>
+            <BreadcrumbSeparator />
+          </>
+        )}
+        <BreadcrumbItem className='text-primary font-medium'>{title}</BreadcrumbItem>
+      </BreadcrumbList>
+    </Breadcrumb>
   )
 }

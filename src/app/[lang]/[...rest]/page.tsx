@@ -9,7 +9,7 @@
 
 import { notFound } from 'next/navigation'
 import type { Metadata } from 'next'
-import { allFeatures, allLegals } from 'contentlayer/generated'
+import { allFeatures, allAbouts } from 'contentlayer/generated'
 import { MdxLayoutRenderer } from '@/components/molecules/mdx-layout-renderer'
 import MdxLayout from '@/components/templates/mdx-layout'
 import { initLingui } from '@/i18n/initLingui'
@@ -30,19 +30,19 @@ const EXCLUDED_PATHS = ['.well-known']
  */
 const featuresMap = new Map(allFeatures.map((f) => [`features:${f.lang}:${f.slug}`, f]))
 
-const legalsMap = new Map(allLegals.map((l) => [`legal:${l.lang}:${l.slug}`, l]))
+const aboutsMap = new Map(allAbouts.map((a) => [`about:${a.lang}:${a.slug}`, a]))
 
 /**
  * Find content by language and path segments
- * Returns the matching feature or legal document, or undefined if not found
+ * Returns the matching feature or about document, or undefined if not found
  * Uses Map lookup for O(1) performance instead of O(n) array.find()
  */
 function findContentByPath(lang: string, rest: string[]) {
   if (rest[0] === 'features' && rest.length > 1) {
     return featuresMap.get(`features:${lang}:${rest[1]}`)
   }
-  if (rest[0] === 'legal' && rest.length > 1) {
-    return legalsMap.get(`legal:${lang}:${rest[1]}`)
+  if (rest[0] === 'about' && rest.length > 1) {
+    return aboutsMap.get(`about:${lang}:${rest[1]}`)
   }
   return undefined
 }
@@ -61,11 +61,11 @@ export async function generateStaticParams() {
     })
   }
 
-  // Add legal docs
-  for (const legal of allLegals) {
+  // Add about docs
+  for (const about of allAbouts) {
     allParams.push({
-      lang: legal.lang,
-      rest: ['legal', legal.slug],
+      lang: about.lang,
+      rest: ['about', about.slug],
     })
   }
 
@@ -118,7 +118,7 @@ export async function generateMetadata({ params }: DynamicPageParams): Promise<M
         lang,
         path: pathString,
         date: content.date,
-        type: contentType === 'blog' ? 'article' : 'website',
+        type: contentType === 'features' ? 'article' : 'website',
       })
     }
   } catch (error) {
@@ -137,19 +137,19 @@ export async function generateMetadata({ params }: DynamicPageParams): Promise<M
  * Determine content type from path segments
  */
 function getContentType(segments: readonly string[]): ContentType {
-  if (segments[0] === 'legal') {
-    return 'legal'
+  if (segments[0] === 'about') {
+    return 'about'
   }
   if (segments[0] === 'features') {
     return 'features'
   }
-  return 'blog'
+  return 'features'
 }
 
 /**
  * Dynamic page handler for all MDX content
  * Maps URL path to content directory structure:
- * /en/legal/privacy-policy -> src/content/en/legal/privacy-policy.mdx
+ * /en/about/privacy-policy -> src/content/en/about/privacy-policy.mdx
  */
 export default async function DynamicContentPage({ params }: DynamicPageParams) {
   const { lang, rest } = await params

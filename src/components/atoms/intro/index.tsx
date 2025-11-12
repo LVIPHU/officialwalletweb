@@ -77,7 +77,7 @@ export const Intro = () => {
             />
           </div>
         </div>
-        <Logo isLoaded={isLoaded} className={cn(introOut && s.translate)} setIntroOut={setIntroOut} />
+        <Logo isLoaded={isLoaded} setIntroOut={setIntroOut} />
       </div>
     </div>
   )

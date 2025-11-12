@@ -47,24 +47,3 @@
   transition-delay: calc(75ms);
   transform: translate3d(0, 0, 0);
 }
-
-.translate {
-  /* desktop */
-}
-
-@media (min-width: 1024px) {
-  .translate {
-    transform: translate3d(0, -100%, 0);
-    transition: transform var(--intro-out) var(--ease-out-expo);
-  }
-}
-
-.mobile {
-  /* mobile */
-}
-
-@media (max-width: 1023px) {
-  .mobile {
-    transform: translate3d(0, -105%, 0);
-  }
-}

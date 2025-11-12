@@ -35,7 +35,7 @@ import { useLingui } from '@lingui/react'
 import type { MessageDescriptor } from '@lingui/core'
 import { AspectRatio } from '@/components/ui/aspect-ratio'
 import Image from 'next/image'
-import {LOCALES} from "@/constants/direction.constants";
+import { LOCALES } from '@/constants/direction.constants'
 
 export default function Header() {
   const [hasScrolled, setHasScrolled] = useState<boolean>(false)

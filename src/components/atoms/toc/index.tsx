@@ -68,21 +68,14 @@ export function Toc({ headings }: TocProps) {
                 <button
                   type='button'
                   className={cn(
-                    'hover:text-primary! flex w-full cursor-pointer leading-normal transition-colors duration-300 ease-in-out',
+                    'hover:text-primary! transition-[color, opacity] flex w-full cursor-pointer leading-normal duration-300 ease-in-out',
                     'before:me-2 before:font-black before:content-["-"]',
-                    isActive ? 'text-primary' : 'text-gray-600 dark:text-white'
+                    isActive ? 'text-primary opacity-100' : 'text-gray-600 group-hover:opacity-100 dark:text-white'
                   )}
                   onClick={(e) => handleClick(e, h.url)}
                   title={h.text}
                 >
-                  <p
-                    className={cn(
-                      'truncate text-xs font-bold transition-opacity duration-300 ease-in-out xl:text-base',
-                      isActive ? 'opacity-100' : 'group-hover:opacity-100'
-                    )}
-                  >
-                    {h.text}
-                  </p>
+                  <p className='truncate text-xs font-bold xl:text-base'>{h.text}</p>
                 </button>
               </li>
             )

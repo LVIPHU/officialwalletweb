@@ -7,7 +7,7 @@
     <language>pt</language>
     <managingEditor>contact@tbchatofficial.com (NEXSOFT)</managingEditor>
     <webMaster>contact@tbchatofficial.com (NEXSOFT)</webMaster>
-    <lastBuildDate>Fri, 07 Nov 2025 10:00:53 GMT</lastBuildDate>
+    <lastBuildDate>Wed, 12 Nov 2025 02:57:29 GMT</lastBuildDate>
     <atom:link href="https://officialwalletweb.vercel.app/feeds/pt.xml" rel="self" type="application/rss+xml"/>
     <item>
       <guid isPermaLink="true">https://officialwalletweb.vercel.app/pt/legal/privacy-policy</guid>
@@ -15,7 +15,7 @@
       <link>https://officialwalletweb.vercel.app/pt/legal/privacy-policy</link>
       <description>
 Bem-vindo à entidade operadora do nosso site oficial (doravante designado por &quot;o Site&quot;). Respeitamos e protegemos a sua privacidade. Quando utiliza ou recebe os nossos serviços, as informações pesso</description>
-      <pubDate>Fri, 07 Nov 2025 10:00:53 GMT</pubDate>
+      <pubDate>Wed, 12 Nov 2025 02:57:29 GMT</pubDate>
       <category>legal</category>
     </item>
     <item>
@@ -26,7 +26,7 @@ Bem-vindo à entidade operadora do nosso site oficial (doravante designado por &
  Por favor, leia atentamente estes termos de serviço.
 
 Ao acessar ou usar nossos serviços, você concorda em ficar vinculado por estes Termos de Serviço e todos os termos incorporados por referênci</description>
-      <pubDate>Fri, 07 Nov 2025 10:00:53 GMT</pubDate>
+      <pubDate>Wed, 12 Nov 2025 02:57:29 GMT</pubDate>
       <category>legal</category>
     </item>
     <item>
@@ -38,7 +38,7 @@ Ao acessar ou usar nossos serviços, você concorda em ficar vinculado por estes
 
 A funcionalidade de Transferência Instantânea do TBC Wallet permite transações ultrarrápidas entre cadeias com taxas mínimas e liquidação quase instantânea. Seja enviando fundos para</description>
       <pubDate>Wed, 15 Jan 2025 00:00:00 GMT</pubDate>
-      <category>features</category>
+      <category>features</category>
     </item>
     <item>
       <guid isPermaLink="true">https://officialwalletweb.vercel.app/pt/features/miner</guid>
@@ -49,7 +49,7 @@ A funcionalidade de Transferência Instantânea do TBC Wallet permite transaçõ
 
 O recurso Miner do TBC Wallet permite que você participe do mecanismo de consenso Proof of Stake (PoS). Faça stake de seus tokens, vote em validadores, gerencie nós e ganhe recompens</description>
       <pubDate>Wed, 15 Jan 2025 00:00:00 GMT</pubDate>
-      <category>features</category>
+      <category>features</category>
     </item>
     <item>
       <guid isPermaLink="true">https://officialwalletweb.vercel.app/pt/features/multi-signature</guid>
@@ -60,7 +60,7 @@ O recurso Miner do TBC Wallet permite que você participe do mecanismo de consen
 
 A tecnologia de multi-assinatura (multi-sig) adiciona uma camada extra de segurança ao seu TBC Wallet, exigindo múltiplas aprovações antes que qualquer transação possa ser executada.</description>
       <pubDate>Wed, 15 Jan 2025 00:00:00 GMT</pubDate>
-      <category>features</category>
+      <category>features</category>
     </item>
     <item>
       <guid isPermaLink="true">https://officialwalletweb.vercel.app/pt/features/usdt-fee</guid>
@@ -71,7 +71,7 @@ A tecnologia de multi-assinatura (multi-sig) adiciona uma camada extra de segura
 
 A funcionalidade de Taxa USDT do TBC Wallet permite que você pague taxas de transação usando USDT (Tether) em vez de tokens de rede nativos. Isso fornece estabilidade de preços e pre</description>
       <pubDate>Wed, 15 Jan 2025 00:00:00 GMT</pubDate>
-      <category>features</category>
+      <category>features</category>
     </item>
   </channel>
 </rss>

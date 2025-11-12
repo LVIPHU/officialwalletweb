@@ -7,7 +7,7 @@
     <language>zh-hant</language>
     <managingEditor>contact@tbchatofficial.com (NEXSOFT)</managingEditor>
     <webMaster>contact@tbchatofficial.com (NEXSOFT)</webMaster>
-    <lastBuildDate>Fri, 07 Nov 2025 10:00:53 GMT</lastBuildDate>
+    <lastBuildDate>Wed, 12 Nov 2025 02:57:29 GMT</lastBuildDate>
     <atom:link href="https://officialwalletweb.vercel.app/feeds/zh-hant.xml" rel="self" type="application/rss+xml"/>
     <item>
       <guid isPermaLink="true">https://officialwalletweb.vercel.app/zh-hant/legal/privacy-policy</guid>
@@ -15,7 +15,7 @@
       <link>https://officialwalletweb.vercel.app/zh-hant/legal/privacy-policy</link>
       <description>
 歡迎您使用官方網站（以下簡稱：官網）的運營主體。我們尊重並保護您的隱私，在您使用我們的服務時或在接受服務過程中，所提供給我們或我們收集的關於您的個人信息，我們將按照移動應用隱私政策（以下簡稱&quot;本政策&quot;）進行收集、存儲、使用及對外提供。本政策與您使用我們的產品和服務關係緊密，請您仔細閱讀並理解本政策全部內容，一旦您確認充分理解並同意后使用移動應用產品或服務，即表示您已充分理解並同意我們可按照本政</description>
-      <pubDate>Fri, 07 Nov 2025 10:00:53 GMT</pubDate>
+      <pubDate>Wed, 12 Nov 2025 02:57:29 GMT</pubDate>
       <category>legal</category>
     </item>
     <item>
@@ -36,7 +36,7 @@
 (a) 您已達到簽署有約束力合同的法定年齡；
 
 (b) </description>
-      <pubDate>Fri, 07 Nov 2025 10:00:53 GMT</pubDate>
+      <pubDate>Wed, 12 Nov 2025 02:57:29 GMT</pubDate>
       <category>legal</category>
     </item>
     <item>
@@ -57,7 +57,7 @@ TBC Wallet 的即時轉帳功能支援閃電般的跨鏈交易，費用極低且
 1. 選擇資產: 選擇您要轉移的資產和金額
 2</description>
       <pubDate>Wed, 15 Jan 2025 00:00:00 GMT</pubDate>
-      <category>features</category>
+      <category>features</category>
     </item>
     <item>
       <guid isPermaLink="true">https://officialwalletweb.vercel.app/zh-hant/features/miner</guid>
@@ -72,15 +72,9 @@ TBC Wallet 的礦工功能使您能夠參與權益證明 (PoS) 共識機制。�
 
  我的驗證器
 
-在 我的驗證器 部分查看您當前正在質押的所有驗證器。此儀表板提供您的質押頭寸、總質押金額和當前獎勵的概覽。
-
- 驗證器詳情
-
-每個驗證器顯示全面的資訊：
-
-- </description>
+&lt;Image src=&#39;/assets/images/miners/my-validator.webp&#39; alt=&#39;my-validator&#39; width=&#39;1572&#39; h</description>
       <pubDate>Wed, 15 Jan 2025 00:00:00 GMT</pubDate>
-      <category>features</category>
+      <category>features</category>
     </item>
     <item>
       <guid isPermaLink="true">https://officialwalletweb.vercel.app/zh-hant/features/multi-signature</guid>
@@ -95,7 +89,7 @@ TBC Wallet 的礦工功能使您能夠參與權益證明 (PoS) 共識機制。�
 
 多重簽名是一種安全功能，需要多個私鑰來授權交易。不是單個密鑰控制您的錢包，多重簽名錢包需要預定數量的簽名（例如，3 個中的 2 個，5 個中的 3 個）來批准任何</description>
       <pubDate>Wed, 15 Jan 2025 00:00:00 GMT</pubDate>
-      <category>features</category>
+      <category>features</category>
     </item>
     <item>
       <guid isPermaLink="true">https://officialwalletweb.vercel.app/zh-hant/features/usdt-fee</guid>
@@ -110,7 +104,7 @@ TBC Wallet 的 USDT 手續費功能允許您使用 USDT（Tether）而不是原�
 
 USDT 手續費是一種支付選項，允許您使用 USDT（與美元掛鉤的穩定幣）來支付受支援區塊鏈網路上的交易費用。您無需持有多個原生代幣來支付費用，可以在不同網路上使用</description>
       <pubDate>Wed, 15 Jan 2025 00:00:00 GMT</pubDate>
-      <category>features</category>
+      <category>features</category>
     </item>
   </channel>
 </rss>

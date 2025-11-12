@@ -9,7 +9,7 @@
 
 import 'server-only'
 import type { MetadataRoute } from 'next'
-import { allFeatures, allLegals } from 'contentlayer/generated'
+import { allFeatures, allAbouts } from 'contentlayer/generated'
 import linguiConfig from '../../lingui.config'
 import { SITE_METADATA } from '@/constants/site-metadata.constants'
 
@@ -26,16 +26,16 @@ const STATIC_ROUTES = [
 /**
  * Build content maps for O(1) lookup by locale
  * Filters out draft content and groups by language
- * @returns Object with features and legals maps
+ * @returns Object with features and abouts maps
  */
 function buildContentMaps() {
   const featuresMap = new Map<string, typeof allFeatures>()
-  const legalsMap = new Map<string, typeof allLegals>()
+  const aboutsMap = new Map<string, typeof allAbouts>()
 
   // Initialize maps for all locales
   for (const locale of VALID_LOCALES) {
     featuresMap.set(locale, [])
-    legalsMap.set(locale, [])
+    aboutsMap.set(locale, [])
   }
 
   // Group features by locale
@@ -47,16 +47,16 @@ function buildContentMaps() {
     }
   }
 
-  // Group legals by locale
-  for (const legal of allLegals) {
-    if ('draft' in legal && legal.draft) continue
-    const locale = legal.lang
-    if (legalsMap.has(locale)) {
-      legalsMap.get(locale)!.push(legal)
+  // Group abouts by locale
+  for (const about of allAbouts) {
+    if ('draft' in about && about.draft) continue
+    const locale = about.lang
+    if (aboutsMap.has(locale)) {
+      aboutsMap.get(locale)!.push(about)
     }
   }
 
-  return { featuresMap, legalsMap }
+  return { featuresMap, aboutsMap }
 }
 
 /**
@@ -78,15 +78,15 @@ function generateStaticRouteEntries(siteUrl: string, locale: string): MetadataRo
  * Generate sitemap entries for content items
  * @param siteUrl - Base site URL
  * @param locale - Locale code
- * @param items - Content items (features or legals)
- * @param type - Content type ('features' or 'legal')
+ * @param items - Content items (features or abouts)
+ * @param type - Content type ('features' or 'about')
  * @returns Array of sitemap entries for content
  */
 function generateContentEntries(
   siteUrl: string,
   locale: string,
   items: Array<{ slug: string; date?: string }>,
-  type: 'features' | 'legal'
+  type: 'features' | 'about'
 ): MetadataRoute.Sitemap {
   const changeFrequency = type === 'features' ? ('weekly' as const) : ('yearly' as const)
   const priority = type === 'features' ? 0.8 : 0.5
@@ -113,7 +113,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   }
 
   // Build content maps for efficient lookup
-  const { featuresMap, legalsMap } = buildContentMaps()
+  const { featuresMap, aboutsMap } = buildContentMaps()
 
   const sitemapEntries: MetadataRoute.Sitemap = []
 
@@ -126,9 +126,9 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     const localeFeatures = featuresMap.get(locale) || []
     sitemapEntries.push(...generateContentEntries(siteUrl, locale, localeFeatures, 'features'))
 
-    // Add legal docs
-    const localeLegals = legalsMap.get(locale) || []
-    sitemapEntries.push(...generateContentEntries(siteUrl, locale, localeLegals, 'legal'))
+    // Add about docs
+    const aboutMap = aboutsMap.get(locale) || []
+    sitemapEntries.push(...generateContentEntries(siteUrl, locale, aboutMap, 'about'))
   }
 
   return sitemapEntries

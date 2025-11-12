@@ -110,13 +110,13 @@ export const NAVIGATION_ITEMS: Navigation = [
     items: [
       {
         id: 'terms-of-service',
-        href: '/legal/terms-of-service',
+        href: '/about/terms-of-service',
         title: msg`Terms of Service`,
         description: msg`What you need to know to use our services`,
       },
       {
         id: 'privacy-policy',
-        href: '/legal/privacy-policy',
+        href: '/about/privacy-policy',
         title: msg`Privacy Policy`,
         description: msg`Your privacy matters, learn how we protect it`,
       },

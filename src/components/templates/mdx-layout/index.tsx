@@ -33,7 +33,7 @@ interface MdxLayoutProps extends PropsWithChildren {
  * - Scroll to top button
  * - Responsive design (TOC hidden on mobile)
  */
-export default function MdxLayout({ children, title, category, headings = [], className }: MdxLayoutProps) {
+export default function MdxLayout({ children, title, headings = [], className }: MdxLayoutProps) {
   return (
     <div className='relative'>
       <Container className={cn('mx-auto max-w-[768px] py-8 lg:py-12 xl:py-16', className)}>
@@ -41,7 +41,7 @@ export default function MdxLayout({ children, title, category, headings = [], cl
         <article className='prose prose-lg dark:prose-invert lg:prose-xl max-w-none'>
           {title && <h1 className='font-clash-display mb-8 text-4xl font-extrabold lg:text-5xl'>{title}</h1>}
 
-          <Breadcrumbs category={category} title={title || ''} />
+          <Breadcrumbs title={title || ''} />
 
           <div className='text-foreground/90'>{children}</div>
         </article>

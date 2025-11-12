@@ -15,7 +15,6 @@ import rehypeSlug from 'rehype-slug'
 import remarkGfm from 'remark-gfm'
 import remarkSlug from 'remark-slug'
 import remarkExternalLinks from 'remark-external-links'
-import { SITE_METADATA } from './src/constants/site-metadata.constants'
 
 const root = process.cwd()
 const isProduction = process.env.NODE_ENV === 'production'
@@ -104,15 +103,15 @@ export const Feature = defineDocumentType(() => ({
   },
 }))
 
-export const Legal = defineDocumentType(() => ({
-  name: 'Legal',
-  filePathPattern: '**/legal/*.mdx',
+export const About = defineDocumentType(() => ({
+  name: 'About',
+  filePathPattern: '**/about/*.mdx',
   contentType: 'mdx',
   fields: {
     title: { type: 'string', required: true },
     description: { type: 'string' },
     date: { type: 'date' },
-    category: { type: 'string', default: 'legal' },
+    category: { type: 'string', default: 'about' },
   },
   computedFields: {
     ...computedFields,
@@ -121,7 +120,7 @@ export const Legal = defineDocumentType(() => ({
 
 export default makeSource({
   contentDirPath: 'src/content',
-  documentTypes: [Feature, Legal],
+  documentTypes: [Feature, About],
   disableImportAliasWarning: true,
   mdx: {
     cwd: process.cwd(),
