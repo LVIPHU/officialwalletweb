@@ -64,7 +64,7 @@ export const FEATURES: Feature[] = [
 export const CHAINS: Chain[] = [
   { id: 'TBC', title: msg`TBChain`, logo: TBC },
   { id: 'BTC', title: msg`Bitcoin`, logo: BTC },
-  { id: 'TRX', title: msg`Tron`, logo: TRX },
+  { id: 'TRX', title: msg`TRON`, logo: TRX },
   { id: 'ETH', title: msg`Ethereum`, logo: ETH },
 ] as const
 

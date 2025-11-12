@@ -194,6 +194,10 @@ msgstr "تواصل مع فريق الدعم لدينا للحصول على ال�
 msgid "Get it from"
 msgstr "احصل عليه من"
 
+#: src/components/atoms/breadcrumbs/index.tsx:49
+msgid "Home"
+msgstr "الرئيسية"
+
 #: src/constants/faq.constants.ts:182
 msgid "How can I contact support?"
 msgstr "كيف يمكنني الاتصال بالدعم؟"
@@ -409,16 +413,16 @@ msgid "TBC Wallet is a leading multi-chain wallet with robust security and an in
 msgstr "محفظة TB هي محفظة متعددة السلاسل رائدة تتميز بأمان قوي وواجهة بديهية. تُبسّط التعاملات مع Web3، من إدارة الرموز إلى الوصول إلى dApps، مع منحك تحكمًا كاملًا بثروتك الرقمية."
 
 #: src/constants/faq.constants.ts:32
-msgid "TBC Wallet is a secure, multi-chain cryptocurrency wallet that supports multiple blockchain networks including TBChain, Bitcoin, Ethereum, and Tron. It provides a user-friendly interface for managing digital assets, executing transactions, and accessing DeFi services."
-msgstr "محفظة TBC هي محفظة عملات رقمية آمنة متعددة السلاسل تدعم شبكات بلوك تشين متعددة بما في ذلك TBChain و Bitcoin و Ethereum و Tron. توفر واجهة سهلة الاستخدام لإدارة الأصول الرقمية وتنفيذ المعاملات والوصول إلى خدمات DeFi."
+msgid "TBC Wallet is a secure, multi-chain cryptocurrency wallet that supports multiple blockchain networks including TBChain, Bitcoin, Ethereum, and TRON. It provides a user-friendly interface for managing digital assets, executing transactions, and accessing DeFi services."
+msgstr "محفظة TBC هي محفظة عملات رقمية آمنة متعددة السلاسل تدعم شبكات بلوك تشين متعددة بما في ذلك TBChain و Bitcoin و Ethereum و TRON. توفر واجهة سهلة الاستخدام لإدارة الأصول الرقمية وتنفيذ المعاملات والوصول إلى خدمات DeFi."
 
 #: src/constants/faq.constants.ts:37
 msgid "TBC Wallet is available on: Mobile: iOS and Android applications, Desktop: Windows and MacOS applications, Browser: Browser extension for Chrome, Firefox, and Edge."
 msgstr "محفظة TBC متاحة على: الهاتف المحمول: تطبيقات iOS و Android، سطح المكتب: تطبيقات Windows و MacOS، المتصفح: امتداد المتصفح لـ Chrome و Firefox و Edge."
 
 #: src/constants/faq.constants.ts:84
-msgid "TBC Wallet supports: TBChain (native network), Bitcoin, Ethereum and EVM-compatible chains, Tron, And more networks continuously being added."
-msgstr "تدعم محفظة TBC: TBChain (الشبكة الأصلية)، Bitcoin، Ethereum والسلاسل المتوافقة مع EVM، Tron، والمزيد من الشبكات التي يتم إضافتها باستمرار."
+msgid "TBC Wallet supports: TBChain (native network), Bitcoin, Ethereum and EVM-compatible chains, TRON, And more networks continuously being added."
+msgstr "تدعم محفظة TBC: TBChain (الشبكة الأصلية)، Bitcoin، Ethereum والسلاسل المتوافقة مع EVM، TRON، والمزيد من الشبكات التي يتم إضافتها باستمرار."
 
 #: src/constants/landing.constants.ts:65
 msgid "TBChain"
@@ -446,8 +450,8 @@ msgid "Transaction fees are network charges for processing transactions. Fees va
 msgstr "رسوم المعاملات هي رسوم الشبكة لمعالجة المعاملات. تختلف الرسوم حسب: ازدحام الشبكة، تعقيد المعاملة، مستوى الأولوية المحدد."
 
 #: src/constants/faq.constants.ts:110
-msgid "Transaction times vary by network: TBChain: Usually completes in seconds. Bitcoin: 10-60 minutes depending on network congestion. Ethereum: 15 seconds to several minutes. Tron: Usually completes in under a minute."
-msgstr "أوقات المعاملات تختلف حسب الشبكة: TBChain: عادةً ما تكتمل في ثوانٍ. Bitcoin: 10-60 دقيقة حسب ازدحام الشبكة. Ethereum: 15 ثانية إلى عدة دقائق. Tron: عادةً ما تكتمل في أقل من دقيقة."
+msgid "Transaction times vary by network: TBChain: Usually completes in seconds. Bitcoin: 10-60 minutes depending on network congestion. Ethereum: 15 seconds to several minutes. TRON: Usually completes in under a minute."
+msgstr "أوقات المعاملات تختلف حسب الشبكة: TBChain: عادةً ما تكتمل في ثوانٍ. Bitcoin: 10-60 دقيقة حسب ازدحام الشبكة. Ethereum: 15 ثانية إلى عدة دقائق. TRON: عادةً ما تكتمل في أقل من دقيقة."
 
 #: src/constants/faq.constants.ts:105
 msgid "Transactions"
@@ -458,7 +462,7 @@ msgid "Transactions may be pending due to: Network congestion, Low transaction f
 msgstr "قد تكون المعاملات معلقة بسبب: ازدحام الشبكة، رسوم معاملة منخفضة، صيانة الشبكة، رصيد غير كافٍ."
 
 #: src/constants/landing.constants.ts:67
-msgid "Tron"
+msgid "TRON"
 msgstr "ترون"
 
 #: src/constants/faq.constants.ts:131

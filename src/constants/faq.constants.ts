@@ -29,7 +29,7 @@ export const FAQ_CATEGORIES: readonly FAQCategory[] = [
       {
         id: 'what-is-tbc-wallet',
         question: msg`What is TBC Wallet?`,
-        answer: msg`TBC Wallet is a secure, multi-chain cryptocurrency wallet that supports multiple blockchain networks including TBChain, Bitcoin, Ethereum, and Tron. It provides a user-friendly interface for managing digital assets, executing transactions, and accessing DeFi services.`,
+        answer: msg`TBC Wallet is a secure, multi-chain cryptocurrency wallet that supports multiple blockchain networks including TBChain, Bitcoin, Ethereum, and TRON. It provides a user-friendly interface for managing digital assets, executing transactions, and accessing DeFi services.`,
       },
       {
         id: 'which-platforms',
@@ -81,7 +81,7 @@ export const FAQ_CATEGORIES: readonly FAQCategory[] = [
       {
         id: 'blockchain-networks',
         question: msg`What blockchain networks are supported?`,
-        answer: msg`TBC Wallet supports: TBChain (native network), Bitcoin, Ethereum and EVM-compatible chains, Tron, And more networks continuously being added.`,
+        answer: msg`TBC Wallet supports: TBChain (native network), Bitcoin, Ethereum and EVM-compatible chains, TRON, And more networks continuously being added.`,
       },
       {
         id: 'multi-signature',
@@ -107,7 +107,7 @@ export const FAQ_CATEGORIES: readonly FAQCategory[] = [
       {
         id: 'transaction-time',
         question: msg`How long do transactions take?`,
-        answer: msg`Transaction times vary by network: TBChain: Usually completes in seconds. Bitcoin: 10-60 minutes depending on network congestion. Ethereum: 15 seconds to several minutes. Tron: Usually completes in under a minute.`,
+        answer: msg`Transaction times vary by network: TBChain: Usually completes in seconds. Bitcoin: 10-60 minutes depending on network congestion. Ethereum: 15 seconds to several minutes. TRON: Usually completes in under a minute.`,
       },
       {
         id: 'transaction-fees',

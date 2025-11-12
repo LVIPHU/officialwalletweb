@@ -194,6 +194,10 @@ msgstr "联系我们的支持团队获取帮助"
 msgid "Get it from"
 msgstr "从"
 
+#: src/components/atoms/breadcrumbs/index.tsx:49
+msgid "Home"
+msgstr "首页"
+
 #: src/constants/faq.constants.ts:182
 msgid "How can I contact support?"
 msgstr "我如何联系支持？"
@@ -409,7 +413,7 @@ msgid "TBC Wallet is a leading multi-chain wallet with robust security and an in
 msgstr "TBC Wallet 是领先的多链钱包，具备强大安全性和直观界面。它简化了 Web3 的互动—from 代币管理到 dApp 访问—同时赋予您对数字财富的完全控制。"
 
 #: src/constants/faq.constants.ts:32
-msgid "TBC Wallet is a secure, multi-chain cryptocurrency wallet that supports multiple blockchain networks including TBChain, Bitcoin, Ethereum, and Tron. It provides a user-friendly interface for managing digital assets, executing transactions, and accessing DeFi services."
+msgid "TBC Wallet is a secure, multi-chain cryptocurrency wallet that supports multiple blockchain networks including TBChain, Bitcoin, Ethereum, and TRON. It provides a user-friendly interface for managing digital assets, executing transactions, and accessing DeFi services."
 msgstr "TBC Wallet 是一个安全的多链加密货币钱包，支持包括 TBChain、比特币、以太坊和波场在内的多个区块链网络。它提供用户友好的界面，用于管理数字资产、执行交易和访问 DeFi 服务。"
 
 #: src/constants/faq.constants.ts:37
@@ -417,7 +421,7 @@ msgid "TBC Wallet is available on: Mobile: iOS and Android applications, Desktop
 msgstr "TBC Wallet 可在以下平台使用：移动端：iOS 和 Android 应用程序，桌面端：Windows 和 MacOS 应用程序，浏览器：适用于 Chrome、Firefox 和 Edge 的浏览器扩展。"
 
 #: src/constants/faq.constants.ts:84
-msgid "TBC Wallet supports: TBChain (native network), Bitcoin, Ethereum and EVM-compatible chains, Tron, And more networks continuously being added."
+msgid "TBC Wallet supports: TBChain (native network), Bitcoin, Ethereum and EVM-compatible chains, TRON, And more networks continuously being added."
 msgstr "TBC Wallet 支持：TBChain（原生网络）、比特币、以太坊和 EVM 兼容链、波场，以及持续添加的更多网络。"
 
 #: src/constants/landing.constants.ts:65
@@ -446,7 +450,7 @@ msgid "Transaction fees are network charges for processing transactions. Fees va
 msgstr "交易手续费是处理交易的网络费用。手续费因以下因素而异：网络拥堵、交易复杂性、选择的优先级级别。"
 
 #: src/constants/faq.constants.ts:110
-msgid "Transaction times vary by network: TBChain: Usually completes in seconds. Bitcoin: 10-60 minutes depending on network congestion. Ethereum: 15 seconds to several minutes. Tron: Usually completes in under a minute."
+msgid "Transaction times vary by network: TBChain: Usually completes in seconds. Bitcoin: 10-60 minutes depending on network congestion. Ethereum: 15 seconds to several minutes. TRON: Usually completes in under a minute."
 msgstr "交易时间因网络而异：TBChain：通常在几秒钟内完成。比特币：10-60 分钟，取决于网络拥堵情况。以太坊：15 秒到几分钟。波场：通常在不到一分钟内完成。"
 
 #: src/constants/faq.constants.ts:105
@@ -458,7 +462,7 @@ msgid "Transactions may be pending due to: Network congestion, Low transaction f
 msgstr "交易可能因以下原因而处于待处理状态：网络拥堵、交易手续费过低、网络维护、余额不足。"
 
 #: src/constants/landing.constants.ts:67
-msgid "Tron"
+msgid "TRON"
 msgstr "波场"
 
 #: src/constants/faq.constants.ts:131

@@ -194,6 +194,10 @@ msgstr "Entre em contato com nossa equipe de suporte para assistência"
 msgid "Get it from"
 msgstr "Obter de"
 
+#: src/components/atoms/breadcrumbs/index.tsx:49
+msgid "Home"
+msgstr "Início"
+
 #: src/constants/faq.constants.ts:182
 msgid "How can I contact support?"
 msgstr "Como posso entrar em contato com o suporte?"
@@ -409,16 +413,16 @@ msgid "TBC Wallet is a leading multi-chain wallet with robust security and an in
 msgstr "A TBC Wallet é uma carteira multi-chain líder com segurança robusta e interface intuitiva. Simplifica as interações Web3, desde a gestão de tokens até o acesso a dApps, garantindo controle total sobre sua riqueza digital."
 
 #: src/constants/faq.constants.ts:32
-msgid "TBC Wallet is a secure, multi-chain cryptocurrency wallet that supports multiple blockchain networks including TBChain, Bitcoin, Ethereum, and Tron. It provides a user-friendly interface for managing digital assets, executing transactions, and accessing DeFi services."
-msgstr "O TBC Wallet é uma carteira de criptomoedas segura e multi-cadeia que suporta múltiplas redes blockchain, incluindo TBChain, Bitcoin, Ethereum e Tron. Ele fornece uma interface amigável para gerenciar ativos digitais, executar transações e acessar serviços DeFi."
+msgid "TBC Wallet is a secure, multi-chain cryptocurrency wallet that supports multiple blockchain networks including TBChain, Bitcoin, Ethereum, and TRON. It provides a user-friendly interface for managing digital assets, executing transactions, and accessing DeFi services."
+msgstr "O TBC Wallet é uma carteira de criptomoedas segura e multi-cadeia que suporta múltiplas redes blockchain, incluindo TBChain, Bitcoin, Ethereum e TRON. Ele fornece uma interface amigável para gerenciar ativos digitais, executar transações e acessar serviços DeFi."
 
 #: src/constants/faq.constants.ts:37
 msgid "TBC Wallet is available on: Mobile: iOS and Android applications, Desktop: Windows and MacOS applications, Browser: Browser extension for Chrome, Firefox, and Edge."
 msgstr "O TBC Wallet está disponível em: Mobile: aplicativos iOS e Android, Desktop: aplicativos Windows e MacOS, Navegador: extensão do navegador para Chrome, Firefox e Edge."
 
 #: src/constants/faq.constants.ts:84
-msgid "TBC Wallet supports: TBChain (native network), Bitcoin, Ethereum and EVM-compatible chains, Tron, And more networks continuously being added."
-msgstr "O TBC Wallet suporta: TBChain (rede nativa), Bitcoin, Ethereum e cadeias compatíveis com EVM, Tron, e mais redes sendo adicionadas continuamente."
+msgid "TBC Wallet supports: TBChain (native network), Bitcoin, Ethereum and EVM-compatible chains, TRON, And more networks continuously being added."
+msgstr "O TBC Wallet suporta: TBChain (rede nativa), Bitcoin, Ethereum e cadeias compatíveis com EVM, TRON, e mais redes sendo adicionadas continuamente."
 
 #: src/constants/landing.constants.ts:65
 msgid "TBChain"
@@ -446,8 +450,8 @@ msgid "Transaction fees are network charges for processing transactions. Fees va
 msgstr "As taxas de transação são cobranças da rede para processar transações. As taxas variam de acordo com: Congestionamento da rede, Complexidade da transação, Nível de prioridade selecionado."
 
 #: src/constants/faq.constants.ts:110
-msgid "Transaction times vary by network: TBChain: Usually completes in seconds. Bitcoin: 10-60 minutes depending on network congestion. Ethereum: 15 seconds to several minutes. Tron: Usually completes in under a minute."
-msgstr "Os tempos de transação variam por rede: TBChain: Geralmente completa em segundos. Bitcoin: 10-60 minutos dependendo do congestionamento da rede. Ethereum: 15 segundos a vários minutos. Tron: Geralmente completa em menos de um minuto."
+msgid "Transaction times vary by network: TBChain: Usually completes in seconds. Bitcoin: 10-60 minutes depending on network congestion. Ethereum: 15 seconds to several minutes. TRON: Usually completes in under a minute."
+msgstr "Os tempos de transação variam por rede: TBChain: Geralmente completa em segundos. Bitcoin: 10-60 minutos dependendo do congestionamento da rede. Ethereum: 15 segundos a vários minutos. TRON: Geralmente completa em menos de um minuto."
 
 #: src/constants/faq.constants.ts:105
 msgid "Transactions"
@@ -458,8 +462,8 @@ msgid "Transactions may be pending due to: Network congestion, Low transaction f
 msgstr "As transações podem estar pendentes devido a: Congestionamento da rede, Taxa de transação baixa, Manutenção da rede, Saldo insuficiente."
 
 #: src/constants/landing.constants.ts:67
-msgid "Tron"
-msgstr "Tron"
+msgid "TRON"
+msgstr "TRON"
 
 #: src/constants/faq.constants.ts:131
 msgid "Troubleshooting"

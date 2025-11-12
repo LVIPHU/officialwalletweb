@@ -194,6 +194,10 @@ msgstr "Ota yhteyttä tukitiimiimme apua varten"
 msgid "Get it from"
 msgstr "Hanki se"
 
+#: src/components/atoms/breadcrumbs/index.tsx:49
+msgid "Home"
+msgstr "Koti"
+
 #: src/constants/faq.constants.ts:182
 msgid "How can I contact support?"
 msgstr "Miten voin ottaa yhteyttä tukeen?"
@@ -409,16 +413,16 @@ msgid "TBC Wallet is a leading multi-chain wallet with robust security and an in
 msgstr "TBC Wallet on johtava moniketjuinen lompakko, jolla on vankka turvallisuus ja intuitiivinen käyttöliittymä. Se yksinkertaistaa Web3-vuorovaikutuksia, tokenien hallinnasta dApps-käyttöön, samalla kun se antaa sinulle täyden kontrollin digitaalisesta omaisuudestasi."
 
 #: src/constants/faq.constants.ts:32
-msgid "TBC Wallet is a secure, multi-chain cryptocurrency wallet that supports multiple blockchain networks including TBChain, Bitcoin, Ethereum, and Tron. It provides a user-friendly interface for managing digital assets, executing transactions, and accessing DeFi services."
-msgstr "TBC Wallet on turvallinen moniketjuinen kryptovaluuttalompakko, joka tukee useita lohkoketjeverkkoja, mukaan lukien TBChain, Bitcoin, Ethereum ja Tron. Se tarjoaa käyttäjäystävällisen käyttöliittymän digitaalisten varojen hallintaan, tapahtumien suorittamiseen ja DeFi-palveluiden käyttöön."
+msgid "TBC Wallet is a secure, multi-chain cryptocurrency wallet that supports multiple blockchain networks including TBChain, Bitcoin, Ethereum, and TRON. It provides a user-friendly interface for managing digital assets, executing transactions, and accessing DeFi services."
+msgstr "TBC Wallet on turvallinen moniketjuinen kryptovaluuttalompakko, joka tukee useita lohkoketjeverkkoja, mukaan lukien TBChain, Bitcoin, Ethereum ja TRON. Se tarjoaa käyttäjäystävällisen käyttöliittymän digitaalisten varojen hallintaan, tapahtumien suorittamiseen ja DeFi-palveluiden käyttöön."
 
 #: src/constants/faq.constants.ts:37
 msgid "TBC Wallet is available on: Mobile: iOS and Android applications, Desktop: Windows and MacOS applications, Browser: Browser extension for Chrome, Firefox, and Edge."
 msgstr "TBC Wallet on saatavilla: Mobiili: iOS- ja Android-sovellukset, Työpöytä: Windows- ja MacOS-sovellukset, Selain: Selaimen laajennus Chrome, Firefox ja Edge -selaimille."
 
 #: src/constants/faq.constants.ts:84
-msgid "TBC Wallet supports: TBChain (native network), Bitcoin, Ethereum and EVM-compatible chains, Tron, And more networks continuously being added."
-msgstr "TBC Wallet tukee: TBChain (alkuperäinen verkko), Bitcoin, Ethereum ja EVM-yhteensopivat ketjut, Tron, ja lisää verkkoja lisätään jatkuvasti."
+msgid "TBC Wallet supports: TBChain (native network), Bitcoin, Ethereum and EVM-compatible chains, TRON, And more networks continuously being added."
+msgstr "TBC Wallet tukee: TBChain (alkuperäinen verkko), Bitcoin, Ethereum ja EVM-yhteensopivat ketjut, TRON, ja lisää verkkoja lisätään jatkuvasti."
 
 #: src/constants/landing.constants.ts:65
 msgid "TBChain"
@@ -446,8 +450,8 @@ msgid "Transaction fees are network charges for processing transactions. Fees va
 msgstr "Tapahtumamaksut ovat verkon veloituksia tapahtumien käsittelystä. Maksut vaihtelevat: Verkon ruuhkaisuus, Tapahtuman monimutkaisuus, Valittu prioriteettitaso."
 
 #: src/constants/faq.constants.ts:110
-msgid "Transaction times vary by network: TBChain: Usually completes in seconds. Bitcoin: 10-60 minutes depending on network congestion. Ethereum: 15 seconds to several minutes. Tron: Usually completes in under a minute."
-msgstr "Tapahtuma-ajat vaihtelevat verkon mukaan: TBChain: Yleensä valmistuu sekunneissa. Bitcoin: 10-60 minuuttia verkon ruuhkaisuudesta riippuen. Ethereum: 15 sekuntia useisiin minuutteihin. Tron: Yleensä valmistuu alle minuutissa."
+msgid "Transaction times vary by network: TBChain: Usually completes in seconds. Bitcoin: 10-60 minutes depending on network congestion. Ethereum: 15 seconds to several minutes. TRON: Usually completes in under a minute."
+msgstr "Tapahtuma-ajat vaihtelevat verkon mukaan: TBChain: Yleensä valmistuu sekunneissa. Bitcoin: 10-60 minuuttia verkon ruuhkaisuudesta riippuen. Ethereum: 15 sekuntia useisiin minuutteihin. TRON: Yleensä valmistuu alle minuutissa."
 
 #: src/constants/faq.constants.ts:105
 msgid "Transactions"
@@ -458,8 +462,8 @@ msgid "Transactions may be pending due to: Network congestion, Low transaction f
 msgstr "Tapahtumat voivat olla odottamassa seuraavista syistä: Verkon ruuhkaisuus, Matala tapahtumamaksu, Verkon ylläpito, Riittämätön saldo."
 
 #: src/constants/landing.constants.ts:67
-msgid "Tron"
-msgstr "Tron"
+msgid "TRON"
+msgstr "TRON"
 
 #: src/constants/faq.constants.ts:131
 msgid "Troubleshooting"
