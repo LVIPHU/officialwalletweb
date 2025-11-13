@@ -7,17 +7,20 @@
  * from NEXSOFT.
  */
 
+import path from 'node:path'
 import type { ComputedFields } from 'contentlayer2/source-files'
 import { defineDocumentType, makeSource } from 'contentlayer2/source-files'
 import { slug } from 'github-slugger'
 import readingTime from 'reading-time'
+import rehypeCitation from 'rehype-citation'
+import rehypePresetMinify from 'rehype-preset-minify'
 import rehypeSlug from 'rehype-slug'
 import remarkGfm from 'remark-gfm'
 import remarkSlug from 'remark-slug'
 import remarkExternalLinks from 'remark-external-links'
+import { remarkAlert } from 'remark-github-blockquote-alert'
 
 const root = process.cwd()
-const isProduction = process.env.NODE_ENV === 'production'
 
 // Extract TOC headings from markdown
 // This function mimics rehype-slug's ID generation logic to ensure TOC URLs match actual heading IDs
@@ -154,6 +157,7 @@ export default makeSource({
     remarkPlugins: [
       remarkGfm,
       remarkSlug as any,
+      remarkAlert,
       [
         remarkExternalLinks as any,
         {
@@ -176,6 +180,11 @@ export default makeSource({
       //     content: icon,
       //   },
       // ],
+      [rehypeCitation, { path: path.join(root, 'data') }],
+      rehypePresetMinify,
     ],
+  },
+  onSuccess: async () => {
+    console.info('✨ Content source generated successfully!')
   },
 })

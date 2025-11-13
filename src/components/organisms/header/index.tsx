@@ -118,8 +118,7 @@ const NavigationSection = memo(function NavigationSection({ section, contentWidt
       <NavigationMenuTrigger
         className={cn(
           'h-8 rounded-full border border-transparent bg-transparent px-3 text-sm font-medium transition-colors duration-300 ease-in-out',
-          'hover:bg-primary hover:border-primary hover:text-black',
-          'focus:bg-primary focus:border-primary focus:text-black',
+          'hover:bg-primary hover:text-black',
           'data-[state=open]:bg-primary! data-[state=open]:border-primary data-[state=open]:text-black'
         )}
       >
