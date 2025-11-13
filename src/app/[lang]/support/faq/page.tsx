@@ -40,7 +40,7 @@ export default async function FAQPage(props: PageLangParam) {
       <article className='prose prose-lg dark:prose-invert lg:prose-xl max-w-none'>
         <FAQTitle />
 
-        <Breadcrumbs category='support' title='FAQ' />
+        <Breadcrumbs title='FAQ' />
 
         <div className='text-foreground/90 mt-8'>
           <FAQAccordion categories={FAQ_CATEGORIES} />

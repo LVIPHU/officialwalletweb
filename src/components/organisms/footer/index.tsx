@@ -19,6 +19,8 @@ import { NavSection } from '@/types/navigation.types'
 import { useLingui } from '@lingui/react'
 import { useIsMobile } from '@/hooks/use-mobile'
 import { useTheme } from 'next-themes'
+import { LOCALES } from '@/constants/direction.constants'
+import { usePathname } from 'next/navigation'
 
 const Footer = () => {
   const isMobile = useIsMobile()
@@ -83,6 +85,9 @@ interface FooterColumnProps {
 
 function FooterColumn({ section }: FooterColumnProps) {
   const { i18n } = useLingui()
+  const pathname = usePathname()
+  const locale = (pathname?.split('/')[1] as LOCALES) || 'en'
+
   return (
     <div className='flex lg:mx-auto'>
       <div className='flex flex-col gap-4 text-start md:gap-7'>
@@ -90,16 +95,19 @@ function FooterColumn({ section }: FooterColumnProps) {
         <h4 className='text-lg font-medium break-all capitalize'>{i18n._(section.title)}</h4>
 
         <ul className='space-y-3 text-sm md:space-y-7'>
-          {section.items.map((item) => (
-            <li key={item.id}>
-              <NavigationLink
-                href={item.href}
-                className='hover:text-primary dark:hover:text-primary break-all text-neutral-500 transition-colors duration-200'
-              >
-                {i18n._(item.title)}
-              </NavigationLink>
-            </li>
-          ))}
+          {section.items.map((item) => {
+            const customHref = item.id === 'swap' ? item.href + locale : item.href
+            return (
+              <li key={item.id}>
+                <NavigationLink
+                  href={customHref}
+                  className='hover:text-primary dark:hover:text-primary break-all text-neutral-500 transition-colors duration-200'
+                >
+                  {i18n._(item.title)}
+                </NavigationLink>
+              </li>
+            )
+          })}
         </ul>
       </div>
     </div>
