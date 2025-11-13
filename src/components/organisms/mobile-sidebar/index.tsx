@@ -36,6 +36,8 @@ import { cn } from '@/lib/styles'
 import { NAVIGATION_ITEMS } from '@/constants/navigation.constants'
 import { NavItem } from '@/types/navigation.types'
 import type { MessageDescriptor } from '@lingui/core'
+import { usePathname } from 'next/navigation'
+import { LOCALES } from '@/constants/direction.constants'
 
 export default function MobileSidebar() {
   const { toggleSidebar } = useSidebar()
@@ -105,6 +107,8 @@ interface NavSectionProps {
 
 const NavSection = memo(({ id, title, items, open, onToggle, toggleSidebar }: NavSectionProps) => {
   const { i18n } = useLingui()
+  const pathname = usePathname()
+  const locale = (pathname?.split('/')[1] as LOCALES) || 'en'
   const handleToggle = useCallback((state: boolean) => onToggle(id, state), [id, onToggle])
 
   return (
@@ -124,21 +128,24 @@ const NavSection = memo(({ id, title, items, open, onToggle, toggleSidebar }: Na
         <CollapsibleContent>
           <SidebarGroupContent>
             <SidebarMenu>
-              {items.map(({ id, title, href }) => (
-                <SidebarMenuItem key={id}>
-                  <SidebarMenuButton asChild onClick={toggleSidebar}>
-                    <NavigationLink
-                      href={href}
-                      className={cn(
-                        'flex items-center rounded-md py-2 text-xl font-medium transition-colors',
-                        'hover:bg-muted/40 text-primary dark:text-[#BEEDC8]'
-                      )}
-                    >
-                      {i18n._(title)}
-                    </NavigationLink>
-                  </SidebarMenuButton>
-                </SidebarMenuItem>
-              ))}
+              {items.map(({ id, title, href }) => {
+                const customHref = id === 'swap' ? href + locale : href
+                return (
+                  <SidebarMenuItem key={id}>
+                    <SidebarMenuButton asChild onClick={toggleSidebar}>
+                      <NavigationLink
+                        href={customHref}
+                        className={cn(
+                          'flex items-center rounded-md py-2 text-xl font-medium transition-colors',
+                          'hover:bg-muted/40 text-primary dark:text-[#BEEDC8]'
+                        )}
+                      >
+                        {i18n._(title)}
+                      </NavigationLink>
+                    </SidebarMenuButton>
+                  </SidebarMenuItem>
+                )
+              })}
             </SidebarMenu>
           </SidebarGroupContent>
         </CollapsibleContent>

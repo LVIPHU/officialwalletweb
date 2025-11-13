@@ -20,20 +20,23 @@ const root = process.cwd()
 const isProduction = process.env.NODE_ENV === 'production'
 
 // Extract TOC headings from markdown
+// This function mimics rehype-slug's ID generation logic to ensure TOC URLs match actual heading IDs
 async function extractTocHeadings(content: string) {
   const { remark } = await import('remark')
   const { toString } = await import('mdast-util-to-string')
   const { visit } = await import('unist-util-visit')
 
+  const allHeadings: Array<{ text: string; depth: number }> = []
+  const usedIds = new Set<string>()
   const toc: Array<{ url: string; text: string; depth: number }> = []
 
-  const vfile = await remark()
+  // First pass: collect all headings
+  await remark()
     .use(() => (tree) => {
       visit(tree, 'heading', (node: any) => {
         const textContent = toString(node).replace(/<[^>]*(>|$)/g, '')
         if (textContent) {
-          toc.push({
-            url: `#${slug(textContent)}`,
+          allHeadings.push({
             text: textContent,
             depth: node.depth,
           })
@@ -41,6 +44,30 @@ async function extractTocHeadings(content: string) {
       })
     })
     .process(content)
+
+  // Second pass: generate IDs with duplicate detection (matching rehype-slug behavior)
+  for (const heading of allHeadings) {
+    const baseId = slug(heading.text)
+    let finalId = baseId
+    let counter = 0
+
+    // If ID already exists, add suffix -1, -2, etc. (same as rehype-slug)
+    while (usedIds.has(finalId)) {
+      counter++
+      finalId = `${baseId}-${counter}`
+    }
+
+    usedIds.add(finalId)
+
+    // Only include h1 and h2 in TOC (depth <= 2)
+    if (heading.depth <= 2) {
+      toc.push({
+        url: `#${finalId}`,
+        text: heading.text,
+        depth: heading.depth,
+      })
+    }
+  }
 
   return toc
 }
@@ -82,8 +109,8 @@ const computedFields: ComputedFields = {
   toc: {
     type: 'json',
     resolve: async (doc) => {
-      const headings = await extractTocHeadings(doc.body.raw)
-      return headings.filter((h) => h.depth <= 2)
+      // extractTocHeadings already filters to depth <= 2
+      return await extractTocHeadings(doc.body.raw)
     },
   },
 }

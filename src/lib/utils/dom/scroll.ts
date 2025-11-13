@@ -10,6 +10,12 @@
 import type Lenis from 'lenis'
 
 /**
+ * Scroll offset to prevent headings from being hidden behind sticky header
+ * Matches TOP_OFFSET from use-toc-highlight hook
+ */
+const SCROLL_OFFSET = 120
+
+/**
  * Decode URL encoded hash selector for safe querySelector usage
  * Handles Unicode characters in hash (e.g., #vi-%E7%94%A8%E6%88%B7...)
  * @param hash - Hash string with # prefix (e.g., "#vi-%E7%94%A8%E6%88%B7")
@@ -73,11 +79,11 @@ export function scrollToHash(hash: string, lenis?: Lenis | null): void {
     // Small delay to ensure browser processes the hash removal
     requestAnimationFrame(() => {
       if (lenisInstance) {
-        lenisInstance.scrollTo(target, { offset: 0 })
+        lenisInstance.scrollTo(target, { offset: -SCROLL_OFFSET })
       } else {
         const elementPosition = target.getBoundingClientRect().top + window.scrollY
         window.scrollTo({
-          top: elementPosition,
+          top: elementPosition - SCROLL_OFFSET,
           behavior: 'smooth',
         })
       }
@@ -90,11 +96,11 @@ export function scrollToHash(hash: string, lenis?: Lenis | null): void {
   } else {
     // Normal case: hash doesn't match, just scroll
     if (lenisInstance) {
-      lenisInstance.scrollTo(target, { offset: 0 })
+      lenisInstance.scrollTo(target, { offset: -SCROLL_OFFSET })
     } else {
       const elementPosition = target.getBoundingClientRect().top + window.scrollY
       window.scrollTo({
-        top: elementPosition,
+        top: elementPosition - SCROLL_OFFSET,
         behavior: 'smooth',
       })
     }
