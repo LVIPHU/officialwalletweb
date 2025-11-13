@@ -316,7 +316,7 @@ export default function HomeTemplateDesktop() {
                 <Trans>Your All-in-One Web3 Wallet</Trans>
               </h2>
             </AnimatedContent>
-            <AnimatedContent duration={3} threshold={0.4}>
+            <AnimatedContent duration={3} threshold={0.3}>
               <p>
                 <Trans>
                   TBC Wallet connects you to diverse ecosystems, from Bitcoin and Ethereum to Optimism and Cosmos.
@@ -327,7 +327,7 @@ export default function HomeTemplateDesktop() {
           </div>
           <AnimatedSequence
             className='grid w-full grid-cols-2 gap-4 lg:gap-10 xl:grid-cols-4'
-            threshold={0.4}
+            threshold={0.3}
             distance={100}
             stagger={0.5}
           >
@@ -341,7 +341,7 @@ export default function HomeTemplateDesktop() {
       {/* One wallet. Cross-platform */}
       <Container id='platform' className='min-h-[85dvh] py-5 lg:py-10 xl:py-16'>
         <div className='flex h-full flex-col items-center justify-center gap-8 text-center lg:gap-12 lg:text-start'>
-          <AnimatedContent>
+          <AnimatedContent threshold={0.3}>
             <h2 className='font-clash-display text-4xl font-semibold'>
               <Trans>One wallet. Cross platform</Trans>
             </h2>
@@ -360,10 +360,12 @@ export default function HomeTemplateDesktop() {
       {/*Community Testimonials*/}
       <Container id='community' className='min-h-[85dvh] py-5 lg:py-10 xl:py-16'>
         <div className='relative flex h-full flex-col items-center justify-center gap-8 text-center lg:gap-12 lg:text-start'>
-          <h2 className='font-clash-display max-w-sm text-4xl font-semibold lg:max-w-none'>
-            <Trans>Community talk about us</Trans>
-          </h2>
-          <AnimatedContent distance={0} threshold={0.4} className={'absolute inset-0 z-[-1]'}>
+          <AnimatedContent threshold={0.3}>
+            <h2 className='font-clash-display max-w-sm text-4xl font-semibold lg:max-w-none'>
+              <Trans>Community talk about us</Trans>
+            </h2>
+          </AnimatedContent>
+          <AnimatedContent distance={0} threshold={0.3} className={'absolute inset-0 z-[-1]'}>
             <div className='relative top-1/5 left-[4%] h-full w-full scale-200 lg:top-[5%] lg:scale-90'>
               <div className='background-glow' />
             </div>
@@ -382,7 +384,7 @@ export default function HomeTemplateDesktop() {
           </AnimatedContent>
           <AnimatedSequence
             className='grid w-full max-w-[850px] grid-cols-2 gap-3 lg:gap-6 xl:gap-12'
-            threshold={0.4}
+            threshold={0.3}
             distance={100}
             stagger={0.5}
           >
