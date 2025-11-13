@@ -119,6 +119,7 @@ const NavigationSection = memo(function NavigationSection({ section, contentWidt
         className={cn(
           'h-8 rounded-full border border-transparent bg-transparent px-3 text-sm font-medium transition-colors duration-300 ease-in-out',
           'hover:bg-primary hover:text-black',
+          'focus:bg-transparent! active:bg-transparent!',
           'data-[state=open]:bg-primary! data-[state=open]:border-primary data-[state=open]:text-black'
         )}
       >
