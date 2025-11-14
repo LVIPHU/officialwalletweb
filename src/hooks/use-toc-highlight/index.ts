@@ -11,7 +11,11 @@
 
 import { useState, useRef, useEffect } from 'react'
 
-const TOP_OFFSET = 120
+const DEFAULT_TOP_OFFSET = 240
+
+interface UseTocHighlightOptions {
+  offset?: number
+}
 
 /**
  * Get header anchor elements from the DOM
@@ -33,9 +37,10 @@ export function getHeaderAnchors(): HTMLAnchorElement[] {
  *
  * @returns Object with currentIndex indicating which heading is active
  */
-export function useTocHighlight() {
+export function useTocHighlight(options?: UseTocHighlightOptions) {
   const [currentIndex, setCurrentIndex] = useState<number>(0)
   const timeoutRef = useRef<number | null>(null)
+  const topOffset = options?.offset ?? DEFAULT_TOP_OFFSET
 
   useEffect(() => {
     function updateActiveLink() {
@@ -54,7 +59,7 @@ export function useTocHighlight() {
         const headerAnchor = headersAnchors[index + 1]
         const { top } = headerAnchor.getBoundingClientRect()
 
-        if (top >= TOP_OFFSET) {
+        if (top >= topOffset) {
           break
         }
 
@@ -85,7 +90,7 @@ export function useTocHighlight() {
       document.removeEventListener('scroll', throttledUpdateActiveLink)
       window.removeEventListener('resize', throttledUpdateActiveLink)
     }
-  }, [])
+  }, [topOffset])
 
   return {
     currentIndex,

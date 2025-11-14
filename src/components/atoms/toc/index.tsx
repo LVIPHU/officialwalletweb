@@ -37,8 +37,6 @@ export function Toc({ headings }: TocProps) {
     return null
   }
 
-  console.log(headings)
-
   const handleClick = (e: React.MouseEvent<HTMLButtonElement>, url: string) => {
     e.preventDefault()
     if (url) {
