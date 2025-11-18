@@ -11,7 +11,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
-#: src/components/organisms/footer/index.tsx:68
+#: src/components/organisms/footer/index.tsx:70
 msgid ". All rights reserved."
 msgstr "。版權所有。"
 
@@ -100,7 +100,7 @@ msgstr "TBC Wallet 可以存取我的資金嗎？"
 msgid "Coming soon"
 msgstr "即將推出"
 
-#: src/components/templates/home/desktop/index.tsx:364
+#: src/components/templates/home/desktop/index.tsx:365
 #: src/components/templates/home/mobile/index.tsx:132
 msgid "Community talk about us"
 msgstr "社群對我們的評價"
@@ -120,11 +120,11 @@ msgid "Desktop app"
 msgstr "桌面應用程式"
 
 #: src/components/organisms/header/index.tsx:97
-#: src/components/organisms/mobile-sidebar/index.tsx:88
+#: src/components/organisms/mobile-sidebar/index.tsx:90
 msgid "Download"
 msgstr "下載"
 
-#: src/components/templates/home/desktop/index.tsx:380
+#: src/components/templates/home/desktop/index.tsx:382
 #: src/components/templates/home/mobile/index.tsx:140
 msgid "Download now"
 msgstr "立即下載"
@@ -135,8 +135,8 @@ msgid "Download on the"
 msgstr "在"
 
 #: src/constants/landing.constants.ts:44
-msgid "Effortlessly exchange tokens across chains with low fees and real-time rates. Whether trading Bitcoin for Solana or optimizing your portfolio, TBC Wallet makes swaps quick and intuitive."
-msgstr "輕鬆跨鏈兌換代幣，低手續費與即時匯率。不論是比特幣換取 Solana，或優化資產組合，TBC Wallet 讓兌換更快速直覺。"
+msgid "Effortlessly exchange tokens across chains with low fees and real-time rates. Whether trading Bitcoin for TRON or optimizing your portfolio, TBC Wallet makes swaps quick and intuitive."
+msgstr "輕鬆跨鏈兌換代幣，低手續費與即時匯率。不論是比特幣換取 TRON，或優化資產組合，TBC Wallet 讓兌換更快速直覺。"
 
 #: src/constants/landing.constants.ts:68
 msgid "Ethereum"
@@ -368,7 +368,7 @@ msgstr "註冊"
 msgid "Something incredible is on the horizon! Drop your email below to be first in line for early access."
 msgstr "令人驚豔的新體驗即將登場！留下您的電子郵件，搶先獲取早期訪問資格。"
 
-#: src/components/organisms/footer/index.tsx:113
+#: src/components/organisms/footer/index.tsx:121
 msgid "Stay connected:"
 msgstr "保持聯繫："
 
@@ -402,8 +402,8 @@ msgstr "TBC Wallet 採用多層安全保護：加密儲存：所有私鑰均經�
 
 #: src/components/templates/home/desktop/index.tsx:215
 #: src/components/templates/home/mobile/index.tsx:36
-msgid "TBC Wallet empowers you to manage diverse assets like Bitcoin, Ethereum, and Solana. Securely dive into DeFi, NFTs, and dApps with full control. Your keys, your future."
-msgstr "TBC Wallet 讓您輕鬆管理多樣資產，如比特幣、以太坊與 Solana。安全探索 DeFi、NFT 與 dApp，完全掌控您的未來。"
+msgid "TBC Wallet empowers you to manage diverse assets like Bitcoin, Ethereum, and TRON. Securely dive into DeFi, NFTs, and dApps with full control. Your keys, your future."
+msgstr "TBC Wallet 讓您輕鬆管理多樣資產，如比特幣、以太坊與 TRON。安全探索 DeFi、NFT 與 dApp，完全掌控您的未來。"
 
 #: src/components/templates/home/desktop/index.tsx:248
 #: src/components/templates/home/mobile/index.tsx:64

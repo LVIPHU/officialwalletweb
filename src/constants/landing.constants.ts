@@ -41,7 +41,7 @@ export const FEATURES: Feature[] = [
   {
     id: 'swap',
     title: msg`Swap`,
-    description: msg`Effortlessly exchange tokens across chains with low fees and real-time rates. Whether trading Bitcoin for Solana or optimizing your portfolio, TBC Wallet makes swaps quick and intuitive.`,
+    description: msg`Effortlessly exchange tokens across chains with low fees and real-time rates. Whether trading Bitcoin for TRON or optimizing your portfolio, TBC Wallet makes swaps quick and intuitive.`,
     icon: Swap,
     color: 'card-chain-purple',
   },

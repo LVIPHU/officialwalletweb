@@ -213,7 +213,7 @@ export default function HomeTemplateDesktop() {
             <HeroTextIn introOut={introOut}>
               <p className='max-w-md text-center lg:text-start'>
                 <Trans>
-                  TBC Wallet empowers you to manage diverse assets like Bitcoin, Ethereum, and Solana. Securely dive
+                  TBC Wallet empowers you to manage diverse assets like Bitcoin, Ethereum, and TRON. Securely dive
                   into DeFi, NFTs, and dApps with full control. Your keys, your future.
                 </Trans>
               </p>

@@ -13,7 +13,7 @@ msgstr ""
 "Language-Team: \n"
 "Plural-Forms: \n"
 
-#: src/components/organisms/footer/index.tsx:68
+#: src/components/organisms/footer/index.tsx:70
 msgid ". All rights reserved."
 msgstr "。版权所有。"
 
@@ -102,7 +102,7 @@ msgstr "TBC Wallet 可以访问我的资金吗？"
 msgid "Coming soon"
 msgstr "即将上线"
 
-#: src/components/templates/home/desktop/index.tsx:364
+#: src/components/templates/home/desktop/index.tsx:365
 #: src/components/templates/home/mobile/index.tsx:132
 msgid "Community talk about us"
 msgstr "社区对我们的评价"
@@ -122,11 +122,11 @@ msgid "Desktop app"
 msgstr "桌面应用"
 
 #: src/components/organisms/header/index.tsx:97
-#: src/components/organisms/mobile-sidebar/index.tsx:88
+#: src/components/organisms/mobile-sidebar/index.tsx:90
 msgid "Download"
 msgstr "下载"
 
-#: src/components/templates/home/desktop/index.tsx:380
+#: src/components/templates/home/desktop/index.tsx:382
 #: src/components/templates/home/mobile/index.tsx:140
 msgid "Download now"
 msgstr "立即下载"
@@ -137,8 +137,8 @@ msgid "Download on the"
 msgstr "在"
 
 #: src/constants/landing.constants.ts:44
-msgid "Effortlessly exchange tokens across chains with low fees and real-time rates. Whether trading Bitcoin for Solana or optimizing your portfolio, TBC Wallet makes swaps quick and intuitive."
-msgstr "轻松跨链兑换代币，费用低、实时汇率。无论是用比特币兑换 Solana，还是优化您的投资组合，TBC Wallet 都让兑换快速且直观。"
+msgid "Effortlessly exchange tokens across chains with low fees and real-time rates. Whether trading Bitcoin for TRON or optimizing your portfolio, TBC Wallet makes swaps quick and intuitive."
+msgstr "轻松跨链兑换代币，费用低、实时汇率。无论是用比特币兑换 TRON，还是优化您的投资组合，TBC Wallet 都让兑换快速且直观。"
 
 #: src/constants/landing.constants.ts:68
 msgid "Ethereum"
@@ -370,7 +370,7 @@ msgstr "注册"
 msgid "Something incredible is on the horizon! Drop your email below to be first in line for early access."
 msgstr "令人惊喜的事即将到来！留下您的电子邮箱，第一时间获得抢先体验。"
 
-#: src/components/organisms/footer/index.tsx:113
+#: src/components/organisms/footer/index.tsx:121
 msgid "Stay connected:"
 msgstr "保持联系："
 
@@ -404,8 +404,8 @@ msgstr "TBC Wallet 采用多层安全保护：加密存储：所有私钥均经�
 
 #: src/components/templates/home/desktop/index.tsx:215
 #: src/components/templates/home/mobile/index.tsx:36
-msgid "TBC Wallet empowers you to manage diverse assets like Bitcoin, Ethereum, and Solana. Securely dive into DeFi, NFTs, and dApps with full control. Your keys, your future."
-msgstr "TBC Wallet 赋能您管理比特币、以太坊和 Solana 等多种资产。安全地深入 DeFi、NFT 和 dApps，掌握完全控制权。您的密钥，您的未来。"
+msgid "TBC Wallet empowers you to manage diverse assets like Bitcoin, Ethereum, and TRON. Securely dive into DeFi, NFTs, and dApps with full control. Your keys, your future."
+msgstr "TBC Wallet 赋能您管理比特币、以太坊和 TRON 等多种资产。安全地深入 DeFi、NFT 和 dApps，掌握完全控制权。您的密钥，您的未来。"
 
 #: src/components/templates/home/desktop/index.tsx:248
 #: src/components/templates/home/mobile/index.tsx:64

@@ -34,7 +34,7 @@ export default function HomeTemplateMobile() {
         </h1>
         <p className='max-w-md'>
           <Trans>
-            TBC Wallet empowers you to manage diverse assets like Bitcoin, Ethereum, and Solana. Securely dive into
+            TBC Wallet empowers you to manage diverse assets like Bitcoin, Ethereum, and TRON. Securely dive into
             DeFi, NFTs, and dApps with full control. Your keys, your future.
           </Trans>
         </p>

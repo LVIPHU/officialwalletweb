@@ -13,7 +13,7 @@ msgstr ""
 "Language-Team: \n"
 "Plural-Forms: \n"
 
-#: src/components/organisms/footer/index.tsx:68
+#: src/components/organisms/footer/index.tsx:70
 msgid ". All rights reserved."
 msgstr ". Todos los derechos reservados."
 
@@ -102,7 +102,7 @@ msgstr "¿Puede TBC Wallet acceder a mis fondos?"
 msgid "Coming soon"
 msgstr "Próximamente"
 
-#: src/components/templates/home/desktop/index.tsx:364
+#: src/components/templates/home/desktop/index.tsx:365
 #: src/components/templates/home/mobile/index.tsx:132
 msgid "Community talk about us"
 msgstr "La comunidad habla de nosotros"
@@ -122,11 +122,11 @@ msgid "Desktop app"
 msgstr "Aplicación de escritorio"
 
 #: src/components/organisms/header/index.tsx:97
-#: src/components/organisms/mobile-sidebar/index.tsx:88
+#: src/components/organisms/mobile-sidebar/index.tsx:90
 msgid "Download"
 msgstr "Descargar"
 
-#: src/components/templates/home/desktop/index.tsx:380
+#: src/components/templates/home/desktop/index.tsx:382
 #: src/components/templates/home/mobile/index.tsx:140
 msgid "Download now"
 msgstr "Descargar ahora"
@@ -137,8 +137,8 @@ msgid "Download on the"
 msgstr "Descargar en"
 
 #: src/constants/landing.constants.ts:44
-msgid "Effortlessly exchange tokens across chains with low fees and real-time rates. Whether trading Bitcoin for Solana or optimizing your portfolio, TBC Wallet makes swaps quick and intuitive."
-msgstr "Intercambia tokens entre cadenas sin esfuerzo, con tarifas bajas y tasas en tiempo real. Ya sea que intercambies Bitcoin por Solana o optimices tu cartera, TBC Wallet hace que los cambios sean rápidos e intuitivos."
+msgid "Effortlessly exchange tokens across chains with low fees and real-time rates. Whether trading Bitcoin for TRON or optimizing your portfolio, TBC Wallet makes swaps quick and intuitive."
+msgstr "Intercambia tokens entre cadenas sin esfuerzo, con tarifas bajas y tasas en tiempo real. Ya sea que intercambies Bitcoin por TRON o optimices tu cartera, TBC Wallet hace que los cambios sean rápidos e intuitivos."
 
 #: src/constants/landing.constants.ts:68
 msgid "Ethereum"
@@ -370,7 +370,7 @@ msgstr "Registrarse"
 msgid "Something incredible is on the horizon! Drop your email below to be first in line for early access."
 msgstr "¡Algo increíble está por llegar! Deja tu correo electrónico abajo para ser el primero en obtener acceso anticipado."
 
-#: src/components/organisms/footer/index.tsx:113
+#: src/components/organisms/footer/index.tsx:121
 msgid "Stay connected:"
 msgstr "Mantente conectado:"
 
@@ -404,8 +404,8 @@ msgstr "TBC Wallet emplea múltiples capas de seguridad: Almacenamiento Encripta
 
 #: src/components/templates/home/desktop/index.tsx:215
 #: src/components/templates/home/mobile/index.tsx:36
-msgid "TBC Wallet empowers you to manage diverse assets like Bitcoin, Ethereum, and Solana. Securely dive into DeFi, NFTs, and dApps with full control. Your keys, your future."
-msgstr "TBC Wallet te empodera para gestionar activos diversos como Bitcoin, Ethereum y Solana. Sumérgete con seguridad en DeFi, NFTs y dApps con control total. Tus claves, tu futuro."
+msgid "TBC Wallet empowers you to manage diverse assets like Bitcoin, Ethereum, and TRON. Securely dive into DeFi, NFTs, and dApps with full control. Your keys, your future."
+msgstr "TBC Wallet te empodera para gestionar activos diversos como Bitcoin, Ethereum y TRON. Sumérgete con seguridad en DeFi, NFTs y dApps con control total. Tus claves, tu futuro."
 
 #: src/components/templates/home/desktop/index.tsx:248
 #: src/components/templates/home/mobile/index.tsx:64

@@ -13,7 +13,7 @@ msgstr ""
 "Language-Team: \n"
 "Plural-Forms: \n"
 
-#: src/components/organisms/footer/index.tsx:68
+#: src/components/organisms/footer/index.tsx:70
 msgid ". All rights reserved."
 msgstr "جميع الحقوق محفوظة."
 
@@ -102,7 +102,7 @@ msgstr "هل يمكن لمحفظة TBC الوصول إلى أموالي؟"
 msgid "Coming soon"
 msgstr "قريبًا"
 
-#: src/components/templates/home/desktop/index.tsx:364
+#: src/components/templates/home/desktop/index.tsx:365
 #: src/components/templates/home/mobile/index.tsx:132
 msgid "Community talk about us"
 msgstr "المجتمع يتحدث عنا"
@@ -122,11 +122,11 @@ msgid "Desktop app"
 msgstr "تطبيق سطح المكتب"
 
 #: src/components/organisms/header/index.tsx:97
-#: src/components/organisms/mobile-sidebar/index.tsx:88
+#: src/components/organisms/mobile-sidebar/index.tsx:90
 msgid "Download"
 msgstr "تحميل"
 
-#: src/components/templates/home/desktop/index.tsx:380
+#: src/components/templates/home/desktop/index.tsx:382
 #: src/components/templates/home/mobile/index.tsx:140
 msgid "Download now"
 msgstr "حمّل الآن"
@@ -137,7 +137,7 @@ msgid "Download on the"
 msgstr "تحميل على"
 
 #: src/constants/landing.constants.ts:44
-msgid "Effortlessly exchange tokens across chains with low fees and real-time rates. Whether trading Bitcoin for Solana or optimizing your portfolio, TBC Wallet makes swaps quick and intuitive."
+msgid "Effortlessly exchange tokens across chains with low fees and real-time rates. Whether trading Bitcoin for TRON or optimizing your portfolio, TBC Wallet makes swaps quick and intuitive."
 msgstr "قم بتبادل التوكنات بسهولة عبر السلاسل برسوم منخفضة وأسعار فورية. سواء كنت تتداول بيتكوين مقابل سولانا أو تحسّن محفظتك، محفظة TB تجعل المبادلات سريعة وبديهية."
 
 #: src/constants/landing.constants.ts:68
@@ -370,7 +370,7 @@ msgstr "سجّل الآن"
 msgid "Something incredible is on the horizon! Drop your email below to be first in line for early access."
 msgstr "شيء مذهل يلوح في الأفق! أضف بريدك الإلكتروني أدناه لتكون أول من يحصل على الوصول المبكر."
 
-#: src/components/organisms/footer/index.tsx:113
+#: src/components/organisms/footer/index.tsx:121
 msgid "Stay connected:"
 msgstr "ابقَ متصلاً:"
 
@@ -404,7 +404,7 @@ msgstr "تستخدم محفظة TBC طبقات أمان متعددة: التخز
 
 #: src/components/templates/home/desktop/index.tsx:215
 #: src/components/templates/home/mobile/index.tsx:36
-msgid "TBC Wallet empowers you to manage diverse assets like Bitcoin, Ethereum, and Solana. Securely dive into DeFi, NFTs, and dApps with full control. Your keys, your future."
+msgid "TBC Wallet empowers you to manage diverse assets like Bitcoin, Ethereum, and TRON. Securely dive into DeFi, NFTs, and dApps with full control. Your keys, your future."
 msgstr "محفظة TB تمكّنك من إدارة أصول متنوعة مثل بيتكوين وإيثيريوم وسولانا. انخرط بأمان في DeFi وNFTs وتطبيقات dApps مع تحكّمٍ كامل. مفاتيحك، مستقبلك."
 
 #: src/components/templates/home/desktop/index.tsx:248
