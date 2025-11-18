@@ -360,7 +360,7 @@ msgstr "跨链发送资产，实现几乎零延迟和极低成本"
 
 #: src/constants/landing.constants.ts:51
 msgid "Send assets across chains with near-zero delays and minimal costs. TBC Wallet ensures fast, reliable transactions for everyday use, from peer-to-peer sends to dApp funding."
-msgstr "跨链发送资产，实现几乎零延迟和极低成本。TBC Wallet 确保日常使用中的交易快速且可靠—from 点对点发送到 dApp 资金支持。"
+msgstr "跨链发送资产，实现几乎零延迟和极低成本。TBC Wallet 确保日常使用中的交易快速且可靠—从 点对点发送到 dApp 资金支持。"
 
 #: src/components/templates/coming-soon/index.tsx:42
 msgid "Sign up"

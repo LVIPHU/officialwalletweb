@@ -358,7 +358,7 @@ msgstr "跨鏈轉移資產，延遲近乎為零、成本極低"
 
 #: src/constants/landing.constants.ts:51
 msgid "Send assets across chains with near-zero delays and minimal costs. TBC Wallet ensures fast, reliable transactions for everyday use, from peer-to-peer sends to dApp funding."
-msgstr "跨鏈轉移資產，延遲近乎為零、成本極低。TBC Wallet 提供快速可靠的交易體驗，從 P2P 轉帳到 dApp 資金注入皆可輕鬆完成。"
+msgstr "跨鏈發送資產，實現幾乎零延遲和極低成本。TBC Wallet 確保日常使用中的交易快速且可靠——從點對點發送到 dApp 資金支援。"
 
 #: src/components/templates/coming-soon/index.tsx:42
 msgid "Sign up"
