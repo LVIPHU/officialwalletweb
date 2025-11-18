@@ -49,15 +49,15 @@ msgstr "始终在安全位置备份您的恢复短语（12 或 24 个词）：�
 msgid "An optimized Web3 experience for desktop"
 msgstr "为桌面优化的 Web3 体验"
 
-#: src/constants/landing.constants.ts:247
-msgid "Android APK"
-msgstr "Android APK"
+#: src/constants/landing.constants.ts:234
+msgid "Android"
+msgstr "Android"
 
 #: src/constants/navigation.constants.ts:30
 msgid "Android app"
 msgstr "Android 应用"
 
-#: src/constants/landing.constants.ts:223
+#: src/constants/landing.constants.ts:224
 msgid "App Store"
 msgstr "App Store"
 
@@ -65,7 +65,7 @@ msgstr "App Store"
 msgid "Are there tutorials available?"
 msgstr "是否有教程可用？"
 
-#: src/constants/landing.constants.ts:66
+#: src/constants/landing.constants.ts:67
 msgid "Bitcoin"
 msgstr "比特币"
 
@@ -73,7 +73,7 @@ msgstr "比特币"
 msgid "Boost earnings by connecting to mining pools and tracking rewards in-app"
 msgstr "通过连接矿池并在应用内跟踪奖励来提升收益"
 
-#: src/constants/landing.constants.ts:30
+#: src/constants/landing.constants.ts:31
 msgid "Boost earnings by connecting to mining pools and tracking rewards in-app. TBC Wallet simplifies mining management, helping both new and seasoned users maximize returns securely."
 msgstr "通过连接矿池并在应用内跟踪奖励来提升收益。TBC Wallet 简化了矿业管理，帮助新手和资深用户都能安全地最大化回报。"
 
@@ -117,7 +117,7 @@ msgstr "联系我们"
 msgid "Designed for All, Built for You"
 msgstr "为所有人而设计，为您量身打造"
 
-#: src/constants/landing.constants.ts:89
+#: src/constants/landing.constants.ts:90
 msgid "Desktop app"
 msgstr "桌面应用"
 
@@ -131,16 +131,16 @@ msgstr "下载"
 msgid "Download now"
 msgstr "立即下载"
 
-#: src/constants/landing.constants.ts:224
-#: src/constants/landing.constants.ts:234
+#: src/constants/landing.constants.ts:225
+#: src/constants/landing.constants.ts:235
 msgid "Download on the"
-msgstr "在"
+msgstr "下载在"
 
-#: src/constants/landing.constants.ts:44
+#: src/constants/landing.constants.ts:45
 msgid "Effortlessly exchange tokens across chains with low fees and real-time rates. Whether trading Bitcoin for TRON or optimizing your portfolio, TBC Wallet makes swaps quick and intuitive."
 msgstr "轻松跨链兑换代币，费用低、实时汇率。无论是用比特币兑换 TRON，还是优化您的投资组合，TBC Wallet 都让兑换快速且直观。"
 
-#: src/constants/landing.constants.ts:68
+#: src/constants/landing.constants.ts:69
 msgid "Ethereum"
 msgstr "以太坊"
 
@@ -149,7 +149,7 @@ msgstr "以太坊"
 msgid "Explore now"
 msgstr "立即探索"
 
-#: src/constants/landing.constants.ts:88
+#: src/constants/landing.constants.ts:89
 msgid "Extension"
 msgstr "扩展程序"
 
@@ -172,7 +172,7 @@ msgstr "查找有关 TBC Wallet 的常见问题解答"
 msgid "Fortify your wallet with multi-approval transactions for enhanced protection"
 msgstr "通过多重审批交易强化您的钱包，以增强保护"
 
-#: src/constants/landing.constants.ts:37
+#: src/constants/landing.constants.ts:38
 msgid "Fortify your wallet with multi-approval transactions for enhanced protection against threats—ideal for personal or shared use, ensuring your assets stay safe and accessible only to you."
 msgstr "通过多重审批交易强化您的钱包，以增强对抗威胁的保护——无论是个人使用还是共享使用，都能确保您的资产仅您可访。"
 
@@ -189,10 +189,10 @@ msgstr "一般问题"
 msgid "Get in touch with our support team for assistance"
 msgstr "联系我们的支持团队获取帮助"
 
-#: src/constants/landing.constants.ts:241
-#: src/constants/landing.constants.ts:248
+#: src/constants/landing.constants.ts:242
+#: src/constants/landing.constants.ts:249
 msgid "Get it from"
-msgstr "从"
+msgstr "获取在"
 
 #: src/components/atoms/breadcrumbs/index.tsx:49
 msgid "Home"
@@ -250,7 +250,7 @@ msgstr "如果您丢失了设备：1. 在新设备上使用您的恢复短语来
 msgid "If your balance isn't showing: 1. Check your internet connection. 2. Refresh the wallet. 3. Verify you're on the correct network. 4. Check if the transaction was successful on a blockchain explorer."
 msgstr "如果您的余额未显示：1. 检查您的互联网连接。2. 刷新钱包。3. 确认您在正确的网络上。4. 在区块链浏览器上检查交易是否成功。"
 
-#: src/constants/landing.constants.ts:50
+#: src/constants/landing.constants.ts:51
 #: src/constants/navigation.constants.ts:78
 msgid "Instant transfer"
 msgstr "即时转账"
@@ -267,7 +267,7 @@ msgstr "iOS 应用"
 msgid "Is TBC Wallet free to use?"
 msgstr "TBC Wallet 是免费使用的吗？"
 
-#: src/constants/landing.constants.ts:233
+#: src/constants/landing.constants.ts:248
 msgid "Mac OS"
 msgstr "Mac OS"
 
@@ -275,7 +275,7 @@ msgstr "Mac OS"
 msgid "MacOS app"
 msgstr "MacOS 应用"
 
-#: src/constants/landing.constants.ts:29
+#: src/constants/landing.constants.ts:30
 #: src/constants/navigation.constants.ts:66
 msgid "Miner"
 msgstr "矿工"
@@ -284,11 +284,11 @@ msgstr "矿工"
 msgid "Missing brand icon for"
 msgstr "缺少品牌图标："
 
-#: src/constants/landing.constants.ts:82
+#: src/constants/landing.constants.ts:83
 msgid "Mobile app"
 msgstr "移动应用"
 
-#: src/constants/landing.constants.ts:36
+#: src/constants/landing.constants.ts:37
 #: src/constants/navigation.constants.ts:72
 msgid "Multi signature"
 msgstr "多重签名"
@@ -338,7 +338,7 @@ msgstr "掌控您的加密资产，释放 Web3 潜能"
 msgid "Pay fees in USDT for stable, predictable costs amid market swings"
 msgstr "使用 USDT 支付费用，在市场波动中实现稳定且可预测的成本"
 
-#: src/constants/landing.constants.ts:58
+#: src/constants/landing.constants.ts:59
 msgid "Pay fees in USDT for stable, predictable costs amid market swings. This flexible feature adds transparency, making Web3 interactions more budget-friendly and user-centric."
 msgstr "以 USDT 支付费用，在市场波动中实现稳定且可预测的成本。此灵活功能增加了透明度，使 Web3 互动更符合预算、更以用户为中心。"
 
@@ -358,7 +358,7 @@ msgstr "安全"
 msgid "Send assets across chains with near-zero delays and minimal costs"
 msgstr "跨链发送资产，实现几乎零延迟和极低成本"
 
-#: src/constants/landing.constants.ts:51
+#: src/constants/landing.constants.ts:52
 msgid "Send assets across chains with near-zero delays and minimal costs. TBC Wallet ensures fast, reliable transactions for everyday use, from peer-to-peer sends to dApp funding."
 msgstr "跨链发送资产，实现几乎零延迟和极低成本。TBC Wallet 确保日常使用中的交易快速且可靠—从 点对点发送到 dApp 资金支持。"
 
@@ -379,7 +379,7 @@ msgstr "保持联系："
 msgid "Support"
 msgstr "支持"
 
-#: src/constants/landing.constants.ts:43
+#: src/constants/landing.constants.ts:44
 #: src/constants/navigation.constants.ts:60
 msgid "Swap"
 msgstr "兑换"
@@ -424,7 +424,7 @@ msgstr "TBC Wallet 可在以下平台使用：移动端：iOS 和 Android 应用
 msgid "TBC Wallet supports: TBChain (native network), Bitcoin, Ethereum and EVM-compatible chains, TRON, And more networks continuously being added."
 msgstr "TBC Wallet 支持：TBChain（原生网络）、比特币、以太坊和 EVM 兼容链、波场，以及持续添加的更多网络。"
 
-#: src/constants/landing.constants.ts:65
+#: src/constants/landing.constants.ts:66
 msgid "TBChain"
 msgstr "TB 链"
 
@@ -461,7 +461,7 @@ msgstr "交易"
 msgid "Transactions may be pending due to: Network congestion, Low transaction fee, Network maintenance, Insufficient balance."
 msgstr "交易可能因以下原因而处于待处理状态：网络拥堵、交易手续费过低、网络维护、余额不足。"
 
-#: src/constants/landing.constants.ts:67
+#: src/constants/landing.constants.ts:68
 msgid "TRON"
 msgstr "波场"
 
@@ -485,7 +485,7 @@ msgstr "更新可通过以下方式获得：移动端：App Store 或 Google Pla
 msgid "USDT fee"
 msgstr "USDT 手续费"
 
-#: src/constants/landing.constants.ts:57
+#: src/constants/landing.constants.ts:58
 msgid "USDT Fee"
 msgstr "USDT 手续费"
 
@@ -549,7 +549,7 @@ msgstr "TBC Wallet 支持哪些平台？"
 msgid "Why is my transaction pending?"
 msgstr "为什么我的交易处于待处理状态？"
 
-#: src/constants/landing.constants.ts:240
+#: src/constants/landing.constants.ts:241
 msgid "Windows"
 msgstr "Windows"
 

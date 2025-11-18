@@ -49,15 +49,15 @@ msgstr "Sempre faça backup da sua frase de recuperação (12 ou 24 palavras) em
 msgid "An optimized Web3 experience for desktop"
 msgstr "Uma experiência Web3 otimizada para desktop"
 
-#: src/constants/landing.constants.ts:247
-msgid "Android APK"
-msgstr "APK Android"
+#: src/constants/landing.constants.ts:234
+msgid "Android"
+msgstr "Android"
 
 #: src/constants/navigation.constants.ts:30
 msgid "Android app"
 msgstr "Aplicativo Android"
 
-#: src/constants/landing.constants.ts:223
+#: src/constants/landing.constants.ts:224
 msgid "App Store"
 msgstr "App Store"
 
@@ -65,7 +65,7 @@ msgstr "App Store"
 msgid "Are there tutorials available?"
 msgstr "Existem tutoriais disponíveis?"
 
-#: src/constants/landing.constants.ts:66
+#: src/constants/landing.constants.ts:67
 msgid "Bitcoin"
 msgstr "Bitcoin"
 
@@ -73,7 +73,7 @@ msgstr "Bitcoin"
 msgid "Boost earnings by connecting to mining pools and tracking rewards in-app"
 msgstr "Aumente os ganhos ao conectar-se a pools de mineração e acompanhar recompensas no aplicativo"
 
-#: src/constants/landing.constants.ts:30
+#: src/constants/landing.constants.ts:31
 msgid "Boost earnings by connecting to mining pools and tracking rewards in-app. TBC Wallet simplifies mining management, helping both new and seasoned users maximize returns securely."
 msgstr "Aumente os ganhos ao conectar-se a pools de mineração e acompanhar recompensas no aplicativo. A TBC Wallet simplifica a gestão de mineração, ajudando tanto novos quanto usuários experientes a maximizar retornos com segurança."
 
@@ -117,7 +117,7 @@ msgstr "Fale conosco"
 msgid "Designed for All, Built for You"
 msgstr "Projetado para todos, feito para você"
 
-#: src/constants/landing.constants.ts:89
+#: src/constants/landing.constants.ts:90
 msgid "Desktop app"
 msgstr "Aplicativo para desktop"
 
@@ -131,16 +131,16 @@ msgstr "Baixar"
 msgid "Download now"
 msgstr "Baixe agora"
 
-#: src/constants/landing.constants.ts:224
-#: src/constants/landing.constants.ts:234
+#: src/constants/landing.constants.ts:225
+#: src/constants/landing.constants.ts:235
 msgid "Download on the"
 msgstr "Baixar no"
 
-#: src/constants/landing.constants.ts:44
+#: src/constants/landing.constants.ts:45
 msgid "Effortlessly exchange tokens across chains with low fees and real-time rates. Whether trading Bitcoin for TRON or optimizing your portfolio, TBC Wallet makes swaps quick and intuitive."
 msgstr "Troque tokens entre cadeias com facilidade, taxas baixas e cotações em tempo real. Seja trocando Bitcoin por TRON ou otimizando seu portfólio, a TBC Wallet torna as trocas rápidas e intuitivas."
 
-#: src/constants/landing.constants.ts:68
+#: src/constants/landing.constants.ts:69
 msgid "Ethereum"
 msgstr "Ethereum"
 
@@ -149,7 +149,7 @@ msgstr "Ethereum"
 msgid "Explore now"
 msgstr "Explorar agora"
 
-#: src/constants/landing.constants.ts:88
+#: src/constants/landing.constants.ts:89
 msgid "Extension"
 msgstr "Extensão"
 
@@ -172,7 +172,7 @@ msgstr "Encontre respostas para perguntas frequentes sobre TBC Wallet"
 msgid "Fortify your wallet with multi-approval transactions for enhanced protection"
 msgstr "Reforce sua carteira com transações de múltiplas aprovações para maior proteção"
 
-#: src/constants/landing.constants.ts:37
+#: src/constants/landing.constants.ts:38
 msgid "Fortify your wallet with multi-approval transactions for enhanced protection against threats—ideal for personal or shared use, ensuring your assets stay safe and accessible only to you."
 msgstr "Reforce sua carteira com transações de múltiplas aprovações para maior proteção contra ameaças — ideal para uso pessoal ou compartilhado, garantindo que seus ativos permaneçam seguros e acessíveis apenas a você."
 
@@ -189,8 +189,8 @@ msgstr "Perguntas Gerais"
 msgid "Get in touch with our support team for assistance"
 msgstr "Entre em contato com nossa equipe de suporte para assistência"
 
-#: src/constants/landing.constants.ts:241
-#: src/constants/landing.constants.ts:248
+#: src/constants/landing.constants.ts:242
+#: src/constants/landing.constants.ts:249
 msgid "Get it from"
 msgstr "Obter de"
 
@@ -250,7 +250,7 @@ msgstr "Se você perder seu dispositivo: 1. Use sua frase de recuperação em um
 msgid "If your balance isn't showing: 1. Check your internet connection. 2. Refresh the wallet. 3. Verify you're on the correct network. 4. Check if the transaction was successful on a blockchain explorer."
 msgstr "Se seu saldo não estiver aparecendo: 1. Verifique sua conexão com a internet. 2. Atualize a carteira. 3. Confirme que você está na rede correta. 4. Verifique se a transação foi bem-sucedida em um explorador de blockchain."
 
-#: src/constants/landing.constants.ts:50
+#: src/constants/landing.constants.ts:51
 #: src/constants/navigation.constants.ts:78
 msgid "Instant transfer"
 msgstr "Transferência instantânea"
@@ -267,7 +267,7 @@ msgstr "Aplicativo iOS"
 msgid "Is TBC Wallet free to use?"
 msgstr "O TBC Wallet é gratuito para usar?"
 
-#: src/constants/landing.constants.ts:233
+#: src/constants/landing.constants.ts:248
 msgid "Mac OS"
 msgstr "Mac OS"
 
@@ -275,7 +275,7 @@ msgstr "Mac OS"
 msgid "MacOS app"
 msgstr "Aplicativo MacOS"
 
-#: src/constants/landing.constants.ts:29
+#: src/constants/landing.constants.ts:30
 #: src/constants/navigation.constants.ts:66
 msgid "Miner"
 msgstr "Minerador"
@@ -284,11 +284,11 @@ msgstr "Minerador"
 msgid "Missing brand icon for"
 msgstr "Ícone de marca ausente para"
 
-#: src/constants/landing.constants.ts:82
+#: src/constants/landing.constants.ts:83
 msgid "Mobile app"
 msgstr "Aplicativo móvel"
 
-#: src/constants/landing.constants.ts:36
+#: src/constants/landing.constants.ts:37
 #: src/constants/navigation.constants.ts:72
 msgid "Multi signature"
 msgstr "Assinatura múltipla"
@@ -338,7 +338,7 @@ msgstr "Seja dono das suas criptomoedas. Liberte as possibilidades do Web3"
 msgid "Pay fees in USDT for stable, predictable costs amid market swings"
 msgstr "Pague taxas em USDT para custos estáveis e previsíveis em meio às oscilações do mercado"
 
-#: src/constants/landing.constants.ts:58
+#: src/constants/landing.constants.ts:59
 msgid "Pay fees in USDT for stable, predictable costs amid market swings. This flexible feature adds transparency, making Web3 interactions more budget-friendly and user-centric."
 msgstr "Pague taxas em USDT para custos estáveis e previsíveis em meio às oscilações do mercado. Este recurso flexível adiciona transparência, tornando as interações Web3 mais acessíveis e centradas no usuário."
 
@@ -358,7 +358,7 @@ msgstr "Segurança"
 msgid "Send assets across chains with near-zero delays and minimal costs"
 msgstr "Envie ativos entre cadeias com atrasos quase nulos e custos mínimos"
 
-#: src/constants/landing.constants.ts:51
+#: src/constants/landing.constants.ts:52
 msgid "Send assets across chains with near-zero delays and minimal costs. TBC Wallet ensures fast, reliable transactions for everyday use, from peer-to-peer sends to dApp funding."
 msgstr "Envie ativos entre cadeias com atrasos quase nulos e custos mínimos. A TBC Wallet garante transações rápidas e confiáveis para uso diário, desde envios peer-to-peer até o financiamento de dApps."
 
@@ -379,7 +379,7 @@ msgstr "Mantenha-se conectado:"
 msgid "Support"
 msgstr "Suporte"
 
-#: src/constants/landing.constants.ts:43
+#: src/constants/landing.constants.ts:44
 #: src/constants/navigation.constants.ts:60
 msgid "Swap"
 msgstr "Troca"
@@ -424,7 +424,7 @@ msgstr "O TBC Wallet está disponível em: Mobile: aplicativos iOS e Android, De
 msgid "TBC Wallet supports: TBChain (native network), Bitcoin, Ethereum and EVM-compatible chains, TRON, And more networks continuously being added."
 msgstr "O TBC Wallet suporta: TBChain (rede nativa), Bitcoin, Ethereum e cadeias compatíveis com EVM, TRON, e mais redes sendo adicionadas continuamente."
 
-#: src/constants/landing.constants.ts:65
+#: src/constants/landing.constants.ts:66
 msgid "TBChain"
 msgstr "TBChain"
 
@@ -461,7 +461,7 @@ msgstr "Transações"
 msgid "Transactions may be pending due to: Network congestion, Low transaction fee, Network maintenance, Insufficient balance."
 msgstr "As transações podem estar pendentes devido a: Congestionamento da rede, Taxa de transação baixa, Manutenção da rede, Saldo insuficiente."
 
-#: src/constants/landing.constants.ts:67
+#: src/constants/landing.constants.ts:68
 msgid "TRON"
 msgstr "TRON"
 
@@ -485,7 +485,7 @@ msgstr "As atualizações estão disponíveis através de: Mobile: App Store ou 
 msgid "USDT fee"
 msgstr "Taxa USDT"
 
-#: src/constants/landing.constants.ts:57
+#: src/constants/landing.constants.ts:58
 msgid "USDT Fee"
 msgstr "Taxa em USDT"
 
@@ -549,7 +549,7 @@ msgstr "Quais plataformas o TBC Wallet suporta?"
 msgid "Why is my transaction pending?"
 msgstr "Por que minha transação está pendente?"
 
-#: src/constants/landing.constants.ts:240
+#: src/constants/landing.constants.ts:241
 msgid "Windows"
 msgstr "Windows"
 

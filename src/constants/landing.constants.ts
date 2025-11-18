@@ -21,6 +21,7 @@ import Android from '@public/assets/brands/android.svg'
 import Apple from '@public/assets/brands/apple.svg'
 import Appstore from '@public/assets/brands/appstore.svg'
 import Windows from '@public/assets/brands/windows.svg'
+import CHPlay from '@public/assets/brands/google-play.svg'
 import { Chain, Download, Feature, Platform, Testimonial } from '@/types/landing.types'
 
 export const FEATURES: Feature[] = [
@@ -228,11 +229,11 @@ export const DOWNLOADS: Download[] = [
     url: 'https://apps.apple.com/app/6739870518',
   },
   {
-    id: 'mac-os',
-    logo: Apple,
-    title: msg`Mac OS`,
+    id: 'android',
+    logo: CHPlay,
+    title: msg`Android`,
     subtitle: msg`Download on the`,
-    url: 'https://download.chainviews.net/tbchat.dmg',
+    url: 'https://download.chainviews.net/tbchat.apk',
   },
   {
     id: 'windows',
@@ -242,10 +243,10 @@ export const DOWNLOADS: Download[] = [
     url: 'https://download.chainviews.net/tbchat01.exe',
   },
   {
-    id: 'android',
-    logo: Android,
-    title: msg`Android APK`,
+    id: 'mac-os',
+    logo: Apple,
+    title: msg`Mac OS`,
     subtitle: msg`Get it from`,
-    url: 'https://download.chainviews.net/tbchat.apk',
+    url: 'https://download.chainviews.net/tbchat.dmg',
   },
 ]

@@ -49,15 +49,15 @@ msgstr "Varmuuskopioi aina palautuslauseesi (12 tai 24 sanaa) turvallisessa paik
 msgid "An optimized Web3 experience for desktop"
 msgstr "Optimoitu Web3-kokemus työpöydälle"
 
-#: src/constants/landing.constants.ts:247
-msgid "Android APK"
-msgstr "Android APK"
+#: src/constants/landing.constants.ts:234
+msgid "Android"
+msgstr "Android"
 
 #: src/constants/navigation.constants.ts:30
 msgid "Android app"
 msgstr "Android-sovellus"
 
-#: src/constants/landing.constants.ts:223
+#: src/constants/landing.constants.ts:224
 msgid "App Store"
 msgstr "App Store"
 
@@ -65,7 +65,7 @@ msgstr "App Store"
 msgid "Are there tutorials available?"
 msgstr "Onko opetusohjelmia saatavilla?"
 
-#: src/constants/landing.constants.ts:66
+#: src/constants/landing.constants.ts:67
 msgid "Bitcoin"
 msgstr "Bitcoin"
 
@@ -73,7 +73,7 @@ msgstr "Bitcoin"
 msgid "Boost earnings by connecting to mining pools and tracking rewards in-app"
 msgstr "Lisää tuottojasi yhdistämällä kaivosaltaisiin ja seuraamalla palkkioita sovelluksessa"
 
-#: src/constants/landing.constants.ts:30
+#: src/constants/landing.constants.ts:31
 msgid "Boost earnings by connecting to mining pools and tracking rewards in-app. TBC Wallet simplifies mining management, helping both new and seasoned users maximize returns securely."
 msgstr "Lisää tuottojasi yhdistämällä kaivosaltaisiin ja seuraamalla palkkioita sovelluksessa. TBC Wallet yksinkertaistaa kaivoshallintaa ja auttaa sekä uusia että kokeneita käyttäjiä maksimoimaan tuotot turvallisesti."
 
@@ -117,7 +117,7 @@ msgstr "Ota yhteyttä"
 msgid "Designed for All, Built for You"
 msgstr "Suunniteltu kaikille, rakennettu sinulle"
 
-#: src/constants/landing.constants.ts:89
+#: src/constants/landing.constants.ts:90
 msgid "Desktop app"
 msgstr "Työpöytäsovellus"
 
@@ -131,16 +131,16 @@ msgstr "Lataa"
 msgid "Download now"
 msgstr "Lataa nyt"
 
-#: src/constants/landing.constants.ts:224
-#: src/constants/landing.constants.ts:234
+#: src/constants/landing.constants.ts:225
+#: src/constants/landing.constants.ts:235
 msgid "Download on the"
 msgstr "Lataa"
 
-#: src/constants/landing.constants.ts:44
+#: src/constants/landing.constants.ts:45
 msgid "Effortlessly exchange tokens across chains with low fees and real-time rates. Whether trading Bitcoin for TRON or optimizing your portfolio, TBC Wallet makes swaps quick and intuitive."
 msgstr "Vaihda tokeneita ketjujen välillä vaivattomasti alhaisilla kuluilla ja reaaliaikaisilla kursseilla. Olitpa vaihtamassa Bitcoinia TRONan tai optimoimassa portfoliosi, TBC Wallet tekee vaihdosta nopeaa ja intuitiivista."
 
-#: src/constants/landing.constants.ts:68
+#: src/constants/landing.constants.ts:69
 msgid "Ethereum"
 msgstr "Ethereum"
 
@@ -149,7 +149,7 @@ msgstr "Ethereum"
 msgid "Explore now"
 msgstr "Tutustu nyt"
 
-#: src/constants/landing.constants.ts:88
+#: src/constants/landing.constants.ts:89
 msgid "Extension"
 msgstr "Laajennus"
 
@@ -172,7 +172,7 @@ msgstr "Löydä vastauksia usein kysyttyihin kysymyksiin TBC Walletista"
 msgid "Fortify your wallet with multi-approval transactions for enhanced protection"
 msgstr "Vahvista lompakkosi monivaiheisilla hyväksymisillä parannettua suojausta varten"
 
-#: src/constants/landing.constants.ts:37
+#: src/constants/landing.constants.ts:38
 msgid "Fortify your wallet with multi-approval transactions for enhanced protection against threats—ideal for personal or shared use, ensuring your assets stay safe and accessible only to you."
 msgstr "Vahvista lompakkosi monivaiheisilla hyväksymisillä parannettua suojausta varten — ihanteellinen henkilökohtaiseen tai jaettuun käyttöön, varmistaen että omaisuutesi pysyy turvassa ja saatavilla vain sinulle."
 
@@ -189,8 +189,8 @@ msgstr "Yleiset kysymykset"
 msgid "Get in touch with our support team for assistance"
 msgstr "Ota yhteyttä tukitiimiimme apua varten"
 
-#: src/constants/landing.constants.ts:241
-#: src/constants/landing.constants.ts:248
+#: src/constants/landing.constants.ts:242
+#: src/constants/landing.constants.ts:249
 msgid "Get it from"
 msgstr "Hanki se"
 
@@ -250,7 +250,7 @@ msgstr "Jos kadotat laitteesi: 1. Käytä palautuslauseesi uudella laitteella pa
 msgid "If your balance isn't showing: 1. Check your internet connection. 2. Refresh the wallet. 3. Verify you're on the correct network. 4. Check if the transaction was successful on a blockchain explorer."
 msgstr "Jos saldosi ei näy: 1. Tarkista internetyhteytesi. 2. Päivitä lompakko. 3. Varmista, että olet oikealla verkolla. 4. Tarkista, onko tapahtuma onnistunut lohkoketjuesploraattorissa."
 
-#: src/constants/landing.constants.ts:50
+#: src/constants/landing.constants.ts:51
 #: src/constants/navigation.constants.ts:78
 msgid "Instant transfer"
 msgstr "Välitön siirto"
@@ -267,7 +267,7 @@ msgstr "iOS-sovellus"
 msgid "Is TBC Wallet free to use?"
 msgstr "Onko TBC Wallet ilmainen käyttää?"
 
-#: src/constants/landing.constants.ts:233
+#: src/constants/landing.constants.ts:248
 msgid "Mac OS"
 msgstr "Mac OS"
 
@@ -275,7 +275,7 @@ msgstr "Mac OS"
 msgid "MacOS app"
 msgstr "MacOS-sovellus"
 
-#: src/constants/landing.constants.ts:29
+#: src/constants/landing.constants.ts:30
 #: src/constants/navigation.constants.ts:66
 msgid "Miner"
 msgstr "Lohkonlouhija"
@@ -284,11 +284,11 @@ msgstr "Lohkonlouhija"
 msgid "Missing brand icon for"
 msgstr "Puuttuva brändikuvake kohteelle"
 
-#: src/constants/landing.constants.ts:82
+#: src/constants/landing.constants.ts:83
 msgid "Mobile app"
 msgstr "Mobiilisovellus"
 
-#: src/constants/landing.constants.ts:36
+#: src/constants/landing.constants.ts:37
 #: src/constants/navigation.constants.ts:72
 msgid "Multi signature"
 msgstr "Moniallekirjoitus"
@@ -338,7 +338,7 @@ msgstr "Omista kryptosi. Vapauta Web3-mahdollisuudet"
 msgid "Pay fees in USDT for stable, predictable costs amid market swings"
 msgstr "Maksa palkkiot USDT:ssä vakaiden, ennakoitavissa olevien kustannusten vuoksi markkinoiden vaihteluiden keskellä"
 
-#: src/constants/landing.constants.ts:58
+#: src/constants/landing.constants.ts:59
 msgid "Pay fees in USDT for stable, predictable costs amid market swings. This flexible feature adds transparency, making Web3 interactions more budget-friendly and user-centric."
 msgstr "Maksa palkkiot USDT:ssä vakaiden, ennakoitavissa olevien kustannusten vuoksi markkinoiden vaihteluiden keskellä. Tämä joustava ominaisuus lisää läpinäkyvyyttä ja tekee Web3-vuorovaikutuksesta budjettiystävällisempää ja käyttäjäkeskeistä."
 
@@ -358,7 +358,7 @@ msgstr "Turvallisuus"
 msgid "Send assets across chains with near-zero delays and minimal costs"
 msgstr "Lähetä varoja ketjujen välillä lähes nollaviiveellä ja minimaalisin kustannuksin"
 
-#: src/constants/landing.constants.ts:51
+#: src/constants/landing.constants.ts:52
 msgid "Send assets across chains with near-zero delays and minimal costs. TBC Wallet ensures fast, reliable transactions for everyday use, from peer-to-peer sends to dApp funding."
 msgstr "Lähetä varoja ketjujen välillä lähes nollaviiveellä ja minimaalisin kustannuksin. TBC Wallet varmistaa nopeat ja luotettavat transaktiot päivittäiseen käyttöön, vertaislähetyksistä dApp-rahoitukseen."
 
@@ -379,7 +379,7 @@ msgstr "Pysy yhteydessä:"
 msgid "Support"
 msgstr "Tuki"
 
-#: src/constants/landing.constants.ts:43
+#: src/constants/landing.constants.ts:44
 #: src/constants/navigation.constants.ts:60
 msgid "Swap"
 msgstr "Vaihda"
@@ -424,7 +424,7 @@ msgstr "TBC Wallet on saatavilla: Mobiili: iOS- ja Android-sovellukset, Työpöy
 msgid "TBC Wallet supports: TBChain (native network), Bitcoin, Ethereum and EVM-compatible chains, TRON, And more networks continuously being added."
 msgstr "TBC Wallet tukee: TBChain (alkuperäinen verkko), Bitcoin, Ethereum ja EVM-yhteensopivat ketjut, TRON, ja lisää verkkoja lisätään jatkuvasti."
 
-#: src/constants/landing.constants.ts:65
+#: src/constants/landing.constants.ts:66
 msgid "TBChain"
 msgstr "TBChain"
 
@@ -461,7 +461,7 @@ msgstr "Tapahtumat"
 msgid "Transactions may be pending due to: Network congestion, Low transaction fee, Network maintenance, Insufficient balance."
 msgstr "Tapahtumat voivat olla odottamassa seuraavista syistä: Verkon ruuhkaisuus, Matala tapahtumamaksu, Verkon ylläpito, Riittämätön saldo."
 
-#: src/constants/landing.constants.ts:67
+#: src/constants/landing.constants.ts:68
 msgid "TRON"
 msgstr "TRON"
 
@@ -485,7 +485,7 @@ msgstr "Päivitykset ovat saatavilla: Mobiili: App Store tai Google Play Store. 
 msgid "USDT fee"
 msgstr "USDT-maksu"
 
-#: src/constants/landing.constants.ts:57
+#: src/constants/landing.constants.ts:58
 msgid "USDT Fee"
 msgstr "USDT-maksu"
 
@@ -549,7 +549,7 @@ msgstr "Mitkä alustat TBC Wallet tukee?"
 msgid "Why is my transaction pending?"
 msgstr "Miksi tapahtumani on odottamassa?"
 
-#: src/constants/landing.constants.ts:240
+#: src/constants/landing.constants.ts:241
 msgid "Windows"
 msgstr "Windows"
 
