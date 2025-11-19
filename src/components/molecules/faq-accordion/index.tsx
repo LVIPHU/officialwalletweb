@@ -13,6 +13,7 @@ import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/
 import { Separator } from '@/components/ui/separator'
 import { useLingui } from '@lingui/react'
 import { cn } from '@/lib/styles'
+import { formatFAQAnswer } from './faq-accordion.helper'
 import type { FAQCategory } from '@/constants/faq.constants'
 
 interface FAQAccordionProps {
@@ -43,7 +44,7 @@ export function FAQAccordion({ categories, className }: FAQAccordionProps) {
                   {i18n._(item.question)}
                 </AccordionTrigger>
                 <AccordionContent className='text-foreground/80 text-sm leading-relaxed'>
-                  <div className='whitespace-pre-line'>{i18n._(item.answer)}</div>
+                  <div className='whitespace-pre-line'>{formatFAQAnswer(i18n._(item.answer))}</div>
                 </AccordionContent>
               </AccordionItem>
             ))}

@@ -15,25 +15,33 @@ import { cn } from '@/lib/styles'
 import { Trans } from '@lingui/react/macro'
 import { MessageDescriptor } from '@lingui/core'
 import { useLingui } from '@lingui/react'
+import dynamic from 'next/dynamic'
+
+const AnimatedContent = dynamic(
+  () => import('@/components/atoms/animated-content').then((AnimatedContent) => AnimatedContent),
+  { ssr: false }
+)
 
 export default function PlatformTabs() {
   return (
     <Tabs defaultValue={PLATFORMS[0].id} className='flex w-full flex-col items-center'>
-      <TabsList className='flex flex-wrap justify-center gap-4 bg-transparent p-0 sm:gap-5 md:gap-6'>
-        {PLATFORMS.map(({ id, title }) => (
-          <PlatformTabTrigger key={id} value={id} label={title} />
-        ))}
-      </TabsList>
+      <AnimatedContent duration={3}>
+        <TabsList className='flex flex-wrap justify-center gap-4 bg-transparent p-0 sm:gap-5 md:gap-6'>
+          {PLATFORMS.map(({ id, title }) => (
+            <PlatformTabTrigger key={id} value={id} label={title} />
+          ))}
+        </TabsList>
+      </AnimatedContent>
 
       {PLATFORMS.map(({ id, images: { desktop, mobile } }) => (
         <TabsContent key={id} value={id} className='mt-11 md:mt-0'>
           {desktop ? (
-            <div className='flex items-center justify-center pt-5 lg:pt-11'>
+            <AnimatedContent duration={3} className='flex items-center justify-center pt-5 lg:pt-11'>
               <picture>
                 <source srcSet={mobile} media='(max-width: 767px)' />
                 <Image src={desktop} alt={id} width={940} height={548} className='object-contain' />
               </picture>
-            </div>
+            </AnimatedContent>
           ) : (
             <ComingSoon />
           )}
@@ -62,10 +70,10 @@ function PlatformTabTrigger({ value, label }: { value: string; label: MessageDes
 
 function ComingSoon() {
   return (
-    <div className='flex h-[548px] w-full items-center justify-center rounded-xl md:w-[940px]'>
+    <AnimatedContent duration={3} className='flex h-[548px] w-full items-center justify-center rounded-xl md:w-[940px]'>
       <p className='text-6xl font-semibold tracking-wide md:text-8xl'>
         <Trans>Coming soon</Trans>
       </p>
-    </div>
+    </AnimatedContent>
   )
 }

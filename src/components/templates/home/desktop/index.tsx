@@ -213,8 +213,8 @@ export default function HomeTemplateDesktop() {
             <HeroTextIn introOut={introOut}>
               <p className='max-w-md text-center lg:text-start'>
                 <Trans>
-                  TBC Wallet empowers you to manage diverse assets like Bitcoin, Ethereum, and TRON. Securely dive
-                  into DeFi, NFTs, and dApps with full control. Your keys, your future.
+                  TBC Wallet empowers you to manage diverse assets like Bitcoin, Ethereum, and TRON. Securely dive into
+                  DeFi, NFTs, and dApps with full control. Your keys, your future.
                 </Trans>
               </p>
             </HeroTextIn>
@@ -310,21 +310,19 @@ export default function HomeTemplateDesktop() {
       {/* One Platform, Millions of Assets */}
       <Container id='assets' className='min-h-[85dvh] py-5 lg:py-10 xl:py-16'>
         <div className='flex flex-col items-center justify-center gap-8 lg:gap-12'>
-          <div className='relative flex max-w-3xl flex-col items-center gap-8 text-center lg:gap-6'>
-            <AnimatedContent distance={150} duration={3} threshold={0.3}>
+          <AnimatedContent distance={150} duration={3}>
+            <div className='relative flex max-w-3xl flex-col items-center gap-8 text-center lg:gap-6'>
               <h2 className='font-clash-display text-4xl font-semibold'>
                 <Trans>Your All-in-One Web3 Wallet</Trans>
               </h2>
-            </AnimatedContent>
-            <AnimatedContent duration={3} threshold={0.3}>
               <p>
                 <Trans>
                   TBC Wallet connects you to diverse ecosystems, from Bitcoin and Ethereum to Optimism and Cosmos.
                   Manage portfolios, engage in DeFi, trade NFTs, and link to dApps—all in one secure, self-custody hub.
                 </Trans>
               </p>
-            </AnimatedContent>
-          </div>
+            </div>
+          </AnimatedContent>
           <AnimatedSequence
             className='grid w-full grid-cols-2 gap-4 lg:gap-10 xl:grid-cols-4'
             threshold={0.3}
@@ -341,14 +339,14 @@ export default function HomeTemplateDesktop() {
       {/* One wallet. Cross-platform */}
       <Container id='platform' className='min-h-[85dvh] py-5 lg:py-10 xl:py-16'>
         <div className='flex h-full flex-col items-center justify-center gap-8 text-center lg:gap-12 lg:text-start'>
-          <AnimatedContent threshold={0.3}>
+          <AnimatedContent duration={3}>
             <h2 className='font-clash-display text-4xl font-semibold'>
               <Trans>One wallet. Cross platform</Trans>
             </h2>
           </AnimatedContent>
           <div className='relative h-full grow'>
             <PlatformTabs />
-            <AnimatedContent distance={0} threshold={0.36} className={'absolute inset-0 z-[-1]'}>
+            <AnimatedContent distance={0} className={'absolute inset-0 z-[-1]'}>
               <div className='relative top-[10%] left-[4.5%] h-full w-full scale-200 lg:scale-130'>
                 <div className='background-glow' />
               </div>
@@ -360,24 +358,26 @@ export default function HomeTemplateDesktop() {
       {/*Community Testimonials*/}
       <Container id='community' className='min-h-[85dvh] py-5 lg:py-10 xl:py-16'>
         <div className='relative flex h-full flex-col items-center justify-center gap-8 text-center lg:gap-12 lg:text-start'>
-          <AnimatedContent threshold={0.3}>
+          <AnimatedContent duration={3}>
             <h2 className='font-clash-display max-w-sm text-4xl font-semibold lg:max-w-none'>
               <Trans>Community talk about us</Trans>
             </h2>
           </AnimatedContent>
-          <AnimatedContent distance={0} threshold={0.3} className={'absolute inset-0 z-[-1]'}>
+          <AnimatedContent distance={0} className={'absolute inset-0 z-[-1]'}>
             <div className='relative top-1/5 left-[4%] h-full w-full scale-200 lg:top-[5%] lg:scale-90'>
               <div className='background-glow' />
             </div>
           </AnimatedContent>
-          <TestimonialCarousel />
+          <AnimatedContent duration={3} className='w-full'>
+            <TestimonialCarousel />
+          </AnimatedContent>
         </div>
       </Container>
 
       {/* Download Section */}
       <Container id='download' className='min-h-[70dvh] py-5 lg:min-h-[85dvh] lg:py-10 xl:py-16'>
         <div className='relative flex h-full w-full flex-col items-center justify-center gap-8 text-center lg:gap-12 lg:text-start'>
-          <AnimatedContent threshold={0.3}>
+          <AnimatedContent duration={3}>
             <h2 className='font-clash-display text-4xl font-semibold'>
               <Trans>Download now</Trans>
             </h2>
