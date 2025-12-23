@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>TBC Wallet - The Future of Cryptocurrency Management - AR</title>
+    <title>TB Wallet - The Future of Cryptocurrency Management - AR</title>
     <link>https://officialwalletweb.vercel.app/ar</link>
-    <description>Experience the future of cryptocurrency management with TBC Wallet. Secure, fast, and user-friendly platform for all your digital assets.</description>
+    <description>Experience the future of cryptocurrency management with TB Wallet. Secure, fast, and user-friendly platform for all your digital assets.</description>
     <language>ar</language>
     <managingEditor>contact@tbchatofficial.com (NEXSOFT)</managingEditor>
     <webMaster>contact@tbchatofficial.com (NEXSOFT)</webMaster>
@@ -11,7 +11,8 @@
     <atom:link href="https://officialwalletweb.vercel.app/feeds/ar.xml" rel="self" type="application/rss+xml"/>
     <item>
       <guid isPermaLink="true">https://officialwalletweb.vercel.app/ar/about/privacy-policy</guid>
-      <title>سياسة الخصوصية</title>
+      <title>سياسة الخصوصية
+</title>
       <link>https://officialwalletweb.vercel.app/ar/about/privacy-policy</link>
       <description>
 مرحبًا بكم في الكيان التشغيلي لموقعنا الإلكتروني الرسمي (المشار إليه فيما يلي باسم &quot;الموقع&quot;). نحن نحترم خصوصيتكم ونحميها. عند استخدامكم لخدماتنا أو تلقيكم لها، سيتم جمع المعلومات الشخصية التي تُقدمو</description>
@@ -20,7 +21,8 @@
     </item>
     <item>
       <guid isPermaLink="true">https://officialwalletweb.vercel.app/ar/about/terms-of-service</guid>
-      <title>شروط الخدمة</title>
+      <title>شروط الخدمة
+</title>
       <link>https://officialwalletweb.vercel.app/ar/about/terms-of-service</link>
       <description>
  يرجى قراءة شروط الخدمة هذه بعناية.
@@ -38,7 +40,7 @@
       <description>
  نظرة عامة
 
-تتيح ميزة التحويل الفوري في TBC Wallet معاملات فائقة السرعة بين السلاسل مع رسوم دنيا وتسوية شبه فورية. سواء كنت ترسل الأموال إلى الأصدقاء أو تمول dApps أو تنقل الأصول بين الشبكات، يجعل</description>
+تتيح ميزة التحويل الفوري في TB Wallet معاملات فائقة السرعة بين السلاسل مع رسوم دنيا وتسوية شبه فورية. سواء كنت ترسل الأموال إلى الأصدقاء أو تمول dApps أو تنقل الأصول بين الشبكات، يجعل</description>
       <pubDate>Wed, 15 Jan 2025 00:00:00 GMT</pubDate>
       <category>features</category>
     </item>
@@ -49,7 +51,7 @@
       <description>
  نظرة عامة
 
-تتيح لك ميزة Miner في TBC Wallet المشاركة في آلية إجماع إثبات الحصة (PoS). اراهن برموزك، وصوت للمتحققين، وأدر العقد، واكسب المكافآت من خلال واجهة آمنة وسهلة الاستخدام.
+تتيح لك ميزة Miner في TB Wallet المشاركة في آلية إجماع إثبات الحصة (PoS). اراهن برموزك، وصوت للمتحققين، وأدر العقد، واكسب المكافآت من خلال واجهة آمنة وسهلة الاستخدام.
 
  1. وحدة الره</description>
       <pubDate>Wed, 15 Jan 2025 00:00:00 GMT</pubDate>
@@ -62,7 +64,7 @@
       <description>
  نظرة عامة
 
-تضيف تقنية التوقيع المتعدد (multi-sig) طبقة إضافية من الأمان إلى محفظة TBC Wallet الخاصة بك من خلال طلب موافقات متعددة قبل تنفيذ أي معاملة. هذه الميزة ضرورية لحماية الأصول عالية القيمة</description>
+تضيف تقنية التوقيع المتعدد (multi-sig) طبقة إضافية من الأمان إلى محفظة TB Wallet الخاصة بك من خلال طلب موافقات متعددة قبل تنفيذ أي معاملة. هذه الميزة ضرورية لحماية الأصول عالية القيمة</description>
       <pubDate>Wed, 15 Jan 2025 00:00:00 GMT</pubDate>
       <category>features</category>
     </item>
@@ -73,7 +75,7 @@
       <description>
  نظرة عامة
 
-تتيح لك ميزة رسوم USDT في TBC Wallet دفع رسوم المعاملات باستخدام USDT (Tether) بدلاً من رموز الشبكة الأصلية. يوفر هذا استقرار الأسعار والقابلية للتنبؤ، وهو أمر قيّم بشكل خاص أثناء ظروف</description>
+تتيح لك ميزة رسوم USDT في TB Wallet دفع رسوم المعاملات باستخدام USDT (Tether) بدلاً من رموز الشبكة الأصلية. يوفر هذا استقرار الأسعار والقابلية للتنبؤ، وهو أمر قيّم بشكل خاص أثناء ظروف</description>
       <pubDate>Wed, 15 Jan 2025 00:00:00 GMT</pubDate>
       <category>features</category>
     </item>

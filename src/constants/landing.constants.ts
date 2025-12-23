@@ -28,7 +28,7 @@ export const FEATURES: Feature[] = [
   {
     id: 'miner',
     title: msg`Miner`,
-    description: msg`Boost earnings by connecting to mining pools and tracking rewards in-app. TBC Wallet simplifies mining management, helping both new and seasoned users maximize returns securely.`,
+    description: msg`Boost earnings by connecting to mining pools and tracking rewards in-app. TB Wallet simplifies mining management, helping both new and seasoned users maximize returns securely.`,
     icon: Miner,
     color: 'card-chain-green',
   },
@@ -42,14 +42,14 @@ export const FEATURES: Feature[] = [
   {
     id: 'swap',
     title: msg`Swap`,
-    description: msg`Effortlessly exchange tokens across chains with low fees and real-time rates. Whether trading Bitcoin for TRON or optimizing your portfolio, TBC Wallet makes swaps quick and intuitive.`,
+    description: msg`Effortlessly exchange tokens across chains with low fees and real-time rates. Whether trading Bitcoin for TRON or optimizing your portfolio, TB Wallet makes swaps quick and intuitive.`,
     icon: Swap,
     color: 'card-chain-purple',
   },
   {
     id: 'instant-transfer',
     title: msg`Instant transfer`,
-    description: msg`Send assets across chains with near-zero delays and minimal costs. TBC Wallet ensures fast, reliable transactions for everyday use, from peer-to-peer sends to dApp funding.`,
+    description: msg`Send assets across chains with near-zero delays and minimal costs. TB Wallet ensures fast, reliable transactions for everyday use, from peer-to-peer sends to dApp funding.`,
     icon: Layers,
     color: 'card-chain-orange',
   },
@@ -96,7 +96,7 @@ export const TESTIMONIALS: Testimonial[] = [
     name: 'Sarah Johnson',
     role: 'Crypto Investor',
     content:
-      "TBC Wallet has completely transformed how I manage my crypto portfolio. The interface is intuitive and the security is top-notch.'",
+      "TB Wallet has completely transformed how I manage my crypto portfolio. The interface is intuitive and the security is top-notch.'",
     avatar: '/assets/avatar/1.webp',
   },
   {
@@ -104,7 +104,7 @@ export const TESTIMONIALS: Testimonial[] = [
     name: 'Mike Chen',
     role: 'DeFi Enthusiast',
     content:
-      'The staking features and DeFi integration make TBC Wallet my go-to platform. I have earned more rewards than ever before.',
+      'The staking features and DeFi integration make TB Wallet my go-to platform. I have earned more rewards than ever before.',
     avatar: '/assets/avatar/2.webp',
   },
   {
@@ -112,7 +112,7 @@ export const TESTIMONIALS: Testimonial[] = [
     name: 'Emily Rodriguez',
     role: 'Beginner Trader',
     content:
-      'As someone new to crypto, TBC Wallet made it so easy to get started. The tutorials and support team are amazing.',
+      'As someone new to crypto, TB Wallet made it so easy to get started. The tutorials and support team are amazing.',
     avatar: '/assets/avatar/3.webp',
   },
   {
@@ -127,7 +127,7 @@ export const TESTIMONIALS: Testimonial[] = [
     name: 'Sarah Johnson',
     role: 'Crypto Investor',
     content:
-      "TBC Wallet has completely transformed how I manage my crypto portfolio. The interface is intuitive and the security is top-notch.'",
+      "TB Wallet has completely transformed how I manage my crypto portfolio. The interface is intuitive and the security is top-notch.'",
     avatar: '/assets/avatar/5.webp',
   },
   {
@@ -135,7 +135,7 @@ export const TESTIMONIALS: Testimonial[] = [
     name: 'Mike Chen',
     role: 'DeFi Enthusiast',
     content:
-      'The staking features and DeFi integration make TBC Wallet my go-to platform. I have earned more rewards than ever before.',
+      'The staking features and DeFi integration make TB Wallet my go-to platform. I have earned more rewards than ever before.',
     avatar: '/assets/avatar/6.webp',
   },
   {
@@ -143,7 +143,7 @@ export const TESTIMONIALS: Testimonial[] = [
     name: 'Emily Rodriguez',
     role: 'Beginner Trader',
     content:
-      'As someone new to crypto, TBC Wallet made it so easy to get started. The tutorials and support team are amazing.',
+      'As someone new to crypto, TB Wallet made it so easy to get started. The tutorials and support team are amazing.',
     avatar: '/assets/avatar/7.webp',
   },
   {
@@ -158,7 +158,7 @@ export const TESTIMONIALS: Testimonial[] = [
     name: 'Sarah Johnson',
     role: 'Crypto Investor',
     content:
-      "TBC Wallet has completely transformed how I manage my crypto portfolio. The interface is intuitive and the security is top-notch.'",
+      "TB Wallet has completely transformed how I manage my crypto portfolio. The interface is intuitive and the security is top-notch.'",
     avatar: '/assets/avatar/9.webp',
   },
   {
@@ -166,7 +166,7 @@ export const TESTIMONIALS: Testimonial[] = [
     name: 'Mike Chen',
     role: 'DeFi Enthusiast',
     content:
-      'The staking features and DeFi integration make TBC Wallet my go-to platform. I have earned more rewards than ever before.',
+      'The staking features and DeFi integration make TB Wallet my go-to platform. I have earned more rewards than ever before.',
     avatar: '/assets/avatar/10.webp',
   },
   {
@@ -174,7 +174,7 @@ export const TESTIMONIALS: Testimonial[] = [
     name: 'Emily Rodriguez',
     role: 'Beginner Trader',
     content:
-      'As someone new to crypto, TBC Wallet made it so easy to get started. The tutorials and support team are amazing.',
+      'As someone new to crypto, TB Wallet made it so easy to get started. The tutorials and support team are amazing.',
     avatar: '/assets/avatar/11.webp',
   },
   {
@@ -189,7 +189,7 @@ export const TESTIMONIALS: Testimonial[] = [
     name: 'Sarah Johnson',
     role: 'Crypto Investor',
     content:
-      "TBC Wallet has completely transformed how I manage my crypto portfolio. The interface is intuitive and the security is top-notch.'",
+      "TB Wallet has completely transformed how I manage my crypto portfolio. The interface is intuitive and the security is top-notch.'",
     avatar: '/assets/avatar/13.webp',
   },
   {
@@ -197,7 +197,7 @@ export const TESTIMONIALS: Testimonial[] = [
     name: 'Mike Chen',
     role: 'DeFi Enthusiast',
     content:
-      'The staking features and DeFi integration make TBC Wallet my go-to platform. I have earned more rewards than ever before.',
+      'The staking features and DeFi integration make TB Wallet my go-to platform. I have earned more rewards than ever before.',
     avatar: '/assets/avatar/14.webp',
   },
   {
@@ -205,7 +205,7 @@ export const TESTIMONIALS: Testimonial[] = [
     name: 'Emily Rodriguez',
     role: 'Beginner Trader',
     content:
-      'As someone new to crypto, TBC Wallet made it so easy to get started. The tutorials and support team are amazing.',
+      'As someone new to crypto, TB Wallet made it so easy to get started. The tutorials and support team are amazing.',
     avatar: '/assets/avatar/15.webp',
   },
   {

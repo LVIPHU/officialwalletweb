@@ -96,8 +96,8 @@ export async function generateMetadata({ params }: DynamicPageParams): Promise<M
 
   if (!shouldHandleRoute(lang, rest)) {
     return genPageMetadata({
-      title: 'TBC Wallet',
-      description: 'TBC Wallet documentation and content',
+      title: 'TB Wallet',
+      description: 'TB Wallet documentation and content',
       lang: 'en',
       path: '',
     })
@@ -114,7 +114,7 @@ export async function generateMetadata({ params }: DynamicPageParams): Promise<M
     if (content) {
       return genPageMetadata({
         title: content.title || pathString,
-        description: content.description || 'TBC Wallet documentation and content',
+        description: content.description || 'TB Wallet documentation and content',
         lang,
         path: pathString,
         date: content.date,
@@ -126,8 +126,8 @@ export async function generateMetadata({ params }: DynamicPageParams): Promise<M
   }
 
   return genPageMetadata({
-    title: 'TBC Wallet',
-    description: 'TBC Wallet documentation and content',
+    title: 'TB Wallet',
+    description: 'TB Wallet documentation and content',
     lang: VALID_LOCALES.includes(lang) ? lang : 'en',
     path: rest.join('/'),
   })

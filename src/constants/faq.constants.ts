@@ -28,23 +28,23 @@ export const FAQ_CATEGORIES: readonly FAQCategory[] = [
     items: [
       {
         id: 'what-is-tbc-wallet',
-        question: msg`What is TBC Wallet?`,
-        answer: msg`TBC Wallet is a secure, multi-chain cryptocurrency wallet that supports multiple blockchain networks including TBChain, Bitcoin, Ethereum, and TRON. It provides a user-friendly interface for managing digital assets, executing transactions, and accessing DeFi services.`,
+        question: msg`What is TB Wallet?`,
+        answer: msg`TB Wallet is a secure, multi-chain cryptocurrency wallet that supports multiple blockchain networks including TBChain, Bitcoin, Ethereum, and TRON. It provides a user-friendly interface for managing digital assets, executing transactions, and accessing DeFi services.`,
       },
       {
         id: 'which-platforms',
-        question: msg`Which platforms does TBC Wallet support?`,
-        answer: msg`TBC Wallet is available on: Mobile: iOS and Android applications, Desktop: Windows and MacOS applications, Browser: Browser extension for Chrome, Firefox, and Edge.`,
+        question: msg`Which platforms does TB Wallet support?`,
+        answer: msg`TB Wallet is available on: Mobile: iOS and Android applications, Desktop: Windows and MacOS applications, Browser: Browser extension for Chrome, Firefox, and Edge.`,
       },
       {
         id: 'is-free',
-        question: msg`Is TBC Wallet free to use?`,
-        answer: msg`Yes, TBC Wallet is free to download and use. However, blockchain networks charge transaction fees for processing transactions, which are standard across all wallets.`,
+        question: msg`Is TB Wallet free to use?`,
+        answer: msg`Yes, TB Wallet is free to download and use. However, blockchain networks charge transaction fees for processing transactions, which are standard across all wallets.`,
       },
       {
         id: 'get-started',
-        question: msg`How do I get started with TBC Wallet?`,
-        answer: msg`1. Download TBC Wallet from the App Store, Google Play, or our website. 2. Create a new wallet or import an existing one. 3. Secure your wallet with a strong password and backup your recovery phrase. 4. Start managing your digital assets.`,
+        question: msg`How do I get started with TB Wallet?`,
+        answer: msg`1. Download TB Wallet from the App Store, Google Play, or our website. 2. Create a new wallet or import an existing one. 3. Secure your wallet with a strong password and backup your recovery phrase. 4. Start managing your digital assets.`,
       },
     ],
   },
@@ -54,8 +54,8 @@ export const FAQ_CATEGORIES: readonly FAQCategory[] = [
     items: [
       {
         id: 'how-secure',
-        question: msg`How secure is TBC Wallet?`,
-        answer: msg`TBC Wallet employs multiple security layers: Encrypted Storage: All private keys are encrypted and stored locally on your device. Multi-Signature Support: Enhanced security for high-value transactions. Biometric Authentication: Fingerprint and face recognition support. Regular Security Updates: Continuous security improvements.`,
+        question: msg`How secure is TB Wallet?`,
+        answer: msg`TB Wallet employs multiple security layers: Encrypted Storage: All private keys are encrypted and stored locally on your device. Multi-Signature Support: Enhanced security for high-value transactions. Biometric Authentication: Fingerprint and face recognition support. Regular Security Updates: Continuous security improvements.`,
       },
       {
         id: 'lose-device',
@@ -69,8 +69,8 @@ export const FAQ_CATEGORIES: readonly FAQCategory[] = [
       },
       {
         id: 'can-access-funds',
-        question: msg`Can TBC Wallet access my funds?`,
-        answer: msg`No, TBC Wallet cannot access your funds. Your private keys are stored locally on your device and are never transmitted to our servers. You have complete control over your assets.`,
+        question: msg`Can TB Wallet access my funds?`,
+        answer: msg`No, TB Wallet cannot access your funds. Your private keys are stored locally on your device and are never transmitted to our servers. You have complete control over your assets.`,
       },
     ],
   },
@@ -81,7 +81,7 @@ export const FAQ_CATEGORIES: readonly FAQCategory[] = [
       {
         id: 'blockchain-networks',
         question: msg`What blockchain networks are supported?`,
-        answer: msg`TBC Wallet supports: TBChain (native network), Bitcoin, Ethereum and EVM-compatible chains, TRON, And more networks continuously being added.`,
+        answer: msg`TB Wallet supports: TBChain (native network), Bitcoin, Ethereum and EVM-compatible chains, TRON, And more networks continuously being added.`,
       },
       {
         id: 'multi-signature',
@@ -96,7 +96,7 @@ export const FAQ_CATEGORIES: readonly FAQCategory[] = [
       {
         id: 'usdt-fee',
         question: msg`Can I pay fees with USDT?`,
-        answer: msg`Yes, TBC Wallet supports paying transaction fees with USDT (Tether), providing price stability and predictability, especially valuable during volatile market conditions.`,
+        answer: msg`Yes, TB Wallet supports paying transaction fees with USDT (Tether), providing price stability and predictability, especially valuable during volatile market conditions.`,
       },
     ],
   },
@@ -147,7 +147,7 @@ export const FAQ_CATEGORIES: readonly FAQCategory[] = [
       },
       {
         id: 'update-wallet',
-        question: msg`How do I update TBC Wallet?`,
+        question: msg`How do I update TB Wallet?`,
         answer: msg`Updates are available through: Mobile: App Store or Google Play Store. Desktop: Download from our website. Browser Extension: Update through your browser's extension store.`,
       },
     ],
@@ -164,7 +164,7 @@ export const FAQ_CATEGORIES: readonly FAQCategory[] = [
       {
         id: 'multiple-wallets',
         question: msg`Can I have multiple wallets?`,
-        answer: msg`Yes, you can create and manage multiple wallets within TBC Wallet. Each wallet has its own recovery phrase and private keys.`,
+        answer: msg`Yes, you can create and manage multiple wallets within TB Wallet. Each wallet has its own recovery phrase and private keys.`,
       },
       {
         id: 'delete-wallet',
@@ -200,7 +200,7 @@ export const FAQ_CATEGORIES: readonly FAQCategory[] = [
     items: [
       {
         id: 'learn-more',
-        question: msg`Where can I learn more about TBC Wallet?`,
+        question: msg`Where can I learn more about TB Wallet?`,
         answer: msg`Visit our website for detailed documentation. Check our blog for updates and tutorials. Join our community on Telegram and Discord. Follow us on social media for the latest news.`,
       },
       {

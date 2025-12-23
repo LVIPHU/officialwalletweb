@@ -8,11 +8,11 @@
  */
 
 export const SITE_METADATA = {
-  title: 'TBC Wallet - The Future of Cryptocurrency Management',
-  titleHeader: 'TBC Wallet',
+  title: 'TB Wallet - The Future of Cryptocurrency Management',
+  titleHeader: 'TB Wallet',
   author: 'NEXSOFT',
   description:
-    'Experience the future of cryptocurrency management with TBC Wallet. Secure, fast, and user-friendly platform for all your digital assets.',
+    'Experience the future of cryptocurrency management with TB Wallet. Secure, fast, and user-friendly platform for all your digital assets.',
   language: 'en',
   locale: 'en',
   stickyNav: true,

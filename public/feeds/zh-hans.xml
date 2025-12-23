@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>TBC Wallet - The Future of Cryptocurrency Management - ZH-HANS</title>
+    <title>TB Wallet - The Future of Cryptocurrency Management - ZH-HANS</title>
     <link>https://officialwalletweb.vercel.app/zh-hans</link>
-    <description>Experience the future of cryptocurrency management with TBC Wallet. Secure, fast, and user-friendly platform for all your digital assets.</description>
+    <description>Experience the future of cryptocurrency management with TB Wallet. Secure, fast, and user-friendly platform for all your digital assets.</description>
     <language>zh-hans</language>
     <managingEditor>contact@tbchatofficial.com (NEXSOFT)</managingEditor>
     <webMaster>contact@tbchatofficial.com (NEXSOFT)</webMaster>
@@ -11,7 +11,8 @@
     <atom:link href="https://officialwalletweb.vercel.app/feeds/zh-hans.xml" rel="self" type="application/rss+xml"/>
     <item>
       <guid isPermaLink="true">https://officialwalletweb.vercel.app/zh-hans/about/privacy-policy</guid>
-      <title>隐私协议</title>
+      <title>隐私协议
+</title>
       <link>https://officialwalletweb.vercel.app/zh-hans/about/privacy-policy</link>
       <description>
 欢迎您使用官方网站（以下简称：官网）的运营主体。我们尊重并保护您的隐私，在您使用我们的服务时或在接受服务过程中，所提供给我们或我们收集的关于您的个人信息，我们将按照移动应用隐私政策（以下简称&quot;本政策&quot;）进行收集、存储、使用及对外提供。本政策与您使用我们的产品和服务关系紧密，请您仔细阅读并理解本政策全部内容，一旦您确认充分理解并同意后使用移动应用产品或服务，即表示您已充分理解并同意我们可按照本政</description>
@@ -20,7 +21,8 @@
     </item>
     <item>
       <guid isPermaLink="true">https://officialwalletweb.vercel.app/zh-hans/about/terms-of-service</guid>
-      <title>请仔细阅读服务条款</title>
+      <title>请仔细阅读服务条款
+</title>
       <link>https://officialwalletweb.vercel.app/zh-hans/about/terms-of-service</link>
       <description>
  请仔细阅读这些服务条款。
@@ -46,7 +48,7 @@
       <description>
  概述
 
-TBC Wallet 的即时转账功能支持闪电般的跨链交易，费用极低且几乎即时结算。无论是向朋友发送资金、为 dApp 提供资金，还是在网络间转移资产，即时转账都能实现无缝且高效的体验。
+TB Wallet 的即时转账功能支持闪电般的跨链交易，费用极低且几乎即时结算。无论是向朋友发送资金、为 dApp 提供资金，还是在网络间转移资产，即时转账都能实现无缝且高效的体验。
 
  工作原理
 
@@ -66,7 +68,7 @@ TBC Wallet 的即时转账功能支持闪电般的跨链交易，费用极低且
       <description>
  概述
 
-TBC Wallet 的矿工功能使您能够参与权益证明 (PoS) 共识机制。质押您的代币，为验证器投票，管理节点，并通过安全且用户友好的界面赚取奖励。
+TB Wallet 的矿工功能使您能够参与权益证明 (PoS) 共识机制。质押您的代币，为验证器投票，管理节点，并通过安全且用户友好的界面赚取奖励。
 
  1. 质押和验证器模块
 
@@ -83,7 +85,7 @@ TBC Wallet 的矿工功能使您能够参与权益证明 (PoS) 共识机制。�
       <description>
  概述
 
-多重签名（multi-sig）技术通过要求在执行任何交易之前进行多次批准，为您的 TBC Wallet 添加了额外的安全层。此功能对于保护高价值资产至关重要，非常适合个人使用和共享钱包。
+多重签名（multi-sig）技术通过要求在执行任何交易之前进行多次批准，为您的 TB Wallet 添加了额外的安全层。此功能对于保护高价值资产至关重要，非常适合个人使用和共享钱包。
 
  什么是多重签名？
 
@@ -98,7 +100,7 @@ TBC Wallet 的矿工功能使您能够参与权益证明 (PoS) 共识机制。�
       <description>
  概述
 
-TBC Wallet 的 USDT 手续费功能允许您使用 USDT（Tether）而不是原生网络代币来支付交易费用。这提供了价格稳定性和可预测性，在市场波动条件下尤其有价值。
+TB Wallet 的 USDT 手续费功能允许您使用 USDT（Tether）而不是原生网络代币来支付交易费用。这提供了价格稳定性和可预测性，在市场波动条件下尤其有价值。
 
  什么是 USDT 手续费？
 

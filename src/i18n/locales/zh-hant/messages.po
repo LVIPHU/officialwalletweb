@@ -16,8 +16,8 @@ msgid ". All rights reserved."
 msgstr "。版權所有。"
 
 #: src/constants/faq.constants.ts:47
-msgid "1. Download TBC Wallet from the App Store, Google Play, or our website. 2. Create a new wallet or import an existing one. 3. Secure your wallet with a strong password and backup your recovery phrase. 4. Start managing your digital assets."
-msgstr "1. 從 App Store、Google Play 或我們的網站下載 TBC Wallet。2. 建立新錢包或匯入現有錢包。3. 使用強密碼保護您的錢包並備份您的恢復短語。4. 開始管理您的數位資產。"
+msgid "1. Download TB Wallet from the App Store, Google Play, or our website. 2. Create a new wallet or import an existing one. 3. Secure your wallet with a strong password and backup your recovery phrase. 4. Start managing your digital assets."
+msgstr "1. 從 App Store、Google Play 或我們的網站下載 TB Wallet。2. 建立新錢包或匯入現有錢包。3. 使用強密碼保護您的錢包並備份您的恢復短語。4. 開始管理您的數位資產。"
 
 #: src/constants/faq.constants.ts:162
 msgid "1. Go to Settings. 2. Select Security. 3. Choose Change Password. 4. Enter your current and new password. 5. Confirm the change."
@@ -72,8 +72,8 @@ msgid "Boost earnings by connecting to mining pools and tracking rewards in-app"
 msgstr "透過連接礦池並在應用程式中追蹤獎勵以提升收益"
 
 #: src/constants/landing.constants.ts:31
-msgid "Boost earnings by connecting to mining pools and tracking rewards in-app. TBC Wallet simplifies mining management, helping both new and seasoned users maximize returns securely."
-msgstr "透過連接礦池並在應用程式中追蹤獎勵以提升收益。TBC Wallet 簡化挖礦管理，協助新手與進階用戶安全地最大化回報。"
+msgid "Boost earnings by connecting to mining pools and tracking rewards in-app. TB Wallet simplifies mining management, helping both new and seasoned users maximize returns securely."
+msgstr "透過連接礦池並在應用程式中追蹤獎勵以提升收益。TB Wallet 簡化挖礦管理，協助新手與進階用戶安全地最大化回報。"
 
 #: src/constants/navigation.constants.ts:48
 msgid "Browser Extension"
@@ -92,8 +92,8 @@ msgid "Can I pay fees with USDT?"
 msgstr "我可以用 USDT 支付手續費嗎？"
 
 #: src/constants/faq.constants.ts:72
-msgid "Can TBC Wallet access my funds?"
-msgstr "TBC Wallet 可以存取我的資金嗎？"
+msgid "Can TB Wallet access my funds?"
+msgstr "TB Wallet 可以存取我的資金嗎？"
 
 #: src/components/molecules/platform-tabs/index.tsx:75
 #: src/components/templates/coming-soon/index.tsx:26
@@ -135,8 +135,8 @@ msgid "Download on the"
 msgstr "下載在"
 
 #: src/constants/landing.constants.ts:45
-msgid "Effortlessly exchange tokens across chains with low fees and real-time rates. Whether trading Bitcoin for TRON or optimizing your portfolio, TBC Wallet makes swaps quick and intuitive."
-msgstr "輕鬆跨鏈兌換代幣，低手續費與即時匯率。不論是比特幣換取 TRON，或優化資產組合，TBC Wallet 讓兌換更快速直覺。"
+msgid "Effortlessly exchange tokens across chains with low fees and real-time rates. Whether trading Bitcoin for TRON or optimizing your portfolio, TB Wallet makes swaps quick and intuitive."
+msgstr "輕鬆跨鏈兌換代幣，低手續費與即時匯率。不論是比特幣換取 TRON，或優化資產組合，TB Wallet 讓兌換更快速直覺。"
 
 #: src/constants/landing.constants.ts:69
 msgid "Ethereum"
@@ -163,8 +163,8 @@ msgid "Features"
 msgstr "功能特色"
 
 #: src/constants/navigation.constants.ts:97
-msgid "Find answers to frequently asked questions about TBC Wallet"
-msgstr "查找有關 TBC Wallet 的常見問題解答"
+msgid "Find answers to frequently asked questions about TB Wallet"
+msgstr "查找有關 TB Wallet 的常見問題解答"
 
 #: src/constants/navigation.constants.ts:73
 msgid "Fortify your wallet with multi-approval transactions for enhanced protection"
@@ -213,12 +213,12 @@ msgid "How do I delete my wallet?"
 msgstr "如何刪除我的錢包？"
 
 #: src/constants/faq.constants.ts:46
-msgid "How do I get started with TBC Wallet?"
-msgstr "如何開始使用 TBC Wallet？"
+msgid "How do I get started with TB Wallet?"
+msgstr "如何開始使用 TB Wallet？"
 
 #: src/constants/faq.constants.ts:150
-msgid "How do I update TBC Wallet?"
-msgstr "如何更新 TBC Wallet？"
+msgid "How do I update TB Wallet?"
+msgstr "如何更新 TB Wallet？"
 
 #: src/constants/faq.constants.ts:93
 msgid "How does Instant Transfer work?"
@@ -229,8 +229,8 @@ msgid "How long do transactions take?"
 msgstr "交易需要多長時間？"
 
 #: src/constants/faq.constants.ts:57
-msgid "How secure is TBC Wallet?"
-msgstr "TBC Wallet 有多安全？"
+msgid "How secure is TB Wallet?"
+msgstr "TB Wallet 有多安全？"
 
 #: src/constants/faq.constants.ts:140
 msgid "I can't see my balance. What's wrong?"
@@ -262,8 +262,8 @@ msgid "iOS app"
 msgstr "iOS 應用程式"
 
 #: src/constants/faq.constants.ts:41
-msgid "Is TBC Wallet free to use?"
-msgstr "TBC Wallet 是免費使用的嗎？"
+msgid "Is TB Wallet free to use?"
+msgstr "TB Wallet 是免費使用的嗎？"
 
 #: src/constants/landing.constants.ts:248
 msgid "Mac OS"
@@ -308,8 +308,8 @@ msgid "No language found."
 msgstr "未找到語言。"
 
 #: src/constants/faq.constants.ts:73
-msgid "No, TBC Wallet cannot access your funds. Your private keys are stored locally on your device and are never transmitted to our servers. You have complete control over your assets."
-msgstr "不，TBC Wallet 無法存取您的資金。您的私鑰儲存在您裝置的本地，永遠不會傳輸到我們的伺服器。您對資產擁有完全控制權。"
+msgid "No, TB Wallet cannot access your funds. Your private keys are stored locally on your device and are never transmitted to our servers. You have complete control over your assets."
+msgstr "不，TB Wallet 無法存取您的資金。您的私鑰儲存在您裝置的本地，永遠不會傳輸到我們的伺服器。您對資產擁有完全控制權。"
 
 #: src/constants/faq.constants.ts:120
 msgid "Once a transaction is confirmed on the blockchain, it cannot be cancelled. Always verify transaction details before confirming."
@@ -357,8 +357,8 @@ msgid "Send assets across chains with near-zero delays and minimal costs"
 msgstr "跨鏈轉移資產，延遲近乎為零、成本極低"
 
 #: src/constants/landing.constants.ts:52
-msgid "Send assets across chains with near-zero delays and minimal costs. TBC Wallet ensures fast, reliable transactions for everyday use, from peer-to-peer sends to dApp funding."
-msgstr "跨鏈發送資產，實現幾乎零延遲和極低成本。TBC Wallet 確保日常使用中的交易快速且可靠——從點對點發送到 dApp 資金支援。"
+msgid "Send assets across chains with near-zero delays and minimal costs. TB Wallet ensures fast, reliable transactions for everyday use, from peer-to-peer sends to dApp funding."
+msgstr "跨鏈發送資產，實現幾乎零延遲和極低成本。TB Wallet 確保日常使用中的交易快速且可靠——從點對點發送到 dApp 資金支援。"
 
 #: src/components/templates/coming-soon/index.tsx:42
 msgid "Sign up"
@@ -388,39 +388,39 @@ msgstr "安全無縫地兌換"
 
 #: src/components/templates/home/desktop/index.tsx:275
 #: src/components/templates/home/mobile/index.tsx:81
-msgid "TBC Wallet bridges the gap for beginners and experts alike. Its user-friendly design offers easy onboarding for newcomers and advanced tools for DeFi pros, ensuring secure, efficient navigation of the decentralized ecosystem."
-msgstr "TBC Wallet 為新手與專業用戶架起橋樑。其友善的設計讓新用戶輕鬆上手，同時為 DeFi 專家提供進階工具，確保在去中心化生態中安全高效地操作。"
+msgid "TB Wallet bridges the gap for beginners and experts alike. Its user-friendly design offers easy onboarding for newcomers and advanced tools for DeFi pros, ensuring secure, efficient navigation of the decentralized ecosystem."
+msgstr "TB Wallet 為新手與專業用戶架起橋樑。其友善的設計讓新用戶輕鬆上手，同時為 DeFi 專家提供進階工具，確保在去中心化生態中安全高效地操作。"
 
 #: src/components/templates/home/desktop/index.tsx:319
 #: src/components/templates/home/mobile/index.tsx:109
-msgid "TBC Wallet connects you to diverse ecosystems, from Bitcoin and Ethereum to Optimism and Cosmos. Manage portfolios, engage in DeFi, trade NFTs, and link to dApps—all in one secure, self-custody hub."
-msgstr "TBC Wallet 連結多元生態系，從比特幣、以太坊到 Optimism 與 Cosmos。集中管理資產組合、參與 DeFi、交易 NFT 並連接 dApp——一切盡在安全自託中心。"
+msgid "TB Wallet connects you to diverse ecosystems, from Bitcoin and Ethereum to Optimism and Cosmos. Manage portfolios, engage in DeFi, trade NFTs, and link to dApps—all in one secure, self-custody hub."
+msgstr "TB Wallet 連結多元生態系，從比特幣、以太坊到 Optimism 與 Cosmos。集中管理資產組合、參與 DeFi、交易 NFT 並連接 dApp——一切盡在安全自託中心。"
 
 #: src/constants/faq.constants.ts:58
-msgid "TBC Wallet employs multiple security layers: Encrypted Storage: All private keys are encrypted and stored locally on your device. Multi-Signature Support: Enhanced security for high-value transactions. Biometric Authentication: Fingerprint and face recognition support. Regular Security Updates: Continuous security improvements."
-msgstr "TBC Wallet 採用多層安全保護：加密儲存：所有私鑰均經過加密並儲存在您裝置的本地。多重簽章支援：為高價值交易提供增強安全性。生物識別認證：支援指紋和面部識別。定期安全更新：持續的安全改進。"
+msgid "TB Wallet employs multiple security layers: Encrypted Storage: All private keys are encrypted and stored locally on your device. Multi-Signature Support: Enhanced security for high-value transactions. Biometric Authentication: Fingerprint and face recognition support. Regular Security Updates: Continuous security improvements."
+msgstr "TB Wallet 採用多層安全保護：加密儲存：所有私鑰均經過加密並儲存在您裝置的本地。多重簽章支援：為高價值交易提供增強安全性。生物識別認證：支援指紋和面部識別。定期安全更新：持續的安全改進。"
 
 #: src/components/templates/home/desktop/index.tsx:215
 #: src/components/templates/home/mobile/index.tsx:36
-msgid "TBC Wallet empowers you to manage diverse assets like Bitcoin, Ethereum, and TRON. Securely dive into DeFi, NFTs, and dApps with full control. Your keys, your future."
-msgstr "TBC Wallet 讓您輕鬆管理多樣資產，如比特幣、以太坊與 TRON。安全探索 DeFi、NFT 與 dApp，完全掌控您的未來。"
+msgid "TB Wallet empowers you to manage diverse assets like Bitcoin, Ethereum, and TRON. Securely dive into DeFi, NFTs, and dApps with full control. Your keys, your future."
+msgstr "TB Wallet 讓您輕鬆管理多樣資產，如比特幣、以太坊與 TRON。安全探索 DeFi、NFT 與 dApp，完全掌控您的未來。"
 
 #: src/components/templates/home/desktop/index.tsx:248
 #: src/components/templates/home/mobile/index.tsx:64
-msgid "TBC Wallet is a leading multi-chain wallet with robust security and an intuitive interface. It simplifies Web3 interactions, from token management to dApp access, while giving you total control over your digital wealth."
-msgstr "TBC Wallet 是領先的多鏈錢包，具備強大安全性與直觀介面。從代幣管理到 dApp 存取，簡化您的 Web3 體驗，同時讓您完全掌控數位資產。"
+msgid "TB Wallet is a leading multi-chain wallet with robust security and an intuitive interface. It simplifies Web3 interactions, from token management to dApp access, while giving you total control over your digital wealth."
+msgstr "TB Wallet 是領先的多鏈錢包，具備強大安全性與直觀介面。從代幣管理到 dApp 存取，簡化您的 Web3 體驗，同時讓您完全掌控數位資產。"
 
 #: src/constants/faq.constants.ts:32
-msgid "TBC Wallet is a secure, multi-chain cryptocurrency wallet that supports multiple blockchain networks including TBChain, Bitcoin, Ethereum, and TRON. It provides a user-friendly interface for managing digital assets, executing transactions, and accessing DeFi services."
-msgstr "TBC Wallet 是一個安全的多鏈加密貨幣錢包，支援包括 TBChain、比特幣、以太坊和波場在內的多個區塊鏈網路。它提供使用者友善的介面，用於管理數位資產、執行交易和存取 DeFi 服務。"
+msgid "TB Wallet is a secure, multi-chain cryptocurrency wallet that supports multiple blockchain networks including TBChain, Bitcoin, Ethereum, and TRON. It provides a user-friendly interface for managing digital assets, executing transactions, and accessing DeFi services."
+msgstr "TB Wallet 是一個安全的多鏈加密貨幣錢包，支援包括 TBChain、比特幣、以太坊和波場在內的多個區塊鏈網路。它提供使用者友善的介面，用於管理數位資產、執行交易和存取 DeFi 服務。"
 
 #: src/constants/faq.constants.ts:37
-msgid "TBC Wallet is available on: Mobile: iOS and Android applications, Desktop: Windows and MacOS applications, Browser: Browser extension for Chrome, Firefox, and Edge."
-msgstr "TBC Wallet 可在以下平台使用：行動端：iOS 和 Android 應用程式，桌面端：Windows 和 MacOS 應用程式，瀏覽器：適用於 Chrome、Firefox 和 Edge 的瀏覽器擴充功能。"
+msgid "TB Wallet is available on: Mobile: iOS and Android applications, Desktop: Windows and MacOS applications, Browser: Browser extension for Chrome, Firefox, and Edge."
+msgstr "TB Wallet 可在以下平台使用：行動端：iOS 和 Android 應用程式，桌面端：Windows 和 MacOS 應用程式，瀏覽器：適用於 Chrome、Firefox 和 Edge 的瀏覽器擴充功能。"
 
 #: src/constants/faq.constants.ts:84
-msgid "TBC Wallet supports: TBChain (native network), Bitcoin, Ethereum and EVM-compatible chains, TRON, And more networks continuously being added."
-msgstr "TBC Wallet 支援：TBChain（原生網路）、比特幣、以太坊和 EVM 相容鏈、波場，以及持續新增的更多網路。"
+msgid "TB Wallet supports: TBChain (native network), Bitcoin, Ethereum and EVM-compatible chains, TRON, And more networks continuously being added."
+msgstr "TB Wallet 支援：TBChain（原生網路）、比特幣、以太坊和 EVM 相容鏈、波場，以及持續新增的更多網路。"
 
 #: src/constants/landing.constants.ts:66
 msgid "TBChain"
@@ -520,8 +520,8 @@ msgid "What is Multi-Signature?"
 msgstr "什麼是多重簽章？"
 
 #: src/constants/faq.constants.ts:31
-msgid "What is TBC Wallet?"
-msgstr "什麼是 TBC Wallet？"
+msgid "What is TB Wallet?"
+msgstr "什麼是 TB Wallet？"
 
 #: src/constants/faq.constants.ts:62
 msgid "What should I do if I lose my device?"
@@ -536,12 +536,12 @@ msgid "When contacting support, please provide: Your wallet version, Device and 
 msgstr "聯絡支援時，請提供：您的錢包版本、裝置和作業系統、問題描述、如適用請提供截圖、如與交易相關請提供交易雜湊。"
 
 #: src/constants/faq.constants.ts:203
-msgid "Where can I learn more about TBC Wallet?"
-msgstr "我在哪裡可以了解更多關於 TBC Wallet 的資訊？"
+msgid "Where can I learn more about TB Wallet?"
+msgstr "我在哪裡可以了解更多關於 TB Wallet 的資訊？"
 
 #: src/constants/faq.constants.ts:36
-msgid "Which platforms does TBC Wallet support?"
-msgstr "TBC Wallet 支援哪些平台？"
+msgid "Which platforms does TB Wallet support?"
+msgstr "TB Wallet 支援哪些平台？"
 
 #: src/constants/faq.constants.ts:124
 msgid "Why is my transaction pending?"
@@ -556,20 +556,20 @@ msgid "Windows app"
 msgstr "Windows 應用程式"
 
 #: src/constants/faq.constants.ts:42
-msgid "Yes, TBC Wallet is free to download and use. However, blockchain networks charge transaction fees for processing transactions, which are standard across all wallets."
-msgstr "是的，TBC Wallet 可免費下載和使用。但是，區塊鏈網路會收取處理交易的交易手續費，這在所有錢包中都是標準做法。"
+msgid "Yes, TB Wallet is free to download and use. However, blockchain networks charge transaction fees for processing transactions, which are standard across all wallets."
+msgstr "是的，TB Wallet 可免費下載和使用。但是，區塊鏈網路會收取處理交易的交易手續費，這在所有錢包中都是標準做法。"
 
 #: src/constants/faq.constants.ts:99
-msgid "Yes, TBC Wallet supports paying transaction fees with USDT (Tether), providing price stability and predictability, especially valuable during volatile market conditions."
-msgstr "是的，TBC Wallet 支援使用 USDT（Tether）支付交易手續費，提供價格穩定性和可預測性，在市場波動期間尤其有價值。"
+msgid "Yes, TB Wallet supports paying transaction fees with USDT (Tether), providing price stability and predictability, especially valuable during volatile market conditions."
+msgstr "是的，TB Wallet 支援使用 USDT（Tether）支付交易手續費，提供價格穩定性和可預測性，在市場波動期間尤其有價值。"
 
 #: src/constants/faq.constants.ts:209
 msgid "Yes, we provide comprehensive tutorials and guides on: Setting up your wallet, Making transactions, Using advanced features, Security best practices. For more information, visit our Support Center or check our documentation."
 msgstr "是的，我們提供全面的教學課程和指南，涵蓋：設定您的錢包、進行交易、使用進階功能、安全最佳實務。更多資訊，請造訪我們的支援中心或查看我們的文件。"
 
 #: src/constants/faq.constants.ts:167
-msgid "Yes, you can create and manage multiple wallets within TBC Wallet. Each wallet has its own recovery phrase and private keys."
-msgstr "是的，您可以在 TBC Wallet 內建立和管理多個錢包。每個錢包都有自己的恢復短語和私鑰。"
+msgid "Yes, you can create and manage multiple wallets within TB Wallet. Each wallet has its own recovery phrase and private keys."
+msgstr "是的，您可以在 TB Wallet 內建立和管理多個錢包。每個錢包都有自己的恢復短語和私鑰。"
 
 #: src/constants/faq.constants.ts:183
 msgid "You can reach us through: Email: contact@tbchatofficial.com, Support Center: Visit our Contact Us page, Social Media: Follow us on X, Telegram, and Discord."

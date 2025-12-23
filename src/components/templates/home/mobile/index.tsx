@@ -34,7 +34,7 @@ export default function HomeTemplateMobile() {
         </h1>
         <p className='max-w-md'>
           <Trans>
-            TBC Wallet empowers you to manage diverse assets like Bitcoin, Ethereum, and TRON. Securely dive into DeFi,
+            TB Wallet empowers you to manage diverse assets like Bitcoin, Ethereum, and TRON. Securely dive into DeFi,
             NFTs, and dApps with full control. Your keys, your future.
           </Trans>
         </p>
@@ -62,7 +62,7 @@ export default function HomeTemplateMobile() {
         </h2>
         <p className='mt-4'>
           <Trans>
-            TBC Wallet is a leading multi-chain wallet with robust security and an intuitive interface. It simplifies
+            TB Wallet is a leading multi-chain wallet with robust security and an intuitive interface. It simplifies
             Web3 interactions, from token management to dApp access, while giving you total control over your digital
             wealth.
           </Trans>
@@ -79,7 +79,7 @@ export default function HomeTemplateMobile() {
         </h2>
         <p className='mt-4'>
           <Trans>
-            TBC Wallet bridges the gap for beginners and experts alike. Its user-friendly design offers easy onboarding
+            TB Wallet bridges the gap for beginners and experts alike. Its user-friendly design offers easy onboarding
             for newcomers and advanced tools for DeFi pros, ensuring secure, efficient navigation of the decentralized
             ecosystem.
           </Trans>
@@ -107,7 +107,7 @@ export default function HomeTemplateMobile() {
         </h2>
         <p className='mt-4'>
           <Trans>
-            TBC Wallet connects you to diverse ecosystems, from Bitcoin and Ethereum to Optimism and Cosmos. Manage
+            TB Wallet connects you to diverse ecosystems, from Bitcoin and Ethereum to Optimism and Cosmos. Manage
             portfolios, engage in DeFi, trade NFTs, and link to dApps—all in one secure, self-custody hub.
           </Trans>
         </p>

@@ -19,9 +19,9 @@ import { genPageMetadata } from '@/lib/seo'
 export async function generateMetadata({ params }: PageLangParam): Promise<Metadata> {
   const lang = (await params).lang
   return genPageMetadata({
-    title: 'Frequently Asked Questions - TBC Wallet',
+    title: 'Frequently Asked Questions - TB Wallet',
     description:
-      'Find answers to frequently asked questions about TBC Wallet, including security, features, transactions, and troubleshooting.',
+      'Find answers to frequently asked questions about TB Wallet, including security, features, transactions, and troubleshooting.',
     lang,
     path: 'support/faq',
   })

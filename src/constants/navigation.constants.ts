@@ -94,7 +94,7 @@ export const NAVIGATION_ITEMS: Navigation = [
         id: 'FAQ',
         href: '/support/faq',
         title: msg`FAQ`,
-        description: msg`Find answers to frequently asked questions about TBC Wallet`,
+        description: msg`Find answers to frequently asked questions about TB Wallet`,
       },
       {
         id: 'contact-us',

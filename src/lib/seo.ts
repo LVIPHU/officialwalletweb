@@ -112,7 +112,7 @@ export function genPageMetadata({
   const fullTitle = title ? `${title} | ${SITE_METADATA.title}` : SITE_METADATA.title
   // Ensure description is never empty - use default if missing
   const fullDescription =
-    description?.trim() || SITE_METADATA.description || 'TBC Wallet - Secure cryptocurrency management platform'
+    description?.trim() || SITE_METADATA.description || 'TB Wallet - Secure cryptocurrency management platform'
   const fullImage = image || SITE_METADATA.socialBanner
   const canonicalUrl = `${siteUrl}/${lang}${path ? `/${path}` : ''}`
 

@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>TBC Wallet - The Future of Cryptocurrency Management - FR</title>
+    <title>TB Wallet - The Future of Cryptocurrency Management - FR</title>
     <link>https://officialwalletweb.vercel.app/fr</link>
-    <description>Experience the future of cryptocurrency management with TBC Wallet. Secure, fast, and user-friendly platform for all your digital assets.</description>
+    <description>Experience the future of cryptocurrency management with TB Wallet. Secure, fast, and user-friendly platform for all your digital assets.</description>
     <language>fr</language>
     <managingEditor>contact@tbchatofficial.com (NEXSOFT)</managingEditor>
     <webMaster>contact@tbchatofficial.com (NEXSOFT)</webMaster>
@@ -11,7 +11,8 @@
     <atom:link href="https://officialwalletweb.vercel.app/feeds/fr.xml" rel="self" type="application/rss+xml"/>
     <item>
       <guid isPermaLink="true">https://officialwalletweb.vercel.app/fr/about/privacy-policy</guid>
-      <title>Politique de confidentialité</title>
+      <title>Politique de confidentialité
+</title>
       <link>https://officialwalletweb.vercel.app/fr/about/privacy-policy</link>
       <description>
 Bienvenue sur le site web officiel de notre entreprise (ci-après dénommé « le Site »). Nous respectons et protégeons votre vie privée. Lorsque vous utilisez nos services, les informations personnell</description>
@@ -20,7 +21,8 @@ Bienvenue sur le site web officiel de notre entreprise (ci-après dénommé « l
     </item>
     <item>
       <guid isPermaLink="true">https://officialwalletweb.vercel.app/fr/about/terms-of-service</guid>
-      <title>Conditions d&#39;utilisation</title>
+      <title>Conditions d&#39;utilisation
+</title>
       <link>https://officialwalletweb.vercel.app/fr/about/terms-of-service</link>
       <description>
  Veuillez lire attentivement ces conditions d&#39;utilisation.
@@ -36,7 +38,7 @@ En accédant ou en utilisant nos services, vous acceptez d&#39;être lié par le
       <description>
  Vue d&#39;ensemble
 
-La fonctionnalité Transfert Instantané de TBC Wallet permet des transactions ultra-rapides entre chaînes avec des frais minimes et un règlement quasi instantané. Que vous envoyiez</description>
+La fonctionnalité Transfert Instantané de TB Wallet permet des transactions ultra-rapides entre chaînes avec des frais minimes et un règlement quasi instantané. Que vous envoyiez</description>
       <pubDate>Wed, 15 Jan 2025 00:00:00 GMT</pubDate>
       <category>features</category>
     </item>
@@ -47,7 +49,7 @@ La fonctionnalité Transfert Instantané de TBC Wallet permet des transactions u
       <description>
  Vue d&#39;ensemble
 
-La fonctionnalité Miner de TBC Wallet vous permet de participer au mécanisme de consensus Proof of Stake (PoS). Misez vos tokens, votez pour des validateurs, gérez des nœuds et ga</description>
+La fonctionnalité Miner de TB Wallet vous permet de participer au mécanisme de consensus Proof of Stake (PoS). Misez vos tokens, votez pour des validateurs, gérez des nœuds et ga</description>
       <pubDate>Wed, 15 Jan 2025 00:00:00 GMT</pubDate>
       <category>features</category>
     </item>
@@ -58,7 +60,7 @@ La fonctionnalité Miner de TBC Wallet vous permet de participer au mécanisme d
       <description>
  Vue d&#39;ensemble
 
-La technologie multi-signature (multi-sig) ajoute une couche supplémentaire de sécurité à votre TBC Wallet en exigeant plusieurs approbations avant qu&#39;une transaction puisse être </description>
+La technologie multi-signature (multi-sig) ajoute une couche supplémentaire de sécurité à votre TB Wallet en exigeant plusieurs approbations avant qu&#39;une transaction puisse être </description>
       <pubDate>Wed, 15 Jan 2025 00:00:00 GMT</pubDate>
       <category>features</category>
     </item>
@@ -69,7 +71,7 @@ La technologie multi-signature (multi-sig) ajoute une couche supplémentaire de 
       <description>
  Vue d&#39;ensemble
 
-La fonctionnalité Frais USDT de TBC Wallet vous permet de payer les frais de transaction en utilisant USDT (Tether) au lieu de tokens réseau natifs. Cela fournit une stabilité des</description>
+La fonctionnalité Frais USDT de TB Wallet vous permet de payer les frais de transaction en utilisant USDT (Tether) au lieu de tokens réseau natifs. Cela fournit une stabilité des</description>
       <pubDate>Wed, 15 Jan 2025 00:00:00 GMT</pubDate>
       <category>features</category>
     </item>

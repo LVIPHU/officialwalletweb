@@ -18,8 +18,8 @@ msgid ". All rights reserved."
 msgstr ". Tous droits réservés."
 
 #: src/constants/faq.constants.ts:47
-msgid "1. Download TBC Wallet from the App Store, Google Play, or our website. 2. Create a new wallet or import an existing one. 3. Secure your wallet with a strong password and backup your recovery phrase. 4. Start managing your digital assets."
-msgstr "1. Téléchargez TBC Wallet depuis l'App Store, Google Play ou notre site web. 2. Créez un nouveau portefeuille ou importez-en un existant. 3. Sécurisez votre portefeuille avec un mot de passe fort et sauvegardez votre phrase de récupération. 4. Commencez à gérer vos actifs numériques."
+msgid "1. Download TB Wallet from the App Store, Google Play, or our website. 2. Create a new wallet or import an existing one. 3. Secure your wallet with a strong password and backup your recovery phrase. 4. Start managing your digital assets."
+msgstr "1. Téléchargez TB Wallet depuis l'App Store, Google Play ou notre site web. 2. Créez un nouveau portefeuille ou importez-en un existant. 3. Sécurisez votre portefeuille avec un mot de passe fort et sauvegardez votre phrase de récupération. 4. Commencez à gérer vos actifs numériques."
 
 #: src/constants/faq.constants.ts:162
 msgid "1. Go to Settings. 2. Select Security. 3. Choose Change Password. 4. Enter your current and new password. 5. Confirm the change."
@@ -74,8 +74,8 @@ msgid "Boost earnings by connecting to mining pools and tracking rewards in-app"
 msgstr "Augmentez vos gains en vous connectant à des pools de minage et en suivant les récompenses dans l'application"
 
 #: src/constants/landing.constants.ts:31
-msgid "Boost earnings by connecting to mining pools and tracking rewards in-app. TBC Wallet simplifies mining management, helping both new and seasoned users maximize returns securely."
-msgstr "Augmentez vos gains en vous connectant à des pools de minage et en suivant les récompenses dans l’application. TBC Wallet simplifie la gestion du minage, aidant aussi bien les nouveaux utilisateurs que les expérimentés à maximiser leurs rendements en toute sécurité."
+msgid "Boost earnings by connecting to mining pools and tracking rewards in-app. TB Wallet simplifies mining management, helping both new and seasoned users maximize returns securely."
+msgstr "Augmentez vos gains en vous connectant à des pools de minage et en suivant les récompenses dans l’application. TB Wallet simplifie la gestion du minage, aidant aussi bien les nouveaux utilisateurs que les expérimentés à maximiser leurs rendements en toute sécurité."
 
 #: src/constants/navigation.constants.ts:48
 msgid "Browser Extension"
@@ -94,8 +94,8 @@ msgid "Can I pay fees with USDT?"
 msgstr "Puis-je payer les frais avec USDT ?"
 
 #: src/constants/faq.constants.ts:72
-msgid "Can TBC Wallet access my funds?"
-msgstr "TBC Wallet peut-il accéder à mes fonds ?"
+msgid "Can TB Wallet access my funds?"
+msgstr "TB Wallet peut-il accéder à mes fonds ?"
 
 #: src/components/molecules/platform-tabs/index.tsx:75
 #: src/components/templates/coming-soon/index.tsx:26
@@ -137,8 +137,8 @@ msgid "Download on the"
 msgstr "Télécharger sur"
 
 #: src/constants/landing.constants.ts:45
-msgid "Effortlessly exchange tokens across chains with low fees and real-time rates. Whether trading Bitcoin for TRON or optimizing your portfolio, TBC Wallet makes swaps quick and intuitive."
-msgstr "Échangez des tokens entre chaînes sans effort, avec des frais réduits et des taux en temps réel. Que vous échangiez du Bitcoin contre du TRON ou optimisiez votre portefeuille, TBC Wallet rend les échanges rapides et intuitifs."
+msgid "Effortlessly exchange tokens across chains with low fees and real-time rates. Whether trading Bitcoin for TRON or optimizing your portfolio, TB Wallet makes swaps quick and intuitive."
+msgstr "Échangez des tokens entre chaînes sans effort, avec des frais réduits et des taux en temps réel. Que vous échangiez du Bitcoin contre du TRON ou optimisiez votre portefeuille, TB Wallet rend les échanges rapides et intuitifs."
 
 #: src/constants/landing.constants.ts:69
 msgid "Ethereum"
@@ -165,8 +165,8 @@ msgid "Features"
 msgstr "Fonctionnalités"
 
 #: src/constants/navigation.constants.ts:97
-msgid "Find answers to frequently asked questions about TBC Wallet"
-msgstr "Trouvez des réponses aux questions fréquemment posées sur TBC Wallet"
+msgid "Find answers to frequently asked questions about TB Wallet"
+msgstr "Trouvez des réponses aux questions fréquemment posées sur TB Wallet"
 
 #: src/constants/navigation.constants.ts:73
 msgid "Fortify your wallet with multi-approval transactions for enhanced protection"
@@ -215,12 +215,12 @@ msgid "How do I delete my wallet?"
 msgstr "Comment supprimer mon portefeuille ?"
 
 #: src/constants/faq.constants.ts:46
-msgid "How do I get started with TBC Wallet?"
-msgstr "Comment commencer avec TBC Wallet ?"
+msgid "How do I get started with TB Wallet?"
+msgstr "Comment commencer avec TB Wallet ?"
 
 #: src/constants/faq.constants.ts:150
-msgid "How do I update TBC Wallet?"
-msgstr "Comment mettre à jour TBC Wallet ?"
+msgid "How do I update TB Wallet?"
+msgstr "Comment mettre à jour TB Wallet ?"
 
 #: src/constants/faq.constants.ts:93
 msgid "How does Instant Transfer work?"
@@ -231,8 +231,8 @@ msgid "How long do transactions take?"
 msgstr "Combien de temps prennent les transactions ?"
 
 #: src/constants/faq.constants.ts:57
-msgid "How secure is TBC Wallet?"
-msgstr "Quelle est la sécurité de TBC Wallet ?"
+msgid "How secure is TB Wallet?"
+msgstr "Quelle est la sécurité de TB Wallet ?"
 
 #: src/constants/faq.constants.ts:140
 msgid "I can't see my balance. What's wrong?"
@@ -264,8 +264,8 @@ msgid "iOS app"
 msgstr "Application iOS"
 
 #: src/constants/faq.constants.ts:41
-msgid "Is TBC Wallet free to use?"
-msgstr "TBC Wallet est-il gratuit à utiliser ?"
+msgid "Is TB Wallet free to use?"
+msgstr "TB Wallet est-il gratuit à utiliser ?"
 
 #: src/constants/landing.constants.ts:248
 msgid "Mac OS"
@@ -310,8 +310,8 @@ msgid "No language found."
 msgstr "Aucune langue trouvée."
 
 #: src/constants/faq.constants.ts:73
-msgid "No, TBC Wallet cannot access your funds. Your private keys are stored locally on your device and are never transmitted to our servers. You have complete control over your assets."
-msgstr "Non, TBC Wallet ne peut pas accéder à vos fonds. Vos clés privées sont stockées localement sur votre appareil et ne sont jamais transmises à nos serveurs. Vous avez un contrôle total sur vos actifs."
+msgid "No, TB Wallet cannot access your funds. Your private keys are stored locally on your device and are never transmitted to our servers. You have complete control over your assets."
+msgstr "Non, TB Wallet ne peut pas accéder à vos fonds. Vos clés privées sont stockées localement sur votre appareil et ne sont jamais transmises à nos serveurs. Vous avez un contrôle total sur vos actifs."
 
 #: src/constants/faq.constants.ts:120
 msgid "Once a transaction is confirmed on the blockchain, it cannot be cancelled. Always verify transaction details before confirming."
@@ -359,8 +359,8 @@ msgid "Send assets across chains with near-zero delays and minimal costs"
 msgstr "Envoyez des actifs entre chaînes avec des délais quasi nuls et des coûts minimaux"
 
 #: src/constants/landing.constants.ts:52
-msgid "Send assets across chains with near-zero delays and minimal costs. TBC Wallet ensures fast, reliable transactions for everyday use, from peer-to-peer sends to dApp funding."
-msgstr "Envoyez des actifs entre chaînes avec des délais quasi nuls et des coûts minimaux. TBC Wallet garantit des transactions rapides et fiables pour un usage quotidien, des envois pair à pair au financement de dApps."
+msgid "Send assets across chains with near-zero delays and minimal costs. TB Wallet ensures fast, reliable transactions for everyday use, from peer-to-peer sends to dApp funding."
+msgstr "Envoyez des actifs entre chaînes avec des délais quasi nuls et des coûts minimaux. TB Wallet garantit des transactions rapides et fiables pour un usage quotidien, des envois pair à pair au financement de dApps."
 
 #: src/components/templates/coming-soon/index.tsx:42
 msgid "Sign up"
@@ -390,39 +390,39 @@ msgstr "Échangez de manière sécurisée et transparente"
 
 #: src/components/templates/home/desktop/index.tsx:275
 #: src/components/templates/home/mobile/index.tsx:81
-msgid "TBC Wallet bridges the gap for beginners and experts alike. Its user-friendly design offers easy onboarding for newcomers and advanced tools for DeFi pros, ensuring secure, efficient navigation of the decentralized ecosystem."
-msgstr "TBC Wallet comble le fossé entre débutants et experts. Son design convivial offre un onboarding fluide pour les nouveaux venus et des outils avancés pour les professionnels de la DeFi, garantissant une navigation sécurisée et efficace dans l’écosystème décentralisé."
+msgid "TB Wallet bridges the gap for beginners and experts alike. Its user-friendly design offers easy onboarding for newcomers and advanced tools for DeFi pros, ensuring secure, efficient navigation of the decentralized ecosystem."
+msgstr "TB Wallet comble le fossé entre débutants et experts. Son design convivial offre un onboarding fluide pour les nouveaux venus et des outils avancés pour les professionnels de la DeFi, garantissant une navigation sécurisée et efficace dans l’écosystème décentralisé."
 
 #: src/components/templates/home/desktop/index.tsx:319
 #: src/components/templates/home/mobile/index.tsx:109
-msgid "TBC Wallet connects you to diverse ecosystems, from Bitcoin and Ethereum to Optimism and Cosmos. Manage portfolios, engage in DeFi, trade NFTs, and link to dApps—all in one secure, self-custody hub."
-msgstr "TBC Wallet vous connecte à des écosystèmes variés, de Bitcoin et Ethereum à Optimism et Cosmos. Gérez vos portefeuilles, participez à la DeFi, échangez des NFTs et accédez aux dApps — le tout dans un hub sécurisé et auto-géré."
+msgid "TB Wallet connects you to diverse ecosystems, from Bitcoin and Ethereum to Optimism and Cosmos. Manage portfolios, engage in DeFi, trade NFTs, and link to dApps—all in one secure, self-custody hub."
+msgstr "TB Wallet vous connecte à des écosystèmes variés, de Bitcoin et Ethereum à Optimism et Cosmos. Gérez vos portefeuilles, participez à la DeFi, échangez des NFTs et accédez aux dApps — le tout dans un hub sécurisé et auto-géré."
 
 #: src/constants/faq.constants.ts:58
-msgid "TBC Wallet employs multiple security layers: Encrypted Storage: All private keys are encrypted and stored locally on your device. Multi-Signature Support: Enhanced security for high-value transactions. Biometric Authentication: Fingerprint and face recognition support. Regular Security Updates: Continuous security improvements."
-msgstr "TBC Wallet utilise plusieurs couches de sécurité : Stockage Chiffré : Toutes les clés privées sont chiffrées et stockées localement sur votre appareil. Support de Signature Multiple : Sécurité renforcée pour les transactions à valeur élevée. Authentification Biométrique : Support de l'empreinte digitale et de la reconnaissance faciale. Mises à Jour de Sécurité Régulières : Améliorations continues de la sécurité."
+msgid "TB Wallet employs multiple security layers: Encrypted Storage: All private keys are encrypted and stored locally on your device. Multi-Signature Support: Enhanced security for high-value transactions. Biometric Authentication: Fingerprint and face recognition support. Regular Security Updates: Continuous security improvements."
+msgstr "TB Wallet utilise plusieurs couches de sécurité : Stockage Chiffré : Toutes les clés privées sont chiffrées et stockées localement sur votre appareil. Support de Signature Multiple : Sécurité renforcée pour les transactions à valeur élevée. Authentification Biométrique : Support de l'empreinte digitale et de la reconnaissance faciale. Mises à Jour de Sécurité Régulières : Améliorations continues de la sécurité."
 
 #: src/components/templates/home/desktop/index.tsx:215
 #: src/components/templates/home/mobile/index.tsx:36
-msgid "TBC Wallet empowers you to manage diverse assets like Bitcoin, Ethereum, and TRON. Securely dive into DeFi, NFTs, and dApps with full control. Your keys, your future."
-msgstr "TBC Wallet vous permet de gérer des actifs variés comme Bitcoin, Ethereum et TRON. Plongez en toute sécurité dans la DeFi, les NFTs et les dApps avec un contrôle total. Vos clés, votre avenir."
+msgid "TB Wallet empowers you to manage diverse assets like Bitcoin, Ethereum, and TRON. Securely dive into DeFi, NFTs, and dApps with full control. Your keys, your future."
+msgstr "TB Wallet vous permet de gérer des actifs variés comme Bitcoin, Ethereum et TRON. Plongez en toute sécurité dans la DeFi, les NFTs et les dApps avec un contrôle total. Vos clés, votre avenir."
 
 #: src/components/templates/home/desktop/index.tsx:248
 #: src/components/templates/home/mobile/index.tsx:64
-msgid "TBC Wallet is a leading multi-chain wallet with robust security and an intuitive interface. It simplifies Web3 interactions, from token management to dApp access, while giving you total control over your digital wealth."
-msgstr "TBC Wallet est un portefeuille multi-chaînes de premier plan, doté d’une sécurité renforcée et d’une interface intuitive. Il simplifie les interactions Web3, de la gestion des tokens à l’accès aux dApps, tout en vous donnant un contrôle total sur votre richesse numérique."
+msgid "TB Wallet is a leading multi-chain wallet with robust security and an intuitive interface. It simplifies Web3 interactions, from token management to dApp access, while giving you total control over your digital wealth."
+msgstr "TB Wallet est un portefeuille multi-chaînes de premier plan, doté d’une sécurité renforcée et d’une interface intuitive. Il simplifie les interactions Web3, de la gestion des tokens à l’accès aux dApps, tout en vous donnant un contrôle total sur votre richesse numérique."
 
 #: src/constants/faq.constants.ts:32
-msgid "TBC Wallet is a secure, multi-chain cryptocurrency wallet that supports multiple blockchain networks including TBChain, Bitcoin, Ethereum, and TRON. It provides a user-friendly interface for managing digital assets, executing transactions, and accessing DeFi services."
-msgstr "TBC Wallet est un portefeuille de cryptomonnaies sécurisé et multi-chaînes qui prend en charge plusieurs réseaux blockchain, notamment TBChain, Bitcoin, Ethereum et TRON. Il offre une interface conviviale pour gérer les actifs numériques, exécuter des transactions et accéder aux services DeFi."
+msgid "TB Wallet is a secure, multi-chain cryptocurrency wallet that supports multiple blockchain networks including TBChain, Bitcoin, Ethereum, and TRON. It provides a user-friendly interface for managing digital assets, executing transactions, and accessing DeFi services."
+msgstr "TB Wallet est un portefeuille de cryptomonnaies sécurisé et multi-chaînes qui prend en charge plusieurs réseaux blockchain, notamment TBChain, Bitcoin, Ethereum et TRON. Il offre une interface conviviale pour gérer les actifs numériques, exécuter des transactions et accéder aux services DeFi."
 
 #: src/constants/faq.constants.ts:37
-msgid "TBC Wallet is available on: Mobile: iOS and Android applications, Desktop: Windows and MacOS applications, Browser: Browser extension for Chrome, Firefox, and Edge."
-msgstr "TBC Wallet est disponible sur : Mobile : applications iOS et Android, Bureau : applications Windows et MacOS, Navigateur : extension de navigateur pour Chrome, Firefox et Edge."
+msgid "TB Wallet is available on: Mobile: iOS and Android applications, Desktop: Windows and MacOS applications, Browser: Browser extension for Chrome, Firefox, and Edge."
+msgstr "TB Wallet est disponible sur : Mobile : applications iOS et Android, Bureau : applications Windows et MacOS, Navigateur : extension de navigateur pour Chrome, Firefox et Edge."
 
 #: src/constants/faq.constants.ts:84
-msgid "TBC Wallet supports: TBChain (native network), Bitcoin, Ethereum and EVM-compatible chains, TRON, And more networks continuously being added."
-msgstr "TBC Wallet prend en charge : TBChain (réseau natif), Bitcoin, Ethereum et les chaînes compatibles EVM, TRON, et d'autres réseaux ajoutés en continu."
+msgid "TB Wallet supports: TBChain (native network), Bitcoin, Ethereum and EVM-compatible chains, TRON, And more networks continuously being added."
+msgstr "TB Wallet prend en charge : TBChain (réseau natif), Bitcoin, Ethereum et les chaînes compatibles EVM, TRON, et d'autres réseaux ajoutés en continu."
 
 #: src/constants/landing.constants.ts:66
 msgid "TBChain"
@@ -522,8 +522,8 @@ msgid "What is Multi-Signature?"
 msgstr "Qu'est-ce que la Signature Multiple ?"
 
 #: src/constants/faq.constants.ts:31
-msgid "What is TBC Wallet?"
-msgstr "Qu'est-ce que TBC Wallet ?"
+msgid "What is TB Wallet?"
+msgstr "Qu'est-ce que TB Wallet ?"
 
 #: src/constants/faq.constants.ts:62
 msgid "What should I do if I lose my device?"
@@ -538,12 +538,12 @@ msgid "When contacting support, please provide: Your wallet version, Device and 
 msgstr "Lors du contact avec le support, veuillez fournir : Votre version de portefeuille, Appareil et système d'exploitation, Description du problème, Captures d'écran si applicable, Hash de transaction si lié à une transaction."
 
 #: src/constants/faq.constants.ts:203
-msgid "Where can I learn more about TBC Wallet?"
-msgstr "Où puis-je en savoir plus sur TBC Wallet ?"
+msgid "Where can I learn more about TB Wallet?"
+msgstr "Où puis-je en savoir plus sur TB Wallet ?"
 
 #: src/constants/faq.constants.ts:36
-msgid "Which platforms does TBC Wallet support?"
-msgstr "Quelles plateformes TBC Wallet prend-il en charge ?"
+msgid "Which platforms does TB Wallet support?"
+msgstr "Quelles plateformes TB Wallet prend-il en charge ?"
 
 #: src/constants/faq.constants.ts:124
 msgid "Why is my transaction pending?"
@@ -558,20 +558,20 @@ msgid "Windows app"
 msgstr "Application Windows"
 
 #: src/constants/faq.constants.ts:42
-msgid "Yes, TBC Wallet is free to download and use. However, blockchain networks charge transaction fees for processing transactions, which are standard across all wallets."
-msgstr "Oui, TBC Wallet est gratuit à télécharger et à utiliser. Cependant, les réseaux blockchain facturent des frais de transaction pour le traitement des transactions, ce qui est standard pour tous les portefeuilles."
+msgid "Yes, TB Wallet is free to download and use. However, blockchain networks charge transaction fees for processing transactions, which are standard across all wallets."
+msgstr "Oui, TB Wallet est gratuit à télécharger et à utiliser. Cependant, les réseaux blockchain facturent des frais de transaction pour le traitement des transactions, ce qui est standard pour tous les portefeuilles."
 
 #: src/constants/faq.constants.ts:99
-msgid "Yes, TBC Wallet supports paying transaction fees with USDT (Tether), providing price stability and predictability, especially valuable during volatile market conditions."
-msgstr "Oui, TBC Wallet prend en charge le paiement des frais de transaction avec USDT (Tether), offrant stabilité et prévisibilité des prix, particulièrement précieux pendant les conditions de marché volatiles."
+msgid "Yes, TB Wallet supports paying transaction fees with USDT (Tether), providing price stability and predictability, especially valuable during volatile market conditions."
+msgstr "Oui, TB Wallet prend en charge le paiement des frais de transaction avec USDT (Tether), offrant stabilité et prévisibilité des prix, particulièrement précieux pendant les conditions de marché volatiles."
 
 #: src/constants/faq.constants.ts:209
 msgid "Yes, we provide comprehensive tutorials and guides on: Setting up your wallet, Making transactions, Using advanced features, Security best practices. For more information, visit our Support Center or check our documentation."
 msgstr "Oui, nous fournissons des tutoriels et guides complets sur : Configuration de votre portefeuille, Réalisation de transactions, Utilisation des fonctionnalités avancées, Meilleures pratiques de sécurité. Pour plus d'informations, visitez notre Centre de Support ou consultez notre documentation."
 
 #: src/constants/faq.constants.ts:167
-msgid "Yes, you can create and manage multiple wallets within TBC Wallet. Each wallet has its own recovery phrase and private keys."
-msgstr "Oui, vous pouvez créer et gérer plusieurs portefeuilles dans TBC Wallet. Chaque portefeuille a sa propre phrase de récupération et ses clés privées."
+msgid "Yes, you can create and manage multiple wallets within TB Wallet. Each wallet has its own recovery phrase and private keys."
+msgstr "Oui, vous pouvez créer et gérer plusieurs portefeuilles dans TB Wallet. Chaque portefeuille a sa propre phrase de récupération et ses clés privées."
 
 #: src/constants/faq.constants.ts:183
 msgid "You can reach us through: Email: contact@tbchatofficial.com, Support Center: Visit our Contact Us page, Social Media: Follow us on X, Telegram, and Discord."
