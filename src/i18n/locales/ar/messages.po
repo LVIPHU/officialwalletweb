@@ -97,12 +97,12 @@ msgstr "هل يمكنني دفع الرسوم بـ USDT؟"
 msgid "Can TBC Wallet access my funds?"
 msgstr "هل يمكن لمحفظة TBC الوصول إلى أموالي؟"
 
-#: src/components/molecules/platform-tabs/index.tsx:67
+#: src/components/molecules/platform-tabs/index.tsx:75
 #: src/components/templates/coming-soon/index.tsx:26
 msgid "Coming soon"
 msgstr "قريبًا"
 
-#: src/components/templates/home/desktop/index.tsx:365
+#: src/components/templates/home/desktop/index.tsx:363
 #: src/components/templates/home/mobile/index.tsx:132
 msgid "Community talk about us"
 msgstr "المجتمع يتحدث عنا"
@@ -317,7 +317,7 @@ msgstr "لا، لا يمكن لمحفظة TBC الوصول إلى أموالك. 
 msgid "Once a transaction is confirmed on the blockchain, it cannot be cancelled. Always verify transaction details before confirming."
 msgstr "بمجرد تأكيد المعاملة على البلوك تشين، لا يمكن إلغاؤها. تحقق دائمًا من تفاصيل المعاملة قبل التأكيد."
 
-#: src/components/templates/home/desktop/index.tsx:346
+#: src/components/templates/home/desktop/index.tsx:344
 #: src/components/templates/home/mobile/index.tsx:124
 msgid "One wallet. Cross platform"
 msgstr "محفظة واحدة. عبر المنصات"
@@ -393,7 +393,7 @@ msgstr "المُبادلة بشكل آمن وسلس"
 msgid "TBC Wallet bridges the gap for beginners and experts alike. Its user-friendly design offers easy onboarding for newcomers and advanced tools for DeFi pros, ensuring secure, efficient navigation of the decentralized ecosystem."
 msgstr "محفظة TB تسد الفجوة بين المبتدئين والخبراء. تصميمها سهل الاستخدام يوفّر بداية سلسة للمستخدمين الجدد وأدوات متقدمة لمحترفي DeFi، مما يضمن تنقلًا آمنًا وفعالًا في النظام اللامركزي."
 
-#: src/components/templates/home/desktop/index.tsx:321
+#: src/components/templates/home/desktop/index.tsx:319
 #: src/components/templates/home/mobile/index.tsx:109
 msgid "TBC Wallet connects you to diverse ecosystems, from Bitcoin and Ethereum to Optimism and Cosmos. Manage portfolios, engage in DeFi, trade NFTs, and link to dApps—all in one secure, self-custody hub."
 msgstr "محفظة TB تربطك بأنظمة بيئية متنوعة، من بيتكوين وإيثيريوم إلى Optimism و Cosmos. أدِر محافظك، وشارك في DeFi، وتداول NFTs، وتواصل مع dApps — كل ذلك من مركز آمن خاضع لسيطرتك."

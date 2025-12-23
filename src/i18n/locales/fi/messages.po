@@ -97,12 +97,12 @@ msgstr "Voinko maksaa maksut USDT:llä?"
 msgid "Can TBC Wallet access my funds?"
 msgstr "Voiko TBC Wallet käyttää varojani?"
 
-#: src/components/molecules/platform-tabs/index.tsx:67
+#: src/components/molecules/platform-tabs/index.tsx:75
 #: src/components/templates/coming-soon/index.tsx:26
 msgid "Coming soon"
 msgstr "Tulossa pian"
 
-#: src/components/templates/home/desktop/index.tsx:365
+#: src/components/templates/home/desktop/index.tsx:363
 #: src/components/templates/home/mobile/index.tsx:132
 msgid "Community talk about us"
 msgstr "Yhteisö puhuu meistä"
@@ -317,7 +317,7 @@ msgstr "Ei, TBC Wallet ei voi käyttää varojasi. Yksityiset avaimesi tallennet
 msgid "Once a transaction is confirmed on the blockchain, it cannot be cancelled. Always verify transaction details before confirming."
 msgstr "Kun tapahtuma on vahvistettu lohkoketjussa, sitä ei voi peruuttaa. Tarkista aina tapahtuman tiedot ennen vahvistamista."
 
-#: src/components/templates/home/desktop/index.tsx:346
+#: src/components/templates/home/desktop/index.tsx:344
 #: src/components/templates/home/mobile/index.tsx:124
 msgid "One wallet. Cross platform"
 msgstr "Yksi lompakko. Monialustainen"
@@ -393,7 +393,7 @@ msgstr "Vaihda turvallisesti ja saumattomasti"
 msgid "TBC Wallet bridges the gap for beginners and experts alike. Its user-friendly design offers easy onboarding for newcomers and advanced tools for DeFi pros, ensuring secure, efficient navigation of the decentralized ecosystem."
 msgstr "TBC Wallet kaventaa kuilua aloittelijoiden ja asiantuntijoiden välillä. Sen käyttäjäystävällinen muotoilu tarjoaa vaivattoman alun uusille käyttäjille ja edistyneitä työkaluja DeFi-ammattilaisille, varmistaen turvallisen ja tehokkaan navigoinnin hajautetussa ekosysteemissä."
 
-#: src/components/templates/home/desktop/index.tsx:321
+#: src/components/templates/home/desktop/index.tsx:319
 #: src/components/templates/home/mobile/index.tsx:109
 msgid "TBC Wallet connects you to diverse ecosystems, from Bitcoin and Ethereum to Optimism and Cosmos. Manage portfolios, engage in DeFi, trade NFTs, and link to dApps—all in one secure, self-custody hub."
 msgstr "TBC Wallet yhdistää sinut monipuolisiin ekosysteemeihin, Bitcoinista ja Ethereumista Optimismiin ja Cosmokseen. Hallitse portfoliosi, osallistu DeFiin, käy kauppaa NFT:illä ja linkity dAppseihin — kaikki yhdessä turvallisessa itsehallintakeskuksessa."

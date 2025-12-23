@@ -95,12 +95,12 @@ msgstr "我可以用 USDT 支付手續費嗎？"
 msgid "Can TBC Wallet access my funds?"
 msgstr "TBC Wallet 可以存取我的資金嗎？"
 
-#: src/components/molecules/platform-tabs/index.tsx:67
+#: src/components/molecules/platform-tabs/index.tsx:75
 #: src/components/templates/coming-soon/index.tsx:26
 msgid "Coming soon"
 msgstr "即將推出"
 
-#: src/components/templates/home/desktop/index.tsx:365
+#: src/components/templates/home/desktop/index.tsx:363
 #: src/components/templates/home/mobile/index.tsx:132
 msgid "Community talk about us"
 msgstr "社群對我們的評價"
@@ -315,7 +315,7 @@ msgstr "不，TBC Wallet 無法存取您的資金。您的私鑰儲存在您裝�
 msgid "Once a transaction is confirmed on the blockchain, it cannot be cancelled. Always verify transaction details before confirming."
 msgstr "一旦交易在區塊鏈上確認，就無法取消。在確認之前，請始終驗證交易詳情。"
 
-#: src/components/templates/home/desktop/index.tsx:346
+#: src/components/templates/home/desktop/index.tsx:344
 #: src/components/templates/home/mobile/index.tsx:124
 msgid "One wallet. Cross platform"
 msgstr "一個錢包，跨平台使用"
@@ -391,7 +391,7 @@ msgstr "安全無縫地兌換"
 msgid "TBC Wallet bridges the gap for beginners and experts alike. Its user-friendly design offers easy onboarding for newcomers and advanced tools for DeFi pros, ensuring secure, efficient navigation of the decentralized ecosystem."
 msgstr "TBC Wallet 為新手與專業用戶架起橋樑。其友善的設計讓新用戶輕鬆上手，同時為 DeFi 專家提供進階工具，確保在去中心化生態中安全高效地操作。"
 
-#: src/components/templates/home/desktop/index.tsx:321
+#: src/components/templates/home/desktop/index.tsx:319
 #: src/components/templates/home/mobile/index.tsx:109
 msgid "TBC Wallet connects you to diverse ecosystems, from Bitcoin and Ethereum to Optimism and Cosmos. Manage portfolios, engage in DeFi, trade NFTs, and link to dApps—all in one secure, self-custody hub."
 msgstr "TBC Wallet 連結多元生態系，從比特幣、以太坊到 Optimism 與 Cosmos。集中管理資產組合、參與 DeFi、交易 NFT 並連接 dApp——一切盡在安全自託中心。"

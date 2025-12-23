@@ -97,12 +97,12 @@ msgstr "Can I pay fees with USDT?"
 msgid "Can TBC Wallet access my funds?"
 msgstr "Can TBC Wallet access my funds?"
 
-#: src/components/molecules/platform-tabs/index.tsx:67
+#: src/components/molecules/platform-tabs/index.tsx:75
 #: src/components/templates/coming-soon/index.tsx:26
 msgid "Coming soon"
 msgstr "Coming soon"
 
-#: src/components/templates/home/desktop/index.tsx:365
+#: src/components/templates/home/desktop/index.tsx:363
 #: src/components/templates/home/mobile/index.tsx:132
 msgid "Community talk about us"
 msgstr "Community talk about us"
@@ -317,7 +317,7 @@ msgstr "No, TBC Wallet cannot access your funds. Your private keys are stored lo
 msgid "Once a transaction is confirmed on the blockchain, it cannot be cancelled. Always verify transaction details before confirming."
 msgstr "Once a transaction is confirmed on the blockchain, it cannot be cancelled. Always verify transaction details before confirming."
 
-#: src/components/templates/home/desktop/index.tsx:346
+#: src/components/templates/home/desktop/index.tsx:344
 #: src/components/templates/home/mobile/index.tsx:124
 msgid "One wallet. Cross platform"
 msgstr "One wallet. Cross platform"
@@ -393,7 +393,7 @@ msgstr "Swap securely and seamlessly"
 msgid "TBC Wallet bridges the gap for beginners and experts alike. Its user-friendly design offers easy onboarding for newcomers and advanced tools for DeFi pros, ensuring secure, efficient navigation of the decentralized ecosystem."
 msgstr "TBC Wallet bridges the gap for beginners and experts alike. Its user-friendly design offers easy onboarding for newcomers and advanced tools for DeFi pros, ensuring secure, efficient navigation of the decentralized ecosystem."
 
-#: src/components/templates/home/desktop/index.tsx:321
+#: src/components/templates/home/desktop/index.tsx:319
 #: src/components/templates/home/mobile/index.tsx:109
 msgid "TBC Wallet connects you to diverse ecosystems, from Bitcoin and Ethereum to Optimism and Cosmos. Manage portfolios, engage in DeFi, trade NFTs, and link to dApps—all in one secure, self-custody hub."
 msgstr "TBC Wallet connects you to diverse ecosystems, from Bitcoin and Ethereum to Optimism and Cosmos. Manage portfolios, engage in DeFi, trade NFTs, and link to dApps—all in one secure, self-custody hub."
