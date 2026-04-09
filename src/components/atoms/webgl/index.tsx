@@ -6,7 +6,6 @@
  * in whole or in part, is strictly prohibited without prior written consent
  * from NEXSOFT.
  */
-
 'use client'
 import { Float } from '@react-three/drei'
 import { Canvas, useFrame, useThree } from '@react-three/fiber'
