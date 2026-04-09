@@ -69,13 +69,14 @@ export function Toc({ headings }: TocProps) {
                   type='button'
                   className={cn(
                     'hover:text-primary! transition-[color, opacity] flex w-full cursor-pointer leading-normal duration-300 ease-in-out',
-                    'before:me-2 before:font-black before:content-["-"]',
                     isActive ? 'text-primary opacity-100' : 'text-gray-600 group-hover:opacity-100 dark:text-white'
                   )}
                   onClick={(e) => handleClick(e, h.url)}
                   title={h.text}
                 >
-                  <p className='truncate text-xs font-bold xl:text-base'>{h.text}</p>
+                   <p className='truncate text-xs font-bold xl:text-base'>
+                    {h.text.replace(/^(?:\d+|[IVXLCDM]+)\\?\.\s+|^[-–—]\s+/, '')}
+                  </p>
                 </button>
               </li>
             )

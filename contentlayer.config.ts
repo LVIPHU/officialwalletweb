@@ -64,9 +64,12 @@ async function extractTocHeadings(content: string) {
 
     // Only include h1 and h2 in TOC (depth <= 2)
     if (heading.depth <= 2) {
+      // Strip leading numbering prefixes (e.g. "1. ", "I. ", "II. ", "- ") for display
+      // URL is generated from original text to match rehype-slug anchors
+      const displayText = heading.text.replace(/^(?:\d+|[IVXLCDM]+)\\?\.\s+|^[-–—]\s+/, '')
       toc.push({
         url: `#${finalId}`,
-        text: heading.text,
+        text: displayText,
         depth: heading.depth,
       })
     }
